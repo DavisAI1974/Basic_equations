@@ -1,0 +1,87 @@
+Subject ID,Group,Start 1 min,Deep breathing,End ,Val 1,End ,Val 2 ,End ,Val 3,End ,Tilt ,End ,Notes
+S0030,Control,1,2,3,4,5,6,7,8,9,10,11,
+S0044,Control,1,2,4,5,6,7,8,0,0,9,10,Ignore marker 3
+S0058,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0059,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0063,Control,1,2,3,4,5,6,7,8,9,10,11,
+S0064,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0067,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0070,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0073,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0074,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0075,DMOH,1,2,3,4,5,6,7,0,0,8,9,
+S0076,DMOH,1,2,3,0,0,0,0,0,0,4,5,
+S0077,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0078,Control,1,2,3,4,5,6,7,8,9,11,13,"Markers 10,11 correspond to Val 4 and End"
+S0079,DMOH,1,2,3,4,5,6,7,0,0,8,9,
+S0080,DM,1,2,3,4,5,6,7,8,9,10,11,
+S0081,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0082,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0083,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0084,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0085,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0086,Control,1,2,3,4,5,6,7,8,9,10,11,
+S0087,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0088,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0089,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0090,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0091,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0092,Control,1,2,3,4,5,6,7,8,9,12,13,"Markers 10,11 correspond to Val 4 and End"
+S0093,DMOH,1,2,3,4,5,6,7,0,0,8,9,
+S0094,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0095,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0096,DM,1,2,3,4,5,6,7,8,9,12,13,"Markers 10,11 correspond to Val 4 and End. Do not use Val1 and Val2"
+S0097,Control,1,2,3,4,5,6,7,8,9,10,11,Do not use Val1
+S0098,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0099,DM,1,2,3,4,5,6,7,8,9,10,11,
+S0100,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0101,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0102,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0103,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0104,DMOH,1,2,3,4,5,6,7,8,9,10,11,
+S0105,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0106,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0107,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0108,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0109,DM,1,2,3,4,5,6,7,8,9,10,11,
+S0110,DM,1,2,3,4,5,6,7,8,9,10,11,
+S0111,Control,0,1,2,3,4,0,5,0,0,6,7,Ectopic rhythm - bigeminy
+S0112,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0113,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0114,DM,0,0,0,0,0,0,0,0,0,0,0,
+S0115,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0118,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0124,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0125,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0126,DMOH,0,1,2,3,4,5,6,0,0,7,9,"Marker 8 corresponds to 2min tilt. Between Marker 6 and 7, there was 4min rest"
+S0127,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0128,DM,0,0,0,0,0,0,0,0,0,0,0,
+S0129,DM,1,2,3,4,5,6,7,0,0,8,9,Markers 10 and 11 correspond to 3min tilt and 4min tilt
+S0130,DM,0,0,0,0,0,0,0,0,0,0,0,
+S0131,DM,0,0,0,0,0,0,0,0,0,0,0,
+S0133,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0134,DM,1,2,3,4,5,6,7,0,0,8,9,"Between Marker 7 and 8, there was 1min rest"
+S0135,Control,1,2,3,4,5,6,7,0,0,8,9,"Between Marker 7 and 8, there was 2min rest"
+S0136,Control,1,2,3,4,5,6,7,8,9,10,11,"Between Marker 9 and 10, there was 2min rest"
+S0137,DM,1,2,3,4,5,6,7,0,0,8,9,"Between Marker 7 and 8, there was 3min rest"
+S0140,Control,1,2,3,4,5,6,7,8,9,10,11,"Between Marker 9 and 10, there was 2min rest, Do not use Val1"
+S0141,Control,1,2,3,4,5,6,7,0,0,8,9,
+S0142,Control,0,1,2,3,4,5,6,0,0,7,8,"Between Marker 6 and 7, there was 4min rest"
+S0148,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0149,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0150,DM,1,2,3,4,5,6,7,0,0,8,9,
+S0152,Control,1,2,3,"4, 5",6,7,8,0,0,9,10,
+S0168,DM,1,2,3,4,5,6,7,8,9,10,11,"Between Marker 9 and 10, there was 5min rest"
+S0170,Control,1,2,3,4,5,6,7,0,0,8,9,"Between Marker 7 and 8, there was 6min rest"
+S0171,DM,0,1,2,3,4,5,6,0,0,8,9,Marker 7 corresponds to 6min of rest
+S0173,DM,0,1,2,3,4,5,6,7,8,9,10,"Between Marker 8 and 9, there was 3min rest"
+S0179,DM ,0,0,0,0,0,0,0,0,0,0,0,
+S0180,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0189,DM,0,0,0,0,0,0,0,0,0,0,0,
+S0190,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0191,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0193,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0196,Control,0,0,0,0,0,0,0,0,0,0,0,
+S0198,DM,0,1,2,3,4,5,6,0,0,7,8,"Between Marker 6 and 7, there was 5min rest"
+S0201,Control,0,1,2,3,4,5,6,0,0,7,8,"Between Marker 6 and 7, there was 5min rest"
+S0202,DM,0,0,0,0,0,0,0,0,0,0,0,

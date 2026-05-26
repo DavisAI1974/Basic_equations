@@ -1,0 +1,54 @@
+========================================================================
+ECG disease-family canary: 7 families, 1 record each
+window=30 beats step=15  super=40 step=10  bins=16
+========================================================================
+
+[1/2] Fetch + R-peak detect (parallel)...
+  healthy_young              fantasia/f1y01     fs=250 dur=120.0min  R-peaks= 8680  RR= 8679   42.9s
+  healthy_elderly            fantasia/f1o01     fs=250 dur=120.0min  R-peaks= 7117  RR= 7116   69.0s
+  healthy_long_term          nsrdb   /16265     fs=128 dur=120.0min  R-peaks=10509  RR=10508  194.4s
+  atrial_fibrillation        afdb    /04015     fs=250 dur=120.0min  R-peaks= 9962  RR= 9896  261.5s
+  congestive_heart_failure   chfdb   /chf01     fs=250 dur=120.0min  R-peaks= 8189  RR= 8176  311.0s
+  ischemia_ST                ltstdb  /s20011    fs=250 dur=120.0min  R-peaks= 7944  RR= 7943  445.5s
+  driver_stress              drivedb /drive01   FAIL: ValueError: Digital filter critical frequencies must be 0 < Wn < 1
+
+[2/2] Per-record analysis (HR/HRV/H_a/H_b/MI + baselines)...
+  healthy_young               n_sup= 54  HR= 72.6+/- 4.7  HRV= 73.2+/-24.1ms  MI=1.327+/-0.146
+      poly1                R^2=+0.744  a*H_a + b*H_b + c
+      poly2                R^2=+0.791  a*H_a + b*H_b + d*H_a^2 + e*H_b^2 + f*H_a*H_b + c
+      poly3_Ha_only        R^2=+0.323  a*H_a + d*H_a^2 + g*H_a^3 + c
+      exp_INFO025          R^2=+0.314  A * exp(H_a / B)
+      physics_INFO025      R^2=+0.077  alpha*(H_b - H_a)^2 + c
+  healthy_elderly             n_sup= 44  HR= 59.4+/- 2.1  HRV= 28.9+/-19.5ms  MI=1.168+/-0.241
+      poly1                R^2=+0.845  a*H_a + b*H_b + c
+      poly2                R^2=+0.901  a*H_a + b*H_b + d*H_a^2 + e*H_b^2 + f*H_a*H_b + c
+      poly3_Ha_only        R^2=+0.202  a*H_a + d*H_a^2 + g*H_a^3 + c
+      exp_INFO025          R^2=+0.107  A * exp(H_a / B)
+      physics_INFO025      R^2=+0.116  alpha*(H_b - H_a)^2 + c
+  healthy_long_term           n_sup= 66  HR= 88.4+/- 9.4  HRV= 41.2+/-20.1ms  MI=1.366+/-0.159
+      poly1                R^2=+0.788  a*H_a + b*H_b + c
+      poly2                R^2=+0.793  a*H_a + b*H_b + d*H_a^2 + e*H_b^2 + f*H_a*H_b + c
+      poly3_Ha_only        R^2=+0.455  a*H_a + d*H_a^2 + g*H_a^3 + c
+      exp_INFO025          R^2=+0.426  A * exp(H_a / B)
+      physics_INFO025      R^2=+0.138  alpha*(H_b - H_a)^2 + c
+  atrial_fibrillation         n_sup= 62  HR= 85.7+/-14.7  HRV= 92.4+/-72.6ms  MI=1.054+/-0.347
+      poly1                R^2=+0.893  a*H_a + b*H_b + c
+      poly2                R^2=+0.900  a*H_a + b*H_b + d*H_a^2 + e*H_b^2 + f*H_a*H_b + c
+      poly3_Ha_only        R^2=+0.064  a*H_a + d*H_a^2 + g*H_a^3 + c
+      exp_INFO025          R^2=-0.005  A * exp(H_a / B)
+      physics_INFO025      R^2=+0.469  alpha*(H_b - H_a)^2 + c
+  congestive_heart_failure    n_sup= 51  HR= 68.8+/- 6.6  HRV= 38.5+/-30.0ms  MI=1.026+/-0.221
+      poly1                R^2=+0.795  a*H_a + b*H_b + c
+      poly2                R^2=+0.876  a*H_a + b*H_b + d*H_a^2 + e*H_b^2 + f*H_a*H_b + c
+      poly3_Ha_only        R^2=+0.264  a*H_a + d*H_a^2 + g*H_a^3 + c
+      exp_INFO025          R^2=+0.235  A * exp(H_a / B)
+      physics_INFO025      R^2=+0.305  alpha*(H_b - H_a)^2 + c
+  ischemia_ST                 n_sup= 49  HR= 66.7+/- 5.9  HRV= 30.6+/-15.9ms  MI=1.191+/-0.245
+      poly1                R^2=+0.894  a*H_a + b*H_b + c
+      poly2                R^2=+0.924  a*H_a + b*H_b + d*H_a^2 + e*H_b^2 + f*H_a*H_b + c
+      poly3_Ha_only        R^2=+0.510  a*H_a + d*H_a^2 + g*H_a^3 + c
+      exp_INFO025          R^2=+0.490  A * exp(H_a / B)
+      physics_INFO025      R^2=+0.204  alpha*(H_b - H_a)^2 + c
+
+Total canary time: 446.0s
+Saved ekg_disease_canary.json

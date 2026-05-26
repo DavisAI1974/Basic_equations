@@ -1,0 +1,72 @@
+Joined: 44 subjects
+
+========================================================================================
+  Stratification: strat1
+========================================================================================
+          group  n  HR_mean  HR_mean_std  ABP_mean  MI_mean  MI_mean_std  r2_poly1_mean  r2_poly2_mean  r2_exp_mean  r2_phys_mean  a_hat_mean  b_hat_mean  a_hat_std  b_hat_std
+DM_hypertension  8 +148.856      +26.219   +66.860   +1.279       +0.079         +0.703         +0.736       +0.418        +0.091      +0.745      +0.662     +0.059     +0.067
+        DM_only 13 +138.320      +18.103   +73.536   +1.260       +0.081         +0.715         +0.778       +0.467        +0.212      +0.698      +0.687     +0.154     +0.142
+ DM_orthostatic  4 +137.514      +19.700   +68.751   +1.275       +0.043         +0.773         +0.789       +0.387        +0.090      +0.761      +0.612     +0.140     +0.207
+        control 19 +129.775      +17.202   +77.879   +1.251       +0.072         +0.769         +0.809       +0.465        +0.157      +0.693      +0.707     +0.102     +0.105
+
+  Pairwise cosines of group-mean linear direction (a_hat, b_hat):
+                    DM_hypertensio         DM_only  DM_orthostatic         control
+     DM_hypertension          +1.000          +0.999          +0.999          +0.998
+             DM_only          +0.999          +1.000          +0.995          +1.000
+      DM_orthostatic          +0.999          +0.995          +1.000          +0.993
+             control          +0.998          +1.000          +0.993          +1.000
+
+  Pairwise MI-mean separation (Cohen's d-like, |dmean|/pooled_std):
+                    DM_hypertensio         DM_only  DM_orthostatic         control
+     DM_hypertension           0.000           0.238           0.054           0.377
+             DM_only           0.238           0.000           0.204           0.115
+      DM_orthostatic           0.054           0.204           0.000           0.351
+             control           0.377           0.115           0.351           0.000
+
+========================================================================================
+  Stratification: strat2
+========================================================================================
+             group  n  HR_mean  HR_mean_std  ABP_mean  MI_mean  MI_mean_std  r2_poly1_mean  r2_poly2_mean  r2_exp_mean  r2_phys_mean  a_hat_mean  b_hat_mean  a_hat_std  b_hat_std
+       mild_impair 10 +137.584      +27.977   +70.412   +1.291       +0.048         +0.734         +0.786       +0.413        +0.128      +0.678      +0.711     +0.142     +0.136
+        normal_cre 26 +134.940      +18.608   +74.769   +1.253       +0.079         +0.742         +0.783       +0.464        +0.181      +0.733      +0.662     +0.105     +0.123
+significant_impair  1 +134.990          NaN   +72.047   +1.304          NaN         +0.631         +0.722       +0.200        +0.023      +0.433      +0.901        NaN        NaN
+
+  Pairwise cosines of group-mean linear direction (a_hat, b_hat):
+                       mild_impair      normal_cre  significant_im
+         mild_impair          +1.000          +0.997          +0.951
+          normal_cre          +0.997          +1.000          +0.926
+  significant_impair          +0.951          +0.926          +1.000
+
+  Pairwise MI-mean separation (Cohen's d-like, |dmean|/pooled_std):
+                       mild_impair      normal_cre  significant_im
+         mild_impair           0.000           0.513           0.000
+          normal_cre           0.513           0.000           0.000
+  significant_impair           0.000           0.000           0.000
+
+========================================================================================
+  Stratification: strat3
+========================================================================================
+               group  n  HR_mean  HR_mean_std  ABP_mean  MI_mean  MI_mean_std  r2_poly1_mean  r2_poly2_mean  r2_exp_mean  r2_phys_mean  a_hat_mean  b_hat_mean  a_hat_std  b_hat_std
+DM_nephropathy_proxy  2 +152.555      +17.197   +73.594   +1.312       +0.183         +0.763         +0.805       +0.580        +0.072      +0.756      +0.640     +0.125     +0.147
+       DM_neuropathy  4 +141.324      +36.028   +70.870   +1.256       +0.054         +0.748         +0.791       +0.534        +0.126      +0.773      +0.596     +0.140     +0.207
+      DM_retinopathy  8 +139.942      +22.037   +73.487   +1.250       +0.050         +0.737         +0.788       +0.455        +0.275      +0.759      +0.641     +0.081     +0.093
+    DM_uncomplicated 11 +140.829      +16.367   +67.936   +1.279       +0.079         +0.690         +0.735       +0.366        +0.091      +0.673      +0.717     +0.147     +0.124
+             control 19 +129.775      +17.202   +77.879   +1.251       +0.072         +0.769         +0.809       +0.465        +0.157      +0.693      +0.707     +0.102     +0.105
+
+  Pairwise cosines of group-mean linear direction (a_hat, b_hat):
+                    DM_nephropathy   DM_neuropathy  DM_retinopathy  DM_uncomplicat         control
+  DM_nephropathy_pro          +1.000          +0.999          +1.000          +0.993          +0.996
+       DM_neuropathy          +0.999          +1.000          +0.999          +0.987          +0.990
+      DM_retinopathy          +1.000          +0.999          +1.000          +0.993          +0.996
+    DM_uncomplicated          +0.993          +0.987          +0.993          +1.000          +1.000
+             control          +0.996          +0.990          +0.996          +1.000          +1.000
+
+  Pairwise MI-mean separation (Cohen's d-like, |dmean|/pooled_std):
+                    DM_nephropathy   DM_neuropathy  DM_retinopathy  DM_uncomplicat         control
+  DM_nephropathy_pro           0.000           0.546           0.770           0.353           0.741
+       DM_neuropathy           0.546           0.000           0.103           0.314           0.061
+      DM_retinopathy           0.770           0.103           0.000           0.416           0.016
+    DM_uncomplicated           0.353           0.314           0.416           0.000           0.369
+             control           0.741           0.061           0.016           0.369           0.000
+
+Saved cerebro_per_subject_with_groups.csv
