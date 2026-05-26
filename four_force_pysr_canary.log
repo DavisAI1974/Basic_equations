@@ -1,0 +1,392 @@
+[four_force_pysr] mode=canary cfg={'N_ens': 200, 'T': 10.0, 'dt': 0.02} seeds=[11] niter=15 max_n=200 timeout_s=60
+
+=== seed=11 ===
+[juliapkg] Found dependencies: /usr/local/lib/python3.11/dist-packages/juliacall/juliapkg.json
+[juliapkg] Found dependencies: /usr/local/lib/python3.11/dist-packages/juliapkg/juliapkg.json
+[juliapkg] Found dependencies: /usr/local/lib/python3.11/dist-packages/pysr/juliapkg.json
+[juliapkg] Locating Julia 1.10.3 - 1.11
+[juliapkg] Querying Julia versions from https://julialang-s3.julialang.org/bin/versions.json
+[juliapkg] WARNING: About to install Julia 1.11.9 to /root/.julia/environments/pyjuliapkg/pyjuliapkg/install.
+[juliapkg]   If you use juliapkg in more than one environment, you are likely to
+[juliapkg]   have Julia installed in multiple locations. It is recommended to
+[juliapkg]   install JuliaUp (https://github.com/JuliaLang/juliaup) or Julia
+[juliapkg]   (https://julialang.org/downloads) yourself.
+[juliapkg] Downloading Julia from https://julialang-s3.julialang.org/bin/linux/x64/1.11/julia-1.11.9-linux-x86_64.tar.gz
+             downloaded 194.6 MB of 273.2 MB
+             download complete
+[juliapkg] Verifying download
+[juliapkg] Installing Julia 1.11.9 to /root/.julia/environments/pyjuliapkg/pyjuliapkg/install
+[juliapkg] Using Julia 1.11.9 at /root/.julia/environments/pyjuliapkg/pyjuliapkg/install/bin/julia
+[juliapkg] Using Julia project at /root/.julia/environments/pyjuliapkg
+[juliapkg] Writing Project.toml:
+           | [deps]
+           | PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
+           | OpenSSL_jll = "458c3c95-2e84-50aa-8efc-19380b2a3a95"
+           | SymbolicRegression = "8254be44-1295-4e6a-a16d-46603ac705cb"
+           | Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+           | 
+           | [compat]
+           | PythonCall = "=0.9.26"
+           | OpenSSL_jll = "~3.0"
+           | SymbolicRegression = "~1.11"
+           | Serialization = "^1"
+[juliapkg] Installing packages:
+           | import Pkg
+           | Pkg.Registry.update()
+           | Pkg.add([
+           |   Pkg.PackageSpec(name="PythonCall", uuid="6099a3de-0909-46bc-b1f4-468b9a2dfc0d"),
+           |   Pkg.PackageSpec(name="OpenSSL_jll", uuid="458c3c95-2e84-50aa-8efc-19380b2a3a95"),
+           |   Pkg.PackageSpec(name="SymbolicRegression", uuid="8254be44-1295-4e6a-a16d-46603ac705cb"),
+           |   Pkg.PackageSpec(name="Serialization", uuid="9e88b42a-f829-5b0c-bbe9-9e923198166b"),
+           | ])
+           | Pkg.resolve()
+           | Pkg.precompile()
+  Installing known registries into `~/.julia`
+       Added `General` registry to ~/.julia/registries
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+   Installed pixi_jll ──────────────────── v0.63.2+0
+   Installed MicroMamba ────────────────── v0.1.15
+   Installed IrrationalConstants ───────── v0.2.6
+   Installed ScientificTypesBase ───────── v3.1.0
+   Installed DiffRules ─────────────────── v1.15.1
+   Installed Tricks ────────────────────── v0.1.13
+   Installed Scratch ───────────────────── v1.3.0
+   Installed DynamicExpressions ────────── v1.10.4
+   Installed Adapt ─────────────────────── v4.6.0
+   Installed TableTraits ───────────────── v1.0.1
+   Installed DiffResults ───────────────── v1.1.0
+   Installed OpenSSL_jll ───────────────── v3.0.20+0
+   Installed PtrArrays ─────────────────── v1.4.0
+   Installed StatisticalTraits ─────────── v3.5.0
+   Installed MLJModelInterface ─────────── v1.11.1
+   Installed ADTypes ───────────────────── v1.22.0
+   Installed JSON ──────────────────────── v1.6.0
+   Installed Preferences ───────────────── v1.5.2
+   Installed PythonCall ────────────────── v0.9.26
+   Installed PositiveFactorizations ────── v0.2.4
+   Installed Tables ────────────────────── v1.12.1
+   Installed DataAPI ───────────────────── v1.16.0
+   Installed Optim ─────────────────────── v1.13.3
+   Installed Pidfile ───────────────────── v1.3.0
+   Installed ProgressMeter ─────────────── v1.10.2
+   Installed micromamba_jll ────────────── v2.3.1+0
+   Installed SpecialFunctions ──────────── v2.7.2
+   Installed Parsers ───────────────────── v2.8.4
+   Installed Setfield ──────────────────── v1.1.2
+   Installed DynamicDiff ───────────────── v0.2.1
+   Installed IteratorInterfaceExtensions ─ v1.0.0
+   Installed DataValueInterfaces ───────── v1.0.0
+   Installed OrderedCollections ────────── v1.8.1
+   Installed ConstructionBase ──────────── v1.6.0
+   Installed PrecompileTools ───────────── v1.2.1
+   Installed JLLWrappers ───────────────── v1.8.0
+   Installed StaticArraysCore ──────────── v1.4.4
+   Installed NaNMath ───────────────────── v1.1.3
+   Installed TestItems ─────────────────── v1.0.0
+   Installed NLSolversBase ─────────────── v7.10.0
+   Installed FillArrays ────────────────── v1.16.0
+   Installed LineSearches ──────────────── v7.5.1
+   Installed EnumX ─────────────────────── v1.0.7
+   Installed Reexport ──────────────────── v1.2.2
+   Installed Statistics ────────────────── v1.11.1
+   Installed DataStructures ────────────── v0.19.4
+   Installed ForwardDiff ───────────────── v1.3.3
+   Installed ChainRulesCore ────────────── v1.26.1
+   Installed CommonSubexpressions ──────── v0.3.1
+   Installed ArrayInterface ────────────── v7.25.0
+   Installed LogExpFunctions ───────────── v0.3.29
+   Installed AliasTables ───────────────── v1.1.3
+   Installed UnsafePointers ────────────── v1.0.0
+   Installed OpenSpecFun_jll ───────────── v0.5.6+0
+   Installed StatsAPI ──────────────────── v1.8.0
+   Installed DispatchDoctor ────────────── v0.4.28
+   Installed SymbolicRegression ────────── v1.11.3
+   Installed Requires ──────────────────── v1.3.1
+   Installed Interfaces ────────────────── v0.3.2
+   Installed MacroTools ────────────────── v0.5.16
+   Installed Compat ────────────────────── v4.18.1
+   Installed Missings ──────────────────── v1.2.0
+   Installed CondaPkg ──────────────────── v0.2.36
+   Installed DynamicQuantities ─────────── v1.13.0
+   Installed StatsBase ─────────────────── v0.34.10
+   Installed SortingAlgorithms ─────────── v1.2.2
+   Installed LossFunctions ─────────────── v1.2.0
+   Installed DocStringExtensions ───────── v0.9.5
+   Installed DifferentiationInterface ──── v0.7.18
+   Installed StructUtils ───────────────── v2.8.2
+   Installed FiniteDiff ────────────────── v2.31.0
+    Updating `~/.julia/environments/pyjuliapkg/Project.toml`
+⌅ [6099a3de] + PythonCall v0.9.26
+⌅ [8254be44] + SymbolicRegression v1.11.3
+⌅ [458c3c95] + OpenSSL_jll v3.0.20+0
+  [9e88b42a] ~ Serialization ⇒ v1.11.0
+    Updating `~/.julia/environments/pyjuliapkg/Manifest.toml`
+  [47edcb42] + ADTypes v1.22.0
+  [79e6a3ab] + Adapt v4.6.0
+  [66dad0bd] + AliasTables v1.1.3
+  [4fba245c] + ArrayInterface v7.25.0
+  [d360d2e6] + ChainRulesCore v1.26.1
+  [bbf7d656] + CommonSubexpressions v0.3.1
+  [34da2185] + Compat v4.18.1
+  [992eb4ea] + CondaPkg v0.2.36
+  [187b0558] + ConstructionBase v1.6.0
+  [9a962f9c] + DataAPI v1.16.0
+  [864edb3b] + DataStructures v0.19.4
+  [e2d170a0] + DataValueInterfaces v1.0.0
+  [163ba53b] + DiffResults v1.1.0
+  [b552c78f] + DiffRules v1.15.1
+  [a0c0ee7d] + DifferentiationInterface v0.7.18
+  [8d63f2c5] + DispatchDoctor v0.4.28
+  [ffbed154] + DocStringExtensions v0.9.5
+⌅ [7317a516] + DynamicDiff v0.2.1
+⌅ [a40a106e] + DynamicExpressions v1.10.4
+  [06fc5a27] + DynamicQuantities v1.13.0
+  [4e289a0a] + EnumX v1.0.7
+  [1a297f60] + FillArrays v1.16.0
+  [6a86dc24] + FiniteDiff v2.31.0
+  [f6369f11] + ForwardDiff v1.3.3
+  [85a1e053] + Interfaces v0.3.2
+  [92d709cd] + IrrationalConstants v0.2.6
+  [82899510] + IteratorInterfaceExtensions v1.0.0
+  [692b3bcd] + JLLWrappers v1.8.0
+  [682c06a0] + JSON v1.6.0
+⌃ [d3d80556] + LineSearches v7.5.1
+  [2ab3a3ac] + LogExpFunctions v0.3.29
+  [30fc2ffe] + LossFunctions v1.2.0
+⌅ [e80e1ace] + MLJModelInterface v1.11.1
+  [1914dd2f] + MacroTools v0.5.16
+  [0b3b1443] + MicroMamba v0.1.15
+  [e1d29d7a] + Missings v1.2.0
+⌅ [d41bc354] + NLSolversBase v7.10.0
+  [77ba4419] + NaNMath v1.1.3
+⌅ [429524aa] + Optim v1.13.3
+  [bac558e1] + OrderedCollections v1.8.1
+  [69de0a69] + Parsers v2.8.4
+  [fa939f87] + Pidfile v1.3.0
+  [85a6dd25] + PositiveFactorizations v0.2.4
+⌅ [aea7be01] + PrecompileTools v1.2.1
+  [21216c6a] + Preferences v1.5.2
+⌅ [92933f4c] + ProgressMeter v1.10.2
+  [43287f4e] + PtrArrays v1.4.0
+⌅ [6099a3de] + PythonCall v0.9.26
+  [189a3867] + Reexport v1.2.2
+  [ae029012] + Requires v1.3.1
+  [30f210dd] + ScientificTypesBase v3.1.0
+  [6c6a2e73] + Scratch v1.3.0
+  [efcf1570] + Setfield v1.1.2
+  [a2af1166] + SortingAlgorithms v1.2.2
+  [276daf66] + SpecialFunctions v2.7.2
+  [1e83bf80] + StaticArraysCore v1.4.4
+  [64bff920] + StatisticalTraits v3.5.0
+  [10745b16] + Statistics v1.11.1
+  [82ae8749] + StatsAPI v1.8.0
+  [2913bbd2] + StatsBase v0.34.10
+  [ec057cc2] + StructUtils v2.8.2
+⌅ [8254be44] + SymbolicRegression v1.11.3
+  [3783bdb8] + TableTraits v1.0.1
+  [bd369af6] + Tables v1.12.1
+  [1c621080] + TestItems v1.0.0
+  [410a4b4d] + Tricks v0.1.13
+  [e17b2a0c] + UnsafePointers v1.0.0
+⌅ [458c3c95] + OpenSSL_jll v3.0.20+0
+  [efe28fd5] + OpenSpecFun_jll v0.5.6+0
+  [f8abcde7] + micromamba_jll v2.3.1+0
+  [4d7b5844] + pixi_jll v0.63.2+0
+  [0dad84c5] + ArgTools v1.1.2
+  [56f22d72] + Artifacts v1.11.0
+  [2a0f44e3] + Base64 v1.11.0
+  [ade2ca70] + Dates v1.11.0
+  [8ba89e20] + Distributed v1.11.0
+  [f43a241f] + Downloads v1.6.0
+  [7b1f6079] + FileWatching v1.11.0
+  [9fa8497b] + Future v1.11.0
+  [b77e0a4c] + InteractiveUtils v1.11.0
+  [4af54fe1] + LazyArtifacts v1.11.0
+  [b27032c2] + LibCURL v0.6.4
+  [76f85450] + LibGit2 v1.11.0
+  [8f399da3] + Libdl v1.11.0
+  [37e2e46d] + LinearAlgebra v1.11.0
+  [56ddb016] + Logging v1.11.0
+  [d6f4376e] + Markdown v1.11.0
+  [ca575930] + NetworkOptions v1.2.0
+  [44cfe95a] + Pkg v1.11.0
+  [de0858da] + Printf v1.11.0
+  [3fa0cd96] + REPL v1.11.0
+  [9a3f8284] + Random v1.11.0
+  [ea8e919c] + SHA v0.7.0
+  [9e88b42a] + Serialization v1.11.0
+  [6462fe0b] + Sockets v1.11.0
+  [2f01184e] + SparseArrays v1.11.0
+  [f489334b] + StyledStrings v1.11.0
+  [fa267f1f] + TOML v1.0.3
+  [a4e569a6] + Tar v1.10.0
+  [8dfed614] + Test v1.11.0
+  [cf7118a7] + UUIDs v1.11.0
+  [4ec0a83e] + Unicode v1.11.0
+  [e66e0078] + CompilerSupportLibraries_jll v1.1.1+0
+  [deac9b47] + LibCURL_jll v8.6.0+0
+  [e37daf67] + LibGit2_jll v1.7.2+0
+  [29816b5a] + LibSSH2_jll v1.11.0+1
+  [c8ffd9c3] + MbedTLS_jll v2.28.6+0
+  [14a3606d] + MozillaCACerts_jll v2023.12.12
+  [4536629a] + OpenBLAS_jll v0.3.27+1
+  [05823500] + OpenLibm_jll v0.8.5+0
+  [bea87d4a] + SuiteSparse_jll v7.7.0+0
+  [83775a58] + Zlib_jll v1.2.13+1
+  [8e850b90] + libblastrampoline_jll v5.11.0+0
+  [8e850ede] + nghttp2_jll v1.59.0+0
+  [3f19e933] + p7zip_jll v17.4.0+2
+        Info Packages marked with ⌃ and ⌅ have new versions available. Those with ⌃ may be upgradable, but those with ⌅ are restricted by compatibility constraints from upgrading. To see why use `status --outdated -m`
+Precompiling project...
+    423.8 ms  ✓ EnumX
+    445.5 ms  ✓ DataValueInterfaces
+    537.4 ms  ✓ PositiveFactorizations
+    634.6 ms  ✓ OrderedCollections
+    438.3 ms  ✓ Reexport
+   1055.0 ms  ✓ FillArrays
+    755.1 ms  ✓ DocStringExtensions
+    672.6 ms  ✓ Statistics
+    489.9 ms  ✓ UnsafePointers
+    369.6 ms  ✓ IteratorInterfaceExtensions
+    610.1 ms  ✓ ConstructionBase
+    494.4 ms  ✓ Adapt
+   1262.1 ms  ✓ IrrationalConstants
+    624.1 ms  ✓ Tricks
+    419.8 ms  ✓ DataAPI
+    415.8 ms  ✓ StatsAPI
+    300.5 ms  ✓ PtrArrays
+    421.7 ms  ✓ TestItems
+    617.2 ms  ✓ ADTypes
+    953.9 ms  ✓ ProgressMeter
+    585.2 ms  ✓ StaticArraysCore
+    458.1 ms  ✓ NaNMath
+    706.0 ms  ✓ Interfaces
+    626.7 ms  ✓ Requires
+    465.0 ms  ✓ ScientificTypesBase
+    570.6 ms  ✓ Scratch
+    593.6 ms  ✓ Pidfile
+    675.0 ms  ✓ Compat
+   1281.2 ms  ✓ StructUtils
+    934.3 ms  ✓ Preferences
+   2961.6 ms  ✓ MacroTools
+    836.6 ms  ✓ FillArrays → FillArraysSparseArraysExt
+    675.2 ms  ✓ Statistics → SparseArraysExt
+    510.4 ms  ✓ FillArrays → FillArraysStatisticsExt
+    367.4 ms  ✓ ConstructionBase → ConstructionBaseLinearAlgebraExt
+    444.5 ms  ✓ TableTraits
+    946.2 ms  ✓ LossFunctions
+    604.1 ms  ✓ Adapt → AdaptSparseArraysExt
+   1962.6 ms  ✓ DataStructures
+    705.1 ms  ✓ ArrayInterface
+    752.9 ms  ✓ LogExpFunctions
+    707.7 ms  ✓ Missings
+    557.3 ms  ✓ AliasTables
+    382.7 ms  ✓ DiffResults
+    498.8 ms  ✓ ADTypes → ADTypesConstructionBaseExt
+    527.7 ms  ✓ StatisticalTraits
+    584.8 ms  ✓ Compat → CompatLinearAlgebraExt
+   1073.0 ms  ✓ DifferentiationInterface
+    600.1 ms  ✓ StructUtils → StructUtilsStaticArraysCoreExt
+    546.4 ms  ✓ PrecompileTools
+    519.5 ms  ✓ JLLWrappers
+    703.5 ms  ✓ CommonSubexpressions
+    640.8 ms  ✓ SortingAlgorithms
+    415.4 ms  ✓ ArrayInterface → ArrayInterfaceStaticArraysCoreExt
+   1235.3 ms  ✓ Tables
+    682.2 ms  ✓ ArrayInterface → ArrayInterfaceSparseArraysExt
+   1334.2 ms  ✓ Setfield
+   1590.5 ms  ✓ DispatchDoctor
+    726.2 ms  ✓ OpenSSL_jll
+    837.8 ms  ✓ DifferentiationInterface → DifferentiationInterfaceSparseArraysExt
+   1200.9 ms  ✓ MLJModelInterface
+   1591.0 ms  ✓ ChainRulesCore
+    569.9 ms  ✓ OpenSpecFun_jll
+   1189.9 ms  ✓ pixi_jll
+    435.4 ms  ✓ StructUtils → StructUtilsTablesExt
+   1358.6 ms  ✓ micromamba_jll
+    648.8 ms  ✓ FiniteDiff
+    764.0 ms  ✓ ChainRulesCore → ChainRulesCoreSparseArraysExt
+    711.5 ms  ✓ ADTypes → ADTypesChainRulesCoreExt
+    607.6 ms  ✓ ArrayInterface → ArrayInterfaceChainRulesCoreExt
+    652.9 ms  ✓ DifferentiationInterface → DifferentiationInterfaceChainRulesCoreExt
+   2882.7 ms  ✓ StatsBase
+    907.9 ms  ✓ DispatchDoctor → DispatchDoctorChainRulesCoreExt
+   1772.5 ms  ✓ LogExpFunctions → LogExpFunctionsChainRulesCoreExt
+   1169.2 ms  ✓ FiniteDiff → FiniteDiffSparseArraysExt
+    639.7 ms  ✓ DifferentiationInterface → DifferentiationInterfaceFiniteDiffExt
+   3493.4 ms  ✓ SpecialFunctions
+   7780.1 ms  ✓ DynamicQuantities
+   5152.5 ms  ✓ MicroMamba
+   2543.8 ms  ✓ SpecialFunctions → SpecialFunctionsChainRulesCoreExt
+   1024.3 ms  ✓ DiffRules
+    942.5 ms  ✓ DynamicQuantities → DynamicQuantitiesLinearAlgebraExt
+   3660.4 ms  ✓ ForwardDiff
+    644.4 ms  ✓ DifferentiationInterface → DifferentiationInterfaceForwardDiffExt
+  15573.0 ms  ✓ Parsers
+    829.7 ms  ✓ NLSolversBase
+    980.1 ms  ✓ LineSearches
+   2602.4 ms  ✓ Optim
+   4239.9 ms  ✓ JSON
+  13310.1 ms  ✓ DynamicExpressions
+   1098.7 ms  ✓ DynamicExpressions → DynamicExpressionsOptimExt
+   1722.0 ms  ✓ DynamicDiff
+   6405.3 ms  ✓ CondaPkg
+  14740.6 ms  ✓ PythonCall
+  76821.3 ms  ✓ SymbolicRegression
+  95 dependencies successfully precompiled in 107 seconds. 36 already precompiled.
+  2 dependencies had output during precompilation:
+┌ CondaPkg
+│  Downloading artifact: pixi
+└  
+┌ MicroMamba
+│  Downloading artifact: micromamba
+└  
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+
+  em          n=200  fit_time=14.4s
+    best (sympy): (x0 - x1)**2 + 0.50130266
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.935e-02  score=+0.000  0.6182224
+      c=  5  loss=1.915e-02  score=+0.003  0.6127747 - (x0 * -0.039088525)
+      c=  6  loss=5.969e-03  score=+1.166  square(x0 - x1) + 0.50130266
+      c=  9  loss=5.435e-03  score=+0.031  cube(square(x0 - x1) + 0.33393365) + 0.4991394
+
+  weak        n=200  fit_time=1.8s
+    best (sympy): (exp(x1*(-x1 + 2.1055722/x0) - 1*4.387298) + 0.79307735)**3
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.198e-02  score=+0.000  0.61441827
+      c=  5  loss=1.099e-02  score=+0.021  (x0 * 0.09803524) + 0.674868
+      c=  6  loss=1.088e-02  score=+0.011  (cube(x1) * 0.08352775) + 0.6474634
+      c=  8  loss=9.258e-03  score=+0.080  0.5595227 / sqrt((-0.09089353 / x0) - x0)
+      c=  9  loss=8.873e-03  score=+0.042  sqrt(cube(0.85811543) / ((x0 / x1) - x0))
+      c= 10  loss=8.642e-03  score=+0.026  0.5313562 / sqrt((-0.11411014 / (x1 / 0.42173642)) - x0)
+      c= 11  loss=8.467e-03  score=+0.021  sqrt((x1 / x0) / square((x1 / -1.4002236) - -1.1342232))
+      c= 13  loss=7.153e-03  score=+0.084  cube(exp((((2.1055722 / x0) - x1) * x1) - 4.387298) + 0.79307735)
+
+  strong      n=200  fit_time=1.6s
+    best (sympy): x1*0.24063033 + 0.6096144
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=5.193e-03  score=+0.000  0.62869126
+      c=  4  loss=4.598e-03  score=+0.041  cube(x1) + 0.624596
+      c=  5  loss=3.538e-03  score=+0.262  (x1 * 0.24063033) + 0.6096144
+      c=  6  loss=3.531e-03  score=+0.002  exp((x1 * 0.39244974) + -0.49741548)
+      c=  8  loss=3.515e-03  score=+0.002  sqrt((-0.4781593 / (1.2895678 + x0)) + 0.755943)
+      c=  9  loss=3.221e-03  score=+0.087  (x0 * (0.29392442 - (x0 * x0))) + 0.6128678
+      c= 11  loss=3.125e-03  score=+0.015  0.62861717 + (x0 * (0.33451065 - (x0 * (0.33451065 + x0))))
+      c= 12  loss=3.096e-03  score=+0.009  cube((x1 - (x1 * ((x0 - x1) + 0.8474015))) + 0.8474015)
+
+  gravity     n=200  fit_time=1.6s
+    best (sympy): x0 - 0.88083816*x1 + 0.6264362
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=7.076e-03  score=+0.000  0.6027836
+      c=  5  loss=5.615e-03  score=+0.058  (x0 * 0.11286053) + 0.59359586
+      c=  6  loss=5.603e-03  score=+0.002  exp(x0 + -2.2198544) + 0.4784485
+      c=  7  loss=4.614e-03  score=+0.194  x0 + (0.6264362 - (x1 * 0.88083816))
+      c=  9  loss=4.372e-03  score=+0.027  ((x0 - (x1 * 0.8454112)) * 0.7310605) + 0.61699784
+      c= 10  loss=3.924e-03  score=+0.108  0.59515303 + ((x0 - (0.84185475 * x1)) * exp(x0))
+      c= 11  loss=3.722e-03  score=+0.053  (0.47102237 - (exp(x1) * 0.74694794)) + (exp(x0) * 0.89218616)
+      c= 12  loss=3.688e-03  score=+0.009  ((x0 - (x1 * 0.8600989)) * exp(x0 * 1.3805591)) + 0.60609764
+
+[four_force_pysr] wrote four_force_pysr_canary.json  elapsed=178.6s

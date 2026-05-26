@@ -1,0 +1,89 @@
+[four_force_probe] mode=canary cfg={'N_ens': 200, 'T': 10.0, 'dt': 0.02} seed=42
+
+  force=em  elapsed=0.3s  (sim=0.0s op=0.2s)  n_points=400
+    op_means = ['+0.126', '+0.141', '+0.114', '+0.157', '+0.088', '+0.635']
+    SV deg2 = ['9.151e+00', '4.874e+00', '4.037e+00', '2.447e+00', '1.173e+00', '4.219e-01']
+    eigvals = ['2.099e-01', '5.954e-02', '4.084e-02', '1.500e-02', '3.451e-03', '4.462e-04']
+    KBK signal_rank=5  null_rank=1  gap_ratio=2.78e+00
+    extract_v1 v_null 6D = ['+0.0172', '-0.0255', '-0.5039', '-0.3305', '+0.7621', '+0.2348']
+    [2,3,4] projection = ['-0.5187', '-0.3402', '+0.7844']  cos to (+,+,+) = +0.2898
+    AI Poincare two-NN(z) = 2.675
+    Levina-Bickel dim = 2.196 +/- 0.814
+    local-PCA k=10 mean=2.36 median=2.0 std=0.51
+    local-PCA k=25 mean=2.63 median=3.0 std=0.48
+    local-PCA k=50 mean=2.85 median=3.0 std=0.53
+    local-PCA k=100 mean=3.27 median=3.0 std=0.71
+    KBK symbolic relations (sparse):
+      null[0] sparse: -0.5042*H_a^2 -0.3307*H_b^2 +0.7624*H_a*H_b +0.2349*MI ~ 0  resid_std=2.239e-02
+      null[1] sparse: -0.1524*H_a +0.1806*H_b +0.7097*H_a^2 -0.5892*H_b^2 +0.1395*H_a*H_b +0.2718*MI ~ 0  resid_std=5.867e-02
+      null[2] sparse: +0.4404*H_b^2 +0.8978*MI ~ 0  resid_std=1.304e-01
+
+  force=weak  elapsed=0.3s  (sim=0.0s op=0.1s)  n_points=400
+    op_means = ['-0.635', '-0.589', '+0.506', '+0.470', '+0.480', '+0.574']
+    SV deg2 = ['1.643e+01', '3.219e+00', '1.758e+00', '1.591e+00', '3.214e-01', '8.791e-02']
+    eigvals = ['6.765e-01', '2.596e-02', '7.743e-03', '6.346e-03', '2.589e-04', '1.937e-05']
+    KBK signal_rank=1  null_rank=5  gap_ratio=5.10e+00
+    extract_v1 v_null 6D = ['-0.0923', '+0.0767', '-0.4544', '-0.3568', '+0.8072', '-0.0139']
+    [2,3,4] projection = ['-0.4578', '-0.3594', '+0.8132']  cos to (+,+,+) = +0.3304
+    AI Poincare two-NN(z) = 2.596
+    Levina-Bickel dim = 2.437 +/- 1.117
+    local-PCA k=10 mean=2.60 median=3.0 std=0.50
+    local-PCA k=25 mean=2.48 median=2.0 std=0.51
+    local-PCA k=50 mean=2.31 median=2.0 std=0.48
+    local-PCA k=100 mean=2.06 median=2.0 std=0.25
+    KBK symbolic relations (sparse):
+      null[0] sparse: -0.4578*H_a^2 -0.3594*H_b^2 +0.8132*H_a*H_b ~ 0  resid_std=1.129e-02
+      null[1] sparse: +0.7006*H_a -0.4873*H_b +0.3313*H_a^2 -0.3746*H_b^2 +0.1469*H_a*H_b ~ 0  resid_std=1.626e-02
+      null[2] sparse: +0.3247*H_b +0.2947*H_a^2 +0.8987*MI ~ 0  resid_std=7.891e-02
+
+  force=strong  elapsed=0.3s  (sim=0.0s op=0.1s)  n_points=400
+    op_means = ['+0.109', '+0.094', '+0.032', '+0.027', '+0.028', '+0.552']
+    SV deg2 = ['4.020e+00', '1.043e+00', '8.740e-01', '3.680e-01', '1.435e-01', '2.092e-02']
+    eigvals = ['4.050e-02', '2.728e-03', '1.915e-03', '3.395e-04', '5.160e-05', '1.096e-06']
+    KBK signal_rank=5  null_rank=1  gap_ratio=6.86e+00
+    extract_v1 v_null 6D = ['+0.0160', '-0.0224', '-0.3771', '-0.4214', '+0.8243', '+0.0021']
+    [2,3,4] projection = ['-0.3772', '-0.4216', '+0.8246']  cos to (+,+,+) = +0.3472
+    AI Poincare two-NN(z) = 2.637
+    Levina-Bickel dim = 2.800 +/- 1.199
+    local-PCA k=10 mean=2.88 median=3.0 std=0.32
+    local-PCA k=25 mean=2.90 median=3.0 std=0.30
+    local-PCA k=50 mean=2.79 median=3.0 std=0.41
+    local-PCA k=100 mean=2.85 median=3.0 std=0.36
+    KBK symbolic relations (sparse):
+      null[0] sparse: -0.3772*H_a^2 -0.4216*H_b^2 +0.8246*H_a*H_b ~ 0  resid_std=1.559e-03
+      null[1] sparse: +0.1599*H_a -0.2255*H_b -0.6316*H_a^2 +0.7244*H_b^2 ~ 0  resid_std=7.619e-03
+      null[2] sparse: +0.2285*H_a -0.5242*H_b +0.6355*H_a^2 +0.2982*H_b^2 +0.4245*H_a*H_b ~ 0  resid_std=1.841e-02
+
+  force=gravity  elapsed=0.3s  (sim=0.0s op=0.1s)  n_points=400
+    op_means = ['+0.084', '+0.131', '+0.104', '+0.179', '+0.135', '+0.568']
+    SV deg2 = ['1.022e+01', '3.525e+00', '1.200e+00', '7.026e-01', '3.170e-01', '2.890e-02']
+    eigvals = ['2.615e-01', '3.114e-02', '3.609e-03', '1.237e-03', '2.519e-04', '2.094e-06']
+    KBK signal_rank=5  null_rank=1  gap_ratio=1.10e+01
+    extract_v1 v_null 6D = ['-0.0267', '+0.0190', '-0.5300', '-0.2984', '+0.7930', '-0.0050']
+    [2,3,4] projection = ['-0.5303', '-0.2986', '+0.7935']  cos to (+,+,+) = +0.3095
+    AI Poincare two-NN(z) = 2.736
+    Levina-Bickel dim = 2.640 +/- 1.060
+    local-PCA k=10 mean=2.60 median=3.0 std=0.49
+    local-PCA k=25 mean=2.75 median=3.0 std=0.43
+    local-PCA k=50 mean=2.79 median=3.0 std=0.59
+    local-PCA k=100 mean=2.48 median=2.0 std=0.50
+    KBK symbolic relations (sparse):
+      null[0] sparse: -0.5303*H_a^2 -0.2986*H_b^2 +0.7935*H_a*H_b ~ 0  resid_std=1.965e-03
+      null[1] sparse: +0.2988*H_a -0.2152*H_b +0.6578*H_a^2 -0.6184*H_b^2 +0.2219*H_a*H_b ~ 0  resid_std=1.605e-02
+      null[2] sparse: +0.7380*H_a -0.5681*H_b -0.3097*H_a^2 +0.1914*H_b^2 ~ 0  resid_std=3.621e-02
+
+  cross-force cosines (smallest extract_v1 null):
+    6D  cos(em__weak) = +0.9553
+    6D  cos(em__strong) = +0.9588
+    6D  cos(em__gravity) = +0.9680
+    6D  cos(weak__strong) = +0.9839
+    6D  cos(weak__gravity) = +0.9915
+    6D  cos(strong__gravity) = +0.9785
+    234 cos(em__weak) = +0.9975
+    234 cos(em__strong) = +0.9859
+    234 cos(em__gravity) = +0.9990
+    234 cos(weak__strong) = +0.9948
+    234 cos(weak__gravity) = +0.9953
+    234 cos(strong__gravity) = +0.9802
+
+[four_force_probe] wrote four_force_probe_canary.json elapsed=1.1s
