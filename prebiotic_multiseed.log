@@ -1,0 +1,41 @@
+[prebiotic-MS] k_cat=0.0 seed=11
+  done 1.2s  MI=0.185  cos_attr=0.990  poly1_r2=0.115  exp_r2=0.047
+[prebiotic-MS] k_cat=0.0 seed=22
+  done 0.9s  MI=0.183  cos_attr=1.000  poly1_r2=0.043  exp_r2=0.043
+[prebiotic-MS] k_cat=0.0 seed=33
+  done 0.9s  MI=0.204  cos_attr=0.997  poly1_r2=0.101  exp_r2=0.093
+[prebiotic-MS] k_cat=0.25 seed=11
+  done 1.0s  MI=0.635  cos_attr=0.978  poly1_r2=0.788  exp_r2=0.708
+[prebiotic-MS] k_cat=0.25 seed=22
+  done 1.0s  MI=0.578  cos_attr=1.000  poly1_r2=0.829  exp_r2=0.694
+[prebiotic-MS] k_cat=0.25 seed=33
+  done 0.8s  MI=0.583  cos_attr=0.991  poly1_r2=0.893  exp_r2=0.810
+[prebiotic-MS] k_cat=0.5 seed=11
+  done 0.8s  MI=0.914  cos_attr=0.994  poly1_r2=0.709  exp_r2=0.658
+[prebiotic-MS] k_cat=0.5 seed=22
+  done 0.8s  MI=0.851  cos_attr=0.999  poly1_r2=0.760  exp_r2=0.684
+[prebiotic-MS] k_cat=0.5 seed=33
+  done 0.8s  MI=0.865  cos_attr=0.998  poly1_r2=0.857  exp_r2=0.812
+[prebiotic-MS] k_cat=1.0 seed=11
+  done 0.8s  MI=1.182  cos_attr=0.999  poly1_r2=0.680  exp_r2=0.661
+[prebiotic-MS] k_cat=1.0 seed=22
+  done 0.9s  MI=1.110  cos_attr=0.999  poly1_r2=0.741  exp_r2=0.723
+[prebiotic-MS] k_cat=1.0 seed=33
+  done 0.9s  MI=1.141  cos_attr=0.999  poly1_r2=0.841  exp_r2=0.834
+[prebiotic-MS] k_cat=2.0 seed=11
+  done 0.8s  MI=1.418  cos_attr=1.000  poly1_r2=0.569  exp_r2=0.562
+[prebiotic-MS] k_cat=2.0 seed=22
+  done 0.8s  MI=1.336  cos_attr=1.000  poly1_r2=0.557  exp_r2=0.551
+[prebiotic-MS] k_cat=2.0 seed=33
+  done 0.8s  MI=1.390  cos_attr=0.999  poly1_r2=0.795  exp_r2=0.792
+
+=== summary ===
+ k_cat   MI_mean  cos_attr  cos_attr_std  v6_inter_min  v6_inter_mean
+  0.00     0.191     0.996         0.004         0.973          0.987
+  0.25     0.599     0.989         0.009         0.794          0.890
+  0.50     0.877     0.997         0.002         0.877          0.933
+  1.00     1.144     0.999         0.000         0.952          0.968
+  2.00     1.382     1.000         0.000         0.984          0.992
+
+Total: 13.3s
+Wrote prebiotic_multiseed.json
