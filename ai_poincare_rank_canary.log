@@ -1,0 +1,13 @@
+[ai_poincare] mode=canary cfg={'T': 20.0, 'dt': 0.05, 'window_s': 4.0, 'stride_s': 0.5, 'n_real': 20, 'gamma': 0.5, 'sigma': 1.0, 'mi_bins': 10} seeds=[11]
+  seed=11 n_points=660 elapsed=0.6s
+    two-NN dim (z-scored)       = 3.033
+    two-NN dim (raw centered)   = 3.140
+    Levina-Bickel MLE (k=10)    = 3.360 +/- 1.248
+    local-PCA 95%-var rank per k:
+       k= 10  mean=2.94  median=3.0  std=0.25
+       k= 25  mean=3.00  median=3.0  std=0.00
+       k= 50  mean=3.00  median=3.0  std=0.00
+       k=100  mean=3.00  median=3.0  std=0.00
+       k=200  mean=3.00  median=3.0  std=0.00
+       k=500  mean=3.00  median=3.0  std=0.00
+[ai_poincare] wrote ai_poincare_rank_canary.json elapsed=0.6s

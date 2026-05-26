@@ -1,0 +1,121 @@
+{
+  "config": {
+    "T": 20.0,
+    "dt": 0.05,
+    "window_s": 4.0,
+    "stride_s": 0.5,
+    "n_real": 20,
+    "gamma": 0.5,
+    "sigma": 1.0,
+    "mi_bins": 10
+  },
+  "seeds": [
+    11
+  ],
+  "runs": [
+    {
+      "seed": 11,
+      "n_points": 660,
+      "two_nn": {
+        "intrinsic_dim_zscore": 3.0334410354056534,
+        "intrinsic_dim_centered_raw_units": 3.139747292836161,
+        "n_used": 660
+      },
+      "local_pca": {
+        "var_thresh": 0.95,
+        "per_k": {
+          "10": {
+            "mean": 2.935,
+            "median": 3.0,
+            "std": 0.246525860712421,
+            "rank_hist": [
+              0,
+              0,
+              13,
+              187,
+              0,
+              0,
+              0
+            ]
+          },
+          "25": {
+            "mean": 3.0,
+            "median": 3.0,
+            "std": 0.0,
+            "rank_hist": [
+              0,
+              0,
+              0,
+              200,
+              0,
+              0,
+              0
+            ]
+          },
+          "50": {
+            "mean": 3.0,
+            "median": 3.0,
+            "std": 0.0,
+            "rank_hist": [
+              0,
+              0,
+              0,
+              200,
+              0,
+              0,
+              0
+            ]
+          },
+          "100": {
+            "mean": 3.0,
+            "median": 3.0,
+            "std": 0.0,
+            "rank_hist": [
+              0,
+              0,
+              0,
+              200,
+              0,
+              0,
+              0
+            ]
+          },
+          "200": {
+            "mean": 3.0,
+            "median": 3.0,
+            "std": 0.0,
+            "rank_hist": [
+              0,
+              0,
+              0,
+              200,
+              0,
+              0,
+              0
+            ]
+          },
+          "500": {
+            "mean": 3.0,
+            "median": 3.0,
+            "std": 0.0,
+            "rank_hist": [
+              0,
+              0,
+              0,
+              200,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "levina_bickel_k10": {
+        "intrinsic_dim": 3.3599641256690127,
+        "std": 1.2484183425396362,
+        "n_used": 660
+      }
+    }
+  ],
+  "elapsed_total_s": 0.617424488067627
+}

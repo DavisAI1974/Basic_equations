@@ -1,0 +1,35 @@
+[ai_poincare] mode=full cfg={'T': 100.0, 'dt': 0.05, 'window_s': 40.0, 'stride_s': 1.0, 'n_real': 500, 'gamma': 0.5, 'sigma': 1.0, 'mi_bins': 12} seeds=[11, 22, 33]
+  seed=11 n_points=30500 elapsed=26.7s
+    two-NN dim (z-scored)       = 2.898
+    two-NN dim (raw centered)   = 2.896
+    Levina-Bickel MLE (k=10)    = 3.283 +/- 1.305
+    local-PCA 95%-var rank per k:
+       k= 10  mean=2.93  median=3.0  std=0.26
+       k= 25  mean=3.00  median=3.0  std=0.00
+       k= 50  mean=3.00  median=3.0  std=0.00
+       k=100  mean=3.00  median=3.0  std=0.00
+       k=200  mean=3.00  median=3.0  std=0.00
+       k=500  mean=3.00  median=3.0  std=0.00
+  seed=22 n_points=30500 elapsed=26.6s
+    two-NN dim (z-scored)       = 2.845
+    two-NN dim (raw centered)   = 2.878
+    Levina-Bickel MLE (k=10)    = 3.342 +/- 1.384
+    local-PCA 95%-var rank per k:
+       k= 10  mean=2.92  median=3.0  std=0.28
+       k= 25  mean=2.99  median=3.0  std=0.10
+       k= 50  mean=3.00  median=3.0  std=0.07
+       k=100  mean=3.00  median=3.0  std=0.00
+       k=200  mean=3.00  median=3.0  std=0.00
+       k=500  mean=3.00  median=3.0  std=0.00
+  seed=33 n_points=30500 elapsed=26.9s
+    two-NN dim (z-scored)       = 2.819
+    two-NN dim (raw centered)   = 2.804
+    Levina-Bickel MLE (k=10)    = 3.306 +/- 1.306
+    local-PCA 95%-var rank per k:
+       k= 10  mean=2.94  median=3.0  std=0.24
+       k= 25  mean=3.00  median=3.0  std=0.00
+       k= 50  mean=3.00  median=3.0  std=0.00
+       k=100  mean=3.00  median=3.0  std=0.00
+       k=200  mean=3.00  median=3.0  std=0.00
+       k=500  mean=3.00  median=3.0  std=0.00
+[ai_poincare] wrote ai_poincare_rank_results.json elapsed=80.2s
