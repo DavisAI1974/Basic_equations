@@ -81,7 +81,7 @@ The Noether-style move: find what is invariant under reparametrizations that gen
 
 - **SENTINEL V4.1** — DARPA Bio Attribution Challenge top-10 team. Awards June 30, 2026. Three-layer swarm, 554x DARPA requirements. Files at E:\sentinel\ and F:\Factory\knowledge\sentinel\.
 - **NoVell** — cardiac AI for cancer detection from routine ECG. OD on synthetic Vigier 2021 data: 93.3% accuracy, 97.4% sensitivity. Datasets: PTB-XL downloaded, Autonomic Aging identified, MIMIC-IV pending.
-- **Information Layer / Operator Discovery foundations** — major methodological revision Session 3. See section below for current state. The "Family A/B" taxonomy from Session 2 is retracted. New ground state: OU attractor direction is real and reproducible but its interpretation is open.
+- **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Per-domain extraction differentiates domains; protocol artifact does NOT dominate per-domain. See Sessions 5 and 6 notes plus ledger (INFO-022, 023, 024) for current state.
 
 ## Information Layer — Current State (2026-05-25 Session 3)
 
@@ -122,6 +122,12 @@ The Noether-style move: find what is invariant under reparametrizations that gen
 **INFO-016 — NULL FINDING / OPEN (Session 3)**: Linear drift at v=1 does not yield reproducible operator-space coordinates at N_REAL=30 in this basis. Inter-seed cosine ranges −0.28 to +0.93. Disambiguation queued: N_REAL sweep at 50, 100, 200, 500 to distinguish (a) basis is structurally blind to this system from (b) sample noise that more realizations would resolve.
 
 **INFO-017 — METHODOLOGICAL (Session 3)**: Drift source diagnostic — antisymmetric energy fraction on the algebraic basis {(H_a − H_b)/sqrt(2), (H_a^2 − H_b^2)/sqrt(2)} flags finite-effective-sample-size noise. Scales as 1/N_eff, amplified by reduced channel correlation. Portable domain-general diagnostic for any extraction in this operator basis.
+
+**INFO-022 — LOCATED FINDING (Session 5 structural; promoted Session 6)**: Rank-3 null subspace in the 6-op basis [H_a, H_b, H_a^2, H_b^2, H_a*H_b, MI] under H_a~H_b~const regime. From three first-order algebraic relations on centered columns. Confirmed by FOUR independent diagnostics in Session 6: KBK rank-gap (with rank-3-strong-plus-1-weak refinement), AI Poincare local-PCA intrinsic dim, AI Poincare two-NN, Levina-Bickel MLE. Robust across 3 estimator families (Vasicek, KDE, kNN/KSG), 5 dt values across 20x range in samples-per-window, 3 seeds. The rank-3 reading is now strong. The MAGNITUDE of the smallest eigenvalues remains procedure-dependent (see INFO-024).
+
+**INFO-023 — LOCATED FINDING (Session 6, new)**: Per-domain ensemble-H + KBK+AI Poincare+SINDy stack produces reproducible domain-specific null directions across 4 simulated domains (physics Duffing, biology Lotka-Volterra, chemistry Brusselator, geology Burridge-Knopoff). Cross-seed cos +0.985 to +0.999 within domain; cross-domain cos mostly < 0.5. The (+1,+1,+2)/sqrt(6) protocol artifact does NOT dominate per-domain (max cos +0.32, min -0.28 across 4 domains x 2 seeds). Independent reproduction of every v5 per-domain claim: geology rank-3 relation at cos +0.99 to v5 (INFO-008b); biology MI ~ poly(H_a) with H_b coefficient 0.003-0.017 (INFO-008c); chemistry-specific cubic content via SINDy deg-3 that is not a Taylor remnant (INFO-008a). Methodology is the stack of KBK 2024 + AI Poincare 2021 + SINDy with extended library, none of which had been combined for windowed/ensemble-H of coupled species before per v5 literature scan ("they never stacked" rule).
+
+**INFO-024 — METHODOLOGICAL (Session 6)**: Eigenvalue floor of operator covariance is min(structural_noise_from_dynamics, estimator_noise_from_procedure). Different procedures have different floors. OU single-trajectory windowed-H pins at ~1e-3 to 5e-5 regardless of sigma, window, dt, or estimator family. Per-domain ensemble-H reaches 2e-7 for geology at N_ens=600; plausibly reaches machine epsilon at larger N_ens via the 1/sqrt(N_ens) noise-reduction scaling. Resolves the v5 machine-epsilon eigenvalue anomaly as procedure-dependent: the rank claim (3 algebraic relations) is robust across procedures; only the eigenvalue magnitude depends on procedure. Practical consequence: state which floor regime you are in before interpreting eigenvalue magnitudes; to drive a floor down, increase ensemble size or use a lower-noise estimator rather than tightening source noise.
 
 ### Experiments queued (priority order)
 
@@ -176,8 +182,23 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v5.md`
-(in repo root) first. It contains Session 5's three-thread probe results
+For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v6.md`
+(in repo root) first. It contains Session 6's six experiments
+(KBK pipeline, AI Poincare rank check, estimator-family sweep,
+window-size scan, SINDy with extended library, per-domain stack
+on 4 domains, sigma scan) and their joint reading. Headline:
+v5 INFO-022 rank-3 claim independently confirmed by FOUR
+diagnostics; per-domain ensemble-H stack reproduces every v5
+per-domain claim (geology rank-3 cos +0.99, biology MI signature
+with H_b absent, chemistry chemistry-specific cubic, physics
+Taylor identity) with cross-seed cos +0.985 to +0.999; v5
+machine-epsilon eigenvalue magnitude is procedure-dependent
+(estimator-noise vs structural-noise; per-domain ensemble-H
+reaches 1e-7, OU windowed-H pins at ~1e-3).
+
+For Session 5 context (three-thread probe results, operator-noise
+bypass, projection-rule sweep, high-seed scrambled, literature
+scan), read `SESSION_HANDOFF_2026-05-26_v5.md`. It contains Session 5's three-thread probe results
 (operator-noise bypass, projection-rule sweep, high-seed scrambled) and
 their joint reading — the (+1,+1,+2)/sqrt(6) direction is a protocol
 artifact of the operator basis having a 3D null subspace under the
@@ -195,6 +216,70 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 6 update — 2026-05-26)
+
+Updated at the end of 2026-05-26 Session 6 to reflect:
+
+- Six experiments run this session, all on branch
+  `claude/claude-md-context-update-uCZ8m`. Scripts:
+  kbk_pipeline.py, ai_poincare_rank.py, kbk_estimator_sweep.py,
+  window_size_scan.py, sindy_symbolic.py, per_domain_kbk.py,
+  sigma_scan.py.
+- Methodology stacked per the v5 "they never stacked" rule:
+  Kaiser-Brunton-Kutz 2024 (arXiv:2403.04889) SVD-rank-gap +
+  symbolic recovery, Cao-Liu-Tegmark 2021 AI Poincare
+  (arXiv:2011.04698) intrinsic-dim, SINDy/SINDyG/DSINDy with
+  extended polynomial + non-polynomial library. Applied to OU
+  baseline and to per-domain ensemble-H data (physics Duffing,
+  biology Lotka-Volterra, chemistry Brusselator, geology
+  Burridge-Knopoff).
+- v5 INFO-022 rank-3 null subspace claim now LOCATED via four
+  independent diagnostics (KBK rank-gap, AI Poincare local-PCA,
+  two-NN, Levina-Bickel MLE). Robust across 3 estimator families,
+  5 dt values, 3 seeds. (See Ledger updates below.)
+- v5 per-domain claims (INFO-008a chemistry, INFO-008b geology,
+  INFO-008c biology) all reproduced via per-domain ensemble-H +
+  KBK probe. Cross-seed cos +0.985 to +0.999 within domain;
+  geology rank-3 relation at cos +0.99 to v5 coefficients;
+  biology MI ~ poly(H_a) with H_b absent (coefficient 0.003 to
+  0.017); chemistry-specific cubic content via SINDy deg-3 that
+  is NOT a Taylor remnant.
+- New isolated finding INFO-023: per-domain operator extraction
+  differentiates domains. The (+1,+1,+2)/sqrt(6) protocol artifact
+  does NOT dominate per-domain (max cos +0.32, min -0.28). Tests
+  the "per-domain expression of substrate" frame and gives it one
+  supporting data point.
+- Methodological refinement INFO-024: eigenvalue floor of operator
+  covariance is min(structural_noise, estimator_noise). Different
+  procedures have different floors. Resolves v5 machine-epsilon
+  anomaly as procedure-dependent. OU windowed-H pins at ~1e-3;
+  per-domain ensemble-H reaches 1e-7 (geology); v5's 1e-13
+  plausibly reached at larger N_ens via same per-domain procedure.
+- I was wrong twice this session about what controls the eigenvalue
+  floor (Window size scan predicted scaling; didn't happen. Sigma
+  scan predicted sigma^4; got sigma^0.56.). Both predictions came
+  from Taylor expansion (structural noise) and missed estimator
+  noise. The Methodological Note above codifies the corrected
+  mental model. Not promoted to a Rule -- Rule C already covers
+  the speaking-posture aspect; this is just a domain-knowledge
+  refinement to apply when reasoning about eigenvalue magnitudes.
+- The implications and applications across fields (medicine,
+  defense, weather, geophysics, ecology, finance/energy,
+  industrial, chemistry/materials, astrophysics, foundational)
+  were mapped late in the session, conditional on the substantive
+  reading. Application surface and falsification tests in v6
+  handoff section "Implications and applications discussed".
+- Queued for Session 7 (Greg's top of queue): GP regression of MI
+  vs H_a per domain (tests v5's biology polynomial fit against
+  flexible nonlinear); PySR symbolic regression for arbitrary
+  nonlinear forms (heavy install; gplearn fallback). Both flagged
+  in v5 literature scan as clean unstacked targets.
+- All earlier Operating Rules remain in force. No new Rule added
+  this session.
+- Branch state: work persisted on
+  `claude/claude-md-context-update-uCZ8m`, pushed. main untouched.
+  No PR.
 
 ## Note (Session 5 update — 2026-05-26)
 
