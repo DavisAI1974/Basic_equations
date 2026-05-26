@@ -1,0 +1,68 @@
+[em_strong_glance] mode=canary cfg={'N_ens': 200, 'T': 10.0, 'dt': 0.02} seeds=[11] niter=15 timeout_s=60
+
+=== em_asym_baseline seed=11 (EM, omega1=1.0 omega2=1.2 (baseline; asymmetric)) ===
+  elapsed=21.4s  MI mean=+0.618 std=0.140
+  KBK v_null 6D = ['-0.013', '+0.002', '-0.434', '-0.367', '+0.755', '+0.326']
+  KBK v_null [2,3,4] = ['-0.460', '-0.388', '+0.799']  cos to (+1,+1,+2) = +0.306
+  KBK signal_rank=5 null_rank=1 eig_min=7.34e-04
+  PySR best (sympy): sqrt((x0 - x1)**2 + 0.29930067)
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=1.953e-02 score=+0.000 0.61799294
+    c=  5 loss=1.892e-02 score=+0.008 (x1 * -0.113289095) + 0.623798
+    c=  6 loss=1.828e-02 score=+0.034 (exp(x1) * -0.1046579) + 0.73885995
+    c=  7 loss=6.671e-03 score=+1.008 sqrt(square(x0 - x1) - -0.29930067)
+    c=  8 loss=6.576e-03 score=+0.014 sqrt(square(x1 - x0) - cube(-0.63013995))
+
+=== em_sym_swap seed=11 (EM, omega1=omega2=1.0 (symmetry swap)) ===
+  elapsed=2.6s  MI mean=+0.685 std=0.154
+  KBK v_null 6D = ['+0.015', '-0.016', '-0.423', '-0.395', '+0.815', '-0.005']
+  KBK v_null [2,3,4] = ['-0.423', '-0.395', '+0.815']  cos to (+1,+1,+2) = +0.332
+  KBK signal_rank=5 null_rank=1 eig_min=2.60e-06
+  PySR best (sympy): exp(-x1**2 - 0.28370678)
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=2.362e-02 score=+0.000 0.68545425
+    c=  5 loss=2.038e-02 score=+0.037 exp(-0.28370678 - square(x1))
+    c=  8 loss=1.993e-02 score=+0.008 exp(-0.49639195 - (x1 * x1)) - -0.13575533
+    c= 12 loss=1.821e-02 score=+0.023 exp(x0 - (0.710865 / exp(0.41826835 - cube(x0 + x1))))
+
+=== strong_sym_baseline seed=11 (Strong, omega1=omega2=0.5 (baseline; symmetric)) ===
+  elapsed=2.5s  MI mean=+0.628 std=0.073
+  KBK v_null 6D = ['-0.014', '+0.001', '-0.361', '-0.425', '+0.830', '-0.003']
+  KBK v_null [2,3,4] = ['-0.361', '-0.425', '+0.830']  cos to (+1,+1,+2) = +0.357
+  KBK signal_rank=5 null_rank=1 eig_min=4.09e-06
+  PySR best (sympy): x1*0.24330975 + 0.6091842
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=5.381e-03 score=+0.000 0.62838423
+    c=  4 loss=4.774e-03 score=+0.040 cube(x1) + 0.62425333
+    c=  5 loss=3.685e-03 score=+0.259 (x1 * 0.24330975) + 0.6091842
+    c=  6 loss=3.677e-03 score=+0.002 cube((x1 * 0.112727955) + 0.8472028)
+    c=  7 loss=3.483e-03 score=+0.054 sqrt(exp(x0 - exp(square(x0))))
+
+=== strong_asym_swap seed=11 (Strong, omega1=0.5 omega2=0.7 (symmetry swap)) ===
+  elapsed=2.2s  MI mean=+0.624 std=0.072
+  KBK v_null 6D = ['-0.005', '+0.003', '+0.185', '+0.708', '-0.681', '+0.018']
+  KBK v_null [2,3,4] = ['+0.185', '+0.708', '-0.681']  cos to (+1,+1,+2) = -0.192
+  KBK signal_rank=5 null_rank=1 eig_min=1.37e-05
+  PySR best (sympy): (x1 + 0.17558967)**2 - 1*(-0.5706049)
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=5.189e-03 score=+0.000 0.62373483
+    c=  4 loss=3.938e-03 score=+0.092 cube(x0) + 0.6074728
+    c=  5 loss=3.398e-03 score=+0.148 sqrt(exp(x1)) * 0.6093196
+    c=  6 loss=2.745e-03 score=+0.213 square(x1 + 0.17558967) - -0.5706049
+    c=  7 loss=2.559e-03 score=+0.070 0.5983166 + (x1 * (x0 + 0.1860968))
+
+=== Cross-seed comparison ===
+  [ASYM] em_asym_baseline:
+    PySR best per seed:
+      seed 11: sqrt((x0 - x1)**2 + 0.29930067)
+  [SYM] em_sym_swap:
+    PySR best per seed:
+      seed 11: exp(-x1**2 - 0.28370678)
+  [SYM] strong_sym_baseline:
+    PySR best per seed:
+      seed 11: x1*0.24330975 + 0.6091842
+  [ASYM] strong_asym_swap:
+    PySR best per seed:
+      seed 11: (x1 + 0.17558967)**2 - 1*(-0.5706049)
+
+[em_strong_glance] wrote em_strong_glance_canary.json  elapsed=28.7s

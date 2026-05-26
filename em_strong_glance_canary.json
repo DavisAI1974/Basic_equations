@@ -1,0 +1,491 @@
+{
+  "mode": "canary",
+  "seeds": [
+    11
+  ],
+  "config": {
+    "N_ens": 200,
+    "T": 10.0,
+    "dt": 0.02
+  },
+  "niter": 15,
+  "timeout_s": 60,
+  "configs": [
+    {
+      "name": "em_asym_baseline",
+      "kwargs": {
+        "omega1": 1.0,
+        "omega2": 1.2,
+        "K": 0.3
+      },
+      "symmetric": false,
+      "description": "EM, omega1=1.0 omega2=1.2 (baseline; asymmetric)"
+    },
+    {
+      "name": "em_sym_swap",
+      "kwargs": {
+        "omega1": 1.0,
+        "omega2": 1.0,
+        "K": 0.3
+      },
+      "symmetric": true,
+      "description": "EM, omega1=omega2=1.0 (symmetry swap)"
+    },
+    {
+      "name": "strong_sym_baseline",
+      "kwargs": {
+        "omega1": 0.5,
+        "omega2": 0.5,
+        "K_lin": 0.2,
+        "K_conf": 0.8
+      },
+      "symmetric": true,
+      "description": "Strong, omega1=omega2=0.5 (baseline; symmetric)"
+    },
+    {
+      "name": "strong_asym_swap",
+      "kwargs": {
+        "omega1": 0.5,
+        "omega2": 0.7,
+        "K_lin": 0.2,
+        "K_conf": 0.8
+      },
+      "symmetric": false,
+      "description": "Strong, omega1=0.5 omega2=0.7 (symmetry swap)"
+    }
+  ],
+  "results": [
+    {
+      "config_name": "em_asym_baseline",
+      "config_description": "EM, omega1=1.0 omega2=1.2 (baseline; asymmetric)",
+      "config_kwargs": {
+        "omega1": 1.0,
+        "omega2": 1.2,
+        "K": 0.3
+      },
+      "is_symmetric_dynamics": false,
+      "seed": 11,
+      "elapsed_s": 21.36445426940918,
+      "n_points": 400,
+      "MI_mean": 0.6179894030887004,
+      "MI_std": 0.13973195080086903,
+      "kbk_eigenvalues": [
+        0.23330850537969183,
+        0.06266568475820049,
+        0.05147265459641784,
+        0.015177877222444338,
+        0.007046828139092637,
+        0.0007337067759018899
+      ],
+      "kbk_v_null_6d": [
+        -0.01321806563188376,
+        0.0024203043483919102,
+        -0.43449740155807426,
+        -0.36700594657337193,
+        0.7549557353325422,
+        0.32615932575257933
+      ],
+      "kbk_v_null_234": [
+        -0.4596789369589125,
+        -0.38827597765483574,
+        0.7987096093653223
+      ],
+      "kbk_cos_to_artifact": 0.30596752091941176,
+      "kbk_signal_rank": 5,
+      "kbk_null_rank": 1,
+      "pysr": {
+        "fit_time_s": 15.078324794769287,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.019525016,
+            "score": 0.0,
+            "equation": "0.61799294"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.01892056,
+            "score": 0.007861838423315705,
+            "equation": "(x1 * -0.113289095) + 0.623798"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.018281879,
+            "score": 0.034338810816543795,
+            "equation": "(exp(x1) * -0.1046579) + 0.73885995"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0066712988,
+            "score": 1.0080957870676144,
+            "equation": "sqrt(square(x0 - x1) - -0.29930067)"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.0065763467,
+            "score": 0.01433518522663407,
+            "equation": "sqrt(square(x1 - x0) - cube(-0.63013995))"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.0061469264,
+            "score": 0.03376359692535697,
+            "equation": "sqrt(exp(square(exp(square(x1 - x0))) - 2.3441415))"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.0061441604,
+            "score": 0.00045008225744410437,
+            "equation": "sqrt(sqrt(square(square(x0 - x1) - -0.3116005) - 0.026973458))"
+          }
+        ],
+        "best_equation_sympy": "sqrt((x0 - x1)**2 + 0.29930067)"
+      }
+    },
+    {
+      "config_name": "em_sym_swap",
+      "config_description": "EM, omega1=omega2=1.0 (symmetry swap)",
+      "config_kwargs": {
+        "omega1": 1.0,
+        "omega2": 1.0,
+        "K": 0.3
+      },
+      "is_symmetric_dynamics": true,
+      "seed": 11,
+      "elapsed_s": 2.568903684616089,
+      "n_points": 400,
+      "MI_mean": 0.6854589796976831,
+      "MI_std": 0.1536924437852028,
+      "kbk_eigenvalues": [
+        0.1970366830132635,
+        0.040956340501986724,
+        0.018295205041728727,
+        0.002023930515288325,
+        0.0009608629264750578,
+        2.5983806502302624e-06
+      ],
+      "kbk_v_null_6d": [
+        0.015402524067452307,
+        -0.016337783455189474,
+        -0.4232392419418667,
+        -0.3948268088818166,
+        0.8151398949028308,
+        -0.004808938614764204
+      ],
+      "kbk_v_null_234": [
+        -0.4233508703230662,
+        -0.3949309435488371,
+        0.8153548861841251
+      ],
+      "kbk_cos_to_artifact": 0.33167232518117995,
+      "kbk_signal_rank": 5,
+      "kbk_null_rank": 1,
+      "pysr": {
+        "fit_time_s": 2.2709224224090576,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.023621362,
+            "score": 0.0,
+            "equation": "0.68545425"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.020380631,
+            "score": 0.03689162076544285,
+            "equation": "exp(-0.28370678 - square(x1))"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.019926094,
+            "score": 0.007518286658779559,
+            "equation": "exp(-0.49639195 - (x1 * x1)) - -0.13575533"
+          },
+          {
+            "complexity": 12,
+            "loss": 0.018210799,
+            "score": 0.02250383982462629,
+            "equation": "exp(x0 - (0.710865 / exp(0.41826835 - cube(x0 + x1))))"
+          }
+        ],
+        "best_equation_sympy": "exp(-x1**2 - 0.28370678)"
+      }
+    },
+    {
+      "config_name": "strong_sym_baseline",
+      "config_description": "Strong, omega1=omega2=0.5 (baseline; symmetric)",
+      "config_kwargs": {
+        "omega1": 0.5,
+        "omega2": 0.5,
+        "K_lin": 0.2,
+        "K_conf": 0.8
+      },
+      "is_symmetric_dynamics": true,
+      "seed": 11,
+      "elapsed_s": 2.546687602996826,
+      "n_points": 400,
+      "MI_mean": 0.6283766120875491,
+      "MI_std": 0.07335744887956379,
+      "kbk_eigenvalues": [
+        0.06726043053166117,
+        0.004488623392012322,
+        0.003338920408651236,
+        0.0010199758411397984,
+        0.00014552875857276552,
+        4.0916237595682094e-06
+      ],
+      "kbk_v_null_6d": [
+        -0.013745507006242635,
+        0.0005235501115852275,
+        -0.3608929787642838,
+        -0.42503681188870895,
+        0.8300023342197156,
+        -0.0026226971555900116
+      ],
+      "kbk_v_null_234": [
+        -0.3609283680112711,
+        -0.42507849109445617,
+        0.8300837244360239
+      ],
+      "kbk_cos_to_artifact": 0.35687456636298265,
+      "kbk_signal_rank": 5,
+      "kbk_null_rank": 1,
+      "pysr": {
+        "fit_time_s": 2.2626092433929443,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0053813136,
+            "score": 0.0,
+            "equation": "0.62838423"
+          },
+          {
+            "complexity": 4,
+            "loss": 0.0047741598,
+            "score": 0.039904835868109396,
+            "equation": "cube(x1) + 0.62425333"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.0036851126,
+            "score": 0.2589169188512373,
+            "equation": "(x1 * 0.24330975) + 0.6091842"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0036774108,
+            "score": 0.0020921638929738695,
+            "equation": "cube((x1 * 0.112727955) + 0.8472028)"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0034830319,
+            "score": 0.05430576747775672,
+            "equation": "sqrt(exp(x0 - exp(square(x0))))"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.0034483853,
+            "score": 0.004998528807543833,
+            "equation": "sqrt(exp(x0 - exp(square(x0 * 1.1100644))))"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.0032549403,
+            "score": 0.057732158019500185,
+            "equation": "sqrt(exp(x0 - sqrt(exp(cube(x0 + x0)))))"
+          },
+          {
+            "complexity": 12,
+            "loss": 0.0031898532,
+            "score": 0.010099518774715703,
+            "equation": "cube(sqrt(exp(x0 - (exp(x0) * (exp(x0) / 3.216872)))))"
+          }
+        ],
+        "best_equation_sympy": "x1*0.24330975 + 0.6091842"
+      }
+    },
+    {
+      "config_name": "strong_asym_swap",
+      "config_description": "Strong, omega1=0.5 omega2=0.7 (symmetry swap)",
+      "config_kwargs": {
+        "omega1": 0.5,
+        "omega2": 0.7,
+        "K_lin": 0.2,
+        "K_conf": 0.8
+      },
+      "is_symmetric_dynamics": false,
+      "seed": 11,
+      "elapsed_s": 2.1877403259277344,
+      "n_points": 400,
+      "MI_mean": 0.6237441390403372,
+      "MI_std": 0.07203528038125492,
+      "kbk_eigenvalues": [
+        0.06893140720640875,
+        0.0056324448141428785,
+        0.003711443185432599,
+        0.0019482638747721505,
+        0.00017930402038453925,
+        1.36901815305226e-05
+      ],
+      "kbk_v_null_6d": [
+        -0.00534026279941905,
+        0.002733252045650752,
+        0.18502795918828724,
+        0.7081344882423957,
+        -0.6811457213891089,
+        0.017740294250553734
+      ],
+      "kbk_v_null_234": [
+        0.185060413035635,
+        0.708258694814656,
+        -0.6812651941399327
+      ],
+      "kbk_cos_to_artifact": -0.19155470310173403,
+      "kbk_signal_rank": 5,
+      "kbk_null_rank": 1,
+      "pysr": {
+        "fit_time_s": 1.8979403972625732,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0051890803,
+            "score": 0.0,
+            "equation": "0.62373483"
+          },
+          {
+            "complexity": 4,
+            "loss": 0.0039382335,
+            "score": 0.09194140093073945,
+            "equation": "cube(x0) + 0.6074728"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.0033977916,
+            "score": 0.14760658134227286,
+            "equation": "sqrt(exp(x1)) * 0.6093196"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0027447613,
+            "score": 0.213431578099963,
+            "equation": "square(x1 + 0.17558967) - -0.5706049"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0025588127,
+            "score": 0.07015075122921362,
+            "equation": "0.5983166 + (x1 * (x0 + 0.1860968))"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.0022765426,
+            "score": 0.05844273664570913,
+            "equation": "(x1 * (x0 + (x1 + 0.22865173))) + 0.574476"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.0022763533,
+            "score": 4.157793287323235e-05,
+            "equation": "(((x1 + x0) + 0.23834345) * (x1 + -0.0044049947)) - -0.57576287"
+          },
+          {
+            "complexity": 12,
+            "loss": 0.0022298743,
+            "score": 0.020629516518090234,
+            "equation": "(x1 * ((exp(x0 - 1.3199649) + x1) + x1)) + 0.57445353"
+          },
+          {
+            "complexity": 13,
+            "loss": 0.0022216567,
+            "score": 0.0036920373393343844,
+            "equation": "(x1 * ((x0 * 0.40123022) + (x1 + (x1 + 0.26304644)))) + 0.5720688"
+          }
+        ],
+        "best_equation_sympy": "(x1 + 0.17558967)**2 - 1*(-0.5706049)"
+      }
+    }
+  ],
+  "cross_seed": {
+    "em_asym_baseline": {
+      "seeds": [
+        11
+      ],
+      "kbk_v_null_cos_pairs": {},
+      "is_symmetric_dynamics": false,
+      "pysr_best_per_seed": [
+        {
+          "seed": 11,
+          "best_sympy": "sqrt((x0 - x1)**2 + 0.29930067)",
+          "low_complexity_eqs": [
+            "0.61799294",
+            "(x1 * -0.113289095) + 0.623798",
+            "(exp(x1) * -0.1046579) + 0.73885995",
+            "sqrt(square(x0 - x1) - -0.29930067)",
+            "sqrt(square(x1 - x0) - cube(-0.63013995))"
+          ]
+        }
+      ]
+    },
+    "em_sym_swap": {
+      "seeds": [
+        11
+      ],
+      "kbk_v_null_cos_pairs": {},
+      "is_symmetric_dynamics": true,
+      "pysr_best_per_seed": [
+        {
+          "seed": 11,
+          "best_sympy": "exp(-x1**2 - 0.28370678)",
+          "low_complexity_eqs": [
+            "0.68545425",
+            "exp(-0.28370678 - square(x1))",
+            "exp(-0.49639195 - (x1 * x1)) - -0.13575533",
+            "exp(x0 - (0.710865 / exp(0.41826835 - cube(x0 + x1))))"
+          ]
+        }
+      ]
+    },
+    "strong_sym_baseline": {
+      "seeds": [
+        11
+      ],
+      "kbk_v_null_cos_pairs": {},
+      "is_symmetric_dynamics": true,
+      "pysr_best_per_seed": [
+        {
+          "seed": 11,
+          "best_sympy": "x1*0.24330975 + 0.6091842",
+          "low_complexity_eqs": [
+            "0.62838423",
+            "cube(x1) + 0.62425333",
+            "(x1 * 0.24330975) + 0.6091842",
+            "cube((x1 * 0.112727955) + 0.8472028)",
+            "sqrt(exp(x0 - exp(square(x0))))"
+          ]
+        }
+      ]
+    },
+    "strong_asym_swap": {
+      "seeds": [
+        11
+      ],
+      "kbk_v_null_cos_pairs": {},
+      "is_symmetric_dynamics": false,
+      "pysr_best_per_seed": [
+        {
+          "seed": 11,
+          "best_sympy": "(x1 + 0.17558967)**2 - 1*(-0.5706049)",
+          "low_complexity_eqs": [
+            "0.62373483",
+            "cube(x0) + 0.6074728",
+            "sqrt(exp(x1)) * 0.6093196",
+            "square(x1 + 0.17558967) - -0.5706049",
+            "0.5983166 + (x1 * (x0 + 0.1860968))"
+          ]
+        }
+      ]
+    }
+  },
+  "elapsed_total_s": 28.66875672340393
+}
