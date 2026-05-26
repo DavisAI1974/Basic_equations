@@ -1,3 +1,15 @@
 [pysr_symbolic] mode=full cfg={'N_ens': 600, 'T': 30.0, 'dt': 0.02} seeds=[11, 22] niter=40 max_n=600 timeout_s=90
 
 === seed=11 ===
+
+  physics_duffing         n=600  fit_time=23.1s
+    best (sympy): (-x0 + x1)**2*(x0 - 1*(-1.996523))**2 + 0.22940238
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=8.658e-03  score=+0.000  0.2924823
+      c=  4  loss=7.850e-03  score=+0.033  exp(x0 - 1.1381413)
+      c=  5  loss=7.398e-03  score=+0.059  (x0 * 0.17690668) - -0.31489903
+      c=  6  loss=6.358e-03  score=+0.152  square(x1 - x0) + 0.27549502
+      c=  7  loss=5.561e-03  score=+0.134  sqrt(square(x1 - x0) + 0.058759417)
+      c=  8  loss=3.410e-03  score=+0.489  cube(cube(square(x1 - x0) + 0.85435843))
+      c=  9  loss=3.306e-03  score=+0.031  cube(square((x1 - x0) * -1.6652303) + 0.61248267)
+      c= 10  loss=2.455e-03  score=+0.298  square((x0 - -1.996523) * (x1 - x0)) + 0.22940238
