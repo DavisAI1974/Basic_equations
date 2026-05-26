@@ -43,3 +43,19 @@
     poly3(MI~Ha,Hb): in=+0.864  block=+0.807  rand=+0.861
     GP(MI~Ha,Hb):    in=+0.904  block=+0.797  rand=+0.877
     elapsed: 54.2s
+  geology_bk              n=1200
+    MI stats: mean=+0.199 std=0.021  corr(MI,Ha)=+0.007  corr(MI,Hb)=+0.089  corr(Ha,Hb)=+0.734
+    fmt: in / block-CV / random-CV
+    poly1(MI~Ha):   in=+0.000  block=-0.049  rand=-0.005
+    poly2(MI~Ha):   in=+0.000  block=-1.630  rand=-0.007
+    poly3(MI~Ha):   in=+0.000  block=-3.730  rand=-0.009
+    GP(MI~Ha):     in=+0.067  block=-0.095  rand=-0.009
+    poly1(MI~Hb):   in=+0.008  block=-0.031  rand=+0.004
+    poly2(MI~Hb):   in=+0.008  block=-0.694  rand=+0.003
+    poly3(MI~Hb):   in=+0.008  block=-0.837  rand=+0.001
+    GP(MI~Hb):     in=+0.063  block=-0.038  rand=-0.020
+    poly3(MI~Ha,Hb): in=+0.097  block=-0.826  rand=+0.083
+    GP(MI~Ha,Hb):    in=+0.183  block=-0.101  rand=+0.054
+    elapsed: 63.0s
+
+=== seed=22 ===
