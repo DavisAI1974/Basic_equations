@@ -1,0 +1,47 @@
+[pysr_symbolic] mode=canary cfg={'N_ens': 200, 'T': 10.0, 'dt': 0.02} seeds=[11] niter=15 max_n=200 timeout_s=60
+
+=== seed=11 ===
+
+  physics_duffing         n=200  fit_time=18.4s
+    best (sympy): x0*(0.34838626 - x1) + 0.6694073
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.645e-02  score=+0.000  0.66294205
+      c=  4  loss=1.566e-02  score=+0.016  cube(x0) + 0.65453047
+      c=  5  loss=1.493e-02  score=+0.048  (x0 * 0.1907006) + 0.6482182
+      c=  6  loss=1.408e-02  score=+0.059  0.6744423 - cube(0.23488235 - x0)
+      c=  7  loss=1.214e-02  score=+0.148  (x0 * (0.34838626 - x1)) + 0.6694073
+      c=  9  loss=1.212e-02  score=+0.001  0.6675741 - (((0.3622448 - x1) * -0.8964113) * x0)
+      c= 11  loss=1.010e-02  score=+0.091  square(((exp(x0) * x0) - x1) * 1.6408136) + 0.5422786
+
+  biology_lotka           n=200  fit_time=2.6s
+    best (sympy): exp(x1**3*0.036606967)/1.6479353
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=3.290e-03  score=+0.000  0.5847035
+      c=  6  loss=2.678e-03  score=+0.041  exp(x1 * 0.04518482) / 1.6910906
+      c=  7  loss=1.804e-03  score=+0.395  exp(cube(x1) * 0.036606967) / 1.6479353
+      c=  8  loss=1.769e-03  score=+0.020  exp(cube(cube(x1 * 0.4788954))) / 1.6640208
+      c=  9  loss=1.755e-03  score=+0.008  sqrt(log(exp(cube(x1 * 0.2852503)) / 0.6918264))
+      c= 12  loss=1.755e-03  score=+0.000  sqrt(log(cube(exp(cube(x1 * 0.22365002) * 0.6915529)) / 0.6918447))
+      c= 15  loss=1.365e-03  score=+0.084  sqrt(square(cube(exp(cube(x1 * 0.2374972))) / (cube(x0 * -0.2820618) - 1.6986305)))
+
+  chemistry_brussel       n=200  fit_time=2.7s
+    best (sympy): x1 + 0.40018883
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=4.165e-02  score=+0.000  1.112854
+      c=  3  loss=2.635e-02  score=+0.229  x1 + 0.40018883
+      c=  5  loss=2.593e-02  score=+0.008  square(sqrt(x1) + 0.211045)
+      c=  6  loss=2.475e-02  score=+0.046  0.0727642 + log(x1 / 0.2500743)
+      c=  7  loss=2.254e-02  score=+0.094  square(exp(cube(log(x1)) - -0.11447191))
+      c=  9  loss=2.189e-02  score=+0.015  (x1 + -0.3700611) * exp(1.6006262 - cube(x1))
+      c= 10  loss=2.058e-02  score=+0.062  exp(square(1.7098156 - cube(x1)) * (x1 + -0.62794113))
+
+  geology_bk              n=200  fit_time=2.3s
+    best (sympy): x1*(-1*(-0.059698682) + 0.7086891/x0)
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=3.352e-03  score=+0.000  0.56360376
+      c=  5  loss=3.117e-03  score=+0.018  (x0 * 0.051622637) + 0.6871688
+      c=  6  loss=3.114e-03  score=+0.001  sqrt((x0 * 0.05812) + 0.45657554)
+      c=  7  loss=2.852e-03  score=+0.088  ((0.7086891 / x0) - -0.059698682) * x1
+      c= 11  loss=2.846e-03  score=+0.000  (sqrt(exp(x0 * 0.3406228)) * x1) / (x0 - 0.4157737)
+
+[pysr_symbolic] wrote pysr_symbolic_per_domain_canary.json  elapsed=35.0s

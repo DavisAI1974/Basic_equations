@@ -1,0 +1,45 @@
+[gp_mi_vs_h] mode=canary cfg={'N_ens': 200, 'T': 10.0, 'dt': 0.02} seeds=[11]
+
+=== seed=11 ===
+  physics_duffing         n=400
+    MI stats: mean=+0.663 std=0.128  corr(MI,Ha)=+0.308  corr(MI,Hb)=-0.083  corr(Ha,Hb)=+0.578
+    fmt: in / block-CV / random-CV
+    poly1(MI~Ha):   in=+0.095  block=-0.189  rand=+0.073
+    poly2(MI~Ha):   in=+0.162  block=+0.002  rand=+0.139
+    poly3(MI~Ha):   in=+0.164  block=-0.591  rand=+0.131
+    GP(MI~Ha):     in=+0.234  block=-0.464  rand=+0.157
+    poly1(MI~Hb):   in=+0.007  block=-0.384  rand=-0.013
+    poly2(MI~Hb):   in=+0.021  block=-0.609  rand=-0.001
+    poly3(MI~Hb):   in=+0.023  block=-1.434  rand=-0.002
+    GP(MI~Hb):     in=+0.217  block=-0.366  rand=+0.161
+    poly3(MI~Ha,Hb): in=+0.643  block=-3.410  rand=+0.616
+    GP(MI~Ha,Hb):    in=+0.900  block=-0.232  rand=+0.837
+    elapsed: 43.2s
+  biology_lotka           n=400
+    MI stats: mean=+0.585 std=0.058  corr(MI,Ha)=-0.096  corr(MI,Hb)=+0.452  corr(Ha,Hb)=+0.667
+    fmt: in / block-CV / random-CV
+    poly1(MI~Ha):   in=+0.009  block=-3.266  rand=-0.012
+    poly2(MI~Ha):   in=+0.045  block=-5.579  rand=+0.023
+    poly3(MI~Ha):   in=+0.231  block=-3.891  rand=+0.199
+    GP(MI~Ha):     in=+0.378  block=-5.728  rand=+0.248
+    poly1(MI~Hb):   in=+0.204  block=-4.074  rand=+0.183
+    poly2(MI~Hb):   in=+0.401  block=-4.370  rand=+0.389
+    poly3(MI~Hb):   in=+0.558  block=-0.970  rand=+0.543
+    GP(MI~Hb):     in=+0.672  block=-3.880  rand=+0.621
+    poly3(MI~Ha,Hb): in=+0.695  block=-48.522  rand=+0.672
+    GP(MI~Ha,Hb):    in=+0.911  block=-2.465  rand=+0.861
+    elapsed: 44.2s
+  chemistry_brussel       n=400
+    MI stats: mean=+1.112 std=0.204  corr(MI,Ha)=+0.479  corr(MI,Hb)=+0.614  corr(Ha,Hb)=+0.554
+    fmt: in / block-CV / random-CV
+    poly1(MI~Ha):   in=+0.229  block=-0.475  rand=+0.208
+    poly2(MI~Ha):   in=+0.263  block=-0.488  rand=+0.239
+    poly3(MI~Ha):   in=+0.343  block=-0.261  rand=+0.320
+    GP(MI~Ha):     in=+0.389  block=-0.269  rand=+0.349
+    poly1(MI~Hb):   in=+0.377  block=-1.227  rand=+0.348
+    poly2(MI~Hb):   in=+0.496  block=-1.945  rand=+0.474
+    poly3(MI~Hb):   in=+0.502  block=-0.803  rand=+0.474
+    GP(MI~Hb):     in=+0.542  block=-0.015  rand=+0.517
+    poly3(MI~Ha,Hb): in=+0.617  block=-0.503  rand=+0.593
+    GP(MI~Ha,Hb):    in=+0.849  block=-0.417  rand=+0.802
+    elapsed: 37.7s

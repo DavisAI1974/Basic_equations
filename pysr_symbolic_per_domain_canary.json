@@ -1,0 +1,226 @@
+{
+  "config": {
+    "N_ens": 200,
+    "T": 10.0,
+    "dt": 0.02
+  },
+  "seeds": [
+    11
+  ],
+  "niter": 15,
+  "max_n": 200,
+  "timeout_s": 60,
+  "results_by_seed": {
+    "seed11": [
+      {
+        "fit_time_s": 18.43993616104126,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.01644985,
+            "score": 0.0,
+            "equation": "0.66294205"
+          },
+          {
+            "complexity": 4,
+            "loss": 0.015662787,
+            "score": 0.016342904850707655,
+            "equation": "cube(x0) + 0.65453047"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.014928544,
+            "score": 0.048012559049359915,
+            "equation": "(x0 * 0.1907006) + 0.6482182"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0140775135,
+            "score": 0.05869634790402258,
+            "equation": "0.6744423 - cube(0.23488235 - x0)"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.012136637,
+            "score": 0.14835000799043402,
+            "equation": "(x0 * (0.34838626 - x1)) + 0.6694073"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.01212237,
+            "score": 0.0005881115267771316,
+            "equation": "0.6675741 - (((0.3622448 - x1) * -0.8964113) * x0)"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.010100771,
+            "score": 0.09122037425594746,
+            "equation": "square(((exp(x0) * x0) - x1) * 1.6408136) + 0.5422786"
+          }
+        ],
+        "best_equation_sympy": "x0*(0.34838626 - x1) + 0.6694073",
+        "domain": "physics_duffing",
+        "seed": 11,
+        "n_used": 200,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      },
+      {
+        "fit_time_s": 2.5779612064361572,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.003290017,
+            "score": 0.0,
+            "equation": "0.5847035"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0026782723,
+            "score": 0.04114416189576463,
+            "equation": "exp(x1 * 0.04518482) / 1.6910906"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0018043325,
+            "score": 0.39498120516283464,
+            "equation": "exp(cube(x1) * 0.036606967) / 1.6479353"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.0017690489,
+            "score": 0.019748659763921466,
+            "equation": "exp(cube(cube(x1 * 0.4788954))) / 1.6640208"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.0017553397,
+            "score": 0.007779658090775914,
+            "equation": "sqrt(log(exp(cube(x1 * 0.2852503)) / 0.6918264))"
+          },
+          {
+            "complexity": 12,
+            "loss": 0.0017553396,
+            "score": 1.8989677223886957e-08,
+            "equation": "sqrt(log(cube(exp(cube(x1 * 0.22365002) * 0.6915529)) / 0.6918447))"
+          },
+          {
+            "complexity": 15,
+            "loss": 0.001365463,
+            "score": 0.08372292573633539,
+            "equation": "sqrt(square(cube(exp(cube(x1 * 0.2374972))) / (cube(x0 * -0.2820618) - 1.6986305)))"
+          }
+        ],
+        "best_equation_sympy": "exp(x1**3*0.036606967)/1.6479353",
+        "domain": "biology_lotka",
+        "seed": 11,
+        "n_used": 200,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      },
+      {
+        "fit_time_s": 2.7324225902557373,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.041653663,
+            "score": 0.0,
+            "equation": "1.112854"
+          },
+          {
+            "complexity": 3,
+            "loss": 0.026351484,
+            "score": 0.22893235986874502,
+            "equation": "x1 + 0.40018883"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.025926864,
+            "score": 0.008122470472736076,
+            "equation": "square(sqrt(x1) + 0.211045)"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.02475232,
+            "score": 0.046360429246271026,
+            "equation": "0.0727642 + log(x1 / 0.2500743)"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.022537155,
+            "score": 0.09375394140339333,
+            "equation": "square(exp(cube(log(x1)) - -0.11447191))"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.02188985,
+            "score": 0.014571110762357595,
+            "equation": "(x1 + -0.3700611) * exp(1.6006262 - cube(x1))"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.020583916,
+            "score": 0.061513064935625555,
+            "equation": "exp(square(1.7098156 - cube(x1)) * (x1 + -0.62794113))"
+          }
+        ],
+        "best_equation_sympy": "x1 + 0.40018883",
+        "domain": "chemistry_brussel",
+        "seed": 11,
+        "n_used": 200,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      },
+      {
+        "fit_time_s": 2.256690740585327,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0033516258,
+            "score": 0.0,
+            "equation": "0.56360376"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.003116996,
+            "score": 0.018143956011042083,
+            "equation": "(x0 * 0.051622637) + 0.6871688"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0031135085,
+            "score": 0.0011194921259521018,
+            "equation": "sqrt((x0 * 0.05812) + 0.45657554)"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0028515263,
+            "score": 0.08789583058544014,
+            "equation": "((0.7086891 / x0) - -0.059698682) * x1"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.0028461262,
+            "score": 0.0004738882914441229,
+            "equation": "(sqrt(exp(x0 * 0.3406228)) * x1) / (x0 - 0.4157737)"
+          }
+        ],
+        "best_equation_sympy": "x1*(-1*(-0.059698682) + 0.7086891/x0)",
+        "domain": "geology_bk",
+        "seed": 11,
+        "n_used": 200,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      }
+    ]
+  },
+  "elapsed_total_s": 35.0018994808197
+}
