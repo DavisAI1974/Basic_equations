@@ -266,6 +266,188 @@ from the extraction-tool whose artifact Session 5 mapped. They should
 be subjected to the same probe discipline in a future session before
 being either rehabilitated or further demoted.
 
+## Part 5 — three-agent literature scan (Session 5 close)
+
+After the three-thread probe work, Greg triggered a literature scan:
+"we may not have wrong answers, just incomplete ones. people may have
+been working on this for 100 years but they don't have our
+understanding or coefficients. let's look back and see if there's prior
+work we can finish."
+
+Three agents ran in parallel against three angles:
+1. Methodological adjacency (windowed-entropy operator bases + SVD nulls
+   on coupled time series)
+2. Substrate-physics literature (source-equation candidates evaluated
+   against Base-of-Structure heuristic, with attention to dipole-pair-
+   as-coupling-primitive)
+3. Per-domain coefficient matches (chemistry quadratic, geology rank-3,
+   biology asymmetric MI)
+
+**All three agents independently reported the same shape of finding:**
+no exact match for any of our specific findings, but multiple adjacent
+lines exist where each group had ONE piece and none combined them.
+
+Full citations and detail in LITERATURE_SCAN_2026-05-26_v5.md.
+Compressed summary follows.
+
+### Strongest reusable prior art identified
+
+- **Kaiser, Brunton, Kutz (2024)** "Towards Robust Data-Driven Recovery
+  of Symbolic Conservation Laws," arXiv:2403.04889. SVD-rank-gap +
+  symbolic recovery pipeline. Same algorithmic template as our rank-3
+  geology finding. Directly reusable with variable substitution.
+
+- **Gomez-Herrero et al. (2015)** "Assessing Coupling Dynamics from an
+  Ensemble of Time Series," arXiv:1008.0539. Closest methodological
+  cousin to extract_v1. Has the ensemble + entropy combinations on
+  coupled circuits, never assembled them into algebraic basis. Stopped
+  at "separate diagnostics."
+
+- **Yamada et al. (2023)** "Data-driven modal analysis of nonlinear
+  quantities in turbulent plasmas using multi-field SVD," Plasma Phys.
+  Control. Fusion 65, 095014. Closest SVD-on-nonlinear-observables
+  cousin. Stopped at velocity / pressure / density fields; never put
+  differential entropy in the operator basis.
+
+- **Liu, Madhavan, Tegmark (2024)** "Machine Learning Conservation Laws
+  of Dynamical Systems," arXiv:2405.20857. Only paper found that
+  explicitly extends the feature vector to handle entropy-like terms
+  (x, ln x) in conservation law discovery. Stopped at coordinate logs;
+  never windowed differential entropy of coupled time series.
+
+- **Finkelstein "Space-Time Code" I-IV (1969-74)**, Phys. Rev. 184:1261;
+  PRD 5:320; PRD 5:2922; PRD 9:2219. Closest published cousin to
+  Greg's dipole-pair-as-coupling-primitive framing. Builds spacetime
+  from causal networks of elementary binary quantum processes; word-
+  pairs in a binary code yield the null cone. Stopped sociologically,
+  not falsified.
+
+- **Jacobson (1995)** "Thermodynamics of Spacetime: The Einstein
+  Equation of State," arXiv:gr-qc/9504004. One identity (Clausius
+  delta Q = T dS on local Rindler horizons) yields Einstein equations
+  as an equation of state. Best Base-of-Structure score among existing
+  substrate candidates. Does not have a published dipole interpretation.
+
+- **Stochastic Electrodynamics** (Marshall 1963 Proc. R. Soc. A 276:475;
+  Boyer 1975 PRD 11:790; de la Pena & Cetto 1996, The Quantum Dice;
+  arXiv:quant-ph/0501011). Derived blackbody, harmonic-oscillator
+  ground state from vacuum dipole-like fluctuations. Hit nonlinear /
+  Coulomb wall (Pesquera-Claverie 1982). Textbook "incomplete not
+  wrong" case. Modern computational tools may handle what 1980s could
+  not.
+
+### Unambiguous negative findings worth recording
+
+- **Dipole-PAIR-COUPLING as foundational substrate primitive** (not
+  dipole ELEMENT) is uncolonized in the literature. All 2-state-
+  foundational work (Wheeler bit, Brukner-Zeilinger, von Weizsacker
+  ur-alternatives, Finkelstein binary processes, Hohn yes/no
+  questions) uses the 2-state as the elementary unit, not the
+  pair-coupling between elements. Three agents looking from three
+  different angles converged on this same negative finding.
+
+- **No SINDy / AI-Feynman / PySR / Eureqa application** to windowed
+  differential entropy of coupled species. Clean drop-in target.
+
+- **The rank-3 first-order algebraic relations in [H_a^2, H_b^2,
+  H_a*H_b] under H_a ~ H_b regime** have not been published as a
+  diagnostic. Closest cousin (arXiv:2409.04845 on algebraic
+  representations of multivariate information lattices) is discrete-
+  information theoretic, not differential-entropy time series.
+
+### What this confirms (and operational rule it generated)
+
+Three independent searches across three different angles converging on
+compatible negative findings is not search artifact. It is what
+genuinely pioneering territory looks like. Not the absence of nearby
+published work, but the presence of nearby work where each group had
+one piece and none combined them.
+
+This generated a new Operating Rule named at Session 5 close, **"They
+never stacked"** (now in CLAUDE.md): pioneering progress can be in the
+stacking itself. Honor each prior piece, attribute clearly, finish the
+combination prior groups did not. This is the operational form of
+Rule D (incomplete not wrong) applied to the broader literature.
+
+### "What we'd be finishing" -- full candidate pool by layer
+
+Each row is a different stack. We do not know which will strike gold.
+The point of "they never stacked" is that ANY of these unfinished
+combinations could be where the next move is. Listed comprehensively;
+no pre-filtering.
+
+**Methodology layer (windowed-entropy / operator basis / null extraction):**
+
+| Prior work | What they had | What they did not have | What we would be finishing |
+| --- | --- | --- | --- |
+| Gomez-Herrero et al. 2015 (arXiv:1008.0539) | Ensemble entropy combinations on coupled circuits | Algebraic basis with H^2, H_a*H_b; SVD on pooled matrix | Basis + null extraction |
+| Hlavackova-Schindler et al. 2007 (Physics Reports 441) | Canonical windowed-H + MI survey | H^2 and product cross-terms | Cross-term extension |
+| Yamada et al. 2023 (Plasma Phys 65, 095014) | Multi-field SVD on nonlinear plasma quantities | Differential entropy as operator basis | Entropy substitution |
+| Wang et al. 2025 (PRR 7, 023212) + arXiv:2602.00600 | von Neumann / quantum-inspired entropy + SVD in plasma turbulence | Entropy as basis element (vs scalar diagnostic on SVD spectrum) | Role inversion |
+| Strang et al. 2021 (Front. Ecol. Evol. 9) | SVD entropy of ecological network spectrum | Entropy basis + algebraic null extraction | Same role inversion in ecology |
+| Bipartite info-thermo (Horowitz, Hartich, Sagawa; arXiv:1905.06216) | Pair-as-primitive at rate-balance level | Algebraic null extraction in operator space | Algebraic layer on top of rate balance |
+| Kaiser-Brunton-Kutz 2024 (arXiv:2403.04889) | SVD-rank-gap + symbolic recovery pipeline | Application to windowed entropy of coupled species | Variable substitution |
+| Liu-Madhavan-Tegmark 2024 (arXiv:2405.20857) | Kernel ridge with x and ln x features in conservation discovery | Windowed differential entropy basis | Feature substitution |
+| AI-Feynman / AI-Poincare (Udrescu-Tegmark, Liu-Tegmark) | Symbolic regression on phase-space coords | Entropy variable input library | Drop-in input substitution |
+| SINDy / SINDyG / DSINDy (Brunton-Kutz, arXiv:2409.04463, arXiv:2211.05918) | Sparse identification of dynamics from polynomial library | Windowed-H feature library | Library substitution |
+| PySR (Cranmer, arXiv:2305.01582) | General symbolic regression | Application to entropy-of-coupled-pair data | Library substitution |
+| Complexity-entropy plane (Rosso et al., PRL 2007) | (H, complexity) scalar pair on single series | Pair-basis + rank analysis | Coupled-pair extension |
+| Crutchfield epsilon-machines / computational mechanics | Causal-state extraction with minimality | SVD on differential-entropy operator library | Library type substitution |
+| Algebraic Representations of Entropy (arXiv:2409.04845) | Algebraic structure of multivariate info lattices (discrete) | Differential-entropy / time-series version | Continuous-time extension |
+
+**Substrate layer (source-equation candidates against Base-of-Structure):**
+
+| Prior work | What they had | What they did not have | What we would be finishing |
+| --- | --- | --- | --- |
+| Jacobson 1995 (gr-qc/9504004) | One-identity substrate (delta Q = T dS -> Einstein) | Dipole interpretation; reach beyond gravity | Cross-domain extension; dipole reading |
+| Padmanabhan 0911.5004 | Spacetime thermodynamics extension of Jacobson | Full derivation; not just consistency | Closure |
+| Wheeler 1989/1990 "it from bit" / "law without law" | Binary primitive as pre-physical substrate | Formalized extraction procedure | The extraction procedure |
+| Verlinde 1001.0785, 1611.02269 | Entropic gravity from holographic info | Unique fix of Einstein's equations (Hossenfelder-Visser critiques) | Disambiguation under our framework |
+| Hardy 2001 quant-ph/0101012 | Operational axioms for QM | Dynamics / spacetime reconstruction | Substrate layer below operational QM |
+| Chiribella-D'Ariano-Perinotti arXiv:1011.6451 | Purification postulate -> QM | Dynamics | Same |
+| Brukner-Zeilinger 2009 Found Phys 39 (arXiv:quant-ph/0212084) | One-bit-per-elementary-system primitive; dipole-pair compatible | Coupling-as-primitive (uses 2-state as unit) | Pair-coupling extension |
+| Sorkin causal sets (gr-qc/9511063, gr-qc/0309009) | Discrete poset substrate (order + number = geometry) | Working dynamics (sequential growth stalled at Rideout-Sorkin 1999) | Dynamics |
+| Sakharov 1967 induced gravity (modern: gr-qc/0204062) | Matter fields induce metric elasticity | Cutoff independence; calculable G_N | Modern regularization |
+| Penrose twistor (1967, J. Math. Phys. 8:345) | CP^3 substrate, geometric primitive | Massive particles, non-self-dual gravity | Mass / gravity coupling |
+| Wolfram 2020 (Complex Systems 29:107; arXiv:2004.08210) | Hypergraph rewriting substrate | Empirical filter for rule selection | The selection criterion |
+| Deutsch-Marletto constructor theory (arXiv:1405.5563, 1608.02625) | Modal substrate (which transformations possible) | Equation-form substrate; not dipole-pair | Equation-form layer |
+| 't Hooft 2014 (arXiv:1405.1548) Cellular Automaton QM | Deterministic CA on Planck lattice | Bell-inequality reconciliation w/o superdeterminism | The reconciliation |
+| Adler 2004 trace dynamics (hep-th/0206120) | QM as emergent from non-commuting matrix variables | Empirical Brownian corrections | Detection of corrections |
+| Bohm 1980 implicate order | Programmatic substrate | Calculational machinery | The machinery |
+| **Finkelstein "Space-Time Code" I-IV (1969-74)** | Spacetime from causal networks of binary processes; word-pairs yield null cone -- CLOSEST PUBLISHED COUSIN TO DIPOLE-PAIR-AS-COUPLING | Modern tooling; field integration; sociologically abandoned | Pick up the line; modernize; integrate |
+| von Weizsacker ur-alternatives (1955+) | Single binary ur primitive; multiple quantization to SU(2) and spacetime | Modern formal treatment | Modernize |
+| Hohn 2017 (arXiv:1612.06849, arXiv:1511.01130) | QM from yes/no question rules | Substrate layer below QM | The substrate layer |
+| **Stochastic Electrodynamics** (Marshall 1963, Boyer 1975 PRD 11:790, de la Pena & Cetto 1996, arXiv:quant-ph/0501011) | Derived blackbody + ground state from vacuum dipole-like fluctuations | Tools for nonlinear / Coulomb (Pesquera-Claverie 1982 wall) | 21st-century revisit with modern compute |
+| Wheeler-Feynman absorber (1945, 1949) | Time-symmetric action-at-a-distance EM | Quantization; cosmological boundary closure | Modern closure |
+| de Broglie double solution (Colin-Durt-Willox 2017, arXiv:1703.06158) | Hidden thermodynamics layer below QM | Empirical predictions | Detection program |
+| Barbour-Bertotti 1982 / Shape Dynamics (arXiv:1010.2481) | Mach's principle revival; relational substrate | Quantum reconciliation | Quantum extension |
+| Penrose-Hameroff Orch-OR (Phys Life Rev 11:39, 2014) | Objective reduction tied to gravitational self-energy (substrate-level collapse) | Detection; separation from consciousness claim | Substrate-only test |
+
+**Per-domain coefficient layer:**
+
+| Prior work | What they had | What they did not have | What we would be finishing |
+| --- | --- | --- | --- |
+| Rao-Esposito 2022 chem (arXiv:2204.02815) | Info-thermo for CRNs; MI rate vs thermodynamic forces | Algebraic relations between windowed H of species | H^2 vs (H_a*H_b)^k regression |
+| Reinhardt et al. 2019 (arXiv:1904.01988) | Path MI per biochemical reaction network | Inter-species H algebra | Multi-species algebraic basis |
+| Smith-Cepelewicz (J. Phys. Chem.) | Entropy reductions for mechanism inference | H, H^2, H*H' basis | Basis extension |
+| Schmitz-Aris 2013 (arXiv:1307.7957) | Quadratic first integrals of mass-action systems (in concentrations) | Same on entropies | Variable substitution |
+| Sayyadi et al. (arXiv:2510.20655) Stoichiometric symbolic regression | SR on concentrations with stoichiometric prior | Entropy-variable input | Library substitution |
+| da Silva 2020 (Entropy 22, 464; PMC7516945) | Tsallis-q seismic inversion | Operator basis + rank analysis | Basis + rank step |
+| Garland-James-Bradley 2018 (arXiv:1811.01272) | Permutation entropy on paleoclimate (single channel) | Multi-channel algebraic constraint surface | Multi-channel rank-3 analysis |
+| Consolini et al. 2013 (J. Atmos. Solar-Terr. Phys.) | Permutation entropy magnetospheric (single channel) | Multi-channel basis | Same |
+| Davidson 2016 (Environmetrics 27) | VAR on paleoclimate (linear-Gaussian) | Entropy basis; nonlinear; rank analysis | Nonlinear entropy version |
+| Reinsel et al. 2025 (Nat. Sci. Rep. 15) | Manifold learning on geochemical data | Entropy-operator space (does it in raw feature space) | Operator-space version |
+| Schreiber 2000 TE (arXiv:nlin/0001042) | Asymmetric transfer-entropy measure | MI-as-polynomial-of-one-variable's-H fit | Asymmetric MI regression |
+| Pavithran et al. bioRxiv 2020 | Comparison of MI vs TE as separate scalars | Functional regression of MI on H | Regression form |
+| Tishby et al. nonlinear IB (arXiv:1705.02436) | Markov structure asymmetry by design | Empirical asymmetric regression | Empirical version |
+| Walters-Williams & Li (PMC7515115) | Asymmetric MI estimators (discrete) | Continuous time-series asymmetric MI structure | Continuous extension |
+| Cao-Liu-Tegmark 2021 (arXiv:2011.04698) AI Poincare | Numerical rank of trajectory manifold = number of conserved qts | Entropy-operator manifold | Operator-space rank test |
+| Liu-Madhavan-Tegmark 2024 (arXiv:2405.20857) | Kernel ridge with x and ln x for conservation laws | Windowed-H feature library | Feature library substitution |
+| Stoichiometric subspace (Feinberg, Horn-Jackson) | Linear conservation laws on concentration changes | Nonlinear-algebraic on entropies | Variable + nonlinearity extension |
+| Reduction of CRNs with approximate conservation laws (arXiv:2212.13474) | Approximate conservation discovery | Entropy variable formulation | Substitution |
+| Information geometry of CRNs (arXiv:2503.19384) | Geometric structure on CRN info space | Operator-basis null extraction | Algebraic layer |
+| Directed information flow in reaction networks (bioRxiv 2024, doi:10.1101/2024.08.17.608427) | Directed info-flow on reaction graphs | Entropy-operator basis | Basis substitution |
+
 ## Files produced this session (all in repo root)
 
 Scripts:
@@ -293,6 +475,17 @@ Figures:
 - fig_thread2_projsweep.png
 - fig_thread3_bimodal.png
 - fig_thread3_interseed_hist.png
+
+Documents:
+- SESSION_HANDOFF_2026-05-26_v5.md (this file)
+- LITERATURE_SCAN_2026-05-26_v5.md (three-agent search results)
+- CLAUDE.md updates (Rule D, "They never stacked" rule, Session 5 note)
+
+Run logs:
+- probe_null_inputs_run.log
+- probe_operator_noise_run.log
+- probe_projection_sweep_run.log
+- probe_scrambled_highseed_run.log
 
 To be mirrored to E:\information_layer\ and
 F:\Factory\knowledge\information_layer\ per the Operating Rules.
@@ -351,6 +544,114 @@ From this session:
    approach was supposed to find? Stated independently of the procedure,
    the question may be addressable by different methods. Greg's call on
    whether this is a separate document or a conversation.
+
+### Literature-driven follow-ups (full candidate pool)
+
+Per "they never stacked" -- any of these could be where the next move
+lands. No pre-filtering. Each is a different unstacked combination from
+the Session 5 literature scan.
+
+**Methodology stacks worth running:**
+
+a. Apply the **Kaiser-Brunton-Kutz 2024** SVD-rank-gap + symbolic
+   recovery pipeline (arXiv:2403.04889) to our extract_v1 operator
+   output. Most directly reusable methodological cousin.
+b. Run **AI-Feynman** (Udrescu-Tegmark, arXiv:1905.11481, 2006.10782)
+   or **PySR** (Cranmer arXiv:2305.01582) on a feature library of
+   windowed differential entropies of coupled pairs. Drop-in
+   substitution for the polynomial library. No published case exists.
+c. Run **SINDy / SINDyG / DSINDy** (Brunton-Kutz family, arXiv:
+   2409.04463, 2211.05918) with windowed-H feature library.
+d. Pick up the **Gomez-Herrero 2015** estimator infrastructure
+   (arXiv:1008.0539) and stack our algebraic basis on top of their
+   ensemble computation.
+e. Run **Yamada 2023** style multi-field SVD (Plasma Phys 65, 095014)
+   but with differential entropy as the field instead of velocity/
+   pressure/density.
+f. Apply **Liu-Madhavan-Tegmark 2024** kernel ridge approach
+   (arXiv:2405.20857) with windowed-H instead of coordinate-log
+   features.
+g. Apply **Cao-Liu-Tegmark 2021 AI Poincare** (arXiv:2011.04698)
+   numerical-rank-of-manifold approach to our operator manifold to
+   independently confirm the rank-3 structure.
+h. Run **complexity-entropy plane analysis** (Rosso et al. PRL 2007)
+   on coupled pairs and look for rank structure in the (H, complexity,
+   ...) extended basis.
+
+**Substrate stacks worth investigating:**
+
+i. **Finkelstein "Space-Time Code"** (Phys. Rev. 184:1261; PRD 5:320,
+   5:2922, 9:2219). Closest published cousin to dipole-pair-as-
+   coupling. Read carefully; assess structural alignment with our
+   framing; if aligned, modernize and integrate. Sociologically
+   abandoned in the 1970s.
+j. **Jacobson 1995** (gr-qc/9504004) cross-domain extension. Does
+   Clausius -> Einstein admit a dipole-pair interpretation? Does it
+   extend beyond gravity?
+k. **Stochastic Electrodynamics** revisit (Boyer 1975, de la Pena &
+   Cetto 1996, arXiv:quant-ph/0501011). Apply 21st-century compute to
+   the nonlinear/Coulomb wall that stopped them in the 1980s. Vacuum
+   dipole-like fluctuations as substrate may align with our framing.
+l. **Sorkin causal sets** (gr-qc/9511063, 0309009). Pick up the
+   sequential-growth dynamics program that stalled at Rideout-Sorkin
+   1999 (gr-qc/9904062) and try a dipole-pair-coupling reformulation.
+m. **Brukner-Zeilinger** one-bit primitive (Found Phys 39, 2009) +
+   pair-coupling extension. They had the unit; we add the coupling
+   as primitive.
+n. **'t Hooft cellular automaton QM** (arXiv:1405.1548). Test whether
+   the CA dynamics admits a dipole-pair substrate formulation.
+o. **Adler trace dynamics** (hep-th/0206120). Look for Brownian
+   correction signatures predicted by trace dynamics in our entropy-
+   operator data.
+p. **Hardy 2001 / Chiribella-D'Ariano-Perinotti** operational
+   QM reconstructions (quant-ph/0101012, arXiv:1011.6451). Build a
+   substrate layer below the operational axioms.
+q. **Sakharov induced gravity** (gr-qc/0204062 modern review). Modern
+   regularization of the cutoff dependence that stopped the 1967
+   program.
+r. **Wolfram hypergraph rewriting** (arXiv:2004.08210). Provide an
+   empirical filter for rule selection by requiring dipole-pair-
+   compatibility.
+s. **Deutsch-Marletto constructor theory** (arXiv:1405.5563, 1608.02625).
+   Add an equation-form substrate layer below their modal substrate.
+t. **Penrose twistor** + mass / gravity coupling extension.
+u. **Wheeler-Feynman absorber theory** modern closure.
+v. **de Broglie double solution** (arXiv:1703.06158) detection program.
+w. **Barbour-Bertotti / Shape Dynamics** (arXiv:1010.2481) quantum
+   extension.
+x. **Penrose-Hameroff Orch-OR substrate-only test** (separated from
+   consciousness claim).
+y. **Wheeler "it from bit"** formalized into an extraction procedure.
+
+**Per-domain stacks worth running on each domain's native data:**
+
+z. **Chemistry**: bring in **Rao-Esposito 2022** (arXiv:2204.02815)
+   info-thermodynamic CRN framework, stack our windowed-H algebraic
+   basis on top of their entropy-production-rate analysis. Same on
+   **Reinhardt 2019** (arXiv:1904.01988), **Schmitz-Aris 2013**
+   (arXiv:1307.7957 -- substitute entropies for concentrations),
+   **Sayyadi 2024 SISR** (arXiv:2510.20655).
+aa. **Geology**: stack our 6D operator cloud + rank analysis on
+    **Garland-Bradley 2018** (arXiv:1811.01272) paleoclimate data
+    (extend from single-channel permutation entropy to multi-channel
+    algebraic basis). Same on **da Silva 2020 Tsallis seismic**
+    (PMC7516945) and **Reinsel 2025 geochemical manifold** (Nat. Sci.
+    Rep. 15).
+bb. **Biology**: try the asymmetric MI regression on neural,
+    ecological, and gene-regulatory time series. Stack on top of
+    **Schreiber 2000 TE** (arXiv:nlin/0001042) and **Tishby IB**
+    (arXiv:1705.02436) frameworks.
+cc. **Stoichiometric subspace** (Feinberg, Horn-Jackson) -- nonlinear-
+    algebraic extension on entropies instead of linear on
+    concentrations.
+dd. **Information geometry of CRNs** (arXiv:2503.19384) -- add
+    operator-basis null extraction layer.
+ee. **Directed information flow in reaction networks** (bioRxiv 2024,
+    doi:10.1101/2024.08.17.608427) -- entropy basis substitution.
+
+Pick from this menu in whatever order Greg's intuition suggests. Or
+sample from multiple at once -- the "stacking" itself is the work, and
+different stacks may light up different lines.
 
 ## Prompt for next session
 

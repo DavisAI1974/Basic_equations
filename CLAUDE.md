@@ -31,6 +31,7 @@
 - **Probe, not falsifier** (NEW — added Session 4, 2026-05-26). A probe is a generator of a different signal. It may not falsify anything; at worst it points in a different direction. Avoid "falsifier" in filenames and in spoken framing. Use "probe", "experiment", or "different signal" instead.
 - **Speaking posture around every probe** (NEW — added Session 4, 2026-05-26). Before AND after running each probe: "I think X might happen, but we'll wait on what the data says and where it points us." No verdict in advance. No verdict on first look at output. The interpretive move happens after, with Greg, with the deflationary reading always present.
 - **Incomplete, not wrong** (NEW — added Session 5, 2026-05-26). When a probe finds that a prior reading was a protocol artifact, the prior data points still stand. The reading attached to them is what was incomplete, not the data. Distinguish "this reading was wrong" (rare, requires the data itself to be bad) from "this reading was incomplete" (common, the data is one slice and the slice fit a partial story that further probes refine). Default to "incomplete." Retraction is a strong move and applies to the reading, not the data, unless the data itself fails to reproduce.
+- **They never stacked** (NEW — added Session 5 close, 2026-05-26). Pioneering territory often does not look like the absence of nearby published work. It looks like nearby work where multiple groups each had one piece and never combined them. When a literature scan returns "no exact match but several adjacent lines, each with one component," the contribution we are making may be in the stacking itself. Honor each prior piece, attribute clearly, finish the combination the prior groups did not. This is the operational form of Rule D applied to the broader literature: prior work was incomplete, not wrong, and stacking the incomplete pieces is itself substantive.
 
 ## Result Discipline (NEW — added Session 3)
 
@@ -230,6 +231,50 @@ Updated at the end of 2026-05-26 Session 5 to reflect:
 - Greg's substantive intuition (this session): dipoles are the best
   coupling mechanism. Tightly-related couples may be part of the
   substrate. Per-domain coefficients are a strong signal.
+- Three-agent literature scan ran at Session 5 close
+  (LITERATURE_SCAN_2026-05-26_v5.md). All three agents independently
+  reported: no exact match for any of our specific findings, but
+  multiple adjacent lines exist where each group had one piece and
+  never combined them. This is what pioneering territory looks like.
+  Per Greg's directive ("never know where you'll strike gold"), no
+  pre-filtering -- the full candidate pool is preserved in the v5
+  handoff. Highlights below; complete list in handoff + scan file:
+  - **Methodology**: Gomez-Herrero 2015, Hlavackova-Schindler 2007,
+    Yamada 2023, Wang 2025, Strang 2021, bipartite info-thermo
+    (Horowitz, Hartich), Kaiser-Brunton-Kutz 2024, Liu-Madhavan-
+    Tegmark 2024, AI-Feynman, AI-Poincare, SINDy/SINDyG/DSINDy,
+    PySR, complexity-entropy plane (Rosso), Crutchfield epsilon-
+    machines.
+  - **Substrate**: Jacobson 1995 (best one-line candidate);
+    Finkelstein "Space-Time Code" 1969-74 (closest published cousin
+    to dipole-pair-as-coupling); Wheeler "it from bit"; Verlinde;
+    Hardy 2001; Chiribella-D'Ariano-Perinotti; Brukner-Zeilinger;
+    Sorkin causal sets; Sakharov induced gravity; Penrose twistor;
+    Wolfram hypergraph; Deutsch-Marletto constructor theory;
+    't Hooft cellular automaton QM; Adler trace dynamics; Bohm
+    implicate order; von Weizsacker ur-alternatives; Hohn yes/no
+    rules; Stochastic Electrodynamics (Boyer, de la Pena-Cetto);
+    Wheeler-Feynman absorber; de Broglie double solution; Barbour-
+    Bertotti / Shape Dynamics; Penrose-Hameroff Orch-OR (substrate-
+    only).
+  - **Per-domain coefficient adjacencies**: Rao-Esposito 2022 (chem);
+    Reinhardt 2019; Smith-Cepelewicz; Schmitz-Aris 2013; Sayyadi
+    SISR; da Silva Tsallis seismic 2020; Garland-Bradley
+    paleoclimate 2018; Consolini magnetospheric; Davidson
+    paleoclimate VAR; Reinsel geochemical manifold 2025; Schreiber
+    TE 2000; Pavithran MI vs TE; Tishby info bottleneck; Walters-
+    Williams asymmetric MI estimators; Feinberg-Horn-Jackson
+    stoichiometric subspace; CRN reduction by approximate
+    conservation laws (arXiv:2212.13474); info geometry of CRNs
+    (arXiv:2503.19384); directed info flow in reaction networks
+    (bioRxiv 2024).
+  - Three negative findings worth emphasizing: dipole-PAIR-COUPLING
+    as foundational substrate primitive is uncolonized; no SINDy/
+    AI-Feynman/PySR application to windowed-H of coupled species;
+    rank-3 first-order algebraic relations under H_a~H_b regime
+    unpublished as diagnostic.
+- New Operating Rule "They never stacked" added based on the
+  literature scan finding (see Operating Rules above).
 - Branch state: work persisted on
   `claude/linear-drift-nreal-sweep-cjRkM`, pushed. main untouched.
   No PR.
