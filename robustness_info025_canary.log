@@ -1,0 +1,32 @@
+[robustness_info025] mode=canary seeds=[11] niter=15 timeout_s=60
+  conditions: 2
+
+--- seed=11 T=10 N_ens=200 noise=0.00 ---
+  elapsed=22.5s  n_points=400  n_pysr=400
+  H_a mean=-0.782 std=1.038  MI mean=+0.585 std=0.058
+  exp baseline (A*exp(H_a/B)): A=+0.5849 B=+52933342.5002 R^2=-0.0000
+  linear baseline (a*H_a+b): a=-0.0054 b=+0.5807 R^2=+0.0092
+  PySR best (sympy): exp(-0.045558573*x0 + 0.045558573*x1**3)*0.5911796
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=3.380e-03 score=+0.000 0.584851
+    c=  5 loss=2.690e-03 score=+0.057 (x1 * 0.031763818) + 0.5991759
+    c=  6 loss=2.055e-03 score=+0.269 (square(x1) * -0.03561344) - -0.6164294
+    c=  7 loss=1.851e-03 score=+0.105 exp(cube(x1 * 0.33288562)) / 1.6465268
+    c=  8 loss=1.814e-03 score=+0.020 0.6081462 * exp(cube(square(x1)) * -0.005894681)
+    c=  9 loss=1.697e-03 score=+0.067 (square(cube(x1) * -1.577672) * -0.0016563564) - -0.6044206
+
+--- seed=11 T=30 N_ens=200 noise=0.00 ---
+  elapsed=3.6s  n_points=1200  n_pysr=600
+  H_a mean=+0.000 std=1.224  MI mean=+0.801 std=0.374
+  exp baseline (A*exp(H_a/B)): A=+0.7340 B=+2.9504 R^2=+0.6664
+  linear baseline (a*H_a+b): a=+0.2396 b=+0.8009 R^2=+0.6141
+  PySR best (sympy): x0*0.23950018 + 0.80072176
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=1.399e-01 score=+0.000 0.8006406
+    c=  4 loss=1.044e-01 score=+0.097 exp(x0 * 0.20493299)
+    c=  5 loss=5.382e-02 score=+0.663 (x0 * 0.23950018) + 0.80072176
+    c=  6 loss=4.648e-02 score=+0.147 exp(x0 - 1.7567967) + 0.47930494
+    c=  7 loss=4.389e-02 score=+0.057 sqrt(exp(x0 + -1.1774107) + 0.16337927)
+    c= 10 loss=4.191e-02 score=+0.015 exp(exp(cube(x0 - 1.4158142)) + -0.9116544) + 0.12001796
+
+[robustness_info025] wrote robustness_info025_canary.json  elapsed=26.2s

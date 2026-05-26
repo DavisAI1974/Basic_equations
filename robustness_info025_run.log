@@ -1,0 +1,200 @@
+[robustness_info025] mode=full seeds=[11, 22] niter=40 timeout_s=90
+  conditions: 7
+
+--- seed=11 T=10 N_ens=600 noise=0.00 ---
+  elapsed=25.1s  n_points=400  n_pysr=400
+  H_a mean=-0.673 std=1.057  MI mean=+0.257 std=0.049
+  exp baseline (A*exp(H_a/B)): A=+0.2569 B=+32845455.5615 R^2=-0.0000
+  linear baseline (a*H_a+b): a=-0.0056 b=+0.2531 R^2=+0.0149
+  PySR best (sympy): 0.34223473 - 0.0052895001681025*x0**2*(x0 - 1*(-4.299932))**2
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=2.364e-03 score=+0.000 0.2568919
+    c=  5 loss=2.218e-03 score=+0.016 0.26194656 - (x1 * -0.014445571)
+    c=  6 loss=2.105e-03 score=+0.052 (square(x0) * -0.015412577) - -0.2810852
+    c=  7 loss=2.038e-03 score=+0.032 ((x0 - x1) * -0.03841185) - -0.25311852
+    c=  8 loss=1.265e-03 score=+0.477 0.31459743 - (square(x0 + 0.43890283) * 0.049250025)
+    c=  9 loss=1.170e-03 score=+0.079 0.29704794 - (square(square(x0 + 0.4594509)) * 0.02210399)
+
+--- seed=11 T=30 N_ens=600 noise=0.00 ---
+  elapsed=6.3s  n_points=1200  n_pysr=600
+  H_a mean=+0.115 std=1.222  MI mean=+0.691 std=0.387
+  exp baseline (A*exp(H_a/B)): A=+0.5824 B=+2.3819 R^2=+0.7305
+  linear baseline (a*H_a+b): a=+0.2671 b=+0.6605 R^2=+0.7099
+  PySR best (sympy): 0.531095141282439*sqrt(exp(x0))
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=1.503e-01 score=+0.000 0.691228
+    c=  4 loss=1.076e-01 score=+0.112 exp(x0 + -1.3738214)
+    c=  5 loss=4.305e-02 score=+0.916 sqrt(exp(x0 - 1.2656282))
+    c=  6 loss=4.036e-02 score=+0.064 cube((x0 * 0.12382783) + 0.84381366)
+    c=  7 loss=4.031e-02 score=+0.001 square(square((x0 * 0.09595896) + 0.8784045))
+    c=  8 loss=3.975e-02 score=+0.014 square((x0 * 0.23968853) + 0.55064833) - -0.27133217
+
+--- seed=11 T=100 N_ens=600 noise=0.00 ---
+  elapsed=8.0s  n_points=4000  n_pysr=600
+  H_a mean=+0.766 std=0.600  MI mean=+0.476 std=0.228
+  exp baseline (A*exp(H_a/B)): A=+0.2100 B=+1.1359 R^2=+0.5747
+  linear baseline (a*H_a+b): a=+0.2197 b=+0.3083 R^2=+0.3339
+  PySR best (sympy): x0**2*0.24858439 + 0.24086773
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=5.186e-02 score=+0.000 0.47640416
+    c=  4 loss=2.286e-02 score=+0.273 exp(x0) * 0.18147174
+    c=  5 loss=1.779e-02 score=+0.251 -0.66021156 / (x0 + -2.3701353)
+    c=  6 loss=1.510e-02 score=+0.164 (square(x0) * 0.24858439) + 0.24086773
+    c=  7 loss=1.384e-02 score=+0.087 cube(square(x0 * 0.34732047) + 0.6552544)
+    c=  9 loss=1.314e-02 score=+0.026 log((x0 * (cube(x0) * 0.17037234)) - -1.3925642)
+
+--- seed=11 T=30 N_ens=200 noise=0.00 ---
+  elapsed=7.7s  n_points=1200  n_pysr=600
+  H_a mean=+0.000 std=1.224  MI mean=+0.801 std=0.374
+  exp baseline (A*exp(H_a/B)): A=+0.7340 B=+2.9504 R^2=+0.6664
+  linear baseline (a*H_a+b): a=+0.2396 b=+0.8009 R^2=+0.6141
+  PySR best (sympy): x0*0.23950016 + 0.80071956
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=1.399e-01 score=+0.000 0.8006406
+    c=  4 loss=1.044e-01 score=+0.097 exp(x0 * 0.20493299)
+    c=  5 loss=5.382e-02 score=+0.663 (x0 * 0.23950016) + 0.80071956
+    c=  6 loss=4.648e-02 score=+0.147 exp(x0 - 1.7567967) + 0.4793049
+    c=  7 loss=4.359e-02 score=+0.064 log(exp(x0 - 0.82410026) + 1.5255493)
+    c=  8 loss=4.357e-02 score=+0.000 sqrt(exp(cube(x0 + -1.3737211)) + 0.27342483)
+
+--- seed=11 T=30 N_ens=1200 noise=0.00 ---
+  elapsed=7.5s  n_points=1200  n_pysr=600
+  H_a mean=+0.105 std=1.246  MI mean=+0.619 std=0.386
+  exp baseline (A*exp(H_a/B)): A=+0.5027 B=+2.1216 R^2=+0.7498
+  linear baseline (a*H_a+b): a=+0.2637 b=+0.5916 R^2=+0.7235
+  PySR best (sympy): 0.485671868891194*sqrt(exp(x0))
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=1.490e-01 score=+0.000 0.61911136
+    c=  4 loss=8.125e-02 score=+0.202 exp(x0 + -1.4615262)
+    c=  5 loss=3.763e-02 score=+0.770 sqrt(exp(x0 - 1.4444441))
+    c=  6 loss=3.737e-02 score=+0.007 exp((x0 * 0.47086737) - 0.6875883)
+    c=  7 loss=3.599e-02 score=+0.038 1.1509275 - exp(exp(x0) * -0.44445467)
+    c=  9 loss=3.533e-02 score=+0.009 1.181589 - exp(exp(x0 * 1.1805953) * -0.34712723)
+
+--- seed=11 T=30 N_ens=600 noise=0.10 ---
+  elapsed=6.8s  n_points=1200  n_pysr=600
+  H_a mean=+0.645 std=0.768  MI mean=+0.409 std=0.291
+  exp baseline (A*exp(H_a/B)): A=+0.1840 B=+1.1279 R^2=+0.8735
+  linear baseline (a*H_a+b): a=+0.3445 b=+0.1873 R^2=+0.8264
+  PySR best (sympy): (x0*(x1 + 1.0493802) + 1.1600599)*0.16385028
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=8.421e-02 score=+0.000 0.40964493
+    c=  3 loss=3.547e-02 score=+0.432 x0 * 0.46418908
+    c=  4 loss=1.124e-02 score=+1.149 exp(x0) * 0.15550421
+    c=  6 loss=1.011e-02 score=+0.053 (exp(x0) + x1) * 0.12634408
+    c=  8 loss=9.980e-03 score=+0.007 (exp(x0 * 0.93296874) + x1) * 0.13792633
+    c=  9 loss=4.300e-03 score=+0.842 (((x1 + 1.0493802) * x0) + 1.1600599) * 0.16385028
+
+--- seed=11 T=30 N_ens=600 noise=0.50 ---
+  elapsed=7.1s  n_points=1200  n_pysr=600
+  H_a mean=+1.583 std=0.294  MI mean=+0.231 std=0.085
+  exp baseline (A*exp(H_a/B)): A=+0.0422 B=+0.9612 R^2=+0.7777
+  linear baseline (a*H_a+b): a=+0.2498 b=-0.1648 R^2=+0.7442
+  PySR best (sympy): exp(x0)*0.045458026
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=7.039e-03 score=+0.000 0.23099457
+    c=  3 loss=2.342e-03 score=+0.550 log(sqrt(x0))
+    c=  4 loss=1.506e-03 score=+0.442 exp(x0) * 0.045458026
+    c=  5 loss=1.404e-03 score=+0.070 0.24491686 / (2.7353263 - x0)
+    c=  7 loss=1.404e-03 score=+0.000 0.018123848 - (-0.21065585 / (2.6718938 - x0))
+    c=  9 loss=1.399e-03 score=+0.001 (0.20509613 / (2.655565 - x0)) - (-0.024081705 / x1)
+
+--- seed=22 T=10 N_ens=600 noise=0.00 ---
+  elapsed=4.7s  n_points=400  n_pysr=400
+  H_a mean=-0.728 std=1.072  MI mean=+0.228 std=0.047
+  exp baseline (A*exp(H_a/B)): A=+0.2374 B=+16.6287 R^2=+0.1074
+  linear baseline (a*H_a+b): a=+0.0146 b=+0.2382 R^2=+0.1123
+  PySR best (sympy): x1*0.043870088 - 1*(-0.24298)
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=2.171e-03 score=+0.000 0.2276357
+    c=  5 loss=9.056e-04 score=+0.219 (x1 * 0.043870088) - -0.24298
+    c=  6 loss=8.947e-04 score=+0.012 square(0.49189177 - (x1 * -0.04660747))
+    c= 10 loss=8.868e-04 score=+0.002 sqrt(0.07429259 / (x1 + (1.3438754 - (x1 * 1.5602025))))
+    c= 11 loss=8.391e-04 score=+0.055 (((0.21433458 / x0) * sqrt(exp(x1))) + -0.040502276) * x0
+    c= 13 loss=6.405e-04 score=+0.135 x0 * (((sqrt(exp(x1 * 0.64882046)) / x0) * 0.22831774) + -0.022764185)
+
+--- seed=22 T=30 N_ens=600 noise=0.00 ---
+  elapsed=6.8s  n_points=1200  n_pysr=600
+  H_a mean=+0.092 std=1.231  MI mean=+0.611 std=0.400
+  exp baseline (A*exp(H_a/B)): A=+0.4824 B=+1.9183 R^2=+0.8174
+  linear baseline (a*H_a+b): a=+0.2881 b=+0.5843 R^2=+0.7848
+  PySR best (sympy): 0.494881024425117*sqrt(exp(x0))
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=1.602e-01 score=+0.000 0.6108736
+    c=  4 loss=6.515e-02 score=+0.300 exp(x0) * 0.23960754
+    c=  5 loss=2.932e-02 score=+0.798 sqrt(exp(x0 + -1.4068758))
+    c=  6 loss=2.868e-02 score=+0.022 cube(0.79454863 - (x0 * -0.14918569))
+    c=  7 loss=2.864e-02 score=+0.001 square(square((x0 * 0.11656474) + 0.8389991))
+    c=  8 loss=2.792e-02 score=+0.025 square((x0 + 1.904633) * 0.27331072) + 0.2002418
+
+--- seed=22 T=100 N_ens=600 noise=0.00 ---
+  elapsed=7.8s  n_points=4000  n_pysr=600
+  H_a mean=+0.736 std=0.651  MI mean=+0.467 std=0.226
+  exp baseline (A*exp(H_a/B)): A=+0.2119 B=+1.1635 R^2=+0.6773
+  linear baseline (a*H_a+b): a=+0.2300 b=+0.2974 R^2=+0.4389
+  PySR best (sympy): 0.02334634258401*exp(2*x0) - 1*(-0.28095403)
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=5.114e-02 score=+0.000 0.46675327
+    c=  4 loss=1.714e-02 score=+0.364 exp(x0) * 0.17790776
+    c=  6 loss=1.434e-02 score=+0.089 (exp(x0) * 0.14316808) - -0.11130736
+    c=  7 loss=1.116e-02 score=+0.251 square(exp(x0) * 0.1527951) - -0.28095403
+    c=  9 loss=1.115e-02 score=+0.000 square((exp(x0) * -0.14977358) + -0.020713562) - -0.2728159
+    c= 10 loss=1.093e-02 score=+0.020 log(square((exp(x0) + -0.43595484) * -0.22987711) - -1.3110336)
+
+--- seed=22 T=30 N_ens=200 noise=0.00 ---
+  elapsed=7.5s  n_points=1200  n_pysr=600
+  H_a mean=-0.002 std=1.289  MI mean=+0.864 std=0.340
+  exp baseline (A*exp(H_a/B)): A=+0.8161 B=+3.8149 R^2=+0.6411
+  linear baseline (a*H_a+b): a=+0.2052 b=+0.8642 R^2=+0.6064
+  PySR best (sympy): x0*0.2053241 - 1*(-0.8641254)
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=1.154e-01 score=+0.000 0.863434
+    c=  4 loss=7.028e-02 score=+0.165 exp(x0 * 0.18453169)
+    c=  5 loss=4.537e-02 score=+0.438 (x0 * 0.2053241) - -0.8641254
+    c=  6 loss=4.133e-02 score=+0.093 exp((x0 * 0.2624646) - 0.20349951)
+    c=  8 loss=3.745e-02 score=+0.049 sqrt(sqrt(exp(x0 - sqrt(square(x1)))))
+    c=  9 loss=3.671e-02 score=+0.020 sqrt(sqrt(exp(x0 - sqrt(sqrt(square(x1))))))
+
+--- seed=22 T=30 N_ens=1200 noise=0.00 ---
+  elapsed=7.7s  n_points=1200  n_pysr=600
+  H_a mean=+0.094 std=1.259  MI mean=+0.669 std=0.394
+  exp baseline (A*exp(H_a/B)): A=+0.5642 B=+2.3655 R^2=+0.7064
+  linear baseline (a*H_a+b): a=+0.2598 b=+0.6449 R^2=+0.6894
+  PySR best (sympy): 0.515250356622875*sqrt(exp(x0))
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=1.554e-01 score=+0.000 0.6691054
+    c=  4 loss=1.079e-01 score=+0.121 exp(x0 + -1.4127868)
+    c=  5 loss=4.776e-02 score=+0.815 sqrt(exp(x0) * 0.26548293)
+    c=  6 loss=4.524e-02 score=+0.054 cube((x0 * 0.123300016) + 0.8354671)
+    c=  7 loss=4.522e-02 score=+0.000 square(square((x0 * 0.09583676) + 0.8717429))
+    c=  8 loss=4.495e-02 score=+0.006 square((x0 * 0.23543923) + 0.54565406) + 0.26212195
+
+--- seed=22 T=30 N_ens=600 noise=0.10 ---
+  elapsed=6.5s  n_points=1200  n_pysr=600
+  H_a mean=+0.622 std=0.765  MI mean=+0.386 std=0.294
+  exp baseline (A*exp(H_a/B)): A=+0.1681 B=+1.0760 R^2=+0.8511
+  linear baseline (a*H_a+b): a=+0.3429 b=+0.1727 R^2=+0.7966
+  PySR best (sympy): (x0*(x1 - 1*(-0.80744)) + 0.92365956)*0.18751168
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=8.661e-02 score=+0.000 0.38584706
+    c=  3 loss=3.537e-02 score=+0.448 x0 * 0.4537916
+    c=  4 loss=1.300e-02 score=+1.001 exp(x0) * 0.15142591
+    c=  6 loss=1.057e-02 score=+0.103 (x1 + exp(x0)) * 0.12387701
+    c=  7 loss=9.713e-03 score=+0.085 ((x1 * x0) + 0.7557443) * 0.27772573
+    c=  8 loss=8.577e-03 score=+0.124 (square(x0 + x1) + 2.285641) * 0.07264326
+
+--- seed=22 T=30 N_ens=600 noise=0.50 ---
+  elapsed=6.8s  n_points=1200  n_pysr=600
+  H_a mean=+1.573 std=0.286  MI mean=+0.225 std=0.087
+  exp baseline (A*exp(H_a/B)): A=+0.2248 B=-46243621.4503 R^2=-0.0000
+  linear baseline (a*H_a+b): a=+0.2637 b=-0.1900 R^2=+0.7463
+  PySR best (sympy): (0.617960082868447*x0 - 1.04128455362426)*log(x1) + 0.22894453
+  PySR Pareto (low-complexity rows):
+    c=  1 loss=7.653e-03 score=+0.000 0.2252481
+    c=  3 loss=2.413e-03 score=+0.577 log(sqrt(x0))
+    c=  4 loss=1.810e-03 score=+0.288 exp(x0) * 0.045095704
+    c=  6 loss=1.747e-03 score=+0.018 (cube(x0) * 0.031070173) + 0.091848366
+    c=  8 loss=1.656e-03 score=+0.027 (square(x0 + -1.2601224) * 0.31505224) + 0.168615
+    c=  9 loss=1.386e-03 score=+0.178 (log(sqrt(x1)) * (x0 + -1.675123)) + 0.22329062
+
+[robustness_info025] wrote robustness_info025_results.json  elapsed=116.3s

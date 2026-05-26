@@ -1,0 +1,27 @@
+[mapping_campaign] mode=canary cfg={'N_ens': 200, 'T': 10.0, 'dt': 0.02} seeds=[11] niter=15 timeout_s=60
+
+--- seed=11 physics_duffing K=0.05 (baseline=0.2) ---
+  elapsed=22.1s  n_pysr=400
+  H_a mean=-0.024 std=0.316  MI mean=+0.535 std=0.157
+  PySR best (sympy): x0*0.5542411 + x1*x1*(-x0 - 0.34393147) - 1*(-0.58875567)
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=2.473e-02 score=+0.000 0.53500736
+    c=  4 loss=8.946e-03 score=+0.339 exp(x0 + -0.6648455)
+    c=  5 loss=7.537e-03 score=+0.171 (x0 * 0.41442302) + 0.5450298
+    c=  9 loss=7.481e-03 score=+0.002 (cube(x0) * -0.8611155) + log(1.737819 + x0)
+    c= 11 loss=7.395e-03 score=+0.006 square((cube(x0) * -0.8611155) + sqrt(log(x0 + 1.737819)))
+    c= 12 loss=7.281e-03 score=+0.016 exp(x0 + ((((x1 + x0) * 0.1473122) + 0.7362556) / -1.1613418))
+
+--- seed=11 physics_duffing K=0.5 (baseline=0.2) ---
+  elapsed=2.2s  n_pysr=400
+  H_a mean=+0.050 std=0.283  MI mean=+0.681 std=0.176
+  PySR best (sympy): 0.7668999 - x1**2
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=3.087e-02 score=+0.000 0.6805439
+    c=  4 loss=2.174e-02 score=+0.117 0.7668999 - square(x1)
+    c=  6 loss=2.139e-02 score=+0.008 0.75851506 - square(x0 + -0.063730255)
+    c=  7 loss=2.045e-02 score=+0.045 (x0 * (0.08234058 - x1)) - -0.75542915
+    c=  9 loss=2.035e-02 score=+0.002 (x0 * (0.10336487 - (x1 * 0.8785681))) - -0.7447818
+    c= 10 loss=1.959e-02 score=+0.038 (x0 * (1.1677916 - exp(x1 * 1.0912476))) - -0.7589003
+
+[mapping_campaign] wrote mapping_campaign_canary.json  elapsed=24.3s
