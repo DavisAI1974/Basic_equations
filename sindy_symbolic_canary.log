@@ -1,0 +1,32 @@
+[sindy] mode=canary cfg={'T': 20.0, 'dt': 0.05, 'window_s': 4.0, 'stride_s': 0.5, 'n_real': 20, 'gamma': 0.5, 'sigma': 1.0, 'mi_bins': 10} seeds=[11] libs=['deg2', 'deg3', 'deg3+nonpoly']
+  seed=11  lib=deg2 (6 features)  elapsed=0.3s  n_windows=660
+    SV spectrum = ['1.260e+01', '1.043e+01', '2.324e+00', '1.776e+00', '1.244e+00', '8.088e-01']
+    null[0] sv=8.088e-01  support_size=5/6  resid_std=3.159e-02
+       +0.376*H_a +0.753*H_b -0.072*H_a^2 -0.354*H_b^2 -0.401*H_a*H_b ~ 0
+    null[1] sv=1.244e+00  support_size=5/6  resid_std=3.159e-02
+       +0.376*H_a +0.753*H_b -0.072*H_a^2 -0.354*H_b^2 -0.401*H_a*H_b ~ 0
+    null[2] sv=1.776e+00  support_size=5/6  resid_std=4.555e-02
+       +0.780*H_a -0.355*H_a^2 +0.204*H_b^2 -0.456*H_a*H_b +0.128*MI ~ 0
+    null[3] sv=2.324e+00  support_size=3/6  resid_std=5.341e-02
+       +0.804*H_a -0.590*H_a^2 +0.070*MI ~ 0
+  seed=11  lib=deg3 (10 features)  elapsed=0.3s  n_windows=660
+    SV spectrum = ['1.875e+01', '1.457e+01', '3.390e+00', '2.615e+00', '2.214e+00', '1.694e+00', '5.431e-01', '3.513e-01', '2.314e-01', '1.333e-01']
+    null[0] sv=1.333e-01  support_size=8/10  resid_std=5.201e-03
+       -0.249*H_a -0.496*H_b +0.104*H_a^2 +0.496*H_b^2 +0.561*H_a*H_b -0.155*H_b^3 -0.148*H_a^2*H_b -0.271*H_a*H_b^2 ~ 0
+    null[1] sv=2.314e-01  support_size=8/10  resid_std=5.201e-03
+       -0.249*H_a -0.496*H_b +0.104*H_a^2 +0.496*H_b^2 +0.561*H_a*H_b -0.155*H_b^3 -0.148*H_a^2*H_b -0.271*H_a*H_b^2 ~ 0
+    null[2] sv=3.513e-01  support_size=8/10  resid_std=8.464e-03
+       -0.453*H_a +0.362*H_a^2 -0.308*H_b^2 +0.636*H_a*H_b -0.060*H_a^3 +0.189*H_b^3 -0.324*H_a^2*H_b -0.143*H_a*H_b^2 ~ 0
+    null[3] sv=5.431e-01  support_size=6/10  resid_std=2.116e-02
+       +0.129*H_a^2 -0.102*H_b^2 -0.284*H_a^3 +0.251*H_b^3 +0.649*H_a^2*H_b -0.639*H_a*H_b^2 ~ 0
+  seed=11  lib=deg3+nonpoly (12 features)  elapsed=0.3s  n_windows=660
+    SV spectrum = ['1.985e+01', '1.464e+01', '4.269e+00', '3.373e+00', '2.642e+00', '1.977e+00', '5.444e-01', '4.187e-01', '2.868e-01', '2.341e-01', '1.440e-01', '4.820e-02']
+    null[0] sv=4.820e-02  support_size=10/12  resid_std=1.884e-03
+       -0.335*H_a -0.399*H_b -0.304*H_a^2 -0.218*H_b^2 +0.506*H_a*H_b +0.102*H_a^3 +0.075*H_b^3 -0.078*H_a^2*H_b -0.109*H_a*H_b^2 +0.546*sqrt(H_a^2+H_b^2) ~ 0
+    null[1] sv=1.440e-01  support_size=10/12  resid_std=1.884e-03
+       -0.335*H_a -0.399*H_b -0.304*H_a^2 -0.218*H_b^2 +0.506*H_a*H_b +0.102*H_a^3 +0.075*H_b^3 -0.078*H_a^2*H_b -0.109*H_a*H_b^2 +0.546*sqrt(H_a^2+H_b^2) ~ 0
+    null[2] sv=2.341e-01  support_size=9/12  resid_std=2.624e-03
+       -0.304*H_a -0.290*H_b -0.359*H_a^2 -0.389*H_b^2 +0.378*H_a*H_b +0.117*H_a^3 +0.117*H_b^3 -0.067*H_a^2*H_b +0.607*sqrt(H_a^2+H_b^2) ~ 0
+    null[3] sv=2.868e-01  support_size=8/12  resid_std=4.633e-03
+       -0.456*H_a -0.276*H_b -0.104*H_a^2 -0.412*H_b^2 +0.405*H_a*H_b +0.131*H_b^3 -0.084*H_a^2*H_b +0.589*sqrt(H_a^2+H_b^2) ~ 0
+[sindy] wrote sindy_symbolic_canary.json elapsed=1.0s
