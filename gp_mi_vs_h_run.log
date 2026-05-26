@@ -101,3 +101,19 @@
     poly3(MI~Ha,Hb): in=+0.806  block=+0.726  rand=+0.803
     GP(MI~Ha,Hb):    in=+0.832  block=+0.740  rand=+0.811
     elapsed: 52.3s
+  geology_bk              n=1200
+    MI stats: mean=+0.200 std=0.022  corr(MI,Ha)=+0.156  corr(MI,Hb)=+0.060  corr(Ha,Hb)=+0.742
+    fmt: in / block-CV / random-CV
+    poly1(MI~Ha):   in=+0.024  block=-0.049  rand=+0.021
+    poly2(MI~Ha):   in=+0.026  block=-0.231  rand=+0.022
+    poly3(MI~Ha):   in=+0.033  block=-0.747  rand=+0.027
+    GP(MI~Ha):     in=+0.074  block=-0.085  rand=+0.023
+    poly1(MI~Hb):   in=+0.004  block=-0.138  rand=+0.001
+    poly2(MI~Hb):   in=+0.007  block=-0.140  rand=+0.004
+    poly3(MI~Hb):   in=+0.010  block=-0.124  rand=+0.003
+    GP(MI~Hb):     in=+0.054  block=-0.134  rand=-0.015
+    poly3(MI~Ha,Hb): in=+0.067  block=-5.156  rand=+0.052
+    GP(MI~Ha,Hb):    in=+0.181  block=-0.138  rand=+0.023
+    elapsed: 71.0s
+
+[gp_mi_vs_h] wrote gp_mi_vs_h_results.json  elapsed=524.1s
