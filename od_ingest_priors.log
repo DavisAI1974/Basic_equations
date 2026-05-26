@@ -1,0 +1,43 @@
+
+==============================================================================
+PROBLEM 1: cardiac_disease_family
+==============================================================================
+Built 10 payloads. Classes:
+label
+healthy_young               1
+healthy_elderly             1
+healthy_long_term           1
+atrial_fibrillation         1
+congestive_heart_failure    1
+ischemia_ST                 1
+supraventricular_arr        1
+ventricular_malignant       1
+arrhythmia_mixed            1
+ltaf_long_term              1
+  problem=cardiac_disease_family initialized: 50 features, label=label, test_frac=0.2, classifier=rf
+  ingest: added 10 new rows  total store size=10
+  split breakdown: {'train': np.int64(10)}
+  label distribution (train): {'healthy_young': np.int64(1), 'healthy_elderly': np.int64(1), 'healthy_long_term': np.int64(1), 'atrial_fibrillation': np.int64(1), 'congestive_heart_failure': np.int64(1), 'ischemia_ST': np.int64(1), 'supraventricular_arr': np.int64(1), 'ventricular_malignant': np.int64(1), 'arrhythmia_mixed': np.int64(1), 'ltaf_long_term': np.int64(1)}
+  WARN: train=10 test=0 too small
+
+  held-out: acc=None  bal=None
+  CV-on-train: acc=None  bal=None
+  NOTE: N=1/class - classification is degenerate; seeds future cohort ingest
+
+=== cardiac_disease_family history (1 runs) ===
+ run   n_tr   n_te  cls   heldout   cv_acc   cv_bal     d_cv  note
+   1     10      0   10       -        -        -        -    prior_data_bulk_ingest_10records
+
+==============================================================================
+PROBLEM 2: simulator_4domain
+==============================================================================
+Traceback (most recent call last):
+  File "/home/user/Basic_equations/od_ingest_priors.py", line 209, in <module>
+    ingest_simulator_4domain()
+  File "/home/user/Basic_equations/od_ingest_priors.py", line 156, in ingest_simulator_4domain
+    rows.append(build_simulator_payload(r, seed, "kbk"))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/Basic_equations/od_ingest_priors.py", line 118, in build_simulator_payload
+    "kbk_rank_gap": float(r["kbk_rank_gap"]),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'dict'
