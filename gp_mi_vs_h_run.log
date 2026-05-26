@@ -59,3 +59,17 @@
     elapsed: 63.0s
 
 === seed=22 ===
+  physics_duffing         n=1200
+    MI stats: mean=+0.297 std=0.101  corr(MI,Ha)=+0.361  corr(MI,Hb)=+0.264  corr(Ha,Hb)=+0.816
+    fmt: in / block-CV / random-CV
+    poly1(MI~Ha):   in=+0.130  block=-0.676  rand=+0.125
+    poly2(MI~Ha):   in=+0.145  block=-0.633  rand=+0.139
+    poly3(MI~Ha):   in=+0.156  block=-0.762  rand=+0.148
+    GP(MI~Ha):     in=+0.162  block=-0.816  rand=+0.124
+    poly1(MI~Hb):   in=+0.070  block=-0.775  rand=+0.064
+    poly2(MI~Hb):   in=+0.070  block=-0.924  rand=+0.063
+    poly3(MI~Hb):   in=+0.077  block=-1.164  rand=+0.068
+    GP(MI~Hb):     in=+0.297  block=-0.985  rand=+0.251
+    poly3(MI~Ha,Hb): in=+0.545  block=-0.824  rand=+0.533
+    GP(MI~Ha,Hb):    in=+0.794  block=-0.987  rand=+0.666
+    elapsed: 64.2s
