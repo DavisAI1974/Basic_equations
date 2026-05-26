@@ -1,0 +1,101 @@
+[four_force_pysr] mode=full cfg={'N_ens': 600, 'T': 30.0, 'dt': 0.02} seeds=[11, 22] niter=40 max_n=600 timeout_s=90
+
+=== seed=11 ===
+
+  em          n=600  fit_time=17.5s
+    best (sympy): ((x0 - x1)**2 - 1*(-0.443079))**2
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.992e-02  score=+0.000  0.29622203
+      c=  5  loss=8.314e-03  score=+0.218  sqrt(square(x1 - x0))
+      c=  6  loss=2.597e-03  score=+1.163  square(x0 - x1) + 0.20288408
+      c=  7  loss=1.489e-03  score=+0.556  square(square(x0 - x1) - -0.443079)
+      c=  9  loss=1.361e-03  score=+0.045  square(square(x1 - x0) + 0.5159301) - 0.08178078
+      c= 10  loss=1.310e-03  score=+0.038  cube(cube(sqrt(sqrt(square(x0 - x1) - -0.47802246))))
+      c= 11  loss=1.220e-03  score=+0.072  square(cube(sqrt(square(x1 - x0)) - -0.14463502) - -0.43215537)
+
+  weak        n=600  fit_time=6.5s
+    best (sympy): 0.30500096 - (-0.06331295)*x0
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.788e-03  score=+0.000  0.21159448
+      c=  5  loss=1.248e-03  score=+0.090  0.30500096 - (x0 * -0.06331295)
+      c=  6  loss=1.239e-03  score=+0.008  (exp(x0) * 0.21657485) + 0.15817009
+      c=  7  loss=1.223e-03  score=+0.013  0.18665874 - (cube(exp(x0)) * x1)
+      c=  8  loss=1.196e-03  score=+0.022  (-0.06366051 - exp(x0 * 1.7377387)) * x1
+      c=  9  loss=1.149e-03  score=+0.040  x1 * (-0.11246629 - (exp(cube(x1)) * 0.39457813))
+      c= 10  loss=1.102e-03  score=+0.042  (-0.63027114 - (-0.52007616 / exp(exp(cube(x1))))) * x1
+      c= 14  loss=1.100e-03  score=+0.001  (x1 * (-0.49227756 - (-0.5517046 / (exp(exp(cube(x1))) * 1.3220875)))) + 0.061777763
+
+  strong      n=600  fit_time=4.7s
+    best (sympy): exp(x0**2)*0.22746219
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.704e-03  score=+0.000  0.23827422
+      c=  5  loss=1.396e-03  score=+0.050  exp(square(x0)) * 0.22746219
+      c=  6  loss=1.371e-03  score=+0.018  square(x0 * 0.58782476) + 0.22231208
+      c=  7  loss=1.366e-03  score=+0.003  square(square(x0) + 0.089719534) - -0.2170299
+      c=  8  loss=1.346e-03  score=+0.015  (square(x0 + 0.03274418) * 0.3745169) + 0.22159526
+      c=  9  loss=1.345e-03  score=+0.001  cube((square(x0 + 0.027647829) * 0.31174955) + 0.6055337)
+      c= 12  loss=1.338e-03  score=+0.002  ((x1 * 0.026677037) + square((x0 * x0) + 0.10658737)) + 0.21348979
+
+  gravity     n=600  fit_time=4.6s
+    best (sympy): 0.37130654 - 0.359950954992482*sqrt(x1**2)
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.145e-02  score=+0.000  0.29858384
+      c=  4  loss=1.009e-02  score=+0.042  0.3196785 - cube(x0)
+      c=  5  loss=9.631e-03  score=+0.046  square(0.6007314 - square(x0))
+      c=  6  loss=9.263e-03  score=+0.039  0.3355552 - (square(x1) * 0.57152826)
+      c=  7  loss=9.062e-03  score=+0.022  cube(0.6993996 - (square(x1) * 0.5230872))
+      c=  8  loss=8.355e-03  score=+0.081  0.37130654 - sqrt((x1 * x1) * 0.12956469)
+      c= 10  loss=8.355e-03  score=+0.000  0.3712889 - sqrt(((x1 / 1.7537702) * 0.22712821) * x1)
+      c= 11  loss=8.271e-03  score=+0.010  (((0.70979035 - x1) / -0.31006327) * (x0 * x0)) + 0.36383656
+
+=== seed=22 ===
+
+  em          n=600  fit_time=4.3s
+    best (sympy): (0.887045149939361*(-x0 + x1)**2 + 0.5759486)**3
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=2.205e-02  score=+0.000  0.30768654
+      c=  5  loss=9.857e-03  score=+0.201  sqrt(square(x0 - x1))
+      c=  6  loss=2.709e-03  score=+1.292  square(x1 - x0) + 0.21214871
+      c=  7  loss=1.111e-03  score=+0.891  cube(square(x1 - x0) + 0.5563782)
+      c=  9  loss=7.246e-04  score=+0.214  cube(square((x1 - x0) / 1.0617619) + 0.5759486)
+      c= 10  loss=6.578e-04  score=+0.097  square(cube(-0.76126236 - square((x1 - x0) * -0.7220457)))
+      c= 11  loss=6.481e-04  score=+0.015  square(square(square(square((x1 - x0) / -1.566349) - -0.81535923)))
+      c= 12  loss=6.071e-04  score=+0.065  square(cube(square((0.0073317117 - (x1 - x0)) * 0.7168907) - -0.7618477))
+
+  weak        n=600  fit_time=7.1s
+    best (sympy): x0*0.068365596 + 0.3169676
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.456e-03  score=+0.000  0.21526037
+      c=  4  loss=1.136e-03  score=+0.083  sqrt(-0.06267499 / x1)
+      c=  5  loss=8.565e-04  score=+0.282  (x0 * 0.068365596) + 0.3169676
+      c=  6  loss=8.444e-04  score=+0.014  (square(x0) * -0.026813371) - -0.27804583
+      c=  8  loss=8.277e-04  score=+0.010  (-0.43407458 + exp(x0 + -0.6924724)) / x0
+      c= 10  loss=8.277e-04  score=+0.000  (log(exp(exp(x0 + -0.6924724))) + -0.43407458) / x0
+      c= 11  loss=7.668e-04  score=+0.076  square(((square(x0) * -0.15503983) - -0.43646657) * x0) + 0.18999317
+      c= 12  loss=7.077e-04  score=+0.080  square(square(x0 * (-0.85396284 - (square(x0) * -0.30842707)))) + 0.19662592
+
+  strong      n=600  fit_time=4.4s
+    best (sympy): x1**4 + 0.24602501
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.984e-03  score=+0.000  0.2517047
+      c=  5  loss=1.792e-03  score=+0.025  square(square(x1)) + 0.24602501
+      c=  6  loss=1.777e-03  score=+0.009  cube(square(square(x1)) + 0.62556154)
+      c=  7  loss=1.777e-03  score=+0.000  (square(square(x1)) * 1.3724996) + 0.2439123
+      c=  8  loss=1.762e-03  score=+0.008  (square(square(square(x1))) * 38.64785) + 0.24647976
+      c=  9  loss=1.759e-03  score=+0.002  square(square(x1 - (x0 - x1))) + 0.24405763
+      c= 11  loss=1.739e-03  score=+0.006  square(square((0.03067973 - (x0 - x1)) + x1)) + 0.24445972
+      c= 13  loss=1.739e-03  score=+0.000  square(square(x1 + (0.031387743 - (x0 - x1))) + 0.0020726775) + 0.2441958
+
+  gravity     n=600  fit_time=4.6s
+    best (sympy): (0.6853559 - x1)*(x0 + 0.5277822)
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=1.169e-02  score=+0.000  0.31445846
+      c=  4  loss=1.024e-02  score=+0.044  0.33859104 - cube(x1)
+      c=  6  loss=9.342e-03  score=+0.046  0.35473314 - square(x0 + -0.11051895)
+      c=  7  loss=8.782e-03  score=+0.062  (x0 + 0.5277822) * (0.6853559 - x1)
+      c=  9  loss=8.164e-03  score=+0.036  cube((x0 / exp(x0)) - (-0.74095535 + x1))
+      c= 10  loss=7.859e-03  score=+0.038  cube((x0 / (x0 - -0.97217876)) - (x1 + -0.7397089))
+      c= 14  loss=7.662e-03  score=+0.006  cube((x0 / (x0 + ((x0 - x1) - -0.9848392))) - (-0.7409549 + x1))
+      c= 15  loss=7.574e-03  score=+0.012  cube((x0 / (x0 + square((x0 - x1) - -0.9848392))) - (x1 + -0.7409549))
+
+[four_force_pysr] wrote four_force_pysr_results.json  elapsed=64.8s

@@ -1,0 +1,521 @@
+{
+  "config": {
+    "N_ens": 600,
+    "T": 30.0,
+    "dt": 0.02
+  },
+  "seeds": [
+    11,
+    22
+  ],
+  "niter": 40,
+  "max_n": 600,
+  "timeout_s": 90,
+  "results_by_seed": {
+    "seed11": [
+      {
+        "fit_time_s": 17.502305030822754,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.019921405,
+            "score": 0.0,
+            "equation": "0.29622203"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.008313506,
+            "score": 0.21847834014549197,
+            "equation": "sqrt(square(x1 - x0))"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0025971918,
+            "score": 1.1634506368147794,
+            "equation": "square(x0 - x1) + 0.20288408"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0014894664,
+            "score": 0.556012849389516,
+            "equation": "square(square(x0 - x1) - -0.443079)"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.0013611042,
+            "score": 0.04506082646041192,
+            "equation": "square(square(x1 - x0) + 0.5159301) - 0.08178078"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.0013100014,
+            "score": 0.03826807617582619,
+            "equation": "cube(cube(sqrt(sqrt(square(x0 - x1) - -0.47802246))))"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.0012195425,
+            "score": 0.07155241749969699,
+            "equation": "square(cube(sqrt(square(x1 - x0)) - -0.14463502) - -0.43215537)"
+          }
+        ],
+        "best_equation_sympy": "((x0 - x1)**2 - 1*(-0.443079))**2",
+        "force": "em",
+        "seed": 11,
+        "n_used": 600,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      },
+      {
+        "fit_time_s": 6.506052017211914,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0017880277,
+            "score": 0.0,
+            "equation": "0.21159448"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.0012481781,
+            "score": 0.08985705017565966,
+            "equation": "0.30500096 - (x0 * -0.06331295)"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0012386248,
+            "score": 0.007683236171161623,
+            "equation": "(exp(x0) * 0.21657485) + 0.15817009"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0012226629,
+            "score": 0.012970546904106704,
+            "equation": "0.18665874 - (cube(exp(x0)) * x1)"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.0011961735,
+            "score": 0.021903473126547116,
+            "equation": "(-0.06366051 - exp(x0 * 1.7377387)) * x1"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.0011494819,
+            "score": 0.03981639277626984,
+            "equation": "x1 * (-0.11246629 - (exp(cube(x1)) * 0.39457813))"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.0011020749,
+            "score": 0.04211664336744679,
+            "equation": "(-0.63027114 - (-0.52007616 / exp(exp(cube(x1))))) * x1"
+          },
+          {
+            "complexity": 14,
+            "loss": 0.001099814,
+            "score": 0.0005134002888543286,
+            "equation": "(x1 * (-0.49227756 - (-0.5517046 / (exp(exp(cube(x1))) * 1.3220875)))) + 0.061777763"
+          }
+        ],
+        "best_equation_sympy": "0.30500096 - (-0.06331295)*x0",
+        "force": "weak",
+        "seed": 11,
+        "n_used": 600,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      },
+      {
+        "fit_time_s": 4.738957643508911,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0017036081,
+            "score": 0.0,
+            "equation": "0.23827422"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.0013961345,
+            "score": 0.049760266822212705,
+            "equation": "exp(square(x0)) * 0.22746219"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0013705889,
+            "score": 0.01846684491014422,
+            "equation": "square(x0 * 0.58782476) + 0.22231208"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0013658798,
+            "score": 0.0034417383604600383,
+            "equation": "square(square(x0) + 0.089719534) - -0.2170299"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.0013462013,
+            "score": 0.014511988858215755,
+            "equation": "(square(x0 + 0.03274418) * 0.3745169) + 0.22159526"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.0013452492,
+            "score": 0.0007074995729737186,
+            "equation": "cube((square(x0 + 0.027647829) * 0.31174955) + 0.6055337)"
+          },
+          {
+            "complexity": 12,
+            "loss": 0.0013381321,
+            "score": 0.0017681961408903687,
+            "equation": "((x1 * 0.026677037) + square((x0 * x0) + 0.10658737)) + 0.21348979"
+          }
+        ],
+        "best_equation_sympy": "exp(x0**2)*0.22746219",
+        "force": "strong",
+        "seed": 11,
+        "n_used": 600,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      },
+      {
+        "fit_time_s": 4.577662229537964,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0114461025,
+            "score": 0.0,
+            "equation": "0.29858384"
+          },
+          {
+            "complexity": 4,
+            "loss": 0.0100870095,
+            "score": 0.04213362372058537,
+            "equation": "0.3196785 - cube(x0)"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.009630895,
+            "score": 0.04627224765391688,
+            "equation": "square(0.6007314 - square(x0))"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.009262656,
+            "score": 0.03898532763898168,
+            "equation": "0.3355552 - (square(x1) * 0.57152826)"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.009062487,
+            "score": 0.02184724688863606,
+            "equation": "cube(0.6993996 - (square(x1) * 0.5230872))"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.008355484,
+            "score": 0.08122549594388787,
+            "equation": "0.37130654 - sqrt((x1 * x1) * 0.12956469)"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.008355483,
+            "score": 5.984094156355184e-08,
+            "equation": "0.3712889 - sqrt(((x1 / 1.7537702) * 0.22712821) * x1)"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.0082712965,
+            "score": 0.010126701859876531,
+            "equation": "(((0.70979035 - x1) / -0.31006327) * (x0 * x0)) + 0.36383656"
+          },
+          {
+            "complexity": 14,
+            "loss": 0.008205337,
+            "score": 0.002668823998666163,
+            "equation": "cube(((x0 * x0) * ((0.74142975 - (x0 / 0.878594)) / -0.37044573)) + 0.7192514)"
+          },
+          {
+            "complexity": 15,
+            "loss": 0.008196023,
+            "score": 0.001135759595694043,
+            "equation": "cube((((x0 - square(x0 / 0.8138255)) * (x0 * 0.68589884)) / -0.35454696) + 0.71846634)"
+          }
+        ],
+        "best_equation_sympy": "0.37130654 - 0.359950954992482*sqrt(x1**2)",
+        "force": "gravity",
+        "seed": 11,
+        "n_used": 600,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      }
+    ],
+    "seed22": [
+      {
+        "fit_time_s": 4.333086967468262,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.022054225,
+            "score": 0.0,
+            "equation": "0.30768654"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.009856942,
+            "score": 0.20133205374814758,
+            "equation": "sqrt(square(x0 - x1))"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0027086968,
+            "score": 1.2917083449025546,
+            "equation": "square(x1 - x0) + 0.21214871"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0011109338,
+            "score": 0.8912667106966039,
+            "equation": "cube(square(x1 - x0) + 0.5563782)"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.0007246005,
+            "score": 0.21366786670454987,
+            "equation": "cube(square((x1 - x0) / 1.0617619) + 0.5759486)"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.00065780274,
+            "score": 0.09671536935052168,
+            "equation": "square(cube(-0.76126236 - square((x1 - x0) * -0.7220457)))"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.0006480661,
+            "score": 0.014912401823260629,
+            "equation": "square(square(square(square((x1 - x0) / -1.566349) - -0.81535923)))"
+          },
+          {
+            "complexity": 12,
+            "loss": 0.0006070583,
+            "score": 0.06536786474697331,
+            "equation": "square(cube(square((0.0073317117 - (x1 - x0)) * 0.7168907) - -0.7618477))"
+          },
+          {
+            "complexity": 13,
+            "loss": 0.00059972017,
+            "score": 0.01216166948358566,
+            "equation": "square(square(cube(square((x1 - (x0 - -0.006825754)) / 1.8919779) - -0.873265)))"
+          }
+        ],
+        "best_equation_sympy": "(0.887045149939361*(-x0 + x1)**2 + 0.5759486)**3",
+        "force": "em",
+        "seed": 22,
+        "n_used": 600,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      },
+      {
+        "fit_time_s": 7.078246593475342,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0014562997,
+            "score": 0.0,
+            "equation": "0.21526037"
+          },
+          {
+            "complexity": 4,
+            "loss": 0.0011360404,
+            "score": 0.08278329448599547,
+            "equation": "sqrt(-0.06267499 / x1)"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.00085649895,
+            "score": 0.2824510701850326,
+            "equation": "(x0 * 0.068365596) + 0.3169676"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0008443593,
+            "score": 0.014274976936728965,
+            "equation": "(square(x0) * -0.026813371) - -0.27804583"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.0008277068,
+            "score": 0.009959564756310773,
+            "equation": "(-0.43407458 + exp(x0 + -0.6924724)) / x0"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.00082770665,
+            "score": 9.061180460996323e-08,
+            "equation": "(log(exp(exp(x0 + -0.6924724))) + -0.43407458) / x0"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.0007668494,
+            "score": 0.07636837149613597,
+            "equation": "square(((square(x0) * -0.15503983) - -0.43646657) * x0) + 0.18999317"
+          },
+          {
+            "complexity": 12,
+            "loss": 0.00070767244,
+            "score": 0.08030910140641612,
+            "equation": "square(square(x0 * (-0.85396284 - (square(x0) * -0.30842707)))) + 0.19662592"
+          }
+        ],
+        "best_equation_sympy": "x0*0.068365596 + 0.3169676",
+        "force": "weak",
+        "seed": 22,
+        "n_used": 600,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      },
+      {
+        "fit_time_s": 4.420059680938721,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0019843623,
+            "score": 0.0,
+            "equation": "0.2517047"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.0017923595,
+            "score": 0.02544117370167005,
+            "equation": "square(square(x1)) + 0.24602501"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0017770958,
+            "score": 0.008552449466294942,
+            "equation": "cube(square(square(x1)) + 0.62556154)"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.0017770878,
+            "score": 4.501737051596061e-06,
+            "equation": "(square(square(x1)) * 1.3724996) + 0.2439123"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.0017620969,
+            "score": 0.008471436741926153,
+            "equation": "(square(square(square(x1))) * 38.64785) + 0.24647976"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.0017593728,
+            "score": 0.0015471384253997948,
+            "equation": "square(square(x1 - (x0 - x1))) + 0.24405763"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.0017394851,
+            "score": 0.005684116003852801,
+            "equation": "square(square((0.03067973 - (x0 - x1)) + x1)) + 0.24445972"
+          },
+          {
+            "complexity": 13,
+            "loss": 0.0017393158,
+            "score": 4.86661941859435e-05,
+            "equation": "square(square(x1 + (0.031387743 - (x0 - x1))) + 0.0020726775) + 0.2441958"
+          },
+          {
+            "complexity": 15,
+            "loss": 0.0017372732,
+            "score": 0.0005875299711957186,
+            "equation": "square(square((x1 + 0.032997403) - (x0 - x1)) + square(cube(x1))) + 0.24413602"
+          }
+        ],
+        "best_equation_sympy": "x1**4 + 0.24602501",
+        "force": "strong",
+        "seed": 22,
+        "n_used": 600,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      },
+      {
+        "fit_time_s": 4.6008734703063965,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.011686428,
+            "score": 0.0,
+            "equation": "0.31445846"
+          },
+          {
+            "complexity": 4,
+            "loss": 0.010238314,
+            "score": 0.04409707028837966,
+            "equation": "0.33859104 - cube(x1)"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.009341964,
+            "score": 0.04581022455493787,
+            "equation": "0.35473314 - square(x0 + -0.11051895)"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.008782198,
+            "score": 0.06178979050552063,
+            "equation": "(x0 + 0.5277822) * (0.6853559 - x1)"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.00816431,
+            "score": 0.03647725109658491,
+            "equation": "cube((x0 / exp(x0)) - (-0.74095535 + x1))"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.007859203,
+            "score": 0.038087014000508415,
+            "equation": "cube((x0 / (x0 - -0.97217876)) - (x1 + -0.7397089))"
+          },
+          {
+            "complexity": 14,
+            "loss": 0.007662147,
+            "score": 0.006348242530774884,
+            "equation": "cube((x0 / (x0 + ((x0 - x1) - -0.9848392))) - (-0.7409549 + x1))"
+          },
+          {
+            "complexity": 15,
+            "loss": 0.007574435,
+            "score": 0.011513470530741475,
+            "equation": "cube((x0 / (x0 + square((x0 - x1) - -0.9848392))) - (x1 + -0.7409549))"
+          }
+        ],
+        "best_equation_sympy": "(0.6853559 - x1)*(x0 + 0.5277822)",
+        "force": "gravity",
+        "seed": 22,
+        "n_used": 600,
+        "feature_names": [
+          "H_a",
+          "H_b"
+        ]
+      }
+    ]
+  },
+  "elapsed_total_s": 64.76156091690063
+}
