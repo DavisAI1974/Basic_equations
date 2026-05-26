@@ -312,6 +312,19 @@ Updated at the end of 2026-05-26 Session 8 to reflect:
   INFO-025), four-force probe shared-substrate / distinct-
   expression (Session 8 INFO-027). Frame strengthening; still
   a frame, not a claim.
+- Post-close EM/SF "quick glance" probe (Greg's directive at
+  Session 8 close): symmetry-swap test of EM vs strong force.
+  Four configs x 3 seeds. Result (INFO-031 located): EM and
+  strong produce DIFFERENT functional families on shared
+  substrate even when channel symmetry is controlled. EM =
+  (H_a - H_b)^2 + const (polynomial in difference); Strong =
+  exp((H_b - H_a) - const) (exponential in difference). Both
+  realize the same substrate algebraic identity -(H_a - H_b)^2
+  ~ 0 (Session 3 attractor direction) but through different
+  functional forms. The dynamical structure (linear-restoring
+  vs confining-cubic) is visible in the form. INFO-028
+  (PySR cross-seed reproducibility tracks dynamical symmetry)
+  directly confirmed by the swap.
 - No new Operating Rule this session. All six Operating Rules
   from Sessions 4-7 (no pre-assigned meaning, probe-not-falsifier,
   speaking posture before/after, Rule D incomplete-not-wrong,

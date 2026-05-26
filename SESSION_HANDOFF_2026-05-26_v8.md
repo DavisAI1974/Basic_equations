@@ -345,13 +345,63 @@ of substrate" frame (Session 6/7) should be stated as "per-
 domain-AND-per-regime expression of substrate." Cross-seed scaling
 is the next extension; this finding is one-seed.
 
+**INFO-031 -- LOCATED FINDING (Session 8 post-close, new)**:
+Symmetry-swap test of EM vs strong force (Greg's "quick glance at
+em/sf" at session close). Four configs x 3 seeds:
+- em_asym_baseline   (omega1=1.0, omega2=1.2)
+- em_sym_swap        (omega1=omega2=1.0)
+- strong_sym_baseline (omega1=omega2=0.5)
+- strong_asym_swap   (omega1=0.5, omega2=0.7)
+
+Substrate level (KBK v_null): em_asym, em_sym, strong_sym all hit
+(-0.41, -0.41, +0.82); strong_asym shifts to (-0.26, -0.59, +0.77).
+Cross-seed cos > 0.998 within each config (substrate stable per
+config; symmetry change moves substrate slightly only for strong).
+
+Expression level (PySR cross-seed):
+- em_asym:    (H_a - H_b)^2 + 0.21    [reproducible 3/3 seeds]
+- em_sym:     (const - channel^2)^2   [channel randomly assigned;
+                                       2/3 chose H_b, 1/3 H_a]
+- strong_sym: channel-power+const     [channel randomly assigned;
+                                       2/3 H_a, 1/3 H_b]
+- strong_asym: exp((H_b - H_a) - 1.4) [reproducible 3/3 seeds]
+
+INFO-028 directly confirmed via swap: symmetric dynamics break
+PySR cross-seed coefficient reproducibility through random channel
+assignment; making dynamics asymmetric RESTORES reproducibility.
+
+SUBSTANTIVE: EM and strong produce DIFFERENT functional families
+on top of SHARED substrate even when channel symmetry is
+controlled. EM = (H_a - H_b)^2 + const (POLYNOMIAL in difference).
+Strong = exp((H_b - H_a) - const) (EXPONENTIAL in difference).
+Both express the same substrate algebraic identity
+-(H_a - H_b)^2 ~ 0 (the Session 3 attractor direction) but realize
+it through different functional forms.
+
+Reading: the dynamical structure is visible in the form of the
+expression. EM's linear-restoring + linear-coupling produces
+polynomial; strong's confining-cubic produces exponential. The
+"same substrate, different expression" pattern is NOT arbitrary --
+the form of the expression carries the linear vs nonlinear
+character of the underlying dynamics.
+
+Implication for the four-force question (Greg's "real test"): EM
+and strong are NOT the same expression even at the toy-caricature
+level, when dynamical structure is exposed. This is consistent
+with the substrate-vs-expression frame and with the empirical
+fact that electroweak unification is established (EM+weak share
+dynamical structure) while strong sits separately (genuinely
+different structure).
+
 **INFO-023 (Session 6) -- REINFORCED**: now has a third
 independent supporting data point from the four-force probe
-(INFO-027). The per-domain expression-of-substrate frame is
-supported by three reproducible per-domain signatures: per-domain
-null direction (Session 6), per-domain MI-vs-H functional family
-(Session 7), and four-force probe shared substrate / distinct
-expression (Session 8).
+(INFO-027), and a fourth from INFO-031 (EM/SF glance). The
+per-domain expression-of-substrate frame is supported by FOUR
+reproducible per-domain signatures: per-domain null direction
+(Session 6), per-domain MI-vs-H functional family (Session 7),
+four-force probe shared substrate / distinct expression (Session
+8), and EM-vs-SF dynamically distinct expression on shared
+substrate when symmetry is controlled (Session 8 post-close).
 
 ## Substantive notes carried forward
 
