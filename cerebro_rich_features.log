@@ -1,0 +1,59 @@
+Subjects: 44
+Joined: 44 subjects, 41 features
+
+==============================================================================
+Stratification: strat1  (rich features)
+==============================================================================
+Cells: {'DM_hypertension': np.int64(8), 'DM_only': np.int64(13), 'DM_orthostatic': np.int64(4), 'control': np.int64(19)}  (n_total=44)
+Chance=0.250  Majority=0.432
+
+  LogReg    ERR: The 'liblinear' solver does not support multiclass classification (n_classes >= 3). Either use another solver or wrap the estimator in a OneVsRestClassifier to keep applying a one-versus-rest scheme.
+  RF(50)    LOO acc=0.409  balanced=0.317
+    Per-class sensitivity:
+      DM_hypertension          n=  8    0/8    sens=0.000
+      DM_only                  n= 13    5/13   sens=0.385
+      DM_orthostatic           n=  4    1/4    sens=0.250
+      control                  n= 19   12/19   sens=0.632
+
+==============================================================================
+Stratification: strat2  (rich features)
+==============================================================================
+Cells: {'mild_impair': np.int64(10), 'normal_cre': np.int64(26)}  (n_total=36)
+Chance=0.500  Majority=0.722
+
+  LogReg    LOO acc=0.472  balanced=0.388
+    Per-class sensitivity:
+      mild_impair              n= 10    2/10   sens=0.200
+      normal_cre               n= 26   15/26   sens=0.577
+  RF(50)    LOO acc=0.639  balanced=0.442
+    Per-class sensitivity:
+      mild_impair              n= 10    0/10   sens=0.000
+      normal_cre               n= 26   23/26   sens=0.885
+
+==============================================================================
+Stratification: strat3  (rich features)
+==============================================================================
+Cells: {'DM_nephropathy_proxy': np.int64(2), 'DM_neuropathy': np.int64(4), 'DM_retinopathy': np.int64(8), 'DM_uncomplicated': np.int64(11), 'control': np.int64(19)}  (n_total=44)
+Chance=0.200  Majority=0.432
+
+  LogReg    ERR: The 'liblinear' solver does not support multiclass classification (n_classes >= 3). Either use another solver or wrap the estimator in a OneVsRestClassifier to keep applying a one-versus-rest scheme.
+  RF(50)    LOO acc=0.409  balanced=0.212
+    Per-class sensitivity:
+      DM_nephropathy_proxy     n=  2    0/2    sens=0.000
+      DM_neuropathy            n=  4    0/4    sens=0.000
+      DM_retinopathy           n=  8    0/8    sens=0.000
+      DM_uncomplicated         n= 11    3/11   sens=0.273
+      control                  n= 19   15/19   sens=0.789
+
+==============================================================================
+Binary any-disease vs control (rich features)
+==============================================================================
+Cells: {'any_disease': np.int64(25), 'control': np.int64(19)}
+  LogReg    LOO acc=0.705  balanced=0.702
+    any_disease          sens=0.720  (18/25)
+    control              sens=0.684  (13/19)
+  RF(50)    LOO acc=0.705  balanced=0.689
+    any_disease          sens=0.800  (20/25)
+    control              sens=0.579  (11/19)
+
+Saved cerebro_rich_features.csv

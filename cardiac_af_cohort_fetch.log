@@ -1,0 +1,5 @@
+afdb: 25 records  nsrdb: 18 records
+Total targets: 43
+
+  [ 1/43] AF  00735        1.2s  FAIL ValueError: sampto must be greater than sampfrom  
+  [ 2/43] AF  03665        1.4s  FAIL ValueError: sampto must be greater than sampfrom  

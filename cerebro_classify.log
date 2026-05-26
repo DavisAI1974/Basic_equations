@@ -1,0 +1,112 @@
+Using 25 features per subject
+
+================================================================================
+Stratification: strat1
+================================================================================
+Cells (n>=2): {'DM_hypertension': np.int64(8), 'DM_only': np.int64(13), 'DM_orthostatic': np.int64(4), 'control': np.int64(19)}
+Total subjects: 44
+Classes: ['DM_hypertension', 'DM_only', 'DM_orthostatic', 'control']
+Random chance: 0.250  Majority class: 0.432
+
+  LogReg(L2)  LOO acc=0.273  balanced=0.194  (chance=0.250, majority=0.432)
+  Confusion matrix (rows=true, cols=pred):
+                        DM_hypertensio         DM_only  DM_orthostatic         control
+         DM_hypertension               1               4               1               2
+                 DM_only               5               3               1               4
+          DM_orthostatic               3               1               0               0
+                 control               4               6               1               8
+  Per-class accuracy (sensitivity = recall):
+    DM_hypertension          n=  8  correct=  1  sensitivity=0.125
+    DM_only                  n= 13  correct=  3  sensitivity=0.231
+    DM_orthostatic           n=  4  correct=  0  sensitivity=0.000
+    control                  n= 19  correct=  8  sensitivity=0.421
+
+  RandomForest(100)  LOO acc=0.273  balanced=0.194  (chance=0.250, majority=0.432)
+  Confusion matrix (rows=true, cols=pred):
+                        DM_hypertensio         DM_only  DM_orthostatic         control
+         DM_hypertension               2               2               0               4
+                 DM_only               3               0               0              10
+          DM_orthostatic               1               1               0               2
+                 control               2               6               1              10
+  Per-class accuracy (sensitivity = recall):
+    DM_hypertension          n=  8  correct=  2  sensitivity=0.250
+    DM_only                  n= 13  correct=  0  sensitivity=0.000
+    DM_orthostatic           n=  4  correct=  0  sensitivity=0.000
+    control                  n= 19  correct= 10  sensitivity=0.526
+
+================================================================================
+Stratification: strat2
+================================================================================
+Cells (n>=2): {'mild_impair': np.int64(10), 'normal_cre': np.int64(26)}
+Total subjects: 36
+Classes: ['mild_impair', 'normal_cre']
+Random chance: 0.500  Majority class: 0.722
+
+  LogReg(L2)  LOO acc=0.556  balanced=0.508  (chance=0.500, majority=0.722)
+  Confusion matrix (rows=true, cols=pred):
+                           mild_impair      normal_cre
+             mild_impair               4               6
+              normal_cre              10              16
+  Per-class accuracy (sensitivity = recall):
+    mild_impair              n= 10  correct=  4  sensitivity=0.400
+    normal_cre               n= 26  correct= 16  sensitivity=0.615
+
+  RandomForest(100)  LOO acc=0.667  balanced=0.462  (chance=0.500, majority=0.722)
+  Confusion matrix (rows=true, cols=pred):
+                           mild_impair      normal_cre
+             mild_impair               0              10
+              normal_cre               2              24
+  Per-class accuracy (sensitivity = recall):
+    mild_impair              n= 10  correct=  0  sensitivity=0.000
+    normal_cre               n= 26  correct= 24  sensitivity=0.923
+
+================================================================================
+Stratification: strat3
+================================================================================
+Cells (n>=2): {'DM_nephropathy_proxy': np.int64(2), 'DM_neuropathy': np.int64(4), 'DM_retinopathy': np.int64(8), 'DM_uncomplicated': np.int64(11), 'control': np.int64(19)}
+Total subjects: 44
+Classes: ['DM_nephropathy_proxy', 'DM_neuropathy', 'DM_retinopathy', 'DM_uncomplicated', 'control']
+Random chance: 0.200  Majority class: 0.432
+
+  LogReg(L2)  LOO acc=0.273  balanced=0.185  (chance=0.200, majority=0.432)
+  Confusion matrix (rows=true, cols=pred):
+                        DM_nephropathy   DM_neuropathy  DM_retinopathy  DM_uncomplicat         control
+    DM_nephropathy_proxy               0               1               0               1               0
+           DM_neuropathy               2               0               1               0               1
+          DM_retinopathy               0               3               3               1               1
+        DM_uncomplicated               0               4               2               2               3
+                 control               2               1               5               4               7
+  Per-class accuracy (sensitivity = recall):
+    DM_nephropathy_proxy     n=  2  correct=  0  sensitivity=0.000
+    DM_neuropathy            n=  4  correct=  0  sensitivity=0.000
+    DM_retinopathy           n=  8  correct=  3  sensitivity=0.375
+    DM_uncomplicated         n= 11  correct=  2  sensitivity=0.182
+    control                  n= 19  correct=  7  sensitivity=0.368
+
+  RandomForest(100)  LOO acc=0.364  balanced=0.198  (chance=0.200, majority=0.432)
+  Confusion matrix (rows=true, cols=pred):
+                        DM_nephropathy   DM_neuropathy  DM_retinopathy  DM_uncomplicat         control
+    DM_nephropathy_proxy               0               0               0               1               1
+           DM_neuropathy               0               0               0               1               3
+          DM_retinopathy               0               1               1               2               4
+        DM_uncomplicated               0               0               1               2               8
+                 control               0               0               3               3              13
+  Per-class accuracy (sensitivity = recall):
+    DM_nephropathy_proxy     n=  2  correct=  0  sensitivity=0.000
+    DM_neuropathy            n=  4  correct=  0  sensitivity=0.000
+    DM_retinopathy           n=  8  correct=  1  sensitivity=0.125
+    DM_uncomplicated         n= 11  correct=  2  sensitivity=0.182
+    control                  n= 19  correct= 13  sensitivity=0.684
+
+================================================================================
+Binary: any-disease vs control (largest cells)
+================================================================================
+Cells: {'any_disease': np.int64(25), 'control': np.int64(19)}
+
+  LogReg LOO acc=0.614  balanced=0.597  (chance=0.500)
+  Confusion matrix:
+                       any_disease         control
+         any_disease              18               7
+             control              10               9
+    any_disease          sensitivity=0.720  (n=25)
+    control              sensitivity=0.474  (n=19)
