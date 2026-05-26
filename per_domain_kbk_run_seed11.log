@@ -1,0 +1,109 @@
+[per_domain_kbk] mode=full cfg={'N_ens': 600, 'T': 30.0, 'dt': 0.02} seed=11
+
+  domain=physics_duffing  elapsed=1.4s  (sim=0.3s op=0.8s)  n_points=1200
+    op_means = ['-0.127', '-0.104', '+0.056', '+0.058', '+0.049', '+0.292']
+    SV deg2 = ['1.014e+01', '3.462e+00', '2.697e+00', '2.034e+00', '1.091e+00', '1.489e-01']
+    eigvals = ['8.576e-02', '9.999e-03', '6.066e-03', '3.449e-03', '9.922e-04', '1.849e-05']
+    KBK signal_rank=5  null_rank=1  gap_ratio=7.33e+00
+    extract_v1 v_null 6D = ['-0.0171', '+0.0110', '-0.4068', '-0.4206', '+0.8079', '+0.0676']
+    [2,3,4] projection = ['-0.4078', '-0.4217', '+0.8099']  cos to (+,+,+) = +0.3227
+    AI Poincare two-NN(z) = 2.599
+    Levina-Bickel dim = 2.404 +/- 0.961
+    local-PCA k=10 mean=2.52 median=3.0 std=0.52
+    local-PCA k=25 mean=2.77 median=3.0 std=0.42
+    local-PCA k=50 mean=2.85 median=3.0 std=0.38
+    local-PCA k=100 mean=2.98 median=3.0 std=0.16
+    KBK symbolic relations (sparse):
+      null[0] sparse: -0.4078*H_a^2 -0.4217*H_b^2 +0.8099*H_a*H_b ~ 0  resid_std=7.294e-03
+      null[1] sparse: +0.1622*H_a +0.7864*H_a^2 -0.5961*H_b^2 ~ 0  resid_std=3.620e-02
+      null[2] sparse: +0.2353*H_a +0.1475*H_b +0.4018*H_a^2 +0.6599*H_b^2 +0.5587*H_a*H_b -0.1180*MI ~ 0  resid_std=5.871e-02
+    SINDy deg-3 nulls (smallest 2):
+      null[0] sv=1.744e-02  resid_std=1.051e-03
+         +0.189*H_a^3 -0.207*H_b^3 -0.668*H_a^2*H_b +0.690*H_a*H_b^2 ~ 0
+      null[1] sv=7.653e-02  resid_std=1.051e-03
+         +0.189*H_a^3 -0.207*H_b^3 -0.668*H_a^2*H_b +0.690*H_a*H_b^2 ~ 0
+
+  domain=biology_lotka  elapsed=1.2s  (sim=0.1s op=0.7s)  n_points=1200
+    op_means = ['+0.115', '+0.096', '+1.506', '+1.247', '+0.587', '+0.691']
+    SV deg2 = ['5.545e+01', '4.224e+01', '3.756e+01', '3.092e+01', '1.486e+01', '5.993e+00']
+    eigvals = ['2.564e+00', '1.488e+00', '1.177e+00', '7.971e-01', '1.841e-01', '2.995e-02']
+    KBK signal_rank=5  null_rank=1  gap_ratio=2.48e+00
+    extract_v1 v_null 6D = ['-0.2681', '+0.0173', '-0.0208', '+0.1134', '-0.0347', '+0.9557']
+    [2,3,4] projection = ['-0.1725', '+0.9420', '-0.2880']  cos to (+,+,+) = +0.0790
+    AI Poincare two-NN(z) = 2.713
+    Levina-Bickel dim = 1.487 +/- 0.339
+    local-PCA k=10 mean=1.51 median=1.0 std=0.57
+    local-PCA k=25 mean=1.33 median=1.0 std=0.59
+    local-PCA k=50 mean=1.54 median=1.0 std=0.68
+    local-PCA k=100 mean=2.23 median=2.0 std=0.61
+    KBK symbolic relations (sparse):
+      null[0] sparse: -0.2701*H_a +0.9628*MI ~ 0  resid_std=2.015e-01
+      null[1] sparse: +0.1538*H_a -0.1758*H_b +0.5211*H_a^2 +0.5976*H_b^2 -0.5629*H_a*H_b ~ 0  resid_std=4.288e-01
+      null[2] sparse: -0.5154*H_a +0.7652*H_b +0.3280*H_b^2 -0.2030*MI ~ 0  resid_std=9.046e-01
+    SINDy deg-3 nulls (smallest 2):
+      null[0] sv=4.854e+00  resid_std=1.401e-01
+         -0.523*H_a +0.427*H_b +0.060*H_a^2 +0.129*H_b^2 -0.131*H_a*H_b +0.575*MI +0.144*H_a^3 -0.170*H_b^3 -0.256*H_a^2*H_b +0.249*H_a*H_b^2 ~ 0
+      null[1] sv=5.636e+00  resid_std=1.637e-01
+         -0.109*H_a -0.544*H_b +0.074*H_b^2 +0.729*MI +0.264*H_b^3 +0.169*H_a^2*H_b -0.240*H_a*H_b^2 ~ 0
+
+  domain=chemistry_brussel  elapsed=1.2s  (sim=0.1s op=0.8s)  n_points=1200
+    op_means = ['+0.040', '+0.876', '+0.066', '+0.786', '+0.061', '+1.112']
+    SV deg2 = ['1.527e+01', '5.181e+00', '3.684e+00', '1.912e+00', '6.707e-01', '1.155e-01']
+    eigvals = ['1.944e-01', '2.239e-02', '1.132e-02', '3.050e-03', '3.752e-04', '1.112e-05']
+    KBK signal_rank=5  null_rank=1  gap_ratio=5.81e+00
+    extract_v1 v_null 6D = ['-0.3350', '+0.7418', '-0.0844', '-0.4287', '+0.3830', '-0.0007']
+    [2,3,4] projection = ['+0.1453', '+0.7379', '-0.6591']  cos to (+,+,+) = -0.1776
+    AI Poincare two-NN(z) = 2.795
+    Levina-Bickel dim = 2.773 +/- 1.187
+    local-PCA k=10 mean=2.73 median=3.0 std=0.48
+    local-PCA k=25 mean=2.83 median=3.0 std=0.38
+    local-PCA k=50 mean=2.79 median=3.0 std=0.41
+    local-PCA k=100 mean=2.81 median=3.0 std=0.39
+    KBK symbolic relations (sparse):
+      null[0] sparse: -0.3362*H_a +0.7444*H_b -0.4302*H_b^2 +0.3843*H_a*H_b ~ 0  resid_std=6.943e-03
+      null[1] sparse: -0.5507*H_a -0.4412*H_b -0.2711*H_a^2 +0.2578*H_b^2 +0.6017*H_a*H_b ~ 0  resid_std=1.988e-02
+      null[2] sparse: -0.1829*H_a +0.8914*H_a^2 +0.1707*H_a*H_b +0.3778*MI ~ 0  resid_std=6.885e-02
+    SINDy deg-3 nulls (smallest 2):
+      null[0] sv=4.756e-03  resid_std=2.532e-04
+         +0.196*H_a -0.504*H_b +0.069*H_a^2 +0.596*H_b^2 -0.461*H_a*H_b -0.233*H_b^3 -0.084*H_a^2*H_b +0.272*H_a*H_b^2 ~ 0
+      null[1] sv=3.263e-02  resid_std=2.532e-04
+         +0.196*H_a -0.504*H_b +0.069*H_a^2 +0.596*H_b^2 -0.461*H_a*H_b -0.233*H_b^3 -0.084*H_a^2*H_b +0.272*H_a*H_b^2 ~ 0
+
+  domain=geology_bk  elapsed=1.2s  (sim=0.1s op=0.7s)  n_points=1200
+    op_means = ['-2.691', '-2.696', '+7.247', '+7.271', '+7.258', '+0.199']
+    SV deg2 = ['1.598e+01', '5.202e+00', '7.192e-01', '4.322e-02', '2.711e-02', '1.219e-02']
+    eigvals = ['2.130e-01', '2.257e-02', '4.314e-04', '1.558e-06', '6.130e-07', '1.239e-07']
+    KBK signal_rank=3  null_rank=3  gap_ratio=1.66e+01
+    extract_v1 v_null 6D = ['-0.6245', '+0.7387', '-0.1925', '+0.0611', '+0.1534', '-0.0004']
+    [2,3,4] projection = ['+0.7590', '-0.2410', '-0.6048']  cos to (+,+,+) = -0.2824
+    AI Poincare two-NN(z) = 2.851
+    Levina-Bickel dim = 3.316 +/- 1.322
+    local-PCA k=10 mean=2.93 median=3.0 std=0.26
+    local-PCA k=25 mean=2.96 median=3.0 std=0.18
+    local-PCA k=50 mean=2.97 median=3.0 std=0.17
+    local-PCA k=100 mean=2.98 median=3.0 std=0.12
+    KBK symbolic relations (sparse):
+      null[0] sparse: -0.6257*H_a +0.7401*H_b -0.1929*H_a^2 +0.1537*H_a*H_b ~ 0  resid_std=1.822e-02
+      null[1] sparse: -0.3062*H_b -0.3945*H_a^2 -0.4331*H_b^2 +0.7504*H_a*H_b ~ 0  resid_std=5.067e-03
+      null[2] sparse: +0.7570*H_a +0.5776*H_b +0.3054*H_a*H_b ~ 0  resid_std=1.479e-02
+    SINDy deg-3 nulls (smallest 2):
+      null[0] sv=2.803e-04  resid_std=8.258e-06
+         -0.584*H_a +0.680*H_b -0.109*H_a^2 +0.365*H_b^2 -0.219*H_a*H_b +0.046*H_b^3 -0.041*H_a^2*H_b ~ 0
+      null[1] sv=2.837e-04  resid_std=8.190e-06
+         -0.344*H_a +0.498*H_b -0.438*H_a^2 -0.125*H_b^2 +0.622*H_a*H_b -0.108*H_a^3 +0.162*H_a^2*H_b -0.046*H_a*H_b^2 ~ 0
+
+  cross-domain cosines (smallest extract_v1 null):
+    6D  cos(physics_duffing__biology_lotka) = +0.0022
+    6D  cos(physics_duffing__chemistry_brussel) = +0.5378
+    6D  cos(physics_duffing__geology_bk) = +0.1953
+    6D  cos(biology_lotka__chemistry_brussel) = +0.0418
+    6D  cos(biology_lotka__geology_bk) = +0.1853
+    6D  cos(chemistry_brussel__geology_bk) = +0.8059
+    234 cos(physics_duffing__biology_lotka) = -0.5601
+    234 cos(physics_duffing__chemistry_brussel) = -0.9042
+    234 cos(physics_duffing__geology_bk) = -0.6977
+    234 cos(biology_lotka__chemistry_brussel) = +0.8598
+    234 cos(biology_lotka__geology_bk) = -0.1838
+    234 cos(chemistry_brussel__geology_bk) = +0.3311
+
+[per_domain_kbk] wrote per_domain_kbk_results_seed11.json elapsed=4.9s
