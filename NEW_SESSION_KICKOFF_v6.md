@@ -9,7 +9,7 @@ It loads context and sets posture before any tool runs.
 Resuming Information Layer work, Session 6.
 
 Branch: claude/linear-drift-nreal-sweep-cjRkM (already on origin).
-Session 5 work is committed at tip [last v5 close commit on origin].
+Session 5 work is committed at tip b6d5fd5 (Session 5 close).
 
 Before doing anything else:
 1. Read CLAUDE.md (project root). It now has Rule D ("incomplete, not
@@ -154,4 +154,4 @@ known facts to fall back on. The Operating Rules paid out in Session
 - The per-domain algebraic coefficients from earlier sessions are
   preserved in SESSION_HANDOFF_2026-05-25.md (the in-repo early-Session-3
   handoff) and referenced in v5.
-- Tip commit reference: fill in after the Session 5 close commit pushes.
+- Tip commit reference: b6d5fd5 (Session 5 close commit, pushed).
