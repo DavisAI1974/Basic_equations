@@ -1,0 +1,53 @@
+[estimator_sweep] mode=canary cfg={'T': 20.0, 'dt': 0.05, 'window_s': 4.0, 'stride_s': 0.5, 'n_real': 15, 'gamma': 0.5, 'sigma': 1.0} seed=11
+  estimator=vasicek_hist  (Vasicek H + 12-bin histogram MI (baseline from kbk_pipeline.py))
+    elapsed=0.4s  n_windows=495
+    SV spectrum = ['1.119e+01', '8.840e+00', '2.097e+00', '1.386e+00', '1.108e+00', '6.990e-01']
+    eigenvalues = ['2.534e-01', '1.582e-01', '8.900e-03', '3.886e-03', '2.486e-03', '9.889e-04']
+    smallest eigenvalue = 9.889e-04
+    KBK signal_rank=2  null_rank=4  gap_ratio=4.22e+00
+    cos extract_v1 [2,3,4] to (+,+,+) = +0.9362
+    AI Poincare two-NN(z) = 2.849  LB MLE = 3.288
+    AI Poincare local-PCA 95% rank per k:
+       k= 25  mean=3.00  median=3.0  std=0.00
+       k= 50  mean=3.00  median=3.0  std=0.00
+       k=100  mean=3.00  median=3.0  std=0.00
+       k=200  mean=3.00  median=3.0  std=0.00
+       k=500  mean=3.00  median=3.0  std=0.00
+    null[0] sparse: +0.3705*H_a +0.7481*H_b -0.3267*H_b^2 -0.4432*H_a*H_b ~ 0  resid_std=3.677e-02
+    null[1] sparse: +0.6639*H_a -0.3757*H_b -0.3223*H_a^2 +0.4267*H_b^2 -0.3445*H_a*H_b +0.1157*MI ~ 0  resid_std=4.981e-02
+    null[2] sparse: +0.3430*H_a -0.5513*H_a^2 -0.3638*H_b^2 +0.6679*H_a*H_b ~ 0  resid_std=6.271e-02
+  estimator=kde_hist  (Gaussian KDE H (Silverman) + 12-bin histogram MI)
+    elapsed=0.8s  n_windows=495
+    SV spectrum = ['1.528e+01', '1.245e+01', '2.158e+00', '1.650e+00', '1.109e+00', '7.268e-01']
+    eigenvalues = ['4.727e-01', '3.139e-01', '9.429e-03', '5.511e-03', '2.488e-03', '1.069e-03']
+    smallest eigenvalue = 1.069e-03
+    KBK signal_rank=2  null_rank=4  gap_ratio=5.77e+00
+    cos extract_v1 [2,3,4] to (+,+,+) = +0.9634
+    AI Poincare two-NN(z) = 3.142  LB MLE = 3.359
+    AI Poincare local-PCA 95% rank per k:
+       k= 25  mean=3.00  median=3.0  std=0.00
+       k= 50  mean=3.00  median=3.0  std=0.00
+       k=100  mean=3.00  median=3.0  std=0.00
+       k=200  mean=3.00  median=3.0  std=0.00
+       k=500  mean=3.00  median=3.0  std=0.00
+    null[0] sparse: +0.4657*H_a +0.7701*H_b -0.2552*H_b^2 -0.3535*H_a*H_b ~ 0  resid_std=5.506e-02
+    null[1] sparse: +0.7454*H_a -0.4597*H_b -0.3380*H_a^2 +0.3102*H_b^2 -0.1501*H_a*H_b ~ 0  resid_std=5.097e-02
+    null[2] sparse: +0.1967*H_a -0.4116*H_a^2 -0.3482*H_b^2 +0.7054*H_a*H_b -0.4160*MI ~ 0  resid_std=7.579e-02
+  estimator=knn_ksg  (k-NN H (Kozachenko-Leonenko k=4) + KSG MI k=4)
+    elapsed=1.7s  n_windows=495
+    SV spectrum = ['1.375e+01', '9.723e+00', '2.612e+00', '1.443e+00', '1.080e+00', '7.620e-01']
+    eigenvalues = ['3.826e-01', '1.914e-01', '1.381e-02', '4.217e-03', '2.363e-03', '1.176e-03']
+    smallest eigenvalue = 1.176e-03
+    KBK signal_rank=2  null_rank=4  gap_ratio=3.72e+00
+    cos extract_v1 [2,3,4] to (+,+,+) = +0.8434
+    AI Poincare two-NN(z) = 2.789  LB MLE = 3.397
+    AI Poincare local-PCA 95% rank per k:
+       k= 25  mean=3.00  median=3.0  std=0.00
+       k= 50  mean=3.00  median=3.0  std=0.00
+       k=100  mean=3.00  median=3.0  std=0.00
+       k=200  mean=3.00  median=3.0  std=0.00
+       k=500  mean=3.00  median=3.0  std=0.00
+    null[0] sparse: +0.2771*H_a +0.8319*H_b -0.3781*H_b^2 -0.2969*H_a*H_b ~ 0  resid_std=3.566e-02
+    null[1] sparse: +0.6834*H_a -0.2347*H_b -0.1800*H_a^2 +0.4091*H_b^2 -0.5273*H_a*H_b ~ 0  resid_std=4.918e-02
+    null[2] sparse: +0.4640*H_a -0.5767*H_a^2 -0.2675*H_b^2 +0.6169*H_a*H_b ~ 0  resid_std=6.876e-02
+[estimator_sweep] wrote kbk_estimator_sweep_canary.json elapsed=2.9s

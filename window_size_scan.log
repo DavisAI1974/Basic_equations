@@ -1,0 +1,35 @@
+[window_size_scan] base_cfg={'T': 100.0, 'window_s': 40.0, 'stride_s': 4.0, 'gamma': 0.5, 'sigma': 1.0, 'mi_bins': 12, 'n_real': 80} seed=11
+  dt=0.200  n_per_window=200  n_windows=1280  elapsed=0.8s
+    bottom-4 eigenvalues = [2.185e-03, 3.982e-04, 1.024e-04, 6.426e-05]
+    KBK signal_rank=2  null_rank=4  gap_ratio=7.99e+00
+    AI Poincare local-PCA k= 50 mean=3.00 median=3.0
+    AI Poincare local-PCA k=200 mean=3.00 median=3.0
+    cos extract_v1 [2,3,4] to (+,+,+) = +0.9427
+  dt=0.100  n_per_window=400  n_windows=1280  elapsed=1.0s
+    bottom-4 eigenvalues = [1.584e-03, 5.359e-04, 1.051e-04, 4.484e-05]
+    KBK signal_rank=2  null_rank=4  gap_ratio=1.00e+01
+    AI Poincare local-PCA k= 50 mean=3.00 median=3.0
+    AI Poincare local-PCA k=200 mean=3.00 median=3.0
+    cos extract_v1 [2,3,4] to (+,+,+) = +0.9803
+  dt=0.050  n_per_window=800  n_windows=1280  elapsed=1.4s
+    bottom-4 eigenvalues = [1.448e-03, 4.521e-04, 9.123e-05, 5.236e-05]
+    KBK signal_rank=2  null_rank=4  gap_ratio=1.02e+01
+    AI Poincare local-PCA k= 50 mean=3.00 median=3.0
+    AI Poincare local-PCA k=200 mean=3.00 median=3.0
+    cos extract_v1 [2,3,4] to (+,+,+) = +0.9815
+  dt=0.025  n_per_window=1600  n_windows=1280  elapsed=2.2s
+    bottom-4 eigenvalues = [1.749e-03, 6.557e-04, 8.642e-05, 5.223e-05]
+    KBK signal_rank=2  null_rank=4  gap_ratio=9.65e+00
+    AI Poincare local-PCA k= 50 mean=3.00 median=3.0
+    AI Poincare local-PCA k=200 mean=3.00 median=3.0
+    cos extract_v1 [2,3,4] to (+,+,+) = +0.9960
+  dt=0.010  n_per_window=4000  n_windows=1280  elapsed=4.6s
+    bottom-4 eigenvalues = [1.427e-03, 4.224e-04, 1.010e-04, 4.803e-05]
+    KBK signal_rank=2  null_rank=4  gap_ratio=1.01e+01
+    AI Poincare local-PCA k= 50 mean=3.00 median=3.0
+    AI Poincare local-PCA k=200 mean=3.00 median=3.0
+    cos extract_v1 [2,3,4] to (+,+,+) = +0.9339
+
+[window_size_scan] log-log slope of smallest eigval vs n_samples_per_window: -0.058
+  log-log slope of 3rd-smallest eigval: 0.035
+[window_size_scan] wrote window_size_scan_results.json elapsed=10.0s
