@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 5)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 7)
 
 ## Identity & Team
 
@@ -81,7 +81,7 @@ The Noether-style move: find what is invariant under reparametrizations that gen
 
 - **SENTINEL V4.1** — DARPA Bio Attribution Challenge top-10 team. Awards June 30, 2026. Three-layer swarm, 554x DARPA requirements. Files at E:\sentinel\ and F:\Factory\knowledge\sentinel\.
 - **NoVell** — cardiac AI for cancer detection from routine ECG. OD on synthetic Vigier 2021 data: 93.3% accuracy, 97.4% sensitivity. Datasets: PTB-XL downloaded, Autonomic Aging identified, MIMIC-IV pending.
-- **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Per-domain extraction differentiates domains; protocol artifact does NOT dominate per-domain. See Sessions 5 and 6 notes plus ledger (INFO-022, 023, 024) for current state.
+- **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Session 7 added GP regression and PySR symbolic regression on per-domain ensemble-H data: four reproducible per-domain MI-vs-H functional families (physics symmetric quadratic in (H_b-H_a), biology 0.5*exp(H_a/2), chemistry linear H_a, geology constant), cross-seed coefficient variation <5%, cross-domain non-overlap. Per-domain differentiation now has two independent reproducible signatures (null direction + functional family). See Sessions 5, 6, 7 notes plus ledger (INFO-022, 023, 024, 025, 026) for current state.
 
 ## Information Layer — Current State (2026-05-25 Session 3)
 
@@ -128,6 +128,10 @@ The Noether-style move: find what is invariant under reparametrizations that gen
 **INFO-023 — LOCATED FINDING (Session 6, new)**: Per-domain ensemble-H + KBK+AI Poincare+SINDy stack produces reproducible domain-specific null directions across 4 simulated domains (physics Duffing, biology Lotka-Volterra, chemistry Brusselator, geology Burridge-Knopoff). Cross-seed cos +0.985 to +0.999 within domain; cross-domain cos mostly < 0.5. The (+1,+1,+2)/sqrt(6) protocol artifact does NOT dominate per-domain (max cos +0.32, min -0.28 across 4 domains x 2 seeds). Independent reproduction of every v5 per-domain claim: geology rank-3 relation at cos +0.99 to v5 (INFO-008b); biology MI ~ poly(H_a) with H_b coefficient 0.003-0.017 (INFO-008c); chemistry-specific cubic content via SINDy deg-3 that is not a Taylor remnant (INFO-008a). Methodology is the stack of KBK 2024 + AI Poincare 2021 + SINDy with extended library, none of which had been combined for windowed/ensemble-H of coupled species before per v5 literature scan ("they never stacked" rule).
 
 **INFO-024 — METHODOLOGICAL (Session 6)**: Eigenvalue floor of operator covariance is min(structural_noise_from_dynamics, estimator_noise_from_procedure). Different procedures have different floors. OU single-trajectory windowed-H pins at ~1e-3 to 5e-5 regardless of sigma, window, dt, or estimator family. Per-domain ensemble-H reaches 2e-7 for geology at N_ens=600; plausibly reaches machine epsilon at larger N_ens via the 1/sqrt(N_ens) noise-reduction scaling. Resolves the v5 machine-epsilon eigenvalue anomaly as procedure-dependent: the rank claim (3 algebraic relations) is robust across procedures; only the eigenvalue magnitude depends on procedure. Practical consequence: state which floor regime you are in before interpreting eigenvalue magnitudes; to drive a floor down, increase ensemble size or use a lower-noise estimator rather than tightening source noise.
+
+**INFO-025 — LOCATED FINDING (Session 7, new)**: Four reproducible per-domain MI-vs-H functional families surfaced by PySR (Brunton/Cao/Liu/Tegmark/Cranmer family symbolic regression) with extended operator set {+, -, *, /, square, cube, exp, log, sqrt} on per-domain ensemble-H data. Cross-seed coefficient reproduction <5% within domain across seeds 11 and 22 (N_ens=600, T=30, dt=0.02): physics Duffing MI = (H_b - H_a)^2 + 0.275-0.280 at complexity 6 (symmetric quadratic in *difference*); biology Lotka-Volterra MI = (0.50 ± 0.02) * exp(H_a / 2) at complexity 5 (exponential in H_a, H_b absent); chemistry Brusselator MI = (0.73 ± 0.02) * H_a + 1.075 ± 0.005 at complexity 5 (linear in H_a); geology Burridge-Knopoff MI = 0.199 constant with loss flat across complexity 1-9 (decoupled). Cross-domain non-overlap; families do not reduce to each other. Polynomial-only methods (v5 SINDy deg-3 library) could not surface these families by construction. v5's biology "polynomial(H_a)" reading is incomplete-not-wrong (Rule D): operator content correct (H_a present, H_b absent); functional family is exponential, not polynomial. Together with INFO-023 (per-domain null direction), this gives two independent reproducible per-domain signatures supporting the "per-domain expression of substrate" frame.
+
+**INFO-026 — METHODOLOGICAL (Session 7, new)**: For regression on time-series ensemble-H data, block-CV (contiguous time blocks) is catastrophically negative across non-stationary domains (physics, biology, geology block-CV ranges -0.5 to -80) due to system passage through qualitatively different dynamical regimes across the trajectory. Chemistry Brusselator is the only stationary domain among the 4 simulators (block-CV positive at +0.4 to +0.8). Random-CV (shuffled k-fold) overestimates true OOS for correlated time series but isolates functional-form fit from the stationarity confound. Use both readings; the gap between them is itself a domain signature for stationarity. Substantive finding within: GP joint(H_a, H_b) on biology reaches random-CV R^2 = 0.97-0.98 vs poly3 joint at 0.81-0.86. The +0.12 gap is real nonlinear cross-coupling beyond polynomial reach. For physics, chemistry, geology, polynomial joint matches GP joint within 0.05.
 
 ### Experiments queued (priority order)
 
@@ -182,19 +186,34 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v6.md`
-(in repo root) first. It contains Session 6's six experiments
-(KBK pipeline, AI Poincare rank check, estimator-family sweep,
-window-size scan, SINDy with extended library, per-domain stack
-on 4 domains, sigma scan) and their joint reading. Headline:
-v5 INFO-022 rank-3 claim independently confirmed by FOUR
-diagnostics; per-domain ensemble-H stack reproduces every v5
-per-domain claim (geology rank-3 cos +0.99, biology MI signature
-with H_b absent, chemistry chemistry-specific cubic, physics
-Taylor identity) with cross-seed cos +0.985 to +0.999; v5
-machine-epsilon eigenvalue magnitude is procedure-dependent
-(estimator-noise vs structural-noise; per-domain ensemble-H
-reaches 1e-7, OU windowed-H pins at ~1e-3).
+For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v7.md`
+(in repo root) first. It contains Session 7's two experiments
+(GP regression with poly1-3 baseline and in-sample / block-CV /
+random-CV evaluation; PySR symbolic regression with extended
+operator set on per-domain ensemble-H data). Headline: four
+reproducible per-domain MI-vs-H functional families (physics =
+(H_b - H_a)^2 + const, biology = 0.5*exp(H_a/2), chemistry =
+linear in H_a, geology = constant) with cross-seed coefficient
+variation <5%, cross-domain non-overlap. v5 biology reading
+incomplete-not-wrong (Rule D): operator content right, functional
+family was wrong. Per-domain differentiation now has TWO
+independent reproducible signatures (null direction from Session 6
+INFO-023 + functional family from Session 7 INFO-025). New ledger
+entries INFO-025 (located) and INFO-026 (methodological).
+
+For Session 6 context, read `SESSION_HANDOFF_2026-05-26_v6.md`.
+It contains Session 6's six experiments (KBK pipeline, AI Poincare
+rank check, estimator-family sweep, window-size scan, SINDy with
+extended library, per-domain stack on 4 domains, sigma scan) and
+their joint reading. Headline: v5 INFO-022 rank-3 claim
+independently confirmed by FOUR diagnostics; per-domain ensemble-H
+stack reproduces every v5 per-domain claim (geology rank-3
+cos +0.99, biology MI signature with H_b absent, chemistry
+chemistry-specific cubic, physics Taylor identity) with cross-
+seed cos +0.985 to +0.999; v5 machine-epsilon eigenvalue
+magnitude is procedure-dependent (estimator-noise vs structural-
+noise; per-domain ensemble-H reaches 1e-7, OU windowed-H pins
+at ~1e-3).
 
 For Session 5 context (three-thread probe results, operator-noise
 bypass, projection-rule sweep, high-seed scrambled, literature
@@ -216,6 +235,65 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 7 update — 2026-05-26)
+
+Updated at the end of 2026-05-26 Session 7 to reflect:
+
+- Two experiments run this session on branch
+  `claude/claude-md-context-update-uCZ8m`. Scripts: gp_mi_vs_h.py,
+  pysr_symbolic_per_domain.py. Order: top-of-queue from v7 kickoff
+  (Greg's direction: "let's do top of que and work down").
+- Methodology stacked per the v5 "they never stacked" rule: GP
+  regression (sklearn RBF + WhiteKernel) with polynomial deg 1-3
+  baseline; PySR 1.5.10 (Brunton/Cao/Liu/Tegmark/Cranmer family
+  symbolic regression, Julia 1.11.9 / SymbolicRegression.jl 1.11.3
+  backend) with extended operator set {+, -, *, /, square, cube,
+  exp, log, sqrt}. Applied to the same per-domain ensemble-H data
+  as Session 6 (Duffing / Lotka-Volterra / Brusselator / Burridge-
+  Knopoff, N_ens=600, T=30, dt=0.02, two seeds).
+- New located finding INFO-025: four reproducible per-domain
+  MI-vs-H functional families (physics symmetric quadratic in
+  (H_b - H_a), biology 0.5*exp(H_a/2), chemistry linear in H_a,
+  geology constant). Cross-seed coefficient variation <5%; cross-
+  domain non-overlap. Functional families do not reduce to each
+  other.
+- New methodological finding INFO-026: block-CV vs random-CV on
+  time-series ensemble-H. Block-CV catastrophic in physics/biology/
+  geology due to non-stationarity; chemistry only stationary domain.
+  Random-CV overestimates true OOS but isolates functional-form fit.
+  Use both; gap is a stationarity signature. Within: GP joint for
+  biology random-CV R^2 = 0.97-0.98 vs poly3 joint at 0.81-0.86 —
+  +0.12 gap is real nonlinear cross-coupling polynomial misses.
+- INFO-008c (biology MI ~ polynomial(H_a)) reinterpreted via Rule D
+  (incomplete-not-wrong): operator content correct, functional
+  family was wrong; correct family is exponential.
+- Per-domain differentiation now has TWO independent reproducible
+  signatures: (i) per-domain null direction in operator space
+  (Session 6 INFO-023), (ii) per-domain MI-vs-H functional family
+  (Session 7 INFO-025). Two supporting data points for the
+  "per-domain expression of substrate" frame; still a frame, not
+  a claim.
+- No new Operating Rule added this session. Two methodological
+  notes carried forward (see v7 handoff "Methodological notes"):
+  block vs random CV reporting on dynamical systems; polynomial
+  libraries are blind to functional family (use extended operator
+  set to distinguish).
+- Substantive discussion at session close (no experiment run;
+  framing only): Greg's storm/waves substrate-to-expression
+  question; Greg's "real test" four-force unification question
+  (gravity, EM, strong, weak — can we come up with one equation,
+  should they be grouped at all). Three-level reading on four
+  forces put on the table (data, interpretation, frame); decision
+  on direction queued for Session 8. See v7 handoff "Substantive
+  discussion this session" for full framing.
+- Branch state: work persisted on
+  `claude/claude-md-context-update-uCZ8m`, pushed. main untouched.
+  No PR.
+- The harness this session was configured for branch
+  `claude/two-more-pastes-ZkenG` (auto-generated from opening
+  message); Greg gave explicit permission to continue on the
+  Session 6 branch for continuity.
 
 ## Note (Session 6 update — 2026-05-26)
 
