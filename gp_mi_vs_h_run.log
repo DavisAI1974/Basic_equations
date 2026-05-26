@@ -87,3 +87,17 @@
     poly3(MI~Ha,Hb): in=+0.859  block=-79.473  rand=+0.857
     GP(MI~Ha,Hb):    in=+0.986  block=-26.504  rand=+0.979
     elapsed: 58.7s
+  chemistry_brussel       n=1200
+    MI stats: mean=+1.119 std=0.191  corr(MI,Ha)=+0.827  corr(MI,Hb)=+0.725  corr(Ha,Hb)=+0.799
+    fmt: in / block-CV / random-CV
+    poly1(MI~Ha):   in=+0.684  block=+0.623  rand=+0.682
+    poly2(MI~Ha):   in=+0.740  block=+0.683  rand=+0.738
+    poly3(MI~Ha):   in=+0.796  block=+0.750  rand=+0.795
+    GP(MI~Ha):     in=+0.820  block=+0.726  rand=+0.806
+    poly1(MI~Hb):   in=+0.526  block=+0.428  rand=+0.525
+    poly2(MI~Hb):   in=+0.551  block=+0.464  rand=+0.549
+    poly3(MI~Hb):   in=+0.601  block=+0.501  rand=+0.598
+    GP(MI~Hb):     in=+0.620  block=+0.489  rand=+0.607
+    poly3(MI~Ha,Hb): in=+0.806  block=+0.726  rand=+0.803
+    GP(MI~Ha,Hb):    in=+0.832  block=+0.740  rand=+0.811
+    elapsed: 52.3s
