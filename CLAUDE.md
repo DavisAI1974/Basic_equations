@@ -32,6 +32,7 @@
 - **Speaking posture around every probe** (NEW — added Session 4, 2026-05-26). Before AND after running each probe: "I think X might happen, but we'll wait on what the data says and where it points us." No verdict in advance. No verdict on first look at output. The interpretive move happens after, with Greg, with the deflationary reading always present.
 - **Incomplete, not wrong** (NEW — added Session 5, 2026-05-26). When a probe finds that a prior reading was a protocol artifact, the prior data points still stand. The reading attached to them is what was incomplete, not the data. Distinguish "this reading was wrong" (rare, requires the data itself to be bad) from "this reading was incomplete" (common, the data is one slice and the slice fit a partial story that further probes refine). Default to "incomplete." Retraction is a strong move and applies to the reading, not the data, unless the data itself fails to reproduce.
 - **They never stacked** (NEW — added Session 5 close, 2026-05-26). Pioneering territory often does not look like the absence of nearby published work. It looks like nearby work where multiple groups each had one piece and never combined them. When a literature scan returns "no exact match but several adjacent lines, each with one component," the contribution we are making may be in the stacking itself. Honor each prior piece, attribute clearly, finish the combination the prior groups did not. This is the operational form of Rule D applied to the broader literature: prior work was incomplete, not wrong, and stacking the incomplete pieces is itself substantive.
+- **Treat literature as conjecture by default** (NEW — added Session 7 close, 2026-05-26). Academic papers and consensus are not assumed correct unless the underlying claim has been independently replicated, by separate groups, with an immense amount of data, multiple times. Until that bar is met, a published claim is a working frame to test, not a foundation to build on. Applies symmetrically to canonical physics (Standard Model at LHC energies meets the bar; GUT-scale coupling extrapolation does not; MSSM unification does not; "gravity is a different category" rests on one formulation with empirically-indistinguishable alternatives and does not meet the bar; "gravity is emergent" candidates are theoretical conjectures with limited direct empirical support), to domain claims in biology/chemistry/geology/medicine literature, to methodological prescriptions (any "best practice" not stress-tested at scale against alternatives), and to our own prior readings (extends Rule D — incomplete-not-wrong now also means a prior reading lacking independent replication is conjecture, not foundation, even if it came from us). Operational corollary: when a claim from the literature appears to block a direction of inquiry, check whether the blocking claim itself meets the immense-replicated-data bar before deferring to it.
 
 ## Result Discipline (NEW — added Session 3)
 
@@ -274,11 +275,20 @@ Updated at the end of 2026-05-26 Session 7 to reflect:
   (Session 7 INFO-025). Two supporting data points for the
   "per-domain expression of substrate" frame; still a frame, not
   a claim.
-- No new Operating Rule added this session. Two methodological
-  notes carried forward (see v7 handoff "Methodological notes"):
-  block vs random CV reporting on dynamical systems; polynomial
-  libraries are blind to functional family (use extended operator
-  set to distinguish).
+- NEW OPERATING RULE added at Session 7 close (after the
+  substantive UT discussion below): "Treat literature as conjecture
+  by default." Academic consensus is not foundation unless the
+  underlying claim has been independently replicated by separate
+  groups with an immense amount of data multiple times. Already
+  folded into the Operating Rules list above. Pairs with Rule D
+  (incomplete-not-wrong) and "They never stacked" — the literature
+  is a working frame to test, not a foundation to build on. Clears
+  the deck for the four-force unification work: only EM+weak meets
+  the bar; the rest is conjecture.
+- Two methodological notes carried forward (see v7 handoff
+  "Methodological notes"): block vs random CV reporting on
+  dynamical systems; polynomial libraries are blind to functional
+  family (use extended operator set to distinguish).
 - Substantive discussion at session close (no experiment run;
   framing only): Greg's storm/waves substrate-to-expression
   question; Greg's "real test" four-force unification question

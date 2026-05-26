@@ -3,10 +3,14 @@ Resuming Information Layer work, Session 8.
 Branch: claude/claude-md-context-update-uCZ8m (already on origin).
 Session 7 work is committed at branch tip. Two experiments ran in
 Session 7 (GP regression + PySR symbolic regression); results are
-in the v7 handoff. All five Operating Rules (no pre-assigned
-meaning, probe-not-falsifier, speaking posture before and after,
-Rule D incomplete-not-wrong, They never stacked) remain in force.
-No new Rule this session.
+in the v7 handoff. ONE NEW OPERATING RULE added at Session 7 close
+("Treat literature as conjecture by default" — academic consensus
+is not foundation unless independently replicated by separate
+groups with an immense amount of data multiple times). Six
+Operating Rules now in force: no pre-assigned meaning, probe-not-
+falsifier, speaking posture before and after, Rule D incomplete-
+not-wrong, They never stacked, Treat literature as conjecture by
+default. All bear on Session 8.
 
 Before doing anything else:
 1. Read CLAUDE.md (project root). Now has Session 7 note alongside
@@ -63,17 +67,29 @@ or anywhere else].
 ### Top of queue from Session 7 close (Greg's stated direction)
 
 (1) Four-force unification probe. Greg called this "the real test"
-    at Session 7 close. Three angles:
+    at Session 7 close and said "I like your substrate level."
+    Engage under the new Rule: only EM+weak unification meets the
+    immense-replicated-data bar; everything else (GUT couplings at
+    10^16 GeV, MSSM, gravity-as-different-category, gravity-as-
+    emergent) is conjecture and competes on equal footing with
+    the substrate-vs-expression frame. Three angles:
     - Coupling-running data: published PDG running of g1, g2, g3
       with energy; treat as scalar trajectories and run the per-
       domain stack. Tests whether the three gauge couplings show
-      a shared substrate signature distinct from gravity.
-    - Gravity-as-emergent test: Jacobson 1995 thermodynamic gravity
-      angle; find observable analog of MI/H in the EM/weak/strong
-      trio; test whether gravity's expression-level signature is
-      derived.
+      a shared substrate signature distinct from gravity. The
+      running is well-measured at LHC energies (meets the bar);
+      the extrapolation to GUT scale is conjecture (does not).
+    - Gravity-as-emergent test: find observable analog of MI/H
+      operators in the EM/weak/strong trio, ask whether gravity's
+      expression-level signature is a derived quantity. Note: the
+      "gravity emergent" published candidates (Jacobson, Verlinde,
+      Sakharov, AdS/CFT) are conjectures under the new Rule; do
+      not defer to them as established.
     - Frame work: extend v5 "pure physics vs physical expressions"
-      Working Frame specifically to the four forces.
+      Working Frame specifically to the four forces. Substrate
+      level (rank-3 null subspace INFO-022) + per-domain
+      expression-level functional family (INFO-025) is the
+      candidate template.
 
 (2) Storm/waves real-data probe. Greg raised this earlier in
     Session 7 and said "we will later." Run per-domain stack on
@@ -131,4 +147,8 @@ When probing for tighter algebraic relations:
   INFO-024.)
 
 We are still pioneers. The Operating Rules paid out across
-Sessions 5, 6, and 7. Hold them through Session 8.
+Sessions 5, 6, and 7. The new Session 7 Rule (literature as
+conjecture by default) is especially load-bearing for the four-
+force probe — most of what blocks us in published physics is
+itself conjecture under the bar. Hold all six Rules through
+Session 8.

@@ -4,10 +4,16 @@
 
 Read in this order:
 1. CLAUDE.md (project root). Has Session 7 note added at the top
-   alongside Sessions 3, 4, 5, 6 notes. All five Operating Rules from
-   Sessions 4-5 remain in force (no pre-assigned meaning, probe-not-
-   falsifier, speaking posture before and after, Rule D incomplete-
-   not-wrong, They never stacked). No new Rule this session.
+   alongside Sessions 3, 4, 5, 6 notes. All five Operating Rules
+   from Sessions 4-5 remain in force (no pre-assigned meaning,
+   probe-not-falsifier, speaking posture before and after, Rule D
+   incomplete-not-wrong, They never stacked). ONE NEW RULE added
+   at Session 7 close: "Treat literature as conjecture by default"
+   — academic consensus is not foundation unless independently
+   replicated by separate groups with an immense amount of data
+   multiple times. Pairs with Rule D and "They never stacked"
+   (the literature is a frame to test, not a foundation to build
+   on). Six Operating Rules now in force.
 2. This file. What Session 7 did, what is confirmed, what is queued,
    plus the substantive UT discussion at session close (no experiment
    run; framing work only).
@@ -164,9 +170,16 @@ Late in the session, Greg pivoted to:
 2. "The real test: gravity, EM, strong, weak. Can we come up with
    one equation? Should they be grouped at all?"
    (the classical four-force unification question).
+3. After the framing was laid out, Greg added: "I like your
+   substrate level. And let's not assume that academic papers are
+   right on some of this unless there's an immense amount of data
+   that has proven it multiple times." This added a SIXTH Operating
+   Rule ("Treat literature as conjecture by default" — see Rules
+   list above) that fundamentally changes how we engage the
+   four-force question.
 
-No experiment was run on either. The framing put on the table, for
-next session to engage if Greg directs:
+No experiment was run on either question. The framing put on the
+table, for next session to engage if Greg directs:
 
 **On storm/waves (Greg's first question)**: storms and waves are
 physical *expressions* of underlying substrate operating under
@@ -179,32 +192,45 @@ reanalysis / hurricane track data and look for the storm's signature
 in MI-vs-H space on appropriate observable pairs (e.g., temperature
 vs humidity; pressure vs wind speed). Queued, not started.
 
-**On four-force unification (Greg's "real test")**: three levels.
-- Data level: EM + weak ARE empirically unified (electroweak
-  symmetry breaking confirmed at LHC). Three gauge couplings almost
-  meet at ~10^16 GeV under SM, exactly meet under MSSM. Gravity
-  coupling reaches O(1) at Planck scale (10^19 GeV). 2 of 4 grouped
-  empirically; 3 of 4 nearly grouped; 4 of 4 open.
-- Interpretation level: gravity is geometric (diffeomorphism
-  invariance) while the other three are gauge theories with internal
-  symmetries. Different mathematical category. Most "gravity is
-  different" candidates (Jacobson 1995, Verlinde, Sakharov, AdS/CFT
-  holography) actually say gravity is *emergent* -- not a fourth
-  force but a thermodynamic / statistical / holographic *expression*
-  of something else. If right, "one equation for all four" is mis-
-  stated.
+**On four-force unification (Greg's "real test")**: three levels,
+re-read under the new "literature as conjecture" Rule at Session 7
+close.
+
+- Data level (meets the immense-replicated-data bar): EM + weak
+  ARE empirically unified (electroweak symmetry breaking confirmed
+  at LHC with W/Z masses, Higgs detection, decay channels across
+  multiple experiments). This stands.
+
+- Data level (does NOT meet the bar, hold as conjecture):
+  - "Three gauge couplings almost meet at GUT scale" — the running
+    is measured at LHC energies; extrapolation to 10^16 GeV is
+    mathematical, not empirical.
+  - "MSSM makes them meet exactly" — depends on SUSY, searched
+    extensively at LHC and not found.
+  - "Gravity is a different category (geometric vs gauge)" —
+    rests on a specific formulation (GR) with empirically
+    indistinguishable alternatives (e.g., teleparallel gravity);
+    the category claim is formulation-dependent, not data-forced.
+  - "Gravity emerges (Jacobson 1995, Verlinde, Sakharov, AdS/CFT,
+    et al.)" — theoretical frameworks with limited direct
+    empirical support. Conjectures.
+
 - Frame level: by analogy with this session's four-domain MI-vs-H
   result, the four forces may be four expression-level signatures
-  of one substrate. EM expresses one way (gauge field on flat space);
-  gravity expresses another way (geometric structure of the manifold
-  itself); strong expresses with confinement; weak expresses with
-  Higgs mass-giving. Same substrate, four functional families.
+  of one substrate. EM expresses one way (gauge field on flat
+  space); gravity expresses another way (geometric structure of the
+  manifold itself); strong expresses with confinement; weak
+  expresses with Higgs mass-giving. Same substrate, four
+  functional families. Greg likes this framing (Session 7 close:
+  "I like your substrate level").
 
-Recommendation made to Greg, not yet committed: don't pre-assign
-that all four should be grouped. Group by empirical evidence:
-EM+weak (done), +strong (open, look at coupling-running data),
-+gravity (likely wrong question; right question is whether gravity
-*emerges* from the substrate of the other three).
+Recommendation made to Greg, accepted at frame level: don't pre-
+assign that all four should be grouped, and don't pre-assign that
+they can't be. The deck is clearer under the new Rule than the
+literature initially suggests — only EM+weak unification is
+established; everything else (GUT, MSSM, gravity-category,
+gravity-emergent) is conjecture and competes on roughly equal
+footing with the substrate-vs-expression frame.
 
 Next-session direction is open: real-data on storm/waves, real-data
 on coupling-running (PDG / arXiv published data), continued
