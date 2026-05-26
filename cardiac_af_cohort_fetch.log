@@ -3,3 +3,17 @@ Total targets: 43
 
   [ 1/43] AF  00735        1.2s  FAIL ValueError: sampto must be greater than sampfrom  
   [ 2/43] AF  03665        1.4s  FAIL ValueError: sampto must be greater than sampfrom  
+  [ 3/43] AF  04746      153.6s  OK  HR= 60.6+/- 5.6  HRV= 50.9  MI=1.146  poly2=+0.906
+  [ 4/43] AF  04043      157.4s  OK  HR=104.2+/- 4.7  HRV= 18.6  MI=1.054  poly2=+0.960
+  [ 5/43] AF  04908      163.7s  OK  HR= 98.4+/- 5.6  HRV= 30.3  MI=0.835  poly2=+0.920
+  [ 6/43] AF  04048      165.2s  OK  HR= 71.9+/-10.9  HRV= 34.2  MI=0.879  poly2=+0.877
+  [ 7/43] AF  05091      200.1s  OK  HR= 59.7+/- 3.1  HRV= 49.0  MI=0.869  poly2=+0.929
+  [ 8/43] AF  04126      239.5s  OK  HR=100.7+/-27.8  HRV= 69.3  MI=1.182  poly2=+0.904
+  [ 9/43] AF  04936      294.1s  OK  HR= 73.2+/-14.8  HRV= 89.6  MI=1.143  poly2=+0.895
+  [10/43] AF  06426      146.6s  OK  HR= 90.7+/-10.8  HRV=147.3  MI=1.332  poly2=+0.833
+  [11/43] AF  05261      204.0s  OK  HR= 80.0+/- 8.8  HRV= 87.3  MI=1.205  poly2=+0.833
+  [12/43] AF  06453      203.4s  OK  HR= 66.0+/- 8.5  HRV= 54.5  MI=1.001  poly2=+0.724
+  [13/43] AF  06995      190.0s  OK  HR= 90.4+/- 8.2  HRV=109.0  MI=1.282  poly2=+0.849
+  [14/43] AF  07162      197.6s  OK  HR= 65.1+/- 5.5  HRV=257.5  MI=1.451  poly2=+0.627
+  [15/43] AF  05121      284.8s  OK  HR= 74.4+/- 5.6  HRV= 67.9  MI=1.108  poly2=+0.913
+  [16/43] AF  07879      144.7s  OK  HR= 78.4+/- 7.0  HRV= 35.4  MI=0.940  poly2=+0.833
