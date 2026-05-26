@@ -87,3 +87,17 @@
       c=  7  loss=9.557e-03  score=+0.109  (x0 * (0.73893964 - x0)) + 1.1215769
       c=  8  loss=9.300e-03  score=+0.027  exp((x0 * (0.7131296 - x0)) + 0.10569824)
       c=  9  loss=8.797e-03  score=+0.056  (x0 + 1.1299758) - square(square(x0 + 0.35919645))
+
+  geology_bk              n=600  fit_time=9.2s
+    best (sympy): -0.53488475/x0
+    Pareto front (complexity / loss / score / equation):
+      c=  1  loss=4.775e-04  score=+0.000  0.1991787
+      c=  3  loss=4.666e-04  score=+0.012  -0.53488475 / x0
+      c=  4  loss=4.657e-04  score=+0.002  exp(x0) - -0.13098639
+      c=  5  loss=4.648e-04  score=+0.002  (-0.38959354 / x0) + 0.054121606
+      c=  6  loss=4.647e-04  score=+0.000  0.14564884 - (exp(x0) * -0.7849522)
+      c=  7  loss=4.645e-04  score=+0.000  cube(exp(x0 + 1.3224074)) + 0.18193291
+      c=  8  loss=4.618e-04  score=+0.006  0.11813582 - ((x1 * exp(x0)) * 0.44208482)
+      c=  9  loss=4.610e-04  score=+0.002  0.17263034 - (cube(exp(x0) * x1) * 4.278166)
+
+[pysr_symbolic] wrote pysr_symbolic_per_domain_results.json  elapsed=98.8s
