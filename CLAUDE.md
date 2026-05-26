@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 4)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 5)
 
 ## Identity & Team
 
@@ -30,6 +30,7 @@
 - **No pre-assigned meaning to outcomes** (NEW — added Session 4, 2026-05-26). Don't write "if X then it means Y" decision tables before the data exists. The furthest is "I think this may happen, but I want to see what the data says and where it leads." Data is just output; the meaning comes from looking at it together, not from a pre-built table.
 - **Probe, not falsifier** (NEW — added Session 4, 2026-05-26). A probe is a generator of a different signal. It may not falsify anything; at worst it points in a different direction. Avoid "falsifier" in filenames and in spoken framing. Use "probe", "experiment", or "different signal" instead.
 - **Speaking posture around every probe** (NEW — added Session 4, 2026-05-26). Before AND after running each probe: "I think X might happen, but we'll wait on what the data says and where it points us." No verdict in advance. No verdict on first look at output. The interpretive move happens after, with Greg, with the deflationary reading always present.
+- **Incomplete, not wrong** (NEW — added Session 5, 2026-05-26). When a probe finds that a prior reading was a protocol artifact, the prior data points still stand. The reading attached to them is what was incomplete, not the data. Distinguish "this reading was wrong" (rare, requires the data itself to be bad) from "this reading was incomplete" (common, the data is one slice and the slice fit a partial story that further probes refine). Default to "incomplete." Retraction is a strong move and applies to the reading, not the data, unless the data itself fails to reproduce.
 
 ## Result Discipline (NEW — added Session 3)
 
@@ -174,15 +175,66 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v4.md`
-(in repo root) first. It contains Session 4's raw data — INFO-016 update,
-plus four new isolated findings (INFO-018, 019, 020, 021), all with
-reading open. The Session 3 v3 handoff is at `E:\information_layer\SESSION_HANDOFF_2026-05-25_v3.md`
-(Greg's local) for full Session 3 context. The Session 2 v2 handoff is
-superseded — its "two-family structure" framing is retracted (see INFO-008
-status above).
+For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v5.md`
+(in repo root) first. It contains Session 5's three-thread probe results
+(operator-noise bypass, projection-rule sweep, high-seed scrambled) and
+their joint reading — the (+1,+1,+2)/sqrt(6) direction is a protocol
+artifact of the operator basis having a 3D null subspace under the
+H_a ~ H_b ~ constant regime, not a property of input systems. INFO-014,
+INFO-018, INFO-019 are retracted at interpretation level; data stands
+(Rule D — incomplete not wrong). The per-domain algebraic equations from
+earlier sessions (chemistry quadratic, geology rank-3, biology MI) are
+NOT affected by Session 5 and remain on the table. New structural
+finding: INFO-022 (rank-3 null subspace from first-order algebraic
+relations in the operator basis).
 
-## Note (Session 4 update — 2026-05-26)
+The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
+4 raw data that Session 5 read. The Session 3 v3 handoff is at
+`E:\information_layer\SESSION_HANDOFF_2026-05-25_v3.md` (Greg's local).
+The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
+contains the per-domain algebraic equation coefficients that are
+preserved through Session 5.
+
+## Note (Session 5 update — 2026-05-26)
+
+Updated at the end of 2026-05-26 Session 5 to reflect:
+
+- New Operating Rule D — "incomplete, not wrong" — added by Greg this
+  session and folded into the Operating Rules list above.
+- Three probes run this session (operator-noise bypass, projection
+  sweep, high-seed scrambled). Joint reading: the (+1,+1,+2)/sqrt(6)
+  direction from Sessions 3-4 is a protocol artifact of the operator
+  basis structure, not a property of input systems.
+- Ledger updates: INFO-014, INFO-018, INFO-019 retracted at
+  interpretation level (data stands). INFO-020, INFO-021 contextualized.
+  INFO-022 added (rank-3 null subspace structural finding).
+- The Working Frames (Base-of-Structure, Dipole-couples, Pure physics
+  vs physical expressions, Substrate vs expression, Law extraction via
+  invariance) are unchanged. The Information Layer / Unified Theory
+  inquiry frame is unchanged. The specific extraction tool we built
+  does not differentiate inputs at the level we thought; the question
+  it was built to address is still open.
+- The per-domain algebraic equations from earlier sessions (chemistry
+  quadratic H_a^2 = 0.007 - 0.093*(H_a*H_b) + 1.309*(H_a*H_b)^2,
+  R^2=0.943; geology rank-3 constraint 0.724*(H_a*H_b) - 0.441*H_b^2
+  - 0.290*H_a^2 ~ 0 at std/mean=0.15%; biology MI ~ polynomial(H_a),
+  R^2=0.66) are NOT affected by Session 5 and remain on the table. They
+  came from a different procedure (per-domain algebraic fits) than the
+  extraction tool whose artifact Session 5 mapped. They should be
+  subjected to the same three-thread probe discipline in a future
+  session.
+- Reorientation toward 5-physics-areas substrate hunt (Greg, this
+  session): pick 5 physics areas, find the structural element that
+  appears in all 5, evaluate against the Base-of-Structure heuristic,
+  probe the strongest survivor under the same discipline.
+- Greg's substantive intuition (this session): dipoles are the best
+  coupling mechanism. Tightly-related couples may be part of the
+  substrate. Per-domain coefficients are a strong signal.
+- Branch state: work persisted on
+  `claude/linear-drift-nreal-sweep-cjRkM`, pushed. main untouched.
+  No PR.
+
+## Note (Session 4 update — 2026-05-26, retained for context)
 
 Updated at the end of 2026-05-26 Session 4 to reflect:
 
