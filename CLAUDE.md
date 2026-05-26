@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 7)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 9)
 
 ## Identity & Team
 
@@ -88,6 +88,7 @@ The Noether-style move: find what is invariant under reparametrizations that gen
 
 - **SENTINEL V4.1** — DARPA Bio Attribution Challenge top-10 team. Awards June 30, 2026. Three-layer swarm, 554x DARPA requirements. Files at E:\sentinel\ and F:\Factory\knowledge\sentinel\.
 - **NoVell** — cardiac AI for cancer detection from routine ECG. OD on synthetic Vigier 2021 data: 93.3% accuracy, 97.4% sensitivity. Datasets: PTB-XL downloaded, Autonomic Aging identified, MIMIC-IV pending.
+- **OD Learning Platform (NEW Session 9)** — persistent feature store + classifier + history. Two problems seeded: cerebro_disease_binary (44 cardiovascular subjects, binary disease-vs-control, CV acc 0.61-0.71 with rich features), cardiac_disease_family (10 single records, N=1/class, seeded for cohort growth). Files: od_learning_store.py, od_features.py, od_ingest_patient.py, od_predict_patient.py, OD_LEARNING_README.md. Storage: store/<problem_id>/. Property verified: adding new patients improves accuracy; re-running with same data is deterministic. See SESSION_HANDOFF_2026-05-26_v9.md.
 - **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Session 7 added GP regression and PySR symbolic regression on per-domain ensemble-H data: four reproducible per-domain MI-vs-H functional families (physics symmetric quadratic in (H_b-H_a), biology 0.5*exp(H_a/2), chemistry linear H_a, geology constant), cross-seed coefficient variation <5%, cross-domain non-overlap. Session 8 ran four-force unification probe (toy EM/weak/strong/gravity caricatures) yielding shared-substrate + distinct-expression pattern (INFO-027): all four forces share [2,3,4] null direction at cos > 0.997 on (-1,-1,+2)/sqrt(6) Session 3 attractor while EM matches Session 7 physics family (H_b-H_a)^2+const and weak matches Session 7 chemistry family linear-in-H_a. Robustness check (INFO-029): INFO-025 functional family survives T/N_ens/noise sweep at the family level; coefficients are regime-dependent. Mapping campaign (INFO-030): INFO-025 families are baseline-specific regime signatures — large knob deviations mutate the family qualitatively (biology exp -> linear at high beta; chemistry linear -> ratio at low B). Per-domain differentiation now has three independent reproducible signatures (null direction + functional family + four-force shared-substrate). See Sessions 5, 6, 7, 8 notes plus ledger (INFO-022 through 030) for current state.
 
 ## Information Layer — Current State (2026-05-25 Session 3)
@@ -193,8 +194,18 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v8.md`
-(in repo root) first.
+For active OD platform + real-data probe work, read
+`SESSION_HANDOFF_2026-05-26_v9.md` (in repo root) first. Session 9
+pivoted from the simulator-based information-layer line to the real-
+data disease-detection line: cardiac (10 PhysioNet families) +
+cerebrovascular (cerebral-vasoreg-diabetes, 44 subjects, 3
+stratifications) probes; per-patient classification validation;
+built the OD learning store platform (persistent feature store +
+classifier + history) so detection accuracy can grow with each new
+patient ingested.
+
+For pure information-layer / per-domain stack context, read
+`SESSION_HANDOFF_2026-05-26_v8.md` first.
 
 For Session 7 context (GP regression + PySR symbolic regression on
 per-domain ensemble-H data, four reproducible per-domain MI-vs-H
@@ -246,6 +257,105 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 9 update — 2026-05-26)
+
+Updated at the end of 2026-05-26 Session 9 to reflect:
+
+- Session pivoted from the simulator-based information-layer line
+  (Sessions 3-8) to the **real-data disease-detection line**. Greg's
+  direction at session open: tasks 2 (PDG four-force) and 4
+  (PhysioNet ECG). Task 4 (ECG) ran in full + extensions; task 2
+  deferred to a future session.
+- Four probes executed (then paused per Greg's "no more runs until
+  feedback loop is in" directive):
+  1. ECG canary on Fantasia (5 records, clean)
+  2. ECG disease canary on 6 cardiac families (single records each)
+  3. ECG disease canary expansion on 4 more cardiac families
+  4. Cerebrovascular probe on cerebral-vasoreg-diabetes cohort
+     (44 subjects, 3 stratifications: CV pathology, kidney severity
+     via Cre, DM organ-complication subtype)
+- Per-patient classification validation (Greg's direct question:
+  "did we detect the diseases correctly?"). Honest answer: NO at the
+  multi-class level. Group-level signature effect sizes (d=0.4-0.8)
+  do NOT translate to per-patient detection at this n. Multi-class
+  LOO accuracy at or below majority-class baseline across all 3
+  stratifications. Binary "any-disease vs control" reaches 0.61 LOO
+  acc (0.71 with rich temporal features) - modest above-chance
+  signal.
+- **NEW PLATFORM** (Greg's "vastly important" call): persistent OD
+  learning store. Files: od_learning_store.py (core), od_features.py
+  (raw signal -> feature dict), od_ingest_patient.py (1-patient CLI),
+  od_predict_patient.py (predict without ingest), od_learn_cerebro.py
+  (batch driver). Storage layout per problem:
+  store/<problem_id>/{features.csv, model.pkl, history.jsonl,
+  metadata.json}. Properties verified by demo:
+    Run 1 (n_tr=14):  CV acc 0.429
+    Run 2 (n_tr=33):  CV acc 0.606   delta +0.177
+    Run 3 (n_tr=40):  CV acc 0.575   delta -0.031
+    Run 4 (same):     CV acc 0.575   delta +0.000
+  Property: adding new patients improves accuracy; re-running with
+  same data is exactly deterministic. Limitation: refit-from-scratch
+  each run (no true online learning yet; SGDClassifier swap is the
+  fix when scale grows).
+- Two problems seeded in the store at session close:
+  cerebro_disease_binary (44 real cardiovascular subjects, binary
+  any-disease vs control, trainable today); cardiac_disease_family
+  (10 real single records, N=1/class, seeded for future cohort
+  growth from afdb/nsrdb/chfdb).
+- README at OD_LEARNING_README.md documents the platform for
+  future-Greg / future-claude.
+- **Substrate-vs-expression frame survives generalization** to real
+  biological data and to a new sample type:
+  - Cardiac (HR/HRV from ECG, 10 families): linear direction
+    conserved at cos >= 0.98 for 9/10 families; AF is the outlier
+    at cos 0.85-0.93. SVDB is a SECOND outlier in exp R^2 (0.63
+    vs <0.3 for other cardiac families).
+  - Cerebrovascular (HR/ABP baroreflex, 44 subjects across 4 CV
+    pathology groups): linear direction conserved at cos > 0.99
+    cross-group. Same protocol on a different sample type
+    reproduces the substrate cluster.
+  - Cross-organ disease signature: kidney function (creatinine
+    level) visible in cerebrovascular signal at d=0.51 (mild
+    impairment vs normal). Diseases of one organ leave fingerprints
+    in coupled physiology measured elsewhere.
+- INFO-025 simulator-derived family fits on real biological data:
+  exp(H_a/B) form fits BP-coupled biology (cerebro, R^2 0.37-0.58)
+  better than HRV-coupled biology (cardiac, R^2 0.0-0.49).
+  **Rule D applied**: INFO-025 biology reading from Lotka-Volterra
+  is incomplete-for-protocol, not wrong. Real biology has SOME exp
+  structure, and it's clearer in BP-coupled signals than HR-coupled.
+- Two open substantive questions from this session:
+  - Animal ECG (Greg's hypothesis: animal HR/HRV should be close to
+    human). PhysioNet has essentially no animal ECG. Need external
+    sources (veterinary research, NCBI GEO, etc.). Open.
+  - Cancer subtyping (Greg: "if we can detect cancer, can we tell
+    what type?"). The cross-organ d=0.77 result (DM_nephropathy vs
+    DM_retinopathy distinguishable via cerebrovascular signal) is
+    direct experimental evidence that the per-domain stack
+    distinguishes organ-target-of-systemic-disease via remote
+    coupled-pair signals. Operational implication: cancer subtyping
+    is testable IF cancer-stratified ECG/coupled-pair data is
+    available. NoVell Vigier 2021 only has cancer-yes/no labels.
+- No new Operating Rule this session. All seven Operating Rules
+  from Sessions 4-7 (no pre-assigned meaning, probe-not-falsifier,
+  speaking posture before/after, Rule D incomplete-not-wrong, They
+  never stacked, Treat literature as conjecture by default - all
+  carried, all bear on Session 9 work).
+- Greg called pause on running new data partway through ("let's not
+  run anymore until we can get feedback loop and training in the
+  platform. we'll run data when we do"). Subsequent work was
+  infrastructure-only: classifier validation, OD learning store,
+  feature extractor module, predict/ingest CLIs, README, prior-
+  data ingest.
+- Branch state: work persisted on `claude/two-more-tasks-iZvY4`,
+  pushed (16 commits this session). main untouched. No PR.
+- Greg's GitHub access: this session's harness was scoped to
+  `davisai1974/basic_equations` only. Greg attempted to make
+  davisai1974/novell public so we could push there too; GitHub
+  blocked the visibility change. Decision: keep pushing to
+  basic_equations, Greg will move artifacts to novell2 manually
+  when home.
 
 ## Note (Session 8 update — 2026-05-26)
 
