@@ -1,0 +1,55 @@
+[qs] mu=0.0 seed=11
+  done 0.9s  MI=0.191  |Ha-Hb|=3.210  cos_attr=0.007  poly1_r2=0.563  exp_r2=0.382
+[qs] mu=0.0 seed=22
+  done 0.8s  MI=0.164  |Ha-Hb|=3.172  cos_attr=0.107  poly1_r2=0.256  exp_r2=0.217
+[qs] mu=0.0 seed=33
+  done 0.9s  MI=0.182  |Ha-Hb|=3.146  cos_attr=0.055  poly1_r2=0.495  exp_r2=0.026
+[qs] mu=0.001 seed=11
+  done 0.8s  MI=0.196  |Ha-Hb|=3.062  cos_attr=0.065  poly1_r2=0.597  exp_r2=0.412
+[qs] mu=0.001 seed=22
+  done 0.9s  MI=0.167  |Ha-Hb|=3.021  cos_attr=0.052  poly1_r2=0.269  exp_r2=0.231
+[qs] mu=0.001 seed=33
+  done 0.9s  MI=0.188  |Ha-Hb|=2.994  cos_attr=0.013  poly1_r2=0.515  exp_r2=0.063
+[qs] mu=0.01 seed=11
+  done 0.9s  MI=0.263  |Ha-Hb|=2.167  cos_attr=0.368  poly1_r2=0.524  exp_r2=0.494
+[qs] mu=0.01 seed=22
+  done 0.8s  MI=0.235  |Ha-Hb|=2.125  cos_attr=0.388  poly1_r2=0.114  exp_r2=0.040
+[qs] mu=0.01 seed=33
+  done 0.8s  MI=0.254  |Ha-Hb|=2.103  cos_attr=0.375  poly1_r2=0.215  exp_r2=0.097
+[qs] mu=0.05 seed=11
+  done 0.8s  MI=0.602  |Ha-Hb|=1.556  cos_attr=0.545  poly1_r2=0.363  exp_r2=0.363
+[qs] mu=0.05 seed=22
+  done 0.8s  MI=0.558  |Ha-Hb|=1.541  cos_attr=0.635  poly1_r2=0.677  exp_r2=0.668
+[qs] mu=0.05 seed=33
+  done 0.9s  MI=0.573  |Ha-Hb|=1.529  cos_attr=0.685  poly1_r2=0.678  exp_r2=0.679
+[qs] mu=0.1 seed=11
+  done 0.8s  MI=0.908  |Ha-Hb|=1.050  cos_attr=0.942  poly1_r2=0.741  exp_r2=0.718
+[qs] mu=0.1 seed=22
+  done 0.8s  MI=0.852  |Ha-Hb|=1.044  cos_attr=0.976  poly1_r2=0.767  exp_r2=0.748
+[qs] mu=0.1 seed=33
+  done 0.9s  MI=0.869  |Ha-Hb|=1.039  cos_attr=0.967  poly1_r2=0.837  exp_r2=0.835
+[qs] mu=0.25 seed=11
+  done 0.9s  MI=1.277  |Ha-Hb|=0.360  cos_attr=0.998  poly1_r2=0.673  exp_r2=0.666
+[qs] mu=0.25 seed=22
+  done 0.9s  MI=1.205  |Ha-Hb|=0.357  cos_attr=1.000  poly1_r2=0.696  exp_r2=0.665
+[qs] mu=0.25 seed=33
+  done 0.8s  MI=1.240  |Ha-Hb|=0.356  cos_attr=0.998  poly1_r2=0.822  exp_r2=0.819
+[qs] mu=0.5 seed=11
+  done 0.8s  MI=1.490  |Ha-Hb|=0.002  cos_attr=1.000  poly1_r2=0.498  exp_r2=0.491
+[qs] mu=0.5 seed=22
+  done 0.8s  MI=1.401  |Ha-Hb|=0.001  cos_attr=1.000  poly1_r2=0.490  exp_r2=0.477
+[qs] mu=0.5 seed=33
+  done 0.9s  MI=1.463  |Ha-Hb|=0.000  cos_attr=1.000  poly1_r2=0.799  exp_r2=0.794
+
+=== summary ===
+     mu   MI_mean   <|Ha-Hb|>  cos_attr   cos_std    v6_min   v6_mean
+  0.000     0.179       3.176     0.056     0.041     0.999     1.000
+  0.001     0.184       3.025     0.043     0.022     0.999     0.999
+  0.010     0.250       2.131     0.377     0.008     0.998     0.999
+  0.050     0.578       1.542     0.622     0.058     0.991     0.994
+  0.100     0.876       1.044     0.962     0.014     0.992     0.996
+  0.250     1.241       0.358     0.999     0.001     0.988     0.992
+  0.500     1.451       0.001     1.000     0.000     0.996     0.997
+
+Total: 17.8s
+Wrote quasispecies_probe.json

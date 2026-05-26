@@ -1,0 +1,48 @@
+[asymctrl] base_A=1.0 seed=11
+  done 1.0s  MI=1.182  <Ha-Hb>=+0.003  cos_attr=0.999
+[asymctrl] base_A=1.0 seed=22
+  done 0.9s  MI=1.110  <Ha-Hb>=+0.001  cos_attr=0.999
+[asymctrl] base_A=1.0 seed=33
+  done 1.0s  MI=1.141  <Ha-Hb>=-0.001  cos_attr=0.999
+[asymctrl] base_A=1.1 seed=11
+  done 0.9s  MI=1.179  <Ha-Hb>=+0.006  cos_attr=1.000
+[asymctrl] base_A=1.1 seed=22
+  done 1.0s  MI=1.106  <Ha-Hb>=+0.004  cos_attr=0.996
+[asymctrl] base_A=1.1 seed=33
+  done 1.1s  MI=1.137  <Ha-Hb>=+0.002  cos_attr=1.000
+[asymctrl] base_A=1.25 seed=11
+  done 1.0s  MI=1.160  <Ha-Hb>=+0.011  cos_attr=0.999
+[asymctrl] base_A=1.25 seed=22
+  done 0.9s  MI=1.088  <Ha-Hb>=+0.009  cos_attr=0.985
+[asymctrl] base_A=1.25 seed=33
+  done 1.1s  MI=1.117  <Ha-Hb>=+0.007  cos_attr=0.994
+[asymctrl] base_A=1.5 seed=11
+  done 1.0s  MI=1.080  <Ha-Hb>=+0.034  cos_attr=0.968
+[asymctrl] base_A=1.5 seed=22
+  done 1.0s  MI=1.011  <Ha-Hb>=+0.032  cos_attr=0.892
+[asymctrl] base_A=1.5 seed=33
+  done 1.0s  MI=1.035  <Ha-Hb>=+0.027  cos_attr=0.928
+[asymctrl] base_A=2.0 seed=11
+  done 1.0s  MI=0.534  <Ha-Hb>=+1.151  cos_attr=0.118
+[asymctrl] base_A=2.0 seed=22
+  done 1.0s  MI=0.460  <Ha-Hb>=+1.154  cos_attr=0.028
+[asymctrl] base_A=2.0 seed=33
+  done 1.0s  MI=0.482  <Ha-Hb>=+1.121  cos_attr=0.043
+[asymctrl] base_A=3.0 seed=11
+  done 1.0s  MI=0.178  <Ha-Hb>=+3.629  cos_attr=0.471
+[asymctrl] base_A=3.0 seed=22
+  done 0.9s  MI=0.156  <Ha-Hb>=+3.598  cos_attr=0.401
+[asymctrl] base_A=3.0 seed=33
+  done 1.0s  MI=0.177  <Ha-Hb>=+3.575  cos_attr=0.445
+
+=== summary (asymmetric hypercycle, no selection) ===
+ base_A   MI_mean   <Ha-Hb>  cos_attr   cos_std    v6_min
+   1.00     1.144    +0.001     0.999     0.000     0.952
+   1.10     1.141    +0.004     0.999     0.002     0.944
+   1.25     1.121    +0.009     0.993     0.006     0.917
+   1.50     1.042    +0.031     0.930     0.031     0.935
+   2.00     0.492    +1.142     0.063     0.039     0.991
+   3.00     0.170    +3.601     0.439     0.029     0.996
+
+Total: 17.9s
+Wrote asymmetric_hypercycle_control.json

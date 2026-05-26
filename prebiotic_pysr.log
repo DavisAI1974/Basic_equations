@@ -1,0 +1,56 @@
+  [pysr] hypercycle_k_cat_0.00  seed=11  n=600
+    21.7s  best: (x1 - 1*(-1.2839558))**2 + 0.17836618
+  [pysr] hypercycle_k_cat_0.00  seed=22  n=600
+    4.6s  best: 0.18566015 - 1.1181879*log(x1**2)**24
+  [pysr] hypercycle_k_cat_0.50  seed=11  n=600
+    4.6s  best: exp((x0 + 0.91269654)**9)
+  [pysr] hypercycle_k_cat_0.50  seed=22  n=600
+    4.1s  best: (2.166712*x1 + 3.9914875)**(1/8)
+  [pysr] hypercycle_k_cat_2.00  seed=11  n=600
+    4.5s  best: (x0 + 1.2929221)**3 - 1*(-1.4723991)
+  [pysr] hypercycle_k_cat_2.00  seed=22  n=600
+    4.7s  best: 1.74652646701961*sqrt(-1/x1)
+  [pysr] quasispecies_mu_0.001  seed=11  n=600
+    3.9s  best: -0.80157685/x1
+  [pysr] quasispecies_mu_0.001  seed=22  n=600
+    4.2s  best: x0*(-0.15051904)
+  [pysr] quasispecies_mu_0.050  seed=11  n=600
+    4.3s  best: 0.4184523 - 0.20534027/x0
+  [pysr] quasispecies_mu_0.050  seed=22  n=600
+    4.5s  best: -0.6576679/x0
+  [pysr] quasispecies_mu_0.100  seed=11  n=600
+    4.1s  best: sqrt(x0 + 2.0745196)
+  [pysr] quasispecies_mu_0.100  seed=22  n=600
+    3.9s  best: -1.1074175/x0
+  [pysr] quasispecies_mu_0.500  seed=11  n=600
+    4.4s  best: 1.91256307085544*sqrt(-1/x0)
+  [pysr] quasispecies_mu_0.500  seed=22  n=600
+    4.2s  best: 1.83271787245064*sqrt(-1/x1)
+
+=== summary ===
+HYPERCYCLE:
+  k_cat=0.00
+    seed=11  best: (x1 - 1*(-1.2839558))**2 + 0.17836618
+    seed=22  best: 0.18566015 - 1.1181879*log(x1**2)**24
+  k_cat=0.50
+    seed=11  best: exp((x0 + 0.91269654)**9)
+    seed=22  best: (2.166712*x1 + 3.9914875)**(1/8)
+  k_cat=2.00
+    seed=11  best: (x0 + 1.2929221)**3 - 1*(-1.4723991)
+    seed=22  best: 1.74652646701961*sqrt(-1/x1)
+QUASISPECIES:
+  mu=0.001
+    seed=11  best: -0.80157685/x1
+    seed=22  best: x0*(-0.15051904)
+  mu=0.050
+    seed=11  best: 0.4184523 - 0.20534027/x0
+    seed=22  best: -0.6576679/x0
+  mu=0.100
+    seed=11  best: sqrt(x0 + 2.0745196)
+    seed=22  best: -1.1074175/x0
+  mu=0.500
+    seed=11  best: 1.91256307085544*sqrt(-1/x0)
+    seed=22  best: 1.83271787245064*sqrt(-1/x1)
+
+Total: 99.4s
+Wrote prebiotic_pysr.json
