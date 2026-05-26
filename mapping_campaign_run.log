@@ -1,0 +1,147 @@
+[mapping_campaign] mode=full cfg={'N_ens': 600, 'T': 30.0, 'dt': 0.02} seeds=[11] niter=40 timeout_s=90
+
+--- seed=11 physics_duffing K=0.05 (baseline=0.2) ---
+  elapsed=26.0s  n_pysr=600
+  H_a mean=-0.159 std=0.197  MI mean=+0.193 std=0.037
+  PySR best (sympy): x1*(x0 - 0.12071338)*(x0 - x1) - 1*(-0.18671003)
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.402e-03 score=+0.000 0.19282377
+    c=  5 loss=1.294e-03 score=+0.020 0.20129809 - square(square(x0))
+    c=  6 loss=1.271e-03 score=+0.018 (square(x0) * -0.17362759) + 0.20397733
+    c=  8 loss=1.231e-03 score=+0.016 (square(x0 - -0.09008228) * -0.27577278) + 0.20484461
+    c=  9 loss=1.225e-03 score=+0.005 (x1 * ((x0 - x1) * x0)) - -0.19178051
+    c= 11 loss=1.158e-03 score=+0.028 (x1 * ((x0 - x1) * (x0 + -0.12071338))) - -0.18671003
+
+--- seed=11 physics_duffing K=0.2 (baseline=0.2) ---
+  elapsed=6.0s  n_pysr=600
+  H_a mean=-0.127 std=0.201  MI mean=+0.292 std=0.093
+  PySR best (sympy): (-x0 + x1)**2*(x0 - 1*(-1.996523))**2 + 0.22940238
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=8.658e-03 score=+0.000 0.2924823
+    c=  4 loss=7.850e-03 score=+0.033 exp(x0 - 1.1381413)
+    c=  5 loss=7.398e-03 score=+0.059 (x0 * 0.17690668) - -0.31489903
+    c=  6 loss=6.358e-03 score=+0.152 square(x1 - x0) + 0.27549502
+    c=  7 loss=5.561e-03 score=+0.134 sqrt(square(x1 - x0) + 0.058759417)
+    c=  8 loss=3.410e-03 score=+0.489 cube(cube(square(x1 - x0) + 0.85435843))
+
+--- seed=11 physics_duffing K=0.5 (baseline=0.2) ---
+  elapsed=6.4s  n_pysr=600
+  H_a mean=-0.131 std=0.223  MI mean=+0.270 std=0.090
+  PySR best (sympy): (-x0 + x1)**2*10.742191 - 1*(-0.22347002)
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=8.202e-03 score=+0.000 0.27026963
+    c=  4 loss=7.688e-03 score=+0.022 cube(x0) + 0.2899202
+    c=  5 loss=7.336e-03 score=+0.047 0.2930065 / exp(square(x0))
+    c=  6 loss=7.183e-03 score=+0.021 (square(x0) * -0.4028911) - -0.29719624
+    c=  7 loss=6.501e-03 score=+0.100 sqrt(square(x1 - x0)) + 0.19678473
+    c=  8 loss=5.782e-03 score=+0.117 (square(x1 - x0) * 10.742191) - -0.22347002
+
+--- seed=11 biology_lotka beta=0.3 (baseline=0.5) ---
+  elapsed=8.3s  n_pysr=600
+  H_a mean=-0.238 std=1.642  MI mean=+0.538 std=0.426
+  PySR best (sympy): 0.434924098206356*sqrt(exp(x0))
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.809e-01 score=+0.000 0.53764516
+    c=  4 loss=8.741e-02 score=+0.242 exp(x0 + -1.7166722)
+    c=  5 loss=4.849e-02 score=+0.589 sqrt(exp(x0 + -1.6651675))
+    c=  6 loss=4.824e-02 score=+0.005 exp((x0 * 0.47124693) + -0.7907481)
+    c=  7 loss=4.450e-02 score=+0.081 sqrt(square(0.4851917 - (x0 * -0.30825597)))
+    c=  9 loss=3.891e-02 score=+0.067 exp(exp(x0 * -1.3523632) / -0.5955244) + 0.20700456
+
+--- seed=11 biology_lotka beta=0.5 (baseline=0.5) ---
+  elapsed=5.9s  n_pysr=600
+  H_a mean=+0.115 std=1.222  MI mean=+0.691 std=0.387
+  PySR best (sympy): 0.531095141282439*sqrt(exp(x0))
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.503e-01 score=+0.000 0.691228
+    c=  4 loss=1.076e-01 score=+0.112 exp(x0 + -1.3738214)
+    c=  5 loss=4.305e-02 score=+0.916 sqrt(exp(x0 - 1.2656282))
+    c=  6 loss=4.036e-02 score=+0.064 cube((x0 * 0.12382783) + 0.84381366)
+    c=  7 loss=4.031e-02 score=+0.001 square(square((x0 * 0.09595896) + 0.8784045))
+    c=  8 loss=3.975e-02 score=+0.014 square((x0 * 0.23968853) + 0.55064833) - -0.27133217
+
+--- seed=11 biology_lotka beta=0.8 (baseline=0.5) ---
+  elapsed=6.3s  n_pysr=600
+  H_a mean=+0.069 std=0.794  MI mean=+0.524 std=0.298
+  PySR best (sympy): x0*0.30068082 + 0.5030808
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=8.869e-02 score=+0.000 0.5239274
+    c=  4 loss=6.076e-02 score=+0.126 exp(x0 + -1.2166262)
+    c=  5 loss=3.175e-02 score=+0.649 (x0 * 0.30068082) + 0.5030808
+    c=  6 loss=3.131e-02 score=+0.014 sqrt((x0 * 0.30861032) + 0.3104888)
+    c=  7 loss=3.110e-02 score=+0.007 sqrt(exp(x0 * 0.30501357) + -0.7202391)
+    c=  9 loss=2.920e-02 score=+0.032 ((-0.0016182087 / x1) + 0.30836824) * (x0 - -1.6409549)
+
+--- seed=11 chemistry_brussel B=2.0 (baseline=3.0) ---
+  elapsed=6.1s  n_pysr=600
+  H_a mean=-1.789 std=0.394  MI mean=+0.566 std=0.286
+  PySR best (sympy): -0.80610436/x1
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=8.159e-02 score=+0.000 0.56589127
+    c=  3 loss=5.044e-02 score=+0.240 -0.80610436 / x1
+    c=  4 loss=4.514e-02 score=+0.111 square(-1.2489297 / x0)
+    c=  5 loss=3.965e-02 score=+0.130 (1.2910199 / x1) / x0
+    c=  6 loss=3.703e-02 score=+0.068 log(-5.660798 / (x1 + x0))
+    c=  7 loss=3.576e-02 score=+0.035 -0.603505 * ((x1 + 3.0636652) / x0)
+
+--- seed=11 chemistry_brussel B=3.0 (baseline=3.0) ---
+  elapsed=8.0s  n_pysr=600
+  H_a mean=+0.040 std=0.253  MI mean=+1.112 std=0.212
+  PySR best (sympy): x0*0.7105541 + 1.0841987
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=4.488e-02 score=+0.000 1.1125153
+    c=  2 loss=2.197e-02 score=+0.714 exp(x0)
+    c=  3 loss=1.795e-02 score=+0.202 x0 + 1.0726686
+    c=  4 loss=1.571e-02 score=+0.133 sqrt(x0 + 1.1950766)
+    c=  5 loss=1.259e-02 score=+0.221 (x0 * 0.7105541) + 1.0841987
+    c=  6 loss=1.102e-02 score=+0.133 sqrt((x0 + x1) + 0.34812626)
+
+--- seed=11 chemistry_brussel B=4.0 (baseline=3.0) ---
+  elapsed=7.0s  n_pysr=600
+  H_a mean=-1.858 std=1.912  MI mean=+0.855 std=0.633
+  PySR best (sympy): 7.1231246/(x0*x0 - x1 + 4.3123455)
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=4.007e-01 score=+0.000 0.8543275
+    c=  3 loss=2.386e-01 score=+0.259 x1 + 1.4578867
+    c=  4 loss=2.256e-01 score=+0.056 exp(x0 * 0.23367798)
+    c=  5 loss=1.723e-01 score=+0.269 1.3187224 - (x0 * -0.2500866)
+    c=  6 loss=1.514e-01 score=+0.130 6.195386 / (square(x0) - -3.6757643)
+    c=  7 loss=1.495e-01 score=+0.012 ((x0 + x1) / 4.5893574) + 1.3904337
+
+--- seed=11 geology_bk drift_rate=0.02 (baseline=0.04) ---
+  elapsed=6.4s  n_pysr=600
+  H_a mean=-2.700 std=0.047  MI mean=+0.199 std=0.021
+  PySR best (sympy): 574.020021074268*x0**36/x1**48 + 0.19445397
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=4.312e-04 score=+0.000 0.19900024
+    c=  4 loss=4.308e-04 score=+0.000 exp(x1) + 0.13201818
+    c=  5 loss=4.276e-04 score=+0.008 0.1052235 - (0.25354367 / x1)
+    c=  6 loss=4.276e-04 score=+0.000 (-0.59227127 / cube(x1)) + 0.16899595
+    c=  7 loss=4.262e-04 score=+0.003 square(x0 / cube(x1)) + 0.18026978
+    c=  9 loss=4.259e-04 score=+0.000 0.12305755 - (0.20560573 / (x1 * (x1 / x0)))
+
+--- seed=11 geology_bk drift_rate=0.04 (baseline=0.04) ---
+  elapsed=7.8s  n_pysr=600
+  H_a mean=-2.691 std=0.051  MI mean=+0.199 std=0.021
+  PySR best (sympy): x0**12*exp(6*x1) - 1*(-0.18499707)
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=4.468e-04 score=+0.000 0.19899216
+    c=  5 loss=4.444e-04 score=+0.001 (x1 * 0.027322976) + 0.27264535
+    c=  6 loss=4.443e-04 score=+0.000 (exp(x1) * 0.38802397) - -0.17276165
+    c=  7 loss=4.442e-04 score=+0.000 (square(exp(x1)) * 2.777749) - -0.18625234
+    c=  8 loss=4.437e-04 score=+0.001 ((exp(x1) * x0) * -0.21104947) - -0.16062781
+    c=  9 loss=4.436e-04 score=+0.000 cube(exp(x1) * (x0 / -0.8403756)) - -0.18941021
+
+--- seed=11 geology_bk drift_rate=0.08 (baseline=0.04) ---
+  elapsed=6.5s  n_pysr=600
+  H_a mean=-2.653 std=0.067  MI mean=+0.196 std=0.021
+  PySR best (sympy): x0*0.19586273/x1
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=4.343e-04 score=+0.000 0.19567606
+    c=  4 loss=4.304e-04 score=+0.003 sqrt(-0.10160004 / x1)
+    c=  5 loss=4.216e-04 score=+0.021 (x0 * 0.19586273) / x1
+    c=  7 loss=4.210e-04 score=+0.001 (0.009930148 - (-0.2222193 / x1)) * x0
+    c=  9 loss=4.210e-04 score=+0.000 (x1 * 0.0075633507) - ((x0 / x1) * -0.21595602)
+    c= 10 loss=4.210e-04 score=+0.000 ((exp(x1 + x1) - -0.19085069) / x1) * x0
+
+[mapping_campaign] wrote mapping_campaign_results.json  elapsed=100.7s

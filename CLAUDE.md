@@ -88,7 +88,7 @@ The Noether-style move: find what is invariant under reparametrizations that gen
 
 - **SENTINEL V4.1** — DARPA Bio Attribution Challenge top-10 team. Awards June 30, 2026. Three-layer swarm, 554x DARPA requirements. Files at E:\sentinel\ and F:\Factory\knowledge\sentinel\.
 - **NoVell** — cardiac AI for cancer detection from routine ECG. OD on synthetic Vigier 2021 data: 93.3% accuracy, 97.4% sensitivity. Datasets: PTB-XL downloaded, Autonomic Aging identified, MIMIC-IV pending.
-- **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Session 7 added GP regression and PySR symbolic regression on per-domain ensemble-H data: four reproducible per-domain MI-vs-H functional families (physics symmetric quadratic in (H_b-H_a), biology 0.5*exp(H_a/2), chemistry linear H_a, geology constant), cross-seed coefficient variation <5%, cross-domain non-overlap. Per-domain differentiation now has two independent reproducible signatures (null direction + functional family). See Sessions 5, 6, 7 notes plus ledger (INFO-022, 023, 024, 025, 026) for current state.
+- **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Session 7 added GP regression and PySR symbolic regression on per-domain ensemble-H data: four reproducible per-domain MI-vs-H functional families (physics symmetric quadratic in (H_b-H_a), biology 0.5*exp(H_a/2), chemistry linear H_a, geology constant), cross-seed coefficient variation <5%, cross-domain non-overlap. Session 8 ran four-force unification probe (toy EM/weak/strong/gravity caricatures) yielding shared-substrate + distinct-expression pattern (INFO-027): all four forces share [2,3,4] null direction at cos > 0.997 on (-1,-1,+2)/sqrt(6) Session 3 attractor while EM matches Session 7 physics family (H_b-H_a)^2+const and weak matches Session 7 chemistry family linear-in-H_a. Robustness check (INFO-029): INFO-025 functional family survives T/N_ens/noise sweep at the family level; coefficients are regime-dependent. Mapping campaign (INFO-030): INFO-025 families are baseline-specific regime signatures — large knob deviations mutate the family qualitatively (biology exp -> linear at high beta; chemistry linear -> ratio at low B). Per-domain differentiation now has three independent reproducible signatures (null direction + functional family + four-force shared-substrate). See Sessions 5, 6, 7, 8 notes plus ledger (INFO-022 through 030) for current state.
 
 ## Information Layer — Current State (2026-05-25 Session 3)
 
@@ -193,8 +193,12 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v7.md`
-(in repo root) first. It contains Session 7's two experiments
+For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v8.md`
+(in repo root) first.
+
+For Session 7 context (GP regression + PySR symbolic regression on
+per-domain ensemble-H data, four reproducible per-domain MI-vs-H
+functional families), read `SESSION_HANDOFF_2026-05-26_v7.md`. It contains Session 7's two experiments
 (GP regression with poly1-3 baseline and in-sample / block-CV /
 random-CV evaluation; PySR symbolic regression with extended
 operator set on per-domain ensemble-H data). Headline: four
@@ -242,6 +246,79 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 8 update — 2026-05-26)
+
+Updated at the end of 2026-05-26 Session 8 to reflect:
+
+- Three experiments run this session on branch
+  `claude/two-more-tasks-O6ahb` (Session 7 work pulled in via
+  fast-forward merge from `claude/claude-md-context-update-uCZ8m`
+  at session start, per Greg's "whatever you feel is best").
+  Scripts: four_force_probe.py, four_force_pysr.py,
+  robustness_info025.py, mapping_campaign.py.
+- Greg's directive: order 1, 4, 3, 2 from v8 kickoff menu. Items
+  1 (four-force probe), 4 (robustness on INFO-025), 3 (mapping
+  campaign) completed. Item 2 (storm/waves real-data) deferred
+  to Session 9 pending data download.
+- Four-force unification probe (Greg's "real test" from Session 7
+  close). Toy 2-channel caricatures: EM (long-range bilinear
+  linear), weak (Yukawa-suppressed via massive mediator), strong
+  (confining cubic), gravity (universal energy-density mediated).
+  KBK stack result: all four forces share [2,3,4] null direction
+  at cos > 0.997 cross-force, sitting on (-1,-1,+2)/sqrt(6)
+  Session 3 attractor — the sign-flipped twin of Session 5/6
+  (+1,+1,+2) artifact, corresponding to algebraic identity
+  -(H_a - H_b)^2 ~ 0 (channels strongly correlated). EM
+  differs in 6D (cos ~0.96) carrying nontrivial MI coefficient
+  (+0.27) while others don't. PySR cross-seed result: EM matches
+  Session 7 physics Duffing family (H_b - H_a)^2 + const; weak
+  matches Session 7 chemistry Brusselator family linear-in-H_a;
+  strong and gravity have H_a-H_b channel-symmetric dynamics and
+  PySR breaks symmetry randomly per seed (reproducible at form
+  but not at channel). New ledger INFO-027 (located).
+- Robustness check on INFO-025. T sweep (10, 30, 100), N_ens
+  sweep (200, 600, 1200), observation-noise sweep (0.0, 0.10,
+  0.50). 7 conditions x 2 seeds = 14 PySR fits + matched exp /
+  linear baselines. Headline: A * exp(H_a/B) FUNCTIONAL FAMILY
+  survives all conditions with sufficient signal; COEFFICIENTS A
+  and B drift heavily with regime. Baseline (T=30, N_ens=600, no
+  noise) reproduces INFO-025: cross-seed A=0.53+/-0.05,
+  B=2.15+/-0.23 matching INFO-025's 0.5, 2.0. T=100 halves
+  coefficients; N_ens=1200 gives tightest match (A=0.50 exact);
+  noise=0.10 keeps R^2 high but A drops to 0.18 (broadened H_a).
+  When citing INFO-025 coefficients, specify the regime. New
+  ledger INFO-029 (methodological).
+- Mapping campaign: one knob per Session 6/7 domain (physics K,
+  biology beta, chemistry B, geology drift_rate), 3 values each,
+  1 seed. Finding: INFO-025 functional families ARE baseline-
+  specific regime signatures. Off-baseline values mutate the
+  family qualitatively (biology exp -> linear at high beta;
+  chemistry linear -> ratio at low B; physics quadratic-
+  difference -> single-channel quadratic away from K=0.20).
+  Geology constant family alone is robust across the drift sweep.
+  Refines INFO-029 to "family ITSELF is regime-conditional for
+  large knob deviations, not just coefficients." The per-domain
+  expression-of-substrate frame should be stated as "per-domain-
+  AND-per-regime." New ledger INFO-030 (located, one seed;
+  cross-seed scaling queued).
+- One methodological observation, not a Rule: PySR cross-seed
+  reproducibility depends on H_a-H_b dynamical symmetry. When the
+  dynamics is exactly channel-symmetric, PySR breaks symmetry
+  randomly. New ledger INFO-028 (methodological).
+- Per-domain differentiation now has THREE independent
+  reproducible signatures: per-domain null direction (Session 6
+  INFO-023), per-domain MI-vs-H functional family (Session 7
+  INFO-025), four-force probe shared-substrate / distinct-
+  expression (Session 8 INFO-027). Frame strengthening; still
+  a frame, not a claim.
+- No new Operating Rule this session. All six Operating Rules
+  from Sessions 4-7 (no pre-assigned meaning, probe-not-falsifier,
+  speaking posture before/after, Rule D incomplete-not-wrong,
+  They never stacked, Treat literature as conjecture by default)
+  in force throughout.
+- Branch state: work persisted on `claude/two-more-tasks-O6ahb`,
+  pushed. main untouched. No PR.
 
 ## Note (Session 7 update — 2026-05-26)
 
