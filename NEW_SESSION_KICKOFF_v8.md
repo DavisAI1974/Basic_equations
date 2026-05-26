@@ -6,11 +6,17 @@ Session 7 (GP regression + PySR symbolic regression); results are
 in the v7 handoff. ONE NEW OPERATING RULE added at Session 7 close
 ("Treat literature as conjecture by default" — academic consensus
 is not foundation unless independently replicated by separate
-groups with an immense amount of data multiple times). Six
-Operating Rules now in force: no pre-assigned meaning, probe-not-
-falsifier, speaking posture before and after, Rule D incomplete-
-not-wrong, They never stacked, Treat literature as conjecture by
-default. All bear on Session 8.
+groups with an immense amount of data multiple times). Operational
+corollaries set the same session: investigate freely (not ignore);
+don't cite as support without analyzing the paper ourselves; don't
+defer to blocking claims that themselves fail the bar. Greg's
+sharpening: "we can see if the other ones work but we can't use
+them to support our claim without analyzing their papers. we will
+certainly check it out though." Six Operating Rules now in force:
+no pre-assigned meaning, probe-not-falsifier, speaking posture
+before and after, Rule D incomplete-not-wrong, They never stacked,
+Treat literature as conjecture by default (with corollaries). All
+bear on Session 8.
 
 Before doing anything else:
 1. Read CLAUDE.md (project root). Now has Session 7 note alongside

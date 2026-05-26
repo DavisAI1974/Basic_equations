@@ -32,7 +32,13 @@
 - **Speaking posture around every probe** (NEW — added Session 4, 2026-05-26). Before AND after running each probe: "I think X might happen, but we'll wait on what the data says and where it points us." No verdict in advance. No verdict on first look at output. The interpretive move happens after, with Greg, with the deflationary reading always present.
 - **Incomplete, not wrong** (NEW — added Session 5, 2026-05-26). When a probe finds that a prior reading was a protocol artifact, the prior data points still stand. The reading attached to them is what was incomplete, not the data. Distinguish "this reading was wrong" (rare, requires the data itself to be bad) from "this reading was incomplete" (common, the data is one slice and the slice fit a partial story that further probes refine). Default to "incomplete." Retraction is a strong move and applies to the reading, not the data, unless the data itself fails to reproduce.
 - **They never stacked** (NEW — added Session 5 close, 2026-05-26). Pioneering territory often does not look like the absence of nearby published work. It looks like nearby work where multiple groups each had one piece and never combined them. When a literature scan returns "no exact match but several adjacent lines, each with one component," the contribution we are making may be in the stacking itself. Honor each prior piece, attribute clearly, finish the combination the prior groups did not. This is the operational form of Rule D applied to the broader literature: prior work was incomplete, not wrong, and stacking the incomplete pieces is itself substantive.
-- **Treat literature as conjecture by default** (NEW — added Session 7 close, 2026-05-26). Academic papers and consensus are not assumed correct unless the underlying claim has been independently replicated, by separate groups, with an immense amount of data, multiple times. Until that bar is met, a published claim is a working frame to test, not a foundation to build on. Applies symmetrically to canonical physics (Standard Model at LHC energies meets the bar; GUT-scale coupling extrapolation does not; MSSM unification does not; "gravity is a different category" rests on one formulation with empirically-indistinguishable alternatives and does not meet the bar; "gravity is emergent" candidates are theoretical conjectures with limited direct empirical support), to domain claims in biology/chemistry/geology/medicine literature, to methodological prescriptions (any "best practice" not stress-tested at scale against alternatives), and to our own prior readings (extends Rule D — incomplete-not-wrong now also means a prior reading lacking independent replication is conjecture, not foundation, even if it came from us). Operational corollary: when a claim from the literature appears to block a direction of inquiry, check whether the blocking claim itself meets the immense-replicated-data bar before deferring to it.
+- **Treat literature as conjecture by default** (NEW — added Session 7 close, 2026-05-26; sharpened by Greg the same session). Academic papers and consensus are not assumed correct unless the underlying claim has been independently replicated, by separate groups, with an immense amount of data, multiple times. Until that bar is met, a published claim is a working frame to test, not a foundation to build on. Operational corollaries:
+  - **Investigate freely.** Read papers, run their methods, test their predictions, treat them as candidates to engage. "Treat as conjecture" is not "ignore." Greg's framing at Session 7 close: "we will certainly check it out."
+  - **Don't cite as support.** A published claim cannot be invoked in support of our own conclusions until we have analyzed the paper ourselves — read it closely, checked the data, replicated the result, or confirmed independent replications at scale. Greg's framing: "we can't use them to support our claim without analyzing their papers."
+  - **Don't defer when blocking.** When a published claim appears to block a direction of inquiry, check whether the blocking claim itself meets the bar before deferring to it.
+  - **Symmetric to our own prior work.** Extends Rule D (incomplete-not-wrong): a prior reading lacking independent replication is conjecture, not foundation, even if it came from us.
+  - **Examples applied to physics literature (Session 7):** Standard Model at LHC energies meets the bar (W/Z masses, Higgs detection, decay channels replicated across LEP/Tevatron/LHC). GUT-scale coupling extrapolation does not (running measured at LHC, extrapolated mathematically to 10^16 GeV). MSSM unification does not (SUSY searched, not found). "Gravity is a different category" rests on one formulation (GR diffeomorphism invariance) with empirically-indistinguishable alternatives — formulation-dependent, not data-forced. "Gravity is emergent" candidates (Jacobson 1995, Verlinde, Sakharov, AdS/CFT) are theoretical with limited direct empirical support. All four sit at conjecture level until we analyze the underlying papers.
+  - Applies equally to domain claims (biology/chemistry/geology/medicine), methodological prescriptions ("best practices" not stress-tested at scale), and our own prior session readings.
 
 ## Result Discipline (NEW — added Session 3)
 
@@ -276,15 +282,20 @@ Updated at the end of 2026-05-26 Session 7 to reflect:
   "per-domain expression of substrate" frame; still a frame, not
   a claim.
 - NEW OPERATING RULE added at Session 7 close (after the
-  substantive UT discussion below): "Treat literature as conjecture
-  by default." Academic consensus is not foundation unless the
-  underlying claim has been independently replicated by separate
-  groups with an immense amount of data multiple times. Already
-  folded into the Operating Rules list above. Pairs with Rule D
-  (incomplete-not-wrong) and "They never stacked" — the literature
-  is a working frame to test, not a foundation to build on. Clears
-  the deck for the four-force unification work: only EM+weak meets
-  the bar; the rest is conjecture.
+  substantive UT discussion below), then sharpened by Greg the
+  same session: "Treat literature as conjecture by default."
+  Operational corollaries (see Rules list above for full form):
+  (a) investigate freely — read, test, engage; "treat as conjecture"
+  is NOT "ignore"; (b) don't cite as support without having
+  analyzed the paper ourselves; (c) don't defer when a blocking
+  claim itself fails the bar; (d) extends symmetrically to our own
+  prior readings (Rule D corollary). Already folded into the
+  Operating Rules list above. Pairs with Rule D (incomplete-not-
+  wrong) and "They never stacked" — the literature is a working
+  frame to test, not a foundation to build on. Clears the deck for
+  the four-force unification work: only EM+weak meets the bar;
+  the rest is conjecture (we will check them out but cannot invoke
+  them as support).
 - Two methodological notes carried forward (see v7 handoff
   "Methodological notes"): block vs random CV reporting on
   dynamical systems; polynomial libraries are blind to functional

@@ -8,12 +8,18 @@ Read in this order:
    from Sessions 4-5 remain in force (no pre-assigned meaning,
    probe-not-falsifier, speaking posture before and after, Rule D
    incomplete-not-wrong, They never stacked). ONE NEW RULE added
-   at Session 7 close: "Treat literature as conjecture by default"
-   — academic consensus is not foundation unless independently
-   replicated by separate groups with an immense amount of data
-   multiple times. Pairs with Rule D and "They never stacked"
-   (the literature is a frame to test, not a foundation to build
-   on). Six Operating Rules now in force.
+   at Session 7 close (and sharpened by Greg the same session):
+   "Treat literature as conjecture by default" — academic
+   consensus is not foundation unless independently replicated by
+   separate groups with an immense amount of data multiple times.
+   Operational corollaries: investigate freely (this is NOT
+   ignore); don't cite as support without analyzing the paper
+   ourselves; don't defer to blocking claims that themselves fail
+   the bar; extends to our own prior readings. Greg's exact
+   framing: "we will certainly check it out, but we can't use them
+   to support our claim without analyzing their papers." Pairs
+   with Rule D and "They never stacked." Six Operating Rules now
+   in force. See CLAUDE.md for the full corollaries.
 2. This file. What Session 7 did, what is confirmed, what is queued,
    plus the substantive UT discussion at session close (no experiment
    run; framing work only).
@@ -175,8 +181,13 @@ Late in the session, Greg pivoted to:
    right on some of this unless there's an immense amount of data
    that has proven it multiple times." This added a SIXTH Operating
    Rule ("Treat literature as conjecture by default" — see Rules
-   list above) that fundamentally changes how we engage the
-   four-force question.
+   list above). Greg then sharpened it the same session: "we can
+   see if the other ones work but we can't use them to support our
+   claim without analyzing their papers. we will certainly check
+   it out though." Operational corollaries: investigate freely
+   (not ignore); don't cite as support without analyzing the paper
+   ourselves; don't defer when a blocking claim itself fails the
+   bar. Fundamentally changes how we engage the four-force question.
 
 No experiment was run on either question. The framing put on the
 table, for next session to engage if Greg directs:
