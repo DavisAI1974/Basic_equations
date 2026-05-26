@@ -110,17 +110,33 @@ def ingest_cardiac_disease_family():
 # ----------------- Problem 2: simulator 4-domain ------------------------------
 
 def build_simulator_payload(r, seed, source):
-    """Convert per_domain_kbk result entry to flat feature dict."""
+    """Convert per_domain_kbk result entry to flat feature dict.
+
+    Some fields are dicts in the v8 outputs; flatten by extracting key
+    scalars. Local PCA has multiple k-windows; use k=50 as the headline.
+    """
+    rgap = r["kbk_rank_gap"]
+    lb = r["ai_poincare_levina_bickel"]
+    lpca = r["ai_poincare_local_pca"]
     payload = {
         "subj": f"{source}_{seed}_{r['name']}",
         "label": r["name"],
         "n_points": int(r["n_points"]),
-        "kbk_rank_gap": float(r["kbk_rank_gap"]),
+        "kbk_largest_gap_ratio": float(rgap["largest_gap_ratio"]),
+        "kbk_largest_gap_index": int(rgap["largest_gap_index"]),
+        "kbk_k_signal": int(rgap["k_signal_kbk"]),
+        "kbk_rank_null": int(rgap["rank_null_subspace_kbk"]),
         "cos_to_artifact": float(r["cos_to_artifact_+1+1+2"]),
         "ai_two_nn_z": float(r["ai_poincare_two_nn_z"]),
-        "ai_levina_bickel": float(r["ai_poincare_levina_bickel"]),
-        "ai_local_pca": float(r["ai_poincare_local_pca"]),
+        "ai_lb_dim": float(lb["dim"]),
+        "ai_lb_std": float(lb["std"]),
+        "ai_lpca_k50_mean": float(lpca["50"]["mean"]),
+        "ai_lpca_k50_std": float(lpca["50"]["std"]),
+        "ai_lpca_k100_mean": float(lpca["100"]["mean"]),
     }
+    # Singular values from kbk_rank_gap (6 values typically)
+    for i, v in enumerate(rgap.get("singular_values", [])[:6]):
+        payload[f"sv_{i}"] = float(v)
     # operator_means (6) and operator_stds (6)
     for i, v in enumerate(r["operator_means"]):
         payload[f"op_mean_{i}"] = float(v)
@@ -159,10 +175,12 @@ def ingest_simulator_4domain():
     print(df["label"].value_counts().to_string())
 
     feature_cols = [c for c in df.columns if c not in ("subj", "label")]
+    # test_frac=0: only 2 samples per class - need them all for training;
+    # CV on the train pool carries the evaluation
     init_problem("simulator_4domain",
                  feature_cols=feature_cols, label_col="label",
-                 subject_id_col="subj", test_frac=0.25,
-                 random_state=0, classifier="rf")
+                 subject_id_col="subj", test_frac=0.0,
+                 random_state=0, classifier="knn1")
 
     n_added = ingest("simulator_4domain", df)
     entry = fit_and_evaluate("simulator_4domain",
@@ -193,8 +211,8 @@ def ingest_four_force_caricature():
     feature_cols = [c for c in df.columns if c not in ("subj", "label")]
     init_problem("four_force_caricature",
                  feature_cols=feature_cols, label_col="label",
-                 subject_id_col="subj", test_frac=0.25,
-                 random_state=0, classifier="rf")
+                 subject_id_col="subj", test_frac=0.0,
+                 random_state=0, classifier="knn1")
 
     n_added = ingest("four_force_caricature", df)
     entry = fit_and_evaluate("four_force_caricature",

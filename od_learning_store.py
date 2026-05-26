@@ -34,6 +34,7 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import (accuracy_score, balanced_accuracy_score,
                              confusion_matrix)
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
@@ -98,6 +99,13 @@ def _make_classifier(kind: str):
                                        class_weight="balanced",
                                        solver="lbfgs",
                                        multi_class="auto"))])
+    elif kind == "knn1":
+        # k=1 nearest neighbor with standardized features. Good for tiny
+        # cohorts where within-class tightness is much smaller than
+        # between-class distance (e.g., simulator domain signatures).
+        return Pipeline([
+            ("scale", StandardScaler()),
+            ("clf", KNeighborsClassifier(n_neighbors=1))])
     else:
         raise ValueError(f"unknown classifier kind {kind!r}")
 
@@ -138,25 +146,28 @@ def ingest(problem_id: str, df: pd.DataFrame) -> int:
         new["split"] = "train"
         combined = pd.concat([existing, new[cols]], ignore_index=True)
     else:
-        # First ingest: split into train / test by meta['test_frac']
+        # First ingest: split into train / test by meta['test_frac'].
+        # If test_frac == 0: everything goes to train (CV-only mode for
+        # very small datasets).
         rng = np.random.RandomState(meta["random_state"])
         n = len(new)
-        test_n = max(int(round(n * meta["test_frac"])), 1)
-        # Stratified by label (best effort: one test sample per class if possible)
         labels = new[meta["label_col"]].values
         unique = pd.Series(labels).value_counts().index.tolist()
-        test_idx = []
-        # Take floor(test_frac * cls_n) per class, min 1 per class with >=2
-        for lbl in unique:
-            cls_idx = np.where(labels == lbl)[0]
-            cls_test_n = max(1 if len(cls_idx) >= 2 else 0,
-                             int(round(len(cls_idx) * meta["test_frac"])))
-            picked = rng.choice(cls_idx, size=min(cls_test_n, len(cls_idx)),
-                                replace=False)
-            test_idx.extend(picked.tolist())
-        test_mask = np.zeros(n, dtype=bool)
-        test_mask[test_idx] = True
-        new["split"] = np.where(test_mask, "test", "train")
+        if meta["test_frac"] <= 0:
+            new["split"] = "train"
+        else:
+            test_idx = []
+            for lbl in unique:
+                cls_idx = np.where(labels == lbl)[0]
+                cls_test_n = max(1 if len(cls_idx) >= 2 else 0,
+                                 int(round(len(cls_idx) * meta["test_frac"])))
+                picked = rng.choice(cls_idx,
+                                    size=min(cls_test_n, len(cls_idx)),
+                                    replace=False)
+                test_idx.extend(picked.tolist())
+            test_mask = np.zeros(n, dtype=bool)
+            test_mask[test_idx] = True
+            new["split"] = np.where(test_mask, "test", "train")
         combined = new[cols]
 
     combined.to_csv(fp, index=False)
