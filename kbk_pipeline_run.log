@@ -1,0 +1,26 @@
+[kbk_pipeline] mode=full cfg={'T': 100.0, 'dt': 0.05, 'window_s': 40.0, 'stride_s': 1.0, 'n_real': 500, 'gamma': 0.5, 'sigma': 1.0, 'mi_bins': 12} seeds=[11, 22, 33]
+  seed=11  elapsed=19.8s  n_windows=30500
+    S (singular values) = ['8.150e+01', '6.724e+01', '6.917e+00', '3.688e+00', '1.715e+00', '1.266e+00']
+    KBK rank_null_subspace = 4  largest_gap_ratio = 9.721e+00  at index 1
+    extract_v1 v_null [2,3,4] normalized = [+0.3237, +0.4425, +0.8363]  cos to (+1,+1,+2)/sqrt6 = +0.9956
+    null[0] sparse: +0.6211*H_a +0.7213*H_b -0.1434*H_b^2 -0.2711*H_a*H_b ~ 0  resid_std_sparse=3.880e-02
+    null[1] sparse: +0.7095*H_a -0.6068*H_b -0.2660*H_a^2 +0.2401*H_b^2 ~ 0  resid_std_sparse=1.036e-02
+    null[2] sparse: -0.4217*H_a^2 -0.4299*H_b^2 +0.7983*H_a*H_b ~ 0  resid_std_sparse=2.554e-02
+    null[3] sparse: +1.0000*MI ~ 0  resid_std_sparse=4.743e-02
+  seed=22  elapsed=19.8s  n_windows=30500
+    S (singular values) = ['8.049e+01', '6.915e+01', '6.721e+00', '3.860e+00', '1.667e+00', '1.222e+00']
+    KBK rank_null_subspace = 4  largest_gap_ratio = 1.029e+01  at index 1
+    extract_v1 v_null [2,3,4] normalized = [+0.4481, +0.3734, +0.8122]  cos to (+1,+1,+2)/sqrt6 = +0.9986
+    null[0] sparse: +0.7015*H_a +0.6387*H_b -0.1417*H_a^2 -0.1181*H_b^2 -0.2569*H_a*H_b ~ 0  resid_std_sparse=7.025e-03
+    null[1] sparse: -0.6298*H_a +0.6894*H_b +0.2543*H_a^2 -0.2518*H_b^2 ~ 0  resid_std_sparse=1.200e-02
+    null[2] sparse: -0.4155*H_a^2 -0.4323*H_b^2 +0.8003*H_a*H_b ~ 0  resid_std_sparse=2.554e-02
+    null[3] sparse: +1.0000*MI ~ 0  resid_std_sparse=4.680e-02
+  seed=33  elapsed=20.0s  n_windows=30500
+    S (singular values) = ['8.092e+01', '6.717e+01', '6.810e+00', '3.851e+00', '1.660e+00', '1.182e+00']
+    KBK rank_null_subspace = 4  largest_gap_ratio = 9.863e+00  at index 1
+    extract_v1 v_null [2,3,4] normalized = [+0.3835, +0.4181, +0.8235]  cos to (+1,+1,+2)/sqrt6 = +0.9996
+    null[0] sparse: +0.6543*H_a +0.6858*H_b -0.1222*H_a^2 -0.1333*H_b^2 -0.2625*H_a*H_b ~ 0  resid_std_sparse=6.794e-03
+    null[1] sparse: +0.6744*H_a -0.6455*H_b -0.2507*H_a^2 +0.2561*H_b^2 ~ 0  resid_std_sparse=1.069e-02
+    null[2] sparse: -0.4291*H_a^2 -0.4215*H_b^2 +0.7988*H_a*H_b ~ 0  resid_std_sparse=2.587e-02
+    null[3] sparse: +1.0000*MI ~ 0  resid_std_sparse=4.692e-02
+[kbk_pipeline] wrote kbk_pipeline_results.json elapsed=59.6s

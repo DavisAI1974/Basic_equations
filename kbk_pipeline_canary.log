@@ -1,0 +1,26 @@
+[kbk_pipeline] mode=canary cfg={'T': 20.0, 'dt': 0.05, 'window_s': 4.0, 'stride_s': 0.5, 'n_real': 20, 'gamma': 0.5, 'sigma': 1.0, 'mi_bins': 10} seeds=[11, 22, 33]
+  seed=11  elapsed=0.4s  n_windows=660
+    S (singular values) = ['1.260e+01', '1.043e+01', '2.324e+00', '1.776e+00', '1.244e+00', '8.088e-01']
+    KBK rank_null_subspace = 4  largest_gap_ratio = 4.488e+00  at index 1
+    extract_v1 v_null [2,3,4] normalized = [+0.1451, +0.6426, +0.7523]  cos to (+1,+1,+2)/sqrt6 = +0.9358
+    null[0] sparse: +0.3861*H_a +0.7484*H_b -0.3503*H_b^2 -0.4101*H_a*H_b ~ 0  resid_std_sparse=4.117e-02
+    null[1] sparse: +0.6820*H_a -0.3710*H_b -0.3619*H_a^2 +0.4019*H_b^2 -0.2992*H_a*H_b +0.1235*MI ~ 0  resid_std_sparse=4.842e-02
+    null[2] sparse: +0.2654*H_a -0.5412*H_a^2 -0.3583*H_b^2 +0.7129*H_a*H_b ~ 0  resid_std_sparse=6.942e-02
+    null[3] sparse: +1.0000*MI ~ 0  resid_std_sparse=1.164e-01
+  seed=22  elapsed=0.3s  n_windows=660
+    S (singular values) = ['1.252e+01', '1.161e+01', '2.410e+00', '1.876e+00', '1.330e+00', '1.107e+00']
+    KBK rank_null_subspace = 4  largest_gap_ratio = 4.817e+00  at index 1
+    extract_v1 v_null [2,3,4] normalized = [+0.2741, +0.4958, +0.8240]  cos to (+1,+1,+2)/sqrt6 = +0.9871
+    null[0] sparse: +0.4947*H_a +0.6786*H_b -0.1488*H_a^2 -0.2692*H_b^2 -0.4474*H_a*H_b ~ 0  resid_std_sparse=4.313e-02
+    null[1] sparse: +0.6590*H_a -0.4723*H_b -0.4523*H_a^2 +0.3717*H_b^2 ~ 0  resid_std_sparse=5.317e-02
+    null[2] sparse: +0.1495*H_a -0.3812*H_a^2 -0.4285*H_b^2 +0.7273*H_a*H_b -0.3462*MI ~ 0  resid_std_sparse=7.785e-02
+    null[3] sparse: -0.2196*H_a^2 -0.2554*H_b^2 +0.1790*H_a*H_b +0.9244*MI ~ 0  resid_std_sparse=9.441e-02
+  seed=33  elapsed=0.3s  n_windows=660
+    S (singular values) = ['1.403e+01', '1.093e+01', '2.367e+00', '2.078e+00', '1.336e+00', '1.181e+00']
+    KBK rank_null_subspace = 4  largest_gap_ratio = 4.618e+00  at index 1
+    extract_v1 v_null [2,3,4] normalized = [+0.2652, +0.4992, +0.8249]  cos to (+1,+1,+2)/sqrt6 = +0.9856
+    null[0] sparse: +0.5032*H_a +0.6701*H_b -0.1447*H_a^2 -0.2724*H_b^2 -0.4502*H_a*H_b ~ 0  resid_std_sparse=4.663e-02
+    null[1] sparse: +0.6616*H_a -0.4781*H_b -0.4433*H_a^2 +0.3704*H_b^2 ~ 0  resid_std_sparse=5.427e-02
+    null[2] sparse: +0.1288*H_a +0.1609*H_b -0.4134*H_a^2 -0.4164*H_b^2 +0.7216*H_a*H_b -0.3042*MI ~ 0  resid_std_sparse=8.088e-02
+    null[3] sparse: -0.1820*H_a^2 -0.2205*H_b^2 +0.1874*H_a*H_b +0.9398*MI ~ 0  resid_std_sparse=9.445e-02
+[kbk_pipeline] wrote kbk_pipeline_canary.json elapsed=1.0s
