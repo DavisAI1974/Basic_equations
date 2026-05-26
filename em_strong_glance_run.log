@@ -1,0 +1,193 @@
+[em_strong_glance] mode=full cfg={'N_ens': 600, 'T': 30.0, 'dt': 0.02} seeds=[11, 22, 33] niter=40 timeout_s=90
+
+=== em_asym_baseline seed=11 (EM, omega1=1.0 omega2=1.2 (baseline; asymmetric)) ===
+  elapsed=24.2s  MI mean=+0.296 std=0.141
+  KBK v_null 6D = ['-0.001', '-0.008', '-0.388', '-0.415', '+0.779', '+0.266']
+  KBK v_null [2,3,4] = ['-0.403', '-0.430', '+0.808']  cos to (+1,+1,+2) = +0.320
+  KBK signal_rank=5 null_rank=1 eig_min=1.23e-04
+  PySR best (sympy): ((x0 - x1)**2 - 1*(-0.443079))**2
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=1.992e-02 score=+0.000 0.29622203
+    c=  5 loss=8.314e-03 score=+0.218 sqrt(square(x1 - x0))
+    c=  6 loss=2.597e-03 score=+1.163 square(x0 - x1) + 0.20288408
+    c=  7 loss=1.489e-03 score=+0.556 square(square(x0 - x1) - -0.443079)
+    c=  9 loss=1.361e-03 score=+0.045 square(square(x1 - x0) + 0.5159301) - 0.08178078
+
+=== em_asym_baseline seed=22 (EM, omega1=1.0 omega2=1.2 (baseline; asymmetric)) ===
+  elapsed=5.3s  MI mean=+0.308 std=0.148
+  KBK v_null 6D = ['-0.012', '+0.003', '-0.401', '-0.395', '+0.781', '+0.272']
+  KBK v_null [2,3,4] = ['-0.416', '-0.410', '+0.811']  cos to (+1,+1,+2) = +0.325
+  KBK signal_rank=5 null_rank=1 eig_min=9.23e-05
+  PySR best (sympy): (0.887045149939361*(-x0 + x1)**2 + 0.5759486)**3
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=2.205e-02 score=+0.000 0.30768654
+    c=  5 loss=9.857e-03 score=+0.201 sqrt(square(x0 - x1))
+    c=  6 loss=2.709e-03 score=+1.292 square(x1 - x0) + 0.21214871
+    c=  7 loss=1.111e-03 score=+0.891 cube(square(x1 - x0) + 0.5563782)
+    c=  9 loss=7.246e-04 score=+0.214 cube(square((x1 - x0) / 1.0617619) + 0.5759486)
+
+=== em_asym_baseline seed=33 (EM, omega1=1.0 omega2=1.2 (baseline; asymmetric)) ===
+  elapsed=5.3s  MI mean=+0.310 std=0.138
+  KBK v_null 6D = ['-0.010', '-0.005', '-0.407', '-0.398', '+0.775', '+0.274']
+  KBK v_null [2,3,4] = ['-0.423', '-0.414', '+0.806']  cos to (+1,+1,+2) = +0.316
+  KBK signal_rank=5 null_rank=1 eig_min=9.15e-05
+  PySR best (sympy): (0.85119758725369*(-x0 + x1)**2 + 0.5858071)**3
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=1.905e-02 score=+0.000 0.31036788
+    c=  5 loss=1.130e-02 score=+0.131 sqrt(square(x1 - x0))
+    c=  6 loss=2.178e-03 score=+1.646 square(x0 - x1) + 0.21778208
+    c=  7 loss=9.970e-04 score=+0.781 square(square(x0 - x1) + 0.45607147)
+    c=  9 loss=7.954e-04 score=+0.113 cube(square((x1 - x0) * 0.9226037) + 0.5858071)
+
+=== em_sym_swap seed=11 (EM, omega1=omega2=1.0 (symmetry swap)) ===
+  elapsed=5.8s  MI mean=+0.327 std=0.175
+  KBK v_null 6D = ['-0.004', '+0.004', '-0.405', '-0.411', '+0.817', '+0.000']
+  KBK v_null [2,3,4] = ['-0.405', '-0.411', '+0.817']  cos to (+1,+1,+2) = +0.334
+  KBK signal_rank=5 null_rank=1 eig_min=4.65e-08
+  PySR best (sympy): (0.6536249 - x1**2)**2
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=3.056e-02 score=+0.000 0.32701996
+    c=  4 loss=2.615e-02 score=+0.052 0.42308393 - square(x1)
+    c=  5 loss=2.345e-02 score=+0.109 square(0.6536249 - square(x1))
+    c=  6 loss=2.317e-02 score=+0.012 0.43091434 / cube(exp(square(x1)))
+    c=  7 loss=2.280e-02 score=+0.016 0.4731927 - sqrt(square(x1) * 0.30325904)
+
+=== em_sym_swap seed=22 (EM, omega1=omega2=1.0 (symmetry swap)) ===
+  elapsed=6.7s  MI mean=+0.335 std=0.185
+  KBK v_null 6D = ['+0.002', '-0.002', '-0.413', '-0.404', '+0.816', '-0.000']
+  KBK v_null [2,3,4] = ['-0.413', '-0.404', '+0.816']  cos to (+1,+1,+2) = +0.333
+  KBK signal_rank=5 null_rank=1 eig_min=1.27e-08
+  PySR best (sympy): (0.6647086 - x0**2)**2
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=3.416e-02 score=+0.000 0.33484265
+    c=  4 loss=3.007e-02 score=+0.042 0.43185502 - square(x0)
+    c=  5 loss=2.638e-02 score=+0.131 square(0.6647086 - square(x0))
+    c=  6 loss=2.590e-02 score=+0.018 0.4347675 / cube(exp(square(x0)))
+    c=  8 loss=2.514e-02 score=+0.015 0.537869 / exp(sqrt(square(x0)) * 1.8972858)
+
+=== em_sym_swap seed=33 (EM, omega1=omega2=1.0 (symmetry swap)) ===
+  elapsed=5.5s  MI mean=+0.344 std=0.172
+  KBK v_null 6D = ['-0.000', '+0.000', '-0.409', '-0.407', '+0.817', '-0.000']
+  KBK v_null [2,3,4] = ['-0.409', '-0.407', '+0.817']  cos to (+1,+1,+2) = +0.333
+  KBK signal_rank=5 null_rank=1 eig_min=1.03e-08
+  PySR best (sympy): (x1**2 - 0.6667681)**2
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=2.950e-02 score=+0.000 0.3435314
+    c=  4 loss=2.626e-02 score=+0.039 0.44146815 - square(x1)
+    c=  5 loss=2.275e-02 score=+0.143 square(square(x1) + -0.6667681)
+    c=  6 loss=2.262e-02 score=+0.006 sqrt(square(0.4290105 - square(x1)))
+    c=  7 loss=2.210e-02 score=+0.023 0.47844076 - sqrt(square(x0 * -0.51113725))
+
+=== strong_sym_baseline seed=11 (Strong, omega1=omega2=0.5 (baseline; symmetric)) ===
+  elapsed=5.6s  MI mean=+0.239 std=0.041
+  KBK v_null 6D = ['+0.006', '-0.007', '-0.394', '-0.426', '+0.814', '-0.003']
+  KBK v_null [2,3,4] = ['-0.394', '-0.426', '+0.815']  cos to (+1,+1,+2) = +0.330
+  KBK signal_rank=5 null_rank=1 eig_min=1.24e-06
+  PySR best (sympy): exp(x0**2)*0.22746219
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=1.704e-03 score=+0.000 0.23827422
+    c=  5 loss=1.396e-03 score=+0.050 exp(square(x0)) * 0.22746219
+    c=  6 loss=1.371e-03 score=+0.018 square(x0 * 0.58782476) + 0.22231208
+    c=  7 loss=1.366e-03 score=+0.003 square(square(x0) + 0.089719534) - -0.2170299
+    c=  8 loss=1.346e-03 score=+0.015 (square(x0 + 0.03274418) * 0.3745169) + 0.22159526
+
+=== strong_sym_baseline seed=22 (Strong, omega1=omega2=0.5 (baseline; symmetric)) ===
+  elapsed=5.3s  MI mean=+0.251 std=0.045
+  KBK v_null 6D = ['+0.007', '-0.007', '-0.415', '-0.403', '+0.816', '-0.001']
+  KBK v_null [2,3,4] = ['-0.415', '-0.403', '+0.816']  cos to (+1,+1,+2) = +0.332
+  KBK signal_rank=5 null_rank=1 eig_min=2.68e-07
+  PySR best (sympy): x1**4 + 0.24602501
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=1.984e-03 score=+0.000 0.2517047
+    c=  5 loss=1.792e-03 score=+0.025 square(square(x1)) + 0.24602501
+    c=  6 loss=1.777e-03 score=+0.009 cube(square(square(x1)) + 0.62556154)
+    c=  7 loss=1.777e-03 score=+0.000 (square(square(x1)) * 1.3724996) + 0.2439123
+    c=  8 loss=1.762e-03 score=+0.008 (square(square(square(x1))) * 38.64785) + 0.24647976
+
+=== strong_sym_baseline seed=33 (Strong, omega1=omega2=0.5 (baseline; symmetric)) ===
+  elapsed=5.5s  MI mean=+0.271 std=0.040
+  KBK v_null 6D = ['-0.003', '+0.003', '-0.410', '-0.406', '+0.817', '-0.006']
+  KBK v_null [2,3,4] = ['-0.410', '-0.406', '+0.817']  cos to (+1,+1,+2) = +0.334
+  KBK signal_rank=5 null_rank=1 eig_min=6.66e-07
+  PySR best (sympy): exp(x0**2)*0.25928214
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=1.627e-03 score=+0.000 0.27129903
+    c=  5 loss=1.435e-03 score=+0.031 exp(square(x0)) * 0.25928214
+    c=  7 loss=1.432e-03 score=+0.001 square(square(x0 / -0.86772513)) + 0.26343337
+    c=  8 loss=1.429e-03 score=+0.002 square(square(square(x0 / -0.5959472))) + 0.26610813
+    c=  9 loss=1.429e-03 score=+0.000 square(square(square(square(x0 / -0.60219103))) + 0.51590997)
+
+=== strong_asym_swap seed=11 (Strong, omega1=0.5 omega2=0.7 (symmetry swap)) ===
+  elapsed=6.6s  MI mean=+0.248 std=0.054
+  KBK v_null 6D = ['+0.028', '-0.041', '-0.233', '-0.613', '+0.753', '+0.013']
+  KBK v_null [2,3,4] = ['-0.233', '-0.614', '+0.754']  cos to (+1,+1,+2) = +0.270
+  KBK signal_rank=5 null_rank=1 eig_min=6.66e-06
+  PySR best (sympy): exp(-x0 + x1 - 1*1.415115)
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=2.907e-03 score=+0.000 0.24745783
+    c=  5 loss=2.739e-03 score=+0.015 1.0921221 / (x0 + 4.4885097)
+    c=  6 loss=2.151e-03 score=+0.241 exp((x1 - x0) - 1.415115)
+    c=  7 loss=2.130e-03 score=+0.010 ((x0 - x1) * -0.29774645) + 0.24659453
+    c=  8 loss=2.063e-03 score=+0.032 exp(((x1 * 1.1968309) + -1.3880749) - x0)
+
+=== strong_asym_swap seed=22 (Strong, omega1=0.5 omega2=0.7 (symmetry swap)) ===
+  elapsed=6.1s  MI mean=+0.261 std=0.049
+  KBK v_null 6D = ['+0.010', '-0.019', '-0.262', '-0.583', '+0.769', '+0.002']
+  KBK v_null [2,3,4] = ['-0.262', '-0.583', '+0.769']  cos to (+1,+1,+2) = +0.283
+  KBK signal_rank=5 null_rank=1 eig_min=2.48e-06
+  PySR best (sympy): 0.25537553/exp(x0 - x1)
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=2.430e-03 score=+0.000 0.26081
+    c=  5 loss=2.254e-03 score=+0.019 exp(square(x0)) * 0.24480939
+    c=  6 loss=1.954e-03 score=+0.143 0.25537553 / exp(x0 - x1)
+    c=  7 loss=1.939e-03 score=+0.008 ((x0 - x1) * x0) + 0.24339363
+    c=  8 loss=1.924e-03 score=+0.007 square(sqrt(exp(x1 - x0))) * 0.2607678
+
+=== strong_asym_swap seed=33 (Strong, omega1=0.5 omega2=0.7 (symmetry swap)) ===
+  elapsed=6.1s  MI mean=+0.272 std=0.051
+  KBK v_null 6D = ['+0.020', '-0.028', '-0.269', '-0.569', '+0.776', '+0.008']
+  KBK v_null [2,3,4] = ['-0.270', '-0.569', '+0.777']  cos to (+1,+1,+2) = +0.292
+  KBK signal_rank=5 null_rank=1 eig_min=1.59e-06
+  PySR best (sympy): exp(-x0 + x1 - 1*1.3027751)
+  PySR Pareto (top 5 low-complexity):
+    c=  1 loss=2.656e-03 score=+0.000 0.27261645
+    c=  5 loss=2.589e-03 score=+0.006 (x0 * -0.03497279) + 0.27013287
+    c=  6 loss=2.330e-03 score=+0.106 exp((x1 - x0) - 1.3027751)
+    c=  7 loss=2.326e-03 score=+0.002 ((x0 - x1) * -0.21492803) + 0.27304235
+    c=  8 loss=2.138e-03 score=+0.084 exp((x1 * 1.2998543) - (x0 + 1.2761703))
+
+=== Cross-seed comparison ===
+  [ASYM] em_asym_baseline:
+    KBK v_null 6D cos seed11__seed22 = +0.9996
+    KBK v_null 6D cos seed11__seed33 = +0.9996
+    KBK v_null 6D cos seed22__seed33 = +0.9999
+    PySR best per seed:
+      seed 11: ((x0 - x1)**2 - 1*(-0.443079))**2
+      seed 22: (0.887045149939361*(-x0 + x1)**2 + 0.5759486)**3
+      seed 33: (0.85119758725369*(-x0 + x1)**2 + 0.5858071)**3
+  [SYM] em_sym_swap:
+    KBK v_null 6D cos seed11__seed22 = +0.9999
+    KBK v_null 6D cos seed11__seed33 = +1.0000
+    KBK v_null 6D cos seed22__seed33 = +1.0000
+    PySR best per seed:
+      seed 11: (0.6536249 - x1**2)**2
+      seed 22: (0.6647086 - x0**2)**2
+      seed 33: (x1**2 - 0.6667681)**2
+  [SYM] strong_sym_baseline:
+    KBK v_null 6D cos seed11__seed22 = +0.9995
+    KBK v_null 6D cos seed11__seed33 = +0.9996
+    KBK v_null 6D cos seed22__seed33 = +0.9999
+    PySR best per seed:
+      seed 11: exp(x0**2)*0.22746219
+      seed 22: x1**4 + 0.24602501
+      seed 33: exp(x0**2)*0.25928214
+  [ASYM] strong_asym_swap:
+    KBK v_null 6D cos seed11__seed22 = +0.9985
+    KBK v_null 6D cos seed11__seed33 = +0.9979
+    KBK v_null 6D cos seed22__seed33 = +0.9997
+    PySR best per seed:
+      seed 11: exp(-x0 + x1 - 1*1.415115)
+      seed 22: 0.25537553/exp(x0 - x1)
+      seed 33: exp(-x0 + x1 - 1*1.3027751)
+
+[em_strong_glance] wrote em_strong_glance_results.json  elapsed=87.9s
