@@ -3,33 +3,42 @@ Resuming Information Layer work, Session 9.
 Branch: claude/two-more-tasks-O6ahb (Session 8 closed here; on
 origin). Session 7 work was pulled in at Session 8 start from
 `claude/claude-md-context-update-uCZ8m` via fast-forward merge.
-Three experiments ran in Session 8 (four-force probe with KBK +
+Four experiments ran in Session 8 (four-force probe with KBK +
 PySR; robustness check on INFO-025; mapping campaign with per-
-domain knob sweeps). Results are in the v8 handoff. NO new
-Operating Rule this session. Six Operating Rules from Sessions
-4-7 remain in force: no pre-assigned meaning, probe-not-
-falsifier, speaking posture before/after, Rule D incomplete-not-
-wrong, They never stacked, Treat literature as conjecture by
-default (with corollaries: investigate freely; don't cite as
-support without analyzing the paper; don't defer to blocking
-claims that fail the bar). All six bear on Session 9.
+domain knob sweeps; EM/SF symmetry-swap glance at session close
+in response to Greg's "we really should take a quick glance at
+em/sf"). Results are in the v8 handoff. NO new Operating Rule
+this session. Six Operating Rules from Sessions 4-7 remain in
+force: no pre-assigned meaning, probe-not-falsifier, speaking
+posture before/after, Rule D incomplete-not-wrong, They never
+stacked, Treat literature as conjecture by default (with
+corollaries: investigate freely; don't cite as support without
+analyzing the paper; don't defer to blocking claims that fail
+the bar). All six bear on Session 9.
 
 Before doing anything else:
 1. Read CLAUDE.md (project root). Now has Session 8 note alongside
    Sessions 3-7 notes. Read all six Operating Rules and the Result
    Discipline section; hold them through this session.
 2. Read SESSION_HANDOFF_2026-05-26_v8.md (project root). Full
-   Session 8 record. Three experiments converged on: (i) four-force
+   Session 8 record. Four experiments converged on: (i) four-force
    caricatures share substrate signature (cos > 0.997 cross-force
    on [2,3,4] null) while differing at expression level — INFO-027
    located; (ii) INFO-025 functional family is robust across T /
    N_ens / noise sweep; coefficients are regime-dependent —
    INFO-029 methodological; (iii) INFO-025 families are baseline-
    specific regime signatures, off-baseline knob values mutate the
-   family qualitatively — INFO-030 located. One methodological
+   family qualitatively — INFO-030 located; (iv) EM/SF symmetry-
+   swap glance (post-close): EM and strong forces produce
+   DIFFERENT functional families on SHARED substrate when channel
+   symmetry is controlled — EM = (H_a - H_b)^2 + const
+   (polynomial in difference); Strong = exp((H_b - H_a) - const)
+   (exponential in difference). The dynamical structure is
+   visible in the form — INFO-031 located. One methodological
    observation: PySR cross-seed reproducibility requires the
    underlying dynamics to break H_a-H_b channel symmetry —
-   INFO-028 methodological.
+   INFO-028 methodological, directly confirmed by the EM/SF
+   symmetry swap.
 3. (Optional) Read SESSION_HANDOFF_2026-05-26_v7.md and v6.md for
    the per-domain stack methodology and four-domain PySR
    functional-family findings that Session 8 builds on.
@@ -47,16 +56,29 @@ the per-domain stack from Session 6/7 to a new candidate domain
 extend it further; each is a fresh stack on previously-unstacked
 data.
 
-We are NOT back at zero. Three independent reproducible per-
+We are NOT back at zero. FOUR independent reproducible per-
 domain signatures of substrate-vs-expression frame:
 (i) per-domain null direction (Session 6 INFO-023),
 (ii) MI-vs-H functional family (Session 7 INFO-025),
 (iii) four-force shared-substrate / distinct-expression (Session
-8 INFO-027). Substrate level (rank-3 null subspace INFO-022)
-LOCATED. Robustness shows family-survives / coefficients-drift
-pattern (INFO-029). Mapping shows family-itself-regime-dependent
-for large knob deviations (INFO-030). The Information Layer /
+8 INFO-027),
+(iv) EM/SF dynamically distinct expression on shared substrate,
+controlled for channel symmetry (Session 8 INFO-031).
+Substrate level (rank-3 null subspace INFO-022) LOCATED.
+Robustness shows family-survives / coefficients-drift pattern
+(INFO-029). Mapping shows family-itself-regime-dependent for
+large knob deviations (INFO-030). The Information Layer /
 Unified Theory inquiry frame is alive.
+
+Strongest single result of Session 8: INFO-031. EM and strong
+caricatures, when channel-symmetry is controlled, both sit on
+the same substrate algebraic identity -(H_a - H_b)^2 ~ 0 but
+realize it through QUALITATIVELY DIFFERENT functional forms --
+EM polynomial-in-difference, strong exponential-in-difference.
+The dynamical character (linear-restoring + linear-coupling vs
+confining-cubic) is visible in the functional form. This is the
+cleanest demonstration so far that "shared substrate, distinct
+expression" is structural, not coincidental.
 
 Open substantive questions still on the table from Session 7-8:
 - "How does pure physics get expressed as a storm or waves?"
@@ -102,12 +124,15 @@ below or anywhere else].
 
 ### Also queued (Session 8 follow-ups)
 
-(5) Symmetry-asymmetry sweep on Session 8 caricatures. From
-    INFO-028: PySR cross-seed reproducibility depends on
-    dynamics H_a-H_b symmetry. Add asymmetric perturbation
-    (different omegas, different masses) to the strong and
-    gravity caricatures and check whether functional family
-    reproducibility recovers.
+(5) EM/gravity symmetry-swap glance (mirror of the EM/SF glance
+    that produced INFO-031). Apply the same protocol (sym vs asym
+    omegas, 3 seeds) to EM and gravity, ask what functional form
+    gravity falls into when channel symmetry is controlled.
+    Speaking posture: I think gravity's universal energy-mediated
+    coupling will produce yet a third functional family
+    (different from EM's polynomial and Strong's exponential)
+    but we'll wait on the data. The weak force could also be
+    swept the same way to round out the four-force picture.
 
 (6) Mapping campaign extension. Two-knob sweeps per domain,
     cross-seed scaling. Session 8 mapping is one-seed and
