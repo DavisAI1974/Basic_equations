@@ -1,0 +1,13 @@
+[prebiotic] k_cat=0.0
+  done in 0.4s.  MI_mean=0.372  poly1_r2=0.184  poly2_r2=0.188  exp_INFO025_r2=0.156  phys_diff_sq_r2=0.040  cos_attr=0.999
+[prebiotic] k_cat=0.25
+  done in 0.4s.  MI_mean=0.646  poly1_r2=0.832  poly2_r2=0.853  exp_INFO025_r2=0.768  phys_diff_sq_r2=0.150  cos_attr=0.405
+[prebiotic] k_cat=0.5
+  done in 0.3s.  MI_mean=0.902  poly1_r2=0.867  poly2_r2=0.875  exp_INFO025_r2=0.856  phys_diff_sq_r2=0.239  cos_attr=0.979
+[prebiotic] k_cat=1.0
+  done in 0.3s.  MI_mean=1.170  poly1_r2=0.718  poly2_r2=0.734  exp_INFO025_r2=0.715  phys_diff_sq_r2=0.055  cos_attr=1.000
+[prebiotic] k_cat=2.0
+  done in 0.3s.  MI_mean=1.402  poly1_r2=0.292  poly2_r2=0.341  exp_INFO025_r2=0.287  phys_diff_sq_r2=0.004  cos_attr=1.000
+
+Total: 1.7s
+Wrote prebiotic_canary.json
