@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-05-25 Session 3)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 4)
 
 ## Identity & Team
 
@@ -174,9 +174,34 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For active information-layer work, read `E:\information_layer\SESSION_HANDOFF_2026-05-25_v3.md` first. The Session 2 v2 handoff is superseded — its "two-family structure" framing is retracted (see INFO-008 status above).
+For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v4.md`
+(in repo root) first. It contains Session 4's raw data — INFO-016 update,
+plus four new isolated findings (INFO-018, 019, 020, 021), all with
+reading open. The Session 3 v3 handoff is at `E:\information_layer\SESSION_HANDOFF_2026-05-25_v3.md`
+(Greg's local) for full Session 3 context. The Session 2 v2 handoff is
+superseded — its "two-family structure" framing is retracted (see INFO-008
+status above).
 
-## Note
+## Note (Session 4 update — 2026-05-26)
+
+Updated at the end of 2026-05-26 Session 4 to reflect:
+
+- Three new Operating Rules from Greg this session (no pre-assigned meaning
+  to outcomes; probe-not-falsifier framing; speaking posture before AND
+  after every probe). Already added under Operating Rules above.
+- Greg's pioneer framing: "we are the first ones here, follow every road,
+  look under every stone. no safe assumptions. no known facts to fall back
+  on. we're the pioneers."
+- Session 4 produced four new isolated findings (INFO-018, 019, 020, 021),
+  all with reading open. None have been looked-through with Greg yet.
+  Raw data is in `SESSION_HANDOFF_2026-05-26_v4.md` and the four JSON
+  result files in repo root.
+- INFO-016 disambiguation data point exists; reading happens with Greg
+  in the next session.
+- Branch state: work persisted on `claude/linear-drift-nreal-sweep-cjRkM`,
+  pushed. `main` untouched. No PR.
+
+Earlier note (Session 3, retained for context):
 
 This CLAUDE.md was updated at the end of 2026-05-25 Session 3 to reflect:
 
@@ -188,4 +213,4 @@ This CLAUDE.md was updated at the end of 2026-05-25 Session 3 to reflect:
 - New experiments queue starting with linear drift N_REAL sweep
 - Greg's call that each domain is its own substrate inquiry — no more pooled cross-domain claims without domain-native bases
 
-The Information Layer line of work is at a methodologically clarified but interpretively narrower point than at the end of Session 2. Multiple frames are alive; none has been promoted to claim. The OU attractor finding is the cleanest candidate for the next round of stress testing under the base-of-structure heuristic.
+The Information Layer line of work is at a methodologically clarified but interpretively narrower point than at the end of Session 2. Multiple frames are alive; none has been promoted to claim.
