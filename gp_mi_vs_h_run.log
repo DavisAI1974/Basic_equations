@@ -73,3 +73,17 @@
     poly3(MI~Ha,Hb): in=+0.545  block=-0.824  rand=+0.533
     GP(MI~Ha,Hb):    in=+0.794  block=-0.987  rand=+0.666
     elapsed: 64.2s
+  biology_lotka           n=1200
+    MI stats: mean=+0.611 std=0.400  corr(MI,Ha)=+0.886  corr(MI,Hb)=+0.402  corr(Ha,Hb)=+0.430
+    fmt: in / block-CV / random-CV
+    poly1(MI~Ha):   in=+0.785  block=-2.547  rand=+0.782
+    poly2(MI~Ha):   in=+0.825  block=-0.108  rand=+0.823
+    poly3(MI~Ha):   in=+0.834  block=-3.372  rand=+0.831
+    GP(MI~Ha):     in=+0.849  block=-1.924  rand=+0.830
+    poly1(MI~Hb):   in=+0.162  block=-18.001  rand=+0.151
+    poly2(MI~Hb):   in=+0.164  block=-19.073  rand=+0.151
+    poly3(MI~Hb):   in=+0.178  block=-17.433  rand=+0.164
+    GP(MI~Hb):     in=+0.318  block=-23.400  rand=+0.267
+    poly3(MI~Ha,Hb): in=+0.859  block=-79.473  rand=+0.857
+    GP(MI~Ha,Hb):    in=+0.986  block=-26.504  rand=+0.979
+    elapsed: 58.7s
