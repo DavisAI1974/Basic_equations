@@ -4,3 +4,5 @@ outputs/
 
 # LIGO bulk strain (130MB+ each; keep JSON results only)
 data/ligo_bulk/
+data/gps/*.SP3
+data/gps/*.gz
