@@ -103,19 +103,56 @@ for dom in DOM_ORDER:
         discipline_status="LOCATED (cross-seed scatter reported)",
     )
 
+# ---- opposition-signature check (paper davisai.ai/dipole) per domain ------
+# The info-dipole paper's flow form is
+#   dMI_total/dt ~ sum_i c_self,i * H_i^2 + sum_{i<j} c_cross,ij * H_i*H_j + linear
+# with c_self and c_cross of OPPOSING SIGN ("opposition signature"). Our
+# extracted null[0] is exactly a (c_self, c_cross) coefficient vector; check
+# the sign opposition directly from the data (self = H_a^2,H_b^2 coords 2,3;
+# cross = H_a*H_b coord 4).
+def opposition_check(v):
+    self_terms = [v[2], v[3]]          # H_a^2, H_b^2
+    cross = v[4]                        # H_a*H_b
+    self_sign = np.sign([s for s in self_terms if abs(s) > 0.05])
+    opp = bool(len(self_sign) and abs(cross) > 0.05
+               and np.all(self_sign != np.sign(cross)))
+    return dict(self_coefs_Ha2_Hb2=[round(self_terms[0], 3), round(self_terms[1], 3)],
+                cross_coef_HaHb=round(float(cross), 3),
+                opposition_present=opp)
+
+opp_by_dom = {DOM_LABEL[dom]:
+              opposition_check(np.array(null_by_dom[dom]["seeds"]["seed11"]["v_null_6d"]))
+              for dom in DOM_ORDER}
+
 # ---- shared substrate: the FLOW DIPOLE -----------------------------------
 flow_dipole = dict(
     name="flow dipole (Level 1 windowed-null, differential form)",
     operator_basis=OPS,
+    source_paper="https://davisai.ai/dipole/  (DavisAI, Information Dipole)",
+    differential_flow_form=("dMI_total/dt ~ sum_i c_self,i*H_i^2 "
+                            "+ sum_{i<j} c_cross,ij*H_i*H_j + linear terms"),
+    opposition_signature=("c_self,i and c_cross,ij carry OPPOSING SIGNS -- "
+                          "homeostatic balance of self-complexity growth vs "
+                          "coupling constraint. Paper opposition fractions: "
+                          "cellular 57.1% (12/21), organ 43.3% (13/30)."),
+    algebraic_ratio_form="C = H_self / H_cross  (H_self = internal Shannon entropy; H_cross = MI I(A;B))",
+    paper_C_values_by_scale=dict(subatomic=9.06, molecular=5.91, cellular=1.85,
+                                 organ=0.59, brain=1.58, ecological=5.19),
+    opposition_signature_in_our_nulls=opp_by_dom,
     substrate_attractor_dir_in_Ha2_Hb2_HaHb="(-1, -1, +2)/sqrt(6)",
     algebraic_identity="-(H_a - H_b)^2 ~ 0  (equivalently H_a^2 + H_b^2 ~ 2*H_a*H_b)",
-    reading=("the attractor is the EQUAL-MARGINAL-ENTROPY identity H_a ~= H_b, "
-             "a geometric statistics fact, NOT a coupling (Sessions 5/10/11; "
+    reading=("the per-domain null[0] IS a (c_self, c_cross) coefficient vector "
+             "of the paper's flow form, and shows the opposition signature "
+             "directly (self-terms H_a^2,H_b^2 negative, cross-term H_a*H_b "
+             "positive) in physics/chemistry/geology. The (-1,-1,+2)/sqrt(6) "
+             "attractor is the EQUAL-MARGINAL-ENTROPY identity H_a ~= H_b -- a "
+             "geometric statistics fact, NOT a coupling (Sessions 5/10/11; "
              "confirmed on real LIGO noise where whitened detector noise lands "
              "ON it and the chirp leaves it while MI -- a separate operator -- "
              "spikes). Deflationary read is the supported one."),
-    flow_vs_algebraic=("FLOW dipole = differential (dH/dt = f). ALGEBRAIC dipole "
-                       "= instantaneous constraint f(H)=const, e.g. markets "
+    flow_vs_algebraic=("FLOW dipole = differential (dMI/dt = f, paper form "
+                       "above). ALGEBRAIC dipole = instantaneous constraint "
+                       "f(H)=const, e.g. C=H_self/H_cross or markets "
                        "H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2. See "
                        "static_dipole_test.py."),
     ledger=["INFO-012", "INFO-014 (interp retracted)", "INFO-022 (rank-3 null subspace)",
