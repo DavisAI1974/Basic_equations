@@ -1,0 +1,106 @@
+{
+  "probe": "flow-dipole equation -- Brusselator (native 2 species)",
+  "form": "dMI/dt ~ c_self*H_i^2 + c_cross*H_a*H_b + linear + const",
+  "config": {
+    "seeds": [
+      11
+    ],
+    "T": 15.0,
+    "N_ens": 300,
+    "dt": 0.02,
+    "smooth_w": 5
+  },
+  "per_seed": [
+    {
+      "seed": 11,
+      "n_points": 590,
+      "MI_range": [
+        0.5501314358454388,
+        1.4176676074964856
+      ],
+      "dMI_abs_mean": 0.4789659505362143,
+      "model_A_full": {
+        "coeffs_raw": {
+          "H_a^2": -0.2849260448550357,
+          "H_b^2": -2.4777118261434063,
+          "H_a*H_b": 5.63072462480309,
+          "H_a": -3.3793670489443426,
+          "H_b": 1.9684004044383687,
+          "1": 0.0060317086032419176
+        },
+        "coeffs_std": {
+          "H_a^2": -0.034937869020688676,
+          "H_b^2": -0.8503677872220379,
+          "H_a*H_b": 1.9260044790167095,
+          "H_a": -1.440922876954666,
+          "H_b": 0.40739971128713426
+        },
+        "R2": 0.14987673215199204
+      },
+      "model_B_MI_relax": {
+        "a": -0.1567737255340171,
+        "b": 0.217172588689511,
+        "R2": 0.0035087464164229587
+      },
+      "model_C_self_only_R2": 0.13810181878229633,
+      "dR2_dipole_over_relax": 0.14636798573556908,
+      "dR2_cross_term": 0.011774913369695716,
+      "shuffle_null_R2_mean": 0.006665505577818837,
+      "shuffle_null_R2_max": 0.023936153844520414,
+      "opposition_signature_quad": true
+    }
+  ],
+  "aggregate": {
+    "H_a^2": {
+      "mean": -0.034937869020688676,
+      "std": 0.0
+    },
+    "H_b^2": {
+      "mean": -0.8503677872220379,
+      "std": 0.0
+    },
+    "H_a*H_b": {
+      "mean": 1.9260044790167095,
+      "std": 0.0
+    },
+    "H_a": {
+      "mean": -1.440922876954666,
+      "std": 0.0
+    },
+    "H_b": {
+      "mean": 0.40739971128713426,
+      "std": 0.0
+    },
+    "full_R2": {
+      "mean": 0.14987673215199204,
+      "std": 0.0
+    },
+    "model_C_self_only_R2": {
+      "mean": 0.13810181878229633,
+      "std": 0.0
+    },
+    "dR2_dipole_over_relax": {
+      "mean": 0.14636798573556908,
+      "std": 0.0
+    },
+    "dR2_cross_term": {
+      "mean": 0.011774913369695716,
+      "std": 0.0
+    },
+    "shuffle_null_R2_mean": {
+      "mean": 0.006665505577818837,
+      "std": 0.0
+    },
+    "relax_R2": {
+      "mean": 0.0035087464164229587,
+      "std": 0.0
+    },
+    "opposition_fraction": 1.0
+  },
+  "reading_guide": {
+    "is_a_real_dipole_if": "dR2_cross_term > 0 (H_a*H_b adds signal) AND dR2_dipole_over_relax > 0 (beats 1-D MI relaxation) AND shuffle_null_R2 ~ 0",
+    "deflationary_if": "relax_R2 ~= full R2 (just 1-D MI relaxation) OR shuffle_null_R2 high (column-count artifact)",
+    "scale_caveat": "raw coeffs are units-dependent (INFO-051); read the standardized betas for the unit-robust shape"
+  },
+  "runtime_s": 0.2
+}
