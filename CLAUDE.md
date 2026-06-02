@@ -435,16 +435,21 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 ## Session Handoff Pointer
 
 For the latest (Session 13) session, see the Session 13 note below (INFO-044
-through INFO-046). Headline of the two cheap coupling/LIGO follow-ups: chemistry's
+through INFO-049). Headline of the two cheap coupling/LIGO follow-ups: chemistry's
 residual tracks the Brusselator B knob in the oscillatory regime (INFO-044, the
 chemistry analogue of biology's MI-slope-vs-g); the MI-driven LIGO merger
 departure GENERALIZES across all 12 events (INFO-045, S11 GW150914 thread
 confirmed 10-11/11) while the full noise/event reversal does not; and nothing in
 MI sits before/after the merger -- the genuine before/after structural difference
 is non-stationary detector noise, not source inspiral/ringdown (INFO-046). The
-Session 13 HEADLINE (in progress): the principled force-operator-space dive
-(force<->equation), gated on finding a real dataset that gives a gauge force a
-2-channel entropy object without inventing the coupling.
+Session 13 HEADLINE (gate PASSED, two real builds done, strong deferred):
+principled force-operator-space. Real gauge-force objects built for WEAK (CMS
+Z->mumu, INFO-047) and EM (HBT, INFO-048 + g2(0) closure INFO-049); gravity
+already via LIGO. All sit on the equal-entropy SELF-POLE with MI active (out of
+the null) -- the gauge forces look like physics/geology, NOT the coupling pole;
+the caricature EM<->physics / weak<->chemistry hits do NOT reproduce on real
+data. Biology remains the ONLY genuine MI-in-null coupling. Open: strong force
+(heavy), Markets-repo JSON pull (no list_repos in scope).
 
 For the (Session 12) session, read
 `SESSION_HANDOFF_2026-06-02_v12_results.md` (in repo root) first, then the
@@ -663,12 +668,31 @@ isn't real data); each is its own real-data probe.
   SYMMETRY of the two channels, not the force: the asymmetric split detector
   (H_a != H_b) sits OFF (eqEnt 0.29-0.52), the symmetric pair sits closer
   (eqEnt 0.57-0.61). This CONFIRMS INFO-036's "attractor = equal-marginal-entropy
-  geometry" on a THIRD construction. CAVEAT (honest): the windowed count-rate
-  construction at 20-100us bins captures slow common-mode intensity correlation,
-  NOT the ns-scale HBT g2(0) quantum bunching (corr is actually higher for the
-  "uncorrelated" set -> the 20-100us correlation is intensity drift, not g2);
-  capturing g2(0) needs a coincidence-lag object (different construction, not
-  heavy, optional follow-up).
+  geometry" on a THIRD construction. CAVEAT (RESOLVED by INFO-049, Rule D): the
+  "20-100us = slow drift not g2" caveat was INCOMPLETE. Direct g2(tau) shows the
+  coherence half-width is ~2us, so 20-100us sits just ABOVE coherence and DID
+  capture the bunching (its slow tail), not pure drift. The self-pole / MI-active
+  conclusion stands and is strengthened by INFO-049.
+
+- **INFO-049 -- LOCATED, REAL DATA (Session 13, new; EM g2(0) coincidence object;
+  s13_force_hbt_g2.py)**. Closes the INFO-048 gap. (a) Direct g2(tau) (binned
+  cross-correlation): g2(0)=1.83 (split), 1.92 (uncorr); coherence half-width
+  ~2us; decays to g2=1.00 by +-400us -> HBT Bose bunching CONFIRMED real (the EM
+  quantum signature, intrinsic). (b) Rebuilt the operator object across bin
+  scales spanning the coherence: WELL-SAMPLED (dt=50us, counts ~7-18) reproduces
+  INFO-048 -- MI substantial (0.12-0.45, tracking g2-1) and OUT of the null,
+  self-pole; SPARSE coherence-scale (dt=1-2us, mean count <1) shows a spurious
+  "+1.00*MI ~ 0" MI-dominant null. (c) DEFLATIONARY (load-bearing, no tent-
+  widening -- inspected the outlier): the coherence-scale MI-in-null is an
+  ESTIMATOR-FLOOR ARTIFACT (INFO-024 on real data) -- at mean count <1 the MI
+  estimate collapses to a near-zero near-constant floor (MI std 0.0004 vs H_a std
+  0.114, ~300x smaller), so MI trivially becomes the lowest-variance null. It is
+  NOT biology-like coupling (biology's null is MI~=0.28*H_a, MI tied to H; here
+  it is MI~=const, and only in the sparse regime). CONCLUSION: the genuine HBT
+  bunching does NOT enter the null as a coupling; properly sampled, EM is self-
+  pole with MI active. Reinforces INFO-047/048 and confirms INFO-024's procedure/
+  sampling-dependent MI floor on real EM data. Biology remains the ONLY genuine
+  MI-in-null coupling across all objects, simulated or real.
 
 - **Session 13 force-operator-space FRAME (held as frame, not claim; no
   synthesis per Greg)**: across two real gauge-force builds (weak, EM) plus
@@ -676,8 +700,10 @@ isn't real data); each is its own real-data probe.
   (physics/geology) -- MI stays out of the null, equal-entropy membership is pure
   channel symmetry. The caricature-era EM<->physics and weak<->chemistry hits do
   NOT reproduce on real data. "MI-in-the-null = law-like coupling" appears so far
-  ONLY in simulated biology, in NO real force object yet measured. Strong force
-  (heavy) and the EM g2(0)-coincidence object are the open within-type extensions.
+  ONLY in simulated biology, in NO real force object yet measured (the EM
+  g2(0)-coincidence object, INFO-049, confirmed this: genuine HBT bunching stays
+  out of the null; the sparse-bin MI-in-null was an INFO-024 estimator artifact).
+  Open within-type extension: the strong force (heavy, deferred).
 
 ## Note (Session 12 update — 2026-06-02)
 
