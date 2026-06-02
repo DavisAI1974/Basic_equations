@@ -74,16 +74,16 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
    samples (INFO-024 wall) — needs the long inspiral at finer/lower band, not louder
    mergers. Sim half already done (chem>phys>bio memory; geology null).
 
-6b. **MI beyond GR -- IMR-template residual test** (NEW, S17 from O1/INFO-054; the
-   only road to a NEW gravity law). O1 showed subtracting the Newtonian INSPIRAL chirp
-   only cuts inter-detector MI ~2x; a significant residual remains at the physical lag,
-   most plausibly un-modeled GR (merger/ringdown/PN). To test "beyond GR" rigorously,
-   remove the FULL GR waveform with IMR matched-filter templates (pycbc/lalsuite -- not
-   in the self-contained stack; needs install) and recompute residual inter-detector MI
-   vs the time-slide null. Residual -> null => MI is fully GR; significant residual at
-   the physical lag => candidate new structure (then control for calibration/glitches).
-   Method already built (`probe_mi_beyond_chirp.py`); only the template subtraction is
-   missing.
+6b. **MI beyond GR -- IMR-template residual test** -- DONE (S17, INFO-055), clean
+   NEGATIVE. pycbc 2.11.0 IMRPhenomD matched-filter subtraction on GW150914: removing
+   the full GR waveform collapses the physical-lag inter-detector MI to the null (0.54
+   z=18 -> 0.23 == null; residual peak off-lag, z=2.9). The MI merger signal is FULLY
+   GR -- NO beyond-GR structure on this axis (also closes O2's premise on the MI axis).
+   See `probe_mi_beyond_GR_imr.py`. INSTALL NOTE: pycbc needs
+   `pip install pycbc --ignore-installed cryptography` (debian cryptography uninstall
+   conflict); NOT added to requirements.txt to avoid breaking the SessionStart hook.
+   REMAINING (bottom, optional): repeat across many events / per-detector mass refit to
+   strengthen the negative; but for GW150914 the new-law road on the MI axis is closed.
 
 ## 4-FORCE thread
 

@@ -269,6 +269,39 @@ honest verdict is "need templates," not "found new structure."
 Scaffold update: O1 -> ATTEMPTED, inconclusive, requires IMR templates (new backlog
 item). The new-law question on the MI axis is now a DEFINED next step, not open-ended.
 
+## PROBE 5 (O1-real) — beyond-GR via IMR templates: clean NEGATIVE (INFO-055)
+
+The rigorous version O1/INFO-054 said was needed. pycbc 2.11.0 installed
+(`--ignore-installed cryptography` to dodge a debian uninstall conflict; add to
+requirements if persisting). Generate IMRPhenomD (m1=36, m2=29 Msun), whiten it with
+each detector's ASD, fine time-shift search + 2-quadrature lstsq fit to the whitened
+GW150914 data over the merger window, subtract the maximum-likelihood GR waveform,
+recompute inter-detector MI of residuals vs time-slide null (`probe_mi_beyond_GR_imr.py`).
+
+Result (data): IMR template removed 67.7% (H1) / 53.3% (L1) of merger-window variance.
+MI at the physical +7 ms lag: FULL 0.536 (z=18.0 vs null 0.227+/-0.017) -> RESIDUAL
+0.226 == null 0.209+/-0.019. The residual PEAK (0.263) drifts off to -18.5 ms (search-
+edge) at z=2.9 -- consistent with the null, and NOT at the physical lag.
+
+Reading (Result Discipline): LOCATED, NEGATIVE. The inter-detector MI merger signal is
+FULLY accounted for by the GR waveform -- removing it collapses the physical-lag MI to
+chance. NO detectable common structure beyond GR on the MI axis for GW150914 at this
+sensitivity. Corollary: the "MI carries time structure" of INFO-053 is the GR
+waveform's time structure, nothing beyond -- which also closes O2's premise on this
+axis (the time-coupling hunch gets no support from the MI merger signal). This is a
+real, valuable NEGATIVE (falsification-first): we built the rigorous new-physics test
+and the answer is "it's GR." CAVEATS: single event; template masses fixed (not per-
+detector refit), so subtraction removed ~55-68% of variance -- but the decisive metric
+is that the PHYSICAL-LAG MI drops to null and the residual peak is off-lag/insignificant
+(the leftover variance is uncorrelated detector noise, which carries no inter-detector
+MI -- exactly why residual MI -> null). Speaking posture (after): I expected the full
+template to drop residual MI toward null; it did; verdict = MI is fully GR, no new law.
+
+Scaffold update: O1 -> RESOLVED NEGATIVE (MI = GR waveform). O2 premise also closed on
+the MI axis. The honest status: NO new gravity law found; the surviving physical signal
+is fully standard GR. A new-law search would need a different observable/axis, or many
+events, not this one.
+
 ## Files this session
 - `CLAUDE.md` (rebuilt canonical through S17), `SESSION_HANDOFF_2026-06-02_S17.md`,
   `BACKLOG_tests_and_probes.md` (#1 marked DONE).
@@ -278,6 +311,7 @@ item). The new-law question on the MI axis is now a DEFINED next step, not open-
   (+ `_canary.json`).
 - `probe_mi_merger_axis.py` + `probe_mi_merger_axis_results.json` (+ `_canary.json`).
 - `probe_mi_beyond_chirp.py` + `probe_mi_beyond_chirp_results.json`.
+- `probe_mi_beyond_GR_imr.py` + `probe_mi_beyond_GR_imr_results.json` (needs pycbc).
 - h5py confirmed in `requirements.txt` (installed at runtime; the fresh container's
   SessionStart hook had not installed it this run).
 

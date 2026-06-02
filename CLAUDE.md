@@ -620,10 +620,14 @@ at the physical 7 ms lag, z=15.5 vs a time-slide null, and its excess is entirel
 waveform phase/time structure (not loudness). O1 (INFO-054, beyond-chirp): subtracting
 the recovered Newtonian inspiral cuts inter-detector MI ~2x but a significant residual
 remains at the physical lag -- INCONCLUSIVE for beyond-GR (residual most plausibly
-un-modeled GR); a real new-law test REQUIRES IMR matched-filter templates (new backlog
-6b). Gravity footholds scaffold (F1-F3 confirmed / C1-C3 cleared / O1 attempted-needs-
-templates / O2-O3 open) is in the S17 handoff: we are accumulating validated footings,
-NOT yet a gravity equation, and the new-law road is now a DEFINED requirement.
+un-modeled GR). O1-real (INFO-055): the rigorous beyond-GR test -- pycbc IMRPhenomD
+matched-filter subtraction -- gives a clean NEGATIVE: removing the full GR waveform
+collapses the physical-lag MI to the null (0.54 z=18 -> 0.23 == null), so the MI merger
+signal is FULLY GR, no beyond-GR structure on this axis (also closes O2's premise on
+the MI axis). Gravity footholds scaffold (F1-F3 confirmed / C1-C3 cleared / O1 resolved
+NEGATIVE / O2-O3 open) in the S17 handoff: NO new gravity law found -- the surviving
+physical signal is fully standard GR; the OD method is validated (recovers known laws)
+but a new-law search needs a different observable/axis or many events.
 
 For the (Session 16) session, read `SESSION_HANDOFF_2026-06-02_S16.md`
 first, then `BACKLOG_tests_and_probes.md` (the queue + the standing backlog-first
@@ -888,6 +892,26 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   time-slide null) is established and the requirement is pinned. No new law. Scaffold:
   O1 -> attempted/inconclusive, needs IMR templates (new backlog item). No new
   Operating Rule.
+
+- **INFO-055 -- LOCATED, NEGATIVE (Session 17, new; O1-real, beyond-GR; GW150914)**:
+  the inter-detector MI merger signal is FULLY accounted for by the GR waveform -- no
+  detectable structure beyond GR. The rigorous test INFO-054 required: pycbc 2.11.0
+  installed, IMRPhenomD (m1=36,m2=29) whitened per-detector, fine time-shift +
+  2-quadrature lstsq fit to the whitened GW150914 data, subtract the max-likelihood GR
+  waveform, recompute residual inter-detector MI vs time-slide null
+  (`probe_mi_beyond_GR_imr.py`). RESULT: template removed 67.7%/53.3% of merger-window
+  variance; MI at the physical +7 ms lag FULL 0.536 (z=18.0) -> RESIDUAL 0.226 == null
+  0.209; residual peak 0.263 drifts off to -18.5 ms (search edge) at z=2.9 (consistent
+  with null). READING: removing the GR waveform collapses the physical-lag MI to
+  chance => MI = the GR waveform, NO beyond-GR common structure on this axis for
+  GW150914. Corollary: INFO-053's "MI carries time structure" is the GR waveform's
+  time structure -- which also CLOSES O2's premise on the MI axis (the gravity-couples-
+  to-time hunch gets no support here). A real, valuable NEGATIVE (falsification-first):
+  built the rigorous new-physics test, answer is "it's GR." CAVEATS: single event;
+  template masses fixed (subtraction removed ~55-68% of variance, leftover is
+  uncorrelated detector noise that carries no inter-detector MI -- which is why
+  residual MI -> null). Scaffold: O1 RESOLVED NEGATIVE; no new gravity law found this
+  session; the surviving physical signal is fully standard GR. No new Operating Rule.
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 
