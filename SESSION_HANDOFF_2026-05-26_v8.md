@@ -393,15 +393,71 @@ fact that electroweak unification is established (EM+weak share
 dynamical structure) while strong sits separately (genuinely
 different structure).
 
-**INFO-023 (Session 6) -- REINFORCED**: now has a third
-independent supporting data point from the four-force probe
-(INFO-027), and a fourth from INFO-031 (EM/SF glance). The
-per-domain expression-of-substrate frame is supported by FOUR
-reproducible per-domain signatures: per-domain null direction
-(Session 6), per-domain MI-vs-H functional family (Session 7),
-four-force probe shared substrate / distinct expression (Session
-8), and EM-vs-SF dynamically distinct expression on shared
-substrate when symmetry is controlled (Session 8 post-close).
+**INFO-032 -- LOCATED FINDING (Session 8 post-close, new)**:
+Gravity caricature substrate signature is CONFIGURATION-DEPENDENT
+in a way EM/strong (INFO-031) are not. Three-config probe with 3
+seeds each: gravity_sym_baseline (omega1=omega2=0.8, universal
+E_total coupling), gravity_asym_omegas (omega1=0.8, omega2=1.0,
+universal), gravity_nonuniversal (asym omegas, coupling only to
+E1, not E_total).
+
+Cross-config v_null 6D mean cosines:
+  sym <-> asym_omegas       = +0.11   (different substrate!)
+  sym <-> nonuniversal      = +0.02   (orthogonal!)
+  asym_omegas <-> nonuniv   = +0.99   (essentially same)
+
+Cross-seed cos > 0.99 within each config -- the substrate shift
+is BETWEEN configs, not noise.
+
+Substrate identity per config:
+  gravity_sym + universal:    v_null in (H_a^2, H_b^2, H_a*H_b);
+                              hits Session 3 attractor
+                              (-1, -1, +2)/sqrt(6); algebraic
+                              identity -(H_a - H_b)^2 ~ 0.
+                              MI std ~0.11.
+  gravity_asym + universal:   v_null FLIPS so MI coefficient
+                              is +0.99 (dominant). Algebraic
+                              identity becomes MI ~ const.
+                              MI std collapses to ~0.03 (4x
+                              reduction).
+  gravity_asym + nonuniversal: same MI-dominant substrate
+                              (cos +0.99 to asym universal).
+                              MI std ~0.04.
+
+PySR per config (cross-seed):
+  gravity_sym:        const - one_channel^2  (channel randomly
+                      assigned, 2/3 H_b, 1/3 H_a -- matches
+                      INFO-028 for symmetric dynamics)
+  gravity_asym:       0.21 + weak power-of-H_a (nearly constant
+                      MI; PySR finds weak linear/cubic content)
+  gravity_nonuniv:    0.21 + small linear in H_a or in (H_a - H_b)
+
+Contrast with INFO-031 (EM/SF glance): EM and strong both kept
+their substrate direction across symmetry swap. Only their
+EXPRESSION-level family changed. Gravity's substrate ITSELF is
+configuration-fragile.
+
+Frame-level reading (no claim, frame only): gravity's universal
+energy-mediated coupling under mass asymmetry produces "MI is
+approximately invariant" as the dominant structural constraint.
+The information shared between channels saturates because
+gravitational coupling preserves total energy without preferred
+direction -- once the masses differ, the dynamics balance into
+a configuration where MI doesn't grow or shrink over time.
+For EM/strong/weak the coupling has a preferred mode (electric
+field, color confinement, weak interaction) that gives MI a
+specific functional shape regardless of channel mass equality;
+gravity does not have such a preferred mode.
+
+What gravity "is" in this framework (frame only, no claim):
+a coupling whose substrate signature in operator space depends
+on configuration -- "channel correlation" when channels are
+mass-degenerate, "MI invariance" when they are not. Genuinely
+different signature pattern from the other three forces.
+
+Real-data probe (LIGO strain, orbital data, binary pulsar timing)
+remains the gating test for whether this carries to actual
+gravitational physics.
 
 ## Substantive notes carried forward
 

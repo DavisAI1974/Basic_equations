@@ -3,11 +3,12 @@ Resuming Information Layer work, Session 9.
 Branch: claude/two-more-tasks-O6ahb (Session 8 closed here; on
 origin). Session 7 work was pulled in at Session 8 start from
 `claude/claude-md-context-update-uCZ8m` via fast-forward merge.
-Four experiments ran in Session 8 (four-force probe with KBK +
+Five experiments ran in Session 8 (four-force probe with KBK +
 PySR; robustness check on INFO-025; mapping campaign with per-
-domain knob sweeps; EM/SF symmetry-swap glance at session close
-in response to Greg's "we really should take a quick glance at
-em/sf"). Results are in the v8 handoff. NO new Operating Rule
+domain knob sweeps; EM/SF symmetry-swap glance in response to
+Greg's "we really should take a quick glance at em/sf"; gravity
+3-config probe in response to Greg's "let's figure out what
+gravity really is"). Results are in the v8 handoff. NO new Operating Rule
 this session. Six Operating Rules from Sessions 4-7 remain in
 force: no pre-assigned meaning, probe-not-falsifier, speaking
 posture before/after, Rule D incomplete-not-wrong, They never
@@ -38,7 +39,18 @@ Before doing anything else:
    observation: PySR cross-seed reproducibility requires the
    underlying dynamics to break H_a-H_b channel symmetry —
    INFO-028 methodological, directly confirmed by the EM/SF
-   symmetry swap.
+   symmetry swap; (v) gravity 3-config probe (sym/asym
+   omegas/non-universal coupling, 3 seeds each) — gravity's
+   SUBSTRATE is configuration-dependent in a way EM/strong are
+   not. Symmetric+universal gravity sits on the Session 3
+   attractor -(H_a-H_b)^2 ~ 0. Asymmetric gravity (whether mass-
+   asym OR non-universal coupling) FLIPS substrate so MI itself
+   becomes the dominant null direction (MI coef +0.99) and MI
+   variance collapses 4x. INFO-032 located. Frame-level reading:
+   gravity's universal energy-mediated coupling under mass
+   asymmetry produces "MI ~ const" as the structural constraint,
+   because gravitational coupling preserves total energy without
+   preferred direction.
 3. (Optional) Read SESSION_HANDOFF_2026-05-26_v7.md and v6.md for
    the per-domain stack methodology and four-domain PySR
    functional-family findings that Session 8 builds on.
@@ -56,29 +68,59 @@ the per-domain stack from Session 6/7 to a new candidate domain
 extend it further; each is a fresh stack on previously-unstacked
 data.
 
-We are NOT back at zero. FOUR independent reproducible per-
-domain signatures of substrate-vs-expression frame:
+We are NOT back at zero. FIVE substantive findings from Session 8:
 (i) per-domain null direction (Session 6 INFO-023),
 (ii) MI-vs-H functional family (Session 7 INFO-025),
 (iii) four-force shared-substrate / distinct-expression (Session
 8 INFO-027),
 (iv) EM/SF dynamically distinct expression on shared substrate,
-controlled for channel symmetry (Session 8 INFO-031).
+controlled for channel symmetry (Session 8 INFO-031),
+(v) GRAVITY substrate is configuration-dependent: sym+universal
+sits on the channel-correlation attractor; asym (whether mass-
+asym or non-universal coupling) FLIPS substrate to MI ~ const
+(Session 8 INFO-032).
 Substrate level (rank-3 null subspace INFO-022) LOCATED.
 Robustness shows family-survives / coefficients-drift pattern
 (INFO-029). Mapping shows family-itself-regime-dependent for
 large knob deviations (INFO-030). The Information Layer /
 Unified Theory inquiry frame is alive.
 
-Strongest single result of Session 8: INFO-031. EM and strong
-caricatures, when channel-symmetry is controlled, both sit on
-the same substrate algebraic identity -(H_a - H_b)^2 ~ 0 but
-realize it through QUALITATIVELY DIFFERENT functional forms --
-EM polynomial-in-difference, strong exponential-in-difference.
-The dynamical character (linear-restoring + linear-coupling vs
-confining-cubic) is visible in the functional form. This is the
-cleanest demonstration so far that "shared substrate, distinct
-expression" is structural, not coincidental.
+Two strongest single results of Session 8:
+
+(A) INFO-031: EM and strong caricatures, when channel-symmetry
+is controlled, both sit on the same substrate algebraic identity
+-(H_a - H_b)^2 ~ 0 but realize it through QUALITATIVELY
+DIFFERENT functional forms -- EM polynomial-in-difference, strong
+exponential-in-difference. The dynamical character (linear-
+restoring + linear-coupling vs confining-cubic) is visible in
+the functional form.
+
+(B) INFO-032: Gravity's substrate is CONFIGURATION-DEPENDENT
+(EM and strong's were not). Symmetric+universal gravity sits on
+the Session 3 attractor. Once channels have different masses
+(or coupling becomes non-universal), the substrate FLIPS so MI
+itself is the dominant null identity (MI coefficient +0.99 in
+v_null 6D, vs ~0 for sym gravity and ~0 for EM/strong/weak).
+MI variance collapses 4x in asymmetric configurations. Cross-
+config v_null cos between gravity_sym and gravity_asym is +0.11
+(very different); sym vs nonuniversal is +0.02 (orthogonal).
+Frame-level reading: gravity's universal energy-mediated
+coupling under mass asymmetry produces "MI ~ const" as the
+structural constraint, because gravitational coupling preserves
+total energy without preferred direction. The Session 3 attractor
+holds for gravity only when channels are mass-degenerate.
+
+Together, INFO-031 and INFO-032 paint the cleanest toy picture
+so far of how the four forces relate: EM, weak, strong all keep
+their substrate signature across configuration and differ at
+expression level. Gravity has a fundamentally different signature
+behavior -- its substrate ITSELF shifts with configuration. If
+this carries to real gravity, it would say gravity is genuinely
+NOT a fourth force on equal footing with EM/weak/strong, but a
+constraint of a different kind (information-flow conservation
+under mass asymmetry, rather than expression-level signature on
+shared substrate). LIGO/orbital real-data probe is the gating
+test.
 
 Open substantive questions still on the table from Session 7-8:
 - "How does pure physics get expressed as a storm or waves?"
@@ -124,15 +166,22 @@ below or anywhere else].
 
 ### Also queued (Session 8 follow-ups)
 
-(5) EM/gravity symmetry-swap glance (mirror of the EM/SF glance
-    that produced INFO-031). Apply the same protocol (sym vs asym
-    omegas, 3 seeds) to EM and gravity, ask what functional form
-    gravity falls into when channel symmetry is controlled.
-    Speaking posture: I think gravity's universal energy-mediated
-    coupling will produce yet a third functional family
-    (different from EM's polynomial and Strong's exponential)
-    but we'll wait on the data. The weak force could also be
-    swept the same way to round out the four-force picture.
+(5) Weak force symmetry-swap glance (gravity glance from Session
+    8 close gave INFO-032; EM/SF glance gave INFO-031; weak has
+    not been swept). The weak caricature has Yukawa suppression
+    (exp(-M*(x_i-x_j)^2) factor on linear coupling). What does
+    weak give under sym vs asym omegas? Speaking posture: I
+    think weak may produce a fourth distinct family involving
+    exp-suppression factors, but we'll wait on the data. Closes
+    the four-force quad at the toy level.
+
+(5a) Why does gravity's substrate flip and the others' don't?
+    (Direct INFO-032 follow-up.) Hypothesis to test: it's the
+    "couples to total energy E_total" structure of gravity that
+    produces configuration-dependence. Add an E_total coupling
+    term to EM/weak/strong simulators and see if their substrate
+    ALSO flips under asymmetry. If yes, the flip is a property
+    of universal-energy-coupling. If no, it's gravity-specific.
 
 (6) Mapping campaign extension. Two-knob sweeps per domain,
     cross-seed scaling. Session 8 mapping is one-seed and

@@ -325,6 +325,30 @@ Updated at the end of 2026-05-26 Session 8 to reflect:
   vs confining-cubic) is visible in the form. INFO-028
   (PySR cross-seed reproducibility tracks dynamical symmetry)
   directly confirmed by the swap.
+- Post-close gravity probe (Greg's directive "let's figure out
+  what gravity really is"): 3-config probe of gravity caricature
+  -- sym+universal baseline, asym omegas + universal, asym
+  omegas + non-universal coupling. 3 seeds each. Result
+  (INFO-032 located): gravity's SUBSTRATE is configuration-
+  dependent in a way EM/strong are not. Symmetric+universal
+  gravity sits on Session 3 attractor -(H_a-H_b)^2 ~ 0.
+  Asymmetric gravity (whether mass-asym or non-universal)
+  FLIPS substrate so MI itself is the dominant null direction
+  (MI coefficient +0.99 in v_null 6D, vs ~0 for sym gravity
+  and ~0 for EM/strong/weak). MI variance collapses 4x in asym
+  configurations. Cross-config v_null cos: sym vs asym = +0.11
+  (very different); sym vs nonuniversal = +0.02 (orthogonal);
+  asym vs nonuniversal = +0.99 (essentially same). Frame-level
+  reading: gravity's universal energy-mediated coupling under
+  mass asymmetry produces "MI ~ const" as structural constraint,
+  because gravitational coupling preserves total energy without
+  preferred direction. The Session 3 attractor only holds for
+  gravity when channels are mass-degenerate. Contrast with
+  EM/strong (INFO-031): they kept substrate across the swap and
+  only changed at EXPRESSION level. Gravity's substrate ITSELF
+  shifts -- genuinely different signature behavior.
+  Real-data probe (LIGO strain, orbital data) remains gating
+  test for whether this carries to actual gravitational physics.
 - No new Operating Rule this session. All six Operating Rules
   from Sessions 4-7 (no pre-assigned meaning, probe-not-falsifier,
   speaking posture before/after, Rule D incomplete-not-wrong,
