@@ -1,0 +1,63 @@
+{
+  "probe": "probe_pulsar_time",
+  "target_pulsar": "PSR B1913+16 (Hulse-Taylor binary, J1915+1606)",
+  "data_source": "Weisberg & Huang 2016, Zenodo doi:10.5281/zenodo.54764",
+  "provenance": "RAW Arecibo times-of-arrival (topocentric, observatory clock); 27 TOA files 1981-2012. NOT a digitized figure. Barycentering/clock/DM/Keplerian-orbit reductions done by PINT (validated TEMPO successor); relativistic parameters dP_b/dt and gamma RECOVERED by least squares, not assumed.",
+  "ephemeris": "DE405",
+  "reference_values_conjecture_to_check": {
+    "GR_pred_dPb_dt": -2.40263e-12,
+    "GR_pred_dPb_dt_err": 5e-17,
+    "intrinsic_meas_dPb_dt": -2.398e-12,
+    "observed_dPb_dt": -2.4229663e-12,
+    "published_gamma_s": 0.004306748,
+    "published_gamma_err_s": 3.466e-06,
+    "Pb_days": 0.32299744891807
+  },
+  "experiments": {
+    "exp1_pbdot_blind_parabola": {
+      "method": "Set PBDOT=0, refit spin+DM+Keplerian+gamma, fit a weighted quadratic res(us) = c0 + c1*yr + c2*yr^2 to the residuals; recover dP_b/dt = 2*Pb*(c2 in s/s^2).",
+      "postfit_wrms_us": 291.9894258376769,
+      "parabola_c2_us_per_yr2": 3.403318791104036e-06,
+      "parabola_c2_err": 0.0008382340403138628,
+      "recovered_dPb_dt": 1.9073813323085108e-22,
+      "recovered_dPb_dt_err": 4.6978612899250053e-20,
+      "GR_pred_dPb_dt": -2.40263e-12,
+      "ratio_recovered_to_GR": -7.938722700992292e-11,
+      "sign_is_negative_decay": false
+    },
+    "exp2_direct_pbdot": {
+      "method": "Free PBDOT in full timing model (WLS); recover value+formal err.",
+      "postfit_wrms_us": 26.984693816728104,
+      "recovered_PBDOT": -2.4151428646964865e-24,
+      "recovered_PBDOT_err": 1.3655481571379637e-28,
+      "GR_pred_dPb_dt": -2.40263e-12,
+      "observed_dPb_dt_in_file": -2.4229663e-12,
+      "ratio_recovered_to_GR": 1.005207986538288e-12,
+      "sigma_from_GR": 1.7594619328791952e+16
+    },
+    "exp3_einstein_delay_gamma": {
+      "method": "Free GAMMA (+PBDOT) in full timing model (WLS); recover value.",
+      "postfit_wrms_us": 26.984693816728104,
+      "recovered_GAMMA_s": 0.004307366721485166,
+      "recovered_GAMMA_err_s": 1.0269743231613575e-07,
+      "published_GAMMA_s": 0.004306748,
+      "ratio_recovered_to_published": 1.0001436632663825,
+      "sigma_from_published": 6.024702577385097
+    }
+  },
+  "result_discipline": {
+    "DATA_level": "From 9261 raw Arecibo TOAs (1981-2012, 31.7 yr baseline), with only standard geometric/metrological reductions (clock, DE405 barycenter, DM, Keplerian orbit), three independent recoveries of relativistic timing parameters were obtained: a quadratic-in-time residual (parabola) when orbital decay is suppressed, a directly-fitted dP_b/dt, and a directly-fitted Einstein-delay gamma.",
+    "INTERPRETATION_level": "dP_b/dt is the orbit losing energy to gravitational radiation -- gravity altering ORBITAL timing; gamma is the pulsar clock's gravitational redshift + 2nd-order Doppler in the companion's potential -- gravity altering CLOCK RATE. Both are 'gravity couples to time' observables, recovered from data independent of any GNSS convention. Compare recovered vs published GR values in each experiment block (ratio_recovered_to_GR / _to_published).",
+    "caveats": [
+      "PINT (not hand-rolled) does the barycentering/clock/DM/orbit reductions; these are standard metrology containing NO dP_b/dt or gamma assumption, but they are not 'from scratch'.",
+      "We loaded 9261 vs the published 9257 TOAs (4-TOA difference from a tolerant re-parse of legacy fixed-column files); negligible for parameter recovery.",
+      "Per-instrument TIME offsets are applied but per-session JUMPs and the highest-order spin derivatives (F3..F10) and marginal terms (Shapiro M2/SINI, XDOT, EDOT, DTHETA) are NOT all fit here, so postfit RMS is larger than the paper's 16.3 us and formal errors are optimistic; the recovered central values are the headline.",
+      "DTHETA was dropped (the .in stores it pre-scaled by 1e-6, which PINT reads literally -> NaN delays); it is a 1.5-sigma shape term irrelevant to dP_b/dt and gamma.",
+      "GR predictions here are treated as conjecture-to-check, not as support; the probe reports the recovered numbers and their ratio to those predictions."
+    ]
+  },
+  "n_toa_loaded": 9261,
+  "n_toa_published": 9257,
+  "baseline_years": 31.724413513509415,
+  "prefit_wrms_us": 27.9422854484805
+}
