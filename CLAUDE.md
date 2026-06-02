@@ -34,9 +34,13 @@ clustering is BOOKKEEPING — scaling one channel (b->s*b) is exactly MI-invaria
 pure units choice (H(sX)=H(X)+ln s; asym_range 2-4 on 6/7 systems), so equal
 marginal entropy is a construction choice, not nature; the only scale-invariant
 (genuinely physical) quantity in the basis is MI. The substrate cos metric is itself
-representation-dependent + fragile. Prior context: S16 re-derived WF + SF governing
-laws from raw data (Z propagator M_Z 99.5%; QCD asymptotic freedom); gravity chirp
-method-limited; time-blind was a method identity. MI-in-null coupling DISPROVED.
+representation-dependent + fragile. (3) Gravity-FORWARD pivot, backlog #3 (INFO-052):
+recovered the inspiral chirp law from raw GW150914 strain by a CWT ridge — both
+detectors R^2 0.99, M_c ~38 vs catalog ~31, beating the S16 Hilbert (R^2 0.001);
+GW170817 confirms the law form (R^2 0.88), mass lever-arm-limited. Prior context: S16
+re-derived WF + SF governing laws from raw data (Z propagator M_Z 99.5%; QCD
+asymptotic freedom); gravity chirp method-limited (now fixed); time-blind was a method
+identity. MI-in-null coupling DISPROVED.
 Markets parked.
 
 ## Identity & Team
@@ -571,10 +575,14 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 For the latest (Session 17) session, read `SESSION_HANDOFF_2026-06-02_S17.md`, then
 the Session 17 note below. Headline: JOB 1 (CLAUDE.md drift) FIXED — this file is now
-canonical through S17; and backlog #1 (construction-vs-nature) RESOLVED on the
-construction side (INFO-051) — the equal-entropy clustering is bookkeeping (scaling a
-channel is exactly MI-invariant yet sets the marginal-entropy asymmetry by a units
-choice; MI is the only scale-invariant quantity in the basis).
+canonical through S17. Backlog #1 (construction-vs-nature, INFO-051) RESOLVED — the
+equal-entropy clustering is bookkeeping (scaling a channel is exactly MI-invariant yet
+sets the marginal-entropy asymmetry by a units choice; MI is the only scale-invariant
+quantity in the basis). Then the deliberate pivot off coordinate-auditing onto
+gravity-FORWARD ground: backlog #3 (INFO-052) recovered the gravity inspiral chirp law
+from raw GW150914 strain by a CWT ridge — both detectors agree at R^2 0.99, M_c ~38 vs
+catalog ~31 — decisively beating the S16 Hilbert (R^2 0.001); GW170817 confirms the
+law form (R^2 0.88) with a lever-arm-limited mass.
 
 For the (Session 16) session, read `SESSION_HANDOFF_2026-06-02_S16.md`
 first, then `BACKLOG_tests_and_probes.md` (the queue + the standing backlog-first
@@ -778,6 +786,26 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   a different estimator), NOT garbage to drop. CAVEAT: the quadratic-null cos metric
   is estimator-noise-sensitive (INFO-024); do not over-read individual cos values.
   No new Operating Rule.
+
+- **INFO-052 -- LOCATED FINDING (Session 17, new; gravity-FORWARD; 2 real events, 2
+  detectors)**: the gravity inspiral chirp LAW is recovered from raw strain by a
+  time-frequency RIDGE -- the pivot from PROBE 1's deflationary edge result onto the
+  scale-invariant content, the gravity analogue of the S16 WF/SF Piece-1 wins. Probe
+  (`probe_gravity_chirp_ridge.py`): own FFT-based Morlet CWT (scipy 1.17 removed cwt)
+  -> scalogram; ridge tracked BACKWARD from the merger column with a continuity
+  constraint; fit u=f^(-8/3) vs t (Newtonian inspiral => u linear in t, slope ->
+  chirp mass). DATA: GW150914 (BBH) CLEAN on BOTH detectors -- H1 R^2 0.995 M_c 38.40
+  Msun (f 34->155 Hz, t_c 16.424 s); L1 R^2 0.987 M_c 38.18 Msun (t_c 16.419 s); true
+  merger 16.40 s; catalog detector-frame M_c ~31 so ~24% high (expected Newtonian-on-
+  late-inspiral bias) and the two detectors agree to <1%. DECISIVELY beats S16
+  (whitened-Hilbert R^2 0.001 -> ridge R^2 0.99), confirming backlog #3's diagnosis
+  that the method, not the event, was the S16 limiter. GW170817 (BNS): the f^(-8/3)
+  LAW FORM fits a second, physically-distinct system (R^2 0.879, merger from metadata
+  15.43 s) but absolute M_c is biased (15.67 vs ~1.20) -- the visible H1 arc is a
+  narrow low-frequency band (51->76 Hz, short lever arm); honest partial, kept as data
+  (form generalizes, absolute mass data/method-limited in a 32 s H1 segment).
+  INTERPRETATION: a positive gravity governing-law recovery on the scale-invariant
+  content (not the bookkeeping substrate). No new Operating Rule.
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 

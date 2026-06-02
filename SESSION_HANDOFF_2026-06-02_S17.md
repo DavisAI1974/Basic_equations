@@ -112,10 +112,59 @@ coupling as a regime of interest). Logged, not predetermined as bad.
   the marginal-entropy level (MI exactly invariant; asymmetry = units knob). The
   fragile substrate-cos level is consistent with it but not load-bearing.
 
+## PROBE 2 (backlog #3) — gravity chirp law recovered from real strain (INFO-052)
+
+GRAVITY-FORWARD by design (the pivot from S17 PROBE 1's deflationary edge result):
+recover a governing LAW on the scale-invariant content, the gravity analogue of the
+S16 WF (Z propagator) + SF (QCD running) wins. Newtonian inspiral predicts
+u(t)=f(t)^(-8/3) is LINEAR in t with slope k = -(256/5) pi^(8/3) (G M_c/c^3)^(5/3),
+so a clean linear u-vs-t + slope -> chirp mass = the law recovered. Method
+(`probe_gravity_chirp_ridge.py`): own FFT-based Morlet CWT (scipy.signal.cwt removed
+in 1.17) -> scalogram; ridge tracked BACKWARD from the merger column with continuity
+constraint (search band +/-25% log-index, gap tolerance 12) so it follows the
+descending inspiral arc instead of jumping to noise; fit u vs t on the rising
+inspiral. Replaces the S16 per-sample whitened-Hilbert that gave R^2 0.001.
+
+Results (data level):
+- **GW150914 (BBH): CLEAN recovery, both detectors agree.** H1 R^2 0.995, M_c 38.40
+  Msun, ridge f 34->155 Hz, t_c 16.424 s; L1 R^2 0.987, M_c 38.18 Msun, f 49->174 Hz,
+  t_c 16.419 s (true merger 16.40 s). Catalog detector-frame chirp mass ~31 Msun, so
+  recovered M_c is ~24% high -- the expected bias of a Newtonian-only f^(-8/3) fit on
+  the late/strong-field arc (PN + whitening shape the ridge). The f^(-8/3)-linear-in-t
+  LAW is confirmed (R^2 0.99) and the two independent detectors agree to <1% on M_c.
+  DECISIVELY beats S16 (Hilbert R^2 0.001 -> ridge R^2 0.99), exactly as backlog #3
+  predicted.
+- **GW170817 (BNS): honest partial.** Merger from file metadata (GPSstart 1187008867
+  + known merger GPS 1187008882.43 = 15.43 s; envelope detection had failed). The
+  f^(-8/3) LAW FORM fits this second, physically-distinct system (R^2 0.879,
+  t_c 15.430 s), but absolute M_c is biased (15.67 vs catalog ~1.20 Msun) because the
+  visible H1 arc is a narrow low-frequency band (51->76 Hz, short lever arm); the
+  faint high-frequency sweep to merger is data/method-limited in this 32 s H1 segment
+  (BNS SNR is mostly in L1, which carries the known glitch). Kept as data: the law
+  FORM generalizes to neutron stars; absolute-mass recovery needs the full sweep
+  (longer data / louder detector / matched filter), not manufactured.
+
+Reading (Result Discipline): DATA -- the Newtonian inspiral law u=f^(-8/3) linear in
+t is recovered from raw GW150914 strain on both detectors (R^2 0.99), M_c ~38 vs
+catalog ~31; the law FORM also fits GW170817 (R^2 0.88) with a lever-arm-limited mass.
+INTERPRETATION -- this is a positive gravity governing-law recovery on the scale-
+invariant content (not the bookkeeping substrate), the gravity analogue of WF/SF
+Piece-1. CAVEAT -- Newtonian-only fit => ~20-25% M_c bias on the strong-field arc is
+expected; GW170817 absolute mass is not constrained by the H1 arc here. No new
+Operating Rule. Speaking posture (after): GW150914 is a clean positive; GW170817 is
+a partial that confirms the form, not the mass -- recorded as such.
+
+ADJUSTMENT NOTE (within-probe, per the new rule): backlog #3's S16 diagnosis
+("needs Q-transform/matched-filter, not naive Hilbert") is CONFIRMED -- the CWT ridge
+was the fix. Merger-seeding from metadata (not envelope-peak / max-power) was needed
+for the faint BNS.
+
 ## Files this session
 - `CLAUDE.md` (rebuilt canonical through S17), `SESSION_HANDOFF_2026-06-02_S17.md`,
   `BACKLOG_tests_and_probes.md` (#1 marked DONE).
 - `probe_construction_vs_nature.py` + `probe_construction_vs_nature_results.json`
+  (+ `_canary.json`).
+- `probe_gravity_chirp_ridge.py` + `probe_gravity_chirp_ridge_results.json`
   (+ `_canary.json`).
 - h5py confirmed in `requirements.txt` (installed at runtime; the fresh container's
   SessionStart hook had not installed it this run).

@@ -49,11 +49,16 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
    real-detector/noise effect. DATA: Zenodo 5113016 (demonDataPublic.rar, 20.8MB)
    + unrar + port the S13 HBT loader (s13_force_hbt.py, on claude/file-upload-memory-LKCoB).
 
-3. **Proper chirp recovery (gravity Piece-1, redo)** (MED).
-   Naive Hilbert instantaneous-frequency FAILS on both GW150914 and GW170817
-   (method-limited, S16). Redo with a Q-transform/constant-Q ridge with SNR
-   weighting, or matched-filter template tracking, to recover df/dt ~ f^(11/3).
-   Data in hand (GW150914 + GW170817 strain).
+3. **Proper chirp recovery (gravity Piece-1, redo)** -- DONE (S17, INFO-052) for
+   GW150914; PARTIAL for GW170817. A Morlet-CWT ridge tracked backward from the merger
+   recovers u=f^(-8/3) linear in t: GW150914 both detectors R^2 0.99, M_c ~38 vs
+   catalog ~31 (Newtonian-late-inspiral ~24% high), decisively beating the S16 Hilbert
+   (R^2 0.001) -- so the S16 limiter was the METHOD, confirmed. GW170817 confirms the
+   LAW FORM (R^2 0.88) but absolute M_c is biased (15.7 vs 1.20): the visible H1 arc is
+   a narrow 51->76 Hz band (short lever arm). See `probe_gravity_chirp_ridge.py`.
+   REMAINING (new sub-item, bottom-of-thread): GW170817 absolute chirp mass needs the
+   full sweep to merger -- louder detector (L1, has the glitch), longer data, or
+   matched-filter template tracking. Append as a follow-up, not a blocker.
 
 4. **Louder-event flow reproduction** (BACKBURNER per Greg, S16).
    Fetch GW170814/GW190521 strain; re-run per-event flow axis; test whether
