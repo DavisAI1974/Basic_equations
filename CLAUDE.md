@@ -306,6 +306,27 @@ x0=H_a, x1=H_b.
   actual Markets dipole JSONs from the Markets repo via a tooled session; the
   markets algebraic dipole FORM + this placement are recorded here meanwhile.
 
+- **MARKETS update (Session 14; STRONG force added + RE-RUN-WHEN-MODELS-IMPROVE
+  flag from Greg)**: strong is now self-pole too (INFO-050) -> 4/4 real gauge
+  forces on the self-pole; the coupling side still holds exactly two members,
+  simulated BIOLOGY (MI-in-null, knob-confirmed) and MARKETS (the predictive
+  algebraic dipole). Strong did not move markets' placement. **ACTION FLAGGED BY
+  GREG (re-validation, not yet run): RE-RUN THE WHOLE MI/COUPLING DISCRIMINATOR
+  ONCE WE HAVE BETTER MODELS.** The coupling-vs-self-pole split (biology+markets
+  carry MI/predictive structure; the 4 forces + physics/geology do not) currently
+  rests on (a) the SIMULATED domain dynamics (Duffing/Lotka-Volterra/Brusselator/
+  Burridge-Knopoff -- toy ODEs, INFO-023/040) and (b) the markets predictor at
+  ~0.993 5-fold CV. As the per-domain models get more realistic / higher-fidelity
+  (better simulators, more channels, real biology/market data instead of toy ODEs)
+  the discriminator must be re-run end-to-end to confirm: does MI STILL enter the
+  null only for biology+markets, and do the 4 real forces STILL stay self-pole?
+  This is the load-bearing claim of the whole force<->equation arc, so it should be
+  the first thing re-checked whenever the models are upgraded -- a result that
+  could move (per Rule D, the current reading is one slice, not a settled fact).
+  Specifically re-confirm: INFO-040 biology MI~=0.28*H_a + g-knob slope; markets
+  H_a^2=a+b(H_aH_b)+c(H_aH_b)^2 predictor; and the self-pole nulls of weak/EM/
+  strong/gravity (INFO-047/048/049/050) under any improved real-data construction.
+
 ### Next direction queued -- principled force-operator-space (Session 12 close)
 
 Greg wants to dive into this. The force<->equation question (INFO-042 (b))
@@ -330,6 +351,52 @@ space so the comparison is data-driven, not caricature.
   - this is the honest path to test whether EM really resembles the physics
     equation (vs being a caricature artifact) and whether the coupling-type
     mapping (gravity <-> equal-entropy/self domains) survives real data.
+
+### Queued thread (Session 14, Greg) -- "what ARE the 4 forces, and where/how derived?"
+
+Greg's S14 question after the 4/4 self-pole result. HONEST BOUNDARY FIRST
+(OD-mode + no-mechanism rule + "no dataset contains the origin"): "what a force
+ACTUALLY IS" (ontology / why it exists / its mechanism) is NOT a data question --
+OD extracts governing equations from raw data, it does not produce ontology or
+mechanism, and no dataset contains a force's origin. That part stays a frame,
+permanently, unless reframed into something falsifiable. So we do NOT chase
+"what it is." BUT "where/how derived" decomposes into THREE data-shaped,
+falsifiable pieces, each with a clear data requirement:
+
+  - **PIECE 1 -- re-derive each force's GOVERNING EQUATION from raw data without
+    assuming it** (the OD mantra applied to a force; the most OD-faithful piece).
+    - gravity/EM HAVE classical force laws -> recoverable by symbolic regression
+      from trajectory/field data (precedent: Lemos-Cranmer 2022 rediscovered
+      Newton's law + planetary masses from real ephemerides; Schmidt-Lipson
+      Hamiltonians). NEED: raw two-body trajectory data (ephemerides / binary-
+      pulsar timing / LIGO inspiral phase->separation(t)) for gravity; charged-
+      particle tracks in a known field for EM.
+    - weak/strong have NO classical force law -- the "equation" is the QFT
+      amplitude / propagator / running coupling. Data-shaped analogue = recover
+      the ENERGY-DEPENDENCE / resonance shape from measured distributions. NEED:
+      data we ALREADY HAVE -- weak: the Z Breit-Wigner propagator (M_Z, Gamma_Z)
+      from the dimuon mass spectrum (data/forces/Zmumu.csv); strong: alpha_s(Q)
+      running / the femtoscopy source radius R from C(q) (data/strong/).
+  - **PIECE 2 -- where the COUPLING STRENGTHS come from** (the parameter-origin
+    piece). The SM takes ~26 couplings as free inputs; "where they come from" =
+    is there a PREDICTIVE relation among them (predicts a held-out parameter and
+    survives)? INFO-042 found real structure (Koide 5-digit, Cabibbo) but NOTHING
+    predictive/derived. NEED: the PDG precision parameter set (have it) + an OD
+    search for a held-out-predictive relation. High-risk (likely no clean rule --
+    itself a result).
+  - **PIECE 3 -- are the 4 actually ONE thing (unification)** -- the Track B
+    inverse problem (INFO-037), partly built: extract the new-physics FOOTPRINT
+    (Delta-b_i, onset scale mu_NP) required to close the running-coupling triangle.
+    Mechanism-agnostic, falsifiable. Two-loop already shrank the triangle 3.5x
+    with no new physics; FOOTPRINT recoverable, IDENTITY never.
+
+  MOST TRACTABLE "one part" with data IN HAND = Piece 1 for a force we already
+  have: recover the Z propagator (weak) from Zmumu.csv, and/or the gravitational
+  chirp law from the cached LIGO inspiral. Decision gate (Result Discipline): map
+  these alternatives before building; do the cheapest defensible one as a down
+  payment. NOTE the scope honesty -- recovering the Z Breit-Wigner is "deriving
+  the weak neutral-current's data-level propagator shape from raw data," NOT
+  deriving the weak force's mechanism or what it "is."
 
 ## Information Layer — Current State (2026-05-25 Session 3)
 
