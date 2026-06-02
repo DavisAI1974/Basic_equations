@@ -630,11 +630,16 @@ remains at the physical lag -- INCONCLUSIVE for beyond-GR (residual most plausib
 un-modeled GR). O1-real (INFO-055): the rigorous beyond-GR test -- pycbc IMRPhenomD
 matched-filter subtraction -- gives a clean NEGATIVE: removing the full GR waveform
 collapses the physical-lag MI to the null (0.54 z=18 -> 0.23 == null), so the MI merger
-signal is FULLY GR, no beyond-GR structure on this axis (also closes O2's premise on
-the MI axis). Gravity footholds scaffold (F1-F3 confirmed / C1-C3 cleared / O1 resolved
-NEGATIVE / O2-O3 open) in the S17 handoff: NO new gravity law found -- the surviving
-physical signal is fully standard GR; the OD method is validated (recovers known laws)
-but a new-law search needs a different observable/axis or many events.
+signal is FULLY GR -- no beyond-GR structure on this axis. CORRECTION (Rule D, Greg
+caught S17): this does NOT close O2 (gravity-couples-to-time) -- that coupling is
+INTRINSIC to GR, so "it's all GR" is consistent with the hunch, not against it; O2 is a
+framework/representation question (express gravity's GR-real time coupling as a flow
+dipole; does it distinguish gravity from gauge forces -- H-C) and stays OPEN. Gravity
+footholds scaffold (F1-F3 confirmed / C1-C3 cleared / O1 resolved NEGATIVE for
+beyond-GR / O2 open-reframed / O3 open) in the S17 handoff: NO new gravity LAW found --
+the surviving physical signal is fully standard GR; the OD method is validated
+(recovers known laws); a beyond-GR new-law search needs a different observable or many
+events.
 
 For the (Session 16) session, read `SESSION_HANDOFF_2026-06-02_S16.md`
 first, then `BACKLOG_tests_and_probes.md` (the queue + the standing backlog-first
@@ -911,14 +916,21 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   0.209; residual peak 0.263 drifts off to -18.5 ms (search edge) at z=2.9 (consistent
   with null). READING: removing the GR waveform collapses the physical-lag MI to
   chance => MI = the GR waveform, NO beyond-GR common structure on this axis for
-  GW150914. Corollary: INFO-053's "MI carries time structure" is the GR waveform's
-  time structure -- which also CLOSES O2's premise on the MI axis (the gravity-couples-
-  to-time hunch gets no support here). A real, valuable NEGATIVE (falsification-first):
-  built the rigorous new-physics test, answer is "it's GR." CAVEATS: single event;
-  template masses fixed (subtraction removed ~55-68% of variance, leftover is
-  uncorrelated detector noise that carries no inter-detector MI -- which is why
-  residual MI -> null). Scaffold: O1 RESOLVED NEGATIVE; no new gravity law found this
-  session; the surviving physical signal is fully standard GR. No new Operating Rule.
+  GW150914. A real, valuable NEGATIVE (falsification-first): built the rigorous
+  new-physics test, answer is "it's GR." CAVEATS: single event; template masses fixed
+  (subtraction removed ~55-68% of variance, leftover is uncorrelated detector noise
+  that carries no inter-detector MI -- which is why residual MI -> null).
+  CORRECTION (Rule D -- Greg caught S17): this does NOT close O2 (the gravity-couples-
+  to-time hunch). O2 was never a beyond-GR question -- gravity/time coupling is
+  INTRINSIC to GR (the chirp IS time-evolution; time dilation; proper time). INFO-053's
+  "MI carries time structure" being GR's time structure is CONSISTENT with the
+  flow/time hunch, not evidence against it. INFO-055 closes ONLY "beyond-GR structure
+  on the MI axis"; the earlier "also closes O2" was incomplete-not-wrong. O2 is a
+  FRAMEWORK/REPRESENTATION question -- can OD express gravity's GR-real time coupling as
+  a flow/time dipole term, and does that term distinguish gravity from the gauge forces
+  (H-C: only gravity touches time)? -- and remains OPEN. Scaffold: O1 RESOLVED NEGATIVE
+  (beyond-GR only); no new gravity LAW found this session; the surviving physical signal
+  is fully standard GR. No new Operating Rule.
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 

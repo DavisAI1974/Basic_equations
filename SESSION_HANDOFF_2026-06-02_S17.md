@@ -286,20 +286,33 @@ edge) at z=2.9 -- consistent with the null, and NOT at the physical lag.
 Reading (Result Discipline): LOCATED, NEGATIVE. The inter-detector MI merger signal is
 FULLY accounted for by the GR waveform -- removing it collapses the physical-lag MI to
 chance. NO detectable common structure beyond GR on the MI axis for GW150914 at this
-sensitivity. Corollary: the "MI carries time structure" of INFO-053 is the GR
-waveform's time structure, nothing beyond -- which also closes O2's premise on this
-axis (the time-coupling hunch gets no support from the MI merger signal). This is a
-real, valuable NEGATIVE (falsification-first): we built the rigorous new-physics test
-and the answer is "it's GR." CAVEATS: single event; template masses fixed (not per-
-detector refit), so subtraction removed ~55-68% of variance -- but the decisive metric
-is that the PHYSICAL-LAG MI drops to null and the residual peak is off-lag/insignificant
-(the leftover variance is uncorrelated detector noise, which carries no inter-detector
-MI -- exactly why residual MI -> null). Speaking posture (after): I expected the full
-template to drop residual MI toward null; it did; verdict = MI is fully GR, no new law.
+sensitivity. This is a real, valuable NEGATIVE (falsification-first): we built the
+rigorous new-physics test and the answer is "it's GR." CAVEATS: single event; template
+masses fixed (not per-detector refit), so subtraction removed ~55-68% of variance --
+but the decisive metric is that the PHYSICAL-LAG MI drops to null and the residual peak
+is off-lag/insignificant (the leftover variance is uncorrelated detector noise, which
+carries no inter-detector MI -- exactly why residual MI -> null). Speaking posture
+(after): I expected the full template to drop residual MI toward null; it did; verdict =
+no structure BEYOND GR on this axis.
 
-Scaffold update: O1 -> RESOLVED NEGATIVE (MI = GR waveform). O2 premise also closed on
-the MI axis. The honest status: NO new gravity law found; the surviving physical signal
-is fully standard GR. A new-law search would need a different observable/axis, or many
+CORRECTION (Rule D -- Greg caught S17): an earlier line here said this "also closes O2's
+premise (the time-coupling hunch)." That was incomplete-not-wrong and is RETRACTED. O2
+(gravity-couples-to-time) was NEVER a beyond-GR question: gravity/time coupling is
+INTRINSIC to GR (the chirp IS time-evolution; time dilation; proper time). So finding
+the signal is "all GR" is CONSISTENT with the flow/time hunch, not against it -- indeed
+the gravity signal's entire informational content BEING its time structure is a (frame-
+level) data point consistent with the hunch. INFO-055 closes ONLY "beyond-GR structure
+on the MI axis." O2 is reframed as a FRAMEWORK/REPRESENTATION question (below) and stays
+OPEN.
+
+Scaffold update: O1 -> RESOLVED NEGATIVE (beyond-GR only). O2 -> OPEN, REFRAMED: not a
+new-physics question but "can OD express gravity's GR-real time/flow coupling as a flow
+dipole term, and does that term distinguish gravity from the gauge forces (H-C: only
+gravity touches time)?" -- testable by comparing a flow/time operator's response on
+gravity (chirp, has time-evolution) vs the gauge-force objects (no chirp-like
+time-evolution). The honest status: NO new gravity LAW found; the surviving physical
+signal is fully standard GR (good -- that is the falsifiable negative). A BEYOND-GR
+new-law search would need a different observable/axis, or many
 events, not this one.
 
 ## Files this session

@@ -78,12 +78,26 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
    NEGATIVE. pycbc 2.11.0 IMRPhenomD matched-filter subtraction on GW150914: removing
    the full GR waveform collapses the physical-lag inter-detector MI to the null (0.54
    z=18 -> 0.23 == null; residual peak off-lag, z=2.9). The MI merger signal is FULLY
-   GR -- NO beyond-GR structure on this axis (also closes O2's premise on the MI axis).
+   GR -- NO beyond-GR structure on this axis. (Does NOT close O2: gravity/time coupling
+   is intrinsic to GR, so "all GR" is consistent with the time-coupling hunch, not
+   against it -- Rule D correction, Greg S17. O2 stays open, reframed as a framework
+   question -- see below.)
    See `probe_mi_beyond_GR_imr.py`. INSTALL NOTE: pycbc needs
    `pip install pycbc --ignore-installed cryptography` (debian cryptography uninstall
    conflict); NOT added to requirements.txt to avoid breaking the SessionStart hook.
    REMAINING (bottom, optional): repeat across many events / per-detector mass refit to
    strengthen the negative; but for GW150914 the new-law road on the MI axis is closed.
+
+6c. **O2 (reframed) -- gravity's time/flow coupling as a framework term** (NEW, S17;
+   Greg's catch). NOT a beyond-GR/new-physics probe (INFO-055 closed that on the MI
+   axis). The question: can the OD/dipole framework EXPRESS gravity's GR-real time
+   coupling as a flow/time dipole term, and does that term DISTINGUISH gravity from the
+   gauge forces (H-C: only gravity touches time)? Concretely: define a flow/time
+   operator (e.g. dphase/dt or the chirp's time-evolution signature) and measure its
+   response on gravity (GW chirp -- has monotone time-evolution) vs the gauge-force
+   real objects (Z resonance, QCD running, HBT -- no chirp-like time-evolution). A clean
+   gravity-vs-gauge contrast on a time/flow operator would give the hunch a first
+   empirical footing (still a frame; respects no-synthesis-across-construction-type).
 
 ## 4-FORCE thread
 
