@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 13)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 14)
 
 ## Identity & Team
 
@@ -434,8 +434,17 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For the latest (Session 13) session, see the Session 13 note below (INFO-044
-through INFO-049). Headline of the two cheap coupling/LIGO follow-ups: chemistry's
+For the latest (Session 14) session, see the Session 14 note below (INFO-050).
+Headline: the STRONG force real-data operator object was built (ATLAS DAOD_HION14
+Pb-Pb two-pion femtoscopy, read with pure-Python uproot -- no CMSSW/VM -- after
+the CMS RECO path was rejected as uproot-unreadable), completing a clean 4/4: all
+four real gauge forces (gravity/weak/EM/strong) sit on the equal-entropy
+SELF-POLE with MI NOT in the null. The genuine BE correlation is confirmed
+present (C(q<0.1)~1.10) yet stays out of the null even in the low-q femtoscopy
+window. MI-in-null coupling remains ONLY in simulated biology. NO synthesis
+across construction types (strong compared within-type to weak). Then read the
+Session 13 note (INFO-044 through INFO-049). Headline of the two cheap
+coupling/LIGO follow-ups: chemistry's
 residual tracks the Brusselator B knob in the oscillatory regime (INFO-044, the
 chemistry analogue of biology's MI-slope-vs-g); the MI-driven LIGO merger
 departure GENERALIZES across all 12 events (INFO-045, S11 GW150914 thread
@@ -703,7 +712,110 @@ isn't real data); each is its own real-data probe.
   ONLY in simulated biology, in NO real force object yet measured (the EM
   g2(0)-coincidence object, INFO-049, confirmed this: genuine HBT bunching stays
   out of the null; the sparse-bin MI-in-null was an INFO-024 estimator artifact).
-  Open within-type extension: the strong force (heavy, deferred).
+  Open within-type extension: the strong force (heavy, deferred) -- CLOSED in
+  Session 14 (INFO-050): strong is also self-pole; 4/4 real gauge forces now
+  measured.
+
+## Note (Session 14 update — 2026-06-02)
+
+Session 14 opened on the v14 kickoff (CLAUDE.md updated through S13/INFO-049).
+Greg's pick: "let's do the big one next" -- the STRONG force real-data operator
+object, the last within-type force and the 4-for-4 test of the self-pole frame.
+Branch: work on the session-start branch `claude/upload-to-memory-1g6eY` (the
+three master files -- CLAUDE.md S13, v13 handoff, v14 kickoff -- were uploaded to
+memory at session start; the master context was then pulled into context). main
+not synced this session (the S13 force scripts live on
+`claude/file-upload-memory-LKCoB`, not main; this branch carries the S14 work).
+No PR. All Operating Rules in force incl. header-currency + Greg's no-synthesis
+directive. Header bumped to Session 14.
+
+- **Decision gate (Result Discipline; mapped before committing TB/compute)**.
+  The kickoff's cheap first step ("test uproot on ONE file before any TB
+  download") drove the whole gate. Findings:
+  - **Network**: this session's egress proxy CANNOT reach `eospublic.cern.ch`
+    (the EOS host for ALL CMS/ATLAS open-data files) -- HTTPS 503 (proxy fails to
+    verify CERN's TLS cert chain, "self signed certificate in chain"), xrootd:1094
+    times out (port blocked). This DIFFERS from S13, where eospublic worked --
+    an environment-level network-policy difference. **Workaround found (reusable):**
+    `https://opendata.cern.ch/eos/opendata/<path>` streams the same files (200,
+    supports HTTP range requests), so uproot partial remote reads work through it.
+  - **CMS HI RECO REJECTED** (records 14010 HICorePhysics / 14011 / 14014; 19.3 TB,
+    ~2.5-3.9 GB/file). uproot opens the file, reads the Events tree (2380 branches),
+    sees the HI track collections (hiSelectedTracks, hiGlobalPrimTracks) with
+    momentum_.fCoordinates.fX/fY/fZ leaves -- BUT returns 0-length for EVERY track
+    member (momentum, chi2_, ndof_, charge_) while `.present`=True: a systematic
+    failure to reconstruct the vector<reco::Track> member-wise counts (top branch =
+    AsGroup with UnknownInterpretation EDProduct). CMS RECO tracks need CMSSW (the
+    heavy VM path). Not empty events -- confirmed via .present + mid-file sampling.
+  - **ATLAS DAOD_HION14 PASSED** (record 80036 child of 80035, 2015 Pb-Pb "Open
+    Data for Research", 1913 files / 4.4 TB, CC0, /eos/opendata/atlas/rucio/
+    data15_hi/). ATLAS's own usage note: "can be used ... using uproot". Confirmed:
+    uproot reads CollectionTree; InDetTrackParticlesAuxDyn.{phi,theta,qOverP,...}
+    are flat readable arrays; a real central PbPb event read in 0.3s gave 3644
+    tracks with realistic pt (0.5-2.8 GeV) and eta (+-2.3). NO VM. pt=sin(theta)/
+    |qOverP|, eta=-ln tan(theta/2), p=1/|qOverP|.
+
+- **INFO-050 -- LOCATED, REAL DATA (Session 14, new; STRONG force; ATLAS
+  DAOD_HION14 Pb-Pb, 1500 events / 5 files; s14_force_strong.py +
+  s14_strong_lowq_becheck.py)**. The 4th and last within-type gauge-force object,
+  built the SAME way as WEAK (s13_force_dimuon): particle-pair event ensemble
+  binned by an energy axis. Construction: CHANNELS = the two identical same-charge
+  hadrons of a pair, assigned A/B AT RANDOM (symmetric labeling -- identical bosons
+  have no distinguishing charge, the strong analogue of weak's mu+/mu- symmetry),
+  observable = hadron pT (eta as robustness); ENERGY AXIS = pair relative momentum
+  q_inv (the femtoscopy scale, Bose-Einstein peak at q->0), equal-count bins; per
+  q-bin the 6-op [H_a,H_b,H_a^2,H_b^2,H_a*H_b,MI] -> extract_v1 null. The
+  inter-hadron BE correlation of identical pions is the intrinsic strong signal,
+  not invented. FINDING: strong sits on the equal-entropy SELF-POLE -- MI does NOT
+  enter the null (MI-coupling = 0.000) and equal-entropy ~ 1.000, ROBUST across
+  charge (++ / --) x observable (pT / eta) x 3 random-A/B seeds (the real-data
+  analogue of the >=3-seed rule). Two no-tent-widening robustness checks
+  (s14_strong_lowq_becheck): (1) the BE correlation is CONFIRMED PRESENT --
+  C(q)=same-event/mixed-event for same-charge pairs rises at low q, C(q<0.1)~1.10
+  (lowest bins 1.19-1.23) -- so MI-not-in-null is not the absence of a signal
+  (INFO-049 lesson); (2) restricting to the low-q femtoscopy window q<0.4 GeV
+  (down to q~0.075, where BE peaks) the self-pole SURVIVES -- MI-coupling still
+  0.000 across all configs/seeds. The genuine BE coupling creates MI but it stays
+  an ACTIVE high-variance variable, never a low-variance null constraint -- exactly
+  like EM/HBT (same Bose-statistics physics; INFO-048/049) and consistent with
+  INFO-041 (generic coupling makes MI without it entering the null). CAVEATS
+  (honest, not tent-widening): track cap MAX_TRK=150/event (central events have
+  thousands -- a compute bound; no Coulomb/purity correction, so the BE
+  enhancement is modest); 1500 events of 4.4 TB available (small subset, but the
+  null result is stable across files/seeds/observables/q-windows); one construction
+  (femtoscopy pair-ensemble).
+
+- **Session 14 force-frame (held as frame, no synthesis per Greg)**: with the
+  strong force added, **4/4 real gauge forces -- gravity (LIGO, INFO-036/038),
+  weak (CMS Z->mumu, INFO-047), EM (HBT+g2, INFO-048/049), strong (ATLAS
+  femtoscopy, INFO-050)** -- all sit on the equal-entropy self-pole; MI is active
+  but NEVER a null constraint for any real force. The gauge forces look like the
+  bookkeeping domains (physics/geology), NOT the coupling pole. "MI-in-the-null =
+  law-like coupling" remains confined to simulated biology (knob-confirmed,
+  INFO-040) and -- via its predictive algebraic dipole -- markets. The clean 4/4
+  statement the v14 kickoff named as the goal is achieved. Strong did NOT produce
+  the "most interesting outcome" (MI entering the null); it confirmed the
+  self-pole. NO synthesis across construction types -- strong was compared
+  within-type to weak (both particle-pair event ensembles binned by an energy
+  axis); gravity/EM are the other (detector-pair time-series) type.
+
+- **Environment**: added uproot/awkward/aiohttp/requests (+ h5py) to
+  requirements.txt for reproducibility (the SessionStart hook installs the numeric
+  stack + PySR/Julia; these are the new heavy-ion deps). xrootd client + the
+  opendata.cern.ch HTTP-streaming bypass are the access path; raw ATLAS files in
+  data/strong/ are gitignored (re-fetchable). Note for next session: if eospublic
+  is needed directly, this session's network policy blocks it -- use the
+  opendata.cern.ch/eos/opendata/<path> streaming bypass, or a session whose policy
+  trusts the CERN CA.
+
+- **Open / next**: (a) the four real force objects are NOW all built -- the
+  force<->equation dive's data-collection phase is complete; what remains is
+  interpretation WITHIN type (strong-vs-weak particle-pair detail; gravity-vs-EM
+  detector-pair detail), never across (Greg's rule). (b) Markets dipole JSON pull
+  still dropped per Greg; keep the Markets section in lockstep. (c) Strong follow-ups
+  if wanted: more files/centrality binning, Coulomb-corrected C(q), opposite-charge
+  (resonance) control -- none change the self-pole null, which is the load-bearing
+  result.
 
 ## Note (Session 12 update — 2026-06-02)
 

@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "force": "strong",
+    "dataset": "ATLAS DAOD_HION14 record 80036 data15_hi",
+    "construction": "two-identical-hadron femtoscopy, q-binned",
+    "n_files": 1,
+    "n_events": 80,
+    "pt_window": [
+      0.2,
+      2.0
+    ],
+    "eta_max": 2.5,
+    "q_max": 2.0,
+    "max_trk": 150,
+    "seeds": 1,
+    "elapsed_s": 0.5
+  },
+  "configs": [
+    {
+      "config": "charge+1_pt",
+      "cos_mean": 0.33076627528212577,
+      "cos_std": 0.0,
+      "MI_coupling_mean": 2.2926241530686673e-05,
+      "MI_coupling_std": 0.0,
+      "equal_entropy_mean": 0.9994663020321115,
+      "mean_abs_HaHb": 0.01799037466394767,
+      "per_seed": [
+        {
+          "charge": 1,
+          "observable": "pt",
+          "n_pairs": 111483,
+          "n_bins": 24,
+          "pairs_per_bin": 4645,
+          "q_range": [
+            0.2622750024454105,
+            1.9669292988659064
+          ],
+          "mean_abs_HaHb": 0.01799037466394767,
+          "null_6d": [
+            -0.0003077939151218467,
+            -0.001157446892039713,
+            -0.42551429634765947,
+            -0.393804123457153,
+            0.8147585748489959,
+            0.0047881354962747945
+          ],
+          "sub234": [
+            -0.4255194793473161,
+            -0.3938089202093518,
+            0.814768499059416
+          ],
+          "cos_to_attractor": 0.33076627528212577,
+          "decomposition": {
+            "equal_entropy": 0.9994663020321115,
+            "MI_coupling": 2.2926241530686673e-05,
+            "residual": 0.0005107717263578046
+          },
+          "MI_lin_Ha_R2": 0.8138656814797014,
+          "MI_lin_Ha_slope": 0.16474594660123001,
+          "MI_mean": 0.04204351432320733,
+          "seed": 0
+        }
+      ]
+    }
+  ]
+}
