@@ -220,11 +220,25 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For the latest (Session 9) double-check + correction of the Session 8
-gravity result, read `SESSION_HANDOFF_2026-06-02_v9_results.md` (in repo
-root) first, then the Session 9 note above (INFO-033). For the Session 8
-record (four-force probe, INFO-027 through 032), read
-`SESSION_HANDOFF_2026-05-26_v8.md`.
+For the latest (Session 10) FIRST REAL-DATA session, read
+`SESSION_HANDOFF_2026-06-02_v10_results.md` (in repo root) first, then
+the Session 10 note above (INFO-034 through 037). Headline: caricature
+work retired by Greg's call ("no point fine-tuning fake data"); two
+four-force real-data sets run -- LIGO GW150914 (method detects the
+merger via inter-detector MI; the (-1,-1,+2)/sqrt6 attractor confirmed
+on real data as an equal-marginal-entropy artifact, not coupling) and
+PDG coupling unification (three gauge forces share the running substrate
+form with per-force expression slopes, but NO single SM unification
+point -- a triangle spanning ~1e4 in energy; gravity power-law, outside
+the form). Plus two method-hardening items on the toy systems before the
+pivot: INFO-034 (flip is estimator-robust under KSG) and INFO-035
+(substrate invariance is MIXED -- holds biology/geology, regime-bounded
+physics, fails chemistry).
+
+For the Session 9 double-check + correction of the Session 8 gravity
+result, read `SESSION_HANDOFF_2026-06-02_v9_results.md`, then the Session
+9 note above (INFO-033). For the Session 8 record (four-force probe,
+INFO-027 through 032), read `SESSION_HANDOFF_2026-05-26_v8.md`.
 
 For Session 7 context (GP regression + PySR symbolic regression on
 per-domain ensemble-H data, four reproducible per-domain MI-vs-H
@@ -276,6 +290,105 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 10 update — 2026-06-02, FIRST REAL DATA)
+
+Session 10 started from `claude/gravity-substrate-config-51cfp` (per the
+v10 kickoff; the SessionStart hook + Session 9 work live there, main
+untouched). Arc: two method-hardening probes on the toy systems, then
+Greg called the pivot to REAL DATA, and two four-force real-data sets
+ran. All six Operating Rules held; no new Rule.
+
+- **Greg's pivot decision**: when it surfaced that the gravity/weak force
+  laws in `gravity_glance.py` / `four_force_probe.py` are OUR OWN toy
+  caricatures (not OD discoveries, not literature force laws -- gravity
+  is a softened E_total*dx/(dx^2+eps) term, "weak" is a Gaussian
+  exp(-M*dx^2) not a real Yukawa exp(-Mr)/r), Greg cut the caricature
+  work: "no point fine-tuning fake data ... if replacing would just be
+  more work on fake data, skip that too." So items 2 (strong exp seed-
+  rate) and 3 (coupling-strength dial) and any caricature replacement
+  were SKIPPED. Pivot straight to real data, four-force-related only.
+  Operating-rule consequence reinforced: a frame must never grade itself
+  -- caricature results describe only the equations we wrote.
+
+- **INFO-034 -- METHODOLOGICAL (Session 10; item 4; 3 seeds)**: the
+  INFO-033 MI-dominant flip is ESTIMATOR-ROBUST. Swapping the histogram
+  MI for a Kraskov-Stoegbauer-Grassberger kNN estimator (estimator 1) on
+  the same operator matrix reproduces follow-up A exactly on histogram
+  (gravity 0.8/0.9 raw 0.906/std 0.644; 0.8/1.0 0.990/0.665) and the KSG
+  estimator AGREES on the standardized structural core near threshold
+  (gravity 0.8/0.9 std 0.644; EM 1.0/1.3 std 0.435; EM 1.0/1.5 0.597),
+  on raw values, on strong-never-flips, and on the threshold ordering.
+  Sharpens the deflationary reading: the structural core is a modest
+  ~0.6-0.7 band NEAR the flip threshold; at extreme asymmetry (gravity
+  0.8/1.2) both estimators fall below 0.5 while raw rides ~0.99 on a
+  collapsing MI variance (procedure inflation). The flip is not a
+  histogram artifact. (Script s10_third_estimator.py.)
+
+- **INFO-035 -- LOCATED (Session 10; item 1; 3 seeds, seed-stability
+  0.95-1.00)**: substrate-vs-expression invariance across the Session 8
+  mapping-campaign knob sweep is MIXED -- partial support for the
+  Base-of-Structure spine, with two clear exceptions. Biology (beta
+  0.3-0.8): substrate |cos| 0.978-0.986, stable rank 1, while expression
+  mutates exp->linear -> clean support. Geology (drift 0.02-0.08):
+  |cos| 0.981-1.000, stable rank 3 (expression also robust; weaker
+  test). Physics (K 0.05-0.5): invariant baseline->high (0.995) but
+  BREAKS at weak coupling K=0.05 (rank 1->4, |cos| 0.69) -- regime-
+  bounded. Chemistry (B 2-4): substrate NOT invariant, |cos| 0.045
+  between B=3 and B=4, rank swings 4->1->5 -- prediction FAILS; B=2 sits
+  at the Brusselator Hopf threshold (B_crit=1+A^2=2), flagged for
+  inspection, not absorbed. Net: "substrate = simple invariant base"
+  holds in 2/4 domains, regime-bounded in 1, fails in 1. Spine partially
+  supported, not confirmed. (Script s10_substrate_invariance.py.)
+
+- **INFO-036 -- LOCATED, REAL DATA (Session 10; item 5 set 1; one event,
+  one 32s segment)**: the windowed-H/MI/operator stack, UNCHANGED from
+  the toy systems, applied to real LIGO GW150914 H1/L1 strain (GWOSC
+  public, 4096Hz, bandpass 35-350Hz + ASD whiten, 2s edge crop, 125ms
+  windows). Two findings. (a) METHOD WORKS: inter-detector windowed MI
+  PEAKS EXACTLY at the merger (t=16.41s vs 16.4s; MI 0.530 vs noise
+  baseline 0.247, 2.1x). (b) PRE-REGISTERED PREDICTION OVERTURNED, frame
+  refined: I predicted the (-1,-1,+2)/sqrt6 channel-substrate would
+  appear IN the event; instead noise-only windows sit ON it (|cos|=0.984)
+  and event windows LEAVE it (|cos|=0.242). The attractor IS the
+  equal-marginal-entropy identity H_a~=H_b, not coupling: whitened
+  detector noise has equal per-channel entropy -> lands on it trivially;
+  the chirp changes one detector's entropy -> breaks it, while MI (a
+  separate operator) spikes on the common signal. Real data confirms the
+  Session 5 reading -- the attractor is an equal-statistics geometric
+  fact, not a substrate signature. Caveat: noise-on-attractor is partly
+  a whitening consequence (which is the point); needs more events.
+  (Script s10_ligo_extract.py; data/ligo/.)
+
+- **INFO-037 -- LOCATED, REAL DATA (Session 10; item 5 set 2; special
+  build)**: four-force unification from MEASURED couplings, mapped onto
+  the surviving frame (substrate = shared linear-in-ln(Q) running form;
+  expression = per-force slope b_i). Anchored on solid PDG M_Z couplings
+  (alpha_em^-1=127.951, sin^2thetaW=0.23122, alpha_s=0.1180 ->
+  alpha_1,2,3^-1(M_Z) = 59.02/29.59/8.48). (a) The shared running FORM is
+  CONFIRMED in real data: SM one-loop alpha_s(Q) matches measured
+  determinations within <1sigma from 31 GeV to 1 TeV (low-Q pulls are the
+  known one-loop limitation). (b) NO single SM unification: pairwise
+  crossings at 1.0e13, 2.4e14, 9.7e16 GeV -- a triangle spanning ~9400x.
+  (c) MSSM near-point ~2.1e16 GeV (spread 1.1x) but rests on unobserved
+  SUSY -> tagged conjecture, not cited as support. (d) Gravity:
+  alpha_G(E)=(E/M_Pl)^2 is power-law, not linear-in-ln(Q) -- different
+  substrate form, outside the gauge family. Verdict: shared running
+  substrate + per-force expression among the three gauge forces, no
+  single unification scale without conjectural new physics, gravity
+  outside the form. (alpha_s(Q) central values are representative PDG-
+  review numbers, validation overlay only; the crossings depend only on
+  the solid M_Z anchors + standard beta functions. Script
+  s10_pdg_unification.py.)
+
+- **Environment note**: the SessionStart hook (line 32) had a latent
+  crash under `set -u` when CLAUDE_PROJECT_DIR/CLAUDE_ENV_FILE are unset;
+  guarded it so the hook always reaches completion. PySR 1.5.10 + Julia
+  re-bootstrapped fine via the hook this session. h5py added for LIGO.
+  Network policy allowed GWOSC / PhysioNet / NOAA / PDG / PyPI (all 200).
+
+- Branch state: work on `claude/gravity-substrate-config-51cfp`, pushed.
+  main untouched. No PR.
 
 ## Note (Session 9 update — 2026-06-02)
 
