@@ -1,0 +1,91 @@
+# BACKLOG — tests & probes (as of 2026-06-02, S16)
+
+## STANDING RULE (Greg, S16)
+**Complete the backlogged probes below BEFORE starting any new probe we think of.**
+New ideas get appended here first; we clear the backlog before opening new lines.
+A probe that didn't give a 100% hit still carries a piece — keep its output, don't discard.
+
+---
+
+## GRAVITY thread (primary focus)
+
+1. **Substrate construction-vs-nature test** (NEW, S16 analysis; HIGH).
+   Is the universal equal-marginal-entropy clustering (everything we measure sits
+   on the (-1,-1,+2) region) a FORCED property of physical 2-channel observables,
+   or an artifact of us building symmetric ~equal-entropy channel pairs?
+   INFO-038 shows asymmetry |H_a-H_b| moves objects OFF the attractor. Probe:
+   deliberately vary channel-construction asymmetry and see if the clustering
+   survives. Decides whether "they all fall there" is nature or bookkeeping.
+
+2. **Construction control: gravity-LIGO vs EM-HBT flow axis** (HIGH; decisive for
+   the "only gravity's flow is unbound/off-substrate" hunch).
+   Measure a non-gravity REAL detector-pair (EM/HBT, INFO-048) flow axis the same
+   way (P3 method). On-substrate (~0.9) => gravity special; off (~0.6-0.8) =>
+   real-detector/noise effect. DATA: Zenodo 5113016 (demonDataPublic.rar, 20.8MB)
+   + unrar + port the S13 HBT loader (s13_force_hbt.py, on claude/file-upload-memory-LKCoB).
+
+3. **Proper chirp recovery (gravity Piece-1, redo)** (MED).
+   Naive Hilbert instantaneous-frequency FAILS on both GW150914 and GW170817
+   (method-limited, S16). Redo with a Q-transform/constant-Q ridge with SNR
+   weighting, or matched-filter template tracking, to recover df/dt ~ f^(11/3).
+   Data in hand (GW150914 + GW170817 strain).
+
+4. **Louder-event flow reproduction** (BACKBURNER per Greg, S16).
+   Fetch GW170814/GW190521 strain; re-run per-event flow axis; test whether
+   gravity's off-substrate flow displacement is consistent (magnitude steady /
+   direction wandering = "shapeless but real" vs both wandering = noise).
+
+5. **Scatter structure (H-G)** (LOW; depends on #4).
+   Does per-event gravity coordinate spread (cos->substrate 0.78/0.64/0.99) track
+   SNR / total mass / detector-noise state / alignment lag? Needs several clean events.
+
+6. **Gravity rate-dynamics (PROBE 1 gravity half)** (LOW; gated).
+   dMI/dt lagged structure on real gravity. Merger window has only ~8 independent
+   samples (INFO-024 wall) — needs the long inspiral at finer/lower band, not louder
+   mergers. Sim half already done (chem>phys>bio memory; geology null).
+
+## 4-FORCE thread
+
+7. **SF femtoscopy-R Piece-1** (MED; deferred — heavy fetch).
+   Recover the femtoscopy source radius R from C(q) on ATLAS heavy-ion data
+   (data/strong/, gitignored; opendata.cern.ch streaming bypass). The alpha_s(Q)
+   running Piece-1 is DONE (asymptotic freedom recovered from data).
+
+8. **Forces-within-construction flow comparison** (MED; depends on #2).
+   Once real gauge-force flow objects exist (HBT for EM, etc.), measure each
+   force's flow axis (P3 method) and compare gravity directly (H-A/H-C: is gravity
+   the one that sits differently?). Respect no-synthesis-across-construction-type.
+
+## FOUNDATIONAL / hunch-linked
+
+9. **INFO-039 promotion** (MED). dMI/dt as target, >=3 seeds on the off-attractor
+   residual; separate opposition-beyond-equal-entropy from the equal-entropy identity.
+
+10. **Biology JOINT time-shuffle** (LOW; off-gravity; tests H-B "flow=time").
+    Same permutation both channels; does the coupling survive (instantaneous) or
+    die (temporal)? NOTE: MI-in-null coupling reading is DISPROVED per Greg (S16) —
+    re-scope before running.
+
+## HOUSEKEEPING
+
+11. **OD run / MASTER_DISCOVERIES.json** (confirm + do).
+    Pin what the planned "OD run" was; most likely = store this session's
+    discoveries (Z-propagator, QCD running, time-blind clarification) per the
+    "every OD discovery added immediately" rule. MASTER_DISCOVERIES.json is not in
+    this repo (lives on E:\).
+
+12. **CLAUDE.md master merge** (the parked restructure).
+    Repo CLAUDE.md is canonical only through S11; the master is S15; this is S16.
+    Fold S12-S16 deltas into the repo CLAUDE.md so it is canonical-and-current,
+    keep detail in handoff files, then only upload deltas going forward
+    (the "new way" — see CLAUDE.md START-HERE block).
+
+---
+
+## STATUS NOTES (what's already settled — do NOT relitigate)
+- MI-in-null coupling discriminator: DISPROVED (Greg, S16). Do not build on it.
+- Equal-entropy attractor = equal-marginal-entropy geometric identity (settled S5+S10).
+  The OPEN question is #1 (construction vs nature), not whether the identity holds.
+- Time-blind: RESOLVED (S16). The pooled extraction is row-permutation-invariant by
+  construction (definitional); the TIME-RESOLVED null carries strong time structure.
+- WF + SF Piece-1: DONE (Z propagator M_Z 99.5%; QCD asymptotic freedom from data).

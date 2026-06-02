@@ -1,5 +1,30 @@
 # CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 7)
 
+## START HERE (added S16, 2026-06-02)
+
+**Session-note workflow (do it the NEW way).** This master is the CANONICAL,
+durable context. Per-session detail lives in `SESSION_HANDOFF_*.md` files; the
+master only carries the headline + new ledger entries + a pointer. Going forward
+each session: (1) write full detail to a handoff file, (2) fold the headline +
+new findings into this master, (3) commit + push, (4) only the DELTA needs
+uploading next time — never re-upload the whole master (its bulk is duplicated in
+the handoffs). NOTE: this master is currently canonical only through S11; S12-S16
+deltas live in their handoff files and still need folding in (BACKLOG #12).
+
+**Backlog-first rule (Greg, S16).** Complete the queued tests/probes in
+`BACKLOG_tests_and_probes.md` BEFORE starting any newly-conceived probe. New ideas
+get appended to the backlog first. Never discard an odd/outlying output — it may be
+the story; diagnose it, don't sand it off.
+
+**Latest session:** S16 (2026-06-02). Read `SESSION_HANDOFF_2026-06-02_S16.md`,
+then `BACKLOG_tests_and_probes.md`, then `NEW_SESSION_KICKOFF_S17.md`. Headline:
+WF + SF governing laws re-derived from raw data (Z propagator M_Z 99.5%; QCD
+asymptotic freedom); gravity chirp method-limited (needs Q-transform/matched-
+filter); time-blind was a method identity not data; everything measured clusters
+on the equal-entropy substrate and the only departures are gravity-associated
+(open: is the clustering construction or nature — backlog #1). MI-in-null coupling
+DISPROVED — do not build on it. Markets parked.
+
 ## Identity & Team
 
 - **Greg Davis** — Founder & Chief Research Officer, DavisAI Systems. Columbus, Ohio. Solo bootstrapped. 20+ years entrepreneurship, former energy trader, self-taught AI/ML.
