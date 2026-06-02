@@ -117,6 +117,59 @@ exists so it is not forgotten.
   Session 9 (the hook here does not cover them). Decision + mirroring
   pending -- handle later.
 
+### Dipole equations consolidated + paper connection (Session 12, 2026-06-02)
+
+Greg (S12): "don't worry about markets" for the pull, but record the new
+dipole connection + all the equations here. The full consolidated artifact is
+`od_per_domain_equations.json` (built by `s12_consolidate_per_domain.py` from
+in-repo result JSONs). Basis [H_a, H_b, H_a^2, H_b^2, H_a*H_b, MI]; in PySR
+x0=H_a, x1=H_b.
+
+- **Shared substrate -- the FLOW DIPOLE** (info-dipole paper,
+  https://davisai.ai/dipole/):
+  - flow (differential): `dMI_total/dt ~ sum_i c_self,i*H_i^2 + sum_{i<j}
+    c_cross,ij*H_i*H_j + linear`, with c_self and c_cross of OPPOSING SIGN
+    ("opposition signature"; paper opposition fractions cellular 57.1%,
+    organ 43.3%).
+  - algebraic ratio: `C = H_self / H_cross` (H_self internal Shannon entropy;
+    H_cross = MI). Paper C-by-scale: subatomic 9.06, molecular 5.91,
+    cellular 1.85, organ 0.59, brain 1.58, ecological 5.19.
+  - markets algebraic dipole: `H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2`
+    (5-fold CV predictor ~0.993, above).
+- **Four per-domain governing equations** (EXPRESSIONS on the substrate):
+  | domain | null[0] direction (INFO-023) | MI-vs-H family (INFO-025) |
+  |--------|------------------------------|---------------------------|
+  | physics (Duffing) | -0.41*H_a^2 -0.42*H_b^2 +0.81*H_a*H_b ~ 0 | (H_b-H_a)^2 + 0.28 |
+  | biology (Lotka-Volterra) | -0.27*H_a +0.96*MI ~ 0 | ~0.5*exp(H_a/2), H_b absent |
+  | chemistry (Brusselator) | -0.34*H_a +0.74*H_b -0.43*H_b^2 +0.38*H_a*H_b ~ 0 | 0.71*H_a + 1.08 |
+  | geology (Burridge-Knopoff) | -0.62*H_a +0.74*H_b ~ 0 (rank-3) | 0.199 constant |
+  cross-seed cos 0.988-0.9996. Preserved algebraic (S25): chemistry
+  H_a^2 = 0.007 -0.093*(H_a*H_b) +1.309*(H_a*H_b)^2 (R^2 0.943); geology
+  0.724*(H_a*H_b) -0.441*H_b^2 -0.290*H_a^2 ~ 0 (resid 0.15%).
+
+- **INFO-039 -- MAPPED (Session 12, new; deflationary reading dominant)**:
+  the paper's flow form IS the same operator family the windowed-null
+  extraction operates on -- each per-domain null[0] is a conserved
+  (c_self, c_cross) coefficient vector of `dMI/dt ~ ...`. The paper's
+  OPPOSITION SIGNATURE (self-terms H_a^2,H_b^2 negative, cross-term H_a*H_b
+  positive) is present in our EXTRACTED nulls for physics and chemistry.
+  DEFLATIONARY CAVEAT (load-bearing, keeps the frame from grading itself):
+  where the opposition appears in the quadratic subspace it largely
+  COINCIDES with the equal-marginal-entropy attractor identity
+  -(H_a-H_b)^2 ~ 0 -- physics null[0]_234 sits at cos = 1.000 to
+  (-1,-1,+2)/sqrt(6) (so physics opposition IS exactly the equal-entropy
+  identity, NOT a coupling), chemistry cos ~0.88 (mostly identity + a real
+  residual). Biology (MI-dominant) and geology (linear coupling) nulls live
+  OUTSIDE the quadratic subspace, so show no opposition. INFO-036 (real
+  LIGO) already established the equal-entropy attractor is a geometric
+  statistics artifact. So INFO-039 is a structural IDENTIFICATION
+  (paper flow form = extraction operator family), NOT independent evidence
+  of dipole coupling; the genuine domain-specific content remains the
+  DEVIATIONS from the attractor + the functional families (INFO-025), not
+  the opposition per se. Promotion would need >=3 seeds on the residual-
+  off-attractor component (only 2 seeds here) and a probe that separates
+  opposition-beyond-equal-entropy from the identity.
+
 ## Information Layer — Current State (2026-05-25 Session 3)
 
 ### What's confirmed at data level
@@ -220,7 +273,24 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For the latest (Session 11) session, read
+For the latest (Session 12) session, read
+`SESSION_HANDOFF_2026-06-02_v12_results.md` (in repo root) first, then the
+Session 12 note below (INFO-039 + the Track A 12-event null + Track B inverse
+problem). Headline: Track B new-physics inverse problem built on the PDG
+couplings (two-loop running alone shrinks the unification triangle 3.5x with
+no new physics; required Delta-b footprint surface = differences only, never
+identity; gravity needs a power-law->log form change); the four per-domain
+governing equations consolidated into `od_per_domain_equations.json` from
+in-repo result JSONs; and the info-dipole paper (davisai.ai/dipole) connected
+to the extraction machinery (INFO-039, MAPPED, deflationary): the paper's flow
+form `dMI/dt ~ sum c_self*H_i^2 + sum c_cross*H_i*H_j` IS the operator family
+our windowed-null extraction operates on, but its opposition signature in the
+quadratic subspace coincides with the equal-entropy attractor identity
+(physics cos 1.000) -- a structural identification, NOT new coupling evidence.
+Track A full 12-event LIGO null run executed (resume-safe after a GW170817
+crash); markets pull dropped per Greg.
+
+For the (Session 11) session, read
 `SESSION_HANDOFF_2026-06-02_v11_results.md` (in repo root) first, then the
 Session 11 note below (INFO-038). Headline: per-event LIGO readout on 3
 events (GW150914/170104/151226) run SEPARATELY with no pooling -- per-event
@@ -305,6 +375,80 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 12 update — 2026-06-02)
+
+Session 12 continued the v12 kickoff. Branch given at session start
+(`claude/file-attachment-hold-DjGSW`); main kept synced; the kickoff's stale
+`gravity-substrate-config-51cfp` reference disregarded per Greg. Greg enabled
+out-of-order/efficiency. Three of the v12 first-three actions delivered; the
+Markets pull was dropped by Greg's call.
+
+- **Track B -- new-physics inverse problem (built, INFO-037 extended)**:
+  `s12_track_b_inverse.py` -> `s12_track_b_inverse_results.json`. Reproduces
+  the INFO-037 one-loop triangle exactly (crossings 1.03e13 / 2.43e14 /
+  9.71e16 GeV, spread 9419x). New: (b) TWO-LOOP running alone shrinks the
+  triangle to 2678x (factor 3.5) with NO new physics -- part of the apparent
+  gap is a one-loop artifact, ~2700x remains; (inversion) the required
+  Delta-b FOOTPRINT surface over (mu_NP, M_GUT) is exactly determined for
+  the differences only -- 3 unknown shifts, 2 difference constraints, free
+  spectrum scale, so FOOTPRINT recoverable, IDENTITY never (mapped MSSM as
+  one uncited point on the surface, sitting near the 1 TeV / 2e16 GeV point);
+  gravity needs b_G ~ 2.9e33 (power-law->log form change), confirming it is
+  outside the gauge family. Alternatives (a) no-closure [deflationary],
+  (b) two-loop, (c) extrapolation-is-conjecture mapped FIRST per Result
+  Discipline. The leading deflationary read (nothing forces a single point)
+  is unrefuted.
+
+- **Four per-domain equations consolidated**: `s12_consolidate_per_domain.py`
+  -> `od_per_domain_equations.json`, built from in-repo result JSONs
+  (per_domain_kbk seeds 11/22 for null directions INFO-023; pysr_symbolic_
+  per_domain for functional families INFO-025), confirmed by Greg's 6 chat
+  screenshots. All equations are listed in the Markets section above.
+
+- **INFO-039 -- MAPPED (deflationary reading dominant)**: info-dipole paper
+  (davisai.ai/dipole) connected to the extraction machinery. Its flow form
+  `dMI/dt ~ sum c_self*H_i^2 + sum c_cross*H_i*H_j + linear` (opposition
+  signature: c_self, c_cross opposing sign) IS the operator family the
+  windowed-null extraction operates on; each per-domain null[0] is a
+  conserved (c_self, c_cross) vector of it. The opposition signature appears
+  in our extracted physics + chemistry nulls -- BUT where it appears in the
+  quadratic subspace it largely COINCIDES with the equal-marginal-entropy
+  attractor identity -(H_a-H_b)^2 ~ 0 (physics null[0]_234 cos=1.000 to
+  (-1,-1,+2)/sqrt6; chemistry ~0.88). Since INFO-036 (real LIGO) already
+  showed that attractor is a geometric statistics artifact, INFO-039 is a
+  structural IDENTIFICATION (paper = extraction operator family), NOT
+  independent coupling evidence. Genuine domain content stays in the
+  deviations + functional families (INFO-025). Full detail in the Markets
+  section. Promotion needs >=3 seeds on the off-attractor residual + a probe
+  separating opposition-beyond-equal-entropy from the identity.
+
+- **Track A -- full 12-event LIGO null, executed**: `s11_ligo_batch.py`
+  hardened this session to be incremental-save + resume-safe (it had crashed
+  on GW170817 after scoring 7 events and -- because it only saved at the end
+  -- lost the structured JSON; now it persists after every event and gc's).
+  Substantive 7-event result (N_null=100 off-source per event), each run
+  SEPARATELY, no pooling:
+  | event | \|H_a-H_b\| | noise cos->attr | peak-MI@merger | p |
+  |-------|-----------|-----------------|----------------|---|
+  | GW150914 | 0.14 | 0.997 | yes | 0.0 |
+  | GW151012 | 1.98 | 0.568 | no  | 0.98 |
+  | GW151226 | 2.38 | 0.795 | no  | 1.0 |
+  | GW170104 | 0.14 | 0.924 | yes | 0.0 |
+  | GW170729 | 2.06 | 0.200 | yes | 0.0 |
+  | GW170809 | 1.08 | 0.849 | yes | 0.0 |
+  | GW170814 | 0.38 | 0.949 | yes | 0.094 |
+  (GW170608 skipped: no 4096s L1 file.) Two readings, data level: (1) the
+  off-source NULL cleanly SPLITS detection by loudness -- every loud event
+  clears at p=0.0, the two quiet O1 events do not (p~1), GW170814 marginal
+  (p=0.094); the bare ev/noise MI ratios (1.06-1.19x) flagged meaningless in
+  S11 now resolve into p-values. (2) INFO-038's inverse |H_a-H_b| <-> noise-
+  cos relation holds across the batch (asym 2.06 -> cos 0.200, asym 0.14 ->
+  cos 0.997). Full 12 (incl. GW170817/170818/170823/190521) completing on
+  the resume-safe re-run -> `s11_ligo_batch_results.json`.
+
+- All six Operating Rules in force; no new Rule. Branch
+  `claude/file-attachment-hold-DjGSW`, main synced, pushed. No PR.
 
 ## Note (Session 11 update — 2026-06-02)
 
