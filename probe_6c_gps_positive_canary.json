@@ -1,0 +1,113 @@
+{
+  "summary": {
+    "route": "Route 2 -- raw RINEX C1 pseudorange (BRUX) + precise SP3 orbit/clock (term removed) + known station ECEF; receiver clock from near-circular sats; recover k in cleaned_resid = poly + k*(-c*e*sqrt(a)*sinE)",
+    "station": "BRUX (Brussels) 4027881.8468 306998.2610 4919498.6524 m",
+    "day": "2023-001",
+    "F_truth": -4.4428073090439775e-10,
+    "K2_truth": -2.225300112107237e-17,
+    "n_target_sats": 2,
+    "targets": [
+      "E18",
+      "E14"
+    ],
+    "k_over_truth_mean": 1.0517144301945136,
+    "k_over_truth_std": 0.017908276749877272,
+    "k_over_truth_median": 1.0517144301945136,
+    "eccentric_galileo": [
+      "E18",
+      "E14"
+    ],
+    "gal_k_over_truth": [
+      1.0338061534446363,
+      1.0696227069443909
+    ],
+    "gal_incr_r2": [
+      0.9642065596340075,
+      0.08531189377315962
+    ],
+    "gal_r2_full": [
+      0.9777096823284852,
+      0.9949071827854263
+    ],
+    "gal_z_vs_scramble": [
+      177.50335697438862,
+      4.815892100690122
+    ],
+    "gal_k2_over_truth": [
+      0.6636966003657504,
+      0.3545915912845107
+    ],
+    "median_incr_r2": 0.5247592267035835,
+    "median_z_vs_scramble": 91.15962453753937,
+    "grand_null_scramble_incr": 0.006970493408640593,
+    "route1_null": {
+      "note": "precise SP3 clock and broadcast polynomial agree to a few ns; the ~hundreds-of-ns relativistic term is in NEITHER. Route 1 NULL.",
+      "per_sat": {
+        "E14": {
+          "precise_clk_ptp_ns": 928.587000000001,
+          "broadcast_poly_ptp_ns": 930.4465038259167,
+          "precise_minus_broadcast_ptp_ns": 3.2453429058286507,
+          "predicted_dt_rel_ptp_ns": 759.4637665392917
+        },
+        "E18": {
+          "precise_clk_ptp_ns": 3831.078000000052,
+          "broadcast_poly_ptp_ns": 3832.3107674254106,
+          "precise_minus_broadcast_ptp_ns": 3.444336802750636,
+          "predicted_dt_rel_ptp_ns": 760.7375454114695
+        }
+      }
+    }
+  },
+  "per_sat": {
+    "E18": {
+      "prn": "E18",
+      "n": 259,
+      "ecc": 0.1618656093488,
+      "k": -4.5930015346584696e-10,
+      "k_over_truth": 1.0338061534446363,
+      "k2_rrdot": -1.4769241191990964e-17,
+      "k2_over_truth": 0.6636966003657504,
+      "r2_full": 0.9777096823284852,
+      "incr_r2": 0.9642065596340075,
+      "resid_ptp_m": 271.80554043946825,
+      "pred_dt_rel_ptp_m": 207.2886253595204,
+      "corr_resid_pred": -0.987985103607523,
+      "null_scramble_incr_mean": 0.0036066795935444135,
+      "null_scramble_incr_std": 0.005411727959004359,
+      "null_scramble_incr_max": 0.035971949427850536,
+      "null_scramble_r2full_mean": 0.3794973768786688,
+      "null_scramble_r2full_std": 0.003370146432546778,
+      "null_scramble_r2full_max": 0.3996528058833758,
+      "null_scramble_k_std": 2.233706689538976e-11,
+      "null_timeslide_incr_mean": 0.13736280376256935,
+      "null_timeslide_incr_max": 0.6841398366632921,
+      "z_vs_scramble": 177.50335697438862,
+      "z_incr_vs_scramble": 177.5033569942583
+    },
+    "E14": {
+      "prn": "E14",
+      "n": 98,
+      "ecc": 0.1615967046237,
+      "k": -4.752127580331944e-10,
+      "k_over_truth": 1.0696227069443909,
+      "k2_rrdot": -7.890727078377052e-18,
+      "k2_over_truth": 0.3545915912845107,
+      "r2_full": 0.9949071827854263,
+      "incr_r2": 0.08531189377315962,
+      "resid_ptp_m": 140.53393978658548,
+      "pred_dt_rel_ptp_m": 119.04828836957007,
+      "corr_resid_pred": -0.9973823160691064,
+      "null_scramble_incr_mean": 0.010334307223736773,
+      "null_scramble_incr_std": 0.015568784374077192,
+      "null_scramble_incr_max": 0.14648679581886204,
+      "null_scramble_r2full_mean": 0.9944897212038374,
+      "null_scramble_r2full_std": 8.66841631923682e-05,
+      "null_scramble_r2full_max": 0.995247793527074,
+      "null_scramble_k_std": 3.9611954932616385e-12,
+      "null_timeslide_incr_mean": 0.09061001576628326,
+      "null_timeslide_incr_max": 0.6094020109287879,
+      "z_vs_scramble": 4.815892100690122,
+      "z_incr_vs_scramble": 4.815892155937904
+    }
+  }
+}
