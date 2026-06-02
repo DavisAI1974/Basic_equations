@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "force": "EM",
+    "dataset": "Zenodo 5113016 HBT",
+    "dt_grid": [
+      1e-06,
+      2e-06,
+      4e-06,
+      5e-05
+    ],
+    "n_win": 200
+  },
+  "results": {
+    "split": {
+      "g2": {
+        "g2_0": 1.827502761852417,
+        "g2_far": 1.004420511439901,
+        "coherence_halfwidth_us": 2.0
+      },
+      "object": {
+        "dt_1us": {
+          "mean_count_A": 0.13895448592319273,
+          "mean_abs_HaHb": 0.3871276804958279,
+          "MI_mean": 0.0027265497283130635,
+          "cos_to_attractor": 0.5228441603365003,
+          "eqEnt": 1.1818673681692091e-05,
+          "MI_coupling": 0.9999062636207559,
+          "residual": 8.191770556242872e-05,
+          "null_relation": "+1.00*MI ~ 0"
+        },
+        "dt_2us": {
+          "mean_count_A": 0.2779090042025573,
+          "mean_abs_HaHb": 0.5074802031207004,
+          "MI_mean": 0.008669927664247871,
+          "cos_to_attractor": 0.36743597992288896,
+          "eqEnt": 5.7832636698781064e-05,
+          "MI_coupling": 0.9998898819371593,
+          "residual": 5.2285426141884805e-05,
+          "null_relation": "+1.00*MI ~ 0"
+        },
+        "dt_4us": {
+          "mean_count_A": 0.5558180084051146,
+          "mean_abs_HaHb": 0.6315773492007515,
+          "MI_mean": 0.021855076367638112,
+          "cos_to_attractor": 0.3285809140319422,
+          "eqEnt": 0.00012264120020062658,
+          "MI_coupling": 0.9991536628087574,
+          "residual": 0.0007236959910419394,
+          "null_relation": "+1.00*MI ~ 0"
+        },
+        "dt_50us": {
+          "mean_count_A": 6.947729958493664,
+          "mean_abs_HaHb": 0.7223650556262038,
+          "MI_mean": 0.11853917013085512,
+          "cos_to_attractor": 0.5166055057222179,
+          "eqEnt": 0.4239003256508218,
+          "MI_coupling": 1.4870876176491572e-05,
+          "residual": 0.5760848034730017,
+          "null_relation": "+0.98*H_a ~ 0"
+        }
+      }
+    },
+    "uncorr": {
+      "g2": {
+        "g2_0": 1.9198863474666636,
+        "g2_far": 1.0024137044920551,
+        "coherence_halfwidth_us": 2.0
+      },
+      "object": {
+        "dt_1us": {
+          "mean_count_A": 0.3608359314600259,
+          "mean_abs_HaHb": 0.20562977811053088,
+          "MI_mean": 0.03659411234849768,
+          "cos_to_attractor": 0.9130283753881948,
+          "eqEnt": 9.441047442186118e-05,
+          "MI_coupling": 0.9993664159725075,
+          "residual": 0.0005391735530706487,
+          "null_relation": "+1.00*MI ~ 0"
+        },
+        "dt_2us": {
+          "mean_count_A": 0.7216718629200518,
+          "mean_abs_HaHb": 0.21616039506960485,
+          "MI_mean": 0.08934464275607246,
+          "cos_to_attractor": 0.19837942819469148,
+          "eqEnt": 0.0009338086288189871,
+          "MI_coupling": 0.9985894880328746,
+          "residual": 0.00047670333830640566,
+          "null_relation": "+1.00*MI ~ 0"
+        },
+        "dt_4us": {
+          "mean_count_A": 1.4433448317607918,
+          "mean_abs_HaHb": 0.2297292796945401,
+          "MI_mean": 0.15079747958236947,
+          "cos_to_attractor": 0.5401491187860696,
+          "eqEnt": 0.4205747100984012,
+          "MI_coupling": 0.0016141046757712214,
+          "residual": 0.5778111852258276,
+          "null_relation": "+0.95*H_b -0.30*H_b^2 ~ 0"
+        },
+        "dt_50us": {
+          "mean_count_A": 18.0418933415064,
+          "mean_abs_HaHb": 0.09325993034741796,
+          "MI_mean": 0.44693958617237356,
+          "cos_to_attractor": 0.47989931562908605,
+          "eqEnt": 0.6401785638951758,
+          "MI_coupling": 1.0740614846526125e-06,
+          "residual": 0.35982036204333956,
+          "null_relation": "+0.98*H_b ~ 0"
+        }
+      }
+    }
+  },
+  "reading": "EM HBT g2(0) confirmed >1 (Bose bunching, real). Operator object tested across bin scales spanning the ~2us coherence. Key: does the bunching MI enter the null at the coherence scale, or stay active like every other real object (LIGO/weak/20-100us-EM)? Compare MI_coupling across dt. Corrects INFO-048's coherence-scale caveat (Rule D)."
+}
