@@ -118,6 +118,24 @@ actions; dropped the Markets pull by Greg's call.
   match is real but caricature-contaminated (S10-retired). Pairwise Level-2
   (INFO-041) done too. Remaining four-force loose end: the LIGO no-MI-basis
   reversal across the 12 events.
+- **INFO-043 -- cross-domain balance DONE (Greg's "opposite domain that
+  balances a non-coupled one")**: domains do NOT anti-balance; 3 of 4
+  (physics/chemistry/geology) sit on the equal-entropy SELF pole, only biology
+  on the MI CROSS pole; physics vs biology cos=0.000 (orthogonal, complementary
+  not oppositional). s12 analysis on the 5-seed nulls.
+- **HEADLINE NEXT THREAD (Greg wants to dive in): principled force-operator-
+  space.** The force<->equation question is untestable on real data until each
+  GAUGE force has a real 2-channel entropy object (gravity already does, via
+  LIGO). DECISION GATE FIRST (Result Discipline): find a real dataset that
+  gives a force a 2-channel MI/entropy object WITHOUT inventing the coupling
+  (collider event / cross-section / decay-rate distributions vs energy as the
+  channels) -- if none exists, force<->equation stays a frame, not a probe.
+  Map that before building. Full framing in the CLAUDE.md Markets dipole
+  subsection ("Next direction queued").
+- **Other open threads**: LIGO no-MI-basis noise-OFF/event-ON reversal across
+  the 12 events (only checked GW150914); chemistry-residual knob test (does
+  0.54(H_a+H_b)+0.32H_a^2-0.55H_b^2 track Brusselator B, like biology's slope
+  tracks g); biology slope-vs-g coupling-strength curve.
 - **Markets**: dropped this session (no claude-code-remote list_repos/add_repo
   tools; GitHub scope locked to basic_equations). Do via a tooled session if
   the actual Markets dipole JSONs are still wanted; the markets algebraic

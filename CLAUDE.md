@@ -249,6 +249,44 @@ x0=H_a, x1=H_b.
   CAVEAT: g=0 MI-frac unreliable (collapsed MI variance, INFO-024); toy
   coupling -> methods probe, not a claim sciences physically couple.
 
+- **INFO-043 -- LOCATED (Session 12, new; cross-domain balance, 5 seeds)**:
+  Greg's "is there an opposite domain that balances a non-coupled one" probe.
+  Answer from the 5-seed mean null directions: the domains do NOT anti-balance
+  (zero pairs with cos < -0.5). Instead they split by AXIS: physics 0.998,
+  chemistry 0.913, geology 0.983 on the equal-entropy (SELF) axis with ~0 MI;
+  biology 0.220 equal-entropy / 0.955 MI on the coupling (CROSS) axis. So 3 of
+  4 domains sit on the self pole and ONLY biology sits on the cross pole.
+  physics vs biology cos = 0.000 (EXACTLY orthogonal -- pure self vs pure
+  cross), not opposed. The self+cross dipole pairing is therefore biology
+  (cross) + any self-domain (cleanest: physics, perpendicular), but it is
+  COMPLEMENTARY (orthogonal axes), NOT oppositional (anti-aligned). Biology is
+  the lone coupling outlier; the other three cluster as self/bookkeeping.
+
+### Next direction queued -- principled force-operator-space (Session 12 close)
+
+Greg wants to dive into this. The force<->equation question (INFO-042 (b))
+is currently UNTESTABLE on real data because forces and per-domain equations
+are different KINDS of object (static mass/angle relations vs MI-vs-entropy
+dynamics) and the only bridge (S8 four-force caricatures) is self-grading.
+THREAD (speculative, not a claim): build a principled REAL-DATA force-operator-
+space so the comparison is data-driven, not caricature.
+  - gravity already HAS a real operator-space object (LIGO strain ->
+    H_a/H_b/MI, INFO-036/038). The gap is the GAUGE forces.
+  - candidate construction: put each gauge force into the per-domain 6-op basis
+    from ACTUAL measurement distributions -- e.g. collider event /
+    cross-section / decay-rate distributions at varying energy as the two
+    channels + their MI -- rather than the deterministic running curve (which
+    is a single line, not a 2-channel stochastic object). The measurement
+    ensemble (or the spread across observables fixing each coupling) supplies
+    the channels.
+  - decision gate FIRST (Result Discipline): is there a real dataset that gives
+    a force a 2-channel entropy object without us inventing the coupling? If
+    not, the force<->equation question stays a live frame, not a probe. Map
+    that before building anything.
+  - this is the honest path to test whether EM really resembles the physics
+    equation (vs being a caricature artifact) and whether the coupling-type
+    mapping (gravity <-> equal-entropy/self domains) survives real data.
+
 ## Information Layer — Current State (2026-05-25 Session 3)
 
 ### What's confirmed at data level
@@ -575,6 +613,19 @@ Markets pull was dropped by Greg's call.
     coupling-type INFO-040: gravity<->equal-entropy domains) -> pattern-matching
     without constraint until a principled real-data force-operator-space is
     built.
+
+- **INFO-043 -- cross-domain balance (Greg's "opposite domain that balances a
+  non-coupled one")**: domains do NOT anti-balance; they split by axis -- 3 of
+  4 (physics/chemistry/geology) on the equal-entropy SELF pole, only biology on
+  the MI CROSS pole. physics vs biology cos=0.000 (orthogonal, pure self vs
+  pure cross), complementary not oppositional. Full entry in Markets subsection.
+
+- **Next direction queued (Greg wants to dive in): principled force-operator-
+  space** so the force<->equation question becomes real-data-testable instead
+  of caricature-bound. Gravity already has a real operator object (LIGO); the
+  gap is the gauge forces. Decision gate first: is there a real dataset giving
+  a force a 2-channel entropy object without inventing the coupling? See the
+  "Next direction queued" block in the Markets dipole subsection.
 
 - All six Operating Rules in force; no new Rule. Branch
   `claude/file-attachment-hold-DjGSW`, main synced, pushed. No PR.
