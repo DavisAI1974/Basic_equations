@@ -1,0 +1,227 @@
+{
+  "scope": "Resolve whether the STRONG flow's FUNCTIONAL FORM (power-law vs logarithmic divergence) is distinguishable from data, by adding near-critical (low-Q) alpha_s and mapping the nonperturbative limit. Data-level only; not mechanism. Published alpha_s/lattice/IR values treated as conjecture-to-check, compared against, not cited as support.",
+  "provenance": {
+    "far_set": "13 PDG world-data alpha_s(Q) points, Q 1.78-1000 GeV (Workman et al. PTEP 2022; s16_strong_running_results.json). MEASURED.",
+    "near_set": "alpha_s(Q) over Q ~0.84-1.78 GeV sampled from the nf=3 3-loop MSbar RGE (b0=9,b1=64,b2=3863/6) anchored to the MEASURED alpha_s(m_tau)=0.329+-0.030 (Girone-Neubert PRL 76 (1996) 3061 / hep-ph/9511392; CLEO+ALEPH tau spectra). PROVENANCE: RGE-propagated-from-measured-anchor over the duality-valid window (s0>0.7 GeV^2). NOT independent measurements; the tau data published the running as a BAND (Fig.2), not a discrete table, so we sample the validated curve rather than eyeball-digitize the band.",
+    "wall_set": "Nonperturbative critical region: directly-measured effective couplings (Deur/Brodsky alpha_s,g1 from CLAS Bjorken sum; Ganbold hep-ph/1004.5280 IR fixed point alpha_s(0)~0.757 at Lambda=345 MeV) show the strong coupling FREEZES to a finite value below ~1 GeV in measurable schemes -- it does NOT diverge. Recorded as the nonperturbative-limit finding."
+  },
+  "FAR": {
+    "label": "FAR_PDG_1.78-1000GeV",
+    "n": 13,
+    "Q_min": 1.78,
+    "Q_max": 1000.0,
+    "Lambda_QCD_ref_GeV": 0.15,
+    "nearest_critical_ratio_Qmin_over_Lambda": 11.866666666666667,
+    "log_fit": {
+      "b0": 1.3127928528688928,
+      "Lambda": 0.15014843220314525,
+      "R2": 0.9824221372642282,
+      "chi2": 8.935557142837352,
+      "dof": 11
+    },
+    "power_fit": {
+      "C": 0.2442292653473709,
+      "q": 0.15916986693472146,
+      "Lambda": 1.5722674712214135,
+      "R2": 0.9753347919972262,
+      "chi2": 17.468026614889787,
+      "dof": 10
+    },
+    "delta_R2_power_minus_log": -0.007087345267002054,
+    "abs_delta_R2": 0.007087345267002054,
+    "delta_chi2_power_minus_log": 8.532469472052435,
+    "forms_distinguishable": false,
+    "loo": {
+      "loo_mse_log": 0.1064622495580813,
+      "loo_mse_power": 0.4042363360101395,
+      "loo_favors": "log"
+    },
+    "scramble": {
+      "R2_real": 0.9824221372642282,
+      "null_mean": -0.3165144940026378,
+      "null_std": 0.2573191878357459,
+      "z": 5.0479586935855165,
+      "p_ge": 0.0
+    }
+  },
+  "near_data_table": [
+    {
+      "Q_GeV": 0.8426149773176358,
+      "alpha_s": 0.621952123548162,
+      "sigma": 0.056712959594057324,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    },
+    {
+      "Q_GeV": 0.9464199798378985,
+      "alpha_s": 0.5393854422426405,
+      "sigma": 0.04918408287926813,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    },
+    {
+      "Q_GeV": 1.050224982358161,
+      "alpha_s": 0.4845514482636245,
+      "sigma": 0.044184022638020466,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    },
+    {
+      "Q_GeV": 1.154029984878424,
+      "alpha_s": 0.44495574928854065,
+      "sigma": 0.04057347257950218,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    },
+    {
+      "Q_GeV": 1.2578349873986867,
+      "alpha_s": 0.4147513719205069,
+      "sigma": 0.03781927403530457,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    },
+    {
+      "Q_GeV": 1.3616399899189493,
+      "alpha_s": 0.39079612653471496,
+      "sigma": 0.03563490515514118,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    },
+    {
+      "Q_GeV": 1.465444992439212,
+      "alpha_s": 0.37123519412861233,
+      "sigma": 0.033851233507168295,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    },
+    {
+      "Q_GeV": 1.5692499949594747,
+      "alpha_s": 0.35489621198538723,
+      "sigma": 0.03236135671599276,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    },
+    {
+      "Q_GeV": 1.6730549974797375,
+      "alpha_s": 0.3409984383675513,
+      "sigma": 0.031094082525916524,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    },
+    {
+      "Q_GeV": 1.77686,
+      "alpha_s": 0.329,
+      "sigma": 0.03,
+      "provenance": "RGE-from-measured-anchor (nf=3 3-loop, Girone-Neubert)"
+    }
+  ],
+  "NEAR": {
+    "label": "NEAR_tauRGE_0.84-1.78GeV",
+    "n": 10,
+    "Q_min": 0.8426149773176358,
+    "Q_max": 1.77686,
+    "Lambda_QCD_ref_GeV": 0.15,
+    "nearest_critical_ratio_Qmin_over_Lambda": 5.617433182117572,
+    "log_fit": {
+      "b0": 1.9276877460774857,
+      "Lambda": 0.3626552833569519,
+      "R2": 0.9990840448332591,
+      "chi2": 0.04271230264195931,
+      "dof": 8
+    },
+    "power_fit": {
+      "C": 0.3498823980608245,
+      "q": 0.40047123049771427,
+      "Lambda": 0.605495157031695,
+      "R2": 0.9999642437913794,
+      "chi2": 0.0016878151553403355,
+      "dof": 7
+    },
+    "delta_R2_power_minus_log": 0.000880198958120304,
+    "abs_delta_R2": 0.000880198958120304,
+    "delta_chi2_power_minus_log": -0.04102448748661898,
+    "forms_distinguishable": false,
+    "loo": {
+      "loo_mse_log": 0.00037361206719372167,
+      "loo_mse_power": 4.075658052029079e-05,
+      "loo_favors": "power"
+    },
+    "scramble": {
+      "R2_real": 0.9990840448332591,
+      "null_mean": -0.15773415319116982,
+      "null_std": 0.19246887041055546,
+      "z": 6.010417142007478,
+      "p_ge": 0.0
+    }
+  },
+  "COMBINED": {
+    "label": "COMBINED_0.84-1000GeV",
+    "n": 24,
+    "Q_min": 0.8426149773176358,
+    "Q_max": 1000.0,
+    "Lambda_QCD_ref_GeV": 0.15,
+    "nearest_critical_ratio_Qmin_over_Lambda": 5.617433182117572,
+    "log_fit": {
+      "b0": 1.4003051034946854,
+      "Lambda": 0.221556701982748,
+      "R2": 0.9906889699405106,
+      "chi2": 21.26516367300247,
+      "dof": 22
+    },
+    "power_fit": {
+      "C": 0.3090927628557362,
+      "q": 0.2103035805428998,
+      "Lambda": 0.8170052104803615,
+      "R2": 0.9746989672826156,
+      "chi2": 59.32499951157338,
+      "dof": 21
+    },
+    "delta_R2_power_minus_log": -0.015990002657894964,
+    "abs_delta_R2": 0.015990002657894964,
+    "delta_chi2_power_minus_log": 38.05983583857091,
+    "forms_distinguishable": false,
+    "loo": {
+      "loo_mse_log": 0.0970016826806046,
+      "loo_mse_power": 0.7576559785070169,
+      "loo_favors": "log"
+    },
+    "scramble": {
+      "R2_real": 0.9906889699405106,
+      "null_mean": -0.15645713621964188,
+      "null_std": 0.13719567008766534,
+      "z": 8.361387100764821,
+      "p_ge": 0.0
+    }
+  },
+  "NONPERTURBATIVE_LIMIT": {
+    "duality_breaks_below_GeV": 0.8366600265340756,
+    "duality_note": "Girone-Neubert: quark-hadron duality (hence the perturbative extraction of alpha_s from tau data) holds only for s0 > 0.7 GeV^2, i.e. Q > ~0.84 GeV. Below that the extraction is not defined.",
+    "IR_fixed_point_alpha_s0_examples": {
+      "Ganbold_2010_hep-ph_1004.5280": 0.757,
+      "range_across_schemes": [
+        0.667,
+        0.821
+      ],
+      "process_independent_DSE_over_pi": 0.97
+    },
+    "freezing_finding": "In directly-measurable effective-charge schemes (Deur/Brodsky alpha_s,g1; DSE; IR studies) the strong coupling FREEZES to a finite alpha_s(0)~0.7-0.8 below ~1 GeV; it does NOT diverge. The Landau-pole divergence of the perturbative MSbar coupling is a SCHEME ARTIFACT, not a measurable feature.",
+    "consequence_for_form": "The 'critical region' of the strong flow -- where power-law and log divergences separate -- is either (a) NONPERTURBATIVE and only reachable in theory/scheme-dependent ways, or (b) NOT A DIVERGENCE AT ALL in measurable schemes (it freezes). Either way the divergence FORM is not cleanly measurable from data."
+  },
+  "verdict": {
+    "DATA": {
+      "FAR_abs_dR2": 0.007087345267002054,
+      "FAR_forms_distinguishable": false,
+      "NEAR_Qmin_GeV": 0.8426149773176358,
+      "NEAR_Qmin_over_Lambda": 5.617433182117572,
+      "NEAR_abs_dR2": 0.000880198958120304,
+      "NEAR_delta_chi2_power_minus_log": -0.04102448748661898,
+      "NEAR_forms_distinguishable": false,
+      "NEAR_loo_favors": "power",
+      "COMBINED_abs_dR2": 0.015990002657894964,
+      "COMBINED_forms_distinguishable": false,
+      "lowest_Q_measurable_GeV": 0.8366600265340756,
+      "below_that_coupling_freezes_not_diverges": true
+    },
+    "INTERPRETATION": "Adding near-critical (Q~0.84-1.78 GeV) running pushes the lowest scale from Q/Lambda~12 (FAR) down to Q/Lambda~5.6 (NEAR), and does NOT separates power-law from log there (|dR2|=0.0009). BUT the genuinely-separating region (Q -> Lambda, where the two forms diverge differently) is NONPERTURBATIVE: quark-hadron duality breaks for Q < ~0.84 GeV (so alpha_s cannot be cleanly extracted from data there), and in the schemes where the coupling IS measured below 1 GeV it FREEZES to a finite alpha_s(0)~0.76 rather than diverging. So the strong flow's divergence FORM is not cleanly determinable from data -- not because the frame is wrong, but because the critical region is physically inaccessible to clean measurement. This is a LEGITIMATE 'undetermined' result, distinct from a refutation.",
+    "CAVEATS": [
+      "NEAR set is RGE-propagated from the measured alpha_s(m_tau) anchor, NOT independent measurements -- it tests the BEST CASE (does even ideal validated near-critical sampling separate the forms?).",
+      "The power-law form alpha_s~C*(Q-Lambda)^(-q) is one of many possible non-log divergences; 'power vs log' is the specific contrast asked, not an exhaustive form search.",
+      "IR-freezing values are scheme-dependent and partly theory/model-based (treated as conjecture-to-check, compared against, not cited as support); the scheme-dependence is itself the point -- there is no scheme-independent measured divergence.",
+      "A force/observable not abiding does NOT falsify the frame; this is the wrong (perturbative MSbar) observable for the critical region, kept as data."
+    ],
+    "form_resolved": false,
+    "form_undetermined_due_to_nonperturbative_critical_region": true
+  },
+  "canary_passed": true
+}

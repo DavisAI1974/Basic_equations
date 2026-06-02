@@ -68,13 +68,35 @@
       "is_flow": false,
       "critical": "resonance omega0",
       "note": "amplitude response peaks at resonance, finite"
+    },
+    "EM_alpha_running": {
+      "kind": "claimed-flow",
+      "axis": "energy-scale",
+      "domain": "EM",
+      "rho": 1.0,
+      "peaks_interior": false,
+      "is_flow": true,
+      "critical": "QED Landau pole ~1e277 GeV (UNREACHABLE in data range)",
+      "note": "alpha_em RUNS (increases with Q) -> flow; OPPOSITE direction to strong (expression: sign of the running). Critical point out of range -> divergence form not testable, but monotonic flow is clear. 4th force, measured running."
+    },
+    "weak_SU2_running": {
+      "kind": "claimed-flow",
+      "axis": "energy-scale",
+      "domain": "weak",
+      "rho": 1.0,
+      "peaks_interior": false,
+      "is_flow": true,
+      "critical": "SU(2) running",
+      "note": "SAME weak force, RUNNING-COUPLING observable (SM running from measured M_Z anchor) -> FLOWS. Contrast weak_Z_resonance (non-flow): weak's 'non-flow' was an OBSERVABLE CHOICE (the Z resonance), not a property -- Greg's point, in data."
     }
   },
   "verdict": {
     "flows": [
       "gravity_GW150914",
       "strong_alphas",
-      "chem_brusselator_Hopf"
+      "chem_brusselator_Hopf",
+      "EM_alpha_running",
+      "weak_SU2_running"
     ],
     "nonflows": [
       "gravity_GW170817",
@@ -84,8 +106,10 @@
     "misses": [
       "gravity_GW170817"
     ],
+    "all_four_forces_flow": true,
+    "all_four_forces": "ALL 4 forces flow under the right observable: gravity (chirp, TIME), strong (alpha_s, SCALE, asymptotically free), EM (alpha_em, SCALE, OPPOSITE sign -> Landau pole), weak (alpha_2, SCALE). Weak ALSO has a NON-flow expression -- the Z resonance -- so 'weak=non-flow' was an OBSERVABLE CHOICE (Greg's point), not a property of the force.",
     "substrate_generalizes": true,
-    "widen": "gravity(GW170817, time) + chemistry(Brusselator->Hopf, CONTROL-PARAMETER axis, new domain) both classify as flows -> substrate generalizes beyond the original 2 forces and beyond the time/scale axes to a control-parameter axis",
+    "widen": "gravity(GW170817, time) + chemistry(Brusselator->Hopf, CONTROL-PARAMETER axis, new domain) + EM(alpha_em running, scale) + weak(alpha_2 running, scale) -> substrate generalizes across ALL 4 forces + chemistry, over axes time/energy-scale/control-parameter",
     "control": "weak Z + driven oscillator: both have a critical point but PEAK (not flows) -> the flow restriction is real, not trivially satisfied by 'near a critical point'",
     "form_level_resolved_clean": true,
     "form_note": "FORM-level expression IS distinct on cleanly-determined flows: gravity power-law q=0.393 (~3/8) vs Brusselator critical-slowing q=1.000 (theory 1.0). Strong stays form-undetermined (nonperturbative critical region; agent #3). So form-distinctness holds where near-critical data exist.",
