@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 12)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 13)
 
 ## Identity & Team
 
@@ -416,7 +416,19 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For the latest (Session 12) session, read
+For the latest (Session 13) session, see the Session 13 note below (INFO-044
+through INFO-046). Headline of the two cheap coupling/LIGO follow-ups: chemistry's
+residual tracks the Brusselator B knob in the oscillatory regime (INFO-044, the
+chemistry analogue of biology's MI-slope-vs-g); the MI-driven LIGO merger
+departure GENERALIZES across all 12 events (INFO-045, S11 GW150914 thread
+confirmed 10-11/11) while the full noise/event reversal does not; and nothing in
+MI sits before/after the merger -- the genuine before/after structural difference
+is non-stationary detector noise, not source inspiral/ringdown (INFO-046). The
+Session 13 HEADLINE (in progress): the principled force-operator-space dive
+(force<->equation), gated on finding a real dataset that gives a gauge force a
+2-channel entropy object without inventing the coupling.
+
+For the (Session 12) session, read
 `SESSION_HANDOFF_2026-06-02_v12_results.md` (in repo root) first, then the
 Session 12 note below (INFO-039 + the Track A 12-event null + Track B inverse
 problem). Headline: Track B new-physics inverse problem built on the PDG
@@ -518,6 +530,73 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 13 update — 2026-06-02)
+
+Session 13 opened on the v13 kickoff (CLAUDE.md updated through S12 + the v12
+handoff). Greg: do all three queued items, the two cheap ones first, then the
+headline. Branch: work on the session-start branch
+`claude/file-upload-memory-LKCoB` (main synced; the v12 scripts/result JSONs
+were pulled onto it from `claude/file-attachment-hold-DjGSW` so the runs had
+their inputs). h5py was missing on this branch and added to requirements.txt.
+No PR. All six Operating Rules in force; the header-currency rule (added this
+session) is why the title line now reads Session 13.
+
+- **INFO-044 -- LOCATED (Session 13, new; chemistry residual knob test, 3 seeds
+  + B sweep across the Hopf bifurcation; s13_chemistry_residual.py)**. The
+  chemistry analogue of biology's MI-slope-vs-g (INFO-040). Sweep the Brusselator
+  B (baseline 3.0; Hopf B_crit=1+A^2=2). In the OSCILLATORY regime (B>=3) the
+  null[0] residual FRACTION rises monotonically (B=3 -> 0.169, B=3.5 -> 0.342,
+  B=4 -> 0.400, scatter <=0.02) while the residual DIRECTION stays pinned to the
+  INFO-040 baseline relation +0.54 H_a +0.54 H_b +0.32 H_a^2 -0.55 H_b^2 ~ 0
+  (|cos| 0.97-0.99, cross-seed 0.999+). So chemistry's coupling-strength readout
+  lives in the residual FRACTION of a FIXED non-MI relation, not in the MI axis
+  (contrast biology, whose readout is the MI-slope). At the Hopf threshold B=2
+  the structure flips qualitatively (residual -> 0.96, eqEntropy collapses,
+  direction rotates, |cos|->base 0.64) -- a critical point inspected on its own
+  terms (no tent-widening). Below threshold B=1.5 (fixed-point regime) the
+  residual is small (0.07) and direction-UNSTABLE cross-seed (0.715), noise-
+  limited. Net: chemistry's "partial residual coupling" (INFO-040) is genuinely
+  knob-responsive in the oscillatory regime -- refines INFO-040; the per-domain
+  heterogeneous-coupling reading strengthens (biology MI-coupled, chemistry
+  residual-coupled, both knob-confirmed; physics/geology pure equal-entropy).
+
+- **INFO-045 -- LOCATED (Session 13, new; LIGO no-MI decomposition across the
+  full 12 events; s13_ligo_nomi_batch.py)**. Re-ran the S11 GW150914 no-MI
+  decomposition (6-op vs 5-op-no-MI attractor cos, event vs noise windows) per
+  event across all 12 (11 scored; GW170608 skipped, missing L1). ROBUST /
+  GENERALIZES: the EVENT (merger) window leaves the 6-op equal-entropy attractor
+  in 11/11 (cos6 < 0.55, mostly < 0.35), and REMOVING MI restores it (event
+  cosNoMI > 0.65 in 10/11; GW170809 the lone exception) -- the MI-driven merger
+  departure (the strong half of the S11 GW150914 thread) is universal. Does NOT
+  generalize: the full noise-OFF/event-ON REVERSAL holds only 6/11, because the
+  NOISE-side no-MI position is event-dependent. The 3 events whose 6-op NOISE
+  also leaves the attractor (GW170729/170823/190521) are exactly the high
+  |H_a-H_b| events -- confirms INFO-038's inverse asymmetry<->noise-cos relation
+  at the per-event no-MI level. Resolves the S11 open thread: the event-side
+  MI-driven departure generalizes; the noise-side reversal was an event-specific
+  detector-noise configuration.
+
+- **INFO-046 -- LOCATED (Session 13, new; peri-event before/after trajectory;
+  s13_ligo_trajectory.py; per-event operator matrices cached to data/ligo_M/)**.
+  Greg's question: does anything right before/after the merger tell us something?
+  Time-resolved zones (pre_far/pre_near/merger/post_near/post_far) of MI,
+  |H_a-H_b|, and attractor cos around each merger, 11 events, no pooling. (a) MI:
+  the coherent inter-detector MI excess is a SPIKE CONFINED to the merger window
+  (+/-0.125s; loud-event merger MI/far 1.18-1.76x), with pre_near/post_near back
+  to ~1.0x noise -- NO inspiral precursor, NO ringdown tail. Pre-registered guess
+  that the long-inspiral BNS GW170817 would show a sustained pre-merger MI ramp
+  was NOT borne out (GW170817 peak only 1.05x far) -- the method keys on peak
+  coalescence strain, not the inspiral (caveat: 0.125s windows, 35-350Hz band; a
+  finer/lower-band probe could in principle chase the BNS inspiral, this one
+  cannot). (b) the no-MI attractor structure IS strongly time-asymmetric pre vs
+  post (|delta cos| up to 0.66) BUT the sign is event-specific (6 pre-dominant,
+  4 post-dominant, 1 symmetric) and it lives in the off-merger NOISE windows ->
+  DEFLATIONARY (load-bearing): non-stationary detector noise floor across the 32s
+  segment (single-PSD whitening leaves local drift; the INFO-038 detector-state
+  fingerprint), NOT an astrophysical inspiral/ringdown asymmetry. So "before
+  differs from after" reports the instrument's noise state on either side of the
+  trigger, not source physics.
 
 ## Note (Session 12 update — 2026-06-02)
 
