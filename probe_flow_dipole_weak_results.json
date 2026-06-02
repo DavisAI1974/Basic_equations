@@ -1,0 +1,118 @@
+{
+  "probe": "flow-dipole equation -- WEAK (real CMS dimuon, axis=invariant mass)",
+  "channels": "leading muon pT (A) vs subleading muon pT (B); MI(A;B) vs M",
+  "form_note": "paper dipole form is ONE candidate; schema library lets the data pick (best_schema_by_AIC). Greg: flows may differ in schema.",
+  "config": {
+    "n_boot": 60,
+    "n_bins": 34,
+    "min_per_bin": 60,
+    "m_window_GeV": [
+      60,
+      120
+    ],
+    "Z_pole_GeV": 91.1876
+  },
+  "by_charge": {
+    "opposite": {
+      "point_estimate": {
+        "n_axis_points": 66,
+        "schema_library": {
+          "paper_dipole_full": {
+            "R2": 0.04411869847646266,
+            "AIC": -220.50116624911456,
+            "k": 6
+          },
+          "self_only": {
+            "R2": 0.0431377088088436,
+            "AIC": -222.43346734374506,
+            "k": 5
+          },
+          "cross_only": {
+            "R2": 0.022255331242615473,
+            "AIC": -227.00858830717064,
+            "k": 2
+          },
+          "MI_relax_1d": {
+            "R2": 1.3315551132819792e-05,
+            "AIC": -225.52402375644542,
+            "k": 2
+          },
+          "linear_in_axis": {
+            "R2": 0.0004344065121166807,
+            "AIC": -225.5518219832209,
+            "k": 2
+          },
+          "linear_entropy": {
+            "R2": 0.03563713404051416,
+            "AIC": -225.91812904728505,
+            "k": 3
+          },
+          "quad_no_linear": {
+            "R2": 0.035600189933634896,
+            "AIC": -223.9156006791404,
+            "k": 4
+          }
+        },
+        "best_schema_by_AIC": "cross_only",
+        "paper_form_std_betas": {
+          "H_a^2": -0.027976365739800828,
+          "H_b^2": 1.0960180725455744,
+          "H_a*H_b": -0.46411952450596744,
+          "H_a": 0.18586859692043128,
+          "H_b": -0.8557416916162573
+        },
+        "R2_full": 0.04411869847646266,
+        "dR2_cross": 0.0009809896676190588,
+        "R2_relax_1d": 1.3315551132819792e-05,
+        "shuffle_null_R2_mean": 0.06469607299360608,
+        "opposition_signature": false,
+        "C_ratio": 5.118019676491751,
+        "MI_range": [
+          0.08972213911563974,
+          0.6294991310663073
+        ]
+      },
+      "bootstrap_scatter": {
+        "n_events": 10227,
+        "R2_full_boot": [
+          0.06533670512364499,
+          0.03912754858327159
+        ],
+        "dR2_cross_boot": [
+          0.01275027688234806,
+          0.019310424173811333
+        ],
+        "std_betas_boot": {
+          "H_a^2": [
+            0.3889294827401208,
+            1.0567832050234331
+          ],
+          "H_b^2": [
+            0.24764333623488943,
+            2.0658032282928342
+          ],
+          "H_a*H_b": [
+            -0.16704632943680153,
+            2.3011229308604055
+          ],
+          "H_a": [
+            -0.29751382966725787,
+            2.096045588122801
+          ],
+          "H_b": [
+            -0.10231252459554549,
+            1.833776520363723
+          ]
+        }
+      }
+    },
+    "same": {
+      "n_events": 356,
+      "note": "too few same-charge events to build a stable mass axis (0 bins) -- control has little data, as expected for a no-resonance sample.",
+      "point_estimate": null,
+      "bootstrap_scatter": null
+    }
+  },
+  "control_logic": "opposite-charge = real Z signal; same-charge = no-resonance control. A real weak flow-dipole should appear in signal and be absent/weaker in control.",
+  "runtime_s": 1.3
+}
