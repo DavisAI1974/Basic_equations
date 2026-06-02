@@ -162,10 +162,17 @@ raw data with both detectors agreeing. That's credibility."
 - **STRONG — QCD asymptotic freedom from real alpha_s(Q) world data (S16).** 1/alpha_s
   LINEAR in ln(Q) with POSITIVE slope (asymptotic freedom forced by data, no beta
   function assumed) from 13 measured points, chi2/ndf 0.81; Lambda_QCD ~150 MeV.
+- **BUILT-IN FALSIFIABILITY (S17, INFO-055).** The method tests, not just fits: a
+  rigorous beyond-GR search on GW150914 (full IMR matched-filter subtraction) returned
+  a clean NEGATIVE (correlated signal collapses to the noise floor). We distinguish
+  recovering known physics from claiming new physics, and we report nulls -- itself a
+  credibility asset for outreach.
 
-Outreach targeting (open, for Greg): GW / scientific-instrument groups, defense
-(already in pipeline below), and any data-rich domain wanting governing-law discovery.
-ACTION pending: package a one-page capability brief from these three recoveries.
+ONE-PAGE BRIEF: `CAPABILITY_BRIEF.md` (in repo root) -- the outreach-ready writeup of
+the three recoveries + the falsifiability point. Keep it in sync when new
+demonstrations land. Outreach targeting (open, for Greg): GW / scientific-instrument
+groups, defense (pipeline below), and any data-rich domain wanting governing-law
+discovery. ACTION (Greg): review/route the brief.
 
 NOTE (Session 9): the full Markets / Refrag section was OVERWRITTEN when
 this repo's CLAUDE.md was replaced by the master context this session.
