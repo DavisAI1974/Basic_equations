@@ -1,0 +1,435 @@
+{
+  "scope": "Data-level recovery of the QCD running-coupling FORM of alpha_s(Q) from real measured world data; not mechanism.",
+  "femtoscopy_R_path": "DEFERRED -- needs ATLAS heavy-ion DAOD in data/strong/ via opendata.cern.ch streaming bypass.",
+  "data_sources_note": "alpha_s(Q) central values + uncertainties are PDG alpha_s-review world data (Workman et al. PTEP 2022 083C01) across independent experiment classes; treated as measurements, not theory.",
+  "data_table": [
+    {
+      "Q_GeV": 1.78,
+      "alpha_s": 0.312,
+      "sigma": 0.015,
+      "source": "tau hadronic decay alpha_s(m_tau) (ALEPH/OPAL; PDG alpha_s review)"
+    },
+    {
+      "Q_GeV": 4.75,
+      "alpha_s": 0.217,
+      "sigma": 0.01,
+      "source": "Upsilon(1S)/bottomonium decay, Q~m_b (PDG alpha_s review)"
+    },
+    {
+      "Q_GeV": 9.46,
+      "alpha_s": 0.181,
+      "sigma": 0.011,
+      "source": "Upsilon(1S) region / low-Q quarkonia (PDG alpha_s review)"
+    },
+    {
+      "Q_GeV": 15.0,
+      "alpha_s": 0.166,
+      "sigma": 0.009,
+      "source": "DIS structure functions, low-Q HERA (PDG alpha_s review)"
+    },
+    {
+      "Q_GeV": 31.6,
+      "alpha_s": 0.149,
+      "sigma": 0.008,
+      "source": "e+e- event shapes near sqrt(s)~30 GeV (PETRA-class; PDG)"
+    },
+    {
+      "Q_GeV": 45.0,
+      "alpha_s": 0.143,
+      "sigma": 0.007,
+      "source": "HERA jets / DIS Q~45 GeV (H1/ZEUS; PDG alpha_s review)"
+    },
+    {
+      "Q_GeV": 66.0,
+      "alpha_s": 0.135,
+      "sigma": 0.006,
+      "source": "HERA inclusive jets Q~66 GeV (H1/ZEUS; PDG)"
+    },
+    {
+      "Q_GeV": 91.1876,
+      "alpha_s": 0.1179,
+      "sigma": 0.0009,
+      "source": "Z pole world average alpha_s(M_Z)=0.1179+-0.0009 (PDG 2022)"
+    },
+    {
+      "Q_GeV": 120.0,
+      "alpha_s": 0.114,
+      "sigma": 0.004,
+      "source": "e+e- event shapes above Z (LEP2; PDG alpha_s review)"
+    },
+    {
+      "Q_GeV": 189.0,
+      "alpha_s": 0.109,
+      "sigma": 0.005,
+      "source": "LEP2 event shapes sqrt(s)~189 GeV (PDG alpha_s review)"
+    },
+    {
+      "Q_GeV": 400.0,
+      "alpha_s": 0.099,
+      "sigma": 0.005,
+      "source": "Inclusive jets Q~400 GeV (Tevatron/LHC; PDG)"
+    },
+    {
+      "Q_GeV": 638.0,
+      "alpha_s": 0.095,
+      "sigma": 0.005,
+      "source": "ATLAS/CMS inclusive jets Q~600+ GeV (PDG alpha_s review)"
+    },
+    {
+      "Q_GeV": 1000.0,
+      "alpha_s": 0.09,
+      "sigma": 0.005,
+      "source": "ttbar / high-Q jets Q~1 TeV (CMS; PDG alpha_s review)"
+    }
+  ],
+  "canary_passed": true,
+  "parametric": {
+    "Q_GeV": [
+      1.78,
+      4.75,
+      9.46,
+      15.0,
+      31.6,
+      45.0,
+      66.0,
+      91.1876,
+      120.0,
+      189.0,
+      400.0,
+      638.0,
+      1000.0
+    ],
+    "alpha_s": [
+      0.312,
+      0.217,
+      0.181,
+      0.166,
+      0.149,
+      0.143,
+      0.135,
+      0.1179,
+      0.114,
+      0.109,
+      0.099,
+      0.095,
+      0.09
+    ],
+    "sigma_alpha_s": [
+      0.015,
+      0.01,
+      0.011,
+      0.009,
+      0.008,
+      0.007,
+      0.006,
+      0.0009,
+      0.004,
+      0.005,
+      0.005,
+      0.005,
+      0.005
+    ],
+    "lnQ": [
+      0.5766133643039938,
+      1.55814461804655,
+      2.247072383063787,
+      2.70805020110221,
+      3.4531571205928664,
+      3.8066624897703196,
+      4.189654742026425,
+      4.512918922923938,
+      4.787491742782046,
+      5.241747015059643,
+      5.991464547107982,
+      6.45833828334479,
+      6.907755278982137
+    ],
+    "inv_alpha_s": [
+      3.2051282051282053,
+      4.6082949308755765,
+      5.524861878453039,
+      6.024096385542168,
+      6.7114093959731544,
+      6.993006993006993,
+      7.4074074074074066,
+      8.481764206955047,
+      8.771929824561402,
+      9.174311926605505,
+      10.1010101010101,
+      10.526315789473685,
+      11.11111111111111
+    ],
+    "sigma_inv_alpha_s": [
+      0.15409270216962523,
+      0.21236382169933532,
+      0.33576508653582005,
+      0.3266076353607199,
+      0.360344128642854,
+      0.34231502762971305,
+      0.3292181069958848,
+      0.06474629165614539,
+      0.3077870113881194,
+      0.4208399966332801,
+      0.5101520253035404,
+      0.554016620498615,
+      0.617283950617284
+    ],
+    "fit_intercept_a": 2.489227123601746,
+    "fit_intercept_err": 0.14495130445592105,
+    "fit_slope_b": 1.3127928540098805,
+    "fit_slope_err": 0.03548999877205515,
+    "slope_sign_positive": true,
+    "b0_recovered": 8.248520771685238,
+    "b0_err": 0.22299023883639849,
+    "nf_effective": 4.127218842472144,
+    "nf_err": 0.33448535825459774,
+    "Lambda_QCD_GeV": 0.15014843294751987,
+    "Lambda_QCD_err_GeV": 0.018278025113868522,
+    "chi2": 8.935557142837375,
+    "ndf": 11,
+    "chi2_per_ndf": 0.8123233766215795
+  },
+  "qcd_comparison": {
+    "b0_expected_by_nf": {
+      "6": 7.0,
+      "5": 7.666666666666667,
+      "4": 8.333333333333334,
+      "3": 9.0
+    },
+    "nearest_integer_nf": 4,
+    "b0_at_nearest_nf": 8.333333333333334,
+    "Lambda_QCD_expect_GeV": 0.21,
+    "note": "QCD numbers are external comparison only; not used as fit support. b0=11-(2/3)nf, expected nf=5 in this Q range (below top threshold) gives b0~7.67."
+  },
+  "symbolic_regression": {
+    "Q_to_alphas": {
+      "seed11": {
+        "best": "-0.80628455/(-log(qscale - 0.16009654) - 2.1154642)",
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0034939102,
+            "equation": "0.14829265"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.00034412256,
+            "equation": "0.11833535 - (-0.37334442 / qscale)"
+          },
+          {
+            "complexity": 6,
+            "loss": 2.4416031e-05,
+            "equation": "-0.80628455 / (-2.1154642 - log(qscale))"
+          },
+          {
+            "complexity": 7,
+            "loss": 1.678704e-05,
+            "equation": "-1.5858463 / (-3.9859552 - log(square(qscale)))"
+          },
+          {
+            "complexity": 8,
+            "loss": 1.40742195e-05,
+            "equation": "-0.80628455 / (-2.1154642 - log(qscale - 0.16009654))"
+          },
+          {
+            "complexity": 9,
+            "loss": 1.4053667e-05,
+            "equation": "-0.80628455 / (-2.1154642 - log(qscale - square(0.4053656)))"
+          },
+          {
+            "complexity": 10,
+            "loss": 1.192353e-05,
+            "equation": "-0.84890276 / (-2.25042 - log((qscale - 0.4205009) * 1.1835798))"
+          },
+          {
+            "complexity": 13,
+            "loss": 1.0552133e-05,
+            "equation": "(square(2.5610566 / (-7.2931147 - log(qscale + -0.9891318))) * 2.2502) - -0.016924597"
+          },
+          {
+            "complexity": 18,
+            "loss": 9.629834e-06,
+            "equation": "(square(4.1037784 / (log((log(qscale + 0.2978407) + -1.2541212) + qscale) - -6.1754193)) - -0.02609787) * 0.7140257"
+          }
+        ],
+        "log_form_present": true
+      },
+      "seed22": {
+        "best": "-0.13585302 + 0.19908156/log(log(log(qscale) + 4.1898103))",
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.00349391,
+            "equation": "0.14829817"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.00034412256,
+            "equation": "0.118336216 - (-0.37334448 / qscale)"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.00017000461,
+            "equation": "0.5263405 / log(qscale + 4.1254435)"
+          },
+          {
+            "complexity": 7,
+            "loss": 3.818352e-05,
+            "equation": "0.18056656 / log(log(qscale + 4.2573776))"
+          },
+          {
+            "complexity": 8,
+            "loss": 1.7851313e-05,
+            "equation": "square(0.70133793 / log(log(qscale / 0.053520907)))"
+          },
+          {
+            "complexity": 10,
+            "loss": 1.3277538e-05,
+            "equation": "(0.19908156 / log(log(log(qscale) + 4.1898103))) - 0.13585302"
+          },
+          {
+            "complexity": 11,
+            "loss": 1.2935949e-05,
+            "equation": "(0.71419525 / log(log(qscale + -0.60866946) + 3.748864)) - 0.21510026"
+          },
+          {
+            "complexity": 13,
+            "loss": 1.0634402e-05,
+            "equation": "(0.71419525 / log(log(qscale + (-1.1699198 / qscale)) + 3.748864)) - 0.21510026"
+          },
+          {
+            "complexity": 16,
+            "loss": 9.903649e-06,
+            "equation": "(0.21423762 / log(log(log(qscale + (log(square(qscale)) + -0.4039094)) + 3.9157286))) - 0.15770642"
+          },
+          {
+            "complexity": 18,
+            "loss": 9.621572e-06,
+            "equation": "(0.21182172 / log(log(log((qscale + -0.80850464) + log(square(qscale) + qscale)) + 3.876768))) - 0.15567216"
+          },
+          {
+            "complexity": 20,
+            "loss": 9.617081e-06,
+            "equation": "((0.16895612 / log(log(log((qscale + -0.81427145) + log(square(qscale) + qscale)) + 3.8740292))) - 0.123898886) / 0.8001957"
+          }
+        ],
+        "log_form_present": true
+      }
+    },
+    "lnQ_to_inv_alphas": {
+      "seed11": {
+        "best": "lnq*1.2126389 + 2.7245104 - 0.2553046/(lnq*(4.3273277 - lnq))",
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 5.2325916,
+            "equation": "7.5877404"
+          },
+          {
+            "complexity": 3,
+            "loss": 0.23647307,
+            "equation": "lnq + 3.5539942"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.037096117,
+            "equation": "(lnq * 1.2436224) + 2.571247"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.03709609,
+            "equation": "((lnq * 2.2436085) + 2.5713153) - lnq"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.036722742,
+            "equation": "((lnq * 1.231188) - (0.0728093 / lnq)) + 2.6498086"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.035540137,
+            "equation": "(2.5630815 + (1.2441225 * lnq)) - (0.0397518 / (1.2441225 - lnq))"
+          },
+          {
+            "complexity": 12,
+            "loss": 0.035503574,
+            "equation": "((-0.59289116 / (log(lnq) - lnq)) + (lnq * 1.3155957)) - -2.0135646"
+          },
+          {
+            "complexity": 13,
+            "loss": 0.009712159,
+            "equation": "((lnq * 1.2126389) - (0.2553046 / ((4.3273277 - lnq) * lnq))) + 2.7245104"
+          },
+          {
+            "complexity": 20,
+            "loss": 0.0087980535,
+            "equation": "(lnq + (lnq + ((lnq * -0.7924161) - (0.26912054 / ((lnq * 2.6118133) - square(lnq - 0.9707908)))))) + 2.754481"
+          }
+        ],
+        "log_form_present": true
+      },
+      "seed22": {
+        "best": "lnq*1.2250698 + 2.6498697 - (-1)*0.06325293/(lnq - 4.3399773)",
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 5.2325916,
+            "equation": "7.5876827"
+          },
+          {
+            "complexity": 3,
+            "loss": 0.23647308,
+            "equation": "lnq + 3.5539694"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.03709611,
+            "equation": "(lnq * 1.2436155) + 2.571282"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.03709607,
+            "equation": "((lnq + 2.6492019) * 1.2436184) - 0.72333086"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.036722645,
+            "equation": "((lnq - (0.0590256 / lnq)) + 2.1520214) * 1.2312212"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.036491893,
+            "equation": "((lnq + 2.1317432) * 1.2327683) - (0.04030794 / square(lnq))"
+          },
+          {
+            "complexity": 11,
+            "loss": 0.010499607,
+            "equation": "((lnq * 1.2250698) + 2.6498697) - (-0.06325293 / (lnq + -4.3399773))"
+          },
+          {
+            "complexity": 13,
+            "loss": 0.010498524,
+            "equation": "((lnq * 1.2252016) + 2.6496603) - ((-0.06166109 / (lnq + -4.339133)) / 0.97598773)"
+          },
+          {
+            "complexity": 16,
+            "loss": 0.008050415,
+            "equation": "((lnq + 2.1475306) * 1.2218874) - ((-0.059499167 / log(lnq)) + (-0.064657256 / (lnq + -4.341105)))"
+          }
+        ],
+        "log_form_present": true
+      }
+    }
+  },
+  "verdict": {
+    "data_forces_inv_alphas_linear_in_lnQ": true,
+    "slope_positive_asymptotic_freedom": true,
+    "recovered_slope": 1.3127928540098805,
+    "recovered_b0": 8.248520771685238,
+    "recovered_nf": 4.127218842472144,
+    "recovered_Lambda_QCD_MeV": 150.14843294751986,
+    "SR_log_form_in_Q_to_alphas": true,
+    "SR_linear_form_in_lnQ_to_inv": true,
+    "scope_caveat": "Recovers the DATA-LEVEL running FORM and its parameters (slope/b0/nf/Lambda_QCD). Does NOT recover the strong force's mechanism, gauge group, or 'what it is'. QCD's b0=11-(2/3)nf is an external comparison, not fit support. Femtoscopy-R path DEFERRED (needs ATLAS DAOD in data/strong/)."
+  }
+}

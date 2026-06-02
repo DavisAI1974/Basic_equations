@@ -1,0 +1,67 @@
+{
+  "scope": "Attempts to recover the data-level inspiral frequency-evolution law (df/dt vs f) and chirp mass from LIGO H1 strain. NOT gravity's mechanism.",
+  "event": "GW150914",
+  "file": "data/ligo/H-H1_GW150914_32s.hdf5",
+  "verdict": "NOT cleanly recovered by naive instantaneous-frequency tracking. The qualitative chirp is present (f sweeps up through the band into the merger) but the quantitative f^11/3 law and chirp mass are NOT pinned. Tested on BOTH GW150914 (short, high-mass, merger-dominated, ~0.2s inspiral) and GW170817 (long BNS inspiral, ~6s / 18k samples) -- BOTH fail (f^-8/3 linearity R^2 ~ 0). So the limiter is the METHOD, not the event: per-sample whitened-Hilbert instantaneous frequency is too noisy point-to-point to track the monotone chirp. Rule D correction to the earlier GW150914 reading (which blamed event type): the long-inspiral event fails too, so that diagnosis was INCOMPLETE. Clean recovery requires a proper time-frequency representation (Q-transform / constant-Q ridge with SNR weighting) or matched-filter template tracking, NOT naive Hilbert/ridge SR. Consistent with the lit-scan negative finding (chirp law needs templates).",
+  "clean_recovery": false,
+  "merger_t": 16.42431640625,
+  "inspiral_window_s": [
+    16.226318359375,
+    16.420166015625
+  ],
+  "f_range_Hz": [
+    30.76723757757354,
+    295.25766863515616
+  ],
+  "n_samples": 467,
+  "free_fit": {
+    "n_exponent": 2.0,
+    "GR_exponent": 3.6666666666666665,
+    "pct_of_GR": 54.54545454545455,
+    "R2": 0.33492600641632186,
+    "chirp_mass_Msun_at_free_n": NaN
+  },
+  "fixed_n_fit": {
+    "n": 3.6666666666666665,
+    "chirp_mass_Msun": NaN,
+    "linearity_R2_f_to_minus_8_3": 0.14406813583787836,
+    "published_Mc_Msun": 30.2
+  },
+  "pysr": [
+    {
+      "complexity": 1,
+      "loss": 1146335100.0,
+      "equation": "-5542.309"
+    },
+    {
+      "complexity": 3,
+      "loss": 1116373000.0,
+      "equation": "x0 * -59.923798"
+    },
+    {
+      "complexity": 5,
+      "loss": 1111743600.0,
+      "equation": "(x0 * -87.290375) + 4151.822"
+    },
+    {
+      "complexity": 7,
+      "loss": 1111743500.0,
+      "equation": "((x0 + x0) + -94.958084) * -43.61384"
+    },
+    {
+      "complexity": 8,
+      "loss": 1109667700.0,
+      "equation": "square(x0 * 0.046605926) * (x0 + -362.80145)"
+    },
+    {
+      "complexity": 9,
+      "loss": 1109057400.0,
+      "equation": "((x0 * 0.37710848) + -21.07505) * (x0 + -459.88138)"
+    },
+    {
+      "complexity": 10,
+      "loss": 1106570100.0,
+      "equation": "(x0 + -321.2594) * square((x0 + -36.953655) * 0.07044032)"
+    }
+  ]
+}

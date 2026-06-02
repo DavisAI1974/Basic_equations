@@ -1,0 +1,36 @@
+{
+  "gravity": {
+    "axis": "time",
+    "rho": 1.0,
+    "abs_rho": 1.0,
+    "sweep_ratio": 2.250333284432088,
+    "n": 479,
+    "char_lo": 33.84695929071186,
+    "char_hi": 157.6653488440156
+  },
+  "strong": {
+    "axis": "ln(energy scale)",
+    "rho": -1.0,
+    "abs_rho": 1.0,
+    "sweep_ratio": 1.4969656102494941,
+    "n": 13,
+    "char_lo": 0.09,
+    "char_hi": 0.312
+  },
+  "weak": {
+    "axis": "mass",
+    "rho": -0.5544114366202799,
+    "abs_rho": 0.5544114366202799,
+    "n_events": 10583,
+    "peak_mass": 90.5,
+    "peak_interior": true,
+    "note": "localized resonance (peak), not a monotone flow"
+  },
+  "verdict": {
+    "flow_count_of_2": 2,
+    "flow_unique_to_gravity": false,
+    "gravity_axis": "time",
+    "strong_axis": "energy_scale",
+    "construction_confounded": true
+  }
+}
