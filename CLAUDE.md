@@ -326,6 +326,12 @@ x0=H_a, x1=H_b.
   Specifically re-confirm: INFO-040 biology MI~=0.28*H_a + g-knob slope; markets
   H_a^2=a+b(H_aH_b)+c(H_aH_b)^2 predictor; and the self-pole nulls of weak/EM/
   strong/gravity (INFO-047/048/049/050) under any improved real-data construction.
+  ALSO (Greg S14): the "how are the forces derived" 3-piece program (see the
+  "Queued thread (Session 14)" subsection below) TRANSFERS to markets one-to-one
+  -- re-derive the markets dipole equation from raw data (Piece 1), find where its
+  coefficients come from (Piece 2), test markets<->biology unification (Piece 3).
+  Run the markets pieces in lockstep with the force pieces, same PySR-from-raw-
+  data machinery.
 
 ### Next direction queued -- principled force-operator-space (Session 12 close)
 
@@ -397,6 +403,29 @@ falsifiable pieces, each with a clear data requirement:
   payment. NOTE the scope honesty -- recovering the Z Breit-Wigner is "deriving
   the weak neutral-current's data-level propagator shape from raw data," NOT
   deriving the weak force's mechanism or what it "is."
+
+  **GREG'S S14 DECISION (plan for S15, new session)**: do ALL THREE pieces,
+  EASIEST ONE FIRST. Order = (1) Piece 1 weak Z-propagator from Zmumu.csv
+  (cheapest, data in hand, pure-fit + PySR symbolic recover of the Breit-Wigner);
+  (2) Piece 1 gravity chirp law from the cached LIGO inspiral (data/ligo_M/ +
+  GWOSC strain -> f(t) -> df/dt ~ f^(11/3)); (3) Piece 3 unification footprint
+  (extend Track B / INFO-037, s12_track_b_inverse.py). Piece 2 (predictive
+  coupling relation on PDG) folds in alongside (3). To be run in a FRESH session
+  off the v15 kickoff -- this session (S14) recorded the roadmap + did the strong
+  build; it did not run a derivation piece.
+
+  **TRANSFERS TO MARKETS (Greg, S14: "a lot of it transfers")**: the Piece-1
+  method -- re-derive a domain's GOVERNING EQUATION from raw data by symbolic
+  regression WITHOUT assuming it -- is EXACTLY how the markets algebraic dipole
+  (H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2) was found, and markets sits on the
+  same COUPLING side as biology (INFO-050 frame). So the 3-piece program applies
+  to markets one-to-one: Piece 1 = re-derive the markets dipole equation from raw
+  market data (already have the form; re-run as models improve, see the Markets
+  re-run flag); Piece 2 = where the dipole COEFFICIENTS (a,b,c) come from / a
+  predictive relation among them that survives held-out data; Piece 3 = whether
+  markets unifies with the other coupling-side domain (biology) under one
+  relation. Run the markets pieces in lockstep with the force pieces (same
+  symbolic-regression-from-raw-data machinery, PySR).
 
 ## Information Layer — Current State (2026-05-25 Session 3)
 
@@ -875,14 +904,18 @@ directive. Header bumped to Session 14.
   opendata.cern.ch/eos/opendata/<path> streaming bypass, or a session whose policy
   trusts the CERN CA.
 
-- **Open / next**: (a) the four real force objects are NOW all built -- the
-  force<->equation dive's data-collection phase is complete; what remains is
-  interpretation WITHIN type (strong-vs-weak particle-pair detail; gravity-vs-EM
-  detector-pair detail), never across (Greg's rule). (b) Markets dipole JSON pull
-  still dropped per Greg; keep the Markets section in lockstep. (c) Strong follow-ups
-  if wanted: more files/centrality binning, Coulomb-corrected C(q), opposite-charge
-  (resonance) control -- none change the self-pole null, which is the load-bearing
-  result.
+- **Open / next**: (a) **NEXT SESSION (Greg S14 decision): the "how are the 4
+  forces derived" 3-piece program -- do ALL THREE, EASIEST FIRST.** Order: (1) weak
+  Z-propagator from Zmumu.csv, (2) gravity chirp from cached LIGO inspiral, (3)
+  unification footprint (extend Track B). Piece 2 (PDG coupling relation) folds
+  into (3). RUN THE MARKETS ANALOGUE IN LOCKSTEP (the method transfers -- see the
+  queued-thread subsection in the Markets section). Full plan in
+  NEW_SESSION_KICKOFF_v15.md. (b) the four real force objects are all built --
+  the data-collection phase is complete; remaining force interpretation is WITHIN
+  type only (Greg's no-synthesis rule). (c) Markets dipole JSON pull still dropped
+  per Greg; keep the Markets section in lockstep. (d) Strong follow-ups if wanted:
+  more files/centrality binning, Coulomb-corrected C(q), opposite-charge control
+  -- none change the self-pole null (the load-bearing result).
 
 ## Note (Session 12 update — 2026-06-02)
 
