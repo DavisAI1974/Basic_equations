@@ -23,8 +23,17 @@ stable substrate reference (return = return-to-noise, H-D stays a frame). Everyt
 measured clusters on the equal-entropy substrate; the only departures are gravity-
 associated. MI-in-null coupling is DISPROVED — do not build on it.
 
-## FIRST ACTIONS — YOU (next session) pick which backlog item to run first
-Greg's call (S16): run-order is NOT pre-assigned — choose from
+## JOB 1 (Greg, S16): FIX THE CLAUDE.md DRIFT — before any probe
+The repo CLAUDE.md body is canonical only through S11; the true master is S14
+(preserved in-repo as `CLAUDE_master_through_S14.md`); S15 is in
+`CLAUDE_session_note_2026-06-02_S15.md` + `SESSION_HANDOFF_2026-06-02_S14-S15_COMBINED.md`;
+S16 is in `SESSION_HANDOFF_2026-06-02_S16.md`. Fold S12-S16 into ONE canonical,
+current CLAUDE.md (start FROM the S14 master as the superset; diff before overwriting
+so the S11-body loses nothing; fix the header; re-attach the START-HERE block). Safe
+procedure is in the CLAUDE.md START-HERE block. Do this FIRST.
+
+## THEN — YOU (next session) pick which probe to run
+Greg's call (S16): probe run-order is NOT pre-assigned — choose from
 `BACKLOG_tests_and_probes.md`. The only firm rule is **clear backlog before NEW
 probes**. Strong candidates (your choice among them, not a ranking):
 - **Substrate construction-vs-nature test** (backlog #1; Greg flagged "clean,

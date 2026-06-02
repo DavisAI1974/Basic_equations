@@ -5,9 +5,15 @@
 New ideas get appended here first; we clear the backlog before opening new lines.
 A probe that didn't give a 100% hit still carries a piece — keep its output, don't discard.
 
-**Run-order is NOT fixed (Greg, S16): the next session decides which backlog item to
-run first.** The numbering below is just an index, and the HIGH/MED/LOW tags are rough
+**Run-order is NOT fixed (Greg, S16): the next session decides which PROBE to run
+first.** The numbering below is just an index, and the HIGH/MED/LOW tags are rough
 suggestions — not a prescribed sequence.
+
+**EXCEPTION — JOB 1 (Greg, S16): fix the CLAUDE.md drift FIRST, before any probe.**
+The repo CLAUDE.md body is canonical only through S11; the true master is S14
+(preserved as `CLAUDE_master_through_S14.md`); S15/S16 are in handoffs. Fold S12-S16
+into one canonical, current CLAUDE.md (safe procedure in the CLAUDE.md START-HERE
+block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
 
 ---
 
