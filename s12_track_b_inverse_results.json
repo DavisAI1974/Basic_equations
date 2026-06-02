@@ -1,0 +1,189 @@
+{
+  "anchors": {
+    "M_Z": 91.1876,
+    "ainv_MZ": [
+      59.019701868,
+      29.58483022,
+      8.474576271186441
+    ],
+    "b_SM": [
+      4.1,
+      -3.1666666666666665,
+      -7.0
+    ],
+    "b2_SM": [
+      [
+        3.98,
+        2.7,
+        8.8
+      ],
+      [
+        0.9,
+        5.833333333333333,
+        12.0
+      ],
+      [
+        1.1,
+        4.5,
+        -26.0
+      ]
+    ]
+  },
+  "alt_a_oneloop": {
+    "crossings": {
+      "12": 10308931063427.635,
+      "13": 243010379956059.53,
+      "23": 9.710443784395931e+16
+    },
+    "triangle_spread": 9419.447782365214
+  },
+  "alt_b_twoloop": {
+    "crossings": {
+      "12": 10871213771077.27,
+      "13": 171910661488230.1,
+      "23": 2.9115580580490656e+16
+    },
+    "triangle_spread": 2678.2272148812212,
+    "closest_approach": {
+      "best_Q": 171910661488230.1,
+      "min_spread_alphainv": 3.1903636919711644,
+      "alphainv_at_best": [
+        40.366220619856186,
+        43.556131382237105,
+        40.36576769026594
+      ]
+    },
+    "shrink_factor_vs_oneloop": 3.5170458018002644
+  },
+  "alt_c": "extrapolation to 1e13-1e17 GeV is conjecture; running measured to ~1 TeV",
+  "inverse_footprint_surface": {
+    "mu1e+03_G1e+15": {
+      "mu_NP": 1000.0,
+      "M_GUT": 1000000000000000.0,
+      "d12": -1.2031095207399334,
+      "d23": 0.6348124833729365,
+      "d13": -0.568297037366996
+    },
+    "mu1e+03_G2e+16": {
+      "mu_NP": 1000.0,
+      "M_GUT": 2e+16,
+      "d12": -1.7962116887558741,
+      "d23": 0.1977642446703367,
+      "d13": -1.5984474440855365
+    },
+    "mu1e+03_G1e+17": {
+      "mu_NP": 1000.0,
+      "M_GUT": 1e+17,
+      "d12": -2.0693319701580384,
+      "d23": -0.0034940618708168003,
+      "d13": -2.0728260320288534
+    },
+    "mu1e+04_G1e+15": {
+      "mu_NP": 10000.0,
+      "M_GUT": 1000000000000000.0,
+      "d12": -1.312483113534472,
+      "d23": 0.6925227091341126,
+      "d13": -0.619960404400361
+    },
+    "mu1e+04_G2e+16": {
+      "mu_NP": 10000.0,
+      "M_GUT": 2e+16,
+      "d12": -1.9422329316427716,
+      "d23": 0.21384129226229032,
+      "d13": -1.728391639380483
+    },
+    "mu1e+04_G1e+17": {
+      "mu_NP": 10000.0,
+      "M_GUT": 1e+17,
+      "d12": -2.228511352477888,
+      "d23": -0.003762835860879221,
+      "d13": -2.232274188338767
+    },
+    "mu1e+06_G1e+15": {
+      "mu_NP": 1000000.0,
+      "M_GUT": 1000000000000000.0,
+      "d12": -1.6041460276532433,
+      "d23": 0.846416644497249,
+      "d13": -0.7577293831559953
+    },
+    "mu1e+06_G2e+16": {
+      "mu_NP": 1000000.0,
+      "M_GUT": 2e+16,
+      "d12": -2.3193278303976177,
+      "d23": 0.25535972145865315,
+      "d13": -2.0639681089389654
+    },
+    "mu1e+06_G1e+17": {
+      "mu_NP": 1000000.0,
+      "M_GUT": 1e+17,
+      "d12": -2.633695234746594,
+      "d23": -0.004446987835584615,
+      "d13": -2.6381422225821787
+    },
+    "mu1e+09_G1e+15": {
+      "mu_NP": 1000000000.0,
+      "M_GUT": 1000000000000000.0,
+      "d12": -2.4062190414798668,
+      "d23": 1.269624966745873,
+      "d13": -1.136594074733992
+    },
+    "mu1e+09_G2e+16": {
+      "mu_NP": 1000000000.0,
+      "M_GUT": 2e+16,
+      "d12": -3.27234178806183,
+      "d23": 0.36028726795975174,
+      "d13": -2.912054520102078
+    },
+    "mu1e+09_G1e+17": {
+      "mu_NP": 1000000000.0,
+      "M_GUT": 1e+17,
+      "d12": -3.621330947776565,
+      "d23": -0.0061146082739291785,
+      "d13": -3.627445556050496
+    },
+    "mu1e+12_G1e+15": {
+      "mu_NP": 1000000000000.0,
+      "M_GUT": 1000000000000000.0,
+      "d12": -4.8124380829597335,
+      "d23": 2.539249933491746,
+      "d13": -2.273188149467984
+    },
+    "mu1e+12_G2e+16": {
+      "mu_NP": 1000000000000.0,
+      "M_GUT": 2e+16,
+      "d12": -5.554824210663483,
+      "d23": 0.6115902825792539,
+      "d13": -4.943233928084233
+    },
+    "mu1e+12_G1e+17": {
+      "mu_NP": 1000000000000.0,
+      "M_GUT": 1e+17,
+      "d12": -5.794129516442506,
+      "d23": -0.009783373238285265,
+      "d13": -5.803912889680795
+    }
+  },
+  "mssm_located": {
+    "delta_b": [
+      2.5,
+      4.166666666666666,
+      4.0
+    ],
+    "dd12": -1.666666666666666,
+    "dd23": 0.16666666666666607,
+    "dd13": -1.5,
+    "note": "conjecture, SUSY unobserved; located not cited"
+  },
+  "gravity_into_log": {
+    "aG_inv_MZ": 1.7899796366569202e+34,
+    "slope_needed": 4.539057755833324e+32,
+    "b_G_effective": 2.8519740999891487e+33,
+    "note": "power-law->log is a form change, not a shift"
+  },
+  "provenance": {
+    "solid": "M_Z couplings (PDG); 1- and 2-loop SM beta functions (standard)",
+    "conjecture": "GUT-scale extrapolation; MSSM; any specific NP spectrum",
+    "method": "footprint = required Delta-b DIFFERENCES; identity unrecoverable"
+  },
+  "reading": "Track B, data/interpretation/frame kept separate. DATA: (a) the SM one-loop triangle spans 9.42e+03x; (b) two-loop running gives spread 2.68e+03x; (c) the inversion yields a smooth required-Delta-b surface over (mu_NP, M_GUT). INTERPRETATION: new physics CAN close the triangle, but only its FOOTPRINT (Delta-b differences) is recoverable, never its identity -- 3 unknown shifts, 2 difference constraints, free spectrum scale. MSSM is one located point on that surface, not support. Gravity needs a form change (power-law->log), not a shift. FRAME: 'shared running substrate + per-force expression' survives; 'single unification' remains a conjecture conditional on >10-orders extrapolation. The leading deflationary read (nothing forces a single point) is unrefuted."
+}
