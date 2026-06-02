@@ -288,6 +288,24 @@ x0=H_a, x1=H_b.
     constraint until a principled REAL-DATA force-operator-space is built (next
     block).
 
+- **MARKETS update (Session 13; "always update markets" -- Greg)**: the
+  principled real-data force-operator-space was built this session (INFO-047
+  weak, INFO-048 EM; gravity already via LIGO). Result places MARKETS sharply:
+  among all domains probed, GENUINE coupling/predictive dipole structure (MI or
+  an algebraic relation that actually carries information) appears in just two
+  places -- simulated BIOLOGY (MI enters the null, INFO-040) and MARKETS (the
+  algebraic dipole H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2 with the ~0.993 5-fold
+  CV predictor). The GAUGE FORCES (weak, EM) and physics/geology are SELF-POLE
+  (MI stays out of the null; equal-entropy is pure channel symmetry). So markets
+  is NOT a self-pole/bookkeeping domain -- its dipole carries real predictive
+  content, putting it (with biology) on the COUPLING side, distinct from the
+  forces. The caricature force<->per-domain-equation hits (EM<->physics,
+  weak<->chemistry) did NOT survive real data, so the markets algebraic dipole
+  remains the strongest non-biology coupling signal we have. STILL PENDING (no
+  list_repos/add_repo in scope, GitHub locked to basic_equations): pull the
+  actual Markets dipole JSONs from the Markets repo via a tooled session; the
+  markets algebraic dipole FORM + this placement are recorded here meanwhile.
+
 ### Next direction queued -- principled force-operator-space (Session 12 close)
 
 Greg wants to dive into this. The force<->equation question (INFO-042 (b))
@@ -597,6 +615,69 @@ session) is why the title line now reads Session 13.
   fingerprint), NOT an astrophysical inspiral/ringdown asymmetry. So "before
   differs from after" reports the instrument's noise state on either side of the
   trigger, not source physics.
+
+### Session 13 HEADLINE -- principled force-operator-space (the force<->equation dive)
+
+The S12 decision gate (is there a REAL dataset giving a gauge force a 2-channel
+entropy/MI object WITHOUT inventing the coupling?) was answered by a 3-agent
+open-data scan: PASS for 3 of 4 forces. Gravity already has LIGO (INFO-036/038,
+cached data/ligo_M/). Weak: CMS Open Data dimuon (Z->mu+mu-, record 545
+Zmumu_Run2011A, per-event 2-lepton kinematics, ~MB CSV; the Z propagator makes
+the di-muon correlation intrinsic). EM: Zenodo 5113016 HBT raw two-channel
+photon timetags (Bose bunching intrinsic; same DETECTOR-PAIR construction type
+as LIGO). Strong: ALICE/CMS heavy-ion femtoscopy event-level data exists but is
+TB-scale + ROOT/VM -- DEFERRED by Greg ("do everything but the big heavy
+build"). STRUCTURAL CAVEAT (a finding itself): the four objects are TWO
+construction types -- detector-pair time series (gravity + EM) vs particle-pair
+event ensembles binned by energy (weak + strong) -- so clean tests are
+WITHIN-type. Greg's rule this session: do NOT synthesize across objects (that
+isn't real data); each is its own real-data probe.
+
+- **INFO-047 -- LOCATED, REAL DATA (Session 13, new; WEAK force; CMS Z->mu+mu-,
+  10227 events; s13_force_dimuon.py + s13_force_dimuon_observables.py)**. First
+  real gauge-force operator object. Channels = mu+ / mu- (by charge, physical &
+  symmetric, NOT arbitrary leading/subleading); energy axis = dimuon invariant
+  mass M, equal-count bins -> a trajectory; same 6-op extract_v1 as
+  per_domain_kbk. Finding: the weak object sits on the equal-MARGINAL-entropy
+  self-pole (H_a~=H_b, charge-symmetric) and MI does NOT enter the null
+  (MI-coupling 0.000) -- like physics/geology (INFO-040), NOT the coupling pole
+  (biology). ROBUST across observables: pt, E, signed pz, signed eta, and
+  Collins-Soper cos(theta*) ALL give |H_a-H_b| small and MI-in-null 0.000,
+  including the parity-carrying observables (A_FB is a small correlation-with-
+  boost effect, not a marginal-entropy difference; even cos(theta*) with the two
+  muons near-perfectly anti-correlated MI=2.6 keeps MI OUT of the null -- the
+  INFO-041 high-variance-active-variable mechanism). Robustness via 5 observables
+  agreeing is the real-data analogue of the >=3-seed rule. CONSEQUENCE: the
+  caricature "weak ~ chemistry linear-in-H_a" hit (S8, self-grading toy) does NOT
+  reproduce on real data.
+
+- **INFO-048 -- LOCATED, REAL DATA (Session 13, new; EM force; HBT, Zenodo
+  5113016; s13_force_hbt.py)**. First real EM force object, SAME construction
+  type as LIGO (two detectors, windowed count-rate entropy + MI). Two sources:
+  split-thermal (detectors ch11/ch15, ASYMMETRIC rates 139k/77k per s) and an
+  uncorrelated control (ch15/ch16, symmetric). Findings: (a) MI does NOT enter
+  the null for EM either (max 0.031) -- so gravity-noise, weak, AND EM all keep
+  MI an ACTIVE variable, never a low-variance null constraint; the ONLY object
+  where MI ENTERS the null remains simulated biology (genuine dynamical coupling,
+  INFO-040). (b) equal-entropy attractor membership tracks the marginal-entropy
+  SYMMETRY of the two channels, not the force: the asymmetric split detector
+  (H_a != H_b) sits OFF (eqEnt 0.29-0.52), the symmetric pair sits closer
+  (eqEnt 0.57-0.61). This CONFIRMS INFO-036's "attractor = equal-marginal-entropy
+  geometry" on a THIRD construction. CAVEAT (honest): the windowed count-rate
+  construction at 20-100us bins captures slow common-mode intensity correlation,
+  NOT the ns-scale HBT g2(0) quantum bunching (corr is actually higher for the
+  "uncorrelated" set -> the 20-100us correlation is intensity drift, not g2);
+  capturing g2(0) needs a coincidence-lag object (different construction, not
+  heavy, optional follow-up).
+
+- **Session 13 force-operator-space FRAME (held as frame, not claim; no
+  synthesis per Greg)**: across two real gauge-force builds (weak, EM) plus
+  gravity, the forces look like the SELF-POLE / bookkeeping domains
+  (physics/geology) -- MI stays out of the null, equal-entropy membership is pure
+  channel symmetry. The caricature-era EM<->physics and weak<->chemistry hits do
+  NOT reproduce on real data. "MI-in-the-null = law-like coupling" appears so far
+  ONLY in simulated biology, in NO real force object yet measured. Strong force
+  (heavy) and the EM g2(0)-coincidence object are the open within-type extensions.
 
 ## Note (Session 12 update — 2026-06-02)
 
