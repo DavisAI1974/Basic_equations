@@ -1,0 +1,51 @@
+{
+  "frame": "flow=substrate, time=one expression (Greg S18); falsifiable",
+  "domains": {
+    "gravity": {
+      "axis": "time",
+      "characteristic": "GW frequency f(t)",
+      "critical_point_t_c": 16.423583984375,
+      "flow_monotonicity": 1.0,
+      "diverges": true,
+      "expression_form": "power-law",
+      "powerlaw_exponent_q": 0.39325393845107,
+      "powerlaw_R2": 0.9931575466283828,
+      "GR_chirp_exponent": 0.375,
+      "exponent_ratio": 1.0486771692028534,
+      "critical_point_scan_best_tc": 16.42338671875,
+      "true_t_c": 16.423583984375,
+      "critical_point_recovered": true
+    },
+    "strong": {
+      "axis": "energy-scale",
+      "characteristic": "alpha_s(Q)",
+      "critical_point_Lambda_QCD": 0.15014843294751987,
+      "flow_monotonicity": 1.0,
+      "diverges": true,
+      "expression_form": "logarithmic",
+      "log_form_R2": 0.9929105498890914,
+      "log_slope_b0_like": 1.2436192053756605,
+      "powerlaw_form_R2_foreign": 0.9940406045856119,
+      "powerlaw_exponent_foreign": 0.9671501278455497
+    },
+    "weak": {
+      "axis": "mass",
+      "characteristic": "BW rate(M)",
+      "critical_point_M_Z": 90.6597771622298,
+      "width_Gamma": 3.9103944116208034,
+      "flow_monotonicity": 0.05382127388296176,
+      "peaks_in_interior": true,
+      "is_flow": false,
+      "note": "resonance: characteristic PEAKS at the critical point, does not flow"
+    }
+  },
+  "verdict": {
+    "substrate_is_shared_flow": true,
+    "substrate": "monotonic divergence toward a critical point (gravity+strong); weak is a resonance (peaks) -> NOT a flow -> control separates",
+    "expression_axis_distinct": true,
+    "expression_form_distinct": false,
+    "expression": "AXIS is clearly distinct (time / energy-scale / mass). FUNCTIONAL FORM is NOT resolved by this data: strong alpha_s fits a power-law (R2 0.994) as well as a log (R2 0.993) because the 13 measured points sit far from Lambda_QCD, where power-law and log divergences only separate. Gravity is a clean power-law q=0.393 (GR 0.375). Form-level expression UNDETERMINED, not refuted -- needs near-critical (low-Q) alpha_s data.",
+    "critical_point_is_real": true,
+    "reading": "FLOW is a thin-but-real shared SUBSTRATE: a monotonic divergence toward a critical point, shared by gravity and strong; weak (a genuine critical point, the M_Z pole) is a RESONANCE and does NOT flow, so the control separates and the deflationary 'monotonic=trivial' reading is BEATEN. The critical point is real (gravity R2 scan locks to true t_c). EXPRESSION: the AXIS differs cleanly (time is gravity's, scale is strong's, mass is weak's) -- consistent with Greg's frame (time is ONE expression of flow). The FUNCTIONAL-FORM half of expression is UNDETERMINED with current data (power vs log indistinguishable far from the critical point). NOT data-forced that the axes unify (construction-confounded); the frame is supported at the substrate+axis level, open at the form level."
+  }
+}
