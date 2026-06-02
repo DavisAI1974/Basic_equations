@@ -9,6 +9,17 @@ A probe that didn't give a 100% hit still carries a piece — keep its output, d
 first.** The numbering below is just an index, and the HIGH/MED/LOW tags are rough
 suggestions — not a prescribed sequence.
 
+**New-idea placement (Greg, S17): new probe ideas go to the BOTTOM of the list,
+UNLESS they are (a) critical, (b) a reframe of an existing probe, or (c) an
+adjustment of a previous probe — those can slot in place.**
+
+**Don't predetermine good/bad (Greg, S17): crazy data might still be valuable data.
+Do not label an output "pathology / bad / exclude" on first look. Diagnose it and
+keep it as a data point; an odd regime may deserve its own probe.**
+
+**Stop after each probe (Greg, S17): pause after each probe so Greg can steer the
+next one. Do not chain probes without a check-in.**
+
 **EXCEPTION — JOB 1 (Greg, S16): fix the CLAUDE.md drift FIRST, before any probe.**
 The repo CLAUDE.md body is canonical only through S11; the true master is S14
 (preserved as `CLAUDE_master_through_S14.md`); S15/S16 are in handoffs. Fold S12-S16
@@ -19,15 +30,17 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
 
 ## GRAVITY thread (primary focus)
 
-1. **Substrate construction-vs-nature test** (NEW, S16 analysis; Greg: "clean,
-   decisive"). THE question: **is equal-marginal-entropy a FORCED property of
-   physical 2-channel observables, or our construction choice (bookkeeping)?**
-   Everything we measure sits on the (-1,-1,+2) equal-entropy region; is that nature
-   or because we build symmetric ~equal-entropy channel pairs? INFO-038 shows
-   asymmetry |H_a-H_b| moves objects OFF the attractor. Probe: deliberately vary
-   channel-construction asymmetry and see if the clustering survives / what forces
-   equal marginal entropy when it does. Decides whether "they all fall there" is
-   nature or bookkeeping.
+1. **Substrate construction-vs-nature test** -- DONE (S17, INFO-051). Answer:
+   BOOKKEEPING. Scaling one channel (b->s*b) is exactly MI-invariant (MI_cv ~1e-16
+   across 7 systems) yet sets the marginal-entropy asymmetry by a pure units choice
+   (H(sX)=H(X)+ln s; asym_range 2-4 on 6/7 systems). So equal-marginal-entropy is a
+   construction choice, not nature; the only scale-invariant (genuinely physical)
+   quantity in the basis is MI. The substrate cos metric is itself representation-
+   dependent + fragile (independent noise segments don't reproduce s10's 0.984).
+   See `SESSION_HANDOFF_2026-06-02_S17.md`, `probe_construction_vs_nature.py`.
+   CONSEQUENCE for the gravity thread: the equal-entropy "substrate" the gravity
+   story leaned on is a coordinate artifact -- pivot gravity-forward probes onto the
+   scale-invariant content (MI-merger axis + governing laws), not the substrate.
 
 2. **Construction control: gravity-LIGO vs EM-HBT flow axis** (HIGH; decisive for
    the "only gravity's flow is unbound/off-substrate" hunch).

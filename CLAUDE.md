@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 16 — body canonical through S16)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 17 — body canonical through S17)
 
 ## START HERE (workflow block; JOB-1 drift fixed S17, 2026-06-02)
 
@@ -25,14 +25,19 @@ Operating Rule exists precisely so the S7→S11→S14 drift never recurs.
 get appended to the backlog first. Never discard an odd/outlying output — it may be
 the story; diagnose it, don't sand it off.
 
-**Latest session:** S16 (2026-06-02). Read `SESSION_HANDOFF_2026-06-02_S16.md`,
-then `BACKLOG_tests_and_probes.md`, then `NEW_SESSION_KICKOFF_S17.md`. Headline:
-WF + SF governing laws re-derived from raw data (Z propagator M_Z 99.5%; QCD
-asymptotic freedom); gravity chirp method-limited (needs Q-transform/matched-
-filter); time-blind was a method identity not data; everything measured clusters
-on the equal-entropy substrate and the only departures are gravity-associated
-(open: is the clustering construction or nature — backlog #1). MI-in-null coupling
-DISPROVED — do not build on it. Markets parked.
+**Latest session:** S17 (2026-06-02). Read `SESSION_HANDOFF_2026-06-02_S17.md`,
+then `BACKLOG_tests_and_probes.md`. Headline: (1) JOB 1 done — the CLAUDE.md drift
+is fixed, this file is now canonical through S17. (2) Backlog #1 (construction-vs-
+nature) RUN and resolved on the construction side (INFO-051): the equal-entropy
+clustering is BOOKKEEPING — scaling one channel (b->s*b) is exactly MI-invariant
+(MI_cv ~1e-16 across all 7 systems) yet sets the marginal-entropy asymmetry by a
+pure units choice (H(sX)=H(X)+ln s; asym_range 2-4 on 6/7 systems), so equal
+marginal entropy is a construction choice, not nature; the only scale-invariant
+(genuinely physical) quantity in the basis is MI. The substrate cos metric is itself
+representation-dependent + fragile. Prior context: S16 re-derived WF + SF governing
+laws from raw data (Z propagator M_Z 99.5%; QCD asymptotic freedom); gravity chirp
+method-limited; time-blind was a method identity. MI-in-null coupling DISPROVED.
+Markets parked.
 
 ## Identity & Team
 
@@ -564,7 +569,14 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For the latest (Session 16) session, read `SESSION_HANDOFF_2026-06-02_S16.md`
+For the latest (Session 17) session, read `SESSION_HANDOFF_2026-06-02_S17.md`, then
+the Session 17 note below. Headline: JOB 1 (CLAUDE.md drift) FIXED — this file is now
+canonical through S17; and backlog #1 (construction-vs-nature) RESOLVED on the
+construction side (INFO-051) — the equal-entropy clustering is bookkeeping (scaling a
+channel is exactly MI-invariant yet sets the marginal-entropy asymmetry by a units
+choice; MI is the only scale-invariant quantity in the basis).
+
+For the (Session 16) session, read `SESSION_HANDOFF_2026-06-02_S16.md`
 first, then `BACKLOG_tests_and_probes.md` (the queue + the standing backlog-first
 rule), then the Session 16 note below. Headline: WEAK and STRONG governing laws
 re-derived from raw data (Z Breit-Wigner M_Z = 90.75 GeV = 99.5% of PDG from real
@@ -715,6 +727,57 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 17 update — 2026-06-02) — CLAUDE.md drift fix + construction-vs-nature probe
+
+Branch `claude/claude-md-problem-nM8Hm` (main untouched; no PR). All Operating Rules
+in force. Two items: JOB 1 (the CLAUDE.md drift) then backlog #1 (construction-vs-
+nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
+
+- **JOB 1 — CLAUDE.md drift FIXED.** The repo body was canonical only through S11
+  (header stale at "S7"); the true master was S14 with S15/S16 in handoffs; this
+  branch was cut from `main` at the S12 kickoff so it lacked all S13-S16 work.
+  Fast-forwarded this branch to the S16 work branch (`claude/claude-md-strategy-pwfZr`),
+  verified `CLAUDE_master_through_S14.md` (which already carried S13/S14/S15) is a
+  STRICT SUPERSET of the S11 body (all 44 ledger entries preserved, no sections
+  dropped), then rebuilt this file from it + folded S16 + S17 notes + re-attached the
+  START-HERE block + fixed the header. This file is now canonical through S17.
+  Historical artifacts kept in-repo. The "keep the header current" rule prevents
+  recurrence.
+
+- **INFO-051 -- LOCATED FINDING (Session 17, new; 4 sim generators x 5 seeds + 3
+  real LIGO segments)**: the equal-entropy clustering ("everything falls on the
+  (1,1,2)/sqrt6 substrate") is BOOKKEEPING, not nature. Probe
+  (`probe_construction_vs_nature.py`): scale ONE channel, b -> s*b, which is (a)
+  EXACTLY MI-invariant (adaptive histogram bins => MI(a,s*b)=MI(a,b); MI_cv ~1e-16
+  across all 7 systems) and (b) a pure UNITS choice (H(s*b)=H(b)+ln s). DATA: (1) MI
+  is machine-precision scale-invariant for every system -- the genuine coupling is
+  representation-independent; (2) marginal-entropy asymmetry mean|H_a-H_b| is set by
+  the units choice, asym_range 2.1-3.8 on 6/7 systems, tracking |H_a-H_b0-ln s|
+  (monotone ~ln s for symmetric sims; V-shape for LIGO with min where ln s matches
+  the baseline gap); (3) the substrate cos metric (project_234) is NOT scale-
+  invariant (cos112_std 0.07-0.27) and is fragile/segment-specific -- independent
+  noise segments V1/V2 do NOT reproduce s10's GW150914-noise cos 0.984 (sit at
+  0.12/0.38), and that 0.984 is itself a small quadratic residual of a near-constant-
+  entropy whitened segment (the null is dominated by the LINEAR H_a,H_b terms).
+  INTERPRETATION (deflationary, supported): systems sit on the substrate because we
+  build/normalize channels to comparable scales (sims: equal noise amplitude; LIGO:
+  whitening to unit variance); a physics-preserving units change dissolves the
+  clustering with MI untouched. The only scale-invariant (genuinely physical)
+  quantity in the basis is MI. RESOLVES the S16 backlog-#1 open question on the
+  construction side; consistent with INFO-036 (attractor = equal-marginal-entropy
+  identity) and INFO-038 (asymmetry moves objects off -- because asymmetry is a units
+  knob). DISTINCT REGIME kept as data (not predetermined bad -- Greg, S17):
+  logistic_chaos (the lone small asym_range, 0.23) ANTI-SYNCHRONIZES (corr -0.995) --
+  the two channels become near-perfect mirror images -- and in that LOCKED regime the
+  units-knob barely moves the asymmetry (ln s shift +0.076 vs +2.303 expected),
+  unlike every independent system. Two things are jointly true and both are data: the
+  windowed Vasicek estimator hits its limit on a near-deterministic signal (entropy
+  ~ -620), AND strongly-coupled/locked channels genuinely respond differently to
+  rescaling. A "what happens at near-perfect coupling" case worth its own look (e.g.
+  a different estimator), NOT garbage to drop. CAVEAT: the quadratic-null cos metric
+  is estimator-noise-sensitive (INFO-024); do not over-read individual cos values.
+  No new Operating Rule.
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 
