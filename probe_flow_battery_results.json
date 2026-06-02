@@ -1,0 +1,95 @@
+{
+  "frame": "flow battery: widen substrate + deepen control (Greg S18)",
+  "systems": {
+    "gravity_GW150914": {
+      "kind": "claimed-flow",
+      "axis": "time",
+      "domain": "gravity",
+      "rho": 1.0,
+      "peaks_interior": false,
+      "is_flow": true,
+      "exponent_q": 0.39325393845107,
+      "R2": 0.9931575466283828,
+      "critical": "t_c merger"
+    },
+    "strong_alphas": {
+      "kind": "claimed-flow",
+      "axis": "energy-scale",
+      "domain": "strong",
+      "rho": 1.0,
+      "peaks_interior": false,
+      "is_flow": true,
+      "exponent_q": 0.9671501278455497,
+      "R2": 0.9940406045856119,
+      "critical": "Lambda_QCD",
+      "note": "form power-vs-log undetermined far from critical (agent #3)"
+    },
+    "gravity_GW170817": {
+      "kind": "claimed-flow",
+      "axis": "time",
+      "domain": "gravity(BNS)",
+      "rho": 0.8834141425535033,
+      "peaks_interior": true,
+      "is_flow": false,
+      "exponent_q": 0.12824908322315579,
+      "R2": 0.598236871257393,
+      "critical": "t_c merger",
+      "miss_interpretation": "MISS (data point, NOT falsification -- per Greg): the GW170817 H1 ridge is the WRONG OBSERVABLE -- narrow-band/noisy (BNS SNR is in L1, which carries the glitch), exactly why O3 needed matched-filtering not a ridge (it then recovered M_c to 0.19%). GW150914 is a clean gravity flow; this is an observable-quality limit on one event, not evidence gravity isn't a flow."
+    },
+    "chem_brusselator_Hopf": {
+      "kind": "claimed-flow",
+      "axis": "control-parameter",
+      "domain": "chemistry",
+      "rho": 1.0,
+      "peaks_interior": false,
+      "is_flow": true,
+      "exponent_q": 1.0001811161040373,
+      "R2": 0.9999961145635404,
+      "theory_exponent": 1.0,
+      "critical": "Hopf B_crit=2",
+      "note": "critical slowing down; NEW AXIS (control param)"
+    },
+    "weak_Z_resonance": {
+      "kind": "control(non-flow)",
+      "axis": "mass",
+      "domain": "weak",
+      "rho": 0.05382127388296176,
+      "peaks_interior": true,
+      "is_flow": false,
+      "critical": "M_Z pole",
+      "note": "resonance: critical point but PEAKS, does not flow"
+    },
+    "driven_oscillator": {
+      "kind": "control(non-flow)",
+      "axis": "drive-frequency",
+      "domain": "mechanics",
+      "rho": 0.5592443702773142,
+      "peaks_interior": true,
+      "is_flow": false,
+      "critical": "resonance omega0",
+      "note": "amplitude response peaks at resonance, finite"
+    }
+  },
+  "verdict": {
+    "flows": [
+      "gravity_GW150914",
+      "strong_alphas",
+      "chem_brusselator_Hopf"
+    ],
+    "nonflows": [
+      "gravity_GW170817",
+      "weak_Z_resonance",
+      "driven_oscillator"
+    ],
+    "misses": [
+      "gravity_GW170817"
+    ],
+    "substrate_generalizes": true,
+    "widen": "gravity(GW170817, time) + chemistry(Brusselator->Hopf, CONTROL-PARAMETER axis, new domain) both classify as flows -> substrate generalizes beyond the original 2 forces and beyond the time/scale axes to a control-parameter axis",
+    "control": "weak Z + driven oscillator: both have a critical point but PEAK (not flows) -> the flow restriction is real, not trivially satisfied by 'near a critical point'",
+    "form_level_resolved_clean": true,
+    "form_note": "FORM-level expression IS distinct on cleanly-determined flows: gravity power-law q=0.393 (~3/8) vs Brusselator critical-slowing q=1.000 (theory 1.0). Strong stays form-undetermined (nonperturbative critical region; agent #3). So form-distinctness holds where near-critical data exist.",
+    "epistemic": "Per Greg: any miss is ONE data point, possibly a wrong-observable choice for that system, NOT a falsification of the frame or of that system. Current misses: ['gravity_GW170817'].",
+    "reading": "Substrate (monotonic divergence to a critical point) GENERALIZES across gravity(x2), strong, and chemistry(new axis); controls (weak, oscillator) correctly fail. EXPRESSION: axis distinct (time/scale/mass/control-param); FORM distinct where measurable near-critical (gravity 3/8 vs Brusselator 1). Axis UNIFICATION still not data-forced (construction-confounded)."
+  }
+}
