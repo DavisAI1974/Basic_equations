@@ -1,0 +1,142 @@
+{
+  "events": [
+    {
+      "label": "GW150914",
+      "align_lag_samples": 30,
+      "align_corr": 0.122,
+      "peak_MI_t_s": 16.438,
+      "n_windows": 893,
+      "blocks": {
+        "full": {
+          "n": 893,
+          "R2": 0.0524,
+          "cos_to_substrate": 0.503,
+          "quad_axis": [
+            0.67,
+            -0.5121,
+            -0.5374
+          ]
+        },
+        "event": {
+          "n": 33,
+          "R2": 0.4382,
+          "cos_to_substrate": 0.668,
+          "quad_axis": [
+            0.6413,
+            -0.3603,
+            -0.6775
+          ]
+        },
+        "noise": {
+          "n": 764,
+          "R2": 0.006,
+          "cos_to_substrate": 0.78,
+          "quad_axis": [
+            0.6354,
+            -0.2109,
+            -0.7428
+          ]
+        }
+      },
+      "event_axis_bootstrap_cos_to_substrate": {
+        "median": 0.698,
+        "p16": 0.307,
+        "p84": 0.948
+      }
+    },
+    {
+      "label": "GW170104",
+      "align_lag_samples": 71,
+      "align_corr": 0.045,
+      "peak_MI_t_s": 25.094,
+      "n_windows": 893,
+      "blocks": {
+        "full": {
+          "n": 893,
+          "R2": 0.0082,
+          "cos_to_substrate": 0.805,
+          "quad_axis": [
+            0.1128,
+            -0.1106,
+            0.9874
+          ]
+        },
+        "event": {
+          "n": 33,
+          "R2": 0.0033,
+          "cos_to_substrate": 0.891,
+          "quad_axis": [
+            -0.1666,
+            -0.0472,
+            0.9849
+          ]
+        },
+        "noise": {
+          "n": 764,
+          "R2": 0.0082,
+          "cos_to_substrate": 0.906,
+          "quad_axis": [
+            -0.1075,
+            -0.1439,
+            0.9837
+          ]
+        }
+      },
+      "event_axis_bootstrap_cos_to_substrate": {
+        "median": 0.713,
+        "p16": 0.231,
+        "p84": 0.919
+      }
+    },
+    {
+      "label": "GW151226",
+      "align_lag_samples": -14,
+      "align_corr": 0.061,
+      "peak_MI_t_s": 3.656,
+      "n_windows": 893,
+      "blocks": {
+        "full": {
+          "n": 893,
+          "R2": 0.0114,
+          "cos_to_substrate": 0.016,
+          "quad_axis": [
+            -0.7324,
+            0.6793,
+            -0.0463
+          ]
+        },
+        "event": {
+          "n": 33,
+          "R2": 0.2707,
+          "cos_to_substrate": 0.917,
+          "quad_axis": [
+            0.0101,
+            0.4534,
+            -0.8913
+          ]
+        },
+        "noise": {
+          "n": 777,
+          "R2": 0.0136,
+          "cos_to_substrate": 0.395,
+          "quad_axis": [
+            -0.642,
+            0.6082,
+            0.4668
+          ]
+        }
+      },
+      "event_axis_bootstrap_cos_to_substrate": {
+        "median": 0.872,
+        "p16": 0.65,
+        "p84": 0.947
+      }
+    }
+  ],
+  "cross_event_event_axis_cos": {
+    "GW150914__GW170104": 0.757,
+    "GW150914__GW151226": 0.447,
+    "GW170104__GW151226": 0.901
+  },
+  "elapsed_s": 2.5
+}
