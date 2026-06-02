@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "canary": true,
+    "N_ens": 200,
+    "T": 30.0,
+    "dt": 0.02,
+    "seeds": [
+      11
+    ],
+    "g_list": [
+      0.0,
+      0.5
+    ],
+    "elapsed_s": 2.7
+  },
+  "results": {
+    "physics-biology": {
+      "g=0.0": {
+        "mi_frac_mean": 0.0020777779939702896,
+        "mi_frac_std": 0.0,
+        "mean_MI": 0.4605360847961015,
+        "dir_stability": null,
+        "null_mean": [
+          0.325,
+          0.012,
+          0.942,
+          0.004,
+          0.071,
+          0.046
+        ]
+      },
+      "g=0.5": {
+        "mi_frac_mean": 0.1781859615125842,
+        "mi_frac_std": 0.0,
+        "mean_MI": 1.5824418829997327,
+        "dir_stability": null,
+        "null_mean": [
+          0.765,
+          0.367,
+          0.151,
+          0.083,
+          0.269,
+          -0.422
+        ]
+      }
+    }
+  }
+}

@@ -232,6 +232,23 @@ x0=H_a, x1=H_b.
   sciences at a time) rather than the universal-across-4 search that INFO-009
   showed is empty.
 
+- **INFO-041 -- LOCATED (Session 12, new; pairwise Level-2 cross-science
+  coupling; 6 pairs, 3 seeds, g 0->0.5; s12_pairwise_level2.py)**. Couples each
+  pair of sciences via a scale-free diffusive term, extracts the inter-science
+  null[0]. (1) generic coupling CREATES MI (mean MI 0.17 -> ~1.2-1.5) but the
+  MI does NOT enter null[0] (coupled MI-frac 0.003-0.147) -- the OPPOSITE of
+  biology's NATIVE coupling (0.91). Mechanism: diffusive coupling makes MI a
+  large high-variance active variable (can't sit in the low-variance null);
+  native coupling makes MI a TIGHT function of H_a so it enters the null. =>
+  the dipole's MI-participation marks STRUCTURED/law-like coupling (MI locked
+  to entropy), NOT coupling magnitude -- sharpens INFO-040. (2) NO universal
+  Level-2 dipole: coupled-null directions are PAIR-SPECIFIC (cross-pair
+  mean|cos| 0.457, min 0.04, max 0.97), cross-seed stable (0.97-0.999) --
+  confirms INFO-009 + INFO-040 at the pairwise level. (3) geology RESISTS
+  coupling (phys-geol mean MI 0.30 vs ~1.3 elsewhere; slow drift dominates).
+  CAVEAT: g=0 MI-frac unreliable (collapsed MI variance, INFO-024); toy
+  coupling -> methods probe, not a claim sciences physically couple.
+
 ## Information Layer — Current State (2026-05-25 Session 3)
 
 ### What's confirmed at data level

@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "canary": false,
+    "N_ens": 600,
+    "T": 30.0,
+    "dt": 0.02,
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "g_list": [
+      0.0,
+      0.5
+    ],
+    "elapsed_s": 55.1
+  },
+  "results": {
+    "physics-biology": {
+      "g=0.0": {
+        "mi_frac_mean": 0.3441947258403231,
+        "mi_frac_std": 0.405548120170362,
+        "mean_MI": 0.16784223407065704,
+        "dir_stability": 0.6301022193278604,
+        "null_mean": [
+          0.129,
+          -0.002,
+          0.72,
+          -0.002,
+          0.058,
+          0.464
+        ]
+      },
+      "g=0.5": {
+        "mi_frac_mean": 0.14709813943665256,
+        "mi_frac_std": 0.02538590863237854,
+        "mean_MI": 1.4836793122527352,
+        "dir_stability": 0.9976300341060041,
+        "null_mean": [
+          0.785,
+          0.316,
+          0.169,
+          0.077,
+          0.319,
+          -0.382
+        ]
+      }
+    },
+    "physics-chemistry": {
+      "g=0.0": {
+        "mi_frac_mean": 0.8862285569984948,
+        "mi_frac_std": 0.040046368533520525,
+        "mean_MI": 0.17181984348836746,
+        "dir_stability": 0.9812419443257921,
+        "null_mean": [
+          0.002,
+          -0.128,
+          0.21,
+          -0.149,
+          -0.138,
+          0.941
+        ]
+      },
+      "g=0.5": {
+        "mi_frac_mean": 0.05320771491460574,
+        "mi_frac_std": 0.03169580620251593,
+        "mean_MI": 1.2127486580033593,
+        "dir_stability": 0.9743796724457625,
+        "null_mean": [
+          0.851,
+          0.089,
+          0.449,
+          0.009,
+          0.061,
+          0.214
+        ]
+      }
+    },
+    "physics-geology": {
+      "g=0.0": {
+        "mi_frac_mean": 1.4752356839300654e-05,
+        "mi_frac_std": 1.969763363649167e-05,
+        "mean_MI": 0.18288471890732247,
+        "dir_stability": 0.9981301990709457,
+        "null_mean": [
+          -0.19,
+          0.962,
+          0.002,
+          0.181,
+          -0.07,
+          -0.003
+        ]
+      },
+      "g=0.5": {
+        "mi_frac_mean": 0.0420294609586776,
+        "mi_frac_std": 0.0119336069823544,
+        "mean_MI": 0.3001232430939065,
+        "dir_stability": 0.9978268260744168,
+        "null_mean": [
+          0.485,
+          0.805,
+          0.08,
+          0.193,
+          0.173,
+          0.203
+        ]
+      }
+    },
+    "biology-chemistry": {
+      "g=0.0": {
+        "mi_frac_mean": 0.224331268009456,
+        "mi_frac_std": 0.28028361001111135,
+        "mean_MI": 0.17287005582561576,
+        "dir_stability": 0.8209683915782963,
+        "null_mean": [
+          -0.004,
+          0.012,
+          -0.003,
+          0.454,
+          0.007,
+          0.155
+        ]
+      },
+      "g=0.5": {
+        "mi_frac_mean": 0.007351803782058258,
+        "mi_frac_std": 0.006823914939102039,
+        "mean_MI": 1.4010177327663056,
+        "dir_stability": 0.9932682776921755,
+        "null_mean": [
+          -0.188,
+          0.756,
+          -0.039,
+          -0.572,
+          0.234,
+          -0.064
+        ]
+      }
+    },
+    "biology-geology": {
+      "g=0.0": {
+        "mi_frac_mean": 5.222650605205408e-05,
+        "mi_frac_std": 3.4344911310705624e-05,
+        "mean_MI": 0.19099938071687783,
+        "dir_stability": 0.9999646396756953,
+        "null_mean": [
+          0.036,
+          0.982,
+          0.0,
+          0.183,
+          0.013,
+          0.006
+        ]
+      },
+      "g=0.5": {
+        "mi_frac_mean": 0.017867980957890158,
+        "mi_frac_std": 0.005101834699744319,
+        "mean_MI": 1.3606215580679095,
+        "dir_stability": 0.9994078114320093,
+        "null_mean": [
+          -0.14,
+          0.931,
+          0.069,
+          0.271,
+          -0.134,
+          -0.132
+        ]
+      }
+    },
+    "chemistry-geology": {
+      "g=0.0": {
+        "mi_frac_mean": 7.021437414234614e-05,
+        "mi_frac_std": 9.220218295078226e-05,
+        "mean_MI": 0.18378302654259934,
+        "dir_stability": 0.997718692669659,
+        "null_mean": [
+          0.046,
+          0.981,
+          0.001,
+          0.185,
+          0.017,
+          -0.004
+        ]
+      },
+      "g=0.5": {
+        "mi_frac_mean": 0.0031064475033299576,
+        "mi_frac_std": 0.0018909443322218957,
+        "mean_MI": 1.259582207166315,
+        "dir_stability": 0.9985945093403318,
+        "null_mean": [
+          0.003,
+          0.929,
+          -0.006,
+          0.364,
+          0.028,
+          -0.053
+        ]
+      }
+    },
+    "_cross_pair_cos": {
+      "physics-biology__physics-chemistry": 0.717,
+      "physics-biology__physics-geology": 0.642,
+      "physics-biology__biology-chemistry": 0.14,
+      "physics-biology__biology-geology": 0.225,
+      "physics-biology__chemistry-geology": 0.353,
+      "physics-chemistry__physics-geology": 0.581,
+      "physics-chemistry__biology-chemistry": 0.116,
+      "physics-chemistry__biology-geology": 0.04,
+      "physics-chemistry__chemistry-geology": 0.077,
+      "physics-geology__biology-chemistry": 0.433,
+      "physics-geology__biology-geology": 0.69,
+      "physics-geology__chemistry-geology": 0.814,
+      "biology-chemistry__biology-geology": 0.551,
+      "biology-chemistry__chemistry-geology": 0.505,
+      "biology-geology__chemistry-geology": 0.966
+    },
+    "_cross_pair_summary": {
+      "mean": 0.45666666666666667,
+      "min": 0.04,
+      "max": 0.966
+    }
+  }
+}
