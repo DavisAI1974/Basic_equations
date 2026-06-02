@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 7)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 13)
 
 ## Identity & Team
 
@@ -22,6 +22,7 @@
 - **Coding mantra**: better, stronger, faster, cheaper.
 - **Incremental validation**: break compute-heavy runs into 15-17 min chunks with stop gates. Canary runs (2 min) before full commitment.
 - **Speculative frames stay separate from results**. Frames motivate experiments but are not claims. Never let a frame grade itself.
+- **Keep the CLAUDE.md header current**. Update the title line (line 1) date + session number to the current session every time the master context is updated, so the header never drifts from the body (it had lagged at "Session 7" through Session 12).
 - **No emojis or special symbols** in professional documents and emails.
 - **Daily**: ask Greg if he checked greg@davisai.ai for Token Optimizer support emails.
 - **DeepNova** (formerly ReFRAG, formerly DeepSource). Use current name everywhere.
@@ -116,6 +117,219 @@ exists so it is not forgotten.
   need the same SessionStart-hook treatment added to Basic_equations in
   Session 9 (the hook here does not cover them). Decision + mirroring
   pending -- handle later.
+
+### Dipole equations consolidated + paper connection (Session 12, 2026-06-02)
+
+Greg (S12): "don't worry about markets" for the pull, but record the new
+dipole connection + all the equations here. The full consolidated artifact is
+`od_per_domain_equations.json` (built by `s12_consolidate_per_domain.py` from
+in-repo result JSONs). Basis [H_a, H_b, H_a^2, H_b^2, H_a*H_b, MI]; in PySR
+x0=H_a, x1=H_b.
+
+- **Shared substrate -- the FLOW DIPOLE** (info-dipole paper,
+  https://davisai.ai/dipole/):
+  - flow (differential): `dMI_total/dt ~ sum_i c_self,i*H_i^2 + sum_{i<j}
+    c_cross,ij*H_i*H_j + linear`, with c_self and c_cross of OPPOSING SIGN
+    ("opposition signature"; paper opposition fractions cellular 57.1%,
+    organ 43.3%).
+  - algebraic ratio: `C = H_self / H_cross` (H_self internal Shannon entropy;
+    H_cross = MI). Paper C-by-scale: subatomic 9.06, molecular 5.91,
+    cellular 1.85, organ 0.59, brain 1.58, ecological 5.19.
+  - markets algebraic dipole: `H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2`
+    (5-fold CV predictor ~0.993, above).
+- **Four per-domain governing equations** (EXPRESSIONS on the substrate):
+  | domain | null[0] direction (INFO-023) | MI-vs-H family (INFO-025) |
+  |--------|------------------------------|---------------------------|
+  | physics (Duffing) | -0.41*H_a^2 -0.42*H_b^2 +0.81*H_a*H_b ~ 0 | (H_b-H_a)^2 + 0.28 |
+  | biology (Lotka-Volterra) | -0.27*H_a +0.96*MI ~ 0 | ~0.5*exp(H_a/2), H_b absent |
+  | chemistry (Brusselator) | -0.34*H_a +0.74*H_b -0.43*H_b^2 +0.38*H_a*H_b ~ 0 | 0.71*H_a + 1.08 |
+  | geology (Burridge-Knopoff) | -0.62*H_a +0.74*H_b ~ 0 (rank-3) | 0.199 constant |
+  cross-seed cos 0.988-0.9996. Preserved algebraic (S25): chemistry
+  H_a^2 = 0.007 -0.093*(H_a*H_b) +1.309*(H_a*H_b)^2 (R^2 0.943); geology
+  0.724*(H_a*H_b) -0.441*H_b^2 -0.290*H_a^2 ~ 0 (resid 0.15%).
+- **WHERE EACH CONSTRAINT LIVES + IS IT COUPLED (INFO-040, 5 seeds)**: decompose
+  each null[0] into equal-entropy / MI-coupling / residual axes:
+  | domain | equal-entropy | MI-coupling | residual | coupled? |
+  |--------|--------------|-------------|----------|----------|
+  | physics | 0.996 | 0.003 | 0.001 | NO (pure bookkeeping) |
+  | biology | 0.052 | **0.906** | 0.042 | **YES, dynamical** (MI~=0.28*H_a) |
+  | chemistry | 0.833 | 0.000 | **0.167** | PARTIAL (stable residual, not MI) |
+  | geology | 0.962 | 0.000 | 0.038 | NO (pure bookkeeping) |
+  biology coupling knob-confirmed (Lotka-Volterra interaction g: g=0 -> MI-frac
+  0.006, g>0 -> 0.81-0.97, slope tracks g); chemistry residual =
+  0.54*(H_a+H_b)+0.32*H_a^2-0.55*H_b^2 (|cos| 0.9996). See INFO-040 below.
+
+- **INFO-039 -- MAPPED (Session 12, new; deflationary reading dominant)**:
+  the paper's flow form IS the same operator family the windowed-null
+  extraction operates on -- each per-domain null[0] is a conserved
+  (c_self, c_cross) coefficient vector of `dMI/dt ~ ...`. The paper's
+  OPPOSITION SIGNATURE (self-terms H_a^2,H_b^2 negative, cross-term H_a*H_b
+  positive) is present in our EXTRACTED nulls for physics and chemistry.
+  DEFLATIONARY CAVEAT (load-bearing, keeps the frame from grading itself):
+  where the opposition appears in the quadratic subspace it largely
+  COINCIDES with the equal-marginal-entropy attractor identity
+  -(H_a-H_b)^2 ~ 0 -- physics null[0]_234 sits at cos = 1.000 to
+  (-1,-1,+2)/sqrt(6) (so physics opposition IS exactly the equal-entropy
+  identity, NOT a coupling), chemistry cos ~0.88 (mostly identity + a real
+  residual). Biology (MI-dominant) and geology (linear coupling) nulls live
+  OUTSIDE the quadratic subspace, so show no opposition. INFO-036 (real
+  LIGO) already established the equal-entropy attractor is a geometric
+  statistics artifact. So INFO-039 is a structural IDENTIFICATION
+  (paper flow form = extraction operator family), NOT independent evidence
+  of dipole coupling; the genuine domain-specific content remains the
+  DEVIATIONS from the attractor + the functional families (INFO-025), not
+  the opposition per se. Promotion would need >=3 seeds on the residual-
+  off-attractor component (only 2 seeds here) and a probe that separates
+  opposition-beyond-equal-entropy from the identity.
+
+- **INFO-040 -- LOCATED (Session 12, new; 5 seeds + dynamical knob test)**:
+  "where do the per-domain constraints live, and are the dipoles coupled?"
+  (Greg's S12 question). Decompose each domain's null[0] into three
+  orthogonal axes -- equal-entropy identity (H_a-H_b linear + the (-1,-1,+2)
+  quadratic), MI/coupling axis, residual -- across 5 seeds (11/22/33/44/55).
+  Scripts: s12_coupling_decomposition.py (#1/#2),
+  s12_biology_coupling.py (#3). Results
+  s12_coupling_decomposition.json / s12_biology_coupling_results.json.
+  - **physics 0.996+/-0.002 / geology 0.962+/-0.005 equal-entropy**, MI=0,
+    reproducibly -> pure bookkeeping, NO coupling (the INFO-039 deflationary
+    read holds for these two).
+  - **biology 0.906+/-0.007 MI-COUPLING** (null = MI ~= 0.28*H_a),
+    cross-seed std <1%. The "how-coupled" knob test (scale the Lotka-Volterra
+    interaction prey*pred by g): g=0 (species decoupled) -> MI-frac 0.006
+    (coupling GONE from the null); any g>0 -> 0.81-0.97; the slope in
+    MI~=slope*H_a rises monotonically with g (0.155 at g=0.25 -> 0.334 at
+    g=1.5, saturating/turning by g=2). DEFLATIONARY ALTERNATIVE RULED OUT:
+    at g=0 residual MI persists (mean 0.178 from shared noise) but does NOT
+    enter the null (frac 0.006) -- the dipole's MI participation requires
+    actual dynamical interaction, not mere correlation. So biology's dipole
+    IS genuinely coupled and the coupling STRENGTH is readable from the slope.
+  - **chemistry 0.833+/-0.020 equal-entropy + 0.167+/-0.020 residual**; the
+    residual is a STABLE distinct relation 0.54*(H_a+H_b) +0.32*H_a^2
+    -0.55*H_b^2 ~ 0 (total-entropy vs asymmetric quadratic; cross-seed
+    residual-direction |cos| = 0.9996) -- coupling-adjacent domain content,
+    NOT the MI axis. (Brusselator channel-asymmetric structure, cf INFO-008a.)
+  Net: "the dipoles are coupled" is TRUE for biology (dynamical, knob-
+  confirmed), PARTIAL for chemistry (stable residual, not MI), FALSE for
+  physics/geology (pure equal-entropy). Refines INFO-039: the opposition-as-
+  artifact reading is correct ONLY for the equal-entropy domains; biology's
+  coupling is real.
+  - **CONNECTS TO INFO-009 (Session-25 Level-2 four-sciences coupling probe,
+    `level2_four_sciences.py`)**: that earlier session COUPLED all four
+    sciences as networks of N=6 coupled subsystems (Duffing+neighbor coupling,
+    Lotka-Volterra+prey migration, Brusselator+diffusion, Burridge-Knopoff
+    fault segments) and searched for a UNIVERSAL opposing Level-2 dipole across
+    all four -- found NONE (INFO-009, "Level 2 algebraic absent at network
+    scale", R^2 0.02-0.13, logged OPEN). Re-run this session reproduces it: no
+    universal opposing pair at >=3/4, no operator with a shared dominant sign
+    across the 4. INFO-040 now EXPLAINS that null result: coupling is
+    PER-DOMAIN (biology via MI, chemistry via its residual, physics/geology
+    not at all), so there is no shared cross-domain coupling structure for a
+    universal Level-2 dipole to emerge from. INFO-009 (no universal coupling)
+    and INFO-040 (per-domain heterogeneous coupling) are mutually consistent --
+    the four sciences do NOT share one coupling.
+  Next: per-domain knob tests for chemistry's residual (does it track the
+  Brusselator B parameter?), biology's slope-vs-g as a strength readout, and
+  -- since coupling is per-domain -- a PAIRWISE Level-2 search (couple two
+  sciences at a time) rather than the universal-across-4 search that INFO-009
+  showed is empty.
+
+- **INFO-041 -- LOCATED (Session 12, new; pairwise Level-2 cross-science
+  coupling; 6 pairs, 3 seeds, g 0->0.5; s12_pairwise_level2.py)**. Couples each
+  pair of sciences via a scale-free diffusive term, extracts the inter-science
+  null[0]. (1) generic coupling CREATES MI (mean MI 0.17 -> ~1.2-1.5) but the
+  MI does NOT enter null[0] (coupled MI-frac 0.003-0.147) -- the OPPOSITE of
+  biology's NATIVE coupling (0.91). Mechanism: diffusive coupling makes MI a
+  large high-variance active variable (can't sit in the low-variance null);
+  native coupling makes MI a TIGHT function of H_a so it enters the null. =>
+  the dipole's MI-participation marks STRUCTURED/law-like coupling (MI locked
+  to entropy), NOT coupling magnitude -- sharpens INFO-040. (2) NO universal
+  Level-2 dipole: coupled-null directions are PAIR-SPECIFIC (cross-pair
+  mean|cos| 0.457, min 0.04, max 0.97), cross-seed stable (0.97-0.999) --
+  confirms INFO-009 + INFO-040 at the pairwise level. (3) geology RESISTS
+  coupling (phys-geol mean MI 0.30 vs ~1.3 elsewhere; slow drift dominates).
+  CAVEAT: g=0 MI-frac unreliable (collapsed MI variance, INFO-024); toy
+  coupling -> methods probe, not a claim sciences physically couple.
+
+- **INFO-043 -- LOCATED (Session 12, new; cross-domain balance, 5 seeds)**:
+  Greg's "is there an opposite domain that balances a non-coupled one" probe.
+  Answer from the 5-seed mean null directions: the domains do NOT anti-balance
+  (zero pairs with cos < -0.5). Instead they split by AXIS: physics 0.998,
+  chemistry 0.913, geology 0.983 on the equal-entropy (SELF) axis with ~0 MI;
+  biology 0.220 equal-entropy / 0.955 MI on the coupling (CROSS) axis. So 3 of
+  4 domains sit on the self pole and ONLY biology sits on the cross pole.
+  physics vs biology cos = 0.000 (EXACTLY orthogonal -- pure self vs pure
+  cross), not opposed. The self+cross dipole pairing is therefore biology
+  (cross) + any self-domain (cleanest: physics, perpendicular), but it is
+  COMPLEMENTARY (orthogonal axes), NOT oppositional (anti-aligned). Biology is
+  the lone coupling outlier; the other three cluster as self/bookkeeping.
+
+- **INFO-042 -- SM parameter-regularity hunt + force<->equation answer
+  (Session 12; four-force item on real PDG data; s12_sm_regularity.py)**. The
+  honest real-data face of "are the forces/parameters structured." HITS:
+  charged-lepton Koide Q = 0.666661 (5 digits, vs 2/3); Gatto-Sartori-Tonin
+  sqrt(m_d/m_s)=0.224 vs Cabibbo sine 0.226 (ratio 0.991); quark-lepton
+  complementarity th12_CKM + th12_PMNS = 46.4 deg ~ 45; CKM Wolfenstein
+  lambda^n hierarchy (ratios O(1)). MISSES (cataloged per Result Discipline):
+  quark Koide fails (up 0.85, down 0.73); mass spectra only roughly geometric
+  (log-linear R^2 0.97-0.995). Reading: real low-dimensional structure exists
+  (the SM mass/mixing sector is NOT 26 independent randoms) but the cleanest
+  relation has no accepted derivation and the quark analogues fail -> each is a
+  CONJECTURE / one data point, no single generating rule, none citable until
+  derived.
+  - **Force<->equation question (Greg): NO direct connection on real data.** SM
+    regularities are static mass/angle relations; the per-domain dipole
+    equations are MI-vs-entropy dynamics -- different KINDS of object. The one
+    apparent bridge (S8 four-force caricatures: EM's MI-vs-H = physics family
+    (H_b-H_a)^2+c, robust both seeds; weak ~ chemistry linear) came from toy
+    force-laws WE wrote (S10 retired as self-grading), so it cannot be cited.
+    EM<->physics is a real but caricature-contaminated hit. Two CONTRADICTORY
+    mappings exist (functional-family EM<->physics vs coupling-type INFO-040
+    gravity<->equal-entropy self-domains) -> pattern-matching without a
+    constraint until a principled REAL-DATA force-operator-space is built (next
+    block).
+
+- **MARKETS update (Session 13; "always update markets" -- Greg)**: the
+  principled real-data force-operator-space was built this session (INFO-047
+  weak, INFO-048 EM; gravity already via LIGO). Result places MARKETS sharply:
+  among all domains probed, GENUINE coupling/predictive dipole structure (MI or
+  an algebraic relation that actually carries information) appears in just two
+  places -- simulated BIOLOGY (MI enters the null, INFO-040) and MARKETS (the
+  algebraic dipole H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2 with the ~0.993 5-fold
+  CV predictor). The GAUGE FORCES (weak, EM) and physics/geology are SELF-POLE
+  (MI stays out of the null; equal-entropy is pure channel symmetry). So markets
+  is NOT a self-pole/bookkeeping domain -- its dipole carries real predictive
+  content, putting it (with biology) on the COUPLING side, distinct from the
+  forces. The caricature force<->per-domain-equation hits (EM<->physics,
+  weak<->chemistry) did NOT survive real data, so the markets algebraic dipole
+  remains the strongest non-biology coupling signal we have. STILL PENDING (no
+  list_repos/add_repo in scope, GitHub locked to basic_equations): pull the
+  actual Markets dipole JSONs from the Markets repo via a tooled session; the
+  markets algebraic dipole FORM + this placement are recorded here meanwhile.
+
+### Next direction queued -- principled force-operator-space (Session 12 close)
+
+Greg wants to dive into this. The force<->equation question (INFO-042 (b))
+is currently UNTESTABLE on real data because forces and per-domain equations
+are different KINDS of object (static mass/angle relations vs MI-vs-entropy
+dynamics) and the only bridge (S8 four-force caricatures) is self-grading.
+THREAD (speculative, not a claim): build a principled REAL-DATA force-operator-
+space so the comparison is data-driven, not caricature.
+  - gravity already HAS a real operator-space object (LIGO strain ->
+    H_a/H_b/MI, INFO-036/038). The gap is the GAUGE forces.
+  - candidate construction: put each gauge force into the per-domain 6-op basis
+    from ACTUAL measurement distributions -- e.g. collider event /
+    cross-section / decay-rate distributions at varying energy as the two
+    channels + their MI -- rather than the deterministic running curve (which
+    is a single line, not a 2-channel stochastic object). The measurement
+    ensemble (or the spread across observables fixing each coupling) supplies
+    the channels.
+  - decision gate FIRST (Result Discipline): is there a real dataset that gives
+    a force a 2-channel entropy object without us inventing the coupling? If
+    not, the force<->equation question stays a live frame, not a probe. Map
+    that before building anything.
+  - this is the honest path to test whether EM really resembles the physics
+    equation (vs being a caricature artifact) and whether the coupling-type
+    mapping (gravity <-> equal-entropy/self domains) survives real data.
 
 ## Information Layer — Current State (2026-05-25 Session 3)
 
@@ -220,7 +434,41 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For the latest (Session 11) session, read
+For the latest (Session 13) session, see the Session 13 note below (INFO-044
+through INFO-049). Headline of the two cheap coupling/LIGO follow-ups: chemistry's
+residual tracks the Brusselator B knob in the oscillatory regime (INFO-044, the
+chemistry analogue of biology's MI-slope-vs-g); the MI-driven LIGO merger
+departure GENERALIZES across all 12 events (INFO-045, S11 GW150914 thread
+confirmed 10-11/11) while the full noise/event reversal does not; and nothing in
+MI sits before/after the merger -- the genuine before/after structural difference
+is non-stationary detector noise, not source inspiral/ringdown (INFO-046). The
+Session 13 HEADLINE (gate PASSED, two real builds done, strong deferred):
+principled force-operator-space. Real gauge-force objects built for WEAK (CMS
+Z->mumu, INFO-047) and EM (HBT, INFO-048 + g2(0) closure INFO-049); gravity
+already via LIGO. All sit on the equal-entropy SELF-POLE with MI active (out of
+the null) -- the gauge forces look like physics/geology, NOT the coupling pole;
+the caricature EM<->physics / weak<->chemistry hits do NOT reproduce on real
+data. Biology remains the ONLY genuine MI-in-null coupling. Open: strong force
+(heavy), Markets-repo JSON pull (no list_repos in scope).
+
+For the (Session 12) session, read
+`SESSION_HANDOFF_2026-06-02_v12_results.md` (in repo root) first, then the
+Session 12 note below (INFO-039 + the Track A 12-event null + Track B inverse
+problem). Headline: Track B new-physics inverse problem built on the PDG
+couplings (two-loop running alone shrinks the unification triangle 3.5x with
+no new physics; required Delta-b footprint surface = differences only, never
+identity; gravity needs a power-law->log form change); the four per-domain
+governing equations consolidated into `od_per_domain_equations.json` from
+in-repo result JSONs; and the info-dipole paper (davisai.ai/dipole) connected
+to the extraction machinery (INFO-039, MAPPED, deflationary): the paper's flow
+form `dMI/dt ~ sum c_self*H_i^2 + sum c_cross*H_i*H_j` IS the operator family
+our windowed-null extraction operates on, but its opposition signature in the
+quadratic subspace coincides with the equal-entropy attractor identity
+(physics cos 1.000) -- a structural identification, NOT new coupling evidence.
+Track A full 12-event LIGO null run executed (resume-safe after a GW170817
+crash); markets pull dropped per Greg.
+
+For the (Session 11) session, read
 `SESSION_HANDOFF_2026-06-02_v11_results.md` (in repo root) first, then the
 Session 11 note below (INFO-038). Headline: per-event LIGO readout on 3
 events (GW150914/170104/151226) run SEPARATELY with no pooling -- per-event
@@ -305,6 +553,294 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 13 update — 2026-06-02)
+
+Session 13 opened on the v13 kickoff (CLAUDE.md updated through S12 + the v12
+handoff). Greg: do all three queued items, the two cheap ones first, then the
+headline. Branch: work on the session-start branch
+`claude/file-upload-memory-LKCoB` (main synced; the v12 scripts/result JSONs
+were pulled onto it from `claude/file-attachment-hold-DjGSW` so the runs had
+their inputs). h5py was missing on this branch and added to requirements.txt.
+No PR. All six Operating Rules in force; the header-currency rule (added this
+session) is why the title line now reads Session 13.
+
+- **INFO-044 -- LOCATED (Session 13, new; chemistry residual knob test, 3 seeds
+  + B sweep across the Hopf bifurcation; s13_chemistry_residual.py)**. The
+  chemistry analogue of biology's MI-slope-vs-g (INFO-040). Sweep the Brusselator
+  B (baseline 3.0; Hopf B_crit=1+A^2=2). In the OSCILLATORY regime (B>=3) the
+  null[0] residual FRACTION rises monotonically (B=3 -> 0.169, B=3.5 -> 0.342,
+  B=4 -> 0.400, scatter <=0.02) while the residual DIRECTION stays pinned to the
+  INFO-040 baseline relation +0.54 H_a +0.54 H_b +0.32 H_a^2 -0.55 H_b^2 ~ 0
+  (|cos| 0.97-0.99, cross-seed 0.999+). So chemistry's coupling-strength readout
+  lives in the residual FRACTION of a FIXED non-MI relation, not in the MI axis
+  (contrast biology, whose readout is the MI-slope). At the Hopf threshold B=2
+  the structure flips qualitatively (residual -> 0.96, eqEntropy collapses,
+  direction rotates, |cos|->base 0.64) -- a critical point inspected on its own
+  terms (no tent-widening). Below threshold B=1.5 (fixed-point regime) the
+  residual is small (0.07) and direction-UNSTABLE cross-seed (0.715), noise-
+  limited. Net: chemistry's "partial residual coupling" (INFO-040) is genuinely
+  knob-responsive in the oscillatory regime -- refines INFO-040; the per-domain
+  heterogeneous-coupling reading strengthens (biology MI-coupled, chemistry
+  residual-coupled, both knob-confirmed; physics/geology pure equal-entropy).
+
+- **INFO-045 -- LOCATED (Session 13, new; LIGO no-MI decomposition across the
+  full 12 events; s13_ligo_nomi_batch.py)**. Re-ran the S11 GW150914 no-MI
+  decomposition (6-op vs 5-op-no-MI attractor cos, event vs noise windows) per
+  event across all 12 (11 scored; GW170608 skipped, missing L1). ROBUST /
+  GENERALIZES: the EVENT (merger) window leaves the 6-op equal-entropy attractor
+  in 11/11 (cos6 < 0.55, mostly < 0.35), and REMOVING MI restores it (event
+  cosNoMI > 0.65 in 10/11; GW170809 the lone exception) -- the MI-driven merger
+  departure (the strong half of the S11 GW150914 thread) is universal. Does NOT
+  generalize: the full noise-OFF/event-ON REVERSAL holds only 6/11, because the
+  NOISE-side no-MI position is event-dependent. The 3 events whose 6-op NOISE
+  also leaves the attractor (GW170729/170823/190521) are exactly the high
+  |H_a-H_b| events -- confirms INFO-038's inverse asymmetry<->noise-cos relation
+  at the per-event no-MI level. Resolves the S11 open thread: the event-side
+  MI-driven departure generalizes; the noise-side reversal was an event-specific
+  detector-noise configuration.
+
+- **INFO-046 -- LOCATED (Session 13, new; peri-event before/after trajectory;
+  s13_ligo_trajectory.py; per-event operator matrices cached to data/ligo_M/)**.
+  Greg's question: does anything right before/after the merger tell us something?
+  Time-resolved zones (pre_far/pre_near/merger/post_near/post_far) of MI,
+  |H_a-H_b|, and attractor cos around each merger, 11 events, no pooling. (a) MI:
+  the coherent inter-detector MI excess is a SPIKE CONFINED to the merger window
+  (+/-0.125s; loud-event merger MI/far 1.18-1.76x), with pre_near/post_near back
+  to ~1.0x noise -- NO inspiral precursor, NO ringdown tail. Pre-registered guess
+  that the long-inspiral BNS GW170817 would show a sustained pre-merger MI ramp
+  was NOT borne out (GW170817 peak only 1.05x far) -- the method keys on peak
+  coalescence strain, not the inspiral (caveat: 0.125s windows, 35-350Hz band; a
+  finer/lower-band probe could in principle chase the BNS inspiral, this one
+  cannot). (b) the no-MI attractor structure IS strongly time-asymmetric pre vs
+  post (|delta cos| up to 0.66) BUT the sign is event-specific (6 pre-dominant,
+  4 post-dominant, 1 symmetric) and it lives in the off-merger NOISE windows ->
+  DEFLATIONARY (load-bearing): non-stationary detector noise floor across the 32s
+  segment (single-PSD whitening leaves local drift; the INFO-038 detector-state
+  fingerprint), NOT an astrophysical inspiral/ringdown asymmetry. So "before
+  differs from after" reports the instrument's noise state on either side of the
+  trigger, not source physics.
+
+### Session 13 HEADLINE -- principled force-operator-space (the force<->equation dive)
+
+The S12 decision gate (is there a REAL dataset giving a gauge force a 2-channel
+entropy/MI object WITHOUT inventing the coupling?) was answered by a 3-agent
+open-data scan: PASS for 3 of 4 forces. Gravity already has LIGO (INFO-036/038,
+cached data/ligo_M/). Weak: CMS Open Data dimuon (Z->mu+mu-, record 545
+Zmumu_Run2011A, per-event 2-lepton kinematics, ~MB CSV; the Z propagator makes
+the di-muon correlation intrinsic). EM: Zenodo 5113016 HBT raw two-channel
+photon timetags (Bose bunching intrinsic; same DETECTOR-PAIR construction type
+as LIGO). Strong: ALICE/CMS heavy-ion femtoscopy event-level data exists but is
+TB-scale + ROOT/VM -- DEFERRED by Greg ("do everything but the big heavy
+build"). STRUCTURAL CAVEAT (a finding itself): the four objects are TWO
+construction types -- detector-pair time series (gravity + EM) vs particle-pair
+event ensembles binned by energy (weak + strong) -- so clean tests are
+WITHIN-type. Greg's rule this session: do NOT synthesize across objects (that
+isn't real data); each is its own real-data probe.
+
+- **INFO-047 -- LOCATED, REAL DATA (Session 13, new; WEAK force; CMS Z->mu+mu-,
+  10227 events; s13_force_dimuon.py + s13_force_dimuon_observables.py)**. First
+  real gauge-force operator object. Channels = mu+ / mu- (by charge, physical &
+  symmetric, NOT arbitrary leading/subleading); energy axis = dimuon invariant
+  mass M, equal-count bins -> a trajectory; same 6-op extract_v1 as
+  per_domain_kbk. Finding: the weak object sits on the equal-MARGINAL-entropy
+  self-pole (H_a~=H_b, charge-symmetric) and MI does NOT enter the null
+  (MI-coupling 0.000) -- like physics/geology (INFO-040), NOT the coupling pole
+  (biology). ROBUST across observables: pt, E, signed pz, signed eta, and
+  Collins-Soper cos(theta*) ALL give |H_a-H_b| small and MI-in-null 0.000,
+  including the parity-carrying observables (A_FB is a small correlation-with-
+  boost effect, not a marginal-entropy difference; even cos(theta*) with the two
+  muons near-perfectly anti-correlated MI=2.6 keeps MI OUT of the null -- the
+  INFO-041 high-variance-active-variable mechanism). Robustness via 5 observables
+  agreeing is the real-data analogue of the >=3-seed rule. CONSEQUENCE: the
+  caricature "weak ~ chemistry linear-in-H_a" hit (S8, self-grading toy) does NOT
+  reproduce on real data.
+
+- **INFO-048 -- LOCATED, REAL DATA (Session 13, new; EM force; HBT, Zenodo
+  5113016; s13_force_hbt.py)**. First real EM force object, SAME construction
+  type as LIGO (two detectors, windowed count-rate entropy + MI). Two sources:
+  split-thermal (detectors ch11/ch15, ASYMMETRIC rates 139k/77k per s) and an
+  uncorrelated control (ch15/ch16, symmetric). Findings: (a) MI does NOT enter
+  the null for EM either (max 0.031) -- so gravity-noise, weak, AND EM all keep
+  MI an ACTIVE variable, never a low-variance null constraint; the ONLY object
+  where MI ENTERS the null remains simulated biology (genuine dynamical coupling,
+  INFO-040). (b) equal-entropy attractor membership tracks the marginal-entropy
+  SYMMETRY of the two channels, not the force: the asymmetric split detector
+  (H_a != H_b) sits OFF (eqEnt 0.29-0.52), the symmetric pair sits closer
+  (eqEnt 0.57-0.61). This CONFIRMS INFO-036's "attractor = equal-marginal-entropy
+  geometry" on a THIRD construction. CAVEAT (RESOLVED by INFO-049, Rule D): the
+  "20-100us = slow drift not g2" caveat was INCOMPLETE. Direct g2(tau) shows the
+  coherence half-width is ~2us, so 20-100us sits just ABOVE coherence and DID
+  capture the bunching (its slow tail), not pure drift. The self-pole / MI-active
+  conclusion stands and is strengthened by INFO-049.
+
+- **INFO-049 -- LOCATED, REAL DATA (Session 13, new; EM g2(0) coincidence object;
+  s13_force_hbt_g2.py)**. Closes the INFO-048 gap. (a) Direct g2(tau) (binned
+  cross-correlation): g2(0)=1.83 (split), 1.92 (uncorr); coherence half-width
+  ~2us; decays to g2=1.00 by +-400us -> HBT Bose bunching CONFIRMED real (the EM
+  quantum signature, intrinsic). (b) Rebuilt the operator object across bin
+  scales spanning the coherence: WELL-SAMPLED (dt=50us, counts ~7-18) reproduces
+  INFO-048 -- MI substantial (0.12-0.45, tracking g2-1) and OUT of the null,
+  self-pole; SPARSE coherence-scale (dt=1-2us, mean count <1) shows a spurious
+  "+1.00*MI ~ 0" MI-dominant null. (c) DEFLATIONARY (load-bearing, no tent-
+  widening -- inspected the outlier): the coherence-scale MI-in-null is an
+  ESTIMATOR-FLOOR ARTIFACT (INFO-024 on real data) -- at mean count <1 the MI
+  estimate collapses to a near-zero near-constant floor (MI std 0.0004 vs H_a std
+  0.114, ~300x smaller), so MI trivially becomes the lowest-variance null. It is
+  NOT biology-like coupling (biology's null is MI~=0.28*H_a, MI tied to H; here
+  it is MI~=const, and only in the sparse regime). CONCLUSION: the genuine HBT
+  bunching does NOT enter the null as a coupling; properly sampled, EM is self-
+  pole with MI active. Reinforces INFO-047/048 and confirms INFO-024's procedure/
+  sampling-dependent MI floor on real EM data. Biology remains the ONLY genuine
+  MI-in-null coupling across all objects, simulated or real.
+
+- **Session 13 force-operator-space FRAME (held as frame, not claim; no
+  synthesis per Greg)**: across two real gauge-force builds (weak, EM) plus
+  gravity, the forces look like the SELF-POLE / bookkeeping domains
+  (physics/geology) -- MI stays out of the null, equal-entropy membership is pure
+  channel symmetry. The caricature-era EM<->physics and weak<->chemistry hits do
+  NOT reproduce on real data. "MI-in-the-null = law-like coupling" appears so far
+  ONLY in simulated biology, in NO real force object yet measured (the EM
+  g2(0)-coincidence object, INFO-049, confirmed this: genuine HBT bunching stays
+  out of the null; the sparse-bin MI-in-null was an INFO-024 estimator artifact).
+  Open within-type extension: the strong force (heavy, deferred).
+
+## Note (Session 12 update — 2026-06-02)
+
+Session 12 continued the v12 kickoff. Branch given at session start
+(`claude/file-attachment-hold-DjGSW`); main kept synced; the kickoff's stale
+`gravity-substrate-config-51cfp` reference disregarded per Greg. Greg enabled
+out-of-order/efficiency. Three of the v12 first-three actions delivered; the
+Markets pull was dropped by Greg's call.
+
+- **Track B -- new-physics inverse problem (built, INFO-037 extended)**:
+  `s12_track_b_inverse.py` -> `s12_track_b_inverse_results.json`. Reproduces
+  the INFO-037 one-loop triangle exactly (crossings 1.03e13 / 2.43e14 /
+  9.71e16 GeV, spread 9419x). New: (b) TWO-LOOP running alone shrinks the
+  triangle to 2678x (factor 3.5) with NO new physics -- part of the apparent
+  gap is a one-loop artifact, ~2700x remains; (inversion) the required
+  Delta-b FOOTPRINT surface over (mu_NP, M_GUT) is exactly determined for
+  the differences only -- 3 unknown shifts, 2 difference constraints, free
+  spectrum scale, so FOOTPRINT recoverable, IDENTITY never (mapped MSSM as
+  one uncited point on the surface, sitting near the 1 TeV / 2e16 GeV point);
+  gravity needs b_G ~ 2.9e33 (power-law->log form change), confirming it is
+  outside the gauge family. Alternatives (a) no-closure [deflationary],
+  (b) two-loop, (c) extrapolation-is-conjecture mapped FIRST per Result
+  Discipline. The leading deflationary read (nothing forces a single point)
+  is unrefuted.
+
+- **Four per-domain equations consolidated**: `s12_consolidate_per_domain.py`
+  -> `od_per_domain_equations.json`, built from in-repo result JSONs
+  (per_domain_kbk seeds 11/22 for null directions INFO-023; pysr_symbolic_
+  per_domain for functional families INFO-025), confirmed by Greg's 6 chat
+  screenshots. All equations are listed in the Markets section above.
+
+- **INFO-039 -- MAPPED (deflationary reading dominant)**: info-dipole paper
+  (davisai.ai/dipole) connected to the extraction machinery. Its flow form
+  `dMI/dt ~ sum c_self*H_i^2 + sum c_cross*H_i*H_j + linear` (opposition
+  signature: c_self, c_cross opposing sign) IS the operator family the
+  windowed-null extraction operates on; each per-domain null[0] is a
+  conserved (c_self, c_cross) vector of it. The opposition signature appears
+  in our extracted physics + chemistry nulls -- BUT where it appears in the
+  quadratic subspace it largely COINCIDES with the equal-marginal-entropy
+  attractor identity -(H_a-H_b)^2 ~ 0 (physics null[0]_234 cos=1.000 to
+  (-1,-1,+2)/sqrt6; chemistry ~0.88). Since INFO-036 (real LIGO) already
+  showed that attractor is a geometric statistics artifact, INFO-039 is a
+  structural IDENTIFICATION (paper = extraction operator family), NOT
+  independent coupling evidence. Genuine domain content stays in the
+  deviations + functional families (INFO-025). Full detail in the Markets
+  section. Promotion needs >=3 seeds on the off-attractor residual + a probe
+  separating opposition-beyond-equal-entropy from the identity.
+
+- **Track A -- full 12-event LIGO null, COMPLETE** (`s11_ligo_batch.py`,
+  hardened to incremental-save + resume-safe this session; the first run had
+  stopped on GW170817 after 7 events and -- saving only at the end -- lost the
+  JSON, so it now persists after every event + gc's; GW170817 completed fine
+  on the resume-safe re-run, so that stop was transient). 11 events scored
+  (GW170608 skipped: no 4096s L1 file), each run SEPARATELY, N_null=100
+  off-source per event, no pooling -> `s11_ligo_batch_results.json`:
+  | event | \|H_a-H_b\| | noise cos | peak-MI | p | det |
+  |-------|-----------|-----------|---------|---|-----|
+  | GW150914 | 0.14 | 0.997 | 0.658 | 0.000 | YES |
+  | GW151012 | 1.98 | 0.568 | 0.325 | 0.980 | . |
+  | GW151226 | 2.38 | 0.795 | 0.333 | 1.000 | . |
+  | GW170104 | 0.14 | 0.924 | 0.435 | 0.000 | YES |
+  | GW170729 | 2.06 | 0.200 | 0.380 | 0.000 | YES |
+  | GW170809 | 1.08 | 0.849 | 0.407 | 0.000 | YES |
+  | GW170814 | 0.38 | 0.949 | 0.364 | 0.094 | ~ |
+  | GW170817 (BNS) | 1.41 | 0.564 | 0.335 | 0.760 | . |
+  | GW170818 | 0.44 | 0.948 | 0.351 | 0.320 | . |
+  | GW170823 | 2.22 | 0.136 | 0.380 | 0.030 | YES |
+  | GW190521 | 1.33 | 0.039 | 0.376 | 0.050 | ~ |
+  Two data-level readings, both CONFIRMED at batch scale (promote INFO-038
+  from isolated/3-event to MAPPED/11-event-with-null): (1) the off-source
+  NULL gives real p-values -- 5/11 clear p<0.05 (+2 marginal); misses are the
+  two quiet O1 events, the BNS (long low-freq inspiral, different morphology),
+  and GW170818. Detection tracks event loudness/morphology, NOT entropy
+  asymmetry (GW170729/170823 detect at the HIGHEST asym). (2) INFO-038's
+  inverse |H_a-H_b| <-> noise-cos relation holds across the batch:
+  corr(asym, noise-cos) = -0.667. (3) The entropy-asymmetry axis and the MI
+  axis are ORTHOGONAL (confirms the S11 first-run decomposition): the
+  attractor is equal-entropy bookkeeping; detection rides the separate MI
+  axis. Open INFO-038 no-MI-basis reversal thread: not yet re-checked across
+  the full 12.
+
+- **INFO-040 -- per-domain coupling probe (Greg's "find how the dipoles are
+  coupled")**: 5-seed null decomposition + biology dynamical-knob test.
+  Headline: biology's dipole is GENUINELY COUPLED (null = MI~=0.28*H_a,
+  0.906+/-0.007 MI-fraction; g=0 knob kills it, g>0 restores it, slope tracks
+  coupling strength, shared-noise artifact ruled out); chemistry has a stable
+  total-entropy-vs-asymmetric-quadratic residual; physics/geology pure
+  equal-entropy. Refines INFO-039. Full entry in the Markets dipole subsection
+  above. Scripts s12_coupling_decomposition.py + s12_biology_coupling.py.
+
+- **INFO-041 -- pairwise Level-2 cross-science coupling** (Markets dipole
+  subsection): generic coupling creates MI but it does NOT enter the null
+  (coupled MI-frac 0.003-0.147) unlike biology's native 0.91 -> the dipole's
+  MI-participation marks STRUCTURED (entropy-locked) coupling, not magnitude;
+  coupled-null directions are pair-specific (mean|cos| 0.46) -> NO universal
+  Level-2 dipole. s12_pairwise_level2.py.
+
+- **INFO-042 -- SM parameter-regularity hunt (four-force item, real PDG data)**:
+  s12_sm_regularity.py / s12_sm_regularity_results.json. The honest real-data
+  face of "are the forces/parameters structured." HITS: charged-lepton Koide
+  Q=0.666661 (5 digits); Gatto-Sartori-Tonin sqrt(m_d/m_s)=0.224 vs Cabibbo
+  sine 0.226 (ratio 0.991); quark-lepton complementarity th12_CKM+th12_PMNS
+  =46.4deg ~ 45; CKM Wolfenstein lambda^n hierarchy (ratios O(1)). MISSES
+  (cataloged per Result Discipline): quark Koide fails (up 0.85, down 0.73);
+  mass spectra only roughly geometric (log-linear R^2 0.97-0.995, not exact).
+  Reading: real low-dimensional structure exists (the SM mass/mixing sector is
+  NOT 26 independent randoms) but the cleanest relation has no accepted
+  derivation and the quark analogues fail -> each is a CONJECTURE / one data
+  point, no single generating rule, none citable as support until derived.
+  - **Answers Greg's force<->equation question (b)**: NO direct connection. SM
+    regularities are mass/angle relations among static parameters; the per-
+    domain equations are MI-vs-entropy relations of 2-channel dynamics --
+    different KIND of object. The one apparent bridge (Session-8 four-force
+    caricatures: EM's MI-vs-H = physics family (H_b-H_a)^2+c, weak ~ chemistry
+    linear, both robust-ish) was from toy force-laws WE wrote (S10 retired as
+    self-grading), so it cannot be cited. EM<->physics is a real but
+    caricature-contaminated hit; on REAL data there is no commensurable bridge.
+    Two contradictory mappings exist (functional-family: EM<->physics, vs
+    coupling-type INFO-040: gravity<->equal-entropy domains) -> pattern-matching
+    without constraint until a principled real-data force-operator-space is
+    built.
+
+- **INFO-043 -- cross-domain balance (Greg's "opposite domain that balances a
+  non-coupled one")**: domains do NOT anti-balance; they split by axis -- 3 of
+  4 (physics/chemistry/geology) on the equal-entropy SELF pole, only biology on
+  the MI CROSS pole. physics vs biology cos=0.000 (orthogonal, pure self vs
+  pure cross), complementary not oppositional. Full entry in Markets subsection.
+
+- **Next direction queued (Greg wants to dive in): principled force-operator-
+  space** so the force<->equation question becomes real-data-testable instead
+  of caricature-bound. Gravity already has a real operator object (LIGO); the
+  gap is the gauge forces. Decision gate first: is there a real dataset giving
+  a force a 2-channel entropy object without inventing the coupling? See the
+  "Next direction queued" block in the Markets dipole subsection.
+
+- All six Operating Rules in force; no new Rule. Branch
+  `claude/file-attachment-hold-DjGSW`, main synced, pushed. No PR.
 
 ## Note (Session 11 update — 2026-06-02)
 
