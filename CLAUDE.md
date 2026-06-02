@@ -146,6 +146,17 @@ x0=H_a, x1=H_b.
   cross-seed cos 0.988-0.9996. Preserved algebraic (S25): chemistry
   H_a^2 = 0.007 -0.093*(H_a*H_b) +1.309*(H_a*H_b)^2 (R^2 0.943); geology
   0.724*(H_a*H_b) -0.441*H_b^2 -0.290*H_a^2 ~ 0 (resid 0.15%).
+- **WHERE EACH CONSTRAINT LIVES + IS IT COUPLED (INFO-040, 5 seeds)**: decompose
+  each null[0] into equal-entropy / MI-coupling / residual axes:
+  | domain | equal-entropy | MI-coupling | residual | coupled? |
+  |--------|--------------|-------------|----------|----------|
+  | physics | 0.996 | 0.003 | 0.001 | NO (pure bookkeeping) |
+  | biology | 0.052 | **0.906** | 0.042 | **YES, dynamical** (MI~=0.28*H_a) |
+  | chemistry | 0.833 | 0.000 | **0.167** | PARTIAL (stable residual, not MI) |
+  | geology | 0.962 | 0.000 | 0.038 | NO (pure bookkeeping) |
+  biology coupling knob-confirmed (Lotka-Volterra interaction g: g=0 -> MI-frac
+  0.006, g>0 -> 0.81-0.97, slope tracks g); chemistry residual =
+  0.54*(H_a+H_b)+0.32*H_a^2-0.55*H_b^2 (|cos| 0.9996). See INFO-040 below.
 
 - **INFO-039 -- MAPPED (Session 12, new; deflationary reading dominant)**:
   the paper's flow form IS the same operator family the windowed-null
