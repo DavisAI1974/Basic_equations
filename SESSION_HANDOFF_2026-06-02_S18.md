@@ -100,17 +100,37 @@ gravity time-dilation recovery (GPS coeff + pulsar gamma + pulsar dP_b/dt) along
 inspiral-chirp recovery. Gravity now demonstrates TWO independent raw-data governing-law
 recoveries.
 
-## O3 (in progress) — GW170817 BNS chirp mass
-Launched a probe to nail the GW170817 chirp mass (S17 got the law form R^2 0.88 but mass
-biased 15.7 vs catalog ~1.20, lever-arm-limited in the 32 s H1 band) via pycbc matched-filter
-on longer/L1 data. Deliverables `probe_o3_gw170817_chirpmass.*`; INFO-061 reserved. Fold the
-result into the ledger + capability brief when it lands.
+## O3 — GW170817 BNS chirp mass: NAILED (INFO-061)
+`probe_o3_gw170817_chirpmass.py`. S17 got the inspiral law FORM (u=f^-8/3 linear, R^2 0.88)
+but biased the absolute mass (15.7 vs catalog ~1.20), lever-arm-limited in the 32 s H1 band.
+O3 fetched GWOSC GWTC-1 GW170817 4096s/4096Hz H1+L1 (data/ligo_bulk/, gitignored), ran a
+TaylorF2 chirp-mass template bank + Welch-PSD whitening + matched filter, gated the L1 glitch
+(t_merger -1.05 s) with pycbc `.gate()`, took the peak complex-SNR within +/-0.1 s of the
+merger GPS.
+- RESULT: detector-frame M_c = 1.200 Msun (network), 0.19% from catalog 1.1977; H1 1.200
+  (SNR 11.1, +0.014 s) and L1 1.195 (SNR 9.8, -0.008 s) INDEPENDENTLY agree; net SNR 14.8
+  sharply peaked (drops to ~7.5 by +/-0.015 Msun). Null: L1 on 9.8 vs off-source 9.7 sigma
+  (clean); H1 5.6 sigma (noisier H1-band off-source tail -- the S17 ridge ugliness -- but the
+  on-source peak lands at the right M_c AND time).
+- READING: matched filtering REMOVES the S17 ridge absolute-mass bias -> 0.19% recovery; the
+  BNS chirp mass is a genuine gravity-domain governing-law (inspiral phasing) recovery on a
+  second, physically-distinct event.
+- CAVEATS (limit SNR, NOT M_c): TaylorF2 inspiral-only, no spin, q=1, f_final 1024 Hz, single
+  PSD -> net SNR 14.8 << catalog ~32; inspiral phasing still fixes M_c. Source-frame ~1.187
+  reached after z~0.0099 correction (not applied). Catalog = comparison target only. V1 not
+  run (SNR ~2). Env: pycbc 2.11.0 silently shadows scipy with a broken 1.16.3 -> force-
+  reinstall --no-deps scipy; use pycbc `.gate()` not a hand-rolled taper (the latter rings the
+  matched filter).
+
+Gravity now has THREE independent raw-data governing-law recoveries: inspiral chirp
+(INFO-052), time dilation (INFO-059 GPS + INFO-060 pulsar), and BNS chirp mass (INFO-061).
 
 ## Files this session
 - `probe_gravity_time_dilation.py` + `_results.json` + `_canary.json` (6c-A, INFO-058).
 - `probe_6c_gps_positive.py` + `_route2_obs.py` + `_results.json` + `_canary.json` (6c-B,
   INFO-059).
 - `probe_pulsar_time.py` + `_results.json` + `_run.log` (6c-C, INFO-060).
+- `probe_o3_gw170817_chirpmass.py` + `_results.json` + `_canary.json` (O3, INFO-061).
 - `CLAUDE.md` (header S18, ledger INFO-058/059/060, Capability Demonstrations + Session 18
   note + handoff pointer), `CAPABILITY_BRIEF.md`, `BACKLOG_tests_and_probes.md` (6c marked).
 - Raw data under gitignored `data/gps/`, `data/pulsar/` (+ `data/ligo_bulk/` for O3).
@@ -122,7 +142,6 @@ result into the ledger + capability brief when it lands.
 - numpy 2.4 removed `ndarray.ptp()` -> use `np.ptp(...)`.
 
 ## Next (backlog; Greg picks; clear backlog before new probes; stop after each probe)
-- O3 result (in flight) -> fold + possibly promote.
 - 6c follow-ups: replicate the GPS positive recovery across stations/days + dual-frequency
   ionosphere-free combination to recover the circular-GPS sats; GW170817 absolute mass (O3).
 - Remaining backlog: #2 EM/HBT construction control (Zenodo 5113016), #7 SF femtoscopy-R,

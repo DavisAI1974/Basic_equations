@@ -33,8 +33,10 @@ term-retaining route (INFO-059) recovered the time-dilation coefficient -2/c^2 f
 RINEX observations on eccentric Galileo sats at k/truth 1.02-1.04, z=380 sigma. Pulsar
 route (INFO-060, raw Arecibo TOAs of PSR B1913+16) recovered orbital decay dP_b/dt
 (ratio 1.005 to GR) + Einstein-delay gamma (0.014%). Two gravity-time mechanisms,
-GNSS-independent. Capability brief updated. [O3 GW170817 BNS chirp mass in progress.]
-Prior S17 below.
+GNSS-independent. Plus O3 (INFO-061): recovered the GW170817 BNS chirp mass by matched
+filtering raw LIGO strain -- detector-frame M_c 1.200 (0.19% from catalog), H1+L1 agree,
+removing the S17 ridge's absolute-mass bias. Gravity now has THREE raw-data recoveries.
+Capability brief updated. Prior S17 below.
 
 **Session 17 recap:** Read `SESSION_HANDOFF_2026-06-02_S17.md`. (1) JOB 1 done — the
 CLAUDE.md drift is fixed. (2) Backlog #1 (construction-vs-
@@ -165,7 +167,10 @@ raw data with both detectors agreeing. That's credibility."
   late-inspiral bias). Cross-detector agreement to <1%. Decisively beat the naive-
   Hilbert baseline (R^2 0.001). Plus (INFO-053) the inter-detector MI merger signal
   shown physics-bearing (peaks at the physical 7 ms light-travel lag, z=15.5 vs
-  time-slide null, carries waveform phase/time structure).
+  time-slide null, carries waveform phase/time structure). And (S18, INFO-061) the GW170817
+  binary-neutron-star chirp mass recovered by matched filtering raw GWOSC strain:
+  detector-frame M_c = 1.200 Msun (network, **0.19% from catalog 1.1977**), H1 and L1
+  independently agreeing -- removing the S17 ridge's absolute-mass bias on this BNS event.
 - **GRAVITY (time dilation) — relativistic clock law from raw data, two independent ways
   (S18, INFO-059 + INFO-060).** (a) Recovered the GR time-dilation coefficient -2/c^2 from
   raw GPS data: residual of raw RINEX pseudorange (station BRUX) vs an independent
@@ -641,8 +646,10 @@ pulsar route (INFO-060) recovered, from raw Arecibo TOAs of PSR B1913+16, both t
 decay dP_b/dt (ratio 1.005 to GR, ~17684 sigma detection) and the Einstein-delay gamma
 (0.014% from published). Two gravity-time mechanisms (clock-rate dilation + GW-emission
 orbital decay), GNSS-convention-independent. Capability brief updated (gravity now has a
-time-dilation recovery alongside the inspiral chirp). [O3 -- GW170817 BNS chirp mass via
-pycbc matched-filter -- in progress; INFO-061 reserved.] Earlier-probe context below.
+time-dilation recovery alongside the inspiral chirp). Plus O3 (INFO-061): GW170817 BNS
+chirp mass recovered by pycbc matched-filter -- detector-frame M_c 1.200 (0.19% from
+catalog), H1+L1 independently agree -- removing the S17 ridge's absolute-mass bias.
+Earlier-probe context below.
 
 For the (Session 17) session, read `SESSION_HANDOFF_2026-06-02_S17.md`, then
 the Session 17 note below. Headline: JOB 1 (CLAUDE.md drift) FIXED — this file is now
@@ -860,8 +867,12 @@ the pulsar route IN PARALLEL.
   units-reporting bug (PINT PBDOT.value already s/s).
 - **Capability brief**: updated -- gravity now has a time-dilation recovery (GPS coeff +
   pulsar gamma + pulsar dP_b/dt) alongside the inspiral chirp.
-- **O3 (GW170817 BNS chirp mass via pycbc matched-filter)**: launched; INFO-061 reserved;
-  fold result when it lands.
+- **O3 (GW170817 BNS chirp mass via pycbc matched-filter, INFO-061)**: DONE. Recovered
+  detector-frame M_c 1.200 Msun (network, 0.19% from catalog 1.1977); H1 1.200 / L1 1.195
+  independently agree; net SNR 14.8; L1 null 9.7 sigma. Removes the S17 CWT-ridge absolute-
+  mass bias (form right at R^2 0.88, mass was 15.7). Env: pycbc 2.11.0 (--ignore-installed
+  cryptography) silently shadows scipy with a broken 1.16.3 -> force-reinstall --no-deps
+  scipy; use pycbc TimeSeries.gate() not a hand-rolled taper.
 - **Env notes (do not persist across containers)**: pulsar route needed `pip install
   pint-pulsar pdfminer.six`, `pip install --force-reinstall cffi` (broken container
   cryptography binding), and a certifi CA-bundle patch for PINT clock downloads. numpy 2.4
@@ -1080,6 +1091,25 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   artifact; the POINT ESTIMATES (ratios 1.005, 1.0001) are the robust result. Published GR
   values treated as conjecture-to-check, not cited as support. Earlier exp2 carried a 1e12
   units-reporting bug (PINT PBDOT.value is already s/s) -- fixed; root cause verified.
+
+- **INFO-061 -- LOCATED, REAL DATA (Session 18, new; backlog O3)**: recovered the GW170817
+  binary-neutron-star chirp mass from raw LIGO strain by matched filtering
+  (`probe_o3_gw170817_chirpmass.py`). Fetched GWOSC GWTC-1 GW170817 4096s/4096Hz H1+L1
+  (data/ligo_bulk/, gitignored; the repo 32 s file was too narrow-band for the BNS lever
+  arm); TaylorF2 chirp-mass template bank + Welch-PSD whitening + matched filter, L1 glitch
+  (t_merger -1.05 s) gated with pycbc .gate(), peak complex-SNR within +/-0.1 s of merger GPS.
+  RESULT: detector-frame M_c = 1.200 Msun (network), 0.19% from catalog 1.1977; H1 1.200
+  (SNR 11.1, peak +0.014 s) and L1 1.195 (SNR 9.8, peak -0.008 s) INDEPENDENTLY agree; net
+  SNR 14.8 sharply peaked (drops to ~7.5 by +/-0.015 Msun). Null: L1 on 9.8 vs off-source
+  9.7 sigma (clean); H1 5.6 sigma (noisier H1-band off-source tail -- the same H1 ugliness
+  that defeated the S17 ridge -- but the on-source peak lands at the right M_c AND time).
+  This REMOVES the S17 CWT-ridge absolute-mass bias (which got the inspiral LAW FORM
+  u=f^-8/3 linear at R^2 0.88 but M_c 15.7): matched filtering recovers M_c to 0.19%.
+  CAVEATS (limit SNR, NOT M_c): TaylorF2 inspiral-only, no spin, q=1, f_final 1024 Hz,
+  single PSD -> net SNR 14.8 << catalog ~32; inspiral phasing still fixes M_c. Source-frame
+  ~1.187 reached after z~0.0099 correction (not applied). Catalog = comparison target only,
+  not cited as support. Gravity now has THREE raw-data recoveries (chirp INFO-052, time
+  dilation INFO-059/060, BNS chirp mass INFO-061).
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 

@@ -59,6 +59,11 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
    REMAINING (new sub-item, bottom-of-thread): GW170817 absolute chirp mass needs the
    full sweep to merger -- louder detector (L1, has the glitch), longer data, or
    matched-filter template tracking. Append as a follow-up, not a blocker.
+   -- DONE (S18, O3, INFO-061): GW170817 BNS chirp mass NAILED. Fetched GWOSC 4096s/4096Hz
+   H1+L1, TaylorF2 chirp-mass template bank + matched filter, L1 glitch gated with pycbc
+   .gate(): detector-frame M_c = 1.200 Msun (network, 0.19% from catalog 1.1977), H1 1.200 /
+   L1 1.195 independently agree, net SNR 14.8 (L1 null 9.7 sigma). Removes the S17 ridge
+   absolute-mass bias. See `probe_o3_gw170817_chirpmass.py`, `SESSION_HANDOFF_2026-06-02_S18.md`.
 
 4. **Louder-event flow reproduction** (BACKBURNER per Greg, S16).
    Fetch GW170814/GW190521 strain; re-run per-event flow axis; test whether

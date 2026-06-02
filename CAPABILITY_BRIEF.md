@@ -23,7 +23,10 @@ answers are checkable against ground truth.
   H1 and L1 agree to under 1% (recovered chirp mass ~38 vs catalog detector-frame
   ~31 solar masses; fit R^2 = 0.99). The same pipeline locates the merger in time and
   confirms the inter-detector signal sits at the correct physical light-travel delay
-  (~7 ms) at 15-sigma significance against a time-slide null.
+  (~7 ms) at 15-sigma significance against a time-slide null. For the binary-neutron-star
+  event GW170817, matched filtering raw strain recovers the chirp mass to **0.19%**
+  (detector-frame 1.200 vs catalog 1.1977 solar masses), with H1 and L1 agreeing
+  independently.
 
 - **Gravity — relativistic time dilation, recovered two independent ways.**
   (a) From raw GPS data: the relativistic clock law `Δt = -2(r·v)/c²` recovered from raw
@@ -71,6 +74,7 @@ unknown.
 | Domain  | Data source              | Recovered                         | Benchmark            |
 |---------|--------------------------|-----------------------------------|----------------------|
 | Gravity | LIGO GW150914 strain     | inspiral law + chirp mass (H1=L1) | R^2 0.99; ~within 25%|
+| Gravity | LIGO GW170817 strain     | BNS chirp mass (matched filter, H1=L1) | 0.19% of catalog  |
 | Gravity | Raw GPS RINEX (BRUX)     | time-dilation coeff -2/c^2        | 1.02-1.04x GR; z=380 |
 | Gravity | Arecibo TOAs (B1913+16)  | orbital decay dP_b/dt + Einstein gamma | 1.005x GR; gamma 0.014% |
 | Weak    | CMS dimuon (10,227 evts) | Z Breit-Wigner, M_Z 90.75 GeV     | 99.5% of PDG         |
