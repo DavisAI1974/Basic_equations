@@ -196,6 +196,19 @@ hunch (H-A/H-B/H-C), but it stays a frame until a probe separates "MI tracks the
 chirp's time structure (already in GR)" from "MI carries time-coupling beyond GR."
 No new Operating Rule.
 
+## Credibility / outreach asset (Greg flagged HUGE, S17)
+
+Greg: "this is huge and something we would want to tout to the right company ...
+proves our OD machinery can pull a real gravity governing law out of raw data with
+both detectors agreeing. That's credibility." Created a standing **Capability
+Demonstrations** section in CLAUDE.md collecting the three raw-data governing-law
+recoveries (GRAVITY chirp INFO-052 + MI INFO-053; WEAK Z propagator S16; STRONG QCD
+running S16). Sellable claim: a domain-agnostic engine that recovers ESTABLISHED laws
+from RAW PUBLIC DATA with no physics assumptions, across physics' three hardest force
+domains -> credibility that it can find governing laws where they are UNKNOWN.
+Honest: these RECOVER known laws (checkable against ground truth), not new physics --
+which is the point. ACTION pending (Greg): package a one-page capability brief.
+
 ## Gravity thread — footholds scaffold (start of framework accounting, Greg S17)
 
 Honest accounting of where the gravity work stands. This is NOT an equation yet; it is

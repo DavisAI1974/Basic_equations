@@ -134,7 +134,38 @@ The Noether-style move: find what is invariant under reparametrizations that gen
 - **NoVell** — cardiac AI for cancer detection from routine ECG. OD on synthetic Vigier 2021 data: 93.3% accuracy, 97.4% sensitivity. Datasets: PTB-XL downloaded, Autonomic Aging identified, MIMIC-IV pending.
 - **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Session 7 added GP regression and PySR symbolic regression on per-domain ensemble-H data: four reproducible per-domain MI-vs-H functional families (physics symmetric quadratic in (H_b-H_a), biology 0.5*exp(H_a/2), chemistry linear H_a, geology constant), cross-seed coefficient variation <5%, cross-domain non-overlap. Session 8 ran four-force unification probe (toy EM/weak/strong/gravity caricatures) yielding shared-substrate + distinct-expression pattern (INFO-027): all four forces share [2,3,4] null direction at cos > 0.997 on (-1,-1,+2)/sqrt(6) Session 3 attractor while EM matches Session 7 physics family (H_b-H_a)^2+const and weak matches Session 7 chemistry family linear-in-H_a. Robustness check (INFO-029): INFO-025 functional family survives T/N_ens/noise sweep at the family level; coefficients are regime-dependent. Mapping campaign (INFO-030): INFO-025 families are baseline-specific regime signatures — large knob deviations mutate the family qualitatively (biology exp -> linear at high beta; chemistry linear -> ratio at low B). Per-domain differentiation now has three independent reproducible signatures (null direction + functional family + four-force shared-substrate). Session 9 double-checked the Session 8 gravity result against the ORIGINAL code across an asymmetry sweep and CORRECTED it (INFO-033): the MI-dominant substrate flip is an asymmetry-THRESHOLD effect ALL coupled caricatures undergo (threshold gravity ~1.1x < EM ~1.3x < weak ~1.6x < strong never), not gravity-specific; adding energy-coupling RAISES thresholds (suppresses the flip), so energy-mediation is not the cause; INFO-031/032 re-tagged incomplete-not-wrong. The "gravity is special at the substrate level" leg of the four-force narrative is removed; INFO-023/INFO-025 legs untouched. See Sessions 5, 6, 7, 8, 9 notes plus ledger (INFO-022 through 033) for current state.
 
-## Markets / Refrag Workspace (placeholder — restore from workspace file)
+## Capability Demonstrations (credibility / outreach assets) — flagged HUGE by Greg (S17)
+
+Standing, accumulating list of OD capability proofs suitable for touting to the right
+partner/company. The through-line and the sellable claim: **a domain-agnostic
+discovery engine that recovers ESTABLISHED governing laws from RAW PUBLIC DATA with no
+physics assumptions baked in** — demonstrated now across physics' three hardest force
+domains. Independent re-derivation of known laws is the credibility proof that the
+same engine can find governing laws in domains where they are UNKNOWN (the actual
+product). Honest framing for outreach: these RECOVER known laws (validation), they are
+not new physics — and that is exactly the point (you can check our answers against
+ground truth). Greg (S17): "this is huge and something we would want to tout to the
+right company ... proves our OD machinery can pull a real gravity governing law out of
+raw data with both detectors agreeing. That's credibility."
+
+- **GRAVITY — inspiral chirp law from raw LIGO strain (S17, INFO-052).** Recovered the
+  Newtonian inspiral governing law u=f^(-8/3) ~ (t_c - t) from raw GW150914 public
+  strain via a Morlet-CWT ridge; **both detectors independently agree** (H1 R^2 0.995
+  M_c 38.4; L1 R^2 0.987 M_c 38.2 Msun; catalog detector-frame ~31, ~24% Newtonian-
+  late-inspiral bias). Cross-detector agreement to <1%. Decisively beat the naive-
+  Hilbert baseline (R^2 0.001). Plus (INFO-053) the inter-detector MI merger signal
+  shown physics-bearing (peaks at the physical 7 ms light-travel lag, z=15.5 vs
+  time-slide null, carries waveform phase/time structure).
+- **WEAK — Z boson Breit-Wigner from real CMS dimuon data (S16).** M_Z = 90.75 GeV =
+  99.5% of PDG 91.1876, from 10227 real dimuon events; PySR independently recovered a
+  BW-like lineshape; same-charge control shows no peak.
+- **STRONG — QCD asymptotic freedom from real alpha_s(Q) world data (S16).** 1/alpha_s
+  LINEAR in ln(Q) with POSITIVE slope (asymptotic freedom forced by data, no beta
+  function assumed) from 13 measured points, chi2/ndf 0.81; Lambda_QCD ~150 MeV.
+
+Outreach targeting (open, for Greg): GW / scientific-instrument groups, defense
+(already in pipeline below), and any data-rich domain wanting governing-law discovery.
+ACTION pending: package a one-page capability brief from these three recoveries.
 
 NOTE (Session 9): the full Markets / Refrag section was OVERWRITTEN when
 this repo's CLAUDE.md was replaced by the master context this session.
