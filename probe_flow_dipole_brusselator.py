@@ -1,4 +1,12 @@
 """
+*** SUPERSEDED / UNTRUSTWORTHY (Greg, S19) -- DO NOT BUILD ON THIS ***
+Toy Brusselator ODE simulator (per_domain_kbk.simulate_chemistry). Greg S19:
+"bruss might be wrong tool ... consider it untrustworthy." Replaced by a REAL
+chemistry dataset in probe_flow_dipole_chem.py. The opposition signature seen here
+is a toy-simulator artifact -- it did not appear in the real-data forces (gravity,
+weak). Kept only for the audit trail.
+*** end deprecation notice ***
+
 FLOW DIPOLE EQUATION -- system 1: Brusselator (native 2 species x,y).
 Backlog STEP 1, "START HERE, cleanest" (Greg, S18).
 

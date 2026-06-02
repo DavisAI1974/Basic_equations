@@ -1,4 +1,14 @@
 """
+*** SUPERSEDED / UNTRUSTWORTHY (Greg, S19) -- DO NOT BUILD ON THIS ***
+This uses the TOY ODE simulators in per_domain_kbk.py (Duffing / Lotka-Volterra /
+Brusselator / Burridge-Knopoff). Greg's S19 call: "why are we using toy brusselator?
+... that's an old file, consider it untrustworthy" + the S10 rule "no point
+fine-tuning fake data." The apparent shared opposition signature here did NOT survive
+contact with REAL data (gravity LIGO + weak CMS dimuon both collapsed: R2~=shuffle-
+null, no opposition). The real-data replacements are probe_flow_dipole_{gravity,weak,
+em,strong,chem}.py. Kept only for the audit trail (Result Discipline: misses cataloged).
+*** end deprecation notice ***
+
 FLOW DIPOLE EQUATION across all 4 simulated domains (native 2-channel systems).
 Backlog STEP 1 (Greg, S18) -- generalizes probe_flow_dipole_brusselator.py.
 
