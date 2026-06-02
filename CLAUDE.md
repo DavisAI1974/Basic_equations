@@ -220,7 +220,22 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For the latest (Session 10) FIRST REAL-DATA session, read
+For the latest (Session 11) session, read
+`SESSION_HANDOFF_2026-06-02_v11_results.md` (in repo root) first, then the
+Session 11 note below (INFO-038). Headline: per-event LIGO readout on 3
+events (GW150914/170104/151226) run SEPARATELY with no pooling -- per-event
+entropy asymmetry |H_a-H_b| varies (0.62/0.74/1.61) and inversely tracks
+how hard noise sits on the equal-entropy attractor, confirming INFO-036's
+equal-entropy reading at the per-event level (INFO-038, isolated). Full
+12-event batch + per-event off-source null distribution BUILT
+(s11_ligo_batch.py), not yet run. OD inputs consolidated onto main
+(four-force + per-domain JSONs + stores); medical stores left on their own
+branch; main synced to continuity so the SessionStart hook runs every
+session. Open: pull dipole JSONs from the Markets repo + list the flow
+dipole equation separately (Greg's call). Track B (new-physics inverse
+problem) framed, not yet built.
+
+For the (Session 10) FIRST REAL-DATA session, read
 `SESSION_HANDOFF_2026-06-02_v10_results.md` (in repo root) first, then
 the Session 10 note above (INFO-034 through 037). Headline: caricature
 work retired by Greg's call ("no point fine-tuning fake data"); two
@@ -290,6 +305,64 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 11 update — 2026-06-02)
+
+Session 11 opened on the Session 10 four-force real-data results. Greg
+directed: do Track A (LIGO generalization) and Track B (new-physics
+inverse problem + SM-parameter-regularity hunt) in parallel; run LIGO
+events SEPARATELY with no merge/average; consolidate OD inputs; update
+docs; prepare for a fresh session. Branch: work on
+`claude/gravity-substrate-config-51cfp`, **main fast-forwarded to it** so
+the SessionStart hook + all data run every session. Harness-designated
+`claude/awaiting-files-TgxVq` not used (continuity precedent); Greg's
+branch-specifying file had not arrived by session end.
+
+- **Four-force framing answers (no compute, recorded for Track B)**: set 2
+  (PDG) CONSUMES the Standard Model (beta functions + gauge group are
+  inputs) so it cannot derive the forces or their origins; set 1 (LIGO) is
+  a method/measurement result. Neither reaches "origins" -- a why/mechanism
+  question outside OD mode, and no dataset contains the origin. The honest
+  OD-shaped target is the INVERSE PROBLEM: extract the Delta-b_i +
+  onset-scale mu_NP that would close the triangle (mechanism-agnostic,
+  falsifiable), AFTER mapping alternatives (a) nothing forces single
+  unification [leading deflationary read], (b) two-loop + thresholds may
+  shrink the triangle (Session 10 used one-loop), (c) the extrapolation
+  itself is conjecture. We can recover new physics's required FOOTPRINT,
+  never its IDENTITY (3 couplings don't invert to a unique spectrum).
+  Gravity is its own extraction (power-law would need to become log to
+  join the gauge family). This is Track B, framed not built.
+
+- **INFO-038 -- ISOLATED FINDING (Session 11, new; 3 events, NO null yet,
+  NOT averaged)**: per-event LIGO readout (s11_ligo_perevent.py) on
+  GW150914, GW170104, GW151226 run separately. Per-event windowed entropy
+  asymmetry |H_a-H_b| varies materially (0.62 / 0.74 / 1.61) and INVERSELY
+  tracks how strongly noise-only windows sit on the (-1,-1,+2) equal-
+  entropy attractor (GW150914 asym 0.62 -> cos 0.980; GW151226 asym 1.61 ->
+  cos 0.816). Internally consistent with INFO-036: the attractor IS the
+  equal-marginal-entropy identity H_a~=H_b, so unequal per-channel entropy
+  sits further off it even in pure detector noise. The entropy reading
+  EXPLAINS the cos reading. The asymmetry is a per-event detector-state
+  signature (epoch-specific H1-vs-L1 noise floor/PSD surviving whitening),
+  NOT astrophysics. MI-peak-at-merger detection is loudness-dependent
+  (lands at merger for GW150914 + GW170104; misses quiet long-inspiral
+  GW151226). All event/noise MI ratios modest (1.06-1.19x) and MEANINGLESS
+  without the null distribution. Full 12-event batch + per-event off-source
+  null built (s11_ligo_batch.py), not yet run. Do not pool: the per-event
+  spread is the signal.
+
+- **OD consolidation (Greg: update OD with latest dipole + 4-force JSONs)**:
+  brought Session 6/7/8 four-force + per-domain result JSONs and OD stores
+  (store/four_force_caricature, store/simulator_4domain) onto continuity
+  (additive) and synced main. Four-force JSONs verified identical across
+  O6ahb/iZvY4. Decisions: **dipole** -> pull from the Markets repo if the
+  info lives there + list the flow dipole equation separately (Greg; ACTION
+  next session via list_repos/add_repo on DavisAI1974/Markets); **medical
+  OD stores** (cardiac/cerebro) -> stay on their own branch, NOT main.
+
+- All Operating Rules from Sessions 4-7 in force. No new Rule this session.
+  Branch state: work on `claude/gravity-substrate-config-51cfp`, main
+  synced, pushed. No PR.
 
 ## Note (Session 10 update — 2026-06-02, FIRST REAL DATA)
 

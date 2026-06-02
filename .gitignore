@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 outputs/
+
+# LIGO bulk strain (130MB+ each; keep JSON results only)
+data/ligo_bulk/
