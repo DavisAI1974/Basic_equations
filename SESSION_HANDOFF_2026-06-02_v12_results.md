@@ -81,12 +81,16 @@ actions; dropped the Markets pull by Greg's call.
 
 ## NEXT SESSION — ready / open
 
-- **Confirm the full 12-event `s11_ligo_batch_results.json` landed** (incl.
-  GW170817 BNS, 170818, 170823, 190521). If GW170817 crashes again it is now
-  isolated (the other 11 persist); inspect it specifically (BNS long signal /
-  known L1 glitch / whitening near-zero-PSD RuntimeWarning seen on GW151012),
-  do not tent-widen. Check the open INFO-038 thread (no-MI basis noise-OFF /
-  event-ON reversal) across the full batch.
+- **Full 12-event `s11_ligo_batch_results.json` LANDED** (11 scored, GW170608
+  skipped). 5/11 clear p<0.05 (+GW170814 0.094, GW190521 0.050 marginal);
+  misses = 2 quiet O1 + BNS GW170817 (p=0.76) + GW170818. INFO-038 inverse
+  relation confirmed at batch scale: corr(|H_a-H_b|, noise-cos) = -0.667;
+  detection is orthogonal to asymmetry (GW170729/170823 detect at highest
+  asym). GW170817 completed fine on the resume-safe re-run (the first-run stop
+  was transient, not BNS-specific). INFO-038 promoted isolated -> MAPPED.
+  STILL OPEN: the no-MI-basis noise-OFF / event-ON reversal thread across the
+  full 12 (only checked on GW150914 in S11) -- re-run the s11_first_run_entropy
+  decomposition per event.
 - **INFO-039 promotion probe** (if pursued): >=3 seeds on the off-attractor
   RESIDUAL component (only 2 seeds here) + a probe separating
   opposition-beyond-equal-entropy from the equal-entropy identity. Until then

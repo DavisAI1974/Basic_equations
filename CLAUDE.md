@@ -423,29 +423,38 @@ Markets pull was dropped by Greg's call.
   section. Promotion needs >=3 seeds on the off-attractor residual + a probe
   separating opposition-beyond-equal-entropy from the identity.
 
-- **Track A -- full 12-event LIGO null, executed**: `s11_ligo_batch.py`
-  hardened this session to be incremental-save + resume-safe (it had crashed
-  on GW170817 after scoring 7 events and -- because it only saved at the end
-  -- lost the structured JSON; now it persists after every event and gc's).
-  Substantive 7-event result (N_null=100 off-source per event), each run
-  SEPARATELY, no pooling:
-  | event | \|H_a-H_b\| | noise cos->attr | peak-MI@merger | p |
-  |-------|-----------|-----------------|----------------|---|
-  | GW150914 | 0.14 | 0.997 | yes | 0.0 |
-  | GW151012 | 1.98 | 0.568 | no  | 0.98 |
-  | GW151226 | 2.38 | 0.795 | no  | 1.0 |
-  | GW170104 | 0.14 | 0.924 | yes | 0.0 |
-  | GW170729 | 2.06 | 0.200 | yes | 0.0 |
-  | GW170809 | 1.08 | 0.849 | yes | 0.0 |
-  | GW170814 | 0.38 | 0.949 | yes | 0.094 |
-  (GW170608 skipped: no 4096s L1 file.) Two readings, data level: (1) the
-  off-source NULL cleanly SPLITS detection by loudness -- every loud event
-  clears at p=0.0, the two quiet O1 events do not (p~1), GW170814 marginal
-  (p=0.094); the bare ev/noise MI ratios (1.06-1.19x) flagged meaningless in
-  S11 now resolve into p-values. (2) INFO-038's inverse |H_a-H_b| <-> noise-
-  cos relation holds across the batch (asym 2.06 -> cos 0.200, asym 0.14 ->
-  cos 0.997). Full 12 (incl. GW170817/170818/170823/190521) completing on
-  the resume-safe re-run -> `s11_ligo_batch_results.json`.
+- **Track A -- full 12-event LIGO null, COMPLETE** (`s11_ligo_batch.py`,
+  hardened to incremental-save + resume-safe this session; the first run had
+  stopped on GW170817 after 7 events and -- saving only at the end -- lost the
+  JSON, so it now persists after every event + gc's; GW170817 completed fine
+  on the resume-safe re-run, so that stop was transient). 11 events scored
+  (GW170608 skipped: no 4096s L1 file), each run SEPARATELY, N_null=100
+  off-source per event, no pooling -> `s11_ligo_batch_results.json`:
+  | event | \|H_a-H_b\| | noise cos | peak-MI | p | det |
+  |-------|-----------|-----------|---------|---|-----|
+  | GW150914 | 0.14 | 0.997 | 0.658 | 0.000 | YES |
+  | GW151012 | 1.98 | 0.568 | 0.325 | 0.980 | . |
+  | GW151226 | 2.38 | 0.795 | 0.333 | 1.000 | . |
+  | GW170104 | 0.14 | 0.924 | 0.435 | 0.000 | YES |
+  | GW170729 | 2.06 | 0.200 | 0.380 | 0.000 | YES |
+  | GW170809 | 1.08 | 0.849 | 0.407 | 0.000 | YES |
+  | GW170814 | 0.38 | 0.949 | 0.364 | 0.094 | ~ |
+  | GW170817 (BNS) | 1.41 | 0.564 | 0.335 | 0.760 | . |
+  | GW170818 | 0.44 | 0.948 | 0.351 | 0.320 | . |
+  | GW170823 | 2.22 | 0.136 | 0.380 | 0.030 | YES |
+  | GW190521 | 1.33 | 0.039 | 0.376 | 0.050 | ~ |
+  Two data-level readings, both CONFIRMED at batch scale (promote INFO-038
+  from isolated/3-event to MAPPED/11-event-with-null): (1) the off-source
+  NULL gives real p-values -- 5/11 clear p<0.05 (+2 marginal); misses are the
+  two quiet O1 events, the BNS (long low-freq inspiral, different morphology),
+  and GW170818. Detection tracks event loudness/morphology, NOT entropy
+  asymmetry (GW170729/170823 detect at the HIGHEST asym). (2) INFO-038's
+  inverse |H_a-H_b| <-> noise-cos relation holds across the batch:
+  corr(asym, noise-cos) = -0.667. (3) The entropy-asymmetry axis and the MI
+  axis are ORTHOGONAL (confirms the S11 first-run decomposition): the
+  attractor is equal-entropy bookkeeping; detection rides the separate MI
+  axis. Open INFO-038 no-MI-basis reversal thread: not yet re-checked across
+  the full 12.
 
 - All six Operating Rules in force; no new Rule. Branch
   `claude/file-attachment-hold-DjGSW`, main synced, pushed. No PR.
