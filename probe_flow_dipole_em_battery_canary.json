@@ -296,6 +296,7 @@
         "tool5a_sindy": {
           "metric_name": "R2 of sparse SINDy model for dMI/dtau over {Ha,Hb} deg-2, vs shuffle-null",
           "R2": 2.220446049250313e-16,
+          "R2_full_LS_upper_bound": 2.220446049250313e-16,
           "control_value": 2.220446049250313e-16,
           "shuffle_null": 2.220446049250313e-16,
           "active_terms": {
@@ -306,17 +307,21 @@
             "Ha*Hb": -5.414972593268104e-42,
             "Hb*Hb": -1.9898125991453834e-42
           },
+          "n_active_terms": 6,
           "hits": false
         },
         "tool6_direct_coupling": {
-          "metric_name": "zero-lag Pearson corr / hist-MI / transfer-entropy both dirs (cross-source compare)",
+          "metric_name": "zero-lag Pearson corr / hist-MI / TE both dirs, vs WITHIN-SOURCE time-shift null (cross-source 'control' is contaminated)",
           "pearson_zero_lag": 0.1421905363901619,
           "mi_hist": 0.008162295915436796,
           "te_A_to_B": 0.0,
           "te_B_to_A": 0.0,
           "pearson_lag1_A_leads_B": 0.06997245482287184,
           "pearson_lag1_B_leads_A": 0.1326299034786682,
-          "control_value": "see uncorrelated_control source",
+          "pearson_shift_null_mean": 7.896264862049226e-05,
+          "pearson_shift_null_std": 0.0005650554349072549,
+          "mi_shift_null_mean": 3.3143645014722173e-06,
+          "control_value": 7.896264862049226e-05,
           "hits": true
         }
       }
@@ -389,6 +394,7 @@
       "metric_name": "R2 of sparse SINDy model for dMI/dtau over {Ha,Hb} deg-2, vs shuffle-null",
       "signal_metric": {
         "R2": 2.220446049250313e-16,
+        "R2_full_LS_upper_bound": 2.220446049250313e-16,
         "control_value": 2.220446049250313e-16,
         "shuffle_null": 2.220446049250313e-16,
         "active_terms": {
@@ -399,6 +405,7 @@
           "Ha*Hb": -5.414972593268104e-42,
           "Hb*Hb": -1.9898125991453834e-42
         },
+        "n_active_terms": 6,
         "hits": false
       },
       "control_metric": null,
@@ -406,7 +413,7 @@
       "control_hits": null
     },
     "tool6_direct_coupling": {
-      "metric_name": "zero-lag Pearson corr / hist-MI / transfer-entropy both dirs (cross-source compare)",
+      "metric_name": "zero-lag Pearson corr / hist-MI / TE both dirs, vs WITHIN-SOURCE time-shift null (cross-source 'control' is contaminated)",
       "signal_metric": {
         "pearson_zero_lag": 0.1421905363901619,
         "mi_hist": 0.008162295915436796,
@@ -414,7 +421,10 @@
         "te_B_to_A": 0.0,
         "pearson_lag1_A_leads_B": 0.06997245482287184,
         "pearson_lag1_B_leads_A": 0.1326299034786682,
-        "control_value": "see uncorrelated_control source",
+        "pearson_shift_null_mean": 7.896264862049226e-05,
+        "pearson_shift_null_std": 0.0005650554349072549,
+        "mi_shift_null_mean": 3.3143645014722173e-06,
+        "control_value": 7.896264862049226e-05,
         "hits": true
       },
       "control_metric": null,
@@ -422,5 +432,5 @@
       "control_hits": null
     }
   },
-  "runtime_s": 45.0
+  "runtime_s": 47.3
 }

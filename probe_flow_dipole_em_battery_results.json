@@ -438,17 +438,28 @@
           "control_value": 0.5933895337870672,
           "shuffle_null": 0.5933895337870672,
           "best_equation": "0.0010444692 / (-0.44792843 - square(x0 + -1.6733052))",
-          "hits": true
+          "vars_used": {
+            "x0": true,
+            "x1": false,
+            "x2": false,
+            "x3": false
+          },
+          "uses_cross_channel_HaHb": false,
+          "note": "x0=Tau x1=Ha x2=Hb x3=MI; if only x0 used, fitting the smooth MI(tau) relaxation shape, not 2-channel coupling",
+          "hits": false
         },
         "tool6_direct_coupling": {
-          "metric_name": "zero-lag Pearson corr / hist-MI / transfer-entropy both dirs (cross-source compare)",
+          "metric_name": "zero-lag Pearson corr / hist-MI / TE both dirs, vs WITHIN-SOURCE time-shift null (cross-source 'control' is contaminated)",
           "pearson_zero_lag": 0.1421905363901619,
           "mi_hist": 0.008162295915436796,
           "te_A_to_B": 0.0,
           "te_B_to_A": 0.0,
           "pearson_lag1_A_leads_B": 0.06997245482287184,
           "pearson_lag1_B_leads_A": 0.1326299034786682,
-          "control_value": "see uncorrelated_control source",
+          "pearson_shift_null_mean": 7.896264862049226e-05,
+          "pearson_shift_null_std": 0.0005650554349072549,
+          "mi_shift_null_mean": 3.3143645014722173e-06,
+          "control_value": 7.896264862049226e-05,
           "hits": true
         }
       }
@@ -843,17 +854,28 @@
           "control_value": 0.6037515049120459,
           "shuffle_null": 0.6037515049120459,
           "best_equation": "(x3 + (x2 * (x0 * -0.044678677))) / ((x2 / -1.1859866) + exp(x0))",
-          "hits": true
+          "vars_used": {
+            "x0": true,
+            "x1": false,
+            "x2": true,
+            "x3": true
+          },
+          "uses_cross_channel_HaHb": false,
+          "note": "x0=Tau x1=Ha x2=Hb x3=MI; if only x0 used, fitting the smooth MI(tau) relaxation shape, not 2-channel coupling",
+          "hits": false
         },
         "tool6_direct_coupling": {
-          "metric_name": "zero-lag Pearson corr / hist-MI / transfer-entropy both dirs (cross-source compare)",
+          "metric_name": "zero-lag Pearson corr / hist-MI / TE both dirs, vs WITHIN-SOURCE time-shift null (cross-source 'control' is contaminated)",
           "pearson_zero_lag": 0.4378160580316321,
           "mi_hist": 0.06932284071021444,
           "te_A_to_B": 0.008940490406075753,
           "te_B_to_A": 0.00887505564774157,
           "pearson_lag1_A_leads_B": 0.29102530457863146,
           "pearson_lag1_B_leads_A": 0.28954786896082174,
-          "control_value": "see uncorrelated_control source",
+          "pearson_shift_null_mean": 0.0006037315939567435,
+          "pearson_shift_null_std": 0.0012216320807591384,
+          "mi_shift_null_mean": 3.740522426797276e-05,
+          "control_value": 0.0006037315939567435,
           "hits": true
         }
       }
@@ -1000,20 +1022,36 @@
         "control_value": 0.5933895337870672,
         "shuffle_null": 0.5933895337870672,
         "best_equation": "0.0010444692 / (-0.44792843 - square(x0 + -1.6733052))",
-        "hits": true
+        "vars_used": {
+          "x0": true,
+          "x1": false,
+          "x2": false,
+          "x3": false
+        },
+        "uses_cross_channel_HaHb": false,
+        "note": "x0=Tau x1=Ha x2=Hb x3=MI; if only x0 used, fitting the smooth MI(tau) relaxation shape, not 2-channel coupling",
+        "hits": false
       },
       "control_metric": {
         "R2": 0.9442150123557519,
         "control_value": 0.6037515049120459,
         "shuffle_null": 0.6037515049120459,
         "best_equation": "(x3 + (x2 * (x0 * -0.044678677))) / ((x2 / -1.1859866) + exp(x0))",
-        "hits": true
+        "vars_used": {
+          "x0": true,
+          "x1": false,
+          "x2": true,
+          "x3": true
+        },
+        "uses_cross_channel_HaHb": false,
+        "note": "x0=Tau x1=Ha x2=Hb x3=MI; if only x0 used, fitting the smooth MI(tau) relaxation shape, not 2-channel coupling",
+        "hits": false
       },
-      "signal_hits": true,
-      "control_hits": true
+      "signal_hits": false,
+      "control_hits": false
     },
     "tool6_direct_coupling": {
-      "metric_name": "zero-lag Pearson corr / hist-MI / transfer-entropy both dirs (cross-source compare)",
+      "metric_name": "zero-lag Pearson corr / hist-MI / TE both dirs, vs WITHIN-SOURCE time-shift null (cross-source 'control' is contaminated)",
       "signal_metric": {
         "pearson_zero_lag": 0.1421905363901619,
         "mi_hist": 0.008162295915436796,
@@ -1021,7 +1059,10 @@
         "te_B_to_A": 0.0,
         "pearson_lag1_A_leads_B": 0.06997245482287184,
         "pearson_lag1_B_leads_A": 0.1326299034786682,
-        "control_value": "see uncorrelated_control source",
+        "pearson_shift_null_mean": 7.896264862049226e-05,
+        "pearson_shift_null_std": 0.0005650554349072549,
+        "mi_shift_null_mean": 3.3143645014722173e-06,
+        "control_value": 7.896264862049226e-05,
         "hits": true
       },
       "control_metric": {
@@ -1031,12 +1072,15 @@
         "te_B_to_A": 0.00887505564774157,
         "pearson_lag1_A_leads_B": 0.29102530457863146,
         "pearson_lag1_B_leads_A": 0.28954786896082174,
-        "control_value": "see uncorrelated_control source",
+        "pearson_shift_null_mean": 0.0006037315939567435,
+        "pearson_shift_null_std": 0.0012216320807591384,
+        "mi_shift_null_mean": 3.740522426797276e-05,
+        "control_value": 0.0006037315939567435,
         "hits": true
       },
       "signal_hits": true,
       "control_hits": true
     }
   },
-  "runtime_s": 440.3
+  "runtime_s": 437.8
 }
