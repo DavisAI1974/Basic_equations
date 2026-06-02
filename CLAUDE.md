@@ -370,6 +370,21 @@ s9_doublecheck_flip.py, s9_characterize.py.
   51cfp, not main). Pydroid-3 on Greg's phone cannot run PySR (no Julia
   on Android; separate env from the cloud container) -- numpy substrate
   scripts only.
+- **Markets / Refrag workspace -- open question (Greg, Session 9): do
+  those sessions need PySR + Julia for their runs too?** The Markets
+  section lives in the E:\refrag workspace CLAUDE.md (DavisAI1974/agent +
+  DavisAI1974/Markets), not this master, so this question is recorded
+  here to travel via mirroring. Informed answer: the CURRENT Markets
+  predictor scripts (_markets_algebraic_dipole.py quadratic fit,
+  _markets_dipole_kfold.py 5-fold CV, _markets_dipole_separation.py
+  Cohen's d, _markets_dipole_chunker_stack.py) are pure numpy/scipy/
+  sklearn and do NOT need PySR/Julia as they stand. They WOULD need
+  PySR + the Julia backend only if the Markets dipole work extends to
+  SYMBOLIC REGRESSION of its dipole equations (the way the Information
+  Layer used PySR for the INFO-025 / INFO-031 functional families). If
+  so, the Markets repos need the same SessionStart-hook treatment added
+  to Basic_equations this session (the hook here does not cover them).
+  Decision + mirroring pending per the Markets workspace.
 - All six Operating Rules from Sessions 4-7 in force. No new Rule added
   this session. Branch state: work on
   `claude/gravity-substrate-config-51cfp`, pushed. main untouched. No PR.
