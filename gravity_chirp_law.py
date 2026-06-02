@@ -17,6 +17,7 @@ instantaneous f(t); envelope peak = merger; fit on the rising inspiral window.
 
 Output: gravity_chirp_law_results.json
 """
+import argparse
 import json
 
 import numpy as np
@@ -46,26 +47,34 @@ def chirp_mass_from_k(k):
 
 
 def main():
-    # WHITEN (essential: GW150914 inspiral is sub-noise in raw strain; the
-    # chirp is only visible after whitening -- the first un-whitened run tracked
-    # detector noise and recovered no power law).
-    h1 = preprocess(load_strain("data/ligo/H-H1_GW150914_32s.hdf5"))
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--file", default="data/ligo/H-H1_GW150914_32s.hdf5")
+    ap.add_argument("--label", default="GW150914")
+    ap.add_argument("--merger-lo", type=float, default=16.30)
+    ap.add_argument("--merger-hi", type=float, default=16.46)
+    ap.add_argument("--pre", type=float, default=0.20,
+                    help="pre-merger inspiral window length (s); ~seconds for BNS")
+    ap.add_argument("--fmax", type=float, default=300.0)
+    args = ap.parse_args()
+
+    # WHITEN (essential: the inspiral is sub-noise in raw strain; the chirp is
+    # only visible after whitening -- un-whitened tracking recovers no power law).
+    h1 = preprocess(load_strain(args.file))
     t = np.arange(len(h1)) / FS
     f, env = inst_freq(h1)
 
     # merger = envelope peak in the search window
-    sel = (t >= MERGER_SEARCH[0]) & (t <= MERGER_SEARCH[1])
+    sel = (t >= args.merger_lo) & (t <= args.merger_hi)
     merger_t = float(t[sel][np.argmax(env[sel])])
     peak_env = float(env[sel].max())
-    print(f"[gravity_chirp_law] merger (envelope peak) t = {merger_t:.4f}s\n", flush=True)
+    print(f"[gravity_chirp_law] {args.label}: merger (envelope peak) t = {merger_t:.4f}s\n", flush=True)
 
-    # whitened-Hilbert instantaneous frequency, smoothed LEVEL (most physically
-    # faithful trace -- spans the full chirp band 35->300 Hz). Loud pre-merger
-    # window; light median smoothing; NO monotone-forcing (that collapsed it).
+    # whitened-Hilbert instantaneous frequency, smoothed LEVEL. Loud pre-merger
+    # window (length --pre); light median smoothing; NO monotone-forcing.
     from scipy.signal import medfilt
     f_s = medfilt(savgol_filter(f, 41, 3), 7)
-    win = ((t > merger_t - 0.20) & (t < merger_t - 0.004)
-           & (env > 0.15 * peak_env) & (f_s > 30) & (f_s < 300))
+    win = ((t > merger_t - args.pre) & (t < merger_t - 0.004)
+           & (env > 0.15 * peak_env) & (f_s > 30) & (f_s < args.fmax))
     tw, fw = t[win], f_s[win]
     print(f"inspiral window (whitened Hilbert): {tw.min():.3f}-{tw.max():.3f}s, "
           f"f {fw.min():.0f}->{fw.max():.0f} Hz, {len(fw)} samples\n", flush=True)
@@ -120,22 +129,24 @@ def main():
     clean = (r2_83 > 0.9) and (abs(n_fit - N_GR) < 0.6) and (5 < Mc_fixed < 120)
     verdict = (
         "CLEAN: f^11/3 chirp law recovered." if clean else
-        "NOT cleanly recovered from GW150914. The qualitative chirp is present "
-        "(f sweeps up into the merger), but the quantitative f^11/3 law and chirp "
-        "mass are NOT pinned by naive frequency-tracking. Diagnosis: GW150914 is a "
-        "short, high-mass, merger-DOMINATED event -- the f^11/3 inspiral law holds "
-        "in the EARLY inspiral (sub-noise here), while the only high-SNR stretch is "
-        "the merger/ringdown (POST-inspiral, law does not apply). Where the law "
-        "holds the SNR is too low; where SNR is high the law breaks. Recovery needs "
-        "a LONG-inspiral event (BNS GW170817, minutes in band) or template/"
-        "matched-filter frequency tracking, not naive Hilbert/ridge extraction. "
-        "Consistent with INFO-046 (method keys on the merger peak, misses inspiral) "
-        "and the lit-scan negative finding (chirp law not yet recovered from real "
-        "strain by naive SR).")
+        "NOT cleanly recovered by naive instantaneous-frequency tracking. The "
+        "qualitative chirp is present (f sweeps up through the band into the merger) "
+        "but the quantitative f^11/3 law and chirp mass are NOT pinned. Tested on "
+        "BOTH GW150914 (short, high-mass, merger-dominated, ~0.2s inspiral) and "
+        "GW170817 (long BNS inspiral, ~6s / 18k samples) -- BOTH fail (f^-8/3 "
+        "linearity R^2 ~ 0). So the limiter is the METHOD, not the event: per-sample "
+        "whitened-Hilbert instantaneous frequency is too noisy point-to-point to "
+        "track the monotone chirp. Rule D correction to the earlier GW150914 reading "
+        "(which blamed event type): the long-inspiral event fails too, so that "
+        "diagnosis was INCOMPLETE. Clean recovery requires a proper time-frequency "
+        "representation (Q-transform / constant-Q ridge with SNR weighting) or "
+        "matched-filter template tracking, NOT naive Hilbert/ridge SR. Consistent "
+        "with the lit-scan negative finding (chirp law needs templates).")
     print(f"VERDICT: {verdict}\n", flush=True)
     json.dump({
         "scope": "Attempts to recover the data-level inspiral frequency-evolution law "
-                 "(df/dt vs f) and chirp mass from GW150914 H1 strain. NOT gravity's mechanism.",
+                 "(df/dt vs f) and chirp mass from LIGO H1 strain. NOT gravity's mechanism.",
+        "event": args.label, "file": args.file,
         "verdict": verdict, "clean_recovery": bool(clean),
         "merger_t": merger_t,
         "inspiral_window_s": [float(tw.min()), float(tw.max())],
@@ -148,8 +159,8 @@ def main():
                         "linearity_R2_f_to_minus_8_3": float(r2_83),
                         "published_Mc_Msun": 30.2},
         "pysr": sr,
-    }, open("gravity_chirp_law_results.json", "w"), indent=2)
-    print("\n[gravity_chirp_law] wrote results", flush=True)
+    }, open(f"gravity_chirp_law_{args.label}_results.json", "w"), indent=2)
+    print(f"\n[gravity_chirp_law] wrote gravity_chirp_law_{args.label}_results.json", flush=True)
 
 
 if __name__ == "__main__":
