@@ -1,0 +1,38 @@
+{
+  "gravity": {
+    "force": "gravity",
+    "parameter": "time",
+    "critical_point_t_c_s": 16.421585428701817,
+    "approach_exponent_p": -0.33103748217192736,
+    "p_GR_predicted": -0.375,
+    "approach_R2": 0.9652319154013468,
+    "form": "power-law f~(t_c-t)^p"
+  },
+  "strong": {
+    "force": "strong",
+    "parameter": "energy_scale_GeV",
+    "critical_point_Lambda_QCD_GeV": 0.15014843294752012,
+    "approach_form": "1/alpha_s linear in lnQ (log)",
+    "slope": 1.3127928540098794,
+    "approach_R2": 0.982422137143487
+  },
+  "weak": {
+    "force": "weak",
+    "parameter": "mass_GeV",
+    "critical_point_M_Z_GeV": 90.86456120865216,
+    "width_Gamma_GeV": 4.082410003846793,
+    "approach_form": "Breit-Wigner pole",
+    "fit_R2": 0.9857656357979964
+  },
+  "verdict": {
+    "shared_structure": "critical/singular point",
+    "parameters": {
+      "gravity": "time",
+      "strong": "energy_scale",
+      "weak": "mass"
+    },
+    "time_is_shared_axis": false,
+    "construction_confounded": true,
+    "known_physics_through_frame": true
+  }
+}

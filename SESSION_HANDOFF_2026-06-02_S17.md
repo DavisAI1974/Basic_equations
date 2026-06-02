@@ -347,6 +347,28 @@ Scaffold: O2 PARTIALLY ANSWERED -- "only gravity flows" refuted (strong flows to
 test of gravity-time-specialness needs time-dilation/clock data, not force-coupling
 objects (new backlog note).
 
+## PROBE 7 (Greg "time correlates the 4 forces"; 3-force) — critical points (INFO-057)
+
+Greg's reframe: not "gravity owns time" (refuted, INFO-056) but TIME may be one face of a
+structure common to the forces. Fair self-contained test (`probe_force_critical_points.py`):
+does each recovered governing relation organize around a singular/critical point?
+RESULT: GRAVITY critical point t_c=16.42 s (axis TIME); chirp approach f~(t_c-t)^p,
+p=-0.331 (GR -0.375), R2=0.965. STRONG Lambda_QCD=150 MeV (axis ENERGY SCALE); 1/alpha_s
+linear in lnQ, R2=0.982. WEAK M_Z=90.86 GeV, Gamma=4.08 (axis MASS); Breit-Wigner pole,
+R2=0.986.
+
+Reading (Result Discipline): DATA -- all three forces organize around a critical/singular
+point, a REAL shared structure recovered from raw data. INTERPRETATION -- the correlating
+thread the data supports is the SINGULAR-POINT structure, NOT time per se; time is
+gravity's instance, the parameter differs (time/scale/mass). Greg's "time correlates the
+forces" is REFINED to "critical-point structure correlates the forces." DEFLATIONARY
+(load-bearing): unifying time<->scale<->mass is NOT data-forced (construction-confounded);
+and this is KNOWN physics (Landau pole / Z pole / merger) viewed through the frame, not
+new physics. FRAME ASIDE (ungraded): energy-scale, mass, and time are physically
+interrelated (E-t uncertainty; mass=energy; RG "time"=log-scale), so the parameters are
+not unrelated -- but the data here does not force that unification. CAVEATS: 3 forces (no
+EM/HBT); known-physics recovery. No new Operating Rule.
+
 ## Files this session
 - `CLAUDE.md` (rebuilt canonical through S17), `SESSION_HANDOFF_2026-06-02_S17.md`,
   `BACKLOG_tests_and_probes.md` (#1 marked DONE).
@@ -358,6 +380,7 @@ objects (new backlog note).
 - `probe_mi_beyond_chirp.py` + `probe_mi_beyond_chirp_results.json`.
 - `probe_mi_beyond_GR_imr.py` + `probe_mi_beyond_GR_imr_results.json` (needs pycbc).
 - `probe_flow_operator.py` + `probe_flow_operator_results.json`.
+- `probe_force_critical_points.py` + `probe_force_critical_points_results.json`.
 - h5py confirmed in `requirements.txt` (installed at runtime; the fresh container's
   SessionStart hook had not installed it this run).
 

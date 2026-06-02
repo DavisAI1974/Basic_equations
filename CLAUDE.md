@@ -952,6 +952,20 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   construction-confounded; a real test needs clock/time-dilation data, not force
   objects). No new Operating Rule.
 
+- **INFO-057 -- FRAME EXPLORATION / DATA FINDING (Session 17, new; Greg "time correlates
+  the 4 forces"; 3-force)**: all three forces organize around a CRITICAL/SINGULAR POINT,
+  recovered from raw data (`probe_force_critical_points.py`): gravity t_c=16.42 s (axis
+  TIME; chirp f~(t_c-t)^p, p=-0.331 vs GR -0.375, R2=0.965); strong Lambda_QCD=150 MeV
+  (axis ENERGY SCALE; 1/alpha_s linear in lnQ, R2=0.982); weak M_Z=90.86 GeV Gamma=4.08
+  (axis MASS; Breit-Wigner pole, R2=0.986). READING: the correlating thread the data
+  supports is the SINGULAR-POINT structure, NOT time per se -- time is gravity's instance;
+  the parameter differs (time/scale/mass). Greg's "time correlates the forces" is REFINED
+  to "critical-point structure correlates the forces." DEFLATIONARY (load-bearing):
+  unifying time<->scale<->mass is NOT data-forced (construction-confounded); KNOWN physics
+  (Landau/Z/merger poles) through the frame, not new physics. Frame aside (ungraded):
+  energy-scale, mass, and time are physically interrelated (E-t; mass=energy; RG
+  "time"=log-scale). CAVEATS: 3 forces (no EM/HBT). No new Operating Rule.
+
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 
 Branch `claude/claude-md-strategy-pwfZr` (main untouched; no PR). All Operating
