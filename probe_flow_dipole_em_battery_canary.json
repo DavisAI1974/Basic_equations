@@ -1,0 +1,426 @@
+{
+  "probe": "EM dipole TOOL BATTERY -- real HBT intensity interferometry (Zenodo 5113016 g2data raw timetags)",
+  "purpose": "first-try-not-only-try: run many DIFFERENT extraction tools on the SAME real EM 2-channel data; per tool report metric vs null/control + hits bool. g2 (tool4) is the KNOWN correlation: if it is visible but dipole tools are not, the dipole tool is blind to a correlation that demonstrably exists here.",
+  "channels": "split: A=ch11,B=ch15 common thermal field (HBT bunching, SIGNAL); uncorrelated: A=ch15,B=ch16 dataset's 'uncorrelated baths' (CONTROL)",
+  "honesty": "no novelty/new-law claims. each tool = one data point. no verdicts. weight by consistency; do not romanticize a lone hit.",
+  "config": {
+    "g2_dts": [
+      5e-07,
+      2e-06
+    ],
+    "g2_max_lag": 40,
+    "dipole_dt": 2e-06,
+    "dipole_dt_sweep": [
+      1e-06,
+      2e-06
+    ],
+    "lags": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48
+    ],
+    "win_bins": 4000,
+    "n_win": 60,
+    "ksg_win_bins": [
+      2000
+    ],
+    "ksg_cap": 600,
+    "pysr_niter": 8
+  },
+  "by_source": {
+    "split_correlated": {
+      "meta": {
+        "n_tags_A": 1193488,
+        "n_tags_B": 664453,
+        "rate_A_hz": 138954.48588527535,
+        "rate_B_hz": 77360.41335139428,
+        "T_s": 8.58905700234375
+      },
+      "tools": {
+        "tool4_g2_HBT": {
+          "metric_name": "g2(0) and peak/baseline ratio",
+          "g2_zero": 1.8361999468259398,
+          "g2_baseline": 1.0332341491748782,
+          "peak_over_baseline": 1.7771382685060257,
+          "by_dt": {
+            "5e-07s": {
+              "g2_zero": 1.8361999468259398,
+              "g2_baseline_farwings": 1.0332341491748782,
+              "peak_over_baseline": 1.7771382685060257
+            },
+            "2e-06s": {
+              "g2_zero": 1.7911433379271164,
+              "g2_baseline_farwings": 0.9868788222795034,
+              "peak_over_baseline": 1.814957720736082
+            }
+          },
+          "g2_curve_finest": {
+            "lags_us": [
+              -20.0,
+              -19.5,
+              -18.999999999999996,
+              -18.5,
+              -18.0,
+              -17.5,
+              -17.0,
+              -16.499999999999996,
+              -16.0,
+              -15.5,
+              -14.999999999999998,
+              -14.5,
+              -14.0,
+              -13.5,
+              -13.0,
+              -12.499999999999998,
+              -12.0,
+              -11.5,
+              -11.0,
+              -10.5,
+              -10.0,
+              -9.499999999999998,
+              -9.0,
+              -8.5,
+              -8.0,
+              -7.499999999999999,
+              -7.0,
+              -6.5,
+              -6.0,
+              -5.5,
+              -5.0,
+              -4.5,
+              -4.0,
+              -3.5,
+              -3.0,
+              -2.5,
+              -2.0,
+              -1.5,
+              -1.0,
+              -0.5,
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.5,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.5,
+              6.0,
+              6.5,
+              7.0,
+              7.499999999999999,
+              8.0,
+              8.5,
+              9.0,
+              9.499999999999998,
+              10.0,
+              10.5,
+              11.0,
+              11.5,
+              12.0,
+              12.499999999999998,
+              13.0,
+              13.5,
+              14.0,
+              14.5,
+              14.999999999999998,
+              15.5,
+              16.0,
+              16.499999999999996,
+              17.0,
+              17.5,
+              18.0,
+              18.5,
+              18.999999999999996,
+              19.5,
+              20.0
+            ],
+            "g2": [
+              1.0343500610473275,
+              1.035996296123227,
+              1.0360178975928722,
+              1.0325086293111778,
+              1.0411516179643148,
+              1.0342847746552333,
+              1.0323784783497596,
+              1.025966533574562,
+              1.0272011948130568,
+              1.022370560298262,
+              1.0247099718097696,
+              1.0222621324287422,
+              1.0166733372263095,
+              1.0103047191349246,
+              1.0119726161284868,
+              1.0143770128517722,
+              1.0077917783942172,
+              1.0044341469353153,
+              1.0025495154579118,
+              1.0127304830850778,
+              1.010369292708552,
+              1.0100876310775193,
+              1.0124920269307554,
+              1.0103041309995107,
+              1.0169975532817503,
+              1.0186654488176599,
+              1.0403271381143115,
+              1.05115795122101,
+              1.0587178394094008,
+              1.0908204835917212,
+              1.1467293802010052,
+              1.210414835783741,
+              1.2977332434163955,
+              1.3903587671264148,
+              1.5254846110066027,
+              1.6488264540916506,
+              1.7720383124004269,
+              1.8692777364277584,
+              1.9086586590493269,
+              1.9030048358342262,
+              1.8361999468259398,
+              1.7407584616279186,
+              1.6141024073951509,
+              1.4830923297362844,
+              1.370256433317203,
+              1.2652404109074087,
+              1.1917855292782367,
+              1.129789699435153,
+              1.0841701385933766,
+              1.060840505258548,
+              1.0432295695054667,
+              1.0262901457912221,
+              1.0188385648855602,
+              1.0083543384853073,
+              1.00389207697434,
+              1.011863659362279,
+              1.0042604436238307,
+              1.0043471490950324,
+              1.0038489872280238,
+              1.0021161052736047,
+              1.007185014552598,
+              1.0110841895208567,
+              1.0029177653555563,
+              1.008766498924512,
+              1.016521468160636,
+              1.0164348802862329,
+              1.0196842040160168,
+              1.0272442193571267,
+              1.0279374556768504,
+              1.0303203099432254,
+              1.0330714145561721,
+              1.033244768855368,
+              1.0421478170066674,
+              1.0362125519935972,
+              1.031468683849441,
+              1.029389213487577,
+              1.0415198681620803,
+              1.0354762928423984,
+              1.0380757665846827,
+              1.037360988270924,
+              1.0401337566766393
+            ]
+          },
+          "control_value": 1.0332341491748782,
+          "hits": true
+        },
+        "tool1_dipole_binsweep": {
+          "metric_name": "R2_full(dipole) over shuffle-null & 1D-relax, swept over bin dt",
+          "best_dt": "dt=1e-06s",
+          "R2_full": 0.30928222044776466,
+          "control_value": 0.2015920097651116,
+          "shuffle_null": 0.1884416285750525,
+          "R2_relax_1d": 0.2015920097651116,
+          "dR2_cross": 5.580669926175119e-09,
+          "by_dt": {
+            "dt=1e-06s": {
+              "R2_full": 0.30928222044776466,
+              "shuffle_null": 0.1884416285750525,
+              "R2_relax": 0.2015920097651116,
+              "dR2_cross": 5.580669926175119e-09
+            },
+            "dt=2e-06s": {
+              "R2_full": 0.10012886707825375,
+              "shuffle_null": 0.20570013129619652,
+              "R2_relax": 0.26942560407877547,
+              "dR2_cross": 1.673465110929584e-08
+            }
+          },
+          "hits": false
+        },
+        "tool2_dipole_ksg": {
+          "metric_name": "R2_full(dipole) with KSG kNN MI, swept window size",
+          "best_window": "win=2000",
+          "R2_full": 0.01254774954345328,
+          "control_value": 0.21649439272406057,
+          "shuffle_null": 0.21649439272406057,
+          "R2_relax_1d": 0.188779343002055,
+          "MI_range": [
+            0.023648493512241096,
+            0.029209084714853988
+          ],
+          "by_window": {
+            "win=2000": {
+              "R2_full": 0.01254774954345328,
+              "shuffle_null": 0.21649439272406057,
+              "R2_relax": 0.188779343002055,
+              "MI_range": [
+                0.023648493512241096,
+                0.029209084714853988
+              ]
+            }
+          },
+          "hits": false
+        },
+        "tool3_raw_signal_dipole": {
+          "metric_name": "R2 of d(cov_AB)/dtau ~ self+cross+linear on RAW counts, vs shuffle-null",
+          "R2_full": 0.8535442292188987,
+          "control_value": 0.3508823217766293,
+          "shuffle_null": 0.3508823217766293,
+          "cov_range": [
+            -0.0015734828993055547,
+            0.03354666527777776
+          ],
+          "hits": true
+        },
+        "tool5a_sindy": {
+          "metric_name": "R2 of sparse SINDy model for dMI/dtau over {Ha,Hb} deg-2, vs shuffle-null",
+          "R2": 2.220446049250313e-16,
+          "control_value": 2.220446049250313e-16,
+          "shuffle_null": 2.220446049250313e-16,
+          "active_terms": {
+            "1": -1.446131357472514e-51,
+            "Ha": -1.3363823550460978e-51,
+            "Hb": -3.6223745672674176e-42,
+            "Ha*Ha": -5.2502679686748184e-20,
+            "Ha*Hb": -5.414972593268104e-42,
+            "Hb*Hb": -1.9898125991453834e-42
+          },
+          "hits": false
+        },
+        "tool6_direct_coupling": {
+          "metric_name": "zero-lag Pearson corr / hist-MI / transfer-entropy both dirs (cross-source compare)",
+          "pearson_zero_lag": 0.1421905363901619,
+          "mi_hist": 0.008162295915436796,
+          "te_A_to_B": 0.0,
+          "te_B_to_A": 0.0,
+          "pearson_lag1_A_leads_B": 0.06997245482287184,
+          "pearson_lag1_B_leads_A": 0.1326299034786682,
+          "control_value": "see uncorrelated_control source",
+          "hits": true
+        }
+      }
+    }
+  },
+  "cross_source_summary": {
+    "tool4_g2_HBT": {
+      "metric_name": "g2(0) and peak/baseline ratio",
+      "signal_metric": {
+        "g2_zero": 1.8361999468259398,
+        "g2_baseline": 1.0332341491748782,
+        "peak_over_baseline": 1.7771382685060257,
+        "control_value": 1.0332341491748782,
+        "hits": true
+      },
+      "control_metric": null,
+      "signal_hits": true,
+      "control_hits": null
+    },
+    "tool1_dipole_binsweep": {
+      "metric_name": "R2_full(dipole) over shuffle-null & 1D-relax, swept over bin dt",
+      "signal_metric": {
+        "best_dt": "dt=1e-06s",
+        "R2_full": 0.30928222044776466,
+        "control_value": 0.2015920097651116,
+        "shuffle_null": 0.1884416285750525,
+        "R2_relax_1d": 0.2015920097651116,
+        "dR2_cross": 5.580669926175119e-09,
+        "hits": false
+      },
+      "control_metric": null,
+      "signal_hits": false,
+      "control_hits": null
+    },
+    "tool2_dipole_ksg": {
+      "metric_name": "R2_full(dipole) with KSG kNN MI, swept window size",
+      "signal_metric": {
+        "best_window": "win=2000",
+        "R2_full": 0.01254774954345328,
+        "control_value": 0.21649439272406057,
+        "shuffle_null": 0.21649439272406057,
+        "R2_relax_1d": 0.188779343002055,
+        "MI_range": [
+          0.023648493512241096,
+          0.029209084714853988
+        ],
+        "hits": false
+      },
+      "control_metric": null,
+      "signal_hits": false,
+      "control_hits": null
+    },
+    "tool3_raw_signal_dipole": {
+      "metric_name": "R2 of d(cov_AB)/dtau ~ self+cross+linear on RAW counts, vs shuffle-null",
+      "signal_metric": {
+        "R2_full": 0.8535442292188987,
+        "control_value": 0.3508823217766293,
+        "shuffle_null": 0.3508823217766293,
+        "cov_range": [
+          -0.0015734828993055547,
+          0.03354666527777776
+        ],
+        "hits": true
+      },
+      "control_metric": null,
+      "signal_hits": true,
+      "control_hits": null
+    },
+    "tool5a_sindy": {
+      "metric_name": "R2 of sparse SINDy model for dMI/dtau over {Ha,Hb} deg-2, vs shuffle-null",
+      "signal_metric": {
+        "R2": 2.220446049250313e-16,
+        "control_value": 2.220446049250313e-16,
+        "shuffle_null": 2.220446049250313e-16,
+        "active_terms": {
+          "1": -1.446131357472514e-51,
+          "Ha": -1.3363823550460978e-51,
+          "Hb": -3.6223745672674176e-42,
+          "Ha*Ha": -5.2502679686748184e-20,
+          "Ha*Hb": -5.414972593268104e-42,
+          "Hb*Hb": -1.9898125991453834e-42
+        },
+        "hits": false
+      },
+      "control_metric": null,
+      "signal_hits": false,
+      "control_hits": null
+    },
+    "tool6_direct_coupling": {
+      "metric_name": "zero-lag Pearson corr / hist-MI / transfer-entropy both dirs (cross-source compare)",
+      "signal_metric": {
+        "pearson_zero_lag": 0.1421905363901619,
+        "mi_hist": 0.008162295915436796,
+        "te_A_to_B": 0.0,
+        "te_B_to_A": 0.0,
+        "pearson_lag1_A_leads_B": 0.06997245482287184,
+        "pearson_lag1_B_leads_A": 0.1326299034786682,
+        "control_value": "see uncorrelated_control source",
+        "hits": true
+      },
+      "control_metric": null,
+      "signal_hits": true,
+      "control_hits": null
+    }
+  },
+  "runtime_s": 45.0
+}
