@@ -1,0 +1,362 @@
+{
+  "p_lags": 2,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "level_cols": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "domains": [
+    {
+      "domain": "physics_duffing",
+      "n_points": 1200,
+      "per_seed": [
+        {
+          "seed": 11,
+          "R2_inst": 0.0364,
+          "R2_past": 0.1369,
+          "R2_lag": 0.1935,
+          "R2_inst_cv": 0.0239,
+          "R2_lag_cv": 0.1646,
+          "acf_dMIdt": [
+            0.618,
+            0.294,
+            0.364,
+            0.359,
+            0.331,
+            0.307,
+            0.319,
+            0.335
+          ],
+          "delta_R2_memory": 0.1571,
+          "delta_R2_memory_cv": 0.1407
+        },
+        {
+          "seed": 22,
+          "R2_inst": 0.1342,
+          "R2_past": 0.156,
+          "R2_lag": 0.2091,
+          "R2_inst_cv": 0.1183,
+          "R2_lag_cv": 0.1826,
+          "acf_dMIdt": [
+            0.623,
+            0.277,
+            0.34,
+            0.4,
+            0.417,
+            0.369,
+            0.295,
+            0.273
+          ],
+          "delta_R2_memory": 0.0749,
+          "delta_R2_memory_cv": 0.0643
+        },
+        {
+          "seed": 33,
+          "R2_inst": 0.1309,
+          "R2_past": 0.2141,
+          "R2_lag": 0.2861,
+          "R2_inst_cv": 0.119,
+          "R2_lag_cv": 0.2652,
+          "acf_dMIdt": [
+            0.617,
+            0.295,
+            0.345,
+            0.319,
+            0.308,
+            0.32,
+            0.326,
+            0.334
+          ],
+          "delta_R2_memory": 0.1552,
+          "delta_R2_memory_cv": 0.1462
+        }
+      ],
+      "R2_inst_mean_std": [
+        0.1005,
+        0.0453
+      ],
+      "R2_past_mean_std": [
+        0.169,
+        0.0328
+      ],
+      "R2_lag_mean_std": [
+        0.2296,
+        0.0405
+      ],
+      "delta_R2_memory_mean_std": [
+        0.1291,
+        0.0383
+      ],
+      "delta_R2_memory_cv_mean_std": [
+        0.1171,
+        0.0374
+      ]
+    },
+    {
+      "domain": "biology_lotka",
+      "n_points": 1200,
+      "per_seed": [
+        {
+          "seed": 11,
+          "R2_inst": 0.2065,
+          "R2_past": 0.2359,
+          "R2_lag": 0.2629,
+          "R2_inst_cv": 0.1946,
+          "R2_lag_cv": 0.2314,
+          "acf_dMIdt": [
+            0.595,
+            0.229,
+            0.332,
+            0.392,
+            0.347,
+            0.295,
+            0.303,
+            0.344
+          ],
+          "delta_R2_memory": 0.0564,
+          "delta_R2_memory_cv": 0.0368
+        },
+        {
+          "seed": 22,
+          "R2_inst": 0.1787,
+          "R2_past": 0.2254,
+          "R2_lag": 0.2422,
+          "R2_inst_cv": 0.1643,
+          "R2_lag_cv": 0.2072,
+          "acf_dMIdt": [
+            0.579,
+            0.206,
+            0.292,
+            0.356,
+            0.348,
+            0.338,
+            0.405,
+            0.409
+          ],
+          "delta_R2_memory": 0.0635,
+          "delta_R2_memory_cv": 0.0429
+        },
+        {
+          "seed": 33,
+          "R2_inst": 0.1792,
+          "R2_past": 0.2359,
+          "R2_lag": 0.2491,
+          "R2_inst_cv": 0.1701,
+          "R2_lag_cv": 0.2254,
+          "acf_dMIdt": [
+            0.583,
+            0.225,
+            0.301,
+            0.322,
+            0.325,
+            0.322,
+            0.344,
+            0.362
+          ],
+          "delta_R2_memory": 0.0699,
+          "delta_R2_memory_cv": 0.0553
+        }
+      ],
+      "R2_inst_mean_std": [
+        0.1881,
+        0.013
+      ],
+      "R2_past_mean_std": [
+        0.2324,
+        0.0049
+      ],
+      "R2_lag_mean_std": [
+        0.2514,
+        0.0086
+      ],
+      "delta_R2_memory_mean_std": [
+        0.0633,
+        0.0055
+      ],
+      "delta_R2_memory_cv_mean_std": [
+        0.045,
+        0.0077
+      ]
+    },
+    {
+      "domain": "chemistry_brussel",
+      "n_points": 1200,
+      "per_seed": [
+        {
+          "seed": 11,
+          "R2_inst": 0.1261,
+          "R2_past": 0.2503,
+          "R2_lag": 0.3161,
+          "R2_inst_cv": 0.1109,
+          "R2_lag_cv": 0.294,
+          "acf_dMIdt": [
+            0.583,
+            0.203,
+            0.297,
+            0.316,
+            0.215,
+            0.214,
+            0.291,
+            0.261
+          ],
+          "delta_R2_memory": 0.19,
+          "delta_R2_memory_cv": 0.1831
+        },
+        {
+          "seed": 22,
+          "R2_inst": 0.0802,
+          "R2_past": 0.1641,
+          "R2_lag": 0.2301,
+          "R2_inst_cv": 0.0729,
+          "R2_lag_cv": 0.2193,
+          "acf_dMIdt": [
+            0.529,
+            0.12,
+            0.215,
+            0.206,
+            0.142,
+            0.16,
+            0.219,
+            0.232
+          ],
+          "delta_R2_memory": 0.1499,
+          "delta_R2_memory_cv": 0.1464
+        },
+        {
+          "seed": 33,
+          "R2_inst": 0.1006,
+          "R2_past": 0.2352,
+          "R2_lag": 0.2961,
+          "R2_inst_cv": 0.0958,
+          "R2_lag_cv": 0.2823,
+          "acf_dMIdt": [
+            0.568,
+            0.177,
+            0.234,
+            0.265,
+            0.241,
+            0.212,
+            0.266,
+            0.291
+          ],
+          "delta_R2_memory": 0.1955,
+          "delta_R2_memory_cv": 0.1865
+        }
+      ],
+      "R2_inst_mean_std": [
+        0.1023,
+        0.0188
+      ],
+      "R2_past_mean_std": [
+        0.2165,
+        0.0376
+      ],
+      "R2_lag_mean_std": [
+        0.2808,
+        0.0367
+      ],
+      "delta_R2_memory_mean_std": [
+        0.1785,
+        0.0203
+      ],
+      "delta_R2_memory_cv_mean_std": [
+        0.172,
+        0.0182
+      ]
+    },
+    {
+      "domain": "geology_bk",
+      "n_points": 1200,
+      "per_seed": [
+        {
+          "seed": 11,
+          "R2_inst": 0.0012,
+          "R2_past": 0.0025,
+          "R2_lag": 0.006,
+          "R2_inst_cv": -0.0137,
+          "R2_lag_cv": -0.0276,
+          "acf_dMIdt": [
+            0.143,
+            -0.364,
+            -0.004,
+            -0.043,
+            -0.096,
+            0.008,
+            0.041,
+            -0.069
+          ],
+          "delta_R2_memory": 0.0048,
+          "delta_R2_memory_cv": -0.0139
+        },
+        {
+          "seed": 22,
+          "R2_inst": 0.0007,
+          "R2_past": 0.0036,
+          "R2_lag": 0.0083,
+          "R2_inst_cv": -0.0211,
+          "R2_lag_cv": -0.0321,
+          "acf_dMIdt": [
+            0.132,
+            -0.397,
+            -0.07,
+            -0.049,
+            0.011,
+            0.016,
+            -0.035,
+            -0.026
+          ],
+          "delta_R2_memory": 0.0076,
+          "delta_R2_memory_cv": -0.011
+        },
+        {
+          "seed": 33,
+          "R2_inst": 0.0014,
+          "R2_past": 0.0042,
+          "R2_lag": 0.0109,
+          "R2_inst_cv": -0.0128,
+          "R2_lag_cv": -0.0276,
+          "acf_dMIdt": [
+            0.155,
+            -0.386,
+            -0.103,
+            -0.049,
+            0.014,
+            -0.065,
+            -0.045,
+            0.06
+          ],
+          "delta_R2_memory": 0.0095,
+          "delta_R2_memory_cv": -0.0148
+        }
+      ],
+      "R2_inst_mean_std": [
+        0.0011,
+        0.0003
+      ],
+      "R2_past_mean_std": [
+        0.0034,
+        0.0007
+      ],
+      "R2_lag_mean_std": [
+        0.0084,
+        0.002
+      ],
+      "delta_R2_memory_mean_std": [
+        0.0073,
+        0.0019
+      ],
+      "delta_R2_memory_cv_mean_std": [
+        -0.0132,
+        0.0016
+      ]
+    }
+  ],
+  "elapsed_s": 7.0
+}
