@@ -1,0 +1,119 @@
+{
+  "anchors": {
+    "M_Z": 91.1876,
+    "alpha_em_inv_MZ": 127.951,
+    "sin2_thetaW_MZ": 0.23122,
+    "alpha_s_MZ": 0.118,
+    "alpha_s_MZ_err": 0.0009,
+    "a1_inv_MZ": 59.019701868,
+    "a2_inv_MZ": 29.58483022,
+    "a3_inv_MZ": 8.474576271186441
+  },
+  "beta_SM": [
+    4.1,
+    -3.1666666666666665,
+    -7.0
+  ],
+  "beta_MSSM": [
+    6.6,
+    1.0,
+    -3.0
+  ],
+  "alpha_s_validation": {
+    "rows": [
+      {
+        "Q": 1.78,
+        "measured": 0.314,
+        "predicted": 0.2724,
+        "err": 0.012,
+        "pull": 3.47,
+        "source": "tau decays"
+      },
+      {
+        "Q": 2.0,
+        "measured": 0.301,
+        "predicted": 0.2622,
+        "err": 0.018,
+        "pull": 2.15,
+        "source": "low-Q"
+      },
+      {
+        "Q": 6.7,
+        "measured": 0.22,
+        "predicted": 0.1891,
+        "err": 0.02,
+        "pull": 1.55,
+        "source": "Upsilon / low e+e-"
+      },
+      {
+        "Q": 31.6,
+        "measured": 0.15,
+        "predicted": 0.1392,
+        "err": 0.012,
+        "pull": 0.9,
+        "source": "DIS / jets"
+      },
+      {
+        "Q": 91.2,
+        "measured": 0.1179,
+        "predicted": 0.118,
+        "err": 0.001,
+        "pull": -0.1,
+        "source": "Z pole (LEP/SLD)"
+      },
+      {
+        "Q": 133.0,
+        "measured": 0.113,
+        "predicted": 0.1119,
+        "err": 0.006,
+        "pull": 0.18,
+        "source": "LEP2 event shapes"
+      },
+      {
+        "Q": 206.0,
+        "measured": 0.108,
+        "predicted": 0.1056,
+        "err": 0.006,
+        "pull": 0.4,
+        "source": "LEP2 event shapes"
+      },
+      {
+        "Q": 500.0,
+        "measured": 0.095,
+        "predicted": 0.0948,
+        "err": 0.007,
+        "pull": 0.03,
+        "source": "jets"
+      },
+      {
+        "Q": 1000.0,
+        "measured": 0.089,
+        "predicted": 0.0877,
+        "err": 0.006,
+        "pull": 0.21,
+        "source": "LHC jets / ttbar"
+      }
+    ],
+    "chi2": 20.121574756921582,
+    "ndf": 8
+  },
+  "crossings_SM": {
+    "1-2": 10308931063427.635,
+    "1-3": 243010379956059.53,
+    "2-3": 9.710443784395931e+16
+  },
+  "crossings_SM_spread": 9419.447782365214,
+  "crossings_MSSM": {
+    "1-2": 2.0085361944149504e+16,
+    "1-3": 2.1239228478059744e+16,
+    "2-3": 2.2966850381570164e+16
+  },
+  "crossings_MSSM_spread": 1.1434621116329937,
+  "gravity_alpha_G_at_MZ": 5.586655733512497e-35,
+  "provenance": {
+    "solid": "M_Z couplings + measured alpha_s(Q) running (replicated)",
+    "conjecture": "GUT-scale extrapolation; MSSM unification (SUSY unobserved)",
+    "approximate": "alpha_s(Q) central values are representative PDG-review determinations, used for validation only"
+  },
+  "reading": "Mapped onto the surviving four-force frame: the three GAUGE forces share a substrate (one running FORM, linear in ln Q) with per-force EXPRESSION (the slopes b_i) -- exactly the 'shared substrate + expression difference' pattern, now on REAL measured couplings. But the substrate does NOT force them to a single point: SM crossings are a triangle spanning ~1e4 in energy. Gravity has a different substrate form entirely (power-law, not log) and does not join the family. So the real-data verdict on 'do the four forces unify' is: shared running substrate among the three gauge forces, no single unification scale without conjectural new physics, and gravity outside the shared form."
+}
