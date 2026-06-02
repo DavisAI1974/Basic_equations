@@ -262,6 +262,31 @@ x0=H_a, x1=H_b.
   COMPLEMENTARY (orthogonal axes), NOT oppositional (anti-aligned). Biology is
   the lone coupling outlier; the other three cluster as self/bookkeeping.
 
+- **INFO-042 -- SM parameter-regularity hunt + force<->equation answer
+  (Session 12; four-force item on real PDG data; s12_sm_regularity.py)**. The
+  honest real-data face of "are the forces/parameters structured." HITS:
+  charged-lepton Koide Q = 0.666661 (5 digits, vs 2/3); Gatto-Sartori-Tonin
+  sqrt(m_d/m_s)=0.224 vs Cabibbo sine 0.226 (ratio 0.991); quark-lepton
+  complementarity th12_CKM + th12_PMNS = 46.4 deg ~ 45; CKM Wolfenstein
+  lambda^n hierarchy (ratios O(1)). MISSES (cataloged per Result Discipline):
+  quark Koide fails (up 0.85, down 0.73); mass spectra only roughly geometric
+  (log-linear R^2 0.97-0.995). Reading: real low-dimensional structure exists
+  (the SM mass/mixing sector is NOT 26 independent randoms) but the cleanest
+  relation has no accepted derivation and the quark analogues fail -> each is a
+  CONJECTURE / one data point, no single generating rule, none citable until
+  derived.
+  - **Force<->equation question (Greg): NO direct connection on real data.** SM
+    regularities are static mass/angle relations; the per-domain dipole
+    equations are MI-vs-entropy dynamics -- different KINDS of object. The one
+    apparent bridge (S8 four-force caricatures: EM's MI-vs-H = physics family
+    (H_b-H_a)^2+c, robust both seeds; weak ~ chemistry linear) came from toy
+    force-laws WE wrote (S10 retired as self-grading), so it cannot be cited.
+    EM<->physics is a real but caricature-contaminated hit. Two CONTRADICTORY
+    mappings exist (functional-family EM<->physics vs coupling-type INFO-040
+    gravity<->equal-entropy self-domains) -> pattern-matching without a
+    constraint until a principled REAL-DATA force-operator-space is built (next
+    block).
+
 ### Next direction queued -- principled force-operator-space (Session 12 close)
 
 Greg wants to dive into this. The force<->equation question (INFO-042 (b))
