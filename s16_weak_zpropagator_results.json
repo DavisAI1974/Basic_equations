@@ -1,0 +1,230 @@
+{
+  "scope": "Recovers data-level Z resonance lineshape and parameters (M_Z, Gamma_Z) from CMS dimuon mass spectrum. NOT the weak force mechanism or its origin.",
+  "data_file": "/home/user/Basic_equations/data/forces/Zmumu.csv",
+  "n_events_total": 10583,
+  "n_events_opp_charge": 10227,
+  "n_events_same_charge": 356,
+  "mass_formula": "M^2 = 2*pt1*pt2*(cosh(eta1-eta2) - cos(phi1-phi2))",
+  "histogram_window_GeV": [
+    60.0,
+    120.0
+  ],
+  "n_bins": 80,
+  "bin_width_GeV": 0.75,
+  "fit_window_GeV": [
+    70.0,
+    110.0
+  ],
+  "opp_charge_peak_bin_center_GeV": 91.125,
+  "same_charge_peak_max_count": 21,
+  "PDG": {
+    "M_Z": 91.1876,
+    "Gamma_Z": 2.4952
+  },
+  "fits": {
+    "bw_rel": {
+      "M_Z": 90.6597771622298,
+      "M_Z_err": 0.028963394038244064,
+      "Gamma_Z": 3.9103944116208034,
+      "Gamma_Z_err": 0.05973200344725839,
+      "chi2": 603.76864685861,
+      "ndf": 51,
+      "chi2_per_ndf": 11.838600918796276,
+      "M_Z_pct_agreement": 99.42116818759327,
+      "Gamma_Z_pct_agreement": 43.283327524013984,
+      "all_params": [
+        1165.981841894311,
+        90.6597771622298,
+        3.9103944116208034
+      ]
+    },
+    "bw_rel_linear_bkg": {
+      "M_Z": 90.74669495143534,
+      "M_Z_err": 0.028995176462823492,
+      "Gamma_Z": 3.7525014276326067,
+      "Gamma_Z_err": 0.07207515484984532,
+      "chi2": 203.57978239508384,
+      "ndf": 49,
+      "chi2_per_ndf": 4.154689436634364,
+      "M_Z_pct_agreement": 99.51648574086317,
+      "Gamma_Z_pct_agreement": 49.61119639176793,
+      "all_params": [
+        1172.2455978964574,
+        90.74669495143534,
+        3.7525014276326067,
+        12.834375796481833,
+        -1.2627052853299425
+      ]
+    },
+    "bw_rel_exp_bkg": {
+      "M_Z": 90.71929530675031,
+      "M_Z_err": 0.028481061475909644,
+      "Gamma_Z": 3.6679997065322616,
+      "Gamma_Z_err": 0.07509663382909272,
+      "chi2": 293.026712791211,
+      "ndf": 49,
+      "chi2_per_ndf": 5.9801369957390005,
+      "M_Z_pct_agreement": 99.48643818540054,
+      "Gamma_Z_pct_agreement": 52.9977674522178,
+      "all_params": [
+        1187.7173073434644,
+        90.71929530675031,
+        3.6679997065322616,
+        46.82644190695641,
+        0.09352351899393259
+      ]
+    },
+    "lorentzian_linear_bkg": {
+      "M_Z": 90.78623158350166,
+      "M_Z_err": 0.029031587554262887,
+      "Gamma_Z": 3.783613973975308,
+      "Gamma_Z_err": 0.07265867405525489,
+      "chi2": 163.6666888944936,
+      "ndf": 49,
+      "chi2_per_ndf": 3.34013650805089,
+      "M_Z_pct_agreement": 99.55984320620529,
+      "Gamma_Z_pct_agreement": 48.364300497943745,
+      "all_params": [
+        1171.3182557519096,
+        90.78623158350166,
+        3.783613973975308,
+        12.25116076742342,
+        -1.0792720766158908
+      ]
+    }
+  },
+  "sr_target": "normalized counts (peak=1) vs M over fit window",
+  "sr_operators": {
+    "binary": [
+      "+",
+      "-",
+      "*",
+      "/"
+    ],
+    "unary": [
+      "square"
+    ]
+  },
+  "sr_runs": [
+    {
+      "seed": 0,
+      "best_sympy": "(0.6947745 + M*(-0.010055777))**4/(-0.14668684) + 0.21077807",
+      "pareto_front": [
+        {
+          "complexity": 1,
+          "loss": 0.058673684,
+          "equation": "0.15577058"
+        },
+        {
+          "complexity": 5,
+          "loss": 0.05854869,
+          "equation": "(-7.441983 / M) + 0.23990779"
+        },
+        {
+          "complexity": 7,
+          "loss": 0.058544893,
+          "equation": "(-7.441983 / (M + -2.2960613)) + 0.23990779"
+        },
+        {
+          "complexity": 9,
+          "loss": 0.058528498,
+          "equation": "0.20202662 - (M * ((M + M) / 356187.9))"
+        },
+        {
+          "complexity": 10,
+          "loss": 0.05833365,
+          "equation": "(square(1.5559661 / (M * -0.20534308)) / -0.11052869) + 0.2233606"
+        },
+        {
+          "complexity": 11,
+          "loss": 0.05455535,
+          "equation": "(square(square((M * -0.010055777) + 0.6947745)) / -0.14668684) + 0.21077807"
+        },
+        {
+          "complexity": 18,
+          "loss": 0.0477616,
+          "equation": "0.19848073 - square(((-0.24585804 / (M + M)) + (((M / 214.82144) + 0.6415132) / 776.3674)) * -1196.5588)"
+        },
+        {
+          "complexity": 20,
+          "loss": 0.04321827,
+          "equation": "0.29062465 - square(((((M / (M + M)) + 1.014184) / 776.3668) + (-0.3395269 / (M + M))) * -1434.5958)"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "best_sympy": "(M/((361446.06/((M - 7384.937/M)**2))) - 1*0.5049069)**2",
+      "pareto_front": [
+        {
+          "complexity": 1,
+          "loss": 0.058673687,
+          "equation": "0.15576884"
+        },
+        {
+          "complexity": 5,
+          "loss": 0.05854868,
+          "equation": "(-7.4539576 / M) + 0.24004507"
+        },
+        {
+          "complexity": 7,
+          "loss": 0.057695255,
+          "equation": "0.21442898 - square(square(-42.42501 / M))"
+        },
+        {
+          "complexity": 8,
+          "loss": 0.05635698,
+          "equation": "0.20254724 - square(square(square(-56.973896 / M)))"
+        },
+        {
+          "complexity": 10,
+          "loss": 0.056353427,
+          "equation": "0.20254724 - square(square(square(-56.973896 / (-0.23272741 + M))))"
+        },
+        {
+          "complexity": 12,
+          "loss": 0.05635341,
+          "equation": "0.20254724 - square(square(square(-56.973896 / ((-0.2803609 + 0.03746815) + M))))"
+        },
+        {
+          "complexity": 13,
+          "loss": 0.04507459,
+          "equation": "square((M / (361446.06 / square(M - (7384.937 / M)))) - 0.5049069)"
+        },
+        {
+          "complexity": 15,
+          "loss": 0.043760423,
+          "equation": "square(0.5049069 - (M / (361446.06 / square(M - (7384.937 / (M - 1.3719078))))))"
+        },
+        {
+          "complexity": 17,
+          "loss": 0.04293165,
+          "equation": "square(0.5049069 - (M / (361446.06 / square((M + -1.1885413) - (7384.937 / (M - 1.3719078))))))"
+        },
+        {
+          "complexity": 19,
+          "loss": 0.042493768,
+          "equation": "square((M / ((M * -0.7548777) - (-361445.62 / square(M - (7384.94 / (M - 1.5787319)))))) - 0.5382305)"
+        },
+        {
+          "complexity": 21,
+          "loss": 0.04109052,
+          "equation": "square((M / ((M * -0.7548777) - (-361445.62 / square(M - ((7384.94 / M) + (1.4710212 / 0.38702565)))))) - 0.5382305)"
+        }
+      ]
+    }
+  ],
+  "sr_bw_like_rational_found": true,
+  "sr_propagator_pole_matches": [
+    {
+      "seed": 1,
+      "complexity": 13,
+      "loss": 0.04507459,
+      "pole_constant": 7384.937,
+      "implied_M_Z_GeV": 85.93565616203789,
+      "implied_M_Z_pct_agreement": 94.2405065623373
+    }
+  ],
+  "sr_implied_M_Z_GeV": 85.93565616203789,
+  "width_caveat": "Fitted Gamma_Z (~3.7 GeV) exceeds PDG natural width (2.4952 GeV) because the observed lineshape is the Breit-Wigner convolved with muon momentum/angular resolution; the raw fit width is an upper bound on the natural width, not a deconvolved measurement."
+}
