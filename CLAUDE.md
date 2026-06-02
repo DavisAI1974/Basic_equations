@@ -170,6 +170,40 @@ x0=H_a, x1=H_b.
   off-attractor component (only 2 seeds here) and a probe that separates
   opposition-beyond-equal-entropy from the identity.
 
+- **INFO-040 -- LOCATED (Session 12, new; 5 seeds + dynamical knob test)**:
+  "where do the per-domain constraints live, and are the dipoles coupled?"
+  (Greg's S12 question). Decompose each domain's null[0] into three
+  orthogonal axes -- equal-entropy identity (H_a-H_b linear + the (-1,-1,+2)
+  quadratic), MI/coupling axis, residual -- across 5 seeds (11/22/33/44/55).
+  Scripts: s12_coupling_decomposition.py (#1/#2),
+  s12_biology_coupling.py (#3). Results
+  s12_coupling_decomposition.json / s12_biology_coupling_results.json.
+  - **physics 0.996+/-0.002 / geology 0.962+/-0.005 equal-entropy**, MI=0,
+    reproducibly -> pure bookkeeping, NO coupling (the INFO-039 deflationary
+    read holds for these two).
+  - **biology 0.906+/-0.007 MI-COUPLING** (null = MI ~= 0.28*H_a),
+    cross-seed std <1%. The "how-coupled" knob test (scale the Lotka-Volterra
+    interaction prey*pred by g): g=0 (species decoupled) -> MI-frac 0.006
+    (coupling GONE from the null); any g>0 -> 0.81-0.97; the slope in
+    MI~=slope*H_a rises monotonically with g (0.155 at g=0.25 -> 0.334 at
+    g=1.5, saturating/turning by g=2). DEFLATIONARY ALTERNATIVE RULED OUT:
+    at g=0 residual MI persists (mean 0.178 from shared noise) but does NOT
+    enter the null (frac 0.006) -- the dipole's MI participation requires
+    actual dynamical interaction, not mere correlation. So biology's dipole
+    IS genuinely coupled and the coupling STRENGTH is readable from the slope.
+  - **chemistry 0.833+/-0.020 equal-entropy + 0.167+/-0.020 residual**; the
+    residual is a STABLE distinct relation 0.54*(H_a+H_b) +0.32*H_a^2
+    -0.55*H_b^2 ~ 0 (total-entropy vs asymmetric quadratic; cross-seed
+    residual-direction |cos| = 0.9996) -- coupling-adjacent domain content,
+    NOT the MI axis. (Brusselator channel-asymmetric structure, cf INFO-008a.)
+  Net: "the dipoles are coupled" is TRUE for biology (dynamical, knob-
+  confirmed), PARTIAL for chemistry (stable residual, not MI), FALSE for
+  physics/geology (pure equal-entropy). Refines INFO-039: the opposition-as-
+  artifact reading is correct ONLY for the equal-entropy domains; biology's
+  coupling is real. Next: per-domain knob tests for chemistry's residual
+  (does it track the Brusselator B parameter?) and whether biology's slope-
+  vs-g curve is a clean coupling-strength readout.
+
 ## Information Layer — Current State (2026-05-25 Session 3)
 
 ### What's confirmed at data level
@@ -455,6 +489,15 @@ Markets pull was dropped by Greg's call.
   attractor is equal-entropy bookkeeping; detection rides the separate MI
   axis. Open INFO-038 no-MI-basis reversal thread: not yet re-checked across
   the full 12.
+
+- **INFO-040 -- per-domain coupling probe (Greg's "find how the dipoles are
+  coupled")**: 5-seed null decomposition + biology dynamical-knob test.
+  Headline: biology's dipole is GENUINELY COUPLED (null = MI~=0.28*H_a,
+  0.906+/-0.007 MI-fraction; g=0 knob kills it, g>0 restores it, slope tracks
+  coupling strength, shared-noise artifact ruled out); chemistry has a stable
+  total-entropy-vs-asymmetric-quadratic residual; physics/geology pure
+  equal-entropy. Refines INFO-039. Full entry in the Markets dipole subsection
+  above. Scripts s12_coupling_decomposition.py + s12_biology_coupling.py.
 
 - All six Operating Rules in force; no new Rule. Branch
   `claude/file-attachment-hold-DjGSW`, main synced, pushed. No PR.

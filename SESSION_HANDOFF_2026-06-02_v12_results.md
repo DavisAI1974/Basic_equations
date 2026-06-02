@@ -91,10 +91,17 @@ actions; dropped the Markets pull by Greg's call.
   STILL OPEN: the no-MI-basis noise-OFF / event-ON reversal thread across the
   full 12 (only checked on GW150914 in S11) -- re-run the s11_first_run_entropy
   decomposition per event.
-- **INFO-039 promotion probe** (if pursued): >=3 seeds on the off-attractor
-  RESIDUAL component (only 2 seeds here) + a probe separating
-  opposition-beyond-equal-entropy from the equal-entropy identity. Until then
-  INFO-039 stays MAPPED, deflationary.
+- **INFO-040 -- coupling probe DONE this session** (Greg: "find where the
+  constraints live + how the dipoles are coupled"). 5-seed null decomposition
+  (s12_coupling_decomposition.py) + biology dynamical-knob test
+  (s12_biology_coupling.py). biology = 0.906+/-0.007 MI-coupling (MI~=0.28*H_a),
+  knob-confirmed (g=0 kills it, g>0 restores, slope tracks coupling strength,
+  shared-noise artifact ruled out); chemistry = 0.83 equal-entropy + stable
+  0.167 residual 0.54*(H_a+H_b)+0.32*H_a^2-0.55*H_b^2 (|cos| 0.9996);
+  physics/geology pure equal-entropy. Coupling real for biology, partial for
+  chemistry, absent for physics/geology -- refines INFO-039. NEXT on this
+  thread: does chemistry's residual track the Brusselator B parameter (same
+  knob design as biology)? map biology's slope-vs-g as a strength readout.
 - **Track B extensions**: SM-parameter-regularity hunt (relations among
   coupling values / mass ratios / CKM-PMNS angles) was framed in v11, not yet
   built.
