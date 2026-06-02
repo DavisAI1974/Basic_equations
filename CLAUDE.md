@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-05-26 Session 7)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 12)
 
 ## Identity & Team
 
@@ -22,6 +22,7 @@
 - **Coding mantra**: better, stronger, faster, cheaper.
 - **Incremental validation**: break compute-heavy runs into 15-17 min chunks with stop gates. Canary runs (2 min) before full commitment.
 - **Speculative frames stay separate from results**. Frames motivate experiments but are not claims. Never let a frame grade itself.
+- **Keep the CLAUDE.md header current**. Update the title line (line 1) date + session number to the current session every time the master context is updated, so the header never drifts from the body (it had lagged at "Session 7" through Session 12).
 - **No emojis or special symbols** in professional documents and emails.
 - **Daily**: ask Greg if he checked greg@davisai.ai for Token Optimizer support emails.
 - **DeepNova** (formerly ReFRAG, formerly DeepSource). Use current name everywhere.
