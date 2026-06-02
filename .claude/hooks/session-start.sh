@@ -29,6 +29,12 @@ else
 fi
 
 # Let scripts import the repo's modules (per_domain_kbk, etc.) directly.
-echo 'export PYTHONPATH="${PYTHONPATH:-}:'"$CLAUDE_PROJECT_DIR"'"' >> "$CLAUDE_ENV_FILE"
+# Guarded: these harness vars are not always set (e.g. manual runs), and
+# under `set -u` an unset var would crash the hook before it finishes.
+# The substrate/PySR scripts run from the repo root regardless, so this
+# is a best-effort convenience, not a hard requirement.
+if [ -n "${CLAUDE_PROJECT_DIR:-}" ] && [ -n "${CLAUDE_ENV_FILE:-}" ]; then
+  echo 'export PYTHONPATH="${PYTHONPATH:-}:'"$CLAUDE_PROJECT_DIR"'"' >> "$CLAUDE_ENV_FILE"
+fi
 
 echo "[session-start] numeric stack ready"
