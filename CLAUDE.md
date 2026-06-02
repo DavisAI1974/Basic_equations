@@ -329,6 +329,26 @@ s9_doublecheck_flip.py, s9_characterize.py.
   kind. Pairs with the existing "no tent-widening on outliers" and
   Result Discipline "map alternatives" rules.
 
+- **Two follow-ups run after the correction** (scripts s9_std_vs_raw.py,
+  s9_expression_refit.py; full detail in v9-results handoff):
+  - **Standardized-vs-raw (INFO-024 fork)**: the flip is PARTLY
+    procedure-inflated, PARTLY structural. RAW (original constancy-
+    detector) gives gravity/EM |MI| ~0.99 under asymmetry; per-column
+    STANDARDIZED (correlation-detector) attenuates it to ~0.65 -- still
+    above the 0.5 flip line. Strong never flips under either procedure;
+    the INFO-033 threshold ordering holds in both. So the spectacular
+    +0.99 was inflated by absolute-scale, but a real structural core
+    (~0.65) survives. Generalizes INFO-024: the null DIRECTION (not just
+    eigenvalue magnitude) is procedure-dependent when an operator's
+    absolute variance collapses.
+  - **Expression-level leg (ii) re-exam** (curve-fit fallback, PySR
+    unavailable): INFO-031's EM = (H_a-H_b)^2 + const CONFIRMED (R^2 0.93
+    at 1.0/1.2, robust across asymmetry as a label, no family for
+    symmetric EM per INFO-028). INFO-031's strong = exp((H_b-H_a)) NOT
+    reproduced -- strong's MI is poorly fit by every library family
+    (R^2 <= 0.35), exp_diff never wins. Leg (ii) is "EM has a family,
+    strong does not clearly," not "two distinct families." Needs PySR
+    re-run to fully adjudicate the strong form.
 - All six Operating Rules from Sessions 4-7 in force. No new Rule added
   this session. Branch state: work on
   `claude/gravity-substrate-config-51cfp`, pushed. main untouched. No PR.

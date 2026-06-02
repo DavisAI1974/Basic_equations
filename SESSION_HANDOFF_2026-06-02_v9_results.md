@@ -118,16 +118,74 @@ strength." Simpler, and consistent with the Base-of-Structure heuristic
 (the base should be simple and shared; the differences are how each
 force leaves the base under perturbation). Still a frame, not a claim.
 
+## Session 9 follow-ups (done) -- standardized-vs-raw + expression refit
+
+### Follow-up A -- standardized-vs-raw covariance fork (s9_std_vs_raw.py)
+
+Same operator matrix, two extractions: RAW centered SVD (original;
+constancy detector) vs per-column STANDARDIZED SVD (correlation
+detector; removes absolute scale so a merely small-variance MI is not
+favored). 3 seeds.
+
+  config            RAW |MI|   STD |MI|
+  gravity 0.8/0.9   0.906      0.644
+  gravity 0.8/1.0   0.990      0.665
+  EM 1.0/1.5        0.923      0.600
+  EM 1.0/2.0        0.996      0.626
+  strong (all)      ~0.02      ~0.02
+
+Reading: standardization ATTENUATES but does NOT erase the flip. The
+spectacular +0.99 under RAW is partly inflated by the absolute-scale
+procedure (MI picked because its variance collapses), but a real
+structural core (~0.6-0.65, still above the 0.5 flip line) survives the
+scale-controlled procedure. Strong never flips under either procedure.
+The INFO-033 threshold ordering holds in both. So the flip is PARTLY
+procedure-inflated, PARTLY structural -- both true. (Note: the 1-seed
+canary underestimated STD at ~0.14; the 3-seed full gives ~0.65. Trust
+the full run.) Generalizes INFO-024: the null DIRECTION, not just the
+eigenvalue magnitude, is procedure-dependent when an operator's absolute
+variance collapses.
+
+### Follow-up B -- expression-family refit, leg (ii) re-exam (s9_expression_refit.py)
+
+PySR unavailable -> FIXED-LIBRARY scipy curve_fit fallback (NOT PySR;
+cannot discover novel forms, but can test whether INFO-031's specific
+families best-fit and whether the contrast survives an asymmetry sweep).
+Library includes quad_diff (H_a-H_b)^2+c [EM/INFO-031], exp_diff
+a*exp(b*(H_b-H_a))+c [strong/INFO-031], exp_Ha [biology/INFO-025], plus
+const/linear/single-channel-quadratic baselines. 3 seeds.
+
+  - EM = quad_diff (H_a-H_b)^2 + const: CONFIRMED. EM 1.0/1.2 R^2=0.929,
+    identical family all 3 seeds. Holds as the label across asymmetry
+    (R^2 0.93 -> 0.85 -> 0.56 for 1.2/1.5/2.0). Symmetric EM (1.0/1.0)
+    has NO clean family (best quad_Ha R^2=0.18) -- consistent with
+    INFO-028 (symmetric dynamics -> no reproducible family).
+  - strong = exp_diff: NOT CONFIRMED. Strong's MI is poorly fit by every
+    family in the library (R^2 <= 0.35 across all configs); best picks
+    are unstable linear forms (lin_both/lin_Hb/lin_Ha, split across
+    seeds at 0.5/1.0). exp_diff never wins despite being in the library.
+
+Reading: INFO-031's EM/strong expression-level CONTRAST is half-
+confirmed. The EM half (quad_diff) is real and reproduces robustly in an
+independent method. The strong half (exp_diff) does NOT reproduce; strong
+may simply have no clean MI-vs-(H_a,H_b) functional family. Caveat: a
+fixed-library fallback cannot fully adjudicate -- a PySR re-run is needed
+to settle whether strong's exponential was a PySR-specific overfit or a
+real form the fallback's optimizer missed. INFO-031 expression-level part
+re-tagged: EM family confirmed; strong family unverified / likely
+regime-or-method-specific. Leg (ii) is NOT a clean "two distinct
+families" result; it is "EM has a family, strong does not clearly."
+
 ## Queued for Session 10
 
-1. Re-examine leg (ii) (EM/strong/weak/gravity expression-level
-   functional families) across asymmetry + knob sweeps, once PySR (or a
-   symbolic-regression fallback) is available. Test whether the family
-   contrast is regime-specific like INFO-030.
-2. Standardized-vs-raw covariance fork (INFO-024): re-run the flip
-   sweeps with per-column standardization to quantify how much of the
-   flip is the raw-covariance procedure vs structural. Decides physical
-   weight of the flip.
+1. [DONE this session, follow-up B] Leg (ii) re-exam via curve-fit
+   fallback: EM family confirmed, strong family not reproduced. STILL
+   NEEDS a PySR re-run to settle the strong=exp_diff question once Julia
+   is available -- the fallback cannot adjudicate a form it failed to
+   fit.
+2. [DONE this session, follow-up A] Standardized-vs-raw fork: flip is
+   partly procedure-inflated, partly structural (STD core ~0.65). Could
+   extend with a third estimator (kNN/KSG MI) to triangulate.
 3. Remaining v9 kickoff items not yet run: 7 (KBK across mapping-campaign
    knob values -- is substrate more invariant than expression?), and the
    real-data probes (storm/waves, PDG running, LIGO, PhysioNet) once

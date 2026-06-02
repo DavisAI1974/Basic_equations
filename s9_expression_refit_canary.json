@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "canary": true,
+    "seeds": [
+      11
+    ],
+    "cfg": {
+      "N_ens": 200,
+      "T": 10.0,
+      "dt": 0.02
+    },
+    "method": "scipy curve_fit fixed library (PySR unavailable)",
+    "elapsed_s": 2.8
+  },
+  "results": {
+    "em_asym_1.0/1.2": {
+      "name": "EM asym 1.0/1.2",
+      "consensus_family": "quad_diff",
+      "r2_mean": 0.7067741709824241,
+      "per_seed_family": [
+        "quad_diff"
+      ],
+      "stable": true
+    },
+    "em_sym_1.0/1.0": {
+      "name": "EM sym 1.0/1.0",
+      "consensus_family": "quad_Ha",
+      "r2_mean": 0.137952173046604,
+      "per_seed_family": [
+        "quad_Ha"
+      ],
+      "stable": true
+    },
+    "strong_sym_0.5/0.5": {
+      "name": "strong sym 0.5/0.5",
+      "consensus_family": "lin_Hb",
+      "r2_mean": 0.3152021804748316,
+      "per_seed_family": [
+        "lin_Hb"
+      ],
+      "stable": true
+    },
+    "strong_asym_0.5/0.7": {
+      "name": "strong asym 0.5/0.7",
+      "consensus_family": "lin_both",
+      "r2_mean": 0.3622173829480627,
+      "per_seed_family": [
+        "lin_both"
+      ],
+      "stable": true
+    },
+    "em_1.0/1.0": {
+      "name": "EM 1.0/1.0",
+      "consensus_family": "quad_Ha",
+      "r2_mean": 0.137952173046604,
+      "per_seed_family": [
+        "quad_Ha"
+      ],
+      "stable": true
+    },
+    "em_1.0/1.2": {
+      "name": "EM 1.0/1.2",
+      "consensus_family": "quad_diff",
+      "r2_mean": 0.7067741709824241,
+      "per_seed_family": [
+        "quad_diff"
+      ],
+      "stable": true
+    },
+    "em_1.0/1.5": {
+      "name": "EM 1.0/1.5",
+      "consensus_family": "quad_diff",
+      "r2_mean": 0.480842549241734,
+      "per_seed_family": [
+        "quad_diff"
+      ],
+      "stable": true
+    },
+    "em_1.0/2.0": {
+      "name": "EM 1.0/2.0",
+      "consensus_family": "quad_diff",
+      "r2_mean": 0.04180895529246731,
+      "per_seed_family": [
+        "quad_diff"
+      ],
+      "stable": true
+    },
+    "strong_0.5/0.5": {
+      "name": "strong 0.5/0.5",
+      "consensus_family": "lin_Hb",
+      "r2_mean": 0.3152021804748316,
+      "per_seed_family": [
+        "lin_Hb"
+      ],
+      "stable": true
+    },
+    "strong_0.5/0.7": {
+      "name": "strong 0.5/0.7",
+      "consensus_family": "lin_both",
+      "r2_mean": 0.3622173829480627,
+      "per_seed_family": [
+        "lin_both"
+      ],
+      "stable": true
+    },
+    "strong_0.5/1.0": {
+      "name": "strong 0.5/1.0",
+      "consensus_family": "lin_Hb",
+      "r2_mean": 0.0629438393295253,
+      "per_seed_family": [
+        "lin_Hb"
+      ],
+      "stable": true
+    },
+    "strong_0.5/1.5": {
+      "name": "strong 0.5/1.5",
+      "consensus_family": "lin_both",
+      "r2_mean": 0.40254240798205787,
+      "per_seed_family": [
+        "lin_both"
+      ],
+      "stable": true
+    },
+    "gravity_sym": {
+      "name": "gravity 0.8/0.8",
+      "consensus_family": "lin_both",
+      "r2_mean": 0.36925538164452165,
+      "per_seed_family": [
+        "lin_both"
+      ],
+      "stable": true
+    },
+    "gravity_asym": {
+      "name": "gravity 0.8/1.0",
+      "consensus_family": "exp_Ha",
+      "r2_mean": 0.46703090214946374,
+      "per_seed_family": [
+        "exp_Ha"
+      ],
+      "stable": true
+    },
+    "weak_sym": {
+      "name": "weak 1.0/1.0",
+      "consensus_family": "lin_both",
+      "r2_mean": 0.12332885457669662,
+      "per_seed_family": [
+        "lin_both"
+      ],
+      "stable": true
+    }
+  }
+}
