@@ -154,7 +154,20 @@ NET: FLOW substrate confirmed + generalizes to all 4 forces + chemistry; TIME is
 expression. Axis distinct; form distinct where measurable; axis UNIFICATION still not
 data-forced (construction-confounded). No new Operating Rule.
 
-## QUEUED NEXT PROBE (Greg) — the FLOW DIPOLE EQUATION on these flows
+## >>> FIRST THING NEXT CHAT (Greg) — FLOW DIPOLE EQUATION (+ novelty scan first) <<<
+This is THE #1 task to open the next session. See `BACKLOG_tests_and_probes.md` top section
+for the full plan. REALITY CHECK (so the frame does NOT re-inflate -- frames don't grade
+themselves): the S18 flow result is mostly RE-DESCRIPTION of known physics -- the gauge
+forces' flow IS the RG / running couplings (asymptotic freedom + Wilson RG are Nobel-level),
+gravity's chirp is GR, and the cross-axis unification is NOT data-forced (construction-
+confounded); "flow to a critical point" also caught a chemistry bifurcation (general
+universality, not force-specific). So "new 4-forces law, nobody found it" is NOT established.
+STEP 0 = a hard literature/novelty scan (RG flow, universality, asymptotic safety, EFT,
+info/flow dipole) to state what is genuinely ours vs known BEFORE any novelty claim. STEP 1 =
+the probe below. DECISIVE TEST: do the flows share the SAME quantitative equation form (only
+coefficients differing)? yes -> real structural claim; no -> "flow" is a useful description,
+not a law.
+
 Each flow is currently a single characteristic vs an axis. A flow DIPOLE needs TWO coupled
 channels, in the info-dipole paper's form:
   dMI/dt ~ sum_i c_self,i * H_i^2 + sum_{i<j} c_cross,ij * H_i*H_j + linear   (opposition signature)
@@ -186,10 +199,12 @@ for the fresh session.
 - numpy 2.4 removed `ndarray.ptp()` -> use `np.ptp(...)`.
 
 ## Next (backlog; Greg picks; clear backlog before new probes; stop after each probe)
-- **FIRST PROBE for the fresh session (Greg): the FLOW DIPOLE EQUATION on these flows** --
-  see the "QUEUED NEXT PROBE" section above. 2-channel dMI/dt dipole form per flow; start
-  with the Brusselator (native 2 species) + gravity H1/L1; test substrate(form)/expression
-  (coefficients); connect to the info-dipole paper + Markets flow dipole.
+- **FIRST THING for the fresh session (Greg): the FLOW DIPOLE EQUATION on these flows,
+  STARTED WITH A HARD LITERATURE/NOVELTY SCAN** -- see the ">>> FIRST THING NEXT CHAT <<<"
+  section above. Step 0 = novelty scan (don't call it new without it; most is RG/GR
+  re-description). Step 1 = 2-channel dMI/dt dipole form per flow; start with Brusselator
+  (native 2 species) + gravity H1/L1; decisive test = same equation form across flows?
+  substrate(form)/expression(coefficients); connect to info-dipole paper + Markets flow dipole.
 - 6c follow-ups: replicate the GPS positive recovery across stations/days + dual-frequency
   ionosphere-free combination to recover the circular-GPS sats.
 - Remaining backlog: #2 EM/HBT construction control (Zenodo 5113016), #7 SF femtoscopy-R,

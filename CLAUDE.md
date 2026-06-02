@@ -891,14 +891,20 @@ the pulsar route IN PARALLEL.
   1.0), UNDETERMINED for strong (nonperturbative critical region freezes, INFO-064). Axis
   UNIFICATION still not data-forced. Greg's epistemic rule applied: a non-conforming system
   is one data point / possibly wrong observable, NOT a falsification (e.g. GW170817 miss).
-- **QUEUED NEXT (Greg): the FLOW DIPOLE EQUATION on these flows.** Each flow is currently a
-  single characteristic vs an axis; a flow DIPOLE needs 2 coupled channels in the paper's
-  form dMI/dt ~ sum c_self*H_i^2 + sum c_cross*H_i*H_j + linear (opposition signature).
-  Channels per flow: gravity = H1/L1 detectors (inter-detector MI already in INFO-053);
-  chemistry Brusselator = its native 2 species x,y (cleanest); strong/EM/weak = two
-  observables. Test substrate/expression AT THE EQUATION LEVEL: shared dipole FORM (substrate)
-  with per-domain COEFFICIENTS (expressions); connect to the info-dipole paper + Markets flow
-  dipole. Ideal first probe for the fresh session.
+- **FIRST THING NEXT CHAT (Greg): the FLOW DIPOLE EQUATION on these flows, started with a
+  HARD NOVELTY SCAN.** REALITY CHECK (frames don't grade themselves): the S18 flow result is
+  mostly RE-DESCRIPTION of known physics -- the gauge forces' flow IS the RG / running
+  couplings (asymptotic freedom + Wilson RG are Nobel-level), gravity's chirp is GR, the
+  cross-axis unification is NOT data-forced, and "flow to a critical point" also caught a
+  chemistry bifurcation (general universality). So "new 4-forces law nobody found" is NOT
+  established. STEP 0 = literature/novelty scan (RG flow, universality, asymptotic safety,
+  EFT, info/flow dipole) BEFORE any novelty claim. STEP 1 = the probe: a flow DIPOLE needs 2
+  coupled channels in the paper's form dMI/dt ~ sum c_self*H_i^2 + sum c_cross*H_i*H_j +
+  linear (opposition signature). Channels: gravity = H1/L1 (inter-detector MI, INFO-053);
+  chemistry Brusselator = native 2 species x,y (START HERE); strong/EM/weak = two observables.
+  DECISIVE TEST: do the flows share the SAME quantitative equation form (only coefficients
+  differing)? yes -> real structural claim; no -> "flow" is a useful description, not a law.
+  Connect to the info-dipole paper + Markets flow dipole. Full plan in BACKLOG top section.
 - **Env notes (do not persist across containers)**: pulsar route needed `pip install
   pint-pulsar pdfminer.six`, `pip install --force-reinstall cffi` (broken container
   cryptography binding), and a certifi CA-bundle patch for PINT clock downloads. numpy 2.4
