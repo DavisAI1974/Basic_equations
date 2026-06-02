@@ -341,14 +341,35 @@ s9_doublecheck_flip.py, s9_characterize.py.
     (~0.65) survives. Generalizes INFO-024: the null DIRECTION (not just
     eigenvalue magnitude) is procedure-dependent when an operator's
     absolute variance collapses.
-  - **Expression-level leg (ii) re-exam** (curve-fit fallback, PySR
-    unavailable): INFO-031's EM = (H_a-H_b)^2 + const CONFIRMED (R^2 0.93
-    at 1.0/1.2, robust across asymmetry as a label, no family for
-    symmetric EM per INFO-028). INFO-031's strong = exp((H_b-H_a)) NOT
-    reproduced -- strong's MI is poorly fit by every library family
-    (R^2 <= 0.35), exp_diff never wins. Leg (ii) is "EM has a family,
-    strong does not clearly," not "two distinct families." Needs PySR
-    re-run to fully adjudicate the strong form.
+  - **Expression-level leg (ii) re-exam** -- done twice. First a curve-
+    fit fallback (PySR not yet installed): EM = (H_a-H_b)^2 + const
+    CONFIRMED (R^2 0.93 at 1.0/1.2); strong exp_diff NOT found by the
+    fallback. Then PySR was installed mid-session (pip install pysr;
+    Julia backend auto-bootstrapped) and the adjudication re-run with the
+    REAL tool (follow-up B', s9_pysr_adjudicate.py, original fit_pysr,
+    2 seeds): EM = (H_a-H_b)^2 + const ROBUSTLY CONFIRMED (both seeds,
+    holds across asymmetry; symmetric EM = (const-channel^2)^2 with
+    random channel per INFO-028). strong = exp((H_b-H_a)) PARTIALLY
+    REPRODUCED -- appears at seed 11 of the exact INFO-031 config
+    (0.5/0.7) but is seed-unstable (INFO-028 channel-symmetry breaking)
+    and weak-signal (strong MI near-constant). CORRECTION (Rule D on our
+    own work): the fallback's "strong has no family" was a tool
+    limitation, not evidence against INFO-031. INFO-031's EM/strong
+    expression-level CONTRAST STANDS (EM polynomial-in-difference robust;
+    strong exponential-in-difference real but seed-unstable). So leg (ii)
+    of the four-force frame survives; only leg (iii) (gravity-special
+    substrate) is removed.
+- **Environment**: PySR 1.5.10 + Julia backend installed and verified
+  working in-container this session (a real fit recovered (x1-x0)^2+0.3
+  in 17s). They do NOT persist to a fresh container, so a SessionStart
+  hook was added (.claude/hooks/session-start.sh + .claude/settings.json
+  + requirements.txt) to install numpy/scipy/scikit-learn/pysr and
+  bootstrap Julia automatically (web-only, idempotent, PySR best-effort).
+  The hook takes effect for future sessions once it reaches the branch
+  the session starts from (currently on claude/gravity-substrate-config-
+  51cfp, not main). Pydroid-3 on Greg's phone cannot run PySR (no Julia
+  on Android; separate env from the cloud container) -- numpy substrate
+  scripts only.
 - All six Operating Rules from Sessions 4-7 in force. No new Rule added
   this session. Branch state: work on
   `claude/gravity-substrate-config-51cfp`, pushed. main untouched. No PR.

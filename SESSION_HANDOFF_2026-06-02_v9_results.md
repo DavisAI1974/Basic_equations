@@ -104,17 +104,24 @@ Session 9 removes leg (iii). Re-reading the other two:
     symmetric-channel regime, and asymmetry moves any of them off it by
     a threshold set by coupling strength. The shared-substrate finding
     is intact and better explained.
-  - Leg (ii) (expression-level family differences) is a PySR result and
-    was NOT touched by Session 9 (PySR unavailable). It needs re-
-    examination under the same "sweep the knob, don't trust one point"
-    discipline before being trusted -- INFO-030 already showed the
-    functional families are regime-conditional, so the EM/strong
-    expression contrast may also be regime-specific. Flagged.
+  - Leg (ii) (expression-level family differences) WAS re-examined this
+    session -- first with a curve-fit fallback (follow-up B, which under-
+    reported strong), then with REAL PySR (follow-up B'). Verdict: the
+    EM/strong contrast STANDS. EM = (H_a-H_b)^2 + const is robust across
+    seeds and across the asymmetry sweep (as a family; coefficient drifts
+    with regime per INFO-030). strong = exp((H_b-H_a)) reproduces at one
+    seed but is seed-unstable (INFO-028 channel-symmetry breaking) and
+    weak-signal (strong's MI is near-constant). So leg (ii) is real, with
+    a seed-instability caveat on the strong half.
 
-Net: the four-force frame collapses from "three distinct signatures
-incl. a gravity-special substrate" to "one shared substrate (symmetric
-regime) + force-dependent off-substrate thresholds set by coupling
-strength." Simpler, and consistent with the Base-of-Structure heuristic
+Net: the four-force frame goes from "three distinct signatures incl. a
+gravity-special SUBSTRATE" to "one shared substrate (symmetric regime) +
+force-dependent off-substrate flip-thresholds set by coupling strength
+(leg iii reinterpreted) + genuine EXPRESSION-level family differences
+(leg ii survives real-PySR re-exam)." The gravity-special-substrate
+claim is gone; the shared-substrate (leg i) and expression-difference
+(leg ii) legs stand. Simpler on the substrate side, and consistent with
+the Base-of-Structure heuristic
 (the base should be simple and shared; the differences are how each
 force leaves the base under perturbation). Still a frame, not a claim.
 
@@ -176,13 +183,50 @@ re-tagged: EM family confirmed; strong family unverified / likely
 regime-or-method-specific. Leg (ii) is NOT a clean "two distinct
 families" result; it is "EM has a family, strong does not clearly."
 
+### Follow-up B' -- REAL PySR adjudication (s9_pysr_adjudicate.py)
+
+After follow-ups A/B, PySR was installed in-container (pip install pysr;
+the Julia backend auto-bootstrapped -- network policy allowed it). This
+let leg (ii) be settled with the ACTUAL tool (original fit_pysr config
+reused), which follow-up B's curve-fit fallback could not do. 2 seeds,
+N_ens=600, T=30, niter=30.
+
+  - EM = (H_a - H_b)^2 + const: ROBUSTLY CONFIRMED. EM_asym 1.0/1.2 ->
+    (x0-x1)^2 + 0.20 BOTH seeds; holds at 1.0/1.5 with shrinking
+    coefficient; EM_sym -> (const - channel^2)^2 with channel randomly
+    assigned (INFO-028). The fallback (B) and real PySR (B') agree on EM.
+  - strong = exp((H_b - H_a)) - const: PARTIALLY REPRODUCED. At strong's
+    exact INFO-031 config (0.5/0.7), seed 11 -> exp(-x0 + x1)*0.24 =
+    exp(H_b - H_a)*c, which IS the INFO-031 form. Seed 22 -> a different
+    shape (x0*(x0-x1)+c, with exp(square(x0)) also on its Pareto):
+    SEED-UNSTABLE, exactly as INFO-028 predicts for channel-symmetric
+    strong dynamics. So the exponential is in strong's family but not a
+    stable per-seed realization. Losses are tiny (~5e-3) and the Pareto
+    is flat -- strong's MI is nearly constant, so the family fits a weak
+    residual signal.
+
+CORRECTION to follow-up B (Rule D, applied to our own work): B's "strong
+has no clean family / exp_diff not reproduced" reading was INCOMPLETE --
+it was a limitation of the fixed-library curve_fit (exp_diff was in the
+library but the optimizer did not surface it), NOT evidence against
+INFO-031. Real PySR surfaces the exponential at one seed. INFO-031's
+EM/strong expression-level CONTRAST therefore STANDS: EM polynomial-in-
+difference (robust), strong exponential-in-difference (real but weak-
+signal and seed-unstable per INFO-028). Leg (ii) of the four-force frame
+is in better shape than the follow-up-B reassessment suggested.
+
+Reference configs (real PySR): gravity_asym MI ~ 0.21 near-constant
+(both seeds, loss ~7e-4) -- confirms the MI->const floor under asymmetry;
+gravity_sym -> (const - H^2) forms; weak_sym -> linear in H_a ~ 0.30.
+
 ## Queued for Session 10
 
-1. [DONE this session, follow-up B] Leg (ii) re-exam via curve-fit
-   fallback: EM family confirmed, strong family not reproduced. STILL
-   NEEDS a PySR re-run to settle the strong=exp_diff question once Julia
-   is available -- the fallback cannot adjudicate a form it failed to
-   fit.
+1. [DONE this session, follow-ups B + B'] Leg (ii) settled with REAL
+   PySR: EM family robustly confirmed; strong exponential reproduced at
+   one seed (seed-unstable per INFO-028). INFO-031 contrast stands.
+   Open extension: more seeds on strong_asym to quantify how often the
+   exponential vs alternative forms wins (the INFO-028 symmetry-breaking
+   rate).
 2. [DONE this session, follow-up A] Standardized-vs-raw fork: flip is
    partly procedure-inflated, partly structural (STD core ~0.65). Could
    extend with a third estimator (kNN/KSG MI) to triangulate.
@@ -199,17 +243,42 @@ families" result; it is "EM has a family, strong does not clearly."
 Scripts:
 - s9_doublecheck_flip.py    (asymmetry sweep, original code)
 - s9_characterize.py        (threshold map + reframed 5a E_total test)
+- s9_std_vs_raw.py          (follow-up A: standardized-vs-raw fork)
+- s9_expression_refit.py    (follow-up B: curve-fit fallback family)
+- s9_pysr_adjudicate.py     (follow-up B': REAL PySR family adjudication)
+- .claude/hooks/session-start.sh, .claude/settings.json, requirements.txt
+                            (PySR/numeric-stack persistence hook)
 Result JSONs:
 - s9_doublecheck_flip_canary.json, s9_doublecheck_flip_results.json
 - s9_characterize_canary.json, s9_characterize_results.json
+- s9_std_vs_raw_canary.json, s9_std_vs_raw_results.json
+- s9_expression_refit_canary.json, s9_expression_refit_results.json
+- s9_pysr_adjudicate_canary.json, s9_pysr_adjudicate_results.json
 Original Session 8 modules pulled onto this branch (verbatim, for the
 double-check): kbk_pipeline.py, per_domain_kbk.py, ai_poincare_rank.py,
 sindy_symbolic.py, gravity_glance.py, em_strong_glance.py,
 four_force_probe.py.
 
-Dependencies installed: numpy 2.4.6, scipy 1.17.1, scikit-learn 1.8.0.
-PySR NOT available (no Julia). Substrate-side KBK is pure-numpy and
-unaffected; expression-level (PySR) work deferred.
+Dependencies: numpy 2.4.6, scipy 1.17.1, scikit-learn 1.8.0. PySR 1.5.10
+was INSTALLED mid-session (pip install pysr; Julia backend auto-
+bootstrapped -- the network policy allowed the Julia download). A real
+PySR fit runs end-to-end (verified: recovered (x1-x0)^2+0.3 in 17s after
+precompile). This unblocked follow-up B'.
+
+PERSISTENCE: PySR/Julia do NOT survive into a fresh container. Added a
+SessionStart hook (.claude/hooks/session-start.sh + .claude/settings.json
++ requirements.txt) that installs numpy/scipy/scikit-learn/pysr and
+bootstraps Julia at container start (web/remote only; idempotent; PySR
+best-effort so a blocked Julia download cannot break session start).
+NOTE: the hook only takes effect for future sessions once it is on the
+branch the session starts from -- it is on claude/gravity-substrate-
+config-51cfp, NOT yet on main. Merge to main (or start the next session
+from this branch) for it to run automatically.
+
+Pydroid-3 (Python on Android, on Greg's phone) was raised as an option
+but CANNOT run PySR: Julia does not run on Android, and Pydroid is a
+separate environment from the cloud container where this work executes.
+It could run the pure-numpy substrate scripts only.
 
 ## Branch state
 
