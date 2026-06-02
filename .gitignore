@@ -7,3 +7,4 @@ data/ligo_bulk/
 data/gps/*.SP3
 data/gps/*.gz
 data/gps/
+data/pulsar/
