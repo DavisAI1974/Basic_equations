@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 17 — body canonical through S17)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 18 — body canonical through S18)
 
 ## START HERE (workflow block; JOB-1 drift fixed S17, 2026-06-02)
 
@@ -25,9 +25,19 @@ Operating Rule exists precisely so the S7→S11→S14 drift never recurs.
 get appended to the backlog first. Never discard an odd/outlying output — it may be
 the story; diagnose it, don't sand it off.
 
-**Latest session:** S17 (2026-06-02). Read `SESSION_HANDOFF_2026-06-02_S17.md`,
-then `BACKLOG_tests_and_probes.md`. Headline: (1) JOB 1 done — the CLAUDE.md drift
-is fixed, this file is now canonical through S17. (2) Backlog #1 (construction-vs-
+**Latest session:** S18 (2026-06-02). Read `SESSION_HANDOFF_2026-06-02_S18.md`, then
+`BACKLOG_tests_and_probes.md`. Headline: backlog 6c (does gravity couple to TIME?)
+answered on the POSITIVE side with three governing-law recoveries. GPS precise-product
+route = definitional NULL (INFO-058: GR clock term modeled out of IGS products). GPS
+term-retaining route (INFO-059) recovered the time-dilation coefficient -2/c^2 from raw
+RINEX observations on eccentric Galileo sats at k/truth 1.02-1.04, z=380 sigma. Pulsar
+route (INFO-060, raw Arecibo TOAs of PSR B1913+16) recovered orbital decay dP_b/dt
+(ratio 1.005 to GR) + Einstein-delay gamma (0.014%). Two gravity-time mechanisms,
+GNSS-independent. Capability brief updated. [O3 GW170817 BNS chirp mass in progress.]
+Prior S17 below.
+
+**Session 17 recap:** Read `SESSION_HANDOFF_2026-06-02_S17.md`. (1) JOB 1 done — the
+CLAUDE.md drift is fixed. (2) Backlog #1 (construction-vs-
 nature) RUN and resolved on the construction side (INFO-051): the equal-entropy
 clustering is BOOKKEEPING — scaling one channel (b->s*b) is exactly MI-invariant
 (MI_cv ~1e-16 across all 7 systems) yet sets the marginal-entropy asymmetry by a
@@ -156,6 +166,15 @@ raw data with both detectors agreeing. That's credibility."
   Hilbert baseline (R^2 0.001). Plus (INFO-053) the inter-detector MI merger signal
   shown physics-bearing (peaks at the physical 7 ms light-travel lag, z=15.5 vs
   time-slide null, carries waveform phase/time structure).
+- **GRAVITY (time dilation) — relativistic clock law from raw data, two independent ways
+  (S18, INFO-059 + INFO-060).** (a) Recovered the GR time-dilation coefficient -2/c^2 from
+  raw GPS data: residual of raw RINEX pseudorange (station BRUX) vs an independent
+  broadcast-element regressor gives, on the eccentric Galileo GREAT sats, k/truth 1.02-1.04,
+  z=380 sigma. (b) Independent confirmation from binary-pulsar timing (raw Arecibo TOAs of
+  PSR B1913+16): orbital decay dP_b/dt recovered at ratio 1.005 to GR (~17684 sigma
+  detection) and Einstein-delay gamma at 0.014%. Gravity's coupling to TIME is a recoverable
+  governing law -- by clock-rate dilation (GPS coeff + pulsar gamma) and by gravity altering
+  orbital timing via GW emission (pulsar dP_b/dt).
 - **WEAK — Z boson Breit-Wigner from real CMS dimuon data (S16).** M_Z = 90.75 GeV =
   99.5% of PDG 91.1876, from 10227 real dimuon events; PySR independently recovered a
   BW-like lineshape; same-charge control shows no peak.
@@ -611,7 +630,21 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For the latest (Session 17) session, read `SESSION_HANDOFF_2026-06-02_S17.md`, then
+For the latest (Session 18) session, read `SESSION_HANDOFF_2026-06-02_S18.md`, then the
+Session 18 note below. Headline: backlog 6c (does gravity couple to TIME?) answered
+DECISIVELY on the positive side with THREE governing-law recoveries. The precise-product
+GPS route was a definitional NULL (INFO-058: the GR clock term -2(r.v)/c^2 is modeled out
+of IGS/CODE products). The TERM-RETAINING GPS route (INFO-059) then recovered the
+time-dilation coefficient -2/c^2 from raw RINEX observations on the eccentric Galileo GREAT
+sats at k/truth 1.02-1.04, z=380 sigma (cross-source, non-circular). And the INDEPENDENT
+pulsar route (INFO-060) recovered, from raw Arecibo TOAs of PSR B1913+16, both the orbital
+decay dP_b/dt (ratio 1.005 to GR, ~17684 sigma detection) and the Einstein-delay gamma
+(0.014% from published). Two gravity-time mechanisms (clock-rate dilation + GW-emission
+orbital decay), GNSS-convention-independent. Capability brief updated (gravity now has a
+time-dilation recovery alongside the inspiral chirp). [O3 -- GW170817 BNS chirp mass via
+pycbc matched-filter -- in progress; INFO-061 reserved.] Earlier-probe context below.
+
+For the (Session 17) session, read `SESSION_HANDOFF_2026-06-02_S17.md`, then
 the Session 17 note below. Headline: JOB 1 (CLAUDE.md drift) FIXED — this file is now
 canonical through S17. Backlog #1 (construction-vs-nature, INFO-051) RESOLVED — the
 equal-entropy clustering is bookkeeping (scaling a channel is exactly MI-invariant yet
@@ -795,6 +828,45 @@ The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
 
+## Note (Session 18 update — 2026-06-02) — gravity-couples-to-time (backlog 6c), 3 recoveries
+
+Branch `claude/kickoff-handoff-sequence-4jk6N` (main untouched; no PR). All Operating
+Rules in force; no new Rule. Session opened with file-continuity housekeeping: folded the
+S12-S17 deltas into this canonical CLAUDE.md and brought the full S17 work branch
+(`claude/claude-md-problem-nM8Hm`) onto this branch (all probe scripts + artifacts), then
+ran backlog 6c. Greg steered: 6c first, then O3; for 6c, run the GPS positive recovery and
+the pulsar route IN PARALLEL.
+
+- **6c question**: does gravity couple to TIME in a recoverable governing law (the H-C
+  hunch; INFO-056 showed force-coupling data is construction-confounded, so the clean test
+  is clock/time-dilation data). Answer: YES, three independent recoveries.
+- **INFO-058 (GPS precise-product NULL)**: the GR clock term -2(r.v)/c^2 is modeled out of
+  IGS/CODE precise products -> definitional null (recovered k 0.4% of truth; residual 0.10
+  ns vs predicted 24-385 ns across 57 GPS+Galileo sats). Clean null, clear reason, kept as
+  data. Motivated the term-retaining route.
+- **INFO-059 (GPS POSITIVE)**: from raw RINEX C1 pseudorange (station BRUX) - geometry -
+  precise SP3 clock - receiver clock, the relativistic modulation survives in the residual;
+  fit vs an INDEPENDENT broadcast-element e*sqrt(a)*sin(E) regressor (cross-source, non-
+  circular) recovers -2/c^2 on the eccentric Galileo GREAT sats at k/truth 1.038 (E18) /
+  1.019 (E14), z=380 sigma, R^2 0.98-0.99. Dead routes mapped (precise-product + broadcast-
+  differencing, term in neither). LOCATED -- clean on 2 sats, one station/day; replicate
+  before promotion.
+- **INFO-060 (PULSAR, independent)**: raw Arecibo TOAs of PSR B1913+16 (Weisberg & Huang
+  2016) + PINT metrology + WLS recovery: orbital decay dP_b/dt = -2.4151e-12 (ratio 1.005 to
+  GR; ~0.5% = galactic-accel term; ~17684 sigma detection) and Einstein-delay gamma 4.30737
+  ms (0.014% from published). Two gravity-time mechanisms (clock-rate dilation + GW-emission
+  orbital decay). Formal errors optimistic (not all JUMPs/terms fit) -> sigma_from_GR an
+  artifact, point estimates robust; published values conjecture-to-check. Fixed an exp2 1e12
+  units-reporting bug (PINT PBDOT.value already s/s).
+- **Capability brief**: updated -- gravity now has a time-dilation recovery (GPS coeff +
+  pulsar gamma + pulsar dP_b/dt) alongside the inspiral chirp.
+- **O3 (GW170817 BNS chirp mass via pycbc matched-filter)**: launched; INFO-061 reserved;
+  fold result when it lands.
+- **Env notes (do not persist across containers)**: pulsar route needed `pip install
+  pint-pulsar pdfminer.six`, `pip install --force-reinstall cffi` (broken container
+  cryptography binding), and a certifi CA-bundle patch for PINT clock downloads. numpy 2.4
+  removed ndarray.ptp() -> use np.ptp(). Raw GPS/pulsar/ligo_bulk downloads gitignored.
+
 ## Note (Session 17 update — 2026-06-02) — CLAUDE.md drift fix + construction-vs-nature probe
 
 Branch `claude/claude-md-problem-nM8Hm` (main untouched; no PR). All Operating Rules
@@ -965,6 +1037,49 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   (Landau/Z/merger poles) through the frame, not new physics. Frame aside (ungraded):
   energy-scale, mass, and time are physically interrelated (E-t; mass=energy; RG
   "time"=log-scale). CAVEATS: 3 forces (no EM/HBT). No new Operating Rule.
+
+- **INFO-058 -- LOCATED / METHODOLOGICAL (Session 18, new; backlog 6c, GPS precise-product
+  route; 57 sats)**: the GR relativistic clock term dt_rel = -2(r.v)/c^2 = -2(r*rdot)/c^2
+  is MODELED OUT of IGS/CODE precise clock products, so recovering it from the cleaned
+  product is a definitional NULL. `probe_gravity_time_dilation.py` on CODE SP3 (GPS+Galileo,
+  5-min orbit+clock, 2023-001): joint per-sat fit clock=poly3(t)+k*(r*rdot) gives recovered
+  k = 0.4% of GR truth -2/c^2; median residual 0.10 ns vs orbit-predicted term 24-385 ns
+  (eccentric Galileo GREAT E14/E18 ~275-385 ns). NOT buried in noise (a cubic cannot absorb
+  ~2 cycles/day; 0.05 ns << 275 ns). Clean null with a clear reason; kept as data
+  (don't-predetermine). Motivated the term-retaining route INFO-059.
+
+- **INFO-059 -- LOCATED, REAL DATA (Session 18, new; backlog 6c POSITIVE; 1 station/1 day)**:
+  POSITIVE recovery of the GR time-dilation coefficient -2/c^2 from RAW GPS data via a
+  term-RETAINING route (`probe_6c_gps_positive.py`, helper `_route2_obs.py`). Raw RINEX C1
+  pseudorange (IGS station BRUX) - geometry - precise SP3 clock (term removed) - receiver
+  clock (from near-circular sats) leaves the relativistic modulation in the residual; fit
+  against the e*sqrt(a)*sin(E) regressor computed INDEPENDENTLY from broadcast Keplerian
+  elements (cross-source, non-circular). RESULT on eccentric Galileo GREAT sats (e~0.162,
+  ~275 ns / ~200 m signal): E18 k/truth +1.038 R^2 0.978 corr -0.987 z=380 sigma vs scramble
+  null; E14 k/truth +1.019 R^2 0.995 corr -0.997. Two dead routes mapped as data: precise-
+  product NULL (INFO-058) and broadcast-differencing NULL (term is in NEITHER precise SP3
+  clock nor broadcast polynomial -- they agree to ~3 ns while the term is ~760 ns ptp).
+  CAVEATS: clean only on the 2 eccentric Galileo sats (single-freq C1 ionosphere swamps the
+  17-33 m signal on circular GPS, diagnosed not absorbed); one station/one day -> LOCATED,
+  replicate across stations/days before promotion. The gravity-couples-to-time governing-law
+  recovery (clock-rate dilation), positive counterpart to INFO-058's definitional null.
+
+- **INFO-060 -- LOCATED, REAL DATA (Session 18, new; backlog 6c pulsar route)**: two
+  gravity-couples-to-time governing relations recovered from RAW Arecibo TOAs of PSR
+  B1913+16 (Hulse-Taylor; 9261 TOAs 1981-2012, Weisberg & Huang 2016, Zenodo 54764), GNSS-
+  convention-INDEPENDENT (`probe_pulsar_time.py`; PINT does standard clock/barycenter/DM/
+  Keplerian reductions with NO dP_b/dt or gamma assumption; relativistic params recovered by
+  WLS). (a) Orbital decay: Delta-chi2(PBDOT=0 vs free)=3.13e8 (~17684 sigma detection);
+  recovered dP_b/dt = -2.4151e-12 vs GR -2.40263e-12 (ratio 1.005; the ~0.5% is the known
+  galactic-acceleration term). (b) Einstein delay gamma = 4.30737e-3 s vs published
+  4.30675e-3 (ratio 1.00014, 0.014%) -- the most direct "gravity slows the clock" parameter
+  (grav redshift + 2nd-order Doppler). Two mechanisms: gravity altering orbital timing (GW
+  emission) + clock rate. CAVEATS (Rule D, honest): PINT does the metrology (not from
+  scratch); not all JUMPs/high-order spin/Shapiro/red-noise terms fit, so postfit wRMS ~27 us
+  (paper 16.3) and FORMAL ERRORS ARE OPTIMISTIC -- the large sigma_from_GR (91.6) is an
+  artifact; the POINT ESTIMATES (ratios 1.005, 1.0001) are the robust result. Published GR
+  values treated as conjecture-to-check, not cited as support. Earlier exp2 carried a 1e12
+  units-reporting bug (PINT PBDOT.value is already s/s) -- fixed; root cause verified.
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 

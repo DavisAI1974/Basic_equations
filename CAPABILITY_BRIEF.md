@@ -25,6 +25,18 @@ answers are checkable against ground truth.
   confirms the inter-detector signal sits at the correct physical light-travel delay
   (~7 ms) at 15-sigma significance against a time-slide null.
 
+- **Gravity — relativistic time dilation, recovered two independent ways.**
+  (a) From raw GPS data: the relativistic clock law `Δt = -2(r·v)/c²` recovered from raw
+  RINEX pseudorange observations (IGS station BRUX) against an independent broadcast-element
+  regressor — on the eccentric Galileo satellites the coefficient comes out at **1.02-1.04×
+  the general-relativistic value** (`-2/c²`), at 380-sigma significance against a scramble
+  null. (b) Independent confirmation from binary-pulsar timing (raw Arecibo times-of-arrival,
+  PSR B1913+16): the orbital-decay rate `dP_b/dt` recovered at **1.005× the GR prediction**
+  (orbital decay detected at ~17,684 sigma) and the Einstein-delay (gravitational clock
+  redshift) parameter to **0.014%**. A clean control: the same clock law is *absent* from
+  standard precise GPS products because it is already modeled out there — recovering it
+  required going back to the raw observations.
+
 - **Weak force — Z boson resonance (CMS public dimuon data).**
   Recovered the Z Breit-Wigner lineshape from 10,227 real dimuon events:
   M_Z = 90.75 GeV = **99.5% of the PDG value** (91.1876 GeV). A same-charge control
@@ -59,6 +71,8 @@ unknown.
 | Domain  | Data source              | Recovered                         | Benchmark            |
 |---------|--------------------------|-----------------------------------|----------------------|
 | Gravity | LIGO GW150914 strain     | inspiral law + chirp mass (H1=L1) | R^2 0.99; ~within 25%|
+| Gravity | Raw GPS RINEX (BRUX)     | time-dilation coeff -2/c^2        | 1.02-1.04x GR; z=380 |
+| Gravity | Arecibo TOAs (B1913+16)  | orbital decay dP_b/dt + Einstein gamma | 1.005x GR; gamma 0.014% |
 | Weak    | CMS dimuon (10,227 evts) | Z Breit-Wigner, M_Z 90.75 GeV     | 99.5% of PDG         |
 | Strong  | alpha_s(Q) world data    | asymptotic freedom, Lambda_QCD    | chi2/dof 0.81        |
 

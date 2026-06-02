@@ -100,6 +100,16 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
    clock/time-dilation data (e.g. GPS/optical-clock/Pound-Rebka-style or pulsar timing),
    NOT force-coupling objects. Add EM/HBT to the flow comparison only as a completeness
    check (won't resolve the construction confound).
+   -- REMAINING NOW DONE (S18): clock/time-dilation data run, gravity-couples-to-time
+   recovered POSITIVELY three ways. GPS term-retaining route (INFO-059) recovered the
+   time-dilation coefficient -2/c^2 from raw RINEX observations on eccentric Galileo sats
+   at k/truth 1.02-1.04, z=380 (precise-product route was a definitional NULL, INFO-058);
+   pulsar route (INFO-060, raw Arecibo TOAs PSR B1913+16) recovered orbital decay dP_b/dt
+   (ratio 1.005 to GR) + Einstein-delay gamma (0.014%). See `SESSION_HANDOFF_2026-06-02_S18.md`,
+   `probe_6c_gps_positive.py`, `probe_pulsar_time.py`, `probe_gravity_time_dilation.py`.
+   STILL OPEN (gravity-SPECIAL-vs-gauge-forces in touching time): needs the multi-force
+   comparison (EM/HBT, backlog #2) -- a completeness check, won't resolve the construction
+   confound. The narrow "gravity dilates clocks" claim is now POSITIVELY supported by data.
 
 ## 4-FORCE thread
 
