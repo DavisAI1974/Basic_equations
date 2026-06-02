@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "canary": true,
+    "seeds": [
+      11
+    ],
+    "cfg": {
+      "N_ens": 200,
+      "T": 10.0,
+      "dt": 0.02
+    },
+    "elapsed_s": 2.2
+  },
+  "note": "cross_knob_cos = |cos| of 6D substrate null between knob values (mean,std over seeds). Compare against INFO-030 expression-family mutation across the SAME knobs.",
+  "results": [
+    {
+      "domain": "physics_duffing",
+      "knob": "K",
+      "baseline": 0.2,
+      "values": [
+        0.05,
+        0.5
+      ],
+      "ranks": {
+        "0.05": [
+          1
+        ],
+        "0.5": [
+          1
+        ]
+      },
+      "cos_to_attractor": {
+        "0.05": 0.20506880093474336,
+        "0.5": 0.3276157666130155
+      },
+      "seed_stability": {
+        "0.05": [
+          null,
+          null
+        ],
+        "0.5": [
+          null,
+          null
+        ]
+      },
+      "cross_knob_cos": {
+        "0.05|0.5": [
+          0.9804246452730045,
+          0.0
+        ]
+      }
+    },
+    {
+      "domain": "biology_lotka",
+      "knob": "beta",
+      "baseline": 0.5,
+      "values": [
+        0.3,
+        0.8
+      ],
+      "ranks": {
+        "0.3": [
+          2
+        ],
+        "0.8": [
+          2
+        ]
+      },
+      "cos_to_attractor": {
+        "0.3": 0.058847457965899214,
+        "0.8": 0.2616558967341114
+      },
+      "seed_stability": {
+        "0.3": [
+          null,
+          null
+        ],
+        "0.8": [
+          null,
+          null
+        ]
+      },
+      "cross_knob_cos": {
+        "0.3|0.8": [
+          0.8561078093149901,
+          0.0
+        ]
+      }
+    },
+    {
+      "domain": "chemistry_brussel",
+      "knob": "B",
+      "baseline": 3.0,
+      "values": [
+        2.0,
+        4.0
+      ],
+      "ranks": {
+        "2.0": [
+          4
+        ],
+        "4.0": [
+          5
+        ]
+      },
+      "cos_to_attractor": {
+        "2.0": 0.3497234726013113,
+        "4.0": -0.22413074862221893
+      },
+      "seed_stability": {
+        "2.0": [
+          null,
+          null
+        ],
+        "4.0": [
+          null,
+          null
+        ]
+      },
+      "cross_knob_cos": {
+        "2.0|4.0": [
+          0.8992752983008531,
+          0.0
+        ]
+      }
+    },
+    {
+      "domain": "geology_bk",
+      "knob": "drift_rate",
+      "baseline": 0.04,
+      "values": [
+        0.02,
+        0.08
+      ],
+      "ranks": {
+        "0.02": [
+          5
+        ],
+        "0.08": [
+          5
+        ]
+      },
+      "cos_to_attractor": {
+        "0.02": 0.33515357069070995,
+        "0.08": 0.33473343297897934
+      },
+      "seed_stability": {
+        "0.02": [
+          null,
+          null
+        ],
+        "0.08": [
+          null,
+          null
+        ]
+      },
+      "cross_knob_cos": {
+        "0.02|0.08": [
+          0.9999548790782875,
+          0.0
+        ]
+      }
+    }
+  ]
+}
