@@ -1,0 +1,184 @@
+{
+  "probe": "STRONG-force two-particle BATTERY (real CMS dimuon open data)",
+  "data_source": {
+    "url": "https://opendata.cern.ch/record/303/files/dimuon.csv",
+    "record": "CMS open data record/303 (events with two muons, 2010)",
+    "n_events_used": 100000,
+    "honesty_note": "No per-jet/dijet/hadron-pair CSV exists in CMS open-data EDUCATION (API query for dijet/jet/two-jet csv returned ZERO csv hits). Closest REAL strong-interaction two-particle CSV is this broad dimuon set: the mass spectrum is dominated by J/psi (3.097) and Upsilon (~9.46), which are QCD (strong-force) BOUND STATES (charmonium/bottomonium), plus the EW Z. The PAIR is QCD-produced for the quarkonium component; the per-muon tracks are leptonic, not hadronic. A true pion/kaon femtoscopy sample would be preferable but is not available as a CSV."
+  },
+  "channels": "leading/subleading muon per-object observable (pt/energy/rapidity)",
+  "axes": "pair invariant mass M (J/psi, Upsilon, Z resonances) and femtoscopy q=|p_A-p_B|",
+  "tools": [
+    {
+      "tool": "1_baseline_dipole (chan x axis grid)",
+      "metric": "max R2_full = 0.033 @ femto_q|rapidity",
+      "control": "shuffle-null R2 p95 = 0.019",
+      "hits": false,
+      "detail": {
+        "mass_M|pt": {
+          "R2_full": 0.001976839080449211,
+          "dR2_cross": 1.2394982097374552e-06,
+          "null_p95": 0.023233876653541093,
+          "n_axis": 498,
+          "hits": false
+        },
+        "mass_M|energy": {
+          "R2_full": 0.007918643665648872,
+          "dR2_cross": 0.0005602156694985982,
+          "null_p95": 0.021581979252834164,
+          "n_axis": 498,
+          "hits": false
+        },
+        "mass_M|rapidity": {
+          "R2_full": 0.001105915632822474,
+          "dR2_cross": 1.323331307967468e-05,
+          "null_p95": 0.015388070815974365,
+          "n_axis": 498,
+          "hits": false
+        },
+        "femto_q|pt": {
+          "R2_full": 0.004837159539523905,
+          "dR2_cross": 0.00043243491259015165,
+          "null_p95": 0.025470141955806967,
+          "n_axis": 498,
+          "hits": false
+        },
+        "femto_q|energy": {
+          "R2_full": 0.012032570073165605,
+          "dR2_cross": 4.1820400810244074e-05,
+          "null_p95": 0.021212708969154087,
+          "n_axis": 498,
+          "hits": false
+        },
+        "femto_q|rapidity": {
+          "R2_full": 0.03302862705608345,
+          "dR2_cross": 0.0004289453249707309,
+          "null_p95": 0.018960874825455103,
+          "n_axis": 498,
+          "hits": false
+        }
+      }
+    },
+    {
+      "tool": "2_estimator_swap (hist vs KSG kNN MI, axis=M, chan=pt)",
+      "metric": "max R2_full = 0.006 @ ksg_b6",
+      "control": "null p95 = 0.022",
+      "hits": false,
+      "detail": {
+        "hist_b6": {
+          "R2_full": 0.00142605329297818,
+          "null_p95": 0.027048401527034544,
+          "hits": false
+        },
+        "hist_b10": {
+          "R2_full": 0.0012522406776573902,
+          "null_p95": 0.031080756765897694,
+          "hits": false
+        },
+        "ksg_b6": {
+          "R2_full": 0.006400573895155248,
+          "null_p95": 0.021928375259292525,
+          "hits": false
+        },
+        "ksg_b10": {
+          "R2_full": 0.006400573895155248,
+          "null_p95": 0.021928375259292525,
+          "hits": false
+        }
+      }
+    },
+    {
+      "tool": "3_raw_signal_dipole (mean pt_sub ~ mean pt_lead along M)",
+      "metric": "raw cross R2 = 0.089",
+      "control": "shuffle-null p95 = 0.000",
+      "hits": false,
+      "detail": {
+        "r2_raw_meanB_vs_meanA": 0.08887209799695883,
+        "null_p95": 0.00034649336459128264
+      }
+    },
+    {
+      "tool": "4_femtoscopy_C(q)_like-sign (KNOWN 2-particle q-correlation)",
+      "metric": "C(low q)/C(high q) = 0.801 (low-q SUPPRESSION (resonance/back-to-back kinematics)); RMS|C-1|=0.293",
+      "control": "denominator = event-MIXED like-sign pairs (flat by construction)",
+      "hits": true,
+      "detail": {
+        "ratio_low_over_high": 0.800582471496314,
+        "direction": "low-q SUPPRESSION (resonance/back-to-back kinematics)",
+        "rms_dev_from_flat": 0.29297944341086735,
+        "q_centers": [
+          0.776,
+          2.329,
+          3.881,
+          5.434,
+          6.986,
+          8.539,
+          10.091,
+          11.644,
+          13.197,
+          14.749,
+          16.302,
+          17.854
+        ],
+        "C_of_q": [
+          0.0,
+          1.076,
+          1.014,
+          0.964,
+          1.008,
+          1.091,
+          1.041,
+          1.039,
+          0.974,
+          0.985,
+          0.927,
+          0.929
+        ],
+        "n_same_like": 37786,
+        "n_mixed_like": 49824
+      }
+    },
+    {
+      "tool": "5_symbolic_MI~f(Ha,Hb) (SINDy poly2 + PySR if avail)",
+      "metric": "SINDy poly2 R2 = 0.343; PySR R2 = 0.232",
+      "control": "shuffle-null p95 = 0.022",
+      "hits": false,
+      "detail": {
+        "sindy_poly2_R2": 0.34323627043081506,
+        "null_p95": 0.022008592745426787,
+        "coeffs[1,Ha,Hb,Ha2,Hb2,HaHb]": [
+          -0.0386,
+          0.059,
+          0.0868,
+          -0.0391,
+          -0.0419,
+          0.073
+        ],
+        "pysr_R2": 0.23236938483185188,
+        "pysr_equation": "x0 * 0.10882579"
+      }
+    },
+    {
+      "tool": "6_direct_coupling (Pearson/Spearman/MI, real vs event-mixed)",
+      "metric": "Pearson=0.017 Spearman=0.016 MI_real=0.000",
+      "control": "mixed Pearson=0.000 MI_mixed=0.000",
+      "hits": false,
+      "detail": {
+        "pearson": 0.016893248544161212,
+        "spearman": 0.015760826529860487,
+        "pearson_mixed": 0.0002530930707514163,
+        "mi_real": 7.533253368741395e-05,
+        "mi_mixed": 9.286240366856302e-06,
+        "cond_gain_real": 0.07378395215308778,
+        "cond_gain_mixed": 0.00013697735291799736
+      }
+    }
+  ],
+  "n_tools": 6,
+  "n_hits": 1,
+  "dipole_tools_hit": false,
+  "known_femtoscopy_visible": true,
+  "CRITICAL_dipole_blind_to_real_correlation": true,
+  "reading_guard": "Each tool = one data point, no verdict. Weight by consistency; a lone hit is not promoted. NO new-law claim.",
+  "runtime_s": 23.3
+}

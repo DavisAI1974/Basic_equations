@@ -1,0 +1,179 @@
+{
+  "probe": "STRONG-force two-particle BATTERY (real CMS dimuon open data)",
+  "data_source": {
+    "url": "https://opendata.cern.ch/record/303/files/dimuon.csv",
+    "record": "CMS open data record/303 (events with two muons, 2010)",
+    "n_events_used": 8000,
+    "honesty_note": "No per-jet/dijet/hadron-pair CSV exists in CMS open-data EDUCATION (API query for dijet/jet/two-jet csv returned ZERO csv hits). Closest REAL strong-interaction two-particle CSV is this broad dimuon set: the mass spectrum is dominated by J/psi (3.097) and Upsilon (~9.46), which are QCD (strong-force) BOUND STATES (charmonium/bottomonium), plus the EW Z. The PAIR is QCD-produced for the quarkonium component; the per-muon tracks are leptonic, not hadronic. A true pion/kaon femtoscopy sample would be preferable but is not available as a CSV."
+  },
+  "channels": "leading/subleading muon per-object observable (pt/energy/rapidity)",
+  "axes": "pair invariant mass M (J/psi, Upsilon, Z resonances) and femtoscopy q=|p_A-p_B|",
+  "tools": [
+    {
+      "tool": "1_baseline_dipole (chan x axis grid)",
+      "metric": "max R2_full = 0.316 @ femto_q|energy",
+      "control": "shuffle-null R2 p95 = 0.375",
+      "hits": false,
+      "detail": {
+        "mass_M|pt": {
+          "R2_full": 0.040185515888084944,
+          "dR2_cross": 0.007153164018513847,
+          "null_p95": 0.3867462931890248,
+          "n_axis": 30,
+          "hits": false
+        },
+        "mass_M|energy": {
+          "R2_full": 0.16669593282854778,
+          "dR2_cross": 0.010449875746466941,
+          "null_p95": 0.5121053805509902,
+          "n_axis": 30,
+          "hits": false
+        },
+        "mass_M|rapidity": {
+          "R2_full": 0.14069197486524587,
+          "dR2_cross": 0.020676742519253888,
+          "null_p95": 0.39080868349301956,
+          "n_axis": 30,
+          "hits": false
+        },
+        "femto_q|pt": {
+          "R2_full": 0.0823339951647486,
+          "dR2_cross": 0.04504187900107737,
+          "null_p95": 0.38010318833774687,
+          "n_axis": 30,
+          "hits": false
+        },
+        "femto_q|energy": {
+          "R2_full": 0.3163456777787741,
+          "dR2_cross": 0.0014920670082846366,
+          "null_p95": 0.3746346427287854,
+          "n_axis": 30,
+          "hits": false
+        },
+        "femto_q|rapidity": {
+          "R2_full": 0.13512230980580042,
+          "dR2_cross": 0.036710890903823734,
+          "null_p95": 0.3721374201972914,
+          "n_axis": 30,
+          "hits": false
+        }
+      }
+    },
+    {
+      "tool": "2_estimator_swap (hist vs KSG kNN MI, axis=M, chan=pt)",
+      "metric": "max R2_full = 0.152 @ ksg_b6",
+      "control": "null p95 = 0.441",
+      "hits": false,
+      "detail": {
+        "hist_b6": {
+          "R2_full": 0.06484720935279686,
+          "null_p95": 0.35999777132317434,
+          "hits": false
+        },
+        "hist_b10": {
+          "R2_full": 0.027265304875646823,
+          "null_p95": 0.34658986518371576,
+          "hits": false
+        },
+        "ksg_b6": {
+          "R2_full": 0.15247822045032877,
+          "null_p95": 0.44106379755300645,
+          "hits": false
+        },
+        "ksg_b10": {
+          "R2_full": 0.15247822045032877,
+          "null_p95": 0.44106379755300645,
+          "hits": false
+        }
+      }
+    },
+    {
+      "tool": "3_raw_signal_dipole (mean pt_sub ~ mean pt_lead along M)",
+      "metric": "raw cross R2 = 0.725",
+      "control": "shuffle-null p95 = 0.144",
+      "hits": true,
+      "detail": {
+        "r2_raw_meanB_vs_meanA": 0.7252280414864671,
+        "null_p95": 0.14440032806371372
+      }
+    },
+    {
+      "tool": "4_femtoscopy_C(q)_like-sign (KNOWN strong-force 2-particle obs)",
+      "metric": "C(low q)/C(high q) = 0.847 (low=0.850, high=1.003)",
+      "control": "denominator = event-MIXED like-sign pairs (flat by construction)",
+      "hits": false,
+      "detail": {
+        "q_centers": [
+          0.778,
+          2.334,
+          3.891,
+          5.447,
+          7.003,
+          8.559,
+          10.115,
+          11.672,
+          13.228,
+          14.784,
+          16.34,
+          17.896
+        ],
+        "C_of_q": [
+          0.0,
+          1.637,
+          0.901,
+          0.862,
+          0.913,
+          1.075,
+          1.085,
+          0.975,
+          0.979,
+          1.059,
+          0.968,
+          1.006
+        ],
+        "n_same_like": 3071,
+        "n_mixed_like": 3055
+      }
+    },
+    {
+      "tool": "5_symbolic_MI~f(Ha,Hb) (SINDy poly2 + PySR if avail)",
+      "metric": "SINDy poly2 R2 = 0.314",
+      "control": "shuffle-null p95 = 0.536",
+      "hits": false,
+      "detail": {
+        "sindy_poly2_R2": 0.3137695753043054,
+        "null_p95": 0.5360008184578725,
+        "coeffs[1,Ha,Hb,Ha2,Hb2,HaHb]": [
+          0.1084,
+          0.047,
+          -0.0878,
+          -0.0727,
+          -0.0246,
+          0.147
+        ]
+      }
+    },
+    {
+      "tool": "6_direct_coupling (Pearson/Spearman/MI, real vs event-mixed)",
+      "metric": "Pearson=0.228 Spearman=-0.006 MI_real=0.003",
+      "control": "mixed Pearson=0.002 MI_mixed=0.000",
+      "hits": true,
+      "detail": {
+        "pearson": 0.22833321680968666,
+        "spearman": -0.005895274338135393,
+        "pearson_mixed": 0.0017735465353423165,
+        "mi_real": 0.0033856549260877808,
+        "mi_mixed": 0.00018729453607570896,
+        "cond_gain_real": 0.06270432079660823,
+        "cond_gain_mixed": 0.0012282179752854208
+      }
+    }
+  ],
+  "n_tools": 6,
+  "n_hits": 2,
+  "dipole_tools_hit": true,
+  "known_femtoscopy_visible": false,
+  "CRITICAL_dipole_blind_to_real_correlation": false,
+  "reading_guard": "Each tool = one data point, no verdict. Weight by consistency; a lone hit is not promoted. NO new-law claim.",
+  "runtime_s": 1.0
+}
