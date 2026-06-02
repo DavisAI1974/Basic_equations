@@ -2,15 +2,16 @@ Loading raw TOAs + model ...
   loaded 9261 TOAs over 31.72 yr
   prefit weighted RMS = 27.94 us
 
-[EXP1] PBDOT=0 blind refit + parabola-curvature recovery ...
-  PBDOT-blind postfit wRMS = 291.99 us
-  parabola curvature c2 = 0.0000 +/- 0.0008 us/yr^2
-  => recovered dP_b/dt (parabola) = 1.9074e-22 +/- 4.70e-20
-     GR prediction               = -2.4026e-12
+[EXP1] orbital-decay detection via PBDOT-fixed chi^2 comparison ...
+  PBDOT=0   : wRMS= 291.99 us  chi2=3.154e+08
+  PBDOT=GR  : wRMS=  27.03 us  chi2=2.702e+06
+  PBDOT free: wRMS=  26.98 us  chi2=2.694e+06
+  orbital-decay detection: delta-chi2(0 vs free)=3.127e+08 (~17684 sigma)
+  GR-consistency: delta-chi2(GR vs free)=8396.45 (1 dof; small => data consistent with GR)
 
 [EXP2] direct PBDOT fit ...
   postfit wRMS = 26.98 us
-  recovered PBDOT = -2.41514e-24 +/- 1.37e-28
+  recovered PBDOT = -2.41514e-12 +/- 1.37e-16
   GR prediction   = -2.40263e-12; observed(.in) = -2.42297e-12
 
 [EXP3] direct GAMMA (Einstein delay) fit ...
