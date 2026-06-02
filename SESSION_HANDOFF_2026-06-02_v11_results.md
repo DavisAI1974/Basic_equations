@@ -59,6 +59,25 @@ arrived by session end — confirm branch at next session start.
    - All event/noise MI ratios are modest (1.06-1.19x); MEANINGLESS without
      a null distribution (built into the batch runner below).
 
+2b. **First-run decomposition** (s11_first_run_entropy.py ->
+   s11_first_run_entropy_results.json; Greg: "analyze the first run with
+   that frame too"). GW150914 re-read in the entropy frame, asking what
+   breaks the attractor at the merger:
+   - MI, NOT marginal entropies. Event asymmetry |H_a-H_b| barely moves
+     (-0.016); MI spikes (per-window ~0.24 -> 0.66 at the merger). Removing
+     MI from the basis RESTORES the event attractor (event cos 0.231 ->
+     0.959 in the 5-op basis, +0.728).
+   - => two ORTHOGONAL axes: (1) entropy-asymmetry = across-event noise-
+     floor fingerprint (INFO-038 main); (2) MI = within-event merger
+     signature, independent of marginal entropy. Deflationary reading
+     strengthened: the (-1,-1,+2) attractor is equal-marginal-entropy
+     bookkeeping; the GW detection rides the orthogonal MI axis; they do
+     not interfere -- which is why MI-at-merger is a clean detector and the
+     attractor a separate geometric fact.
+   - Open thread (1 event): in the no-MI basis NOISE sits OFF the attractor
+     (0.301) and EVENT sits ON it (0.959) -- a reversal to check across the
+     12-event batch, not over-read now.
+
 3. **OD consolidation onto main** (Greg: "make sure OD is updated with our
    latest jsons on dipole and 4 forces data"):
    - Brought the Session 6/7/8 four-force + per-domain result JSONs and OD

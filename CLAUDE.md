@@ -350,6 +350,21 @@ branch-specifying file had not arrived by session end.
   without the null distribution. Full 12-event batch + per-event off-source
   null built (s11_ligo_batch.py), not yet run. Do not pool: the per-event
   spread is the signal.
+  - **First-run decomposition (s11_first_run_entropy.py; GW150914, 1
+    event)**: re-read the FIRST real-data run in this frame and asked what
+    breaks the attractor at the merger. Answer: MI, NOT the marginal
+    entropies. Event-window asymmetry |H_a-H_b| barely moves (-0.016) while
+    MI spikes (per-window ~0.24 baseline -> 0.66 at the merger). Removing
+    MI from the basis RESTORES the event attractor (event cos 0.231 ->
+    0.959 in the 5-op basis; +0.728). So two ORTHOGONAL axes: (1) the
+    entropy-asymmetry axis = the across-event noise-floor fingerprint
+    (INFO-038 main), (2) the MI axis = the within-event merger signature,
+    independent of marginal entropy. Strengthens the deflationary reading:
+    the (-1,-1,+2) attractor is equal-marginal-entropy bookkeeping while
+    the GW detection rides the orthogonal MI axis -- they do not interfere.
+    Open thread (1 event, not over-read): in the no-MI basis NOISE sits OFF
+    the attractor (0.301) and EVENT sits ON it (0.959) -- a reversal to
+    check across the 12-event batch.
 
 - **OD consolidation (Greg: update OD with latest dipole + 4-force JSONs)**:
   brought Session 6/7/8 four-force + per-domain result JSONs and OD stores
