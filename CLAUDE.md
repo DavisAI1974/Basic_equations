@@ -90,6 +90,33 @@ The Noether-style move: find what is invariant under reparametrizations that gen
 - **NoVell** — cardiac AI for cancer detection from routine ECG. OD on synthetic Vigier 2021 data: 93.3% accuracy, 97.4% sensitivity. Datasets: PTB-XL downloaded, Autonomic Aging identified, MIMIC-IV pending.
 - **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Session 7 added GP regression and PySR symbolic regression on per-domain ensemble-H data: four reproducible per-domain MI-vs-H functional families (physics symmetric quadratic in (H_b-H_a), biology 0.5*exp(H_a/2), chemistry linear H_a, geology constant), cross-seed coefficient variation <5%, cross-domain non-overlap. Session 8 ran four-force unification probe (toy EM/weak/strong/gravity caricatures) yielding shared-substrate + distinct-expression pattern (INFO-027): all four forces share [2,3,4] null direction at cos > 0.997 on (-1,-1,+2)/sqrt(6) Session 3 attractor while EM matches Session 7 physics family (H_b-H_a)^2+const and weak matches Session 7 chemistry family linear-in-H_a. Robustness check (INFO-029): INFO-025 functional family survives T/N_ens/noise sweep at the family level; coefficients are regime-dependent. Mapping campaign (INFO-030): INFO-025 families are baseline-specific regime signatures — large knob deviations mutate the family qualitatively (biology exp -> linear at high beta; chemistry linear -> ratio at low B). Per-domain differentiation now has three independent reproducible signatures (null direction + functional family + four-force shared-substrate). Session 9 double-checked the Session 8 gravity result against the ORIGINAL code across an asymmetry sweep and CORRECTED it (INFO-033): the MI-dominant substrate flip is an asymmetry-THRESHOLD effect ALL coupled caricatures undergo (threshold gravity ~1.1x < EM ~1.3x < weak ~1.6x < strong never), not gravity-specific; adding energy-coupling RAISES thresholds (suppresses the flip), so energy-mediation is not the cause; INFO-031/032 re-tagged incomplete-not-wrong. The "gravity is special at the substrate level" leg of the four-force narrative is removed; INFO-023/INFO-025 legs untouched. See Sessions 5, 6, 7, 8, 9 notes plus ledger (INFO-022 through 033) for current state.
 
+## Markets / Refrag Workspace (placeholder — restore from workspace file)
+
+NOTE (Session 9): the full Markets / Refrag section was OVERWRITTEN when
+this repo's CLAUDE.md was replaced by the master context this session.
+The complete Markets section lives in the E:\refrag workspace CLAUDE.md
+(GitHub DavisAI1974/agent + DavisAI1974/Markets) and in git history of
+this repo (commit baa542d). Restore/re-merge it later. This placeholder
+exists so it is not forgotten.
+
+- **Markets pipeline** (summary): information-side algebraic dipole
+  (H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2) holds in markets operator
+  space; 5-fold CV predictor (H_a > H_b rule) ~0.993 mean accuracy.
+  Predictor scripts: _markets_algebraic_dipole.py, _markets_dipole_
+  kfold.py, _markets_dipole_separation.py, _markets_dipole_chunker_
+  stack.py. Markets is treated as the "5th science." (Full state in the
+  workspace file.)
+- **OPEN QUESTION (Greg, Session 9): do the Markets sessions need PySR +
+  Julia for their runs too?** Informed answer: the current Markets
+  predictor scripts above are pure numpy/scipy/sklearn and do NOT need
+  PySR/Julia as they stand. They WOULD need PySR + the Julia backend
+  only if the Markets dipole work extends to SYMBOLIC REGRESSION of its
+  dipole equations (the way the Information Layer used PySR for the
+  INFO-025 / INFO-031 functional families). If so, the Markets repos
+  need the same SessionStart-hook treatment added to Basic_equations in
+  Session 9 (the hook here does not cover them). Decision + mirroring
+  pending -- handle later.
+
 ## Information Layer — Current State (2026-05-25 Session 3)
 
 ### What's confirmed at data level
@@ -370,21 +397,9 @@ s9_doublecheck_flip.py, s9_characterize.py.
   51cfp, not main). Pydroid-3 on Greg's phone cannot run PySR (no Julia
   on Android; separate env from the cloud container) -- numpy substrate
   scripts only.
-- **Markets / Refrag workspace -- open question (Greg, Session 9): do
-  those sessions need PySR + Julia for their runs too?** The Markets
-  section lives in the E:\refrag workspace CLAUDE.md (DavisAI1974/agent +
-  DavisAI1974/Markets), not this master, so this question is recorded
-  here to travel via mirroring. Informed answer: the CURRENT Markets
-  predictor scripts (_markets_algebraic_dipole.py quadratic fit,
-  _markets_dipole_kfold.py 5-fold CV, _markets_dipole_separation.py
-  Cohen's d, _markets_dipole_chunker_stack.py) are pure numpy/scipy/
-  sklearn and do NOT need PySR/Julia as they stand. They WOULD need
-  PySR + the Julia backend only if the Markets dipole work extends to
-  SYMBOLIC REGRESSION of its dipole equations (the way the Information
-  Layer used PySR for the INFO-025 / INFO-031 functional families). If
-  so, the Markets repos need the same SessionStart-hook treatment added
-  to Basic_equations this session (the hook here does not cover them).
-  Decision + mirroring pending per the Markets workspace.
+- **Markets / Refrag workspace**: open question on whether those
+  sessions need PySR + Julia too -- see the "Markets / Refrag Workspace"
+  placeholder section above for the question and informed answer.
 - All six Operating Rules from Sessions 4-7 in force. No new Rule added
   this session. Branch state: work on
   `claude/gravity-substrate-config-51cfp`, pushed. main untouched. No PR.
