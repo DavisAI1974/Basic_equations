@@ -1,0 +1,150 @@
+[gravity_glance] mode=full cfg={'N_ens': 600, 'T': 30.0, 'dt': 0.02} seeds=[11, 22, 33] niter=40 timeout_s=90
+
+=== gravity_sym_baseline seed=11 (omega1=omega2=0.8, universal E_total coupling (Session 8 baseline)) ===
+  elapsed=26.9s  H_a mean=+0.171 H_b mean=+0.165  MI mean=+0.299 std=0.107
+  KBK v_null 6D = ['+0.023', '-0.021', '-0.457', '-0.361', '+0.812', '-0.000']
+  KBK v_null [2,3,4] = ['-0.457', '-0.362', '+0.813']  cos to (+1,+1,+2) = +0.329
+  PySR best (sympy): 0.37130654 - 0.359950954992482*sqrt(x1**2)
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.145e-02 score=+0.000 0.29858384
+    c=  4 loss=1.009e-02 score=+0.042 0.3196785 - cube(x0)
+    c=  5 loss=9.631e-03 score=+0.046 square(0.6007314 - square(x0))
+    c=  6 loss=9.263e-03 score=+0.039 0.3355552 - (square(x1) * 0.57152826)
+    c=  7 loss=9.062e-03 score=+0.022 cube(0.6993996 - (square(x1) * 0.5230872))
+    c=  8 loss=8.355e-03 score=+0.081 0.37130654 - sqrt((x1 * x1) * 0.12956469)
+
+=== gravity_sym_baseline seed=22 (omega1=omega2=0.8, universal E_total coupling (Session 8 baseline)) ===
+  elapsed=5.9s  H_a mean=+0.173 H_b mean=+0.189  MI mean=+0.315 std=0.108
+  KBK v_null 6D = ['-0.023', '+0.025', '-0.381', '-0.436', '+0.815', '-0.000']
+  KBK v_null [2,3,4] = ['-0.381', '-0.436', '+0.815']  cos to (+1,+1,+2) = +0.332
+  PySR best (sympy): (0.6853559 - x1)*(x0 + 0.5277822)
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.169e-02 score=+0.000 0.31445846
+    c=  4 loss=1.024e-02 score=+0.044 0.33859104 - cube(x1)
+    c=  6 loss=9.342e-03 score=+0.046 0.35473314 - square(x0 + -0.11051895)
+    c=  7 loss=8.782e-03 score=+0.062 (x0 + 0.5277822) * (0.6853559 - x1)
+    c=  9 loss=8.164e-03 score=+0.036 cube((x0 / exp(x0)) - (-0.74095535 + x1))
+    c= 10 loss=7.859e-03 score=+0.038 cube((x0 / (x0 - -0.97217876)) - (x1 + -0.7397089))
+
+=== gravity_sym_baseline seed=33 (omega1=omega2=0.8, universal E_total coupling (Session 8 baseline)) ===
+  elapsed=5.7s  H_a mean=+0.173 H_b mean=+0.165  MI mean=+0.328 std=0.117
+  KBK v_null 6D = ['-0.000', '-0.001', '-0.395', '-0.421', '+0.816', '-0.001']
+  KBK v_null [2,3,4] = ['-0.395', '-0.421', '+0.816']  cos to (+1,+1,+2) = +0.334
+  PySR best (sympy): 0.38585678 - x1**2*(x1 - 1*1.3332555)**2
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.362e-02 score=+0.000 0.3276635
+    c=  4 loss=1.162e-02 score=+0.053 0.3853647 - square(x1)
+    c=  5 loss=1.129e-02 score=+0.029 square(0.62545997 - square(x1))
+    c=  6 loss=1.096e-02 score=+0.030 0.36821172 - square(x0 - 0.08031443)
+    c=  7 loss=1.071e-02 score=+0.023 0.36821172 - square(x0 - cube(x0))
+    c=  8 loss=1.014e-02 score=+0.054 0.38585678 - square((x1 - 1.3332555) * x1)
+
+=== gravity_asym_omegas seed=11 (omega1=0.8 omega2=1.0, universal E_total coupling (symmetry swap)) ===
+  elapsed=5.9s  H_a mean=+0.093 H_b mean=+0.047  MI mean=+0.213 std=0.030
+  KBK v_null 6D = ['-0.034', '-0.032', '-0.062', '-0.011', '+0.076', '+0.994']
+  KBK v_null [2,3,4] = ['-0.628', '-0.113', '+0.770']  cos to (+1,+1,+2) = +0.325
+  PySR best (sympy): (x0 + x1/exp(x0))*0.03290111 - 1*(-0.20835423)
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=8.884e-04 score=+0.000 0.21295172
+    c=  5 loss=7.347e-04 score=+0.047 (x0 * 0.03740521) - -0.20949878
+    c=  6 loss=7.105e-04 score=+0.033 (cube(x0) * 0.18662547) - -0.20923972
+    c=  7 loss=6.845e-04 score=+0.037 ((x1 + x0) * 0.029314749) - -0.20885028
+    c=  9 loss=6.692e-04 score=+0.011 (x0 * 0.037966486) - ((x1 * -0.02219297) - 0.2083905)
+    c= 10 loss=6.311e-04 score=+0.059 ((x0 + (x1 / exp(x0))) * 0.03290111) - -0.20835423
+
+=== gravity_asym_omegas seed=22 (omega1=0.8 omega2=1.0, universal E_total coupling (symmetry swap)) ===
+  elapsed=5.9s  H_a mean=+0.111 H_b mean=+0.048  MI mean=+0.213 std=0.035
+  KBK v_null 6D = ['-0.035', '-0.023', '-0.102', '+0.002', '+0.132', '+0.985']
+  KBK v_null [2,3,4] = ['-0.610', '+0.013', '+0.792']  cos to (+1,+1,+2) = +0.403
+  PySR best (sympy): (-x0**3 - 0.06788935)**2 + 0.19625464
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.240e-03 score=+0.000 0.21303247
+    c=  5 loss=9.931e-04 score=+0.056 cube(square(x0)) + 0.20429663
+    c=  6 loss=9.349e-04 score=+0.060 cube(x0 / 1.7269204) + 0.20810705
+    c=  7 loss=8.437e-04 score=+0.103 square(-0.06788935 - cube(x0)) + 0.19625464
+    c=  9 loss=7.655e-04 score=+0.049 0.20876725 - ((x0 * (x1 + -0.38212943)) * 0.11407263)
+    c= 10 loss=7.179e-04 score=+0.064 (1.7226726 - cube((x1 * x0) - x0)) / 8.246213
+
+=== gravity_asym_omegas seed=33 (omega1=0.8 omega2=1.0, universal E_total coupling (symmetry swap)) ===
+  elapsed=6.3s  H_a mean=+0.084 H_b mean=+0.044  MI mean=+0.220 std=0.042
+  KBK v_null 6D = ['-0.072', '-0.016', '-0.037', '+0.026', '+0.112', '+0.990']
+  KBK v_null [2,3,4] = ['-0.305', '+0.215', '+0.928']  cos to (+1,+1,+2) = +0.721
+  PySR best (sympy): x0*0.072725296 + 0.21386057
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.779e-03 score=+0.000 0.21996604
+    c=  5 loss=1.131e-03 score=+0.113 (x0 * 0.072725296) + 0.21386057
+    c=  6 loss=1.080e-03 score=+0.046 (cube(x0) * 0.3310992) + 0.21505736
+    c=  7 loss=1.071e-03 score=+0.008 cube((cube(x0) * 0.30756152) + 0.59806424)
+    c=  8 loss=9.838e-04 score=+0.085 ((x0 * 0.07069841) / exp(x1)) + 0.21387395
+    c=  9 loss=9.536e-04 score=+0.031 (x0 * ((x1 * -0.099214196) - -0.07400855)) - -0.21409032
+
+=== gravity_nonuniversal seed=11 (omega1=0.8 omega2=1.0, NON-universal (only E1) coupling) ===
+  elapsed=6.8s  H_a mean=+0.069 H_b mean=+0.069  MI mean=+0.206 std=0.038
+  KBK v_null 6D = ['-0.078', '+0.017', '+0.030', '+0.038', '+0.010', '+0.996']
+  KBK v_null [2,3,4] = ['+0.603', '+0.769', '+0.212']  cos to (+1,+1,+2) = +0.733
+  PySR best (sympy): x0*0.07818198 - 1*(-0.20034124)
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.465e-03 score=+0.000 0.20568821
+    c=  5 loss=8.309e-04 score=+0.142 (x0 * 0.07818198) - -0.20034124
+    c=  6 loss=8.302e-04 score=+0.001 log((x0 * 0.09583267) + 1.2222164)
+    c=  8 loss=8.302e-04 score=+0.000 log(((x0 * 0.10939808) + 1.3951783) * 0.87602717)
+    c=  9 loss=7.993e-04 score=+0.038 ((x0 * 0.07619038) + (x1 * -0.013569095)) - -0.20142479
+    c= 11 loss=7.991e-04 score=+0.000 exp(((exp(x1) * -0.16304855) + x0) * 0.3581996) * 0.21392056
+
+=== gravity_nonuniversal seed=22 (omega1=0.8 omega2=1.0, NON-universal (only E1) coupling) ===
+  elapsed=6.1s  H_a mean=+0.090 H_b mean=+0.066  MI mean=+0.210 std=0.038
+  KBK v_null 6D = ['-0.063', '+0.032', '-0.012', '+0.037', '+0.052', '+0.995']
+  KBK v_null [2,3,4] = ['-0.191', '+0.573', '+0.797']  cos to (+1,+1,+2) = +0.807
+  PySR best (sympy): (x0 - x1)*0.044854872 + 0.20945781
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=1.483e-03 score=+0.000 0.2104701
+    c=  5 loss=9.580e-04 score=+0.109 (x0 * 0.064939134) + 0.20466658
+    c=  6 loss=9.364e-04 score=+0.023 cube(x0 * 0.6485454) - -0.20551534
+    c=  7 loss=8.125e-04 score=+0.142 ((x0 - x1) * 0.044854872) + 0.20945781
+    c=  9 loss=7.645e-04 score=+0.030 ((x0 * 0.06053818) - (x1 * 0.03336735)) + 0.20729277
+    c= 10 loss=7.546e-04 score=+0.013 square(((x0 * 0.06778069) - (x1 * 0.036411308)) + 0.45413107)
+
+=== gravity_nonuniversal seed=33 (omega1=0.8 omega2=1.0, NON-universal (only E1) coupling) ===
+  elapsed=6.1s  H_a mean=+0.061 H_b mean=+0.061  MI mean=+0.216 std=0.045
+  KBK v_null 6D = ['-0.080', '+0.001', '+0.005', '-0.018', '+0.067', '+0.994']
+  KBK v_null [2,3,4] = ['+0.073', '-0.259', '+0.963']  cos to (+1,+1,+2) = +0.710
+  PySR best (sympy): 0.21155162 - (-0.0751684)*x0
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=2.005e-03 score=+0.000 0.2161132
+    c=  5 loss=1.332e-03 score=+0.102 0.21155162 - (x0 * -0.0751684)
+    c=  6 loss=1.332e-03 score=+0.000 cube((x0 * 0.070679165) - -0.5948267)
+    c=  8 loss=1.258e-03 score=+0.028 (x0 * (0.06976931 / exp(x1))) - -0.21059076
+    c=  9 loss=1.245e-03 score=+0.011 (3.273973 - (x0 * (x1 - 1.2290077))) * 0.064305164
+
+=== Cross-seed comparison ===
+  [SYM/UNIV] gravity_sym_baseline:
+    KBK v_null 6D cos seed11__seed22 = +0.9922
+    KBK v_null 6D cos seed11__seed33 = +0.9958
+    KBK v_null 6D cos seed22__seed33 = +0.9992
+    PySR best per seed:
+      seed 11: 0.37130654 - 0.359950954992482*sqrt(x1**2)
+      seed 22: (0.6853559 - x1)*(x0 + 0.5277822)
+      seed 33: 0.38585678 - x1**2*(x1 - 1*1.3332555)**2
+  [ASYM/UNIV] gravity_asym_omegas:
+    KBK v_null 6D cos seed11__seed22 = +0.9974
+    KBK v_null 6D cos seed11__seed33 = +0.9975
+    KBK v_null 6D cos seed22__seed33 = +0.9967
+    PySR best per seed:
+      seed 11: (x0 + x1/exp(x0))*0.03290111 - 1*(-0.20835423)
+      seed 22: (-x0**3 - 0.06788935)**2 + 0.19625464
+      seed 33: x0*0.072725296 + 0.21386057
+  [ASYM/NON-UNIV] gravity_nonuniversal:
+    KBK v_null 6D cos seed11__seed22 = +0.9980
+    KBK v_null 6D cos seed11__seed33 = +0.9964
+    KBK v_null 6D cos seed22__seed33 = +0.9976
+    PySR best per seed:
+      seed 11: x0*0.07818198 - 1*(-0.20034124)
+      seed 22: (x0 - x1)*0.044854872 + 0.20945781
+      seed 33: 0.21155162 - (-0.0751684)*x0
+
+=== Cross-config comparison (mean v_null per config) ===
+  cos(gravity_sym_baseline <-> gravity_asym_omegas) = +0.1119
+  cos(gravity_sym_baseline <-> gravity_nonuniversal) = +0.0239
+  cos(gravity_asym_omegas <-> gravity_nonuniversal) = +0.9939
+
+[gravity_glance] wrote gravity_glance_results.json  elapsed=75.5s
