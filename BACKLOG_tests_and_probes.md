@@ -28,6 +28,21 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
 
 ---
 
+## NEXT PROBE (Greg, S18) -- FLOW DIPOLE EQUATION on the flows (TOP of queue)
+Reframe/continuation of the O2/flow thread (slots in, not bottom). S18 confirmed FLOW is a
+substrate with TIME as gravity's expression, generalizing to all 4 forces + chemistry
+(INFO-062/063/064). Greg's next ask: figure out the flow DIPOLE EQUATION on these flows.
+Each flow is currently a single characteristic vs an axis; a flow DIPOLE needs TWO coupled
+channels in the info-dipole paper's form:
+  dMI/dt ~ sum_i c_self,i*H_i^2 + sum_{i<j} c_cross,ij*H_i*H_j + linear   (opposition signature)
+PLAN: pick 2 channels per flow -- chemistry Brusselator = native 2 species x,y (START HERE,
+cleanest); gravity = H1/L1 detectors (inter-detector MI already in INFO-053); strong/EM/weak
+= two observables. Extract the flow-dipole equation per system, then test substrate/expression
+AT THE EQUATION LEVEL: shared dipole FORM (substrate) + per-domain COEFFICIENTS (expressions).
+Connect to the info-dipole paper (davisai.ai/dipole) + the Markets flow dipole. Guard against
+the INFO-051 bookkeeping artifact (MI is the only scale-invariant operator). Greg's epistemic
+rule: a non-conforming system is one data point / maybe wrong observable, NOT a falsification.
+
 ## GRAVITY thread (primary focus)
 
 1. **Substrate construction-vs-nature test** -- DONE (S17, INFO-051). Answer:

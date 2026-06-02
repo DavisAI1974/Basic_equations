@@ -125,15 +125,59 @@ merger GPS.
 Gravity now has THREE independent raw-data governing-law recoveries: inspiral chirp
 (INFO-052), time dilation (INFO-059 GPS + INFO-060 pulsar), and BNS chirp mass (INFO-061).
 
+## FLOW pivot (Greg) — flow=substrate, time=one expression (INFO-062/063/064)
+Greg: "flow can have many expressions and time is one of them, just like quantum physics is
+one expression of physics." Tested as substrate-vs-expression. Greg's epistemic rule
+(load-bearing): a non-conforming system is ONE data point / possibly the wrong observable,
+NOT a falsification of the frame or of that system.
+
+- **INFO-062 (`probe_flow_substrate_expression.py`)**: SUBSTRATE = a characteristic running
+  monotonically and DIVERGING toward a critical point. gravity chirp + strong alpha_s both
+  flow (|rho|=1.000); WEAK Z (a real critical point at M_Z) does NOT (|rho|=0.054, peaks) =
+  control beats "monotonic=trivial". Critical point real (gravity R^2 scan locks to true
+  t_c). EXPRESSION: axis distinct (time/scale/mass); form open here.
+- **INFO-063 (`probe_flow_battery.py`) -- ALL 4 FORCES**: 5 flows -- gravity (time), strong
+  (scale), EM alpha_em running (scale, OPPOSITE sign), weak alpha_2 running (scale),
+  Brusselator->Hopf critical slowing (CONTROL-PARAMETER axis, new domain, q=1.000 R^2=1.000).
+  Controls weak-Z + driven-oscillator correctly non-flow. WEAK is flow (running) AND non-flow
+  (Z resonance) -> "non-flow" was an OBSERVABLE CHOICE (Greg's wrong-observable point in
+  data). EM was previously omitted because its program object was HBT (a correlation, not a
+  flow); its flow is the alpha_em running. MISS kept as data: GW170817 H1 ridge (wrong
+  observable). FORM distinct where measurable: gravity 3/8 vs Brusselator 1.0.
+- **INFO-064 (`probe_flow_form_strong.py`)**: strong's divergence FORM (power vs log)
+  UNDETERMINED -- the critical region Q->Lambda is nonperturbative/inaccessible (duality
+  breaks <0.84 GeV; the measured coupling FREEZES to alpha_s(0)~0.76, so the Landau-pole
+  divergence is a SCHEME ARTIFACT). |dR^2|<0.02 even at Q/Lambda~5.6. Legitimate undetermined,
+  not a falsification.
+
+NET: FLOW substrate confirmed + generalizes to all 4 forces + chemistry; TIME is gravity's
+expression. Axis distinct; form distinct where measurable; axis UNIFICATION still not
+data-forced (construction-confounded). No new Operating Rule.
+
+## QUEUED NEXT PROBE (Greg) — the FLOW DIPOLE EQUATION on these flows
+Each flow is currently a single characteristic vs an axis. A flow DIPOLE needs TWO coupled
+channels, in the info-dipole paper's form:
+  dMI/dt ~ sum_i c_self,i * H_i^2 + sum_{i<j} c_cross,ij * H_i*H_j + linear   (opposition signature)
+Plan: pick the 2 channels per flow -- gravity = H1/L1 detectors (inter-detector MI already in
+INFO-053); chemistry Brusselator = its native 2 species x,y (cleanest, start here); strong/
+EM/weak = two observables. Extract the flow-dipole equation per system, then test substrate/
+expression AT THE EQUATION LEVEL: a shared dipole FORM (substrate) with per-domain
+COEFFICIENTS (expressions). Connect to the info-dipole paper (davisai.ai/dipole) + the
+Markets flow dipole. This closes the loop on Greg's "time = flow dipole". IDEAL FIRST PROBE
+for the fresh session.
+
 ## Files this session
 - `probe_gravity_time_dilation.py` + `_results.json` + `_canary.json` (6c-A, INFO-058).
 - `probe_6c_gps_positive.py` + `_route2_obs.py` + `_results.json` + `_canary.json` (6c-B,
   INFO-059).
 - `probe_pulsar_time.py` + `_results.json` + `_run.log` (6c-C, INFO-060).
 - `probe_o3_gw170817_chirpmass.py` + `_results.json` + `_canary.json` (O3, INFO-061).
-- `CLAUDE.md` (header S18, ledger INFO-058/059/060, Capability Demonstrations + Session 18
-  note + handoff pointer), `CAPABILITY_BRIEF.md`, `BACKLOG_tests_and_probes.md` (6c marked).
-- Raw data under gitignored `data/gps/`, `data/pulsar/` (+ `data/ligo_bulk/` for O3).
+- `probe_flow_substrate_expression.py` + `_results.json` (INFO-062).
+- `probe_flow_battery.py` + `_results.json` (INFO-063, all 4 forces).
+- `probe_flow_form_strong.py` + `_results.json` (INFO-064, strong form undetermined).
+- `CLAUDE.md` (header S18, ledger INFO-058..064, Capability Demonstrations + Session 18
+  note + handoff pointer), `CAPABILITY_BRIEF.md`, `BACKLOG_tests_and_probes.md`.
+- Raw data under gitignored `data/gps/`, `data/pulsar/`, `data/strong/` (+ `data/ligo_bulk/`).
 
 ## Env notes (do not persist across containers)
 - Pulsar route: `pip install pint-pulsar pdfminer.six`, `pip install --force-reinstall cffi`
@@ -142,7 +186,11 @@ Gravity now has THREE independent raw-data governing-law recoveries: inspiral ch
 - numpy 2.4 removed `ndarray.ptp()` -> use `np.ptp(...)`.
 
 ## Next (backlog; Greg picks; clear backlog before new probes; stop after each probe)
+- **FIRST PROBE for the fresh session (Greg): the FLOW DIPOLE EQUATION on these flows** --
+  see the "QUEUED NEXT PROBE" section above. 2-channel dMI/dt dipole form per flow; start
+  with the Brusselator (native 2 species) + gravity H1/L1; test substrate(form)/expression
+  (coefficients); connect to the info-dipole paper + Markets flow dipole.
 - 6c follow-ups: replicate the GPS positive recovery across stations/days + dual-frequency
-  ionosphere-free combination to recover the circular-GPS sats; GW170817 absolute mass (O3).
+  ionosphere-free combination to recover the circular-GPS sats.
 - Remaining backlog: #2 EM/HBT construction control (Zenodo 5113016), #7 SF femtoscopy-R,
   #9 INFO-039 promotion, housekeeping #11 (MASTER_DISCOVERIES).

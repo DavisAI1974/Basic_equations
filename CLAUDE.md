@@ -36,7 +36,13 @@ route (INFO-060, raw Arecibo TOAs of PSR B1913+16) recovered orbital decay dP_b/
 GNSS-independent. Plus O3 (INFO-061): recovered the GW170817 BNS chirp mass by matched
 filtering raw LIGO strain -- detector-frame M_c 1.200 (0.19% from catalog), H1+L1 agree,
 removing the S17 ridge's absolute-mass bias. Gravity now has THREE raw-data recoveries.
-Capability brief updated. Prior S17 below.
+Then Greg's FLOW pivot (INFO-062/063/064): FLOW is a substrate, TIME is gravity's
+expression (like QM is one expression of physics). Substrate (monotonic divergence to a
+critical point) confirmed + generalizes to ALL 4 FORCES + chemistry over axes
+time/scale/control-param; weak is flow-or-not depending on observable (running vs Z
+resonance) = Greg's wrong-observable point in data; controls (Z resonance, oscillator)
+correctly non-flow; strong's form undetermined (nonperturbative). QUEUED NEXT: the FLOW
+DIPOLE EQUATION on these (2-channel dMI/dt form). Capability brief updated. Prior S17 below.
 
 **Session 17 recap:** Read `SESSION_HANDOFF_2026-06-02_S17.md`. (1) JOB 1 done — the
 CLAUDE.md drift is fixed. (2) Backlog #1 (construction-vs-
@@ -873,6 +879,26 @@ the pulsar route IN PARALLEL.
   mass bias (form right at R^2 0.88, mass was 15.7). Env: pycbc 2.11.0 (--ignore-installed
   cryptography) silently shadows scipy with a broken 1.16.3 -> force-reinstall --no-deps
   scipy; use pycbc TimeSeries.gate() not a hand-rolled taper.
+- **FLOW = substrate, TIME = one expression (Greg's pivot; INFO-062/063/064)**: tested
+  Greg's frame "flow has many expressions, time is one (like QM is one expression of
+  physics)". SUBSTRATE (monotonic divergence to a critical point) CONFIRMED + GENERALIZES:
+  5 flows across ALL 4 FORCES + chemistry -- gravity (TIME), strong (scale), EM (scale, opp
+  sign), weak alpha_2 (scale), Brusselator->Hopf (control-parameter, new domain). Controls
+  (weak Z resonance, driven oscillator) correctly PEAK = non-flows -> flow is a real
+  restriction. WEAK is both flow (running) and non-flow (Z resonance) -> "non-flow" was an
+  OBSERVABLE CHOICE (Greg's wrong-observable point, in data). EXPRESSION: axis distinct
+  (time/scale/mass/control-param); FORM distinct where measurable (gravity 3/8 vs Brusselator
+  1.0), UNDETERMINED for strong (nonperturbative critical region freezes, INFO-064). Axis
+  UNIFICATION still not data-forced. Greg's epistemic rule applied: a non-conforming system
+  is one data point / possibly wrong observable, NOT a falsification (e.g. GW170817 miss).
+- **QUEUED NEXT (Greg): the FLOW DIPOLE EQUATION on these flows.** Each flow is currently a
+  single characteristic vs an axis; a flow DIPOLE needs 2 coupled channels in the paper's
+  form dMI/dt ~ sum c_self*H_i^2 + sum c_cross*H_i*H_j + linear (opposition signature).
+  Channels per flow: gravity = H1/L1 detectors (inter-detector MI already in INFO-053);
+  chemistry Brusselator = its native 2 species x,y (cleanest); strong/EM/weak = two
+  observables. Test substrate/expression AT THE EQUATION LEVEL: shared dipole FORM (substrate)
+  with per-domain COEFFICIENTS (expressions); connect to the info-dipole paper + Markets flow
+  dipole. Ideal first probe for the fresh session.
 - **Env notes (do not persist across containers)**: pulsar route needed `pip install
   pint-pulsar pdfminer.six`, `pip install --force-reinstall cffi` (broken container
   cryptography binding), and a certifi CA-bundle patch for PINT clock downloads. numpy 2.4
@@ -1110,6 +1136,46 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   ~1.187 reached after z~0.0099 correction (not applied). Catalog = comparison target only,
   not cited as support. Gravity now has THREE raw-data recoveries (chirp INFO-052, time
   dilation INFO-059/060, BNS chirp mass INFO-061).
+
+- **INFO-062 -- LOCATED (Session 18, new; O2/flow reframe; data in hand)**: Greg's frame
+  "FLOW is a substrate, each domain EXPRESSES it along its own axis; TIME is gravity's
+  expression (like QM is one expression of physics)" tested as substrate-vs-expression
+  (`probe_flow_substrate_expression.py`). SUBSTRATE (flow = a characteristic running
+  monotonically and DIVERGING toward a critical point): gravity chirp |rho|=1.000 + strong
+  alpha_s |rho|=1.000 both flow; WEAK (Z, a genuine critical point at M_Z) does NOT --
+  |rho|=0.054, peaks = resonance. The control BEATS the deflationary "monotonic=trivial"
+  reading (a real critical point is not automatically a flow). Critical point is REAL:
+  gravity power-law R^2 scan locks to the true t_c (16.4236->16.4234, 0.2 ms); gravity
+  exponent q=0.393 vs GR 3/8. EXPRESSION: AXIS clearly distinct (time/scale/mass); FUNCTIONAL
+  FORM undetermined here (strong fits power ~ log far from Lambda). Frame SUPPORTED at
+  substrate+axis, OPEN at form; axis UNIFICATION not data-forced (construction-confounded).
+
+- **INFO-063 -- LOCATED (Session 18, new; flow battery; widen + control + ALL 4 FORCES)**:
+  `probe_flow_battery.py`. WIDEN: the flow substrate GENERALIZES beyond the original two
+  forces and beyond time/scale -- 5 flows: gravity GW150914 (time), strong (scale), EM
+  alpha_em running (scale, OPPOSITE sign -> Landau pole), weak SU(2) alpha_2 running (scale),
+  and chemistry Brusselator->Hopf CRITICAL SLOWING (CONTROL-PARAMETER axis, new domain;
+  q=1.000 R^2=1.000, textbook mean-field exponent). ALL 4 FORCES flow under the right
+  observable (Greg's "all 4 forces" catch). DEEPEN CONTROL: weak Z resonance (|rho|0.054)
+  and a driven oscillator (|rho|0.559) both PEAK -> non-flows; the flow restriction is real.
+  KEY (Greg's wrong-observable point, in data): WEAK appears as BOTH a flow (alpha_2 running)
+  and a non-flow (Z resonance) -- so "weak=non-flow" was an OBSERVABLE CHOICE, not a property.
+  FORM distinct where measurable near-critical: gravity q~3/8 vs Brusselator q=1.0. MISS kept
+  as data (Greg's rule, NOT falsification): GW170817 H1 ridge (|rho|0.883) = wrong observable
+  (narrow-band H1; BNS SNR in L1; why O3 used matched-filter). Provenance honest: EM alpha_em
+  measured running (comparison-only); weak alpha_2 SM-running-from-measured-anchor (labeled).
+
+- **INFO-064 -- LOCATED / UNDETERMINED (Session 18, new; strong flow FORM; agent)**:
+  `probe_flow_form_strong.py`. Resolve whether the strong flow's divergence FORM (power vs
+  log) is distinguishable by getting alpha_s(Q) near its critical point. ANSWER: NO, and for
+  a real reason -- the region where the forms separate (Q->Lambda) is NONPERTURBATIVE/
+  inaccessible: quark-hadron duality breaks below ~0.84 GeV, and in schemes where the
+  coupling IS measured below 1 GeV it FREEZES to a finite alpha_s(0)~0.76 rather than
+  diverging, so the perturbative MSbar Landau-pole "divergence" is a SCHEME ARTIFACT, not a
+  measurable feature. Pushing to Q/Lambda~5.6: |dR^2|<0.02 (indistinguishable); combined
+  |dR^2|=0.016. Legitimate UNDETERMINED (NOT a falsification; the frame holds at substrate+
+  axis). Provenance: FAR 13 PDG points (measured); NEAR set RGE-from-measured-anchor (best
+  case, labeled); WALL IR-freezing values scheme-dependent (compared, not cited as support).
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 
