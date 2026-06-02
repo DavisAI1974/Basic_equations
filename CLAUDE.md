@@ -211,9 +211,26 @@ x0=H_a, x1=H_b.
   confirmed), PARTIAL for chemistry (stable residual, not MI), FALSE for
   physics/geology (pure equal-entropy). Refines INFO-039: the opposition-as-
   artifact reading is correct ONLY for the equal-entropy domains; biology's
-  coupling is real. Next: per-domain knob tests for chemistry's residual
-  (does it track the Brusselator B parameter?) and whether biology's slope-
-  vs-g curve is a clean coupling-strength readout.
+  coupling is real.
+  - **CONNECTS TO INFO-009 (Session-25 Level-2 four-sciences coupling probe,
+    `level2_four_sciences.py`)**: that earlier session COUPLED all four
+    sciences as networks of N=6 coupled subsystems (Duffing+neighbor coupling,
+    Lotka-Volterra+prey migration, Brusselator+diffusion, Burridge-Knopoff
+    fault segments) and searched for a UNIVERSAL opposing Level-2 dipole across
+    all four -- found NONE (INFO-009, "Level 2 algebraic absent at network
+    scale", R^2 0.02-0.13, logged OPEN). Re-run this session reproduces it: no
+    universal opposing pair at >=3/4, no operator with a shared dominant sign
+    across the 4. INFO-040 now EXPLAINS that null result: coupling is
+    PER-DOMAIN (biology via MI, chemistry via its residual, physics/geology
+    not at all), so there is no shared cross-domain coupling structure for a
+    universal Level-2 dipole to emerge from. INFO-009 (no universal coupling)
+    and INFO-040 (per-domain heterogeneous coupling) are mutually consistent --
+    the four sciences do NOT share one coupling.
+  Next: per-domain knob tests for chemistry's residual (does it track the
+  Brusselator B parameter?), biology's slope-vs-g as a strength readout, and
+  -- since coupling is per-domain -- a PAIRWISE Level-2 search (couple two
+  sciences at a time) rather than the universal-across-4 search that INFO-009
+  showed is empty.
 
 ## Information Layer — Current State (2026-05-25 Session 3)
 

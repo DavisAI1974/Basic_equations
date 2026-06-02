@@ -99,9 +99,14 @@ actions; dropped the Markets pull by Greg's call.
   shared-noise artifact ruled out); chemistry = 0.83 equal-entropy + stable
   0.167 residual 0.54*(H_a+H_b)+0.32*H_a^2-0.55*H_b^2 (|cos| 0.9996);
   physics/geology pure equal-entropy. Coupling real for biology, partial for
-  chemistry, absent for physics/geology -- refines INFO-039. NEXT on this
-  thread: does chemistry's residual track the Brusselator B parameter (same
-  knob design as biology)? map biology's slope-vs-g as a strength readout.
+  chemistry, absent for physics/geology -- refines INFO-039.
+  CONNECTS TO INFO-009: the S25 `level2_four_sciences.py` probe coupled all 4
+  sciences as N=6 networks and searched for a UNIVERSAL Level-2 opposing dipole
+  -- found none (re-run this session confirms: no >=3/4 opposing pair). INFO-040
+  explains it: coupling is PER-DOMAIN, so no universal cross-domain structure
+  exists for a Level-2 dipole. NEXT on this thread: chemistry residual vs
+  Brusselator B (knob test); biology slope-vs-g as strength readout; and a
+  PAIRWISE Level-2 search (two sciences at a time) instead of universal-across-4.
 - **Track B extensions**: SM-parameter-regularity hunt (relations among
   coupling values / mass ratios / CKM-PMNS angles) was framed in v11, not yet
   built.
