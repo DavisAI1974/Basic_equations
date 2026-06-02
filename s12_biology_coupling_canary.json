@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "canary": true,
+    "N_ens": 600,
+    "T": 30.0,
+    "dt": 0.02,
+    "seeds": [
+      11
+    ],
+    "elapsed_s": 2.4
+  },
+  "g_grid": [
+    1.0,
+    0.0
+  ],
+  "results": {
+    "g=1.0": {
+      "per_seed": [
+        {
+          "seed": 11,
+          "mi_frac": 0.9133574764364969,
+          "slope": 0.28049067645713033,
+          "mi_mean": 0.6912802302479624,
+          "null_rank": 1
+        }
+      ],
+      "mi_frac_mean": 0.9133574764364969,
+      "mi_frac_std": 0.0,
+      "slope_mean": 0.28049067645713033,
+      "slope_std": 0.0,
+      "mi_mean_mean": 0.6912802302479624
+    },
+    "g=0.0": {
+      "per_seed": [
+        {
+          "seed": 11,
+          "mi_frac": 0.00022043122226910708,
+          "slope": null,
+          "mi_mean": 0.16788595521123256,
+          "null_rank": 5
+        }
+      ],
+      "mi_frac_mean": 0.00022043122226910708,
+      "mi_frac_std": 0.0,
+      "slope_mean": null,
+      "slope_std": null,
+      "mi_mean_mean": 0.16788595521123256
+    }
+  }
+}

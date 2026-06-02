@@ -1,0 +1,314 @@
+{
+  "title": "OD per-domain governing equations (4 sciences) -- consolidated",
+  "built_by": "s12_consolidate_per_domain.py",
+  "source_files": [
+    "per_domain_kbk_results_seed11.json",
+    "per_domain_kbk_results_seed22.json",
+    "pysr_symbolic_per_domain_results.json",
+    "static_dipole_test.py (flow vs algebraic)",
+    "SESSION_HANDOFF_2026-05-25.md (preserved algebraic eqns)"
+  ],
+  "config": {
+    "N_ens": 600,
+    "T": 30.0,
+    "dt": 0.02
+  },
+  "operator_basis": [
+    "H_a",
+    "H_b",
+    "H_a^2",
+    "H_b^2",
+    "H_a*H_b",
+    "MI"
+  ],
+  "note_x_mapping": "In PySR equations x0=H_a, x1=H_b.",
+  "shared_substrate_flow_dipole": {
+    "name": "flow dipole (Level 1 windowed-null, differential form)",
+    "operator_basis": [
+      "H_a",
+      "H_b",
+      "H_a^2",
+      "H_b^2",
+      "H_a*H_b",
+      "MI"
+    ],
+    "source_paper": "https://davisai.ai/dipole/  (DavisAI, Information Dipole)",
+    "differential_flow_form": "dMI_total/dt ~ sum_i c_self,i*H_i^2 + sum_{i<j} c_cross,ij*H_i*H_j + linear terms",
+    "opposition_signature": "c_self,i and c_cross,ij carry OPPOSING SIGNS -- homeostatic balance of self-complexity growth vs coupling constraint. Paper opposition fractions: cellular 57.1% (12/21), organ 43.3% (13/30).",
+    "algebraic_ratio_form": "C = H_self / H_cross  (H_self = internal Shannon entropy; H_cross = MI I(A;B))",
+    "paper_C_values_by_scale": {
+      "subatomic": 9.06,
+      "molecular": 5.91,
+      "cellular": 1.85,
+      "organ": 0.59,
+      "brain": 1.58,
+      "ecological": 5.19
+    },
+    "opposition_signature_in_our_nulls": {
+      "physics": {
+        "self_coefs_Ha2_Hb2": [
+          -0.407,
+          -0.421
+        ],
+        "cross_coef_HaHb": 0.808,
+        "opposition_present": true
+      },
+      "biology": {
+        "self_coefs_Ha2_Hb2": [
+          -0.021,
+          0.113
+        ],
+        "cross_coef_HaHb": -0.035,
+        "opposition_present": false
+      },
+      "chemistry": {
+        "self_coefs_Ha2_Hb2": [
+          -0.084,
+          -0.429
+        ],
+        "cross_coef_HaHb": 0.383,
+        "opposition_present": true
+      },
+      "geology": {
+        "self_coefs_Ha2_Hb2": [
+          -0.192,
+          0.061
+        ],
+        "cross_coef_HaHb": 0.153,
+        "opposition_present": false
+      }
+    },
+    "substrate_attractor_dir_in_Ha2_Hb2_HaHb": "(-1, -1, +2)/sqrt(6)",
+    "algebraic_identity": "-(H_a - H_b)^2 ~ 0  (equivalently H_a^2 + H_b^2 ~ 2*H_a*H_b)",
+    "reading": "the per-domain null[0] IS a (c_self, c_cross) coefficient vector of the paper's flow form, and shows the opposition signature directly (self-terms H_a^2,H_b^2 negative, cross-term H_a*H_b positive) in physics/chemistry/geology. The (-1,-1,+2)/sqrt(6) attractor is the EQUAL-MARGINAL-ENTROPY identity H_a ~= H_b -- a geometric statistics fact, NOT a coupling (Sessions 5/10/11; confirmed on real LIGO noise where whitened detector noise lands ON it and the chirp leaves it while MI -- a separate operator -- spikes). Deflationary read is the supported one.",
+    "flow_vs_algebraic": "FLOW dipole = differential (dMI/dt = f, paper form above). ALGEBRAIC dipole = instantaneous constraint f(H)=const, e.g. C=H_self/H_cross or markets H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2. See static_dipole_test.py.",
+    "ledger": [
+      "INFO-012",
+      "INFO-014 (interp retracted)",
+      "INFO-022 (rank-3 null subspace)",
+      "INFO-036/038 (equal-entropy on real LIGO data)"
+    ]
+  },
+  "per_domain": {
+    "physics": {
+      "simulator": "Duffing oscillator",
+      "null_direction": {
+        "seeds": {
+          "seed11": {
+            "v_null_6d": [
+              -0.0171,
+              0.011,
+              -0.4068,
+              -0.4206,
+              0.8079,
+              0.0676
+            ],
+            "rank_null_subspace": 1,
+            "min_eig_op_cov": 1.848700705501455e-05
+          },
+          "seed22": {
+            "v_null_6d": [
+              -0.0231,
+              0.0193,
+              -0.4148,
+              -0.4176,
+              0.8067,
+              0.044
+            ],
+            "rank_null_subspace": 1,
+            "min_eig_op_cov": 2.6555504550727166e-05
+          }
+        },
+        "cross_seed_cos": 0.9996,
+        "readable_relation_seed11": "-0.407*H_a^2 -0.421*H_b^2 +0.808*H_a*H_b +0.068*MI ~ 0"
+      },
+      "mi_vs_h_functional_family": {
+        "family_class": "symmetric quadratic in difference: (H_b-H_a)^2 + const",
+        "seeds": {
+          "seed11": {
+            "complexity": 6,
+            "loss": 0.0063577653,
+            "equation_x0Ha_x1Hb": "square(x1 - x0) + 0.27549502"
+          },
+          "seed22": {
+            "complexity": 6,
+            "loss": 0.008487347,
+            "equation_x0Ha_x1Hb": "square(x1 - x0) + 0.2804712"
+          }
+        }
+      },
+      "discipline_status": "LOCATED (cross-seed scatter reported)"
+    },
+    "biology": {
+      "simulator": "Lotka-Volterra",
+      "null_direction": {
+        "seeds": {
+          "seed11": {
+            "v_null_6d": [
+              -0.2681,
+              0.0173,
+              -0.0208,
+              0.1134,
+              -0.0347,
+              0.9557
+            ],
+            "rank_null_subspace": 1,
+            "min_eig_op_cov": 0.02995441451563678
+          },
+          "seed22": {
+            "v_null_6d": [
+              -0.2742,
+              0.0033,
+              -0.0104,
+              0.1027,
+              -0.073,
+              0.9533
+            ],
+            "rank_null_subspace": 1,
+            "min_eig_op_cov": 0.021990470494772065
+          }
+        },
+        "cross_seed_cos": 0.999,
+        "readable_relation_seed11": "-0.268*H_a +0.113*H_b^2 +0.956*MI ~ 0"
+      },
+      "mi_vs_h_functional_family": {
+        "family_class": "exponential in H_a, H_b absent: ~exp(H_a/2)",
+        "seeds": {
+          "seed11": {
+            "complexity": 5,
+            "loss": 0.04304558,
+            "equation_x0Ha_x1Hb": "sqrt(exp(x0 - 1.2656282))"
+          },
+          "seed22": {
+            "complexity": 5,
+            "loss": 0.029318858,
+            "equation_x0Ha_x1Hb": "sqrt(exp(x0 + -1.4068758))"
+          }
+        }
+      },
+      "discipline_status": "LOCATED (cross-seed scatter reported)"
+    },
+    "chemistry": {
+      "simulator": "Brusselator",
+      "null_direction": {
+        "seeds": {
+          "seed11": {
+            "v_null_6d": [
+              -0.335,
+              0.7418,
+              -0.0844,
+              -0.4287,
+              0.383,
+              -0.0007
+            ],
+            "rank_null_subspace": 1,
+            "min_eig_op_cov": 1.111899036086702e-05
+          },
+          "seed22": {
+            "v_null_6d": [
+              -0.2973,
+              0.7828,
+              -0.0577,
+              -0.4318,
+              0.3303,
+              -0.0044
+            ],
+            "rank_null_subspace": 1,
+            "min_eig_op_cov": 3.4565032589216443e-06
+          }
+        },
+        "cross_seed_cos": 0.9967,
+        "readable_relation_seed11": "-0.335*H_a +0.742*H_b -0.084*H_a^2 -0.429*H_b^2 +0.383*H_a*H_b ~ 0"
+      },
+      "mi_vs_h_functional_family": {
+        "family_class": "linear in H_a: a*H_a + b",
+        "seeds": {
+          "seed11": {
+            "complexity": 5,
+            "loss": 0.012593273,
+            "equation_x0Ha_x1Hb": "(x0 * 0.7105541) + 1.0841987"
+          },
+          "seed22": {
+            "complexity": 5,
+            "loss": 0.011527942,
+            "equation_x0Ha_x1Hb": "(x0 * 0.7492548) + 1.0723101"
+          }
+        }
+      },
+      "discipline_status": "LOCATED (cross-seed scatter reported)"
+    },
+    "geology": {
+      "simulator": "Burridge-Knopoff",
+      "null_direction": {
+        "seeds": {
+          "seed11": {
+            "v_null_6d": [
+              -0.6245,
+              0.7387,
+              -0.1925,
+              0.0611,
+              0.1534,
+              -0.0004
+            ],
+            "rank_null_subspace": 3,
+            "min_eig_op_cov": 1.239477054520407e-07
+          },
+          "seed22": {
+            "v_null_6d": [
+              -0.6488,
+              0.7384,
+              -0.1343,
+              0.1225,
+              0.0287,
+              0.0034
+            ],
+            "rank_null_subspace": 3,
+            "min_eig_op_cov": 2.3765131437634644e-07
+          }
+        },
+        "cross_seed_cos": 0.9883,
+        "readable_relation_seed11": "-0.625*H_a +0.739*H_b -0.193*H_a^2 +0.061*H_b^2 +0.153*H_a*H_b ~ 0"
+      },
+      "mi_vs_h_functional_family": {
+        "family_class": "decoupled constant",
+        "seeds": {
+          "seed11": {
+            "complexity": 1,
+            "loss": 0.00044677436,
+            "equation_x0Ha_x1Hb": "0.19899216"
+          },
+          "seed22": {
+            "complexity": 1,
+            "loss": 0.00047745317,
+            "equation_x0Ha_x1Hb": "0.1991787"
+          }
+        }
+      },
+      "discipline_status": "LOCATED (cross-seed scatter reported)"
+    }
+  },
+  "preserved_algebraic_equations": {
+    "chemistry_quadratic": {
+      "equation": "H_a^2 = 0.007 - 0.093*(H_a*H_b) + 1.309*(H_a*H_b)^2",
+      "R2": 0.943,
+      "note": "algebraic dipole, chemistry"
+    },
+    "geology_rank3_constraint": {
+      "equation": "0.724*(H_a*H_b) - 0.441*H_b^2 - 0.290*H_a^2 ~ 0",
+      "residual_std_over_mean": "0.15%",
+      "note": "tight linear coupling H_a~=H_b"
+    },
+    "biology_MI_poly": {
+      "equation": "MI ~ polynomial(H_a)  [INCOMPLETE per Rule D: true family is exponential ~exp(H_a/2), see INFO-025]",
+      "R2": 0.66
+    },
+    "nonlinear_deepdive_Ha2_vs_HaHb_bestcubic_R2": {
+      "physics": 0.874,
+      "biology": 0.448,
+      "chemistry": 0.948,
+      "geology": 0.994,
+      "note": "best-cubic fit H_a^2 vs H_a*H_b per domain (May-25 deep dive); recorded from session figure, not a current repo JSON"
+    }
+  },
+  "frame": "Per-domain differentiation has TWO independent reproducible signatures (null direction INFO-023; functional family INFO-025) on a shared equal-entropy substrate. Still a FRAME, not a claim. 'don't worry about markets' (Greg, S12); markets algebraic dipole form retained in CLAUDE.md placeholder only."
+}

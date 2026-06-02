@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "canary": true,
+    "N_ens": 600,
+    "T": 30.0,
+    "dt": 0.02,
+    "seeds": [
+      11
+    ],
+    "A": 1.0,
+    "B_crit_hopf": 2.0,
+    "baseline_B": 3.0,
+    "elapsed_s": 2.4
+  },
+  "B_grid": [
+    3.0,
+    2.0
+  ],
+  "baseline_residual_relation_B3": [
+    0.5432419633886522,
+    0.5432419633886522,
+    0.3219211634895716,
+    -0.5533019997477012,
+    0.0,
+    0.0
+  ],
+  "results": {
+    "B=3.0": {
+      "per_seed": [
+        {
+          "seed": 11,
+          "eq_frac": 0.852344624130162,
+          "mi_frac": 5.272389958379627e-07,
+          "res_frac": 0.1476548486308421,
+          "res_cos_to_B3base": 0.9933176929924397,
+          "null_rank": 1,
+          "mean_MI": 1.1120202416383929
+        }
+      ],
+      "eq_frac": [
+        0.852344624130162,
+        0.0
+      ],
+      "mi_frac": [
+        5.272389958379627e-07,
+        0.0
+      ],
+      "res_frac": [
+        0.1476548486308421,
+        0.0
+      ],
+      "res_cos_to_B3base_mean": 0.9933176929924397,
+      "res_dir_xseed_abscos": 1.0,
+      "res_relation": "+0.53*H_a +0.53*H_b +0.34*H_a^2 -0.56*H_b^2 ~ 0"
+    },
+    "B=2.0": {
+      "per_seed": [
+        {
+          "seed": 11,
+          "eq_frac": 0.005942122845294256,
+          "mi_frac": 0.020661143963426578,
+          "res_frac": 0.9733967331912792,
+          "res_cos_to_B3base": 0.6424598763861923,
+          "null_rank": 4,
+          "mean_MI": 0.5827337442759315
+        }
+      ],
+      "eq_frac": [
+        0.005942122845294256,
+        0.0
+      ],
+      "mi_frac": [
+        0.020661143963426578,
+        0.0
+      ],
+      "res_frac": [
+        0.9733967331912792,
+        0.0
+      ],
+      "res_cos_to_B3base_mean": 0.6424598763861923,
+      "res_dir_xseed_abscos": 1.0,
+      "res_relation": "+0.64*H_a +0.64*H_b +0.25*H_a^2 +0.24*H_b^2 +0.25*H_a*H_b ~ 0"
+    }
+  },
+  "reading": "Chemistry residual knob test: sweep Brusselator B across the Hopf threshold (B_crit=2). Compare to biology, whose MI-slope tracks the Lotka-Volterra g monotonically (s12_biology_coupling). See res_frac vs B and res_cos_to_B3base vs B for whether chemistry's residual is a B-controlled coupling-strength readout or a B-stable structural relation."
+}

@@ -1,0 +1,88 @@
+{
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "basis": [
+    "H_a",
+    "H_b",
+    "H_a^2",
+    "H_b^2",
+    "H_a*H_b",
+    "MI"
+  ],
+  "per_domain": {
+    "physics": {
+      "eqEntropy_frac": [
+        0.996,
+        0.0018
+      ],
+      "MI_coupling_frac": [
+        0.0033,
+        0.0014
+      ],
+      "residual_frac": [
+        0.0007,
+        0.0005
+      ],
+      "null_dir_stability_mean_abscos": 0.9991,
+      "residual_dir_stability_mean_abscos": 0.5805,
+      "residual_relation": "-0.16*H_a -0.16*H_b -0.29*H_a^2 -0.55*H_b^2 -0.42*H_a*H_b ~ 0"
+    },
+    "biology": {
+      "eqEntropy_frac": [
+        0.0517,
+        0.0103
+      ],
+      "MI_coupling_frac": [
+        0.9062,
+        0.0073
+      ],
+      "residual_frac": [
+        0.0422,
+        0.0035
+      ],
+      "null_dir_stability_mean_abscos": 0.9931,
+      "residual_dir_stability_mean_abscos": 0.9489,
+      "residual_relation": "-0.63*H_a -0.63*H_b -0.25*H_a^2 +0.31*H_b^2 ~ 0"
+    },
+    "chemistry": {
+      "eqEntropy_frac": [
+        0.8332,
+        0.02
+      ],
+      "MI_coupling_frac": [
+        0.0,
+        0.0
+      ],
+      "residual_frac": [
+        0.1668,
+        0.02
+      ],
+      "null_dir_stability_mean_abscos": 0.9987,
+      "residual_dir_stability_mean_abscos": 0.9996,
+      "residual_relation": "+0.54*H_a +0.54*H_b +0.32*H_a^2 -0.55*H_b^2 ~ 0"
+    },
+    "geology": {
+      "eqEntropy_frac": [
+        0.9622,
+        0.0049
+      ],
+      "MI_coupling_frac": [
+        0.0,
+        0.0
+      ],
+      "residual_frac": [
+        0.0378,
+        0.0049
+      ],
+      "null_dir_stability_mean_abscos": 0.9794,
+      "residual_dir_stability_mean_abscos": 0.8374,
+      "residual_relation": "-0.66*H_a^2 +0.66*H_b^2 ~ 0"
+    }
+  },
+  "reading": "Where each per-domain constraint LIVES, 5 seeds with scatter: physics + geology are ~pure equal-entropy bookkeeping (no MI), reproducibly. BIOLOGY is 0.906+/-0.007 MI-COUPLING (MI~=0.28*H_a) -- genuine dynamical coupling, confirmed by the g-knob sweep (s12_biology_coupling: g=0 -> MI-frac 0.006, g>0 -> 0.81-0.97; slope tracks coupling strength). CHEMISTRY carries a stable 0.167+/-0.020 residual = 0.54*(H_a+H_b)+0.32*H_a^2-0.55*H_b^2 (total-entropy vs asymmetric quadratic, cross-seed |cos|=1.000) on top of 0.83 equal-entropy. So 'the dipoles are coupled' is TRUE for biology, PARTIAL (residual, not MI) for chemistry, and FALSE (pure bookkeeping) for physics/geology. Refines INFO-039: opposition-as-artifact only for the equal-entropy domains; biology's coupling is real and dynamical."
+}

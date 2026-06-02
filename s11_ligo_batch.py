@@ -21,7 +21,7 @@ Run:  python3 s11_ligo_batch.py            # all 12, full null
       python3 s11_ligo_batch.py --canary   # first 2 events, small null
 Cached downloads in data/ligo_bulk/ (gitignored-large; keep JSON only).
 """
-import sys, os, json, time, urllib.request
+import sys, os, json, time, gc, urllib.request
 import numpy as np, h5py
 from kbk_pipeline import compute_operator_matrix, extract_v1, project_234
 from s11_ligo_perevent import preprocess, align, FS, EDGE_S, per_event
@@ -110,17 +110,41 @@ def run_event(ev):
 
 t0 = time.time()
 evs = EVENTS[:2] if CANARY else EVENTS
+fn = "s11_ligo_batch_canary.json" if CANARY else "s11_ligo_batch_results.json"
 print("="*100)
 print(f"S11 FULL-12 LIGO batch {'[CANARY]' if CANARY else ''}: per-event, no pooling, "
       f"with off-source null (N={N_NULL})")
 print("="*100)
+
+
+def save(results):
+    json.dump(dict(meta=dict(canary=CANARY, n_null=N_NULL,
+                             elapsed_s=round(time.time()-t0, 1),
+                             n_done=len(results)), events=results),
+              open(fn, "w"), indent=2)
+
+
+# Resume-safe: keep any events already scored in a prior (possibly crashed) run.
 results = {}
+if os.path.exists(fn):
+    try:
+        prev = json.load(open(fn)).get("events", {})
+        results = {k: v for k, v in prev.items()
+                   if isinstance(v, dict) and "error" not in v}
+        if results:
+            print(f"[resume] keeping {len(results)} previously scored events: "
+                  f"{list(results)}")
+    except Exception:
+        results = {}
+
 for ev in evs:
+    if ev in results:
+        continue
     try:
         r = run_event(ev)
         results[ev] = r
         if "skipped" in r:
-            print(f"\n{ev}: SKIPPED ({r['skipped']})"); continue
+            print(f"\n{ev}: SKIPPED ({r['skipped']})"); save(results); continue
         e, n = r["event"], r["noise"]
         print(f"\n{ev} (GPS {r['GPS']:.1f}, align {r['align']['lag']:+d}samp):")
         print(f"   H_a={e['H_a']:.3f} H_b={e['H_b']:.3f} |Ha-Hb|={e['asym_absHaHb']:.4f} "
@@ -130,9 +154,8 @@ for ev in evs:
               f"+/-{r['null']['peakMI_std']}  p={r['null']['p_peakMI']}")
     except Exception as ex:
         results[ev] = {"error": str(ex)}; print(f"\n{ev}: ERROR {ex}")
+    save(results)                       # incremental: a crash cannot wipe progress
+    gc.collect()
 
-fn = "s11_ligo_batch_canary.json" if CANARY else "s11_ligo_batch_results.json"
-json.dump(dict(meta=dict(canary=CANARY, n_null=N_NULL,
-                         elapsed_s=round(time.time()-t0, 1)), events=results),
-          open(fn, "w"), indent=2)
-print(f"\nWrote {fn} ({time.time()-t0:.0f}s)")
+save(results)
+print(f"\nWrote {fn} ({time.time()-t0:.0f}s; {len(results)} events)")
