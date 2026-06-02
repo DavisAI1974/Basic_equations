@@ -1,0 +1,374 @@
+{
+  "sim_config": {
+    "N_ens": 400,
+    "T": 20.0,
+    "dt": 0.02
+  },
+  "sim": {
+    "physics_duffing": {
+      "per_seed": [
+        {
+          "flow_R2": 0.075,
+          "flow_coefs": {
+            "H_a": 0.0633,
+            "H_b": -0.5612,
+            "H_a^2": 4.9192,
+            "H_b^2": 5.1722,
+            "H_a*H_b": -8.4393
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            0.445,
+            0.4679,
+            -0.7635
+          ],
+          "cos_flow_to_substrate": 0.996,
+          "cos_flow_to_level_null_quad": 0.995,
+          "level_null_quad_axis": [
+            -0.4153,
+            -0.3942,
+            0.8199
+          ],
+          "seed": 11
+        },
+        {
+          "flow_R2": 0.164,
+          "flow_coefs": {
+            "H_a": 0.0132,
+            "H_b": -0.1702,
+            "H_a^2": 10.2014,
+            "H_b^2": 15.189,
+            "H_a*H_b": -23.0954
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            0.3462,
+            0.5155,
+            -0.7838
+          ],
+          "cos_flow_to_substrate": 0.992,
+          "cos_flow_to_level_null_quad": 1.0,
+          "level_null_quad_axis": [
+            -0.3529,
+            -0.4922,
+            0.7957
+          ],
+          "seed": 22
+        },
+        {
+          "flow_R2": 0.151,
+          "flow_coefs": {
+            "H_a": -0.1012,
+            "H_b": -0.2076,
+            "H_a^2": 8.5764,
+            "H_b^2": 8.0127,
+            "H_a*H_b": -14.366
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            0.4623,
+            0.4319,
+            -0.7744
+          ],
+          "cos_flow_to_substrate": 0.997,
+          "cos_flow_to_level_null_quad": 0.998,
+          "level_null_quad_axis": [
+            -0.4417,
+            -0.3886,
+            0.8086
+          ],
+          "seed": 33
+        }
+      ],
+      "flow_R2_mean": 0.13,
+      "cos_flow_to_substrate_mean": 0.995,
+      "cos_flow_to_level_null_mean": 0.998,
+      "opposition_fraction": 1.0,
+      "cross_seed_axis_cos": [
+        0.994,
+        0.999
+      ]
+    },
+    "biology_lotka": {
+      "per_seed": [
+        {
+          "flow_R2": 0.164,
+          "flow_coefs": {
+            "H_a": 0.0784,
+            "H_b": -0.1908,
+            "H_a^2": 0.1804,
+            "H_b^2": 0.1465,
+            "H_a*H_b": -0.2506
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            0.5278,
+            0.4286,
+            -0.7333
+          ],
+          "cos_flow_to_substrate": 0.989,
+          "cos_flow_to_level_null_quad": 0.683,
+          "level_null_quad_axis": [
+            -0.7947,
+            0.294,
+            0.531
+          ],
+          "seed": 11
+        },
+        {
+          "flow_R2": 0.138,
+          "flow_coefs": {
+            "H_a": 0.071,
+            "H_b": -0.1786,
+            "H_a^2": 0.1039,
+            "H_b^2": 0.0894,
+            "H_a*H_b": -0.1842
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            0.4523,
+            0.3894,
+            -0.8024
+          ],
+          "cos_flow_to_substrate": 0.999,
+          "cos_flow_to_level_null_quad": 0.753,
+          "level_null_quad_axis": [
+            -0.8106,
+            0.1647,
+            0.5619
+          ],
+          "seed": 22
+        },
+        {
+          "flow_R2": 0.089,
+          "flow_coefs": {
+            "H_a": 0.0323,
+            "H_b": -0.1613,
+            "H_a^2": 0.0011,
+            "H_b^2": 0.0296,
+            "H_a*H_b": -0.0655
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            0.0152,
+            0.4114,
+            -0.9113
+          ],
+          "cos_flow_to_substrate": 0.918,
+          "cos_flow_to_level_null_quad": 0.328,
+          "level_null_quad_axis": [
+            -0.8231,
+            0.3003,
+            0.482
+          ],
+          "seed": 33
+        }
+      ],
+      "flow_R2_mean": 0.13,
+      "cos_flow_to_substrate_mean": 0.969,
+      "cos_flow_to_level_null_mean": 0.588,
+      "opposition_fraction": 1.0,
+      "cross_seed_axis_cos": [
+        0.994,
+        0.853
+      ]
+    },
+    "chemistry_brussel": {
+      "per_seed": [
+        {
+          "flow_R2": 0.116,
+          "flow_coefs": {
+            "H_a": -4.9104,
+            "H_b": 6.0568,
+            "H_a^2": -0.7164,
+            "H_b^2": -4.9263,
+            "H_a*H_b": 6.9025
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            -0.0842,
+            -0.5789,
+            0.8111
+          ],
+          "cos_flow_to_substrate": 0.933,
+          "cos_flow_to_level_null_quad": 0.887,
+          "level_null_quad_axis": [
+            -0.0726,
+            -0.8899,
+            0.4504
+          ],
+          "seed": 11
+        },
+        {
+          "flow_R2": 0.099,
+          "flow_coefs": {
+            "H_a": -5.7206,
+            "H_b": 4.8593,
+            "H_a^2": -1.6819,
+            "H_b^2": -4.347,
+            "H_a*H_b": 8.5189
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            -0.1732,
+            -0.4477,
+            0.8773
+          ],
+          "cos_flow_to_substrate": 0.97,
+          "cos_flow_to_level_null_quad": 0.897,
+          "level_null_quad_axis": [
+            -0.1122,
+            -0.7974,
+            0.593
+          ],
+          "seed": 22
+        },
+        {
+          "flow_R2": 0.098,
+          "flow_coefs": {
+            "H_a": -6.8969,
+            "H_b": 9.3812,
+            "H_a^2": -0.8263,
+            "H_b^2": -6.9137,
+            "H_a*H_b": 9.3526
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            -0.0709,
+            -0.593,
+            0.8021
+          ],
+          "cos_flow_to_substrate": 0.926,
+          "cos_flow_to_level_null_quad": 0.921,
+          "level_null_quad_axis": [
+            -0.0905,
+            -0.8581,
+            0.5054
+          ],
+          "seed": 33
+        }
+      ],
+      "flow_R2_mean": 0.104,
+      "cos_flow_to_substrate_mean": 0.943,
+      "cos_flow_to_level_null_mean": 0.902,
+      "opposition_fraction": 1.0,
+      "cross_seed_axis_cos": [
+        0.985,
+        1.0
+      ]
+    },
+    "geology_bk": {
+      "per_seed": [
+        {
+          "flow_R2": 0.003,
+          "flow_coefs": {
+            "H_a": -2.5801,
+            "H_b": -0.7656,
+            "H_a^2": -1.9564,
+            "H_b^2": -1.462,
+            "H_a*H_b": 2.7576
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            -0.5311,
+            -0.3969,
+            0.7486
+          ],
+          "cos_flow_to_substrate": 0.99,
+          "cos_flow_to_level_null_quad": 0.125,
+          "level_null_quad_axis": [
+            -0.5007,
+            0.8633,
+            -0.0639
+          ],
+          "seed": 11
+        },
+        {
+          "flow_R2": 0.001,
+          "flow_coefs": {
+            "H_a": -1.4967,
+            "H_b": -1.6051,
+            "H_a^2": 1.0339,
+            "H_b^2": 0.9535,
+            "H_a*H_b": -2.6142
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            0.3483,
+            0.3212,
+            -0.8806
+          ],
+          "cos_flow_to_substrate": 0.992,
+          "cos_flow_to_level_null_quad": 0.984,
+          "level_null_quad_axis": [
+            -0.3252,
+            -0.485,
+            0.8118
+          ],
+          "seed": 22
+        },
+        {
+          "flow_R2": 0.004,
+          "flow_coefs": {
+            "H_a": 21.7737,
+            "H_b": -24.2084,
+            "H_a^2": -4.37,
+            "H_b^2": -12.7034,
+            "H_a*H_b": 16.6657
+          },
+          "opposition_self_vs_cross": true,
+          "flow_quad_axis": [
+            -0.2041,
+            -0.5934,
+            0.7786
+          ],
+          "cos_flow_to_substrate": 0.961,
+          "cos_flow_to_level_null_quad": 0.985,
+          "level_null_quad_axis": [
+            -0.3279,
+            -0.4814,
+            0.8129
+          ],
+          "seed": 33
+        }
+      ],
+      "flow_R2_mean": 0.003,
+      "cos_flow_to_substrate_mean": 0.981,
+      "cos_flow_to_level_null_mean": 0.698,
+      "opposition_fraction": 1.0,
+      "cross_seed_axis_cos": [
+        0.972,
+        0.927
+      ]
+    }
+  },
+  "gravity_GW150914": {
+    "flow_R2": 0.024,
+    "flow_coefs": {
+      "H_a": 3.2943,
+      "H_b": -18.1283,
+      "H_a^2": 5.3672,
+      "H_b^2": -3.4319,
+      "H_a*H_b": -5.1232
+    },
+    "opposition_self_vs_cross": true,
+    "flow_quad_axis": [
+      0.6565,
+      -0.4198,
+      -0.6267
+    ],
+    "cos_flow_to_substrate": 0.608,
+    "cos_flow_to_level_null_quad": 0.641,
+    "level_null_quad_axis": [
+      -0.4059,
+      0.9138,
+      -0.0138
+    ]
+  },
+  "substrate_quad_axis": [
+    -0.4082482904638631,
+    -0.4082482904638631,
+    0.8164965809277261
+  ],
+  "elapsed_s": 6.9
+}
