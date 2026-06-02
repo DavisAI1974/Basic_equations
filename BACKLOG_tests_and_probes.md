@@ -74,6 +74,17 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
    samples (INFO-024 wall) — needs the long inspiral at finer/lower band, not louder
    mergers. Sim half already done (chem>phys>bio memory; geology null).
 
+6b. **MI beyond GR -- IMR-template residual test** (NEW, S17 from O1/INFO-054; the
+   only road to a NEW gravity law). O1 showed subtracting the Newtonian INSPIRAL chirp
+   only cuts inter-detector MI ~2x; a significant residual remains at the physical lag,
+   most plausibly un-modeled GR (merger/ringdown/PN). To test "beyond GR" rigorously,
+   remove the FULL GR waveform with IMR matched-filter templates (pycbc/lalsuite -- not
+   in the self-contained stack; needs install) and recompute residual inter-detector MI
+   vs the time-slide null. Residual -> null => MI is fully GR; significant residual at
+   the physical lag => candidate new structure (then control for calibration/glitches).
+   Method already built (`probe_mi_beyond_chirp.py`); only the template subtraction is
+   missing.
+
 ## 4-FORCE thread
 
 7. **SF femtoscopy-R Piece-1** (MED; deferred — heavy fetch).

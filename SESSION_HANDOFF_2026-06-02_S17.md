@@ -237,6 +237,38 @@ OPEN (toward a possible gravity equation):
 - O3: GW170817 absolute chirp mass (lever-arm-limited in H1; needs full sweep / L1 /
   matched filter).
 
+## PROBE 4 (O1) — does MI carry structure beyond the recovered chirp? (INFO-054)
+
+The only road to a NEW gravity law: is the inter-detector MI more than the common GR
+chirp? HONEST SCOPE up front: a rigorous beyond-GR test needs IMR matched-filter
+templates (pycbc/lalsuite), not in our self-contained stack. This tests "beyond the
+recovered INSPIRAL law (INFO-052)": fit + subtract the Newtonian chirp model from each
+GW150914 detector over the late inspiral (where the MI peak lives, T1 ~16.366 s < t_c)
+and recompute inter-detector MI of the residuals vs a time-slide null
+(`probe_mi_beyond_chirp.py`).
+
+Result (data): the Newtonian model removed only 51% (H1) / 38% (L1) of window variance
+(crude; covers only t<t_c). Inter-detector MI peak at the physical lag: FULL 0.624 at
++7.5 ms (z=10.0 vs null 0.290+/-0.034); RESIDUAL 0.325 at +7.5 ms (z=8.7 vs null
+0.199+/-0.014). So subtracting the recovered inspiral cuts MI ~1.9x but a SIGNIFICANT
+residual remains at the correct physical lag.
+
+Reading (Result Discipline): INCONCLUSIVE for "beyond GR" -- NOT a new-law signal. The
+residual is most plausibly un-modeled GR (merger + ringdown + higher PN, all omitted by
+the crude Newtonian inspiral model that removed <55% of variance and stops at t_c), not
+new physics. DECISIVE methodological output: separating "beyond GR" from "un-modeled
+GR" REQUIRES IMR matched-filter templates to remove the FULL GR waveform; with
+self-contained tools O1 cannot go further. Establishes the test method (residual
+inter-detector MI vs time-slide null) and pins the exact requirement. No new law. (Bug
+caught + fixed mid-probe: the time-slide null first applied large lags to the short
+extracted window -> empty -> z~1e11; fixed to pull L1 null windows from far times in the
+full array. Don't-predetermine: kept and diagnosed.) Speaking posture (after): I
+predicted reduce-but-not-zero (merger/ringdown remain); that is what happened; the
+honest verdict is "need templates," not "found new structure."
+
+Scaffold update: O1 -> ATTEMPTED, inconclusive, requires IMR templates (new backlog
+item). The new-law question on the MI axis is now a DEFINED next step, not open-ended.
+
 ## Files this session
 - `CLAUDE.md` (rebuilt canonical through S17), `SESSION_HANDOFF_2026-06-02_S17.md`,
   `BACKLOG_tests_and_probes.md` (#1 marked DONE).
@@ -245,6 +277,7 @@ OPEN (toward a possible gravity equation):
 - `probe_gravity_chirp_ridge.py` + `probe_gravity_chirp_ridge_results.json`
   (+ `_canary.json`).
 - `probe_mi_merger_axis.py` + `probe_mi_merger_axis_results.json` (+ `_canary.json`).
+- `probe_mi_beyond_chirp.py` + `probe_mi_beyond_chirp_results.json`.
 - h5py confirmed in `requirements.txt` (installed at runtime; the fresh container's
   SessionStart hook had not installed it this run).
 

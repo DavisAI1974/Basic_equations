@@ -617,9 +617,13 @@ law form (R^2 0.88) with a lever-arm-limited mass. This is a KNOWN law recovered
 (method validation), NOT a new law. Then ("MI next") INFO-053 characterized the
 surviving physical signal: inter-detector MI at the merger is PHYSICS-BEARING — peaks
 at the physical 7 ms lag, z=15.5 vs a time-slide null, and its excess is entirely
-waveform phase/time structure (not loudness). Gravity footholds scaffold (F1-F3
-confirmed / C1-C3 cleared / O1-O3 open) is in the S17 handoff: we are accumulating
-validated footings, NOT yet a gravity equation.
+waveform phase/time structure (not loudness). O1 (INFO-054, beyond-chirp): subtracting
+the recovered Newtonian inspiral cuts inter-detector MI ~2x but a significant residual
+remains at the physical lag -- INCONCLUSIVE for beyond-GR (residual most plausibly
+un-modeled GR); a real new-law test REQUIRES IMR matched-filter templates (new backlog
+6b). Gravity footholds scaffold (F1-F3 confirmed / C1-C3 cleared / O1 attempted-needs-
+templates / O2-O3 open) is in the S17 handoff: we are accumulating validated footings,
+NOT yet a gravity equation, and the new-law road is now a DEFINED requirement.
 
 For the (Session 16) session, read `SESSION_HANDOFF_2026-06-02_S16.md`
 first, then `BACKLOG_tests_and_probes.md` (the queue + the standing backlog-first
@@ -866,6 +870,24 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   time-coupling beyond GR" (open thread O1/O2). No new Operating Rule. See the gravity
   footholds scaffold in `SESSION_HANDOFF_2026-06-02_S17.md` (F1-F3 confirmed, C1-C3
   cleared, O1-O3 open).
+
+- **INFO-054 -- METHODOLOGICAL / INCONCLUSIVE (Session 17, new; O1; GW150914)**: does
+  the inter-detector MI carry structure BEYOND the recovered chirp -- the only road to
+  a NEW gravity law. HONEST SCOPE: a rigorous beyond-GR test needs IMR matched-filter
+  templates (pycbc/lalsuite, not in our self-contained stack); this tests "beyond the
+  recovered INSPIRAL law INFO-052." Probe (`probe_mi_beyond_chirp.py`): fit + subtract
+  the Newtonian chirp model from each detector over the late inspiral, recompute
+  inter-detector MI of the residual vs a time-slide null. RESULT: the crude Newtonian
+  model removed only 51%/38% of window variance; MI at the physical +7.5 ms lag goes
+  FULL 0.624 (z=10.0) -> RESIDUAL 0.325 (z=8.7) -- a ~1.9x cut but a SIGNIFICANT
+  residual remains at the correct lag. READING: INCONCLUSIVE for beyond-GR, NOT a
+  new-law signal -- the residual is most plausibly un-modeled GR (merger + ringdown +
+  higher PN, all omitted by the Newtonian-inspiral-only model). DECISIVE
+  methodological output: separating "beyond GR" from "un-modeled GR" REQUIRES IMR
+  templates to remove the FULL GR waveform; the method (residual inter-detector MI vs
+  time-slide null) is established and the requirement is pinned. No new law. Scaffold:
+  O1 -> attempted/inconclusive, needs IMR templates (new backlog item). No new
+  Operating Rule.
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 
