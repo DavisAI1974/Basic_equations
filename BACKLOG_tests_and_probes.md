@@ -5,17 +5,23 @@
 New ideas get appended here first; we clear the backlog before opening new lines.
 A probe that didn't give a 100% hit still carries a piece — keep its output, don't discard.
 
+**Run-order is NOT fixed (Greg, S16): the next session decides which backlog item to
+run first.** The numbering below is just an index, and the HIGH/MED/LOW tags are rough
+suggestions — not a prescribed sequence.
+
 ---
 
 ## GRAVITY thread (primary focus)
 
-1. **Substrate construction-vs-nature test** (NEW, S16 analysis; HIGH).
-   Is the universal equal-marginal-entropy clustering (everything we measure sits
-   on the (-1,-1,+2) region) a FORCED property of physical 2-channel observables,
-   or an artifact of us building symmetric ~equal-entropy channel pairs?
-   INFO-038 shows asymmetry |H_a-H_b| moves objects OFF the attractor. Probe:
-   deliberately vary channel-construction asymmetry and see if the clustering
-   survives. Decides whether "they all fall there" is nature or bookkeeping.
+1. **Substrate construction-vs-nature test** (NEW, S16 analysis; Greg: "clean,
+   decisive"). THE question: **is equal-marginal-entropy a FORCED property of
+   physical 2-channel observables, or our construction choice (bookkeeping)?**
+   Everything we measure sits on the (-1,-1,+2) equal-entropy region; is that nature
+   or because we build symmetric ~equal-entropy channel pairs? INFO-038 shows
+   asymmetry |H_a-H_b| moves objects OFF the attractor. Probe: deliberately vary
+   channel-construction asymmetry and see if the clustering survives / what forces
+   equal marginal entropy when it does. Decides whether "they all fall there" is
+   nature or bookkeeping.
 
 2. **Construction control: gravity-LIGO vs EM-HBT flow axis** (HIGH; decisive for
    the "only gravity's flow is unbound/off-substrate" hunch).

@@ -23,18 +23,21 @@ stable substrate reference (return = return-to-noise, H-D stays a frame). Everyt
 measured clusters on the equal-entropy substrate; the only departures are gravity-
 associated. MI-in-null coupling is DISPROVED — do not build on it.
 
-## FIRST ACTIONS (clear backlog before new probes — Greg's standing rule)
-Top of backlog, in priority order:
-1. **Substrate construction-vs-nature test** (backlog #1) — is equal-marginal-entropy
-   clustering forced by symmetric-channel construction or a property of nature?
-   Vary channel asymmetry; INFO-038 says asymmetry moves objects off. Decisive.
-2. **Construction control: gravity-LIGO vs EM-HBT flow** (backlog #2) — decisive for
-   "only gravity's flow is unbound." Needs Zenodo 5113016 (.rar 20.8MB) + unrar +
-   S13 HBT loader.
-3. **Proper chirp recovery** (backlog #3) — Q-transform/matched-filter on GW150914 +
-   GW170817 (strain in hand).
-See BACKLOG_tests_and_probes.md for the full list incl. SF femtoscopy-R, scatter (H-G),
-INFO-039 promotion, OD/MASTER_DISCOVERIES, CLAUDE master-merge.
+## FIRST ACTIONS — YOU (next session) pick which backlog item to run first
+Greg's call (S16): run-order is NOT pre-assigned — choose from
+`BACKLOG_tests_and_probes.md`. The only firm rule is **clear backlog before NEW
+probes**. Strong candidates (your choice among them, not a ranking):
+- **Substrate construction-vs-nature test** (backlog #1; Greg flagged "clean,
+  decisive") — is equal-marginal-entropy a forced property of physical 2-channel
+  observables or our construction choice? Vary channel asymmetry (INFO-038 says
+  asymmetry moves objects off).
+- **Construction control: gravity-LIGO vs EM-HBT flow** (backlog #2) — decisive for
+  "only gravity's flow is unbound." Needs Zenodo 5113016 (.rar 20.8MB) + unrar +
+  S13 HBT loader.
+- **Proper chirp recovery** (backlog #3) — Q-transform/matched-filter on GW150914 +
+  GW170817 (strain in hand).
+Full list (incl. SF femtoscopy-R, scatter H-G, INFO-039, OD/MASTER_DISCOVERIES,
+CLAUDE master-merge) in BACKLOG_tests_and_probes.md.
 
 ## Standing constraints
 Frames never grade themselves; no pre-assigned meaning; speaking posture before+after;
