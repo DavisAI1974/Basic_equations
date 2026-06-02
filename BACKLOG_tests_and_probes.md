@@ -88,16 +88,18 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
    REMAINING (bottom, optional): repeat across many events / per-detector mass refit to
    strengthen the negative; but for GW150914 the new-law road on the MI axis is closed.
 
-6c. **O2 (reframed) -- gravity's time/flow coupling as a framework term** (NEW, S17;
-   Greg's catch). NOT a beyond-GR/new-physics probe (INFO-055 closed that on the MI
-   axis). The question: can the OD/dipole framework EXPRESS gravity's GR-real time
-   coupling as a flow/time dipole term, and does that term DISTINGUISH gravity from the
-   gauge forces (H-C: only gravity touches time)? Concretely: define a flow/time
-   operator (e.g. dphase/dt or the chirp's time-evolution signature) and measure its
-   response on gravity (GW chirp -- has monotone time-evolution) vs the gauge-force
-   real objects (Z resonance, QCD running, HBT -- no chirp-like time-evolution). A clean
-   gravity-vs-gauge contrast on a time/flow operator would give the hunch a first
-   empirical footing (still a frame; respects no-synthesis-across-construction-type).
+6c. **O2 (reframed) -- gravity's time/flow coupling as a framework term** -- PARTIALLY
+   DONE (S17, INFO-056). First pass via a flow operator |Spearman(characteristic, axis)|
+   on the 3 recovered governing relations: gravity chirp |rho|=1.0 (FLOW, axis time),
+   strong alpha_s(lnQ) |rho|=1.0 (FLOW, axis scale), weak Breit-Wigner |rho|=0.55
+   (resonance, no flow). VERDICT: flow is NOT unique to gravity (strong RUNS) -- the
+   simple "only gravity flows" hunch is REFUTED. Surviving narrow form ("gravity flows
+   in TIME specifically") is construction-confounded and NOT decided by this data. See
+   `probe_flow_operator.py`. REMAINING (the only clean way forward on H-C, bottom):
+   gravity-time-specialness is fundamentally a TIME-DILATION/CLOCK claim -- test it with
+   clock/time-dilation data (e.g. GPS/optical-clock/Pound-Rebka-style or pulsar timing),
+   NOT force-coupling objects. Add EM/HBT to the flow comparison only as a completeness
+   check (won't resolve the construction confound).
 
 ## 4-FORCE thread
 

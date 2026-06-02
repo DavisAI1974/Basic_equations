@@ -636,10 +636,12 @@ INTRINSIC to GR, so "it's all GR" is consistent with the hunch, not against it; 
 framework/representation question (express gravity's GR-real time coupling as a flow
 dipole; does it distinguish gravity from gauge forces -- H-C) and stays OPEN. Gravity
 footholds scaffold (F1-F3 confirmed / C1-C3 cleared / O1 resolved NEGATIVE for
-beyond-GR / O2 open-reframed / O3 open) in the S17 handoff: NO new gravity LAW found --
-the surviving physical signal is fully standard GR; the OD method is validated
-(recovers known laws); a beyond-GR new-law search needs a different observable or many
-events.
+beyond-GR / O2 PARTIALLY answered INFO-056 / O3 open) in the S17 handoff: NO new gravity
+LAW found -- the surviving physical signal is fully standard GR; the OD method is
+validated (recovers known laws); a beyond-GR new-law search needs a different observable
+or many events. O2/6c (INFO-056): flow is NOT unique to gravity (strong runs too) --
+simple hunch refuted; "gravity flows in TIME specifically" stays open but construction-
+confounded (a real test needs clock/time-dilation data).
 
 For the (Session 16) session, read `SESSION_HANDOFF_2026-06-02_S16.md`
 first, then `BACKLOG_tests_and_probes.md` (the queue + the standing backlog-first
@@ -931,6 +933,24 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   (H-C: only gravity touches time)? -- and remains OPEN. Scaffold: O1 RESOLVED NEGATIVE
   (beyond-GR only); no new gravity LAW found this session; the surviving physical signal
   is fully standard GR. No new Operating Rule.
+
+- **INFO-056 -- FRAME EXPLORATION / DATA FINDING (Session 17, new; O2-reframed/6c; Greg
+  "follow this thread")**: flow is NOT unique to gravity. Honesty flag carried: "only
+  gravity has time structure" risks construction bookkeeping (gravity is our only
+  time-series observable), and the H-C core (gravity dilates clocks) is time-dilation,
+  untouched by force-coupling data. Fair test (`probe_flow_operator.py`): one flow
+  operator |Spearman(characteristic, axis)| on the three recovered governing relations.
+  RESULT: GRAVITY chirp f(t) |rho|=1.000 (axis TIME) = FLOW; STRONG alpha_s(lnQ)
+  |rho|=1.000 (axis ENERGY SCALE) = FLOW; WEAK Breit-Wigner |rho|=0.55 (resonance,
+  peak 90.5 GeV) = no flow. READING: the SIMPLE hunch "only gravity flows" is REFUTED at
+  data level -- the strong force runs exactly as monotonically (RG flow). Surviving
+  narrower form: gravity's flow AXIS is TIME, strong's is ENERGY SCALE -- but that is
+  construction-confounded (strong also flows in time during the interaction; we measure
+  it vs scale) and NOT decided by this data. CAVEATS: 3 forces only (no EM/HBT); the
+  time-dilation claim untouched. The frame did NOT grade itself -- the data pushed back.
+  Scaffold: O2 PARTIALLY ANSWERED (simple form refuted; time-specific form open +
+  construction-confounded; a real test needs clock/time-dilation data, not force
+  objects). No new Operating Rule.
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 

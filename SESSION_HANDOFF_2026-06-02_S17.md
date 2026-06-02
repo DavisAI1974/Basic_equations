@@ -315,6 +315,38 @@ signal is fully standard GR (good -- that is the falsifiable negative). A BEYOND
 new-law search would need a different observable/axis, or many
 events, not this one.
 
+## PROBE 6 (O2-reframed / 6c) — is flow unique to gravity? (INFO-056)
+
+Greg "follow this thread" (knowingly bending the backlog-first / stop-after-each rules).
+HONESTY FLAG carried throughout: "only gravity has time structure" risks being
+construction bookkeeping (gravity is our only time-series observable; gauge objects are
+static distributions), and the deepest H-C (only gravity dilates clocks) is about time
+dilation, which this force-coupling data does NOT probe. So this tests the fair, weaker
+question, with the deflationary reading load-bearing.
+
+FAIR TEST (`probe_flow_operator.py`): one flow operator -- |Spearman(characteristic,
+axis)| -- on the THREE governing relations we recovered from raw data (the capability
+trio). A flow = characteristic quantity evolving monotonically along its axis.
+RESULT: GRAVITY chirp f(t) |rho|=1.000 (axis TIME, sweep 34->158 Hz) = FLOW; STRONG
+alpha_s(lnQ) |rho|=1.000 (axis ENERGY SCALE, 0.312->0.090) = FLOW; WEAK rate(mass)
+Breit-Wigner |rho|=0.55 (peak 90.5 GeV, interior) = RESONANCE, no flow.
+
+Reading (Result Discipline): DATA -- flow is NOT unique to gravity; the strong force
+runs exactly as monotonically (the RG running IS a flow), weak is a static resonance.
+INTERPRETATION -- the SIMPLE hunch "only gravity flows" is REFUTED at the data level.
+What survives is narrower: gravity's flow AXIS is TIME, strong's is ENERGY SCALE.
+DEFLATIONARY (load-bearing, undecided): gravity is the only force we OBSERVE as a
+time-series; the strong coupling also flows in time during the interaction, we just
+measure it vs scale -- so "gravity flows in TIME specifically" is construction-
+confounded and NOT decided by this data. CAVEATS: only 3 forces (no EM/HBT); the
+time-dilation claim (H-C core) is untouched. Frame exploration -- the frame did not get
+to grade itself; the data pushed back on it. No new Operating Rule.
+
+Scaffold: O2 PARTIALLY ANSWERED -- "only gravity flows" refuted (strong flows too);
+"gravity flows in time specifically" remains open AND construction-confounded. A real
+test of gravity-time-specialness needs time-dilation/clock data, not force-coupling
+objects (new backlog note).
+
 ## Files this session
 - `CLAUDE.md` (rebuilt canonical through S17), `SESSION_HANDOFF_2026-06-02_S17.md`,
   `BACKLOG_tests_and_probes.md` (#1 marked DONE).
@@ -325,6 +357,7 @@ events, not this one.
 - `probe_mi_merger_axis.py` + `probe_mi_merger_axis_results.json` (+ `_canary.json`).
 - `probe_mi_beyond_chirp.py` + `probe_mi_beyond_chirp_results.json`.
 - `probe_mi_beyond_GR_imr.py` + `probe_mi_beyond_GR_imr_results.json` (needs pycbc).
+- `probe_flow_operator.py` + `probe_flow_operator_results.json`.
 - h5py confirmed in `requirements.txt` (installed at runtime; the fresh container's
   SessionStart hook had not installed it this run).
 
