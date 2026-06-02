@@ -182,6 +182,19 @@ def tool_direct_coupling(a, b):
 
     te_ab = te(a, b)
     te_ba = te(b, a)
+    # WITHIN-SOURCE null: destroy the A-B time alignment by a large circular
+    # shift (>> coherence time) so any genuine same-time correlation vanishes
+    # while marginals are untouched. This is the proper baseline because the
+    # dataset's 'uncorrelated' pair is itself contaminated (shows its own g2
+    # bump). Average a few shifts.
+    rng = np.random.default_rng(0)
+    nsh = min(len(a) // 4, 200000)
+    cc_null, mi_null = [], []
+    for _ in range(5):
+        s = int(rng.integers(nsh, len(a) - nsh))
+        b_sh = np.roll(b, s)
+        cc_null.append(float(np.corrcoef(a, b_sh)[0, 1]))
+        mi_null.append(mi_hist(a, b_sh, bins=12))
     return {
         "pearson_zero_lag": cc0,
         "pearson_lag1_A_leads_B": cc_ab,
@@ -189,6 +202,9 @@ def tool_direct_coupling(a, b):
         "mi_hist_bits_nats": mi,
         "transfer_entropy_A_to_B": te_ab,
         "transfer_entropy_B_to_A": te_ba,
+        "pearson_shift_null_mean": float(np.mean(cc_null)),
+        "pearson_shift_null_std": float(np.std(cc_null)),
+        "mi_shift_null_mean": float(np.mean(mi_null)),
     }
 
 
@@ -438,11 +454,21 @@ def tool_pysr(Tau, Ha, Hb, MI, niter=20, seed=0):
     rng = np.random.default_rng(seed + 1)
     p = rng.permutation(len(y))
     r2_null, _ = fit_get_r2(Xin, y[p])
+    # which inputs does the winning eq use? x0=Tau, x1=Ha, x2=Hb, x3=MI.
+    # If it uses only x0 it is fitting the smooth MI(tau) relaxation curve, NOT
+    # 2-channel structure. Cross-channel only if BOTH x1 and x2 (or their square)
+    # appear -- record honestly.
+    uses = {v: (v in eq) for v in ("x0", "x1", "x2", "x3")}
+    uses_cross_channel = bool(uses["x1"] and uses["x2"])
     return {
         "n_axis_points": int(len(y)),
         "R2": r2,
         "best_equation": eq,
         "shuffle_null_R2": r2_null,
+        "vars_used": uses,
+        "uses_cross_channel_HaHb": uses_cross_channel,
+        "note": "x0=Tau x1=Ha x2=Hb x3=MI; if only x0 used, fitting the smooth "
+                "MI(tau) relaxation shape, not 2-channel coupling",
     }
 
 
@@ -580,7 +606,12 @@ def run_source(name, path, chA, chB, cfg, run_pysr):
                 "R2": pysr_res["R2"], "control_value": pysr_res["shuffle_null_R2"],
                 "shuffle_null": pysr_res["shuffle_null_R2"],
                 "best_equation": pysr_res["best_equation"],
-                "hits": bool(pysr_res["R2"] - pysr_res["shuffle_null_R2"] > 0.3),
+                "vars_used": pysr_res["vars_used"],
+                "uses_cross_channel_HaHb": pysr_res["uses_cross_channel_HaHb"],
+                "note": pysr_res["note"],
+                # hit only if it beats null AND actually uses cross-channel terms
+                "hits": bool(pysr_res["R2"] - pysr_res["shuffle_null_R2"] > 0.3
+                             and pysr_res["uses_cross_channel_HaHb"]),
             }
         else:
             tools["tool5b_pysr"] = {"metric_name": "PySR R2",
@@ -590,16 +621,21 @@ def run_source(name, path, chA, chB, cfg, run_pysr):
     # ---- TOOL 6: direct coupling references (corr, MI, TE)
     dc = tool_direct_coupling(a0, b0)
     tools["tool6_direct_coupling"] = {
-        "metric_name": "zero-lag Pearson corr / hist-MI / transfer-entropy both dirs (cross-source compare)",
+        "metric_name": "zero-lag Pearson corr / hist-MI / TE both dirs, vs WITHIN-SOURCE "
+                       "time-shift null (cross-source 'control' is contaminated)",
         "pearson_zero_lag": dc["pearson_zero_lag"],
         "mi_hist": dc["mi_hist_bits_nats"],
         "te_A_to_B": dc["transfer_entropy_A_to_B"],
         "te_B_to_A": dc["transfer_entropy_B_to_A"],
         "pearson_lag1_A_leads_B": dc["pearson_lag1_A_leads_B"],
         "pearson_lag1_B_leads_A": dc["pearson_lag1_B_leads_A"],
-        "control_value": "see uncorrelated_control source",
-        # within-source hit flag: nonzero corr / MI. Cross-source comparison done in summary.
-        "hits": bool(abs(dc["pearson_zero_lag"]) > 0.02 or dc["mi_hist_bits_nats"] > 0.01),
+        "pearson_shift_null_mean": dc["pearson_shift_null_mean"],
+        "pearson_shift_null_std": dc["pearson_shift_null_std"],
+        "mi_shift_null_mean": dc["mi_shift_null_mean"],
+        "control_value": dc["pearson_shift_null_mean"],
+        # hit = zero-lag corr clearly above its OWN time-shift null
+        "hits": bool(abs(dc["pearson_zero_lag"]) - abs(dc["pearson_shift_null_mean"])
+                     > 5 * (dc["pearson_shift_null_std"] + 1e-6)),
     }
 
     return {"meta": meta, "tools": tools}
