@@ -1,0 +1,424 @@
+{
+  "mode": "canary",
+  "seeds": [
+    11
+  ],
+  "config": {
+    "N_ens": 200,
+    "T": 10.0,
+    "dt": 0.02
+  },
+  "niter": 15,
+  "timeout_s": 60,
+  "configs": [
+    {
+      "name": "gravity_sym_baseline",
+      "kwargs": {
+        "omega1": 0.8,
+        "omega2": 0.8,
+        "G": 0.1,
+        "universal": true
+      },
+      "symmetric": true,
+      "universal": true,
+      "description": "omega1=omega2=0.8, universal E_total coupling (Session 8 baseline)"
+    },
+    {
+      "name": "gravity_asym_omegas",
+      "kwargs": {
+        "omega1": 0.8,
+        "omega2": 1.0,
+        "G": 0.1,
+        "universal": true
+      },
+      "symmetric": false,
+      "universal": true,
+      "description": "omega1=0.8 omega2=1.0, universal E_total coupling (symmetry swap)"
+    },
+    {
+      "name": "gravity_nonuniversal",
+      "kwargs": {
+        "omega1": 0.8,
+        "omega2": 1.0,
+        "G": 0.1,
+        "universal": false
+      },
+      "symmetric": false,
+      "universal": false,
+      "description": "omega1=0.8 omega2=1.0, NON-universal (only E1) coupling"
+    }
+  ],
+  "results": [
+    {
+      "config_name": "gravity_sym_baseline",
+      "config_description": "omega1=omega2=0.8, universal E_total coupling (Session 8 baseline)",
+      "config_kwargs": {
+        "omega1": 0.8,
+        "omega2": 0.8,
+        "G": 0.1,
+        "universal": true
+      },
+      "is_symmetric_dynamics": true,
+      "is_universal_coupling": true,
+      "seed": 11,
+      "elapsed_s": 72.38090252876282,
+      "n_points": 400,
+      "Ha_mean": 0.08153264512723783,
+      "Hb_mean": 0.12037888489160081,
+      "MI_mean": 0.6029059712427554,
+      "MI_std": 0.08246185250728442,
+      "kbk_eigenvalues": [
+        0.2329084971453037,
+        0.026247683773532114,
+        0.006168910530873157,
+        0.001414784854214867,
+        0.00033663418820237907,
+        1.962194649483897e-06
+      ],
+      "kbk_v_null_6d": [
+        -0.02416291391730427,
+        0.023035121067419822,
+        -0.4041109715964371,
+        -0.4133412897108244,
+        0.8152836079673638,
+        -0.006440203702402024
+      ],
+      "kbk_v_null_234": [
+        -0.4043447381851363,
+        -0.41358039577340544,
+        0.815755226114983
+      ],
+      "kbk_cos_to_artifact": 0.33214481533080686,
+      "kbk_signal_rank": 5,
+      "kbk_null_rank": 1,
+      "pysr": {
+        "fit_time_s": 16.710652828216553,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.006799955,
+            "score": 0.0,
+            "equation": "0.6029113"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.0054317443,
+            "score": 0.05616391956649993,
+            "equation": "(x0 * 0.10955787) + 0.59397364"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.005377229,
+            "score": 0.010087130522276219,
+            "equation": "0.5852764 * (exp(x0) - x1)"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.00461236,
+            "score": 0.07671676456117373,
+            "equation": "exp(x1 * -0.44379607) / (1.6877322 - x0)"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.0039035168,
+            "score": 0.16686176620363877,
+            "equation": "(exp(x0 + 0.14611705) - exp(x1)) + 0.47041404"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.003734109,
+            "score": 0.04436865448951337,
+            "equation": "sqrt((exp(x0 + 0.15673964) + 0.22126877) - exp(x1))"
+          }
+        ],
+        "best_equation_sympy": "-exp(x1) + exp(x0 + 0.14611705) + 0.47041404"
+      }
+    },
+    {
+      "config_name": "gravity_asym_omegas",
+      "config_description": "omega1=0.8 omega2=1.0, universal E_total coupling (symmetry swap)",
+      "config_kwargs": {
+        "omega1": 0.8,
+        "omega2": 1.0,
+        "G": 0.1,
+        "universal": true
+      },
+      "is_symmetric_dynamics": false,
+      "is_universal_coupling": true,
+      "seed": 11,
+      "elapsed_s": 2.381286144256592,
+      "n_points": 400,
+      "Ha_mean": 0.05805781547193203,
+      "Hb_mean": 0.1310706675806529,
+      "MI_mean": 0.5485372783906118,
+      "MI_std": 0.06991929094867058,
+      "kbk_eigenvalues": [
+        0.21799509625087457,
+        0.09696193758711523,
+        0.017156050913576238,
+        0.013428655506606579,
+        0.003931133837735447,
+        0.0022248971238246237
+      ],
+      "kbk_v_null_6d": [
+        -0.12759677243959142,
+        -0.030340750951298907,
+        -0.28341797935495905,
+        -0.08945177201441472,
+        -0.026856841988196524,
+        0.9453834364928151
+      ],
+      "kbk_v_null_234": [
+        0.9497596215222617,
+        0.29976108546911645,
+        0.08999973868999502
+      ],
+      "kbk_cos_to_artifact": 0.5835991714531974,
+      "kbk_signal_rank": 2,
+      "kbk_null_rank": 4,
+      "pysr": {
+        "fit_time_s": 2.0625736713409424,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0048887064,
+            "score": 0.0,
+            "equation": "0.548536"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.0031588494,
+            "score": 0.10917997031085869,
+            "equation": "(x0 * 0.10663027) + 0.5423466"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.0031200757,
+            "score": 0.012350583021633298,
+            "equation": "cube((x0 * 0.054987323) + 0.81479806)"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.00311039,
+            "score": 0.0031091440893277317,
+            "equation": "square(cube((x0 * 0.03068275) + 0.9025087))"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.0025910574,
+            "score": 0.182682065315008,
+            "equation": "0.5002626 + cube((x0 + 0.43874526) * 0.52990955)"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.002582684,
+            "score": 0.003236886679716356,
+            "equation": "(x0 * ((x0 + 0.57798636) * 0.21030255)) + 0.50877947"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.0025778434,
+            "score": 0.0018760103549389994,
+            "equation": "cube((x0 * ((x0 + 0.5855271) * 0.102813214)) + 0.79838854)"
+          }
+        ],
+        "best_equation_sympy": "0.148800790792372*(x0 + 0.43874526)**3 + 0.5002626"
+      }
+    },
+    {
+      "config_name": "gravity_nonuniversal",
+      "config_description": "omega1=0.8 omega2=1.0, NON-universal (only E1) coupling",
+      "config_kwargs": {
+        "omega1": 0.8,
+        "omega2": 1.0,
+        "G": 0.1,
+        "universal": false
+      },
+      "is_symmetric_dynamics": false,
+      "is_universal_coupling": false,
+      "seed": 11,
+      "elapsed_s": 1.9937572479248047,
+      "n_points": 400,
+      "Ha_mean": 0.0278570520309204,
+      "Hb_mean": 0.14919319304626988,
+      "MI_mean": 0.5556952685224509,
+      "MI_std": 0.07188333928143908,
+      "kbk_eigenvalues": [
+        0.23201383525028596,
+        0.11328270491157068,
+        0.0206204819978853,
+        0.014528488622039197,
+        0.005712635030309189,
+        0.002404097227531118
+      ],
+      "kbk_v_null_6d": [
+        -0.07729213424942381,
+        0.07583175250557317,
+        -0.1246610675523304,
+        -0.04107220067281075,
+        -0.12482421839557246,
+        0.977479963153027
+      ],
+      "kbk_v_null_234": [
+        0.6882375484295803,
+        0.22675428066422487,
+        0.6891382830260492
+      ],
+      "kbk_cos_to_artifact": 0.936222901893122,
+      "kbk_signal_rank": 2,
+      "kbk_null_rank": 4,
+      "pysr": {
+        "fit_time_s": 1.7007777690887451,
+        "pareto_front": [
+          {
+            "complexity": 1,
+            "loss": 0.0051672133,
+            "score": 0.0,
+            "equation": "0.5556964"
+          },
+          {
+            "complexity": 5,
+            "loss": 0.002969079,
+            "score": 0.13852043148685486,
+            "equation": "0.5524274 - (x0 * -0.11702156)"
+          },
+          {
+            "complexity": 6,
+            "loss": 0.002935313,
+            "score": 0.011437712166948982,
+            "equation": "exp((x0 * 0.21880086) + -0.5974842)"
+          },
+          {
+            "complexity": 7,
+            "loss": 0.002795473,
+            "score": 0.048812768487915666,
+            "equation": "0.5626963 - ((x0 - x1) * -0.059367664)"
+          },
+          {
+            "complexity": 8,
+            "loss": 0.002690198,
+            "score": 0.03838652620546371,
+            "equation": "log(1.7592771 - ((x0 - x1) * -0.12817979))"
+          },
+          {
+            "complexity": 9,
+            "loss": 0.00261665,
+            "score": 0.027719923173747416,
+            "equation": "0.5626963 - (-0.08948417 * (x0 - (x1 * 0.6323852)))"
+          },
+          {
+            "complexity": 10,
+            "loss": 0.00259502,
+            "score": 0.008300649961924216,
+            "equation": "0.5626963 - (((x0 - x1) + cube(x1)) * -0.08948417)"
+          },
+          {
+            "complexity": 12,
+            "loss": 0.0025851438,
+            "score": 0.001906544338688145,
+            "equation": "square((x1 * 0.07625657) + ((x0 * -0.20102195) + -0.28765538)) + 0.46599546"
+          },
+          {
+            "complexity": 13,
+            "loss": 0.0025516234,
+            "score": 0.01305135097984464,
+            "equation": "(x1 * -0.049741004) + (square(cube((x0 * -0.0928453) + -0.7123607)) + 0.42418203)"
+          }
+        ],
+        "best_equation_sympy": "0.5524274 - (-0.11702156)*x0"
+      }
+    }
+  ],
+  "cross_seed": {
+    "gravity_sym_baseline": {
+      "seeds": [
+        11
+      ],
+      "kbk_v_null_cos_pairs": {},
+      "is_symmetric_dynamics": true,
+      "is_universal_coupling": true,
+      "pysr_best_per_seed": [
+        {
+          "seed": 11,
+          "best_sympy": "-exp(x1) + exp(x0 + 0.14611705) + 0.47041404",
+          "low_complexity_eqs": [
+            "0.6029113",
+            "(x0 * 0.10955787) + 0.59397364",
+            "0.5852764 * (exp(x0) - x1)",
+            "exp(x1 * -0.44379607) / (1.6877322 - x0)",
+            "(exp(x0 + 0.14611705) - exp(x1)) + 0.47041404"
+          ]
+        }
+      ]
+    },
+    "gravity_asym_omegas": {
+      "seeds": [
+        11
+      ],
+      "kbk_v_null_cos_pairs": {},
+      "is_symmetric_dynamics": false,
+      "is_universal_coupling": true,
+      "pysr_best_per_seed": [
+        {
+          "seed": 11,
+          "best_sympy": "0.148800790792372*(x0 + 0.43874526)**3 + 0.5002626",
+          "low_complexity_eqs": [
+            "0.548536",
+            "(x0 * 0.10663027) + 0.5423466",
+            "cube((x0 * 0.054987323) + 0.81479806)",
+            "square(cube((x0 * 0.03068275) + 0.9025087))",
+            "0.5002626 + cube((x0 + 0.43874526) * 0.52990955)"
+          ]
+        }
+      ]
+    },
+    "gravity_nonuniversal": {
+      "seeds": [
+        11
+      ],
+      "kbk_v_null_cos_pairs": {},
+      "is_symmetric_dynamics": false,
+      "is_universal_coupling": false,
+      "pysr_best_per_seed": [
+        {
+          "seed": 11,
+          "best_sympy": "0.5524274 - (-0.11702156)*x0",
+          "low_complexity_eqs": [
+            "0.5556964",
+            "0.5524274 - (x0 * -0.11702156)",
+            "exp((x0 * 0.21880086) + -0.5974842)",
+            "0.5626963 - ((x0 - x1) * -0.059367664)",
+            "log(1.7592771 - ((x0 - x1) * -0.12817979))"
+          ]
+        }
+      ]
+    }
+  },
+  "config_means_v_null": {
+    "gravity_sym_baseline": [
+      -0.02416291391730427,
+      0.023035121067419822,
+      -0.4041109715964371,
+      -0.4133412897108244,
+      0.8152836079673638,
+      -0.006440203702402024
+    ],
+    "gravity_asym_omegas": [
+      -0.12759677243959142,
+      -0.030340750951298907,
+      -0.28341797935495905,
+      -0.08945177201441472,
+      -0.026856841988196524,
+      0.9453834364928151
+    ],
+    "gravity_nonuniversal": [
+      -0.07729213424942381,
+      0.07583175250557317,
+      -0.1246610675523304,
+      -0.04107220067281075,
+      -0.12482421839557246,
+      0.977479963153027
+    ]
+  },
+  "elapsed_total_s": 76.75691533088684
+}

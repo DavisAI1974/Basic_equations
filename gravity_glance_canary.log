@@ -1,0 +1,58 @@
+[gravity_glance] mode=canary cfg={'N_ens': 200, 'T': 10.0, 'dt': 0.02} seeds=[11] niter=15 timeout_s=60
+
+=== gravity_sym_baseline seed=11 (omega1=omega2=0.8, universal E_total coupling (Session 8 baseline)) ===
+  elapsed=72.4s  H_a mean=+0.082 H_b mean=+0.120  MI mean=+0.603 std=0.082
+  KBK v_null 6D = ['-0.024', '+0.023', '-0.404', '-0.413', '+0.815', '-0.006']
+  KBK v_null [2,3,4] = ['-0.404', '-0.414', '+0.816']  cos to (+1,+1,+2) = +0.332
+  PySR best (sympy): -exp(x1) + exp(x0 + 0.14611705) + 0.47041404
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=6.800e-03 score=+0.000 0.6029113
+    c=  5 loss=5.432e-03 score=+0.056 (x0 * 0.10955787) + 0.59397364
+    c=  6 loss=5.377e-03 score=+0.010 0.5852764 * (exp(x0) - x1)
+    c=  8 loss=4.612e-03 score=+0.077 exp(x1 * -0.44379607) / (1.6877322 - x0)
+    c=  9 loss=3.904e-03 score=+0.167 (exp(x0 + 0.14611705) - exp(x1)) + 0.47041404
+    c= 10 loss=3.734e-03 score=+0.044 sqrt((exp(x0 + 0.15673964) + 0.22126877) - exp(x1))
+
+=== gravity_asym_omegas seed=11 (omega1=0.8 omega2=1.0, universal E_total coupling (symmetry swap)) ===
+  elapsed=2.4s  H_a mean=+0.058 H_b mean=+0.131  MI mean=+0.549 std=0.070
+  KBK v_null 6D = ['-0.128', '-0.030', '-0.283', '-0.089', '-0.027', '+0.945']
+  KBK v_null [2,3,4] = ['+0.950', '+0.300', '+0.090']  cos to (+1,+1,+2) = +0.584
+  PySR best (sympy): 0.148800790792372*(x0 + 0.43874526)**3 + 0.5002626
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=4.889e-03 score=+0.000 0.548536
+    c=  5 loss=3.159e-03 score=+0.109 (x0 * 0.10663027) + 0.5423466
+    c=  6 loss=3.120e-03 score=+0.012 cube((x0 * 0.054987323) + 0.81479806)
+    c=  7 loss=3.110e-03 score=+0.003 square(cube((x0 * 0.03068275) + 0.9025087))
+    c=  8 loss=2.591e-03 score=+0.183 0.5002626 + cube((x0 + 0.43874526) * 0.52990955)
+    c=  9 loss=2.583e-03 score=+0.003 (x0 * ((x0 + 0.57798636) * 0.21030255)) + 0.50877947
+
+=== gravity_nonuniversal seed=11 (omega1=0.8 omega2=1.0, NON-universal (only E1) coupling) ===
+  elapsed=2.0s  H_a mean=+0.028 H_b mean=+0.149  MI mean=+0.556 std=0.072
+  KBK v_null 6D = ['-0.077', '+0.076', '-0.125', '-0.041', '-0.125', '+0.977']
+  KBK v_null [2,3,4] = ['+0.688', '+0.227', '+0.689']  cos to (+1,+1,+2) = +0.936
+  PySR best (sympy): 0.5524274 - (-0.11702156)*x0
+  PySR Pareto (top 6 low-complexity):
+    c=  1 loss=5.167e-03 score=+0.000 0.5556964
+    c=  5 loss=2.969e-03 score=+0.139 0.5524274 - (x0 * -0.11702156)
+    c=  6 loss=2.935e-03 score=+0.011 exp((x0 * 0.21880086) + -0.5974842)
+    c=  7 loss=2.795e-03 score=+0.049 0.5626963 - ((x0 - x1) * -0.059367664)
+    c=  8 loss=2.690e-03 score=+0.038 log(1.7592771 - ((x0 - x1) * -0.12817979))
+    c=  9 loss=2.617e-03 score=+0.028 0.5626963 - (-0.08948417 * (x0 - (x1 * 0.6323852)))
+
+=== Cross-seed comparison ===
+  [SYM/UNIV] gravity_sym_baseline:
+    PySR best per seed:
+      seed 11: -exp(x1) + exp(x0 + 0.14611705) + 0.47041404
+  [ASYM/UNIV] gravity_asym_omegas:
+    PySR best per seed:
+      seed 11: 0.148800790792372*(x0 + 0.43874526)**3 + 0.5002626
+  [ASYM/NON-UNIV] gravity_nonuniversal:
+    PySR best per seed:
+      seed 11: 0.5524274 - (-0.11702156)*x0
+
+=== Cross-config comparison (mean v_null per config) ===
+  cos(gravity_sym_baseline <-> gravity_asym_omegas) = +0.1259
+  cos(gravity_sym_baseline <-> gravity_nonuniversal) = -0.0371
+  cos(gravity_asym_omegas <-> gravity_nonuniversal) = +0.9740
+
+[gravity_glance] wrote gravity_glance_canary.json  elapsed=76.8s
