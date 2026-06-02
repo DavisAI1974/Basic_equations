@@ -1,0 +1,302 @@
+{
+  "probe": "flow-dipole equation -- GRAVITY (LIGO H1/L1, GW150914)",
+  "form": "dMI/dt ~ c_self*H_i^2 + c_cross*H_a*H_b + linear + const",
+  "channels": {
+    "A": "H1 whitened strain",
+    "B": "L1 whitened strain (lag/inv aligned)"
+  },
+  "config": {
+    "event": "GW150914",
+    "fs": 4096,
+    "win_s": 0.125,
+    "stride_s": 0.0625,
+    "edge_crop_s": 2.0,
+    "smooth_w": 5,
+    "offsets": [
+      0
+    ],
+    "merger_t_s": 16.40000009536743
+  },
+  "scatter_method": "window-start jitter sweep (5 offsets); one 2-detector event only -- GW170817 has H1 but no L1 locally",
+  "per_realization": [
+    {
+      "offset_windows": 0,
+      "n_windows_full": 447,
+      "full_segment": {
+        "n_points": 437,
+        "MI_range": [
+          0.17365110331349998,
+          0.5022809269213926
+        ],
+        "dMI_abs_mean": 0.08117746116899725,
+        "model_A_full": {
+          "coeffs_raw": {
+            "H_a^2": -0.13571205748460494,
+            "H_b^2": 0.29330453257422506,
+            "H_a*H_b": -0.11941798367138785,
+            "H_a": -0.40086745399654516,
+            "H_b": 0.8479325401161248,
+            "1": 0.5387133120853335
+          },
+          "coeffs_std": {
+            "H_a^2": -0.23455222852098542,
+            "H_b^2": 0.7956604707591474,
+            "H_a*H_b": -0.21329645209761156,
+            "H_a": -0.3422658721996389,
+            "H_b": 0.6706023126131575
+          },
+          "R2": 0.008069231052118542
+        },
+        "model_B_MI_relax": {
+          "a": -0.000981375974073703,
+          "b": -4.940361892143464e-05,
+          "R2": 6.614143155392327e-08
+        },
+        "model_C_self_only_R2": 0.00798626516350387,
+        "dR2_dipole_over_relax": 0.008069164910686988,
+        "dR2_cross_term": 8.296588861467225e-05,
+        "shuffle_null_R2_mean": 0.01461251870644394,
+        "shuffle_null_R2_max": 0.07060165472399693,
+        "opposition_signature_quad": false,
+        "C_ratio_mean_over_MI": -5.76491038644352
+      },
+      "noise_only": {
+        "n_points": 212,
+        "MI_range": [
+          0.17803832939155795,
+          0.31236005320409177
+        ],
+        "dMI_abs_mean": 0.07106788296481929,
+        "model_A_full": {
+          "coeffs_raw": {
+            "H_a^2": 0.8392762340303139,
+            "H_b^2": -0.3820617780750077,
+            "H_a*H_b": -0.006537166289826701,
+            "H_a": 1.9423038609390346,
+            "H_b": -1.3380578340059401,
+            "1": -0.041851941878391745
+          },
+          "coeffs_std": {
+            "H_a^2": 1.6999932638312658,
+            "H_b^2": -1.2308930303965602,
+            "H_a*H_b": -0.01236902538497884,
+            "H_a": 1.7710321960703126,
+            "H_b": -1.2226200349715692
+          },
+          "R2": 0.014032916675438822
+        },
+        "model_B_MI_relax": {
+          "a": 0.003960053897708408,
+          "b": -0.0025908468323177,
+          "R2": 1.0598493845881407e-06
+        },
+        "model_C_self_only_R2": 0.014032632603099282,
+        "dR2_dipole_over_relax": 0.014031856826054234,
+        "dR2_cross_term": 2.8407233954030886e-07,
+        "shuffle_null_R2_mean": 0.02191174800178235,
+        "shuffle_null_R2_max": 0.05246591528647426,
+        "opposition_signature_quad": false,
+        "C_ratio_mean_over_MI": -5.830344169494156
+      },
+      "event_window": {
+        "n_points": 38,
+        "MI_range": [
+          0.2113838883890362,
+          0.5022809269213926
+        ],
+        "dMI_abs_mean": 0.11944058623795724,
+        "model_A_full": {
+          "coeffs_raw": {
+            "H_a^2": -3.9694581654286485,
+            "H_b^2": 6.7298564039782995,
+            "H_a*H_b": 0.5564730333044839,
+            "H_a": -7.240826961194976,
+            "H_b": 23.68249039983104,
+            "1": 16.60511924906319
+          },
+          "coeffs_std": {
+            "H_a^2": -5.751284152363365,
+            "H_b^2": 12.577237009662442,
+            "H_a*H_b": 0.9529329524751778,
+            "H_a": -6.377062210807252,
+            "H_b": 14.419984269739125
+          },
+          "R2": 0.2378108294357164
+        },
+        "model_B_MI_relax": {
+          "a": 0.048170228880306185,
+          "b": -0.024340146490060565,
+          "R2": 0.00015442374260021818
+        },
+        "model_C_self_only_R2": 0.23756419340525903,
+        "dR2_dipole_over_relax": 0.2376564056931162,
+        "dR2_cross_term": 0.00024663603045738114,
+        "shuffle_null_R2_mean": 0.15884665391797723,
+        "shuffle_null_R2_max": 0.393939563425315,
+        "opposition_signature_quad": false,
+        "C_ratio_mean_over_MI": -5.4659520270743105
+      }
+    }
+  ],
+  "aggregate_full_segment": {
+    "H_a^2": {
+      "mean": -0.23455222852098542,
+      "std": 0.0
+    },
+    "H_b^2": {
+      "mean": 0.7956604707591474,
+      "std": 0.0
+    },
+    "H_a*H_b": {
+      "mean": -0.21329645209761156,
+      "std": 0.0
+    },
+    "H_a": {
+      "mean": -0.3422658721996389,
+      "std": 0.0
+    },
+    "H_b": {
+      "mean": 0.6706023126131575,
+      "std": 0.0
+    },
+    "full_R2": {
+      "mean": 0.008069231052118542,
+      "std": 0.0
+    },
+    "model_C_self_only_R2": {
+      "mean": 0.00798626516350387,
+      "std": 0.0
+    },
+    "dR2_dipole_over_relax": {
+      "mean": 0.008069164910686988,
+      "std": 0.0
+    },
+    "dR2_cross_term": {
+      "mean": 8.296588861467225e-05,
+      "std": 0.0
+    },
+    "shuffle_null_R2_mean": {
+      "mean": 0.01461251870644394,
+      "std": 0.0
+    },
+    "C_ratio_mean_over_MI": {
+      "mean": -5.76491038644352,
+      "std": 0.0
+    },
+    "relax_R2": {
+      "mean": 6.614143155392327e-08,
+      "std": 0.0
+    },
+    "opposition_fraction": 0.0
+  },
+  "aggregate_noise_only": {
+    "H_a^2": {
+      "mean": 1.6999932638312658,
+      "std": 0.0
+    },
+    "H_b^2": {
+      "mean": -1.2308930303965602,
+      "std": 0.0
+    },
+    "H_a*H_b": {
+      "mean": -0.01236902538497884,
+      "std": 0.0
+    },
+    "H_a": {
+      "mean": 1.7710321960703126,
+      "std": 0.0
+    },
+    "H_b": {
+      "mean": -1.2226200349715692,
+      "std": 0.0
+    },
+    "full_R2": {
+      "mean": 0.014032916675438822,
+      "std": 0.0
+    },
+    "model_C_self_only_R2": {
+      "mean": 0.014032632603099282,
+      "std": 0.0
+    },
+    "dR2_dipole_over_relax": {
+      "mean": 0.014031856826054234,
+      "std": 0.0
+    },
+    "dR2_cross_term": {
+      "mean": 2.8407233954030886e-07,
+      "std": 0.0
+    },
+    "shuffle_null_R2_mean": {
+      "mean": 0.02191174800178235,
+      "std": 0.0
+    },
+    "C_ratio_mean_over_MI": {
+      "mean": -5.830344169494156,
+      "std": 0.0
+    },
+    "relax_R2": {
+      "mean": 1.0598493845881407e-06,
+      "std": 0.0
+    },
+    "opposition_fraction": 0.0
+  },
+  "aggregate_event_window": {
+    "H_a^2": {
+      "mean": -5.751284152363365,
+      "std": 0.0
+    },
+    "H_b^2": {
+      "mean": 12.577237009662442,
+      "std": 0.0
+    },
+    "H_a*H_b": {
+      "mean": 0.9529329524751778,
+      "std": 0.0
+    },
+    "H_a": {
+      "mean": -6.377062210807252,
+      "std": 0.0
+    },
+    "H_b": {
+      "mean": 14.419984269739125,
+      "std": 0.0
+    },
+    "full_R2": {
+      "mean": 0.2378108294357164,
+      "std": 0.0
+    },
+    "model_C_self_only_R2": {
+      "mean": 0.23756419340525903,
+      "std": 0.0
+    },
+    "dR2_dipole_over_relax": {
+      "mean": 0.2376564056931162,
+      "std": 0.0
+    },
+    "dR2_cross_term": {
+      "mean": 0.00024663603045738114,
+      "std": 0.0
+    },
+    "shuffle_null_R2_mean": {
+      "mean": 0.15884665391797723,
+      "std": 0.0
+    },
+    "C_ratio_mean_over_MI": {
+      "mean": -5.4659520270743105,
+      "std": 0.0
+    },
+    "relax_R2": {
+      "mean": 0.00015442374260021818,
+      "std": 0.0
+    },
+    "opposition_fraction": 0.0
+  },
+  "reading_guide": {
+    "is_a_real_dipole_if": "dR2_cross_term > 0 (H_a*H_b adds signal) AND dR2_dipole_over_relax > 0 (beats 1-D MI relaxation) AND shuffle_null_R2 ~ 0 AND opposition holds",
+    "deflationary_if": "relax_R2 ~= full R2 (just 1-D MI relaxation) OR shuffle_null_R2 high (column-count artifact) OR dR2_cross ~ 0 (cross term carries nothing)",
+    "guard_full_vs_noise": "compare aggregate_full_segment vs aggregate_noise_only: the merger transient may drive the full-segment fit (INFO-036: noise sits on the equal-entropy attractor, the chirp leaves it)",
+    "scale_caveat": "raw coeffs units-dependent (INFO-051: MI is the only scale-invariant operator); read standardized betas",
+    "data_caveat": "one real event, one segment; whitening sets the entropy scale; short lever arm / finite SNR; no novelty claim (literature/novelty scan pending)"
+  },
+  "runtime_s": 0.2
+}
