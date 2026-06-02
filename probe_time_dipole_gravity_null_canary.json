@@ -1,0 +1,47 @@
+{
+  "probe": "tautology-killing null (circular-shift of H_b) for the gravity static algebraic dipole H_a^2 = a + b*H_aH_b + c*(H_aH_b)^2",
+  "logic": "shift preserves H_b smoothness + shared H_a factor; kills only the instantaneous H_a<->H_b pairing. real >> shift-null => genuine.",
+  "event": {
+    "n_points": 96,
+    "Ha_std": 0.18521277114868845,
+    "Hb_std": 0.13118653537785066,
+    "corr_Ha_Hb": 0.7303973834129286,
+    "R2_real": 0.925869352593516,
+    "shift_null_mean": 0.796420157661456,
+    "shift_null_p95": 0.8492827035689094,
+    "shift_null_std": 0.04664095001457321,
+    "excess_over_null": 0.12944919493205997,
+    "z_over_null": 2.7754407257178975,
+    "p_null_ge_real": 0.0,
+    "beta": [
+      0.014358918265856656,
+      0.1745811462299257,
+      0.2285385286872983
+    ]
+  },
+  "noise": {
+    "n_points": 445,
+    "Ha_std": 0.08207209399473626,
+    "Hb_std": 0.08116361672440549,
+    "corr_Ha_Hb": -0.058773867026121356,
+    "R2_real": 0.7060349999213043,
+    "shift_null_mean": 0.7197450646510553,
+    "shift_null_p95": 0.753501165149434,
+    "shift_null_std": 0.02149629972433767,
+    "excess_over_null": -0.013710064729751004,
+    "z_over_null": -0.6377871665252967,
+    "p_null_ge_real": 0.73,
+    "beta": [
+      -1.1304201797052282,
+      1.5036430241859653,
+      -0.1467973548109235
+    ]
+  },
+  "verdict": {
+    "event_beats_tautology_null": true,
+    "noise_beats_tautology_null": false,
+    "event_excess_minus_noise_excess": 0.143,
+    "reading": "if event_genuine and excess>>noise excess -> the algebraic dipole carries real event-specific joint structure (not just the shared-H_a tautology). if both ~0 excess -> tautology."
+  },
+  "runtime_s": 1.9
+}
