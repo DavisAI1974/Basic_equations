@@ -88,7 +88,7 @@ The Noether-style move: find what is invariant under reparametrizations that gen
 
 - **SENTINEL V4.1** — DARPA Bio Attribution Challenge top-10 team. Awards June 30, 2026. Three-layer swarm, 554x DARPA requirements. Files at E:\sentinel\ and F:\Factory\knowledge\sentinel\.
 - **NoVell** — cardiac AI for cancer detection from routine ECG. OD on synthetic Vigier 2021 data: 93.3% accuracy, 97.4% sensitivity. Datasets: PTB-XL downloaded, Autonomic Aging identified, MIMIC-IV pending.
-- **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Session 7 added GP regression and PySR symbolic regression on per-domain ensemble-H data: four reproducible per-domain MI-vs-H functional families (physics symmetric quadratic in (H_b-H_a), biology 0.5*exp(H_a/2), chemistry linear H_a, geology constant), cross-seed coefficient variation <5%, cross-domain non-overlap. Session 8 ran four-force unification probe (toy EM/weak/strong/gravity caricatures) yielding shared-substrate + distinct-expression pattern (INFO-027): all four forces share [2,3,4] null direction at cos > 0.997 on (-1,-1,+2)/sqrt(6) Session 3 attractor while EM matches Session 7 physics family (H_b-H_a)^2+const and weak matches Session 7 chemistry family linear-in-H_a. Robustness check (INFO-029): INFO-025 functional family survives T/N_ens/noise sweep at the family level; coefficients are regime-dependent. Mapping campaign (INFO-030): INFO-025 families are baseline-specific regime signatures — large knob deviations mutate the family qualitatively (biology exp -> linear at high beta; chemistry linear -> ratio at low B). Per-domain differentiation now has three independent reproducible signatures (null direction + functional family + four-force shared-substrate). See Sessions 5, 6, 7, 8 notes plus ledger (INFO-022 through 030) for current state.
+- **Information Layer / Operator Discovery foundations** — major methodological revision Session 3 (Family A/B taxonomy retracted). Session 5 mapped (+,+,+) direction as protocol artifact of operator basis rank-3 null subspace structure. Session 6 stacked KBK 2024 + AI Poincare 2021 + SINDy and independently reproduced every v5 per-domain claim (geology rank-3 at cos +0.99, biology MI signature, chemistry-specific cubic) at cross-seed cos +0.985 to +0.999. Session 7 added GP regression and PySR symbolic regression on per-domain ensemble-H data: four reproducible per-domain MI-vs-H functional families (physics symmetric quadratic in (H_b-H_a), biology 0.5*exp(H_a/2), chemistry linear H_a, geology constant), cross-seed coefficient variation <5%, cross-domain non-overlap. Session 8 ran four-force unification probe (toy EM/weak/strong/gravity caricatures) yielding shared-substrate + distinct-expression pattern (INFO-027): all four forces share [2,3,4] null direction at cos > 0.997 on (-1,-1,+2)/sqrt(6) Session 3 attractor while EM matches Session 7 physics family (H_b-H_a)^2+const and weak matches Session 7 chemistry family linear-in-H_a. Robustness check (INFO-029): INFO-025 functional family survives T/N_ens/noise sweep at the family level; coefficients are regime-dependent. Mapping campaign (INFO-030): INFO-025 families are baseline-specific regime signatures — large knob deviations mutate the family qualitatively (biology exp -> linear at high beta; chemistry linear -> ratio at low B). Per-domain differentiation now has three independent reproducible signatures (null direction + functional family + four-force shared-substrate). Session 9 double-checked the Session 8 gravity result against the ORIGINAL code across an asymmetry sweep and CORRECTED it (INFO-033): the MI-dominant substrate flip is an asymmetry-THRESHOLD effect ALL coupled caricatures undergo (threshold gravity ~1.1x < EM ~1.3x < weak ~1.6x < strong never), not gravity-specific; adding energy-coupling RAISES thresholds (suppresses the flip), so energy-mediation is not the cause; INFO-031/032 re-tagged incomplete-not-wrong. The "gravity is special at the substrate level" leg of the four-force narrative is removed; INFO-023/INFO-025 legs untouched. See Sessions 5, 6, 7, 8, 9 notes plus ledger (INFO-022 through 033) for current state.
 
 ## Information Layer — Current State (2026-05-25 Session 3)
 
@@ -193,8 +193,11 @@ Need to be saved to E:\information_layer\ AND mirrored to F:\Factory\knowledge\i
 
 ## Session Handoff Pointer
 
-For active information-layer work, read `SESSION_HANDOFF_2026-05-26_v8.md`
-(in repo root) first.
+For the latest (Session 9) double-check + correction of the Session 8
+gravity result, read `SESSION_HANDOFF_2026-06-02_v9_results.md` (in repo
+root) first, then the Session 9 note above (INFO-033). For the Session 8
+record (four-force probe, INFO-027 through 032), read
+`SESSION_HANDOFF_2026-05-26_v8.md`.
 
 For Session 7 context (GP regression + PySR symbolic regression on
 per-domain ensemble-H data, four reproducible per-domain MI-vs-H
@@ -246,6 +249,89 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 9 update — 2026-06-02)
+
+Session 9 opened on the Session 8 close-out gravity result. Greg's
+directive: do not assume our own prior outputs are correct -- double
+check our work, but do not reconstruct for no reason. This produced a
+correction to the Session 8 gravity reading. Branch:
+`claude/gravity-substrate-config-51cfp`. PySR unavailable this session
+(no Julia in the environment); the substrate-side KBK extraction (the
+load-bearing measurement for INFO-031/032) is pure-numpy and was run
+directly from the ORIGINAL Session 8 code (pulled onto the branch from
+`claude/two-more-tasks-O6ahb`), not a reconstruction. Scripts:
+s9_doublecheck_flip.py, s9_characterize.py.
+
+- **Double-check method**: the Session 8 EM/SF glance (INFO-031) and
+  gravity glance (INFO-032) each tested only ONE channel-asymmetry
+  value (EM omega 1.0/1.2; strong 0.5/0.7; gravity 0.8/1.0). Session 9
+  re-ran the ORIGINAL simulators + ORIGINAL raw-covariance extraction
+  (build_ensemble_operator_matrix + extract_v1) across an asymmetry
+  SWEEP. Session 8 baselines reproduced exactly (gravity_asym MI coef
+  0.990; em_asym 1.0/1.2 MI coef 0.271; strong_asym 0.5/0.7 ~0).
+
+- **INFO-033 -- LOCATED FINDING (Session 9, new; 3 seeds, scatter
+  reported)**: the MI-dominant substrate flip ("MI ~ const" replacing
+  the channel-correlation identity -(H_a-H_b)^2 ~ 0 as the operator
+  null direction) is NOT gravity-specific. It is an ASYMMETRY-THRESHOLD
+  effect that ALL coupled caricatures undergo; the threshold differs by
+  force. Flip threshold (asymmetry omega2/omega1 at which |MI coef| in
+  v_null crosses ~0.5): gravity ~1.1x (lowest, most flip-prone), EM
+  ~1.3x, weak ~1.5-1.7x, strong NEVER (flat to 4x). Session 8 tested EM
+  at 1.2x -- just below its threshold -- and read the absence as a
+  qualitative gravity/EM difference. Reframed 5a test (add gravity's
+  E_total universal-energy term to EM and strong): adding energy-
+  coupling RAISES their thresholds (suppresses the flip), it does not
+  lower them. So energy-mediated coupling is NOT the cause of gravity's
+  low threshold. The flip is governed by how well the coupling
+  preserves channel correlation under detuning: strong's confining
+  cubic never lets go (no flip); gravity's weak softened coupling lets
+  go first (flips earliest); EM/weak intermediate. Deflationary reading
+  (now well-supported): the flip is a variance-crossing -- detuning
+  raises the residual of the -(H_a-H_b)^2 relation while MI settles to
+  a low near-constant floor; the null swaps to whichever relation is
+  tighter; the crossing point is set by coupling-vs-detuning, with no
+  force-specific physics.
+
+- **INFO-031 -- RE-TAGGED INCOMPLETE (Rule D)**: "EM and strong keep
+  their substrate across the symmetry swap" holds only at the single
+  sub-threshold asymmetry tested (EM 1.0/1.2). EM flips by 1.0/1.3.
+  Data stands; the substrate-stability reading was incomplete. The
+  expression-level part of INFO-031 (EM polynomial-in-difference vs
+  strong exponential-in-difference) was a PySR result not re-examined
+  this session (PySR unavailable) and is not affected by INFO-033.
+
+- **INFO-032 -- RE-TAGGED INCOMPLETE (Rule D)**: "gravity's substrate
+  is configuration-dependent in a way EM/strong are NOT" is incomplete-
+  not-wrong. The data (gravity flips to MI-dominant under asymmetry)
+  reproduces exactly. But EM and weak ALSO flip under sufficient
+  asymmetry; gravity merely has the lowest threshold. The "gravity is a
+  different kind of constraint / energy-conservation without preferred
+  direction" frame does NOT survive the sweep -- gravity sits at the
+  easy-to-flip end of a single continuous coupling-strength dial, not
+  in a separate category. What replaces it: a force-ordered flip-
+  threshold (strong -> infinity, weak ~1.6x, EM ~1.3x, gravity ~1.1x)
+  tracking coupling-vs-detuning.
+
+- **Consequence for the four-force frame**: the "gravity is special at
+  the substrate level" leg of the Session 8 four-force narrative
+  (INFO-027 + INFO-032) is removed. The substrate-vs-expression frame's
+  OTHER legs (per-domain null direction INFO-023; per-domain functional
+  family INFO-025) are not touched by Session 9 and remain on the
+  table. Frame reassessment in progress (see v9-results handoff /
+  session discussion).
+
+- **Methodological note (not a Rule)**: a single-point probe can read a
+  threshold crossing as a categorical property. When a finding is "X
+  does this and Y does not," sweep the knob through a range before
+  promoting the contrast -- the difference may be a threshold, not a
+  kind. Pairs with the existing "no tent-widening on outliers" and
+  Result Discipline "map alternatives" rules.
+
+- All six Operating Rules from Sessions 4-7 in force. No new Rule added
+  this session. Branch state: work on
+  `claude/gravity-substrate-config-51cfp`, pushed. main untouched. No PR.
 
 ## Note (Session 8 update — 2026-05-26)
 
@@ -314,7 +400,9 @@ Updated at the end of 2026-05-26 Session 8 to reflect:
   a frame, not a claim.
 - Post-close EM/SF "quick glance" probe (Greg's directive at
   Session 8 close): symmetry-swap test of EM vs strong force.
-  Four configs x 3 seeds. Result (INFO-031 located): EM and
+  Four configs x 3 seeds. Result (INFO-031 located; substrate-
+  stability part RE-TAGGED INCOMPLETE Session 9 -- see INFO-033):
+  EM and
   strong produce DIFFERENT functional families on shared
   substrate even when channel symmetry is controlled. EM =
   (H_a - H_b)^2 + const (polynomial in difference); Strong =
@@ -329,7 +417,10 @@ Updated at the end of 2026-05-26 Session 8 to reflect:
   what gravity really is"): 3-config probe of gravity caricature
   -- sym+universal baseline, asym omegas + universal, asym
   omegas + non-universal coupling. 3 seeds each. Result
-  (INFO-032 located): gravity's SUBSTRATE is configuration-
+  (INFO-032 located; RE-TAGGED INCOMPLETE Session 9 -- the flip
+  is an asymmetry-THRESHOLD effect ALL forces undergo, gravity
+  just has the lowest threshold; see INFO-033): gravity's
+  SUBSTRATE is configuration-
   dependent in a way EM/strong are not. Symmetric+universal
   gravity sits on Session 3 attractor -(H_a-H_b)^2 ~ 0.
   Asymmetric gravity (whether mass-asym or non-universal)
