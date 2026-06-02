@@ -159,6 +159,71 @@ ADJUSTMENT NOTE (within-probe, per the new rule): backlog #3's S16 diagnosis
 was the fix. Merger-seeding from metadata (not envelope-peak / max-power) was needed
 for the faint BNS.
 
+## PROBE 3 ("MI next" -- Greg) — inter-detector MI is physics-bearing (INFO-053)
+
+Characterize the ONE genuinely physical footing left after PROBE 1 (the equal-entropy
+substrate is bookkeeping; MI is the only scale-invariant operator). THE question: is
+the MI-at-merger (INFO-036/045) genuine GRAVITATIONAL information carrying structure
+BEYOND loudness, or just "two detectors saw the same loud thing"? Four tests on
+GW150914 H1/L1 (`probe_mi_merger_axis.py`), same hist-MI estimator. (MI is invariant
+under L1's sign inversion, so only the inter-detector LAG matters.)
+
+- **T1 MI(t) through merger**: peak MI 0.455 at t 16.366 s (merger 16.42 s) vs
+  baseline 0.205 (2.2x). Reproduces INFO-036.
+- **T2 LAG SCAN (decisive geometry test)**: merger-window MI peaks at lag
+  **+7.0 ms == the physical H1-L1 light-travel delay** for GW150914; the off-merger
+  noise window is FLAT (max 0.256). A loudness coincidence is lag-independent -- this
+  tracks the gravitational GEOMETRY.
+- **T3 TIME-SLIDE NULL**: merger MI 0.534 vs null (10 large non-physical lags) mean
+  0.225 sd 0.020 => **z = 15.5**. Highly significant; not coincidence.
+- **T4 PHASE-SCRAMBLE (beyond loudness)**: phase-randomize L1 (keep amplitude
+  spectrum, destroy waveform phase) -> MI 0.240 +/- 0.029 (50 realizations), ~= the
+  null (0.225) and baseline (0.205). So the ENTIRE MI excess above baseline is carried
+  by waveform PHASE/TIME structure, not amplitude/loudness.
+
+Reading (Result Discipline): DATA -- inter-detector MI at the merger peaks at the
+physical 7 ms lag, is 15.5 sigma above the time-slide null, and its excess is entirely
+destroyed by phase-scrambling. INTERPRETATION -- the MI operator is PHYSICS-BEARING:
+genuine common gravitational information carrying the waveform's phase/time structure,
+NOT loudness coincidence or bookkeeping. This validates MI as the real physical
+footing (consistent with INFO-051: MI is the only scale-invariant quantity). NOT new
+physics -- LIGO routinely uses inter-detector consistency + the ~7 ms delay; our
+contribution is that OUR information-theoretic MI operator captures it AND that the MI
+signal is time-structure-bearing. FRAME CONTACT (ungraded, frames don't grade
+themselves): MI -- the surviving physical quantity -- carries the gravitational TIME
+structure; this is the empirical contact point for the "gravity/flow couples to time"
+hunch (H-A/H-B/H-C), but it stays a frame until a probe separates "MI tracks the
+chirp's time structure (already in GR)" from "MI carries time-coupling beyond GR."
+No new Operating Rule.
+
+## Gravity thread — footholds scaffold (start of framework accounting, Greg S17)
+
+Honest accounting of where the gravity work stands. This is NOT an equation yet; it is
+the ledger of what may stack toward one. Did we find a NEW law? NO -- INFO-052
+recovered a KNOWN law (Newtonian chirp); its value is method validation.
+
+CONFIRMED FOOTHOLDS (physical, build on these):
+- F1 (INFO-053): inter-detector MI at merger = genuine gravitational common info --
+  physical 7 ms lag, z 15.5, carries waveform phase/time structure.
+- F2 (INFO-052): inspiral chirp governing law f^(-8/3) ~ (t_c - t) recovered from raw
+  strain, both detectors agree (KNOWN law; validates the OD method on real gravity).
+- F3 (INFO-051): MI is the only scale-invariant (representation-independent) quantity
+  in the operator basis.
+
+CLEARED (bookkeeping/artifact -- do NOT build on):
+- C1 (INFO-051): the equal-entropy "substrate" everything clustered on = units/
+  construction bookkeeping.
+- C2 (S16): post-merger "return to substrate" = return to detector NOISE, not ringdown.
+- C3 (Greg S16): MI-in-null coupling discriminator DISPROVED.
+
+OPEN (toward a possible gravity equation):
+- O1: does MI carry MORE than the GR chirp -- any time/flow structure beyond what the
+  inspiral already encodes? (the new-physics question; the only road to a NEW law)
+- O2: the time-coupling thesis (gravity CONTAINS a time term) -- design on MI/dynamics
+  (the scale-invariant content), NOT the entropy substrate.
+- O3: GW170817 absolute chirp mass (lever-arm-limited in H1; needs full sweep / L1 /
+  matched filter).
+
 ## Files this session
 - `CLAUDE.md` (rebuilt canonical through S17), `SESSION_HANDOFF_2026-06-02_S17.md`,
   `BACKLOG_tests_and_probes.md` (#1 marked DONE).
@@ -166,6 +231,7 @@ for the faint BNS.
   (+ `_canary.json`).
 - `probe_gravity_chirp_ridge.py` + `probe_gravity_chirp_ridge_results.json`
   (+ `_canary.json`).
+- `probe_mi_merger_axis.py` + `probe_mi_merger_axis_results.json` (+ `_canary.json`).
 - h5py confirmed in `requirements.txt` (installed at runtime; the fresh container's
   SessionStart hook had not installed it this run).
 

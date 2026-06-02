@@ -582,7 +582,13 @@ quantity in the basis). Then the deliberate pivot off coordinate-auditing onto
 gravity-FORWARD ground: backlog #3 (INFO-052) recovered the gravity inspiral chirp law
 from raw GW150914 strain by a CWT ridge — both detectors agree at R^2 0.99, M_c ~38 vs
 catalog ~31 — decisively beating the S16 Hilbert (R^2 0.001); GW170817 confirms the
-law form (R^2 0.88) with a lever-arm-limited mass.
+law form (R^2 0.88) with a lever-arm-limited mass. This is a KNOWN law recovered
+(method validation), NOT a new law. Then ("MI next") INFO-053 characterized the
+surviving physical signal: inter-detector MI at the merger is PHYSICS-BEARING — peaks
+at the physical 7 ms lag, z=15.5 vs a time-slide null, and its excess is entirely
+waveform phase/time structure (not loudness). Gravity footholds scaffold (F1-F3
+confirmed / C1-C3 cleared / O1-O3 open) is in the S17 handoff: we are accumulating
+validated footings, NOT yet a gravity equation.
 
 For the (Session 16) session, read `SESSION_HANDOFF_2026-06-02_S16.md`
 first, then `BACKLOG_tests_and_probes.md` (the queue + the standing backlog-first
@@ -806,6 +812,29 @@ nature). Full detail in `SESSION_HANDOFF_2026-06-02_S17.md`.
   (form generalizes, absolute mass data/method-limited in a 32 s H1 segment).
   INTERPRETATION: a positive gravity governing-law recovery on the scale-invariant
   content (not the bookkeeping substrate). No new Operating Rule.
+
+- **INFO-053 -- LOCATED FINDING (Session 17, new; "MI next" -- Greg; GW150914 H1/L1)**:
+  the inter-detector MI merger signal is PHYSICS-BEARING, not loudness bookkeeping --
+  characterizing the one scale-invariant operator left after INFO-051. Probe
+  (`probe_mi_merger_axis.py`), 4 tests, same hist-MI estimator (MI is invariant under
+  L1's inversion, so only the lag matters): (T1) MI(t) peaks at the merger 0.455 vs
+  baseline 0.205 (reproduces INFO-036); (T2, decisive) merger MI peaks at lag
+  +7.0 ms = the PHYSICAL H1-L1 light-travel delay, off-merger noise window FLAT -- a
+  loudness coincidence is lag-independent, so MI tracks the gravitational GEOMETRY;
+  (T3) merger MI is z=15.5 above a 10-lag time-slide null; (T4) phase-scrambling L1
+  (keep amplitude spectrum, destroy waveform phase) collapses MI to 0.240 ~= null
+  0.225 ~= baseline 0.205, so the ENTIRE MI excess is carried by waveform PHASE/TIME
+  structure, not amplitude. INTERPRETATION: MI is genuine common gravitational
+  information carrying the waveform's time structure -- validates MI as the physical
+  footing (consistent with INFO-051). NOT new physics (LIGO uses inter-detector
+  consistency + the 7 ms delay routinely); the contribution is that our MI operator
+  captures it and is time-structure-bearing. FRAME CONTACT (ungraded): MI -- the
+  surviving physical quantity -- carries the gravitational TIME structure, the
+  empirical contact point for the gravity-couples-to-time hunch; stays a frame until a
+  probe separates "MI tracks the GR chirp's time structure" from "MI carries
+  time-coupling beyond GR" (open thread O1/O2). No new Operating Rule. See the gravity
+  footholds scaffold in `SESSION_HANDOFF_2026-06-02_S17.md` (F1-F3 confirmed, C1-C3
+  cleared, O1-O3 open).
 
 ## Note (Session 16 update — 2026-06-02) — gravity / 4-force + CLAUDE workflow
 
