@@ -544,6 +544,38 @@ Markets pull was dropped by Greg's call.
   equal-entropy. Refines INFO-039. Full entry in the Markets dipole subsection
   above. Scripts s12_coupling_decomposition.py + s12_biology_coupling.py.
 
+- **INFO-041 -- pairwise Level-2 cross-science coupling** (Markets dipole
+  subsection): generic coupling creates MI but it does NOT enter the null
+  (coupled MI-frac 0.003-0.147) unlike biology's native 0.91 -> the dipole's
+  MI-participation marks STRUCTURED (entropy-locked) coupling, not magnitude;
+  coupled-null directions are pair-specific (mean|cos| 0.46) -> NO universal
+  Level-2 dipole. s12_pairwise_level2.py.
+
+- **INFO-042 -- SM parameter-regularity hunt (four-force item, real PDG data)**:
+  s12_sm_regularity.py / s12_sm_regularity_results.json. The honest real-data
+  face of "are the forces/parameters structured." HITS: charged-lepton Koide
+  Q=0.666661 (5 digits); Gatto-Sartori-Tonin sqrt(m_d/m_s)=0.224 vs Cabibbo
+  sine 0.226 (ratio 0.991); quark-lepton complementarity th12_CKM+th12_PMNS
+  =46.4deg ~ 45; CKM Wolfenstein lambda^n hierarchy (ratios O(1)). MISSES
+  (cataloged per Result Discipline): quark Koide fails (up 0.85, down 0.73);
+  mass spectra only roughly geometric (log-linear R^2 0.97-0.995, not exact).
+  Reading: real low-dimensional structure exists (the SM mass/mixing sector is
+  NOT 26 independent randoms) but the cleanest relation has no accepted
+  derivation and the quark analogues fail -> each is a CONJECTURE / one data
+  point, no single generating rule, none citable as support until derived.
+  - **Answers Greg's force<->equation question (b)**: NO direct connection. SM
+    regularities are mass/angle relations among static parameters; the per-
+    domain equations are MI-vs-entropy relations of 2-channel dynamics --
+    different KIND of object. The one apparent bridge (Session-8 four-force
+    caricatures: EM's MI-vs-H = physics family (H_b-H_a)^2+c, weak ~ chemistry
+    linear, both robust-ish) was from toy force-laws WE wrote (S10 retired as
+    self-grading), so it cannot be cited. EM<->physics is a real but
+    caricature-contaminated hit; on REAL data there is no commensurable bridge.
+    Two contradictory mappings exist (functional-family: EM<->physics, vs
+    coupling-type INFO-040: gravity<->equal-entropy domains) -> pattern-matching
+    without constraint until a principled real-data force-operator-space is
+    built.
+
 - All six Operating Rules in force; no new Rule. Branch
   `claude/file-attachment-hold-DjGSW`, main synced, pushed. No PR.
 

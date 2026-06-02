@@ -107,9 +107,17 @@ actions; dropped the Markets pull by Greg's call.
   exists for a Level-2 dipole. NEXT on this thread: chemistry residual vs
   Brusselator B (knob test); biology slope-vs-g as strength readout; and a
   PAIRWISE Level-2 search (two sciences at a time) instead of universal-across-4.
-- **Track B extensions**: SM-parameter-regularity hunt (relations among
-  coupling values / mass ratios / CKM-PMNS angles) was framed in v11, not yet
-  built.
+- **SM-parameter-regularity hunt DONE this session (INFO-042)**: real PDG
+  data. HITS: lepton Koide 0.666661 (5 digits), GST sqrt(m_d/m_s)~Cabibbo sine
+  (0.991), quark-lepton complementarity 46.4~45deg, Wolfenstein lambda^n.
+  MISSES: quark Koide fails, mass spectra only roughly geometric. Real
+  structure exists but no single generating rule; all conjecture.
+  s12_sm_regularity.py. Also resolved Greg's force<->equation question (b):
+  no commensurable real-data bridge (SM regularities are static mass/angle
+  relations; per-domain equations are MI-vs-entropy dynamics); the EM<->physics
+  match is real but caricature-contaminated (S10-retired). Pairwise Level-2
+  (INFO-041) done too. Remaining four-force loose end: the LIGO no-MI-basis
+  reversal across the 12 events.
 - **Markets**: dropped this session (no claude-code-remote list_repos/add_repo
   tools; GitHub scope locked to basic_equations). Do via a tooled session if
   the actual Markets dipole JSONs are still wanted; the markets algebraic

@@ -1,0 +1,86 @@
+{
+  "provenance": "PDG 2024; quark masses scheme/scale-dependent",
+  "discipline": "every relation is conjecture (no accepted derivation); hits and misses both reported; no SR on the parameter set",
+  "relations": {
+    "koide_leptons": {
+      "value": 0.6666605114773855,
+      "target": 0.6666666666666666,
+      "dev_from_2_3": 6.155189281153994e-06,
+      "holds": true,
+      "note": "clean (5 digits) -- the famous hit"
+    },
+    "koide_up_quarks": {
+      "value": 0.8489367114385875,
+      "target": 0.6666666666666666,
+      "dev_from_2_3": 0.18227004477192088,
+      "holds": false,
+      "note": "MISS (control)"
+    },
+    "koide_down_quarks": {
+      "value": 0.7314276514329372,
+      "target": 0.6666666666666666,
+      "dev_from_2_3": 0.06476098476627057,
+      "holds": false,
+      "note": "MISS (control), closer than up"
+    },
+    "GST_cabibbo": {
+      "sqrt_md_ms": 0.22360679774997896,
+      "sin_thetaC": 0.22563123809993765,
+      "ratio": 0.9910276592593885,
+      "holds": true,
+      "note": "sqrt(m_d/m_s) vs Cabibbo sine"
+    },
+    "quark_lepton_complementarity": {
+      "sum_deg": 46.449999999999996,
+      "target": 45.0,
+      "dev": 1.4499999999999957,
+      "holds": true,
+      "note": "Cabibbo + solar angle vs 45 deg"
+    },
+    "loglinear_leptons": {
+      "slope": 4.076995392078924,
+      "R2": 0.9694004923688067,
+      "gen_ratios": [
+        206.76828298766566,
+        16.81702933242618
+      ],
+      "note": "log(mass) vs generation; R2~1 => geometric"
+    },
+    "loglinear_up_quarks": {
+      "slope": 5.644225004272774,
+      "R2": 0.9944181007136208,
+      "gen_ratios": [
+        587.9629629629629,
+        135.88188976377953
+      ],
+      "note": "log(mass) vs generation; R2~1 => geometric"
+    },
+    "loglinear_down_quarks": {
+      "slope": 3.3984537269189965,
+      "R2": 0.995340949411019,
+      "gen_ratios": [
+        20.0,
+        44.75374732334047
+      ],
+      "note": "log(mass) vs generation; R2~1 => geometric"
+    },
+    "wolfenstein_powers": {
+      "lam": 0.225,
+      "s12_over_lam": 1.0028055026663896,
+      "s23_over_lam2": 0.8202842770317057,
+      "s13_over_lam3": 0.3079817482253785,
+      "note": "s12~lam, s23~lam^2, s13~lam^3 => ratios ~O(1) if hierarchy holds"
+    },
+    "gauge_couplings_MZ": {
+      "a1_inv": 59.02,
+      "a2_inv": 29.59,
+      "a3_inv": 8.475,
+      "ratios": [
+        1.9945927678269686,
+        3.4914454277286135
+      ],
+      "note": "no single unification (INFO-037 triangle); ratios not obviously simple"
+    }
+  },
+  "reading": "SM parameter-regularity hunt, data/interpretation/frame separate. DATA: the charged-lepton Koide relation holds to 5 digits (Q=0.66666); the quark Koide does NOT (up 0.85, down 0.73). Gatto-Sartori-Tonin sqrt(m_d/m_s) matches the Cabibbo sine within ~5 percent. Quark-lepton complementarity (Cabibbo + solar = ~46.5 deg) sits near 45 within a few degrees. Charged-lepton and quark mass spectra are roughly geometric (log-linear R^2 high) but NOT exactly. CKM angles follow the Wolfenstein lambda^n hierarchy (ratios O(1)). INTERPRETATION: there IS real low-dimensional structure in the SM mass/mixing sector -- it is not 26 independent random numbers -- but the cleanest relation (lepton Koide) has no accepted derivation and the quark analogues fail, so each is a CONJECTURE / one data point, not a law. FRAME: this is the honest real-data face of 'are the forces/parameters structured' -- yes there are regularities, no they do not (yet) reduce to a single generating rule, and we cannot invoke any of them as support until independently derived. Connection to the per-domain dipole equations (Greg's force<->equation question): NONE direct -- SM regularities are mass/angle relations among static parameters; the per-domain equations are MI-vs-entropy relations of 2-channel dynamics. Different KIND of object; the only bridge (the four-force caricatures) was retired as self-grading."
+}
