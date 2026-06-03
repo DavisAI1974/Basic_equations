@@ -1,0 +1,34 @@
+{
+  "canary": true,
+  "n_systems": 4,
+  "systems": [
+    {
+      "name": "GPS (eccentric Galileo)",
+      "R": 1.1432835226680176,
+      "dR": 0.3020225455414228,
+      "regime_vc2": 1.6698514072645754e-10,
+      "use_in_fit": true
+    },
+    {
+      "name": "Pulsar PSR B1913+16 (Einstein delay)",
+      "R": 1.0001436632663825,
+      "dR": 0.0001,
+      "regime_vc2": 1.0013850504482567e-06,
+      "use_in_fit": true
+    },
+    {
+      "name": "LIGO GW170817 (BNS chirp)",
+      "R": 1.001920347332387,
+      "dR": 0.004174668113884858,
+      "regime_vc2": 0.16000000000000003,
+      "use_in_fit": true
+    },
+    {
+      "name": "LIGO GW150914 (ridge, method-limited)",
+      "R": 1.2466083155579595,
+      "dR": 0.2,
+      "regime_vc2": 0.2025,
+      "use_in_fit": false
+    }
+  ]
+}

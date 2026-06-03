@@ -1,0 +1,96 @@
+{
+  "probe": "clock_rate_law_universality",
+  "question": "Are the independently-recovered LIGO / GPS / pulsar clock-rate signatures ONE law -- the proper-time relation dtau/dt = 1 + Phi/c^2 - v^2/(2c^2)?",
+  "common_law": "dtau/dt = 1 + Phi/c^2 - v^2/(2 c^2)  (weak-field proper time)",
+  "systems": [
+    {
+      "name": "GPS (eccentric Galileo)",
+      "dataset": "raw RINEX pseudorange, IGS stations BRUX/ALGO (2-3 days)",
+      "observable": "relativistic eccentricity term  dt = -2(r.v)/c^2",
+      "projection": "periodic part of dtau/dt along an eccentric orbit; coefficient -2/c^2",
+      "R": 1.1432835226680176,
+      "dR": 0.3020225455414228,
+      "n_independent": 13,
+      "R_clean_singleday": [
+        1.0377764411902555,
+        1.0185127489864356
+      ],
+      "regime_vc2": 1.6698514072645754e-10,
+      "gr_coeff_check_rel_err": 0.0,
+      "significance": "z=380 vs scramble null (E18, detection); coeff scatter +/-0.30 over 13 replicas",
+      "use_in_fit": true
+    },
+    {
+      "name": "Pulsar PSR B1913+16 (Einstein delay)",
+      "dataset": "raw Arecibo TOAs 1981-2012 (Weisberg & Huang 2016)",
+      "observable": "Einstein-delay gamma (grav. redshift + 2nd-order Doppler of pulsar clock)",
+      "projection": "static/orbit-averaged part of dtau/dt in companion potential -> gamma",
+      "R": 1.0001436632663825,
+      "dR": 0.0001,
+      "n_independent": 1,
+      "R_secondary_pbdot": 1.005207986538288,
+      "regime_vc2": 1.0013850504482567e-06,
+      "gr_coeff_check_rel_err": null,
+      "significance": "gamma recovered to 0.014% of published GR value; dP_b/dt ratio 1.005",
+      "use_in_fit": true
+    },
+    {
+      "name": "LIGO GW170817 (BNS chirp)",
+      "dataset": "GWOSC GW170817 H1+L1 strain, 4096 Hz",
+      "observable": "chirp mass M_c via TaylorF2 matched filter",
+      "projection": "integrated PN proper-time phase evolution of the inspiral",
+      "R": 1.001920347332387,
+      "dR": 0.004174668113884858,
+      "n_independent": 2,
+      "regime_vc2": 0.16000000000000003,
+      "gr_coeff_check_rel_err": null,
+      "significance": "net SNR 14.8 (L1 null 9.7 sigma); H1=L1 independently; 0.19%% from catalog",
+      "use_in_fit": true
+    },
+    {
+      "name": "LIGO GW150914 (ridge, method-limited)",
+      "dataset": "GWOSC GW150914 H1 strain (Morlet-CWT ridge)",
+      "observable": "chirp mass via f^(-8/3)-linear-in-t ridge",
+      "projection": "Newtonian late-inspiral proper-time chirp (known ~24% high bias)",
+      "R": 1.2466083155579595,
+      "dR": 0.2,
+      "n_independent": 1,
+      "regime_vc2": 0.2025,
+      "gr_coeff_check_rel_err": null,
+      "significance": "ridge fit R^2=0.995; absolute M_c biased high (Newtonian late-inspiral)",
+      "use_in_fit": false
+    }
+  ],
+  "universality": {
+    "systems_in_fit": [
+      "GPS (eccentric Galileo)",
+      "Pulsar PSR B1913+16 (Einstein delay)",
+      "LIGO GW170817 (BNS chirp)"
+    ],
+    "ratios_R": [
+      1.1432835226680176,
+      1.0001436632663825,
+      1.001920347332387
+    ],
+    "deviation_from_unity_pct": [
+      14.328352266801758,
+      0.014366326638248772,
+      0.19203473323869957
+    ],
+    "max_abs_deviation_pct": 14.328352266801758,
+    "robust_mean_R": 1.0484491777555958,
+    "robust_std_R": 0.08213375604946939,
+    "weighted_alpha": 1.0001446978156425,
+    "chi2_common_law": 0.40563402819889693,
+    "dof_common_law": 2,
+    "chi2_vs_GR_unity": 2.500581421914253,
+    "dof_vs_GR_unity": 3,
+    "regime_span_decades_in_vc2": 8.981442155745595,
+    "formal_error_caveat": "weighted chi^2 uses each probe's formal error; GPS uses real multi-replica scatter (honest), but pulsar gamma and LIGO bank errors are optimistic (per their own probes). The ROBUST headline is the point-estimate agreement (max_abs_deviation_pct) + the system-to-system spread (robust_std_R), NOT the formal chi^2."
+  },
+  "reading": {
+    "DATA": "Three independent raw-data extractions, three methods, three regimes spanning ~9.0 decades in (v/c)^2, each recover the GR proper-time coefficient: ratios R = ['1.1433', '1.0001', '1.0019'] (each within 14.3% of unity); system-to-system spread 0.082.",
+    "INTERPRETATION": "The three observables are different projections of ONE relation: GPS = its periodic part (-2(r.v)/c^2), pulsar gamma = its orbit-averaged grav-redshift+2nd-order-Doppler part, LIGO = its integrated PN proper-time phase. They reduce to one law.",
+    "FRAME": "POSITIVE CONTROL, not new physics: this IS the equivalence principle / GR proper time -- established. The non-trivial part is that the OD tool, run independently on three raw datasets in three regimes, lands on the same proper-time coefficient. GW150914 ridge is reported but excluded from the strict fit (known Newtonian-late-inspiral absolute-mass bias)."
+  }
+}
