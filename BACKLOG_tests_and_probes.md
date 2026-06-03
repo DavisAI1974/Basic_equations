@@ -28,39 +28,58 @@ block). This was backlog #12 — promoted to JOB 1. Do it, THEN pick a probe.
 
 ---
 
-## >>> FIRST THING NEXT CHAT (Greg, S18) -- FLOW DIPOLE EQUATION + novelty scan <<<
-THE #1 task to start the next session with. Reframe/continuation of the O2/flow thread.
+## >>> FIRST THING NEXT CHAT (Greg, S19) -- WHAT IS TIME? <<<
+THE #1 direction for the next session. Greg (S19): "we need to find out what time actually is
+next. let's have next chat send out some research agents to help shed some light on it unless
+you have some good probes."
 
-STEP 0 (DO FIRST -- hard literature / novelty scan, before any "new law" language):
-S18 confirmed FLOW is a substrate with TIME as gravity's expression across all 4 forces +
-chemistry (INFO-062/063/064). REALITY CHECK (recorded so the frame does NOT re-inflate --
-the frame cannot grade itself): most of that is RE-DESCRIPTION of KNOWN physics -- the gauge
-forces' "flow" IS the renormalization group / running couplings (asymptotic freedom = 2004
-Nobel; Wilson RG = 1982 Nobel; Landau pole / Lambda_QCD are textbook), and gravity's chirp is
-standard GR. Our OWN result said the cross-axis unification (time<->scale<->mass) is NOT
-data-forced (construction-confounded). And "flow to a critical point" also caught a chemistry
-bifurcation -> it is general critical-phenomena/universality, not a force-specific law. So
-"new 4-forces law, nobody found it" is NOT established and partly contradicted by known RG/
-universality/asymptotic-safety/EFT literature. Run a real scan (RG flow, universality,
-asymptotic safety, effective field theory, "forces as running couplings to fixed points",
-info-dipole/flow-dipole) and state plainly what is genuinely ours vs known BEFORE any
-novelty claim. Treat-literature-as-conjecture + they-never-stacked apply.
+WHY HERE NOW: S19 showed the flow/entropy dipole is the WRONG tool on the forces (INFO-065),
+but the OTHER dipole (raw cross-cov + static algebraic, tautology-null-survived) SOLVES FOR
+TIME on gravity (LIGO 7ms lag z=14; algebraic event-excess +0.125 z=2.7) and GPS (E18 lag-0
+|cc|0.99 z=37; algebraic excess +0.571 z=5.7), and does NOT travel to the gauge forces
+(INFO-066) -- i.e. the dipole reads GRAVITY-TIME-SPECIFIC. So TIME is the live thread.
 
-STEP 1 (the probe): figure out the flow DIPOLE EQUATION on these flows. Each flow is now a
-single characteristic vs an axis; a flow DIPOLE needs TWO coupled channels in the info-dipole
-paper's form:
-  dMI/dt ~ sum_i c_self,i*H_i^2 + sum_{i<j} c_cross,ij*H_i*H_j + linear   (opposition signature)
-PLAN: pick 2 channels per flow -- chemistry Brusselator = native 2 species x,y (START HERE,
-cleanest); gravity = H1/L1 detectors (inter-detector MI already in INFO-053); strong/EM/weak
-= two observables. Extract the flow-dipole equation per system, then test substrate/expression
-AT THE EQUATION LEVEL: shared dipole FORM (substrate) + per-domain COEFFICIENTS (expressions).
-THE DECISIVE TEST (what would make it a real claim vs a shared word): do the flows obey the
-SAME quantitative equation form with only coefficients differing? If yes -> a real, testable
-structural claim (then the STEP-0 scan tells us if it's new). If no -> "flow" stays a useful
-unifying DESCRIPTION, not a law. Connect to the info-dipole paper (davisai.ai/dipole) +
-Markets flow dipole. Guard against the INFO-051 bookkeeping artifact (MI is the only
-scale-invariant operator). Greg's epistemic rule: a non-conforming system is one data point /
-maybe wrong observable, NOT a falsification.
+HONEST BOUNDARY FIRST (OD-mode + no-mechanism rule): "what time ACTUALLY IS" (ontology) is NOT
+a data question -- OD extracts governing equations from raw data, it does not produce ontology.
+So we do NOT chase the metaphysics as a claim. What IS data-shaped: the EMPIRICAL SIGNATURES of
+time, and whether they share ONE governing relation. Two prongs:
+
+PRONG A -- RESEARCH AGENTS (Greg's call; literature as conjecture, they-never-stacked):
+  Send agents to map what "time" is taken to be across (1) physics -- thermodynamic arrow /
+  entropy production, relational time (Rovelli/Barbour), block universe vs presentism, proper
+  time / GR, time in QM (Page-Wootters, Pauli's theorem on a time operator), Tolman-Ehrenfest
+  (temperature = rate of proper time); (2) the info-dipole framing (is "time = a dipole
+  expression" written anywhere?); (3) what would DISTINGUISH these empirically. Output: a map of
+  candidate "what is time" positions + which make falsifiable, data-shaped predictions we could
+  probe. State plainly what is ours vs known.
+
+PRONG B -- DATA-SHAPED PROBES (the "good probes" Greg asked for; stay in OD scope):
+  1. CLOCK-RATE LAW UNIVERSALITY: all our positive time findings are CLOCK-RATE changes with
+     gravitational potential/velocity (LIGO proper time / GW170817 + chirp; GPS -2/c^2; pulsar
+     gamma/dP_b/dt). Extract the clock-rate relation from each INDEPENDENTLY and test if it is
+     ONE law (the equivalence-principle / proper-time relation) -- a real cross-system OD test
+     with data largely in hand.
+  2. ARROW-OF-TIME signature: is there a consistent entropy-production / time-asymmetry operator
+     that marks "time direction" across systems? (Connects to the abandoned dMI/dt -- but now via
+     the RAW-covariance form that actually carries lag, not the blind entropy form.)
+  3. WHY GRAVITY-TIME-SPECIFIC: the algebraic dipole's genuine excess is gravity-time-only
+     (INFO-066). Probe whether that is because gravity is our only system where TIME is the
+     native axis (construction) vs a real specialness (the H-C hunch). Needs a non-gravity
+     system where time is the native axis (a real clock/oscillator time series with 2 channels).
+  Guard: INFO-051 (MI is the only scale-invariant operator); the raw-covariance form is the one
+  that carried time, NOT the entropy-flow form. Recoveries of known time-dilation are POSITIVE
+  CONTROLS (tool travels), not new physics -- keep that brake.
+
+S19 FOLLOW-UPS still open (fold into the above, not separate):
+  - (a) STRENGTHEN GPS -- DONE (probe_time_dipole_gps_strengthen.py): eccentric-Galileo algebraic
+    excess +0.464+/-0.278 (z~3) across 12 sat-replicas / 2 stations / 2-3 days; +0.572+/-0.134 on
+    clean days (S18 anchor reproduced); raw dipole z~22 across 13 replicas; k/truth +1.14. Dual-
+    frequency did NOT rescue the 17-33m circular-sat controls (they stay clean low-excess controls
+    -- good control behavior, but no P3 rescue). Honest day-003 E18 outlier kept. So the GPS
+    gravity-time dipole is a robust aggregate, not a one-day fluke.
+  - (b) DONE (INFO-066): algebraic dipole does NOT cleanly travel to the gauge forces (EM/strong/
+    weak excess collapses to tautology; EM control inverts; weak borderline-fragile). Gravity-
+    time-specific. probe_time_dipole_forces.py.
 
 ## GRAVITY thread (primary focus)
 

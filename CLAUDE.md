@@ -41,11 +41,18 @@ pure tautology) and GPS (E18 lag-0 |cc|~0.99 z=37; algebraic excess +0.571 z=5.7
 z=1.5). PULSAR DECLINED as a category stretch (scalar fit params, no 2-channel object — the
 chemistry lesson). These RECOVER known physics (7 ms light-travel; GR -2/c^2) = positive
 control that the dipole tool travels, NOT new physics; stats modest where data thin.
-IN FLIGHT (agents at write-time): (a) strengthen GPS multi-station/dual-frequency; (b) does
-the algebraic dipole TRAVEL to the gauge forces (EM/strong/weak) or is it gravity-time-
-specific. Epistemic rules sharpened by Greg (4 consistent > 1 outlier; don't romanticize the
-outlier; a 1-of-N candidate is a poor candidate; first-try-not-only-try; chemistry is NOT a
-5th force). Prior S18 below.
+FOLLOW-UPS BOTH DONE: (a) GPS STRENGTHENED -- the eccentric-Galileo algebraic excess is now a
+multi-station/multi-day mean +0.464+/-0.278 (z~3; +0.572+/-0.134 on clean days, reproducing the
+S18 BRUX/001 anchor), raw dipole z~22 across 13 replicas, k/truth +1.14; dual-frequency did NOT
+rescue the circular controls (they stay clean low-excess controls); honest day-003 E18 outlier
+kept. (b) the algebraic dipole does NOT cleanly travel to the gauge forces (EM/strong collapse to
+tautology, weak fragile) -> GRAVITY-TIME-SPECIFIC (consistent with the H-C hunch). NEXT DIRECTION
+(Greg): "find out what TIME actually is" -- research agents + data-shaped probes (clock-rate-law
+universality across LIGO/GPS/pulsar; arrow-of-time operator; gravity-time-specificity construction-
+vs-real); ontology stays out of OD scope, empirical time signatures are in. See BACKLOG top.
+Epistemic rules sharpened by Greg (4 consistent > 1 outlier; don't romanticize the outlier; a
+1-of-N candidate is a poor candidate; first-try-not-only-try; chemistry is NOT a 5th force).
+Prior S18 below.
 
 **Session 18 recap:** Read `SESSION_HANDOFF_2026-06-02_S18.md`. Headline: backlog 6c (does gravity couple to TIME?)
 answered on the POSITIVE side with three governing-law recoveries. GPS precise-product
@@ -919,9 +926,23 @@ a 5th force — the four forces are gravity/EM/weak/strong; sciences/domains are
   the tool TRAVELS, NOT new physics; stats modest where data thin (GPS 1 station/1 day/~10 windows);
   whether the algebraic dipole is a universal law vs a positive-control recovery is NOT settled.
   Scripts: probe_time_dipole_gravity.py, probe_time_dipole_gravity_null.py, probe_time_dipole_gpspulsar.py.
-  IN FLIGHT at write-time (agents): (a) strengthen GPS multi-station/multi-day/dual-frequency
-  (probe_time_dipole_gps_strengthen.py); (b) does the algebraic dipole TRAVEL to the gauge forces
-  EM/strong/weak or is it gravity-time-specific (probe_time_dipole_forces.py).
+  FOLLOW-UPS: (b) DONE -- the algebraic dipole does NOT cleanly travel to the gauge forces
+  (probe_time_dipole_forces.py): EM/strong excess collapse to tautology (z 1.4-2.0, EM
+  'uncorrelated' control even shows a LARGER excess -- contaminated), weak borderline-fragile
+  (z=2.5, 52 bins, no usable control); the raw-cross-cov-over-lag form DOES fire on EM (z=420
+  lag-0 = known HBT bunching) but applies only to time-series channels. So the algebraic dipole's
+  genuine excess is confined to the 2 gravity-TIME systems (LIGO event, GPS eccentric) -> reads
+  GRAVITY-TIME-SPECIFIC, consistent with the H-C hunch (gravity is the force that touches time),
+  with brakes: weak fragile, thin samples, recoveries-of-known-physics. (a) STRENGTHEN GPS
+  (multi-station/dual-frequency, probe_time_dipole_gps_strengthen.py) -- DONE: eccentric-Galileo
+  algebraic excess +0.464+/-0.278 (z~3) across 12 sat-replicas / 2 stations / 2-3 days (+0.572+/-
+  0.134 on clean days = S18 anchor reproduced), raw dipole |cc0| 0.787 z~22 across 13 replicas,
+  k/truth +1.14; dual-frequency did NOT rescue the 17-33m circular-sat controls (stay clean
+  low-excess controls); honest day-003 E18 degradation kept (real station-day condition, not a
+  frequency artifact). So the GPS gravity-time dipole holds as an aggregate, not a one-day fluke. NEXT DIRECTION (Greg, S19): "what is TIME" -- research agents +
+  data-shaped probes (clock-rate-law universality across LIGO/GPS/pulsar; arrow-of-time operator;
+  why gravity-time-specific = construction vs real). See BACKLOG top section; ontology stays out
+  of scope (no-mechanism rule), empirical time signatures are in scope.
 
 ## Note (Session 18 update — 2026-06-02) — gravity-couples-to-time (backlog 6c), 3 recoveries
 

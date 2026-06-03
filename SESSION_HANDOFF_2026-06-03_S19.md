@@ -105,14 +105,35 @@ DNA gave R2=0 differential but preserved the dipole as an ALGEBRAIC constraint):
   retired. Whether the algebraic dipole is a real universal law vs a positive-control recovery
   is NOT settled — that is what the in-flight replications test.
 
-## IN FLIGHT (background agents at handoff time)
-- (a) STRENGTHEN GPS: multi-station / multi-day / dual-frequency ionosphere-free, aggregate the
-  algebraic excess-over-null stats and try to rescue the circular-sat controls.
-  (`probe_time_dipole_gps_strengthen.py`)
-- (b) DOES THE OTHER DIPOLE TRAVEL TO THE GAUGE FORCES: static algebraic dipole + tautology null
-  on EM (HBT, both forms) + strong/weak dimuon (algebraic, along mass axis), where the known
-  correlations fire. Key question: genuine excess beating control, or tautology collapse like
-  the gravity noise window? (`probe_time_dipole_forces.py`)
+## FOLLOW-UPS (a) + (b) -- BOTH COMPLETED
+- (a) STRENGTHEN GPS (`probe_time_dipole_gps_strengthen.py`) -- DONE. Multi-station/multi-day/
+  dual-frequency. Eccentric-Galileo algebraic excess-over-tautology-null = mean +0.464+/-0.278
+  (z~3.0) across 12 sat-replicas / 2 stations (BRUX, ALGO; ONSA/MATE/GRAZ never see the GREAT
+  eccentric sats -- real GNSS visibility) / 2-3 days; +0.572+/-0.134 on the clean days = the S18
+  BRUX/001 anchor (+0.571) REPRODUCED as a multi-station/day mean. Raw cross-cov |cc0| 0.787+/-
+  0.327, z~22 across 13 replicas. k/truth +1.14+/-0.30 (recovers GR -2/c^2). Dual-frequency P3 did
+  NOT rescue the 17-33 m circular-sat controls -- they STAY clean low-excess controls (good
+  control behavior; the tiny signal is below the residual/receiver-clock floor even iono-free).
+  Honest outlier KEPT (no tent-widening): day-003 degrades E18 at BOTH stations identically under
+  C1 and P3 -> a real station-day condition (receiver-clock/geometry), not a frequency artifact;
+  E14 still recovers. NET: the GPS gravity-time dipole is a robust AGGREGATE, not a one-day fluke.
+- (b) DOES THE OTHER DIPOLE TRAVEL TO THE GAUGE FORCES (`probe_time_dipole_forces.py`) -- DONE,
+  mostly NO. Static algebraic dipole + circular-shift tautology null: EM excess +0.085 z=2.0
+  (and its 'uncorrelated' control shows a LARGER excess +0.294 -> contaminated control, inverts
+  the logic), strong +0.057 z=1.4 -- both COLLAPSE toward tautology like the gravity NOISE window;
+  weak borderline +0.114 z=2.5 but fragile (52 near-resonance bins, no usable same-charge control).
+  The RAW cross-cov-over-lag form DOES fire on EM (z=420 lag-0 = known HBT bunching) but applies
+  only to time-series channels (dimuon ensembles have no lag). The gravity analog (corr rises where
+  the correlation is strong) does NOT reproduce on the forces. NET: the algebraic dipole's genuine
+  excess is confined to the 2 gravity-TIME systems (LIGO event, GPS eccentric) -> reads GRAVITY-
+  TIME-SPECIFIC, consistent with the H-C hunch -- with brakes (weak fragile, thin samples,
+  recoveries of known physics).
+
+CONSOLIDATED S19 PICTURE: flow/entropy dipole = wrong tool (blind, INFO-065); the OTHER dipole
+(raw cross-cov + static algebraic, tautology-null-survived) carries the gravity-TIME coupling on
+TWO independent systems (LIGO + GPS, now multi-station-aggregated) and does NOT travel to the
+gauge forces -> gravity-time-specific. All RECOVERIES of known physics (positive control the tool
+travels), not new physics.
 
 ## FILES THIS SESSION
 - Real-data flow dipole: probe_flow_dipole_gravity.py, probe_flow_dipole_weak.py (+ results).
