@@ -1,4 +1,4 @@
-# CLAUDE.md — DavisAI Master Context (Updated 2026-06-02 Session 18 — body canonical through S18)
+# CLAUDE.md — DavisAI Master Context (Updated 2026-06-03 Session 19 — body canonical through S19)
 
 ## START HERE (workflow block; JOB-1 drift fixed S17, 2026-06-02)
 
@@ -25,8 +25,29 @@ Operating Rule exists precisely so the S7→S11→S14 drift never recurs.
 get appended to the backlog first. Never discard an odd/outlying output — it may be
 the story; diagnose it, don't sand it off.
 
-**Latest session:** S18 (2026-06-02). Read `SESSION_HANDOFF_2026-06-02_S18.md`, then
-`BACKLOG_tests_and_probes.md`. Headline: backlog 6c (does gravity couple to TIME?)
+**Latest session:** S19 (2026-06-03). Read `SESSION_HANDOFF_2026-06-03_S19.md`, then the
+Session 19 note below. Headline: ran S18 backlog #1, the FLOW DIPOLE EQUATION. The
+differential/flow dipole (dMI/dt ~ self+cross, paper §2.2) is FLAT on every real force —
+but tool-batteries proved this is TOOL-BLINDNESS not absence (INFO-065): the KNOWN real
+correlations fire (strong femtoscopy C(q); EM HBT g2(0)=1.85) and the RAW-covariance dipole
+HITS (EM R2 0.49) while the entropy operators are blind, because windowed marginal entropies
+are lag-independent so coupling/time info never enters them — it lives in the raw covariance.
+Toy-simulator "4 forces share the dipole" retired (no real-data support). Then Greg's steer
+(don't discard the positive TIME findings; "time is something else"; try the OTHER dipole):
+the RAW-covariance + STATIC-ALGEBRAIC dipoles (H_a^2=a+b*H_aH_b+c*(H_aH_b)^2) SOLVE FOR TIME
+on TWO independent gravity systems and survive a circular-shift tautology-killing null
+(INFO-066): LIGO (7 ms inter-detector lag z=14; algebraic event-excess +0.125 z=2.7, noise =
+pure tautology) and GPS (E18 lag-0 |cc|~0.99 z=37; algebraic excess +0.571 z=5.7 vs control
+z=1.5). PULSAR DECLINED as a category stretch (scalar fit params, no 2-channel object — the
+chemistry lesson). These RECOVER known physics (7 ms light-travel; GR -2/c^2) = positive
+control that the dipole tool travels, NOT new physics; stats modest where data thin.
+IN FLIGHT (agents at write-time): (a) strengthen GPS multi-station/dual-frequency; (b) does
+the algebraic dipole TRAVEL to the gauge forces (EM/strong/weak) or is it gravity-time-
+specific. Epistemic rules sharpened by Greg (4 consistent > 1 outlier; don't romanticize the
+outlier; a 1-of-N candidate is a poor candidate; first-try-not-only-try; chemistry is NOT a
+5th force). Prior S18 below.
+
+**Session 18 recap:** Read `SESSION_HANDOFF_2026-06-02_S18.md`. Headline: backlog 6c (does gravity couple to TIME?)
 answered on the POSITIVE side with three governing-law recoveries. GPS precise-product
 route = definitional NULL (INFO-058: GR clock term modeled out of IGS products). GPS
 term-retaining route (INFO-059) recovered the time-dilation coefficient -2/c^2 from raw
@@ -840,6 +861,67 @@ The v4 handoff (`SESSION_HANDOFF_2026-05-26_v4.md`) contains the Session
 The early-Session-3 handoff in repo (`SESSION_HANDOFF_2026-05-25.md`)
 contains the per-domain algebraic equation coefficients that are
 preserved through Session 5.
+
+## Note (Session 19 update — 2026-06-03) — FLOW DIPOLE EQUATION: wrong tool, and the OTHER dipole solves for time
+
+Branch `claude/kickoff-claude-handoff-0vfgz` (main untouched; no PR). All Operating Rules in
+force; no new Rule. Continuity restored at session open (branch was cut stale at S12; fast-
+forwarded onto the S18 work branch). Full detail: `SESSION_HANDOFF_2026-06-03_S19.md`. Ran S18
+backlog #1 (the flow dipole equation), then followed Greg's live steers.
+
+Confirmed paper flow form (davisai.ai/dipole §2.2 verbatim): dMI/dt ~ sum c_self,i*H_i^2 +
+sum c_cross,ij*H_i*H_j + linear; ratio C = H_self/H_cross; opposition = self vs cross opposite sign.
+
+EPISTEMIC RULES sharpened by Greg this session (carry forward; not new Operating Rules, they
+refine Result Discipline): (1) don't be determinative about one test; (2) 4 consistent tests
+are a STRONGER signal than 1 outlier — they are NOT equal; do not romanticize the outlier
+(inspect it, no tent-widening); (3) a candidate that shows in only 1 of N systems is, by that
+inconsistency, a POOR candidate (Base-of-Structure); (4) first-try-not-only-try — a uniform low
+result is as much evidence the TOOL is wrong as that structure is absent; (5) chemistry is NOT
+a 5th force — the four forces are gravity/EM/weak/strong; sciences/domains are a separate inquiry.
+
+- **INFO-065 — LOCATED (Session 19, new; real data, multi-force)**: the differential/FLOW
+  entropy dipole (dMI/dt ~ ...) does NOT carry the forces' real 2-channel structure, and the
+  S18 toy result was an artifact. (a) Real-data flow dipole is FLAT: gravity LIGO H1/L1 R2 0.022
+  ~= shuffle-null; weak CMS dimuon R2 0.044 ~= null. (b) Toy-simulator 4-domain/Brusselator
+  flow-dipole RETIRED (Greg: untrustworthy; no real-data support) — its "shared opposition" did
+  not survive real data. (c) TOOL-BATTERIES (6-7 tools/force, each with a known-correlation
+  diagnostic) show the flatness is TOOL-BLINDNESS, not absence: STRONG — only the KNOWN
+  femtoscopy C(q) hit (ratio 0.80 vs event-mixed), all entropy/dipole/symbolic/direct tools
+  blind; EM — known g2(0)=1.85 HBT bunching fires AND the RAW-count covariance dipole HITS
+  (R2 0.49 vs null 0.21) + direct coupling (Pearson 0.142 ~250σ), but entropy->MI->dMI/dt tools
+  blind (R2 0.11-0.13 ~= null). MECHANISM: windowed marginal entropies H_a,H_b are ~independent
+  of the inter-channel time lag, so coupling/time info never enters the entropy operators — it
+  lives in the RAW covariance. Scripts: probe_flow_dipole_{gravity,weak,strong_battery,em_battery}.py.
+  Caveats: strong data is dimuon/quarkonium (no dijet CSV); EM "uncorrelated" control also
+  bunches (within-script time-shift/shuffle nulls are load-bearing).
+
+- **INFO-066 — LOCATED (Session 19, new; the OTHER dipole solves for TIME; 2 gravity systems +
+  tautology null; pulsar declined)**: following Greg ("don't discard the positive time findings;
+  time is something else; try the other dipole"), two non-flow dipole forms — RAW cross-covariance
+  (over lag) and STATIC ALGEBRAIC H_a^2 = a + b*(H_a*H_b) + c*(H_a*H_b)^2 — recover the gravity-time
+  coupling where the flow dipole was blind (precedent: static_dipole_test.py — DNA differential R2=0
+  but algebraic alive). GRAVITY (LIGO H1/L1): raw dipole SOLVES FOR TIME = inter-detector light-
+  travel lag 7.32 ms (|phys| ~6.9), z=14.2, while the entropy-MI dipole on the same data is lag-FLAT
+  (blind); algebraic dipole R2 0.93 vs flow's 0.022. TAUTOLOGY-KILLING NULL (circular-shift of H_b —
+  preserves H_b smoothness + shared-H_a factor, kills only the instantaneous pairing): EVENT excess
+  +0.125 over null, z=2.7, p=0.000, corr(Ha,Hb)+0.73 = genuine common-GW-signal coupling; NOISE
+  excess ~0, z=-0.7, corr -0.06 = PURE shared-H_a tautology. GPS (decision-gate PASS — genuine
+  2-channel: A = cleaned RINEX pseudorange relativistic residual, B = independent broadcast-element
+  geometry driver e*sqrt(a)*sinE, NOT the S18 regression relabeled): raw dipole E18 lag-0 |cc|~0.99
+  z=37, E14 z=22, near-circular control fails; algebraic + shift null E18 R2 0.989 excess +0.571
+  z=5.7 corr 0.97 vs control excess +0.374 z=1.5 corr 0.17. PULSAR DECLINED — category stretch (the
+  chemistry lesson): PSR B1913+16 dP_b/dt + gamma are SCALAR params of a global PINT fit, no
+  co-sampled 2nd physical channel, secular parabola not instantaneous A<->B; clean negative, no
+  fabrication. READING: the flow dipole was the WRONG TOOL (discards the raw covariance where
+  time/coupling live); the positive time findings stand, measured with the right dipole. BRAKES
+  (load-bearing): these RECOVER known physics (7 ms light-travel; GR -2/c^2) = positive control that
+  the tool TRAVELS, NOT new physics; stats modest where data thin (GPS 1 station/1 day/~10 windows);
+  whether the algebraic dipole is a universal law vs a positive-control recovery is NOT settled.
+  Scripts: probe_time_dipole_gravity.py, probe_time_dipole_gravity_null.py, probe_time_dipole_gpspulsar.py.
+  IN FLIGHT at write-time (agents): (a) strengthen GPS multi-station/multi-day/dual-frequency
+  (probe_time_dipole_gps_strengthen.py); (b) does the algebraic dipole TRAVEL to the gauge forces
+  EM/strong/weak or is it gravity-time-specific (probe_time_dipole_forces.py).
 
 ## Note (Session 18 update — 2026-06-02) — gravity-couples-to-time (backlog 6c), 3 recoveries
 
